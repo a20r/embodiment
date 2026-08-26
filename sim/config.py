@@ -1,0 +1,160 @@
+"""Configuration loading and resolution for the Mazebot platform.
+
+A single config.yaml drives everything.  This module owns the defaults, the
+named noise profiles, and the deep-merge resolution order:
+
+    defaults  <-  named noise profile  <-  config.yaml  <-  CLI overrides
+
+The fully resolved config is a plain dict; the daemon receives it as JSON so
+there is exactly one resolution point (here) for every process.
+"""
+
+import copy
+import json
+import os
+
+import yaml
+
+DEFAULTS = {
+    "model": "claude-fable-5",
+    "arm": "A",              # A = scratch /memory, B = pre-seeded memory system
+    "labels": "on",          # on = documented device names, off = d0..dN
+    "noise_profile": "default_noisy",
+    "maze": {
+        "seed": 7,
+        "width": 9,
+        "height": 9,
+        "cell_size": 0.5,    # meters
+        "braid": 0.0,        # fraction of dead-ends opened into loops
+    },
+    "robot": {
+        "radius": 0.09,             # disc radius, m
+        "wheelbase": 0.16,          # wheel separation, m
+        "wheel_radius": 0.03,       # m
+        "max_speed": 0.35,          # wheel surface speed at |pwm|=255, m/s
+        "encoder_ticks_per_rev": 360,
+    },
+    "lidar": {
+        "rays": 16,
+        "fov_deg": 360.0,
+        "max_range": 3.0,    # m
+    },
+    "sim": {
+        "tick_hz": 50,
+        "realtime_factor": 1.0,   # sim-seconds per wall-second; 0 = unthrottled
+        "api_host": "127.0.0.1",
+        "api_port": 8787,
+    },
+    # Noise values here override the named profile (partial override allowed).
+    "noise": {},
+    "budget": {
+        "max_context_tokens": 160000,       # end/restart episode past this
+        "max_total_output_tokens": 120000,  # cumulative model output per episode
+        "max_turns": 400,
+        "max_wallclock_s": 1800,
+        "on_context_full": "end",           # end | restart (bare restart)
+        "exec_timeout_s": 60,               # per bash tool call
+        "output_truncate_bytes": 20000,
+    },
+    "series": {
+        "name": "dev",
+        "episodes": 1,
+    },
+    # List of {"at_episode": N, "name": "motor_swap"|"maze_regen"|"sensor_remap"}
+    "perturbations": [],
+    "dashboard": {
+        "host": "127.0.0.1",
+        "port": 8080,
+    },
+    "runs_dir": "runs",
+}
+
+# All-off is the definition of "clean"; default_noisy is the shipped profile.
+NOISE_PROFILES = {
+    "clean": {
+        "lidar_sigma_m": 0.0,          # gaussian range noise
+        "lidar_dropout_p": 0.0,        # per-ray invalid return (-1.0)
+        "heading_sigma_deg": 0.0,      # per-read gaussian
+        "heading_drift_deg": 0.0,      # random-walk step std per tick
+        "encoder_jitter_ticks": 0,     # +/- uniform jitter per read
+        "slip_mu": 0.0,                # mean wheel slip fraction
+        "slip_sigma": 0.0,             # slip std per wheel per tick
+        "motor_gain_left": 1.0,        # asymmetry: effective motor strength
+        "motor_gain_right": 1.0,
+        "actuation_latency_ticks": 0,  # command takes effect N ticks later
+        "dropped_read_p": 0.0,         # per device read: empty read served
+    },
+    "default_noisy": {
+        "lidar_sigma_m": 0.01,
+        "lidar_dropout_p": 0.01,
+        "heading_sigma_deg": 2.0,
+        "heading_drift_deg": 0.002,
+        "encoder_jitter_ticks": 1,
+        "slip_mu": 0.03,
+        "slip_sigma": 0.04,
+        "motor_gain_left": 1.0,
+        "motor_gain_right": 0.94,
+        "actuation_latency_ticks": 3,
+        "dropped_read_p": 0.02,
+    },
+}
+
+# Logical device set.  Sensors emit frames on read; actuators consume writes.
+SENSOR_DEVICES = [
+    "lidar",
+    "heading",
+    "encoder_left",
+    "encoder_right",
+    "bump_front",
+    "bump_rear",
+    "status",
+]
+ACTUATOR_DEVICES = ["motor_left", "motor_right"]
+ALL_DEVICES = SENSOR_DEVICES + ACTUATOR_DEVICES
+
+
+def deep_merge(base, override):
+    out = copy.deepcopy(base)
+    for k, v in (override or {}).items():
+        if isinstance(v, dict) and isinstance(out.get(k), dict):
+            out[k] = deep_merge(out[k], v)
+        else:
+            out[k] = copy.deepcopy(v)
+    return out
+
+
+def resolve(config_path=None, overrides=None):
+    """Resolve config.yaml + overrides into a single flat dict."""
+    user_cfg = {}
+    if config_path and os.path.exists(config_path):
+        with open(config_path) as f:
+            user_cfg = yaml.safe_load(f) or {}
+    cfg = deep_merge(DEFAULTS, user_cfg)
+    if overrides:
+        cfg = deep_merge(cfg, overrides)
+
+    profile_name = cfg.get("noise_profile", "default_noisy")
+    if profile_name not in NOISE_PROFILES:
+        raise ValueError(
+            f"unknown noise_profile {profile_name!r}; "
+            f"known: {sorted(NOISE_PROFILES)}"
+        )
+    noise = deep_merge(NOISE_PROFILES[profile_name], cfg.get("noise", {}))
+    cfg["noise"] = noise
+
+    if cfg["labels"] not in ("on", "off", True, False):
+        raise ValueError("labels must be 'on' or 'off'")
+    cfg["labels"] = "on" if cfg["labels"] in ("on", True) else "off"
+    if cfg["arm"] not in ("A", "B"):
+        raise ValueError("arm must be 'A' or 'B'")
+    return cfg
+
+
+def load_resolved(path):
+    with open(path) as f:
+        return json.load(f)
+
+
+def dump_resolved(cfg, path):
+    with open(path, "w") as f:
+        json.dump(cfg, f, indent=2, sort_keys=True)
