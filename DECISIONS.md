@@ -141,3 +141,80 @@ scripted agent that exercises the identical harness path (bash tool
 calls through `docker exec`, transcript, budgets, /memory writes).  Set
 `ANTHROPIC_API_KEY` and `model: claude-fable-5` for live episodes; the
 code path is the same.
+
+## Harness model layer
+
+Official `anthropic` SDK (host side only; the container gets nothing).
+This adds the project's second and last dependency alongside PyYAML —
+worth it for streaming, retries, and typed errors.  Manual tool loop
+rather than the SDK's beta tool runner: the harness must own budget
+enforcement, transcript logging, and the dumb context policy.  Adaptive
+thinking on; thinking blocks are replayed unchanged.  **No server-side
+refusal fallbacks**: an experiment episode must not silently switch
+models; a `refusal` stop reason logs an event and ends the episode.
+
+## Episode loop semantics
+
+- The harness polls sim goal state after each tool round; on any end
+  condition except `context_full` it announces the end to the agent and
+  allows up to 3 wrap-up tool rounds (so memory writes at episode end
+  are possible but bounded).  `context_full` ends without warning, as
+  the system prompt promised.
+- Budgets: context tokens (last call's total context), cumulative output
+  tokens, turns, wallclock.  `on_context_full: restart` performs a bare
+  restart — same system prompt, empty history.
+- An agent that stops calling tools gets up to 3 "you are autonomous"
+  nudges, then the episode ends as `agent_stopped`.
+- Each bash call runs via `docker exec` wrapped in in-container
+  `timeout`; output truncated at a byte cap with an explicit marker.
+- Every episode dir gets a `memory_snapshot/` copy of /memory at end —
+  the substrate for diffs, quiz, ablation, provenance.
+
+## Mock model
+
+`model: mock:wall-follower` is a scripted agent driving the identical
+loop (reads README, probes devices, writes the proven controller to
+src/, backgrounds it, polls status, writes /memory notes on wrap-up).
+It exists to test the harness and to produce recorded reference episodes
+without an API key; it is not a science arm.
+
+## Quiz design
+
+Questions are generated per-episode from ground truth (device_map.json,
+maze.json, resolved_config.json) with mechanical, tolerance-based
+checkers — no LLM grading.  The probe model gets ONLY the /memory blob
+(120 KB cap) and must answer UNKNOWN when notes don't cover a question.
+`--model none` runs the whole pipeline offline scoring 0, so evals stay
+runnable keyless.  Maze-coordinate questions pin the convention to the
+robot's own frame (start cell = (0,0), +x = initial heading) so they are
+answerable from empirical exploration.
+
+## Ablation / savings isolation
+
+Both clone memory + perturbation state into throwaway series
+(`<series>__ablate_*`, `<series>__savings_*`) and run real episodes
+there; the source series is never mutated.  Savings compares the
+post-perturbation trajectory against the series' own first K episodes
+(first exposure).
+
+## Dashboard
+
+Stdlib HTTP server + one vanilla-JS page (no build step).  Live view
+polls the daemon at 4 Hz through a localhost proxy; finished episodes
+replay from the ground-truth log (downsampled to <=3000 poses) with a
+scrubber.  Colors come from the validated reference palette of the
+dataviz method (light + dark).  Memory diffs are server-side unified
+diffs between consecutive episode snapshots.  Path traversal is guarded
+by realpath containment.
+
+## Known limits (accepted)
+
+- One episode runs at a time per host (fixed daemon port; series are
+  sequential by design).
+- Sensor-noise RNG advances per read, so noisy-mode sensor streams are
+  not bitwise identical across runs with different read timing (world
+  determinism and maze determinism are exact; see Determinism above).
+- The FIFO bridge serves one frame per ~25 ms per device; a pathological
+  reader holding every device open just gets frame streams.
+- `botctl shell` requires a running episode (containers are removed at
+  episode end).
