@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mazebot</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Mazebot</h1>
+  <label>series <select id="series-sel"></select></label>
+  <label>episode <select id="episode-sel"></select></label>
+  <span id="live-badge" class="badge">idle</span>
+  <span id="sim-controls" style="display:none">
+    <button id="btn-pause">pause</button>
+    <button id="btn-resume">resume</button>
+    <label>rtf <input id="rtf-input" type="number" step="0.5" min="0"
+      style="width:60px"></label>
+    <button id="btn-rtf">set</button>
+  </span>
+  <span id="ep-summary" class="badge"></span>
+</header>
+<main>
+  <section class="panel">
+    <div class="panel-head">
+      <span>top-down view (ground truth)</span>
+      <span style="flex:1"></span>
+      <label><input type="checkbox" id="chk-rays" checked> lidar</label>
+      <label><input type="checkbox" id="chk-trail" checked> trail</label>
+    </div>
+    <div id="maze-wrap" class="panel-body">
+      <canvas id="maze" width="900" height="900"></canvas>
+    </div>
+    <div id="replay-controls">
+      <button id="btn-play">play</button>
+      <input type="range" id="scrub" min="0" max="0" value="0">
+      <span id="replay-time" style="font-family:monospace;font-size:12px">
+      </span>
+    </div>
+    <div id="statusline">—</div>
+  </section>
+  <section class="panel">
+    <div class="panel-head">
+      <nav class="tabs">
+        <button data-tab="transcript" class="active">Transcript</button>
+        <button data-tab="memory">Memory</button>
+        <button data-tab="metrics">Metrics</button>
+      </nav>
+      <span style="flex:1"></span>
+      <label id="autoscroll-wrap"><input type="checkbox"
+        id="chk-autoscroll" checked> follow</label>
+    </div>
+    <div class="panel-body">
+      <div id="tab-transcript" class="tabview active"></div>
+      <div id="tab-memory" class="tabview">
+        <div id="memory-layout">
+          <div id="memory-tree"></div>
+          <div id="memory-view"><div class="empty">select a file</div></div>
+        </div>
+      </div>
+      <div id="tab-metrics" class="tabview"></div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
