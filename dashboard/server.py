@@ -116,7 +116,8 @@ class Api:
                         continue
                     if "event" in r:
                         if r["event"] in ("collision", "goal_reached",
-                                          "reset"):
+                                          "reset", "key_pickup",
+                                          "door_unlocked"):
                             events.append({"event": r["event"],
                                            "t": r.get("t")})
                     elif "pose" in r:

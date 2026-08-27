@@ -37,6 +37,11 @@ DEFAULTS = {
         #   goal is an opening in the far boundary (escape to solve).
         "style": "grid",
         "curviness": 1.0,    # organic only: 0..1 wall waviness
+        # organic only: the exit is closed by a door that unlocks only
+        # when the robot arrives carrying the key.  Adds a key object
+        # (lidar-visible post, picked up by rolling over it) and an
+        # anonymous signal-strength port that rises near the key.
+        "locked": False,
     },
     "robot": {
         "radius": 0.09,             # disc radius, m
@@ -94,6 +99,7 @@ NOISE_PROFILES = {
         "motor_gain_right": 1.0,
         "actuation_latency_ticks": 0,  # command takes effect N ticks later
         "dropped_read_p": 0.0,         # per device read: empty read served
+        "beacon_sigma": 0.0,           # key signal-strength noise
     },
     "default_noisy": {
         "lidar_sigma_m": 0.01,
@@ -107,6 +113,7 @@ NOISE_PROFILES = {
         "motor_gain_right": 0.94,
         "actuation_latency_ticks": 3,
         "dropped_read_p": 0.02,
+        "beacon_sigma": 0.008,
     },
 }
 
@@ -160,6 +167,9 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("arm must be 'A' or 'B'")
     if cfg["maze"].get("style", "grid") not in ("grid", "organic"):
         raise ValueError("maze.style must be 'grid' or 'organic'")
+    if cfg["maze"].get("locked") and \
+            cfg["maze"].get("style") != "organic":
+        raise ValueError("maze.locked requires maze.style: organic")
     if cfg["prompt_variant"] not in ("standard", "lost"):
         raise ValueError("prompt_variant must be 'standard' or 'lost'")
     return cfg

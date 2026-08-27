@@ -250,3 +250,29 @@ these changes:
 - Dashboard: all agent-influenced strings (transcript, memory, quiz
   answers, eval rows) are HTML-escaped before rendering — the agent
   writes /memory, so eval tables are an injection surface.
+
+## Locked-exit scenario (maze.locked, organic only)
+
+The exit opening is closed by a **door**: one straight segment between
+the jittered gap posts — collidable and lidar-visible while locked, the
+only flat wall in an organic world.  A **key** sits in the dead-end
+maximizing min(distance-from-door, distance-from-start): a small
+lidar-visible post (never collidable) picked up by rolling over it.
+Sensing, all through anonymous ports and never mentioned in any prompt:
+
+- A new **beacon port** reads the key transmitter's signal strength,
+  1/(1+(d/0.8)^2) with profile noise, rising toward 1.0 near the key —
+  a gradient that passes through walls.  Once carried it saturates to a
+  steady out-of-band 9.999.
+- The **status port** grows a `door=locked|open` field only within
+  0.5 m of the door — a phenomenon the agent discovers at the door, so
+  "it's locked, there must be a key" is its own inference.
+- Arriving at the door carrying the key opens it (segments removed,
+  `door=open`, event logged); goal remains escape.
+
+Device count becomes 10 (d0..d9 in labels-off).  Ground truth logs
+per-tick key/door state plus key_pickup/door_unlocked events; dashboard
+and replays draw the door (red, until unlocked) and key (diamond, until
+taken).  Verified by unit tests: gradient monotonicity, pickup, locked
+door collision + proximity-gated status field, unlock, escape,
+determinism (locked worlds hash differently).

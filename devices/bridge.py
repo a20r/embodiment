@@ -41,14 +41,18 @@ from sim.world import stable_seed
 FRAME_INTERVAL = 0.025  # seconds between frames for a held-open reader
 
 
-def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False):
+def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False,
+                     extra_sensors=()):
     """Return {filename: logical_device}.
 
     labels=off: filenames are d0..dN, assignment is a seeded permutation.
     remap_index>0: sensor bindings are additionally permuted (a "wiring
     change") in both label modes; motor_swapped crosses the two channels.
+    extra_sensors: scenario devices (e.g. the key beacon) appended to
+    the sensor set.
     """
-    sensors = list(SENSOR_DEVICES)
+    base_sensors = list(SENSOR_DEVICES) + list(extra_sensors)
+    sensors = base_sensors[:]
     # Walk the remap chain so each remap step observably differs from
     # BOTH the identity wiring and the wiring it replaces.
     for i in range(1, remap_index + 1):
@@ -57,7 +61,7 @@ def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False):
         while True:
             shuffled = prev[:]
             rng.shuffle(shuffled)
-            if shuffled != prev and shuffled != list(SENSOR_DEVICES):
+            if shuffled != prev and shuffled != base_sensors:
                 break
         sensors = shuffled
     actuators = list(ACTUATOR_DEVICES)
@@ -65,16 +69,15 @@ def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False):
         actuators = [actuators[1], actuators[0]]
 
     logical = sensors + actuators  # physical device behind slot i
+    n = len(logical)
     if labels_on:
-        filenames = SENSOR_DEVICES + ACTUATOR_DEVICES
+        filenames = base_sensors + list(ACTUATOR_DEVICES)
     else:
-        rng = random.Random(stable_seed(seed, "labels_off"))
-        order = list(range(len(ALL_DEVICES)))
+        rng = random.Random(stable_seed(seed, "labels_off", n))
+        order = list(range(n))
         rng.shuffle(order)
-        filenames = [None] * len(ALL_DEVICES)
-        for slot, pos in enumerate(order):
-            filenames[slot] = f"d{pos}"
-    return {filenames[i]: logical[i] for i in range(len(logical))}
+        filenames = [f"d{order[i]}" for i in range(n)]
+    return {filenames[i]: logical[i] for i in range(n)}
 
 
 class DeviceBridge:
@@ -177,6 +180,8 @@ class DeviceBridge:
             return w.bump_frame(1)
         if logical == "status":
             return w.status_frame()
+        if logical == "beacon":
+            return w.beacon_frame()
         raise ValueError(logical)
 
     def _sensor_loop(self, path, filename, logical):

@@ -28,7 +28,7 @@ def _pt_seg_dist(px, py, x1, y1, x2, y2):
 class Maze:
     def __init__(self, seed, width, height, cell_size=0.5, braid=0.0,
                  family_index=0, style="grid", curviness=1.0,
-                 robot_radius=0.09):
+                 robot_radius=0.09, locked=False):
         self.base_seed = seed
         self.family_index = family_index
         self.seed = seed + 1000 * family_index
@@ -40,7 +40,11 @@ class Maze:
         self.curviness = curviness
         self.robot_radius = robot_radius
         self.has_exit = style == "organic"
+        self.locked = locked and self.has_exit
         self.exit_wall = None
+        self.door_segments = None   # closes the exit until unlocked
+        self.key_pos = None         # world coords of the key
+        self.key_cell = None
         self._organic_segments = None
         # h_walls[cy][cx]: wall along y = cy*cs, under cell column cx.
         #   cy in [0, height]; boundary rows are cy=0 and cy=height.
@@ -57,6 +61,8 @@ class Maze:
         else:
             self.goal_cell = self._farthest_cell(self.start_cell)
         if self.style == "organic":
+            if self.locked:
+                self._place_key()
             self._organicize()
 
     # -- generation ---------------------------------------------------------
@@ -241,14 +247,47 @@ class Maze:
                                 y1 + dy * t + ny * off))
                 for p, q in zip(pts, pts[1:]):
                     segs.append((p[0], p[1], q[0], q[1]))
+            # The door: one straight segment closing the exit gap
+            # between the two jittered gap posts — the only flat wall
+            # in the world.
+            door = None
+            if self.locked and self.exit_wall is not None:
+                ex1, ey1, ex2, ey2 = self.exit_wall
+                n1 = (round(ex1 / cs), round(ey1 / cs))
+                n2 = (round(ex2 / cs), round(ey2 / cs))
+                j1, j2 = node_j[n1], node_j[n2]
+                door = [(ex1 + j1[0], ey1 + j1[1],
+                         ex2 + j2[0], ey2 + j2[1])]
             sx, sy = self.cell_center(self.start_cell)
-            clear = min((_pt_seg_dist(sx, sy, *s) for s in segs),
-                        default=1.0)
+            probes = [(sx, sy)]
+            if self.key_pos:
+                probes.append(self.key_pos)
+            clear = min(_pt_seg_dist(px, py, *s)
+                        for px, py in probes for s in segs)
             if clear >= self.robot_radius + 0.04:
                 self._organic_segments = segs
+                self.door_segments = door
                 return
             scale *= 0.75
         self._organic_segments = segs  # heavily damped fallback
+        self.door_segments = door
+
+    def _place_key(self):
+        """The key sits in a dead-end far from the door (and from the
+        start as a tie-break), so the door is usually found first."""
+        d_goal = self._bfs_dist(self.goal_cell)
+        d_start = self._bfs_dist(self.start_cell)
+        options = [c for c in self.dead_ends()
+                   if c not in (self.start_cell, self.goal_cell)]
+        if not options:
+            options = [c for c in d_goal
+                       if c not in (self.start_cell, self.goal_cell)]
+        self.key_cell = max(options,
+                            key=lambda c: (min(d_goal.get(c, 0),
+                                               d_start.get(c, 0)),
+                                           d_goal.get(c, 0)
+                                           + d_start.get(c, 0)))
+        self.key_pos = self.cell_center(self.key_cell)
 
     def escaped(self, x, y):
         """True once (x, y) is outside the maze bounding box."""
@@ -304,6 +343,7 @@ class Maze:
 
     def hash(self):
         canon = repr((self.width, self.height, self.cell_size, self.style,
+                      self.locked, self.key_cell,
                       [tuple(r) for r in self.h_walls],
                       [tuple(c) for c in self.v_walls],
                       [tuple(round(v, 6) for v in s)
@@ -315,6 +355,11 @@ class Maze:
             "style": self.style,
             "has_exit": self.has_exit,
             "exit_wall": list(self.exit_wall) if self.exit_wall else None,
+            "locked": self.locked,
+            "door_segments": [list(s) for s in self.door_segments]
+            if self.door_segments else None,
+            "key_pos": list(self.key_pos) if self.key_pos else None,
+            "key_cell": list(self.key_cell) if self.key_cell else None,
             "seed": self.base_seed,
             "family_index": self.family_index,
             "effective_seed": self.seed,

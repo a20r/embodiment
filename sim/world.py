@@ -98,6 +98,20 @@ class World:
         self.lock = threading.RLock()
         self._segments = maze.segments()
         self._index = SegIndex(self._segments)
+        # Locked-exit scenario: door segments are collidable/visible
+        # while locked; the key is a small lidar-visible post (never
+        # collidable — rolling over it picks it up).
+        self._door_segments = list(maze.door_segments or [])
+        self._key_segments = []
+        if maze.locked and maze.key_pos:
+            kx, ky = maze.key_pos
+            r = 0.035
+            pts = [(kx + r * math.cos(a), ky + r * math.sin(a))
+                   for a in [k * TWO_PI / 8 for k in range(9)]]
+            self._key_segments = [
+                (p[0], p[1], q[0], q[1]) for p, q in zip(pts, pts[1:])]
+            dx1, dy1, dx2, dy2 = self._door_segments[0]
+            self._door_center = ((dx1 + dx2) / 2, (dy1 + dy2) / 2)
         self.reset()
 
     def reset(self):
@@ -110,6 +124,10 @@ class World:
                 stable_seed(*base, "heading"))
             self.rng_encoder = random.Random(
                 stable_seed(*base, "encoder"))
+            self.rng_beacon = random.Random(
+                stable_seed(*base, "beacon"))
+            self.key_carried = False
+            self.door_open = False
             self.tick = 0
             sx, sy = self.maze.cell_center(self.maze.start_cell)
             self.x, self.y, self.theta = sx, sy, 0.0
@@ -149,10 +167,19 @@ class World:
 
     # -- physics ------------------------------------------------------------
 
+    def _solid_extra(self):
+        """Segments that are solid right now beyond the static walls."""
+        if self._door_segments and not self.door_open:
+            return self._door_segments
+        return ()
+
     def _collides(self, x, y):
         r = self.robot_cfg["radius"]
         worst = None
-        for seg in self._index.near(x, y, r + 0.05):
+        candidates = self._index.near(x, y, r + 0.05)
+        extra = self._solid_extra()
+        for seg in (candidates if not extra
+                    else list(candidates) + list(extra)):
             d, cx, cy = _seg_dist(x, y, *seg)
             if d < r:
                 if worst is None or d < worst[0]:
@@ -234,6 +261,22 @@ class World:
                 self.heading_drift += self.rng_heading.gauss(
                     0.0, self.noise["heading_drift_deg"])
 
+            if self.maze.locked:
+                if not self.key_carried and self.maze.key_pos:
+                    kx, ky = self.maze.key_pos
+                    if math.hypot(self.x - kx, self.y - ky) < 0.12:
+                        self.key_carried = True
+                        self._event(dict(event="key_pickup",
+                                         pose=[round(self.x, 4),
+                                               round(self.y, 4)]))
+                if self.key_carried and not self.door_open:
+                    dcx, dcy = self._door_center
+                    if math.hypot(self.x - dcx, self.y - dcy) < 0.30:
+                        self.door_open = True
+                        self._event(dict(event="door_unlocked",
+                                         pose=[round(self.x, 4),
+                                               round(self.y, 4)]))
+
             if not self.goal_reached:
                 if self.maze.has_exit:
                     reached = self.maze.escaped(self.x, self.y)
@@ -264,6 +307,9 @@ class World:
                 "col": int(self.colliding),
                 "bump": [int(self.bump[0]), int(self.bump[1])],
                 "goal": int(self.goal_reached),
+                **({"key": int(self.key_carried),
+                    "door": int(self.door_open)}
+                   if self.maze.locked else {}),
             })
 
     # -- sensor emission (called by device bridge on read) ------------------
@@ -279,8 +325,12 @@ class World:
         return best
 
     def _ray_candidates(self):
-        return self._index.near(self.x, self.y,
-                                self.lidar_cfg["max_range"] + 0.1)
+        cand = list(self._index.near(self.x, self.y,
+                                     self.lidar_cfg["max_range"] + 0.1))
+        cand.extend(self._solid_extra())
+        if self._key_segments and not self.key_carried:
+            cand.extend(self._key_segments)
+        return cand
 
     def ray_angles(self):
         n = self.lidar_cfg["rays"]
@@ -335,9 +385,33 @@ class World:
         with self.lock:
             return "1" if self.bump[which] else "0"
 
+    def beacon_frame(self):
+        """Signal-strength receiver for the key's transmitter.  Rises
+        toward 1.0 as the robot nears the key (through walls); reads a
+        saturated 9.999 once the key is carried."""
+        n = self.noise
+        with self.lock:
+            if not self.maze.locked or not self.maze.key_pos:
+                return "0.000"
+            if self.key_carried:
+                return "9.999"
+            kx, ky = self.maze.key_pos
+            d = math.hypot(self.x - kx, self.y - ky)
+            s = 1.0 / (1.0 + (d / 0.8) ** 2)
+            sigma = n.get("beacon_sigma", 0.0)
+            if sigma > 0:
+                s += self.rng_beacon.gauss(0.0, sigma)
+            return f"{max(0.0, min(1.0, s)):.3f}"
+
     def status_frame(self):
         with self.lock:
-            return f"tick={self.tick} goal={int(self.goal_reached)}"
+            line = f"tick={self.tick} goal={int(self.goal_reached)}"
+            if self.maze.locked and self._door_segments:
+                dcx, dcy = self._door_center
+                if math.hypot(self.x - dcx, self.y - dcy) < 0.5:
+                    line += " door=" + ("open" if self.door_open
+                                        else "locked")
+            return line
 
     def snapshot(self, since_tick=0):
         """Experimenter-facing state for the dashboard (ground truth)."""
@@ -354,6 +428,8 @@ class World:
                 "bump": [self.bump[0], self.bump[1]],
                 "goal_reached": self.goal_reached,
                 "goal_tick": self.goal_tick,
+                "key_carried": self.key_carried,
+                "door_open": self.door_open,
                 "trail": [p for p in self.trail if p[0] > since_tick],
                 "events": self.events[-50:],
             }

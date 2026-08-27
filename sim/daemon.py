@@ -69,15 +69,18 @@ class Daemon:
                          family_index=pert.get("family_index", 0),
                          style=m.get("style", "grid"),
                          curviness=m.get("curviness", 1.0),
-                         robot_radius=cfg["robot"]["radius"])
+                         robot_radius=cfg["robot"]["radius"],
+                         locked=m.get("locked", False))
         self.world = World(cfg, self.maze, episode_index=episode_index,
                            log_fn=self.gt.write)
 
         labels_on = cfg["labels"] == "on"
+        extra = ("beacon",) if self.maze.locked else ()
         bindings = compute_bindings(
             m["seed"], labels_on,
             remap_index=pert.get("remap_index", 0),
-            motor_swapped=pert.get("motor_swapped", False))
+            motor_swapped=pert.get("motor_swapped", False),
+            extra_sensors=extra)
         self.bridge = DeviceBridge(devfs_dir, self.world, bindings,
                                    log_fn=self.gt.write)
 

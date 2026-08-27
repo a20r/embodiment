@@ -123,6 +123,7 @@ async function pollLive() {
   drawState({
     pose: st.pose, trail: S.liveTrail, colliding: st.colliding,
     bump: st.bump, rays: st.lidar_true, rayAngles: st.ray_angles,
+    keyTaken: st.key_carried, doorOpen: st.door_open,
   });
   $("#statusline").textContent =
     `tick ${st.tick} · sim ${st.sim_time_s}s · rtf ${st.realtime_factor}` +
@@ -150,9 +151,16 @@ function drawReplay() {
   if (!R.poses.length) { drawState({}); return; }
   const i = Math.min(R.idx, R.poses.length - 1);
   const [t, x, y, th, col] = R.poses[i];
+  const evTick = (kind) => {
+    const e = R.events.find((ev) => ev.event === kind);
+    return e ? e.t : null;
+  };
+  const pickupT = evTick("key_pickup"), unlockT = evTick("door_unlocked");
   drawState({
     pose: [x, y, th], colliding: !!col,
     trail: R.poses.slice(0, i + 1).map((p) => [p[0], p[1], p[2]]),
+    keyTaken: pickupT !== null && t >= pickupT,
+    doorOpen: unlockT !== null && t >= unlockT,
   });
   const dt = t / 50.0;
   $("#replay-time").textContent = `tick ${t} · ${dt.toFixed(1)}s`;
@@ -189,7 +197,8 @@ $("#btn-play").addEventListener("click", () => {
 
 /* ---------------- canvas ---------------- */
 
-function drawState({ pose, trail, colliding, bump, rays, rayAngles }) {
+function drawState({ pose, trail, colliding, bump, rays, rayAngles,
+  keyTaken, doorOpen }) {
   const cv = $("#maze"), ctx = cv.getContext("2d");
   ctx.fillStyle = css("--surface-1");
   ctx.fillRect(0, 0, cv.width, cv.height);
@@ -227,6 +236,26 @@ function drawState({ pose, trail, colliding, bump, rays, rayAngles }) {
     ctx.moveTo(X(x1), Y(y1)); ctx.lineTo(X(x2), Y(y2));
   }
   ctx.stroke();
+
+  // locked-exit scenario: door (until opened) and key (until taken)
+  if (m.locked && m.door_segments && !doorOpen) {
+    ctx.strokeStyle = css("--serious");
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    for (const [x1, y1, x2, y2] of m.door_segments) {
+      ctx.moveTo(X(x1), Y(y1)); ctx.lineTo(X(x2), Y(y2));
+    }
+    ctx.stroke();
+  }
+  if (m.locked && m.key_pos && !keyTaken) {
+    const [kx, ky] = m.key_pos;
+    ctx.fillStyle = css("--series-1");
+    ctx.save();
+    ctx.translate(X(kx), Y(ky));
+    ctx.rotate(Math.PI / 4);
+    ctx.fillRect(-5, -5, 10, 10);
+    ctx.restore();
+  }
 
   // trail
   if (trail && trail.length > 1 && $("#chk-trail").checked) {
