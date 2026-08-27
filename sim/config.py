@@ -52,6 +52,20 @@ DEFAULTS = {
         # false = the robot has no wheel encoders at all (the ports do
         # not exist): state estimation must come from lidar/heading.
         "encoders": True,
+        # Vehicle class.  "diffdrive" = two motor channels.  "car" =
+        # kinematic bicycle: an accel/brake channel and a slew-limited
+        # steering-angle channel; momentum + drag; encoders are
+        # replaced by a signed speedometer port.
+        "model": "diffdrive",
+        "car": {
+            "wheelbase": 0.12,        # m (front-rear axle distance)
+            "steer_max_deg": 35.0,    # |steering angle| limit
+            "steer_rate_deg_s": 120.0,  # steering actuator slew rate
+            "accel_max": 0.4,         # m/s^2 at |cmd|=255
+            "drag": 0.35,             # 1/s velocity decay (coasting)
+            "v_max": 0.5,             # m/s forward
+            "v_rev_max": 0.15,        # m/s reverse
+        },
     },
     "lidar": {
         "rays": 16,
@@ -106,6 +120,7 @@ NOISE_PROFILES = {
         # constant gyro bias, degrees per minute of sim time; sign is
         # seeded per episode.  Integrated heading walks away over time.
         "heading_bias_deg_per_min": 0.0,
+        "speed_sigma_ms": 0.0,         # speedometer noise (car model)
     },
     "default_noisy": {
         "lidar_sigma_m": 0.01,
@@ -121,6 +136,7 @@ NOISE_PROFILES = {
         "dropped_read_p": 0.02,
         "beacon_sigma": 0.008,
         "heading_bias_deg_per_min": 0.0,
+        "speed_sigma_ms": 0.01,
     },
 }
 
@@ -179,7 +195,27 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("maze.locked requires maze.style: organic")
     if cfg["prompt_variant"] not in ("standard", "lost"):
         raise ValueError("prompt_variant must be 'standard' or 'lost'")
+    if cfg["robot"].get("model", "diffdrive") not in ("diffdrive", "car"):
+        raise ValueError("robot.model must be 'diffdrive' or 'car'")
     return cfg
+
+
+def device_sets(cfg):
+    """(sensors, actuators) logical device lists for this config."""
+    model = cfg["robot"].get("model", "diffdrive")
+    if model == "car":
+        sensors = ["lidar", "heading", "speed",
+                   "bump_front", "bump_rear", "status"]
+        actuators = ["accel", "steer"]
+    else:
+        sensors = list(SENSOR_DEVICES)
+        if not cfg["robot"].get("encoders", True):
+            sensors = [s for s in sensors
+                       if s not in ("encoder_left", "encoder_right")]
+        actuators = list(ACTUATOR_DEVICES)
+    if cfg["maze"].get("locked"):
+        sensors.append("beacon")
+    return sensors, actuators
 
 
 def load_resolved(path):

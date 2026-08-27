@@ -276,3 +276,16 @@ and replays draw the door (red, until unlocked) and key (diamond, until
 taken).  Verified by unit tests: gradient monotonicity, pickup, locked
 door collision + proximity-gated status field, unlock, escape,
 determinism (locked worlds hash differently).
+
+## Car vehicle model (robot.model: car)
+
+Kinematic bicycle under the same anonymous-port idiom: an accel/brake
+channel (-255..255 -> +-0.4 m/s^2, drag 0.35/s so it coasts and must be
+actively braked; momentum is real — collisions scrub it to zero) and a
+slew-limited steering-angle channel (120 deg/s to +-35 deg; turning
+radius L/tan(phi), min 0.171 m at wheelbase 0.12 — no turning in place).
+Reverse capped at 0.15 m/s so wedged poses are recoverable.  Wheel
+encoders are replaced by a signed speedometer port.  Nothing in any
+prompt or README changes between vehicle classes: which machine you woke
+up on is itself a discovery.  All dynamics verified analytically
+(coast decay, slew rate, turn radius exact); diffdrive smoke unchanged.

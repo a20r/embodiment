@@ -89,6 +89,10 @@ class World:
         self.maze = maze
         self.noise = cfg["noise"]
         self.robot_cfg = cfg["robot"]
+        self.model = cfg["robot"].get("model", "diffdrive")
+        self.car_cfg = cfg["robot"].get("car", {})
+        self.actuators = ["accel", "steer"] if self.model == "car" \
+            else ["motor_left", "motor_right"]
         self.lidar_cfg = cfg["lidar"]
         self.dt = 1.0 / cfg["sim"]["tick_hz"]
         self.log = log_fn or (lambda rec: None)
@@ -139,9 +143,10 @@ class World:
             self.x, self.y, self.theta = sx, sy, 0.0
             self.v = 0.0
             self.w = 0.0
-            self.cmd = [0, 0]          # last written pwm [left, right]
-            self.cmd_eff = [0, 0]      # pwm currently in effect (post latency)
-            self.pending = []          # (apply_tick, side, pwm)
+            self.phi = 0.0             # car: current steering angle, rad
+            self.cmd = {a: 0 for a in self.actuators}   # last written
+            self.cmd_eff = {a: 0 for a in self.actuators}  # post latency
+            self.pending = []          # (apply_tick, logical, value)
             self.enc = [0.0, 0.0]      # cumulative encoder ticks (float)
             self.heading_drift = 0.0   # degrees, random walk
             self.colliding = False
@@ -163,13 +168,19 @@ class World:
 
     # -- actuation ----------------------------------------------------------
 
-    def set_motor(self, side, pwm):
-        """side: 0=left, 1=right.  Applied after actuation latency."""
-        pwm = max(-255, min(255, int(pwm)))
+    def set_actuator(self, logical, value):
+        """Command one actuator channel; applied after latency."""
+        value = max(-255, min(255, int(value)))
         with self.lock:
-            self.cmd[side] = pwm
+            if logical not in self.cmd:
+                return
+            self.cmd[logical] = value
             latency = int(self.noise["actuation_latency_ticks"])
-            self.pending.append((self.tick + latency, side, pwm))
+            self.pending.append((self.tick + latency, logical, value))
+
+    def set_motor(self, side, pwm):
+        """Back-compat wrapper: side 0=left, 1=right (diffdrive)."""
+        self.set_actuator(self.actuators[side], pwm)
 
     # -- physics ------------------------------------------------------------
 
@@ -198,34 +209,62 @@ class World:
             # Apply matured commands.
             if self.pending:
                 still = []
-                for apply_tick, side, pwm in self.pending:
+                for apply_tick, logical, value in self.pending:
                     if apply_tick <= self.tick:
-                        self.cmd_eff[side] = pwm
+                        self.cmd_eff[logical] = value
                     else:
-                        still.append((apply_tick, side, pwm))
+                        still.append((apply_tick, logical, value))
                 self.pending = still
 
             n = self.noise
-            gains = (n["motor_gain_left"], n["motor_gain_right"])
-            max_speed = self.robot_cfg["max_speed"]
-            wheel_v = []   # motor-shaft surface speed (what encoders see)
-            ground_v = []  # ground-contact speed after slip (what moves us)
-            for i in (0, 1):
-                v = self.cmd_eff[i] / 255.0 * max_speed * gains[i]
+            if self.model == "car":
+                c = self.car_cfg
                 slip = 0.0
                 if n["slip_sigma"] > 0 or n["slip_mu"] > 0:
-                    slip = self.rng_slip.gauss(n["slip_mu"], n["slip_sigma"])
+                    slip = self.rng_slip.gauss(n["slip_mu"],
+                                               n["slip_sigma"])
                     slip = max(0.0, min(0.5, slip))
-                wheel_v.append(v)
-                ground_v.append(v * (1.0 - slip))
+                a = self.cmd_eff["accel"] / 255.0 \
+                    * c.get("accel_max", 0.4) * (1.0 - slip)
+                self.v += (a - c.get("drag", 0.35) * self.v) * self.dt
+                self.v = max(-c.get("v_rev_max", 0.15),
+                             min(c.get("v_max", 0.5), self.v))
+                phi_target = self.cmd_eff["steer"] / 255.0 \
+                    * math.radians(c.get("steer_max_deg", 35.0))
+                rate = math.radians(c.get("steer_rate_deg_s", 120.0)) \
+                    * self.dt
+                dphi = max(-rate, min(rate, phi_target - self.phi))
+                self.phi += dphi
+                L = c.get("wheelbase", 0.12)
+                self.w = self.v / L * math.tan(self.phi)
+                # keep the encoder accumulators moving for GT continuity
+                wr = self.robot_cfg["wheel_radius"]
+                tpr = self.robot_cfg["encoder_ticks_per_rev"]
+                self.enc[0] += self.v * self.dt / (TWO_PI * wr) * tpr
+                self.enc[1] = self.enc[0]
+            else:
+                gains = (n["motor_gain_left"], n["motor_gain_right"])
+                max_speed = self.robot_cfg["max_speed"]
+                wheel_v = []   # motor-shaft speed (what encoders see)
+                ground_v = []  # after slip (what moves us)
+                for logical, gain in zip(self.actuators, gains):
+                    v = self.cmd_eff[logical] / 255.0 * max_speed * gain
+                    slip = 0.0
+                    if n["slip_sigma"] > 0 or n["slip_mu"] > 0:
+                        slip = self.rng_slip.gauss(n["slip_mu"],
+                                                   n["slip_sigma"])
+                        slip = max(0.0, min(0.5, slip))
+                    wheel_v.append(v)
+                    ground_v.append(v * (1.0 - slip))
+                wr = self.robot_cfg["wheel_radius"]
+                tpr = self.robot_cfg["encoder_ticks_per_rev"]
+                for i in (0, 1):
+                    self.enc[i] += wheel_v[i] * self.dt \
+                        / (TWO_PI * wr) * tpr
+                self.v = (ground_v[0] + ground_v[1]) / 2.0
+                self.w = (ground_v[1] - ground_v[0]) \
+                    / self.robot_cfg["wheelbase"]
 
-            wr = self.robot_cfg["wheel_radius"]
-            tpr = self.robot_cfg["encoder_ticks_per_rev"]
-            for i in (0, 1):
-                self.enc[i] += wheel_v[i] * self.dt / (TWO_PI * wr) * tpr
-
-            self.v = (ground_v[0] + ground_v[1]) / 2.0
-            self.w = (ground_v[1] - ground_v[0]) / self.robot_cfg["wheelbase"]
             self.theta = (self.theta + self.w * self.dt) % TWO_PI
             nx = self.x + self.v * math.cos(self.theta) * self.dt
             ny = self.y + self.v * math.sin(self.theta) * self.dt
@@ -238,12 +277,19 @@ class World:
                 self.x, self.y = nx, ny
             else:
                 # Slide: try each axis alone; else stay put.
+                slid = False
                 if self._collides(nx, self.y) is None:
                     self.x = nx
+                    slid = True
                 elif self._collides(self.x, ny) is None:
                     self.y = ny
+                    slid = True
                 self.colliding = True
                 contact = self._collides(self.x, self.y) or hit
+                if self.model == "car":
+                    # Momentum dies against a wall: a full block stops
+                    # the car; a scrape scrubs speed.
+                    self.v = self.v * 0.5 if slid else 0.0
 
             # Bump switches from contact bearing relative to heading.
             self.bump = [False, False]
@@ -308,8 +354,10 @@ class World:
                          round(self.theta, 5)],
                 "v": round(self.v, 5),
                 "w": round(self.w, 5),
-                "cmd": list(self.cmd),
-                "cmd_eff": list(self.cmd_eff),
+                **({"phi": round(math.degrees(self.phi), 2)}
+                   if self.model == "car" else {}),
+                "cmd": dict(self.cmd),
+                "cmd_eff": dict(self.cmd_eff),
                 "enc": [round(self.enc[0], 2), round(self.enc[1], 2)],
                 "col": int(self.colliding),
                 "bump": [int(self.bump[0]), int(self.bump[1])],
@@ -392,6 +440,16 @@ class World:
         with self.lock:
             return "1" if self.bump[which] else "0"
 
+    def speed_frame(self):
+        """Signed ground speed, m/s (the car's speedometer)."""
+        n = self.noise
+        with self.lock:
+            v = self.v
+            sigma = n.get("speed_sigma_ms", 0.0)
+            if sigma > 0:
+                v += self.rng_encoder.gauss(0.0, sigma)
+            return f"{v:.3f}"
+
     def beacon_frame(self):
         """Signal-strength receiver for the key's transmitter.  Rises
         toward 1.0 as the robot nears the key (through walls); reads a
@@ -427,8 +485,10 @@ class World:
                 "tick": self.tick,
                 "sim_time_s": round(self.tick * self.dt, 3),
                 "pose": [self.x, self.y, self.theta],
-                "cmd": list(self.cmd),
-                "cmd_eff": list(self.cmd_eff),
+                "cmd": list(self.cmd.values()),
+                "cmd_eff": list(self.cmd_eff.values()),
+                "v": round(self.v, 3),
+                "phi_deg": round(math.degrees(self.phi), 1),
                 "enc": [int(self.enc[0]), int(self.enc[1])],
                 "colliding": self.colliding,
                 "collision_count": self.collision_count,

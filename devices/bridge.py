@@ -42,17 +42,21 @@ FRAME_INTERVAL = 0.025  # seconds between frames for a held-open reader
 
 
 def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False,
-                     extra_sensors=(), exclude_sensors=()):
+                     extra_sensors=(), exclude_sensors=(),
+                     sensors=None, actuators=None):
     """Return {filename: logical_device}.
 
     labels=off: filenames are d0..dN, assignment is a seeded permutation.
     remap_index>0: sensor bindings are additionally permuted (a "wiring
     change") in both label modes; motor_swapped crosses the two channels.
-    extra_sensors: scenario devices (e.g. the key beacon) appended to
-    the sensor set.
+    Pass explicit `sensors`/`actuators` lists for non-default vehicle
+    models; otherwise the diffdrive defaults apply (with extra_sensors
+    appended and exclude_sensors removed).
     """
-    base_sensors = [s for s in SENSOR_DEVICES
-                    if s not in exclude_sensors] + list(extra_sensors)
+    if sensors is None:
+        sensors = [s for s in SENSOR_DEVICES
+                   if s not in exclude_sensors] + list(extra_sensors)
+    base_sensors = list(sensors)
     sensors = base_sensors[:]
     # Walk the remap chain so each remap step observably differs from
     # BOTH the identity wiring and the wiring it replaces.
@@ -65,14 +69,16 @@ def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False,
             if shuffled != prev and shuffled != base_sensors:
                 break
         sensors = shuffled
-    actuators = list(ACTUATOR_DEVICES)
-    if motor_swapped:
+    canonical_act = list(actuators if actuators is not None
+                         else ACTUATOR_DEVICES)
+    actuators = canonical_act[:]
+    if motor_swapped and len(actuators) == 2:
         actuators = [actuators[1], actuators[0]]
 
     logical = sensors + actuators  # physical device behind slot i
     n = len(logical)
     if labels_on:
-        filenames = base_sensors + list(ACTUATOR_DEVICES)
+        filenames = base_sensors + canonical_act
     else:
         rng = random.Random(stable_seed(seed, "labels_off", n))
         order = list(range(n))
@@ -82,10 +88,13 @@ def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False,
 
 
 class DeviceBridge:
-    def __init__(self, devfs_dir, world, bindings, log_fn=None):
+    def __init__(self, devfs_dir, world, bindings, log_fn=None,
+                 actuators=None):
         self.dir = devfs_dir
         self.world = world
         self.bindings = bindings
+        self.actuator_set = set(actuators if actuators is not None
+                                else ACTUATOR_DEVICES)
         self.log = log_fn or (lambda rec: None)
         self.rng_drop = random.Random(
             stable_seed(world.maze.seed, world.episode_index, "drops"))
@@ -108,7 +117,7 @@ class DeviceBridge:
 
     def _spawn(self, filename, logical):
         path = os.path.join(self.dir, filename)
-        target = self._actuator_loop if logical in ACTUATOR_DEVICES \
+        target = self._actuator_loop if logical in self.actuator_set \
             else self._sensor_loop
         t = threading.Thread(target=target,
                              args=(path, filename, logical), daemon=True)
@@ -147,7 +156,7 @@ class DeviceBridge:
         for filename, logical in self.bindings.items():
             path = os.path.join(self.dir, filename)
             try:
-                if logical in ACTUATOR_DEVICES:
+                if logical in self.actuator_set:
                     fd = os.open(path, os.O_WRONLY | os.O_NONBLOCK)
                     os.write(fd, b"\n")
                 else:
@@ -183,6 +192,8 @@ class DeviceBridge:
             return w.status_frame()
         if logical == "beacon":
             return w.beacon_frame()
+        if logical == "speed":
+            return w.speed_frame()
         raise ValueError(logical)
 
     def _sensor_loop(self, path, filename, logical):
@@ -229,7 +240,6 @@ class DeviceBridge:
             time.sleep(FRAME_INTERVAL)
 
     def _actuator_loop(self, path, filename, logical):
-        side = ACTUATOR_DEVICES.index(logical)
         while self.running:
             try:
                 # O_RDWR: our own write end keeps the FIFO alive, so a
@@ -257,7 +267,7 @@ class DeviceBridge:
                                       t=self.world.tick))
                         continue
                     with self.world.lock:
-                        self.world.set_motor(side, val)
+                        self.world.set_actuator(logical, val)
                         tick = self.world.tick
                     self.write_counts[filename] = \
                         self.write_counts.get(filename, 0) + 1
