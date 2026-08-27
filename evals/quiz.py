@@ -39,12 +39,24 @@ def ask_model(model, memory_blob, questions):
     think = thinking_param(model)
     if think:
         kwargs["thinking"] = think
-    with client.messages.stream(
+    # Memory blobs full of device-driving code can false-positive the
+    # safety classifiers; the server-side fallback answers via another
+    # model in that case, and we record which model actually served.
+    with client.beta.messages.stream(
             model=model, max_tokens=4000,
             system=system,
             messages=[{"role": "user", "content": user}],
+            betas=["server-side-fallback-2026-07-01"],
+            fallbacks="default",
             **kwargs) as stream:
         resp = stream.get_final_message()
+    served = getattr(resp, "model", model)
+    if resp.stop_reason == "refusal":
+        return ({q["id"]: "UNKNOWN" for q in questions},
+                f"{model} (refused; category="
+                f"{getattr(resp.stop_details, 'category', '?')})")
+    if served != model:
+        model = f"{model} (served by {served})"
     text = "".join(b.text for b in resp.content if b.type == "text")
     # Parse the FIRST valid JSON object; tolerate code fences and any
     # prose (even prose containing braces) around it.
