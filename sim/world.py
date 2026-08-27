@@ -128,6 +128,12 @@ class World:
                 stable_seed(*base, "beacon"))
             self.key_carried = False
             self.door_open = False
+            # Gyro bias: fixed magnitude from the noise dial, sign
+            # seeded per episode, applied every tick.
+            mag = self.noise.get("heading_bias_deg_per_min", 0.0)
+            sign = 1.0 if random.Random(
+                stable_seed(*base, "gyro_bias")).random() < 0.5 else -1.0
+            self._heading_bias_per_tick = sign * mag * self.dt / 60.0
             self.tick = 0
             sx, sy = self.maze.cell_center(self.maze.start_cell)
             self.x, self.y, self.theta = sx, sy, 0.0
@@ -260,6 +266,7 @@ class World:
             if self.noise["heading_drift_deg"] > 0:
                 self.heading_drift += self.rng_heading.gauss(
                     0.0, self.noise["heading_drift_deg"])
+            self.heading_drift += self._heading_bias_per_tick
 
             if self.maze.locked:
                 if not self.key_carried and self.maze.key_pos:

@@ -42,7 +42,7 @@ FRAME_INTERVAL = 0.025  # seconds between frames for a held-open reader
 
 
 def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False,
-                     extra_sensors=()):
+                     extra_sensors=(), exclude_sensors=()):
     """Return {filename: logical_device}.
 
     labels=off: filenames are d0..dN, assignment is a seeded permutation.
@@ -51,7 +51,8 @@ def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False,
     extra_sensors: scenario devices (e.g. the key beacon) appended to
     the sensor set.
     """
-    base_sensors = list(SENSOR_DEVICES) + list(extra_sensors)
+    base_sensors = [s for s in SENSOR_DEVICES
+                    if s not in exclude_sensors] + list(extra_sensors)
     sensors = base_sensors[:]
     # Walk the remap chain so each remap step observably differs from
     # BOTH the identity wiring and the wiring it replaces.

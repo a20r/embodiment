@@ -76,11 +76,13 @@ class Daemon:
 
         labels_on = cfg["labels"] == "on"
         extra = ("beacon",) if self.maze.locked else ()
+        exclude = () if cfg["robot"].get("encoders", True) \
+            else ("encoder_left", "encoder_right")
         bindings = compute_bindings(
             m["seed"], labels_on,
             remap_index=pert.get("remap_index", 0),
             motor_swapped=pert.get("motor_swapped", False),
-            extra_sensors=extra)
+            extra_sensors=extra, exclude_sensors=exclude)
         self.bridge = DeviceBridge(devfs_dir, self.world, bindings,
                                    log_fn=self.gt.write)
 

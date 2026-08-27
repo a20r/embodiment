@@ -49,6 +49,9 @@ DEFAULTS = {
         "wheel_radius": 0.03,       # m
         "max_speed": 0.35,          # wheel surface speed at |pwm|=255, m/s
         "encoder_ticks_per_rev": 360,
+        # false = the robot has no wheel encoders at all (the ports do
+        # not exist): state estimation must come from lidar/heading.
+        "encoders": True,
     },
     "lidar": {
         "rays": 16,
@@ -100,6 +103,9 @@ NOISE_PROFILES = {
         "actuation_latency_ticks": 0,  # command takes effect N ticks later
         "dropped_read_p": 0.0,         # per device read: empty read served
         "beacon_sigma": 0.0,           # key signal-strength noise
+        # constant gyro bias, degrees per minute of sim time; sign is
+        # seeded per episode.  Integrated heading walks away over time.
+        "heading_bias_deg_per_min": 0.0,
     },
     "default_noisy": {
         "lidar_sigma_m": 0.01,
@@ -114,6 +120,7 @@ NOISE_PROFILES = {
         "actuation_latency_ticks": 3,
         "dropped_read_p": 0.02,
         "beacon_sigma": 0.008,
+        "heading_bias_deg_per_min": 0.0,
     },
 }
 
