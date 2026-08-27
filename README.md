@@ -108,13 +108,11 @@ Compare arms by running two series and diffing their reports.
 
 ## Recorded live runs
 
-`runs/{shakedown,haiku1,lost1,lost2,keyquest}` ship with this repo:
-transcripts, summaries, maze data, device maps, and the agents' full
-`/memory` — everything except the multi-GB-scale ground-truth tick logs
-(regenerate those by re-running; the dashboard's replay view works from
-what's committed only for trails already exported). Load any of them in
-the dashboard, or export a shareable single-file replay page:
-
-```bash
-python3 scripts/make_replay.py <series> ep_001 out.html "Page Title"
-```
+`runs/{demo,shakedown,haiku1,lost1,lost2,keyquest}` ship with this
+repo: transcripts, summaries, maze data, device maps, the agents' full
+`/memory`, and a self-contained interactive `replay.html` per series
+(open it in any browser — trail scrubber, transcript, memory).  The
+per-tick ground-truth logs are not committed (80-140 MB per long run);
+re-run an episode to produce fresh ones, after which
+`scripts/make_replay.py <series> ep_001 out.html "Title"` exports a new
+replay page and the dashboard's live/replay views work fully.
