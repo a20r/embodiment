@@ -22,6 +22,40 @@ def stable_seed(*parts):
     return zlib.crc32(repr(parts).encode())
 
 
+class SegIndex:
+    """Uniform-grid spatial index over wall segments.  Organic mazes
+    carry thousands of small segments; queries return only those whose
+    bounding boxes fall near a point, keeping collision checks and
+    raycasts local."""
+
+    CELL = 0.5
+
+    def __init__(self, segments):
+        self.segments = segments
+        self.buckets = {}
+        c = self.CELL
+        for idx, (x1, y1, x2, y2) in enumerate(segments):
+            i0 = int(min(x1, x2) // c)
+            i1 = int(max(x1, x2) // c)
+            j0 = int(min(y1, y2) // c)
+            j1 = int(max(y1, y2) // c)
+            for i in range(i0, i1 + 1):
+                for j in range(j0, j1 + 1):
+                    self.buckets.setdefault((i, j), []).append(idx)
+
+    def near(self, x, y, r):
+        c = self.CELL
+        seen = set()
+        out = []
+        for i in range(int((x - r) // c), int((x + r) // c) + 1):
+            for j in range(int((y - r) // c), int((y + r) // c) + 1):
+                for idx in self.buckets.get((i, j), ()):
+                    if idx not in seen:
+                        seen.add(idx)
+                        out.append(self.segments[idx])
+        return out
+
+
 def _seg_dist(px, py, x1, y1, x2, y2):
     """Distance from point to segment, and the closest point."""
     dx, dy = x2 - x1, y2 - y1
@@ -63,6 +97,7 @@ class World:
         # frame methods take the lock themselves.
         self.lock = threading.RLock()
         self._segments = maze.segments()
+        self._index = SegIndex(self._segments)
         self.reset()
 
     def reset(self):
@@ -117,7 +152,7 @@ class World:
     def _collides(self, x, y):
         r = self.robot_cfg["radius"]
         worst = None
-        for seg in self._segments:
+        for seg in self._index.near(x, y, r + 0.05):
             d, cx, cy = _seg_dist(x, y, *seg)
             if d < r:
                 if worst is None or d < worst[0]:
@@ -200,9 +235,13 @@ class World:
                     0.0, self.noise["heading_drift_deg"])
 
             if not self.goal_reached:
-                gx, gy = self.maze.cell_center(self.maze.goal_cell)
-                if math.hypot(self.x - gx, self.y - gy) \
-                        < 0.35 * self.maze.cell_size:
+                if self.maze.has_exit:
+                    reached = self.maze.escaped(self.x, self.y)
+                else:
+                    gx, gy = self.maze.cell_center(self.maze.goal_cell)
+                    reached = math.hypot(self.x - gx, self.y - gy) \
+                        < 0.35 * self.maze.cell_size
+                if reached:
                     self.goal_reached = True
                     self.goal_tick = self.tick
                     self._event(dict(event="goal_reached"))
@@ -229,14 +268,19 @@ class World:
 
     # -- sensor emission (called by device bridge on read) ------------------
 
-    def _cast_ray(self, angle):
+    def _cast_ray(self, angle, candidates=None):
         d = math.cos(angle), math.sin(angle)
         best = self.lidar_cfg["max_range"]
-        for seg in self._segments:
+        for seg in (candidates if candidates is not None
+                    else self._segments):
             t = _ray_seg(self.x, self.y, d[0], d[1], *seg)
             if t is not None and t < best:
                 best = t
         return best
+
+    def _ray_candidates(self):
+        return self._index.near(self.x, self.y,
+                                self.lidar_cfg["max_range"] + 0.1)
 
     def ray_angles(self):
         n = self.lidar_cfg["rays"]
@@ -249,18 +293,21 @@ class World:
     def lidar_true(self):
         """Noise-free ranges (experimenter/dashboard use only)."""
         with self.lock:
-            return [self._cast_ray(self.theta + a) for a in self.ray_angles()]
+            cand = self._ray_candidates()
+            return [self._cast_ray(self.theta + a, cand)
+                    for a in self.ray_angles()]
 
     def lidar_frame(self):
         n = self.noise
         with self.lock:
+            cand = self._ray_candidates()
             vals = []
             for a in self.ray_angles():
                 if n["lidar_dropout_p"] > 0 and \
                         self.rng_lidar.random() < n["lidar_dropout_p"]:
                     vals.append(-1.0)
                     continue
-                r = self._cast_ray(self.theta + a)
+                r = self._cast_ray(self.theta + a, cand)
                 if n["lidar_sigma_m"] > 0:
                     r += self.rng_lidar.gauss(0.0, n["lidar_sigma_m"])
                 vals.append(max(0.0, min(self.lidar_cfg["max_range"], r)))

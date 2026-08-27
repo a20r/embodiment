@@ -33,8 +33,9 @@ class Transcript:
 
 
 def build_system_prompt(cfg):
-    with open(os.path.join(REPO, "harness", "prompts",
-                           "robot_agent.md")) as f:
+    fname = "robot_agent_lost.md" \
+        if cfg.get("prompt_variant") == "lost" else "robot_agent.md"
+    with open(os.path.join(REPO, "harness", "prompts", fname)) as f:
         text = f.read()
     b = cfg["budget"]
     text = (text
@@ -55,7 +56,8 @@ def prepare_bot_dir(cfg, bot_dir):
     if os.path.exists(bot_dir):
         shutil.rmtree(bot_dir)
     os.makedirs(os.path.join(bot_dir, "src"))
-    variant = "labeled" if cfg["labels"] == "on" else "unlabeled"
+    variant = cfg.get("readme_variant") or \
+        ("labeled" if cfg["labels"] == "on" else "unlabeled")
     shutil.copy(os.path.join(REPO, "botfs", f"README.{variant}.md"),
                 os.path.join(bot_dir, "README.md"))
 

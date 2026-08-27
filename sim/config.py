@@ -19,6 +19,12 @@ DEFAULTS = {
     "model": "claude-fable-5",
     "arm": "A",              # A = scratch /memory, B = pre-seeded memory system
     "labels": "on",          # on = documented device names, off = d0..dN
+    # standard = walled-maze framing | lost = "you are lost; the goal
+    # will be obvious" (no maze, no robot morphology)
+    "prompt_variant": "standard",
+    # None = derived from labels (labeled/unlabeled); "minimal" = a
+    # README that only says it's a robot with ports under /dev/robot
+    "readme_variant": None,
     "noise_profile": "default_noisy",
     "maze": {
         "seed": 7,
@@ -26,6 +32,11 @@ DEFAULTS = {
         "height": 9,
         "cell_size": 0.5,    # meters
         "braid": 0.0,        # fraction of dead-ends opened into loops
+        # grid = straight lattice walls, goal is an interior cell.
+        # organic = wavy non-convex walls, nothing axis-aligned, and the
+        #   goal is an opening in the far boundary (escape to solve).
+        "style": "grid",
+        "curviness": 1.0,    # organic only: 0..1 wall waviness
     },
     "robot": {
         "radius": 0.09,             # disc radius, m
@@ -147,6 +158,10 @@ def resolve(config_path=None, overrides=None):
     cfg["labels"] = "on" if cfg["labels"] in ("on", True) else "off"
     if cfg["arm"] not in ("A", "B"):
         raise ValueError("arm must be 'A' or 'B'")
+    if cfg["maze"].get("style", "grid") not in ("grid", "organic"):
+        raise ValueError("maze.style must be 'grid' or 'organic'")
+    if cfg["prompt_variant"] not in ("standard", "lost"):
+        raise ValueError("prompt_variant must be 'standard' or 'lost'")
     return cfg
 
 

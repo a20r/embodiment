@@ -66,7 +66,10 @@ class Daemon:
         pert = cfg.get("perturb_state", {})
         self.maze = Maze(m["seed"], m["width"], m["height"],
                          cell_size=m["cell_size"], braid=m["braid"],
-                         family_index=pert.get("family_index", 0))
+                         family_index=pert.get("family_index", 0),
+                         style=m.get("style", "grid"),
+                         curviness=m.get("curviness", 1.0),
+                         robot_radius=cfg["robot"]["radius"])
         self.world = World(cfg, self.maze, episode_index=episode_index,
                            log_fn=self.gt.write)
 
