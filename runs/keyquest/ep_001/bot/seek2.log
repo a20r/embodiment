@@ -1,0 +1,97 @@
+18:36:27 blocked f=0.23 h=9 -> 31 (bias 26)
+18:36:29 blocked f=0.23 h=21 -> 21 (bias 26)
+18:36:29 blocked f=0.22 h=17 -> 17 (bias 26)
+18:36:29 blocked f=0.23 h=24 -> 24 (bias 26)
+18:36:29 blocked f=0.22 h=19 -> 41 (bias 26)
+18:36:30 blocked f=0.22 h=33 -> 33 (bias 26)
+18:36:30 blocked f=0.24 h=31 -> 31 (bias 26)
+18:36:30 blocked f=0.24 h=27 -> 27 (bias 26)
+18:36:30 blocked f=0.23 h=30 -> 30 (bias 26)
+18:36:31 blocked f=0.24 h=31 -> 31 (bias 26)
+18:36:31 blocked f=0.25 h=31 -> 31 (bias 26)
+18:36:31 blocked f=0.25 h=32 -> 32 (bias 26)
+18:36:31 blocked f=0.25 h=29 -> 29 (bias 26)
+18:36:31 blocked f=0.24 h=31 -> 31 (bias 26)
+18:36:31 blocked f=0.23 h=31 -> 31 (bias 26)
+18:36:31 blocked f=0.23 h=29 -> 29 (bias 26)
+18:36:31 blocked f=0.23 h=34 -> 34 (bias 26)
+18:36:31 blocked f=0.24 h=30 -> 30 (bias 26)
+18:36:31 blocked f=0.23 h=30 -> 30 (bias 26)
+18:36:31 blocked f=0.23 h=30 -> 30 (bias 26)
+18:36:31 blocked f=0.23 h=33 -> 33 (bias 26)
+18:36:31 blocked f=0.24 h=29 -> 29 (bias 26)
+18:36:31 blocked f=0.24 h=28 -> 28 (bias 26)
+18:36:31 blocked f=0.23 h=30 -> 30 (bias 26)
+18:36:31 blocked f=0.24 h=31 -> 31 (bias 26)
+18:36:31 blocked f=0.23 h=31 -> 31 (bias 26)
+18:36:31 blocked f=0.24 h=30 -> 30 (bias 26)
+18:36:32 blocked f=0.23 h=30 -> 30 (bias 26)
+18:36:32 blocked f=0.24 h=29 -> 29 (bias 26)
+18:36:32 blocked f=0.22 h=29 -> 52 (bias 26)
+18:36:33 blocked f=0.22 h=39 -> 17 (bias 26)
+18:36:35 blocked f=0.24 h=33 -> 33 (bias 26)
+18:36:35 blocked f=0.24 h=31 -> 31 (bias 26)
+18:36:35 blocked f=0.22 h=25 -> 25 (bias 26)
+18:36:35 blocked f=0.23 h=27 -> 27 (bias 26)
+18:36:35 blocked f=0.22 h=30 -> 30 (bias 26)
+18:36:35 blocked f=0.22 h=23 -> 23 (bias 26)
+18:36:35 gradient fit: bearing 110 mag 1.62e-03 pose (-2,4) s=0.126
+18:36:35 blocked f=0.22 h=31 -> 98 (bias 110)
+18:36:45 gradient fit: bearing 355 mag 3.98e-04 pose (0,110) s=0.121
+18:37:25 gradient fit: bearing 171 mag 1.51e-05 pose (-139,368) s=0.134
+18:37:36 blocked f=0.23 h=145 -> 123 (bias 171)
+18:37:38 gradient fit: bearing 32 mag 3.41e-05 pose (-246,457) s=0.114
+18:37:48 gradient fit: bearing 58 mag 4.41e-06 pose (-196,518) s=0.114
+18:37:57 blocked f=0.25 h=51 -> 96 (bias 58)
+18:38:01 gradient fit: bearing 33 mag 3.12e-05 pose (-54,675) s=0.133
+18:38:05 blocked f=0.25 h=75 -> 98 (bias 33)
+18:38:11 blocked f=0.23 h=75 -> 98 (bias 33)
+18:38:12 gradient fit: bearing 34 mag 3.01e-05 pose (-28,806) s=0.136
+18:38:20 blocked f=0.22 h=69 -> 92 (bias 34)
+18:38:23 gradient fit: bearing 29 mag 3.23e-05 pose (14,982) s=0.139
+18:38:30 blocked f=0.24 h=75 -> 97 (bias 29)
+18:38:33 gradient fit: bearing 65 mag 3.00e-05 pose (60,1146) s=0.149
+18:38:43 gradient fit: bearing 6 mag 8.73e-05 pose (109,1425) s=0.147
+18:38:53 gradient fit: bearing 145 mag 8.35e-03 pose (110,1428) s=0.157
+18:39:03 gradient fit: bearing 33 mag 3.39e-04 pose (50,1510) s=0.149
+18:39:13 gradient fit: bearing 216 mag 2.40e-04 pose (99,1558) s=0.13
+18:39:23 gradient fit: bearing 217 mag 1.98e-04 pose (101,1546) s=0.146
+18:39:24 blocked f=0.22 h=276 -> 231 (bias 217)
+18:39:33 gradient fit: bearing 261 mag 5.63e-05 pose (33,1442) s=0.142
+18:39:43 gradient fit: bearing 347 mag 8.17e-05 pose (-112,1193) s=0.134
+18:39:54 gradient fit: bearing 346 mag 8.14e-05 pose (-122,1190) s=0.144
+18:39:54 blocked f=0.21 h=9 -> 54 (bias 346)
+18:39:59 blocked f=0.25 h=40 -> 310 (bias 346)
+18:40:07 gradient fit: bearing 344 mag 7.80e-05 pose (-150,1182) s=0.143
+18:40:09 blocked f=0.24 h=326 -> 304 (bias 344)
+18:40:15 blocked f=0.23 h=320 -> 72 (bias 344)
+18:40:24 gradient fit: bearing 7 mag 5.62e-05 pose (-55,1068) s=0.122
+18:40:34 gradient fit: bearing 337 mag 2.75e-05 pose (-56,1066) s=0.161
+18:41:14 gradient fit: bearing 193 mag 1.57e-03 pose (-82,349) s=0.132 best=0.148@(-4,-12)
+18:41:25 gradient fit: bearing 193 mag 1.05e-03 pose (-93,344) s=0.146 best=0.148@(-4,-12)
+18:41:26 blocked f=0.25 h=208 -> 230 (bias 193)
+18:41:32 blocked f=0.25 h=219 -> 264 (bias 193)
+18:41:37 gradient fit: bearing 6 mag 5.47e-05 pose (-171,314) s=0.117 best=0.148@(-4,-12)
+18:41:37 returning to best 0.148 at (-4,-12) bias 297
+18:41:47 gradient fit: bearing 6 mag 4.12e-05 pose (-198,31) s=0.124 best=0.148@(-4,-12)
+18:41:57 gradient fit: bearing 9 mag 4.47e-05 pose (-204,25) s=0.116 best=0.148@(-4,-12)
+18:41:57 returning to best 0.148 at (-4,-12) bias 350
+18:42:03 blocked f=0.25 h=4 -> 319 (bias 350)
+18:42:07 gradient fit: bearing 13 mag 5.04e-05 pose (-177,35) s=0.106 best=0.148@(-4,-12)
+18:42:07 returning to best 0.148 at (-4,-12) bias 345
+18:42:10 blocked f=0.25 h=333 -> 310 (bias 345)
+18:42:17 gradient fit: bearing 12 mag 5.26e-05 pose (-20,-70) s=0.13 best=0.148@(-4,-12)
+18:42:19 blocked f=0.25 h=327 -> 80 (bias 12)
+18:42:28 gradient fit: bearing 16 mag 5.08e-05 pose (-23,-101) s=0.114 best=0.148@(-4,-12)
+18:42:28 returning to best 0.148 at (-4,-12) bias 78
+18:42:38 gradient fit: bearing 15 mag 6.55e-05 pose (65,163) s=0.146 best=0.149@(46,97)
+18:42:48 gradient fit: bearing 349 mag 8.90e-03 pose (66,166) s=0.136 best=0.154@(66,166)
+18:42:58 gradient fit: bearing 71 mag 1.13e-03 pose (73,158) s=0.136 best=0.154@(66,166)
+18:42:59 blocked f=0.15 h=315 -> 67 (bias 71)
+18:43:09 gradient fit: bearing 185 mag 8.14e-04 pose (57,133) s=0.155 best=0.154@(66,166)
+18:43:19 gradient fit: bearing 171 mag 1.47e-03 pose (66,132) s=0.129 best=0.154@(66,166)
+18:43:26 blocked f=0.23 h=168 -> 123 (bias 171)
+18:43:30 gradient fit: bearing 73 mag 8.05e-05 pose (-91,147) s=0.137 best=0.154@(66,166)
+18:43:40 gradient fit: bearing 19 mag 5.30e-05 pose (-66,257) s=0.138 best=0.154@(66,166)
+18:43:50 gradient fit: bearing 14 mag 5.22e-05 pose (83,446) s=0.144 best=0.154@(66,166)
+18:44:00 gradient fit: bearing 13 mag 5.31e-05 pose (316,604) s=0.171 best=0.160@(255,569)

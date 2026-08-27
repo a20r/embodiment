@@ -1,0 +1,16 @@
+{
+  "file_to_physical": {
+    "bump_front": "bump_front",
+    "bump_rear": "bump_rear",
+    "encoder_left": "encoder_left",
+    "encoder_right": "encoder_right",
+    "heading": "heading",
+    "lidar": "lidar",
+    "motor_left": "motor_left",
+    "motor_right": "motor_right",
+    "status": "status"
+  },
+  "labels": "on",
+  "motor_swapped": false,
+  "remap_index": 0
+}

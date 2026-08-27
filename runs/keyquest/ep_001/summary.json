@@ -1,0 +1,29 @@
+{
+  "episode": 1,
+  "arm": "A",
+  "labels": "off",
+  "model": "claude-fable-5",
+  "noise_profile": "default_noisy",
+  "maze_hash": "4745a9617cc221f0",
+  "perturb_state": {
+    "family_index": 0,
+    "remap_index": 0,
+    "motor_swapped": false
+  },
+  "end_reason": "wallclock",
+  "solved": false,
+  "goal_tick": null,
+  "final_tick": 727550,
+  "sim_time_s": 14551.0,
+  "wall_s": 7275.5,
+  "turns": 214,
+  "execs": 215,
+  "restarts": 0,
+  "tokens": {
+    "input": 428,
+    "output": 85144,
+    "cache_read": 13463798,
+    "cache_creation": 109307
+  },
+  "collisions": 2627
+}

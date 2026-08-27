@@ -1,0 +1,15 @@
+18:34:00 start sig 0.12125
+18:34:05 sig drop 0.132->0.123, tumble to 262
+18:34:18 sig drop 0.128->0.118, tumble to 260
+18:34:27 sig drop 0.123->0.113, tumble to 280
+18:34:33 sig drop 0.120->0.112, tumble to 291
+18:34:35 sig drop 0.123->0.110, tumble to 280
+18:34:36 sig drop 0.123->0.113, tumble to 96
+18:34:52 blocked f=0.21 turn to 278 clr=0.73
+18:35:03 sig drop 0.122->0.117, tumble to 275
+18:35:06 sig drop 0.121->0.116, tumble to 105
+18:35:16 blocked f=0.22 turn to 102 clr=0.76
+18:35:22 sig drop 0.127->0.122, tumble to 271
+18:35:34 sig drop 0.123->0.117, tumble to 268
+18:35:44 sig drop 0.122->0.115, tumble to 114
+18:35:56 sig drop 0.130->0.117, tumble to 274

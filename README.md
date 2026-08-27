@@ -105,3 +105,16 @@ runs/<series>/
   topics/, CHANGELOG, conventions) and the system prompt explains it.
 
 Compare arms by running two series and diffing their reports.
+
+## Recorded live runs
+
+`runs/{shakedown,haiku1,lost1,lost2,keyquest}` ship with this repo:
+transcripts, summaries, maze data, device maps, and the agents' full
+`/memory` — everything except the multi-GB-scale ground-truth tick logs
+(regenerate those by re-running; the dashboard's replay view works from
+what's committed only for trails already exported). Load any of them in
+the dashboard, or export a shareable single-file replay page:
+
+```bash
+python3 scripts/make_replay.py <series> ep_001 out.html "Page Title"
+```

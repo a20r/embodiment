@@ -1,0 +1,40 @@
+20:15:42 phase1: climb to s>0.70
+20:15:49 probe brg 238 s 0.111->0.103
+20:15:56 probe brg 255 s 0.109->0.100
+20:16:17 probe brg 61 s 0.099->0.103
+20:20:01 phase1: climb to s>0.70
+20:20:02 phase1 done s=0.779
+20:20:02 phase2: tight left-hand contour trace
+20:20:29 trace s=0.808 smax=0.838 f=0.13 l=0.13
+20:20:38 trace s=0.802 smax=0.838 f=0.10 l=0.13
+20:20:47 trace s=0.775 smax=0.838 f=0.32 l=0.09
+20:20:57 trace s=0.762 smax=0.838 f=0.55 l=0.10
+20:21:06 trace s=0.713 smax=0.838 f=0.46 l=0.15
+20:21:15 trace s=0.637 smax=0.838 f=0.60 l=0.23
+20:21:24 trace s=0.566 smax=0.838 f=0.32 l=0.18
+20:21:33 trace s=0.478 smax=0.838 f=0.27 l=0.20
+20:21:42 trace s=0.401 smax=0.838 f=0.32 l=0.13
+20:21:51 trace s=0.362 smax=0.838 f=0.36 l=0.11
+20:22:00 trace s=0.330 smax=0.838 f=0.28 l=0.15
+20:22:09 trace s=0.277 smax=0.838 f=0.35 l=0.16
+20:22:18 trace s=0.242 smax=0.838 f=0.31 l=0.11
+20:22:27 trace s=0.224 smax=0.838 f=0.18 l=0.17
+20:22:36 trace s=0.219 smax=0.838 f=0.13 l=0.13
+20:22:51 phase1: climb to s>0.70
+20:22:58 probe brg 187 s 0.197->0.177
+20:23:18 probe brg 31 s 0.181->0.199
+20:23:25 probe brg 38 s 0.198->0.202
+20:23:33 probe brg 62 s 0.214->0.235
+20:23:41 probe brg 70 s 0.236->0.256
+20:23:52 probe brg 98 s 0.240->0.273
+20:23:59 probe brg 101 s 0.277->0.297
+20:24:06 probe brg 85 s 0.307->0.338
+20:24:13 probe brg 84 s 0.338->0.377
+20:24:20 probe brg 84 s 0.397->0.428
+20:24:28 probe brg 103 s 0.429->0.478
+20:24:36 probe brg 113 s 0.479->0.534
+20:24:43 probe brg 95 s 0.537->0.610
+20:24:50 probe brg 98 s 0.605->0.680
+20:24:57 probe brg 93 s 0.667->0.744
+20:24:57 phase1 done s=0.751
+20:24:57 phase2: tight RIGHT-hand contour trace

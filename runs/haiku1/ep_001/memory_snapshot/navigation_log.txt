@@ -1,0 +1,3 @@
+Started maze navigation with basic obstacle avoidance algorithm.
+The robot is using wall-following logic to navigate through the maze.
+Current status: Running
