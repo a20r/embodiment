@@ -72,6 +72,15 @@ def context_tokens(usage):
             + usage.output_tokens)
 
 
+def thinking_param(model):
+    """Adaptive thinking exists on the 4.6+/5 families; older models
+    (e.g. claude-haiku-4-5) reject it, so we omit the parameter there."""
+    import re
+    if re.match(r"claude-(fable|mythos|opus|sonnet)-(5|4-[678])", model):
+        return {"type": "adaptive"}
+    return None
+
+
 class AnthropicModel:
     def __init__(self, model):
         import anthropic
@@ -81,6 +90,10 @@ class AnthropicModel:
 
     def create(self, system, messages, max_tokens=16000):
         a = self._anthropic
+        kwargs = {}
+        think = thinking_param(self.model)
+        if think:
+            kwargs["thinking"] = think
         attempts = 0
         while True:
             attempts += 1
@@ -89,10 +102,10 @@ class AnthropicModel:
                     model=self.model,
                     max_tokens=max_tokens,
                     system=system,
-                    thinking={"type": "adaptive"},
                     tools=[BASH_TOOL],
                     cache_control={"type": "ephemeral"},
                     messages=messages,
+                    **kwargs,
                 ) as stream:
                     return stream.get_final_message()
             except (a.RateLimitError, a.APIConnectionError) as e:

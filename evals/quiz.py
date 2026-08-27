@@ -21,6 +21,7 @@ def ask_model(model, memory_blob, questions):
     if model == "none":
         return {q["id"]: "UNKNOWN" for q in questions}, "offline"
     import anthropic
+    from harness.llm import thinking_param
     client = anthropic.Anthropic()
     qtext = "\n".join(f"- {q['id']}: {q['text']}" for q in questions)
     system = (
@@ -34,11 +35,15 @@ def ask_model(model, memory_blob, questions):
         "answer string, no other text.")
     user = (f"===== OPERATOR NOTES =====\n{memory_blob}\n\n"
             f"===== QUESTIONS =====\n{qtext}")
+    kwargs = {}
+    think = thinking_param(model)
+    if think:
+        kwargs["thinking"] = think
     with client.messages.stream(
             model=model, max_tokens=4000,
-            thinking={"type": "adaptive"},
             system=system,
-            messages=[{"role": "user", "content": user}]) as stream:
+            messages=[{"role": "user", "content": user}],
+            **kwargs) as stream:
         resp = stream.get_final_message()
     text = "".join(b.text for b in resp.content if b.type == "text")
     # Parse the FIRST valid JSON object; tolerate code fences and any
