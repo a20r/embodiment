@@ -210,6 +210,16 @@ def run_episode(cfg, series_dir, episode_index):
                     "You are now connected to the robot. Begin.")})
             turns += 1
             response = model.create(system, messages)
+            # Safety-classifier false positives are stochastic; retry
+            # the same model a few times before giving up the episode.
+            refusal_tries = 0
+            while getattr(response, "stop_reason", None) == "refusal" \
+                    and refusal_tries < 3:
+                refusal_tries += 1
+                transcript.write(dict(type="note", kind="refusal_retry",
+                                      attempt=refusal_tries))
+                time.sleep(10 * refusal_tries)
+                response = model.create(system, messages)
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens
