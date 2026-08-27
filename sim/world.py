@@ -59,18 +59,22 @@ class World:
         self.dt = 1.0 / cfg["sim"]["tick_hz"]
         self.log = log_fn or (lambda rec: None)
         self.episode_index = episode_index
-        self.lock = threading.Lock()
+        # RLock: the device bridge samples frames + tick atomically while
+        # frame methods take the lock themselves.
+        self.lock = threading.RLock()
         self._segments = maze.segments()
-
-        base = (maze.seed, episode_index)
-        self.rng_slip = random.Random(stable_seed(*base, "slip"))
-        self.rng_lidar = random.Random(stable_seed(*base, "lidar"))
-        self.rng_heading = random.Random(stable_seed(*base, "heading"))
-        self.rng_encoder = random.Random(stable_seed(*base, "encoder"))
         self.reset()
 
     def reset(self):
         with self.lock:
+            # Reseed noise streams so a reset world replays identically.
+            base = (self.maze.seed, self.episode_index)
+            self.rng_slip = random.Random(stable_seed(*base, "slip"))
+            self.rng_lidar = random.Random(stable_seed(*base, "lidar"))
+            self.rng_heading = random.Random(
+                stable_seed(*base, "heading"))
+            self.rng_encoder = random.Random(
+                stable_seed(*base, "encoder"))
             self.tick = 0
             sx, sy = self.maze.cell_center(self.maze.start_cell)
             self.x, self.y, self.theta = sx, sy, 0.0
@@ -268,7 +272,8 @@ class World:
             deg = math.degrees(self.theta) + self.heading_drift
             if n["heading_sigma_deg"] > 0:
                 deg += self.rng_heading.gauss(0.0, n["heading_sigma_deg"])
-            return f"{deg % 360.0:.1f}"
+            # Round, then wrap: 359.97 must read "0.0", never "360.0".
+            return f"{round(deg % 360.0, 1) % 360.0:.1f}"
 
     def encoder_frame(self, side):
         n = self.noise

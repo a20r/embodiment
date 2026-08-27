@@ -484,11 +484,13 @@ function svgBarChart(points, { w = 620, h = 160, yFmt = (v) => v, color }) {
 }
 
 function metricsTable(rows, cols) {
+  // Escape everything: quiz/provenance rows carry agent-influenced text.
   let h = '<table class="metrics"><tr>' +
-    cols.map((c) => `<th>${c}</th>`).join("") + "</tr>";
+    cols.map((c) => `<th>${renderBlockText(c)}</th>`).join("") + "</tr>";
   for (const r of rows) {
     h += "<tr>" + cols.map((c) =>
-      `<td>${r[c] == null ? "—" : r[c]}</td>`).join("") + "</tr>";
+      `<td>${r[c] == null ? "—" : renderBlockText(String(r[c]))}</td>`)
+      .join("") + "</tr>";
   }
   return h + "</table>";
 }
@@ -520,7 +522,8 @@ async function loadMetrics() {
     ["episode", "solved", "end_reason", "sim_time_to_solve_s", "wall_s",
      "turns", "restarts", "collisions", "tokens_out"]);
   for (const [name, ev] of Object.entries(m.evals || {})) {
-    html += `<div class="chart-block"><h3>eval: ${name}</h3>`;
+    html += `<div class="chart-block"><h3>eval: ` +
+      `${renderBlockText(name)}</h3>`;
     if (ev.rows && ev.rows.length) {
       html += metricsTable(ev.rows, Object.keys(ev.rows[0]));
     }

@@ -1,0 +1,2 @@
+episode,solved,end_reason,ticks_to_solve,sim_s_to_solve,wall_s,turns,execs,restarts,collisions,tokens_out,maze_hash
+1,True,solved,13565,271.3,72.9,20,19,0,4,2320,a80368043dbff2e4

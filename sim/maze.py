@@ -167,7 +167,7 @@ class Maze:
         return segs
 
     def hash(self):
-        canon = repr((self.width, self.height,
+        canon = repr((self.width, self.height, self.cell_size,
                       [tuple(r) for r in self.h_walls],
                       [tuple(c) for c in self.v_walls])).encode()
         return hashlib.sha256(canon).hexdigest()[:16]

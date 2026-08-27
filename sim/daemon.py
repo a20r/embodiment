@@ -30,7 +30,10 @@ class GroundTruthLog:
     """Append-only JSONL; the agent can never see this file."""
 
     def __init__(self, path):
-        self.f = open(path, "a", buffering=1024 * 64)
+        # "w": each daemon lifetime owns exactly one episode run; stale
+        # records from a previous run in the same dir must not leak into
+        # the eval substrate.
+        self.f = open(path, "w", buffering=1024 * 64)
         self.lock = threading.Lock()
         self.count = 0
         self.closed = False
@@ -52,7 +55,8 @@ class GroundTruthLog:
 
 
 class Daemon:
-    def __init__(self, cfg, run_dir, devfs_dir, episode_index=0):
+    def __init__(self, cfg, run_dir, devfs_dir, episode_index=0,
+                 start_paused=False):
         self.cfg = cfg
         self.run_dir = run_dir
         os.makedirs(run_dir, exist_ok=True)
@@ -85,7 +89,7 @@ class Daemon:
                            episode_index=episode_index,
                            perturb_state=pert, t=0))
 
-        self.paused = False
+        self.paused = start_paused
         self.rtf = float(cfg["sim"]["realtime_factor"])
         self.tick_hz = cfg["sim"]["tick_hz"]
         self.running = True
@@ -136,6 +140,9 @@ def main(argv=None):
     p.add_argument("--devfs", required=True)
     p.add_argument("--episode-index", type=int, default=0)
     p.add_argument("--port", type=int, default=None)
+    p.add_argument("--start-paused", action="store_true",
+                   help="hold the tick loop until POST /resume (so "
+                        "setup time never counts as sim time)")
     args = p.parse_args(argv)
 
     cfg = simconfig.load_resolved(args.config)
@@ -143,7 +150,8 @@ def main(argv=None):
         cfg["sim"]["api_port"] = args.port
 
     daemon = Daemon(cfg, args.run_dir, args.devfs,
-                    episode_index=args.episode_index)
+                    episode_index=args.episode_index,
+                    start_paused=args.start_paused)
     signal.signal(signal.SIGTERM, lambda *a: daemon.shutdown())
     signal.signal(signal.SIGINT, lambda *a: daemon.shutdown())
     daemon.run()

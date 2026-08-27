@@ -26,7 +26,8 @@ def api_post(port, path, body=None, host="127.0.0.1"):
 
 class SimDaemonProc:
     def __init__(self, cfg, run_dir, devfs_dir, episode_index=0,
-                 repo_root=None):
+                 repo_root=None, start_paused=False):
+        self.start_paused = start_paused
         self.cfg = cfg
         self.run_dir = os.path.abspath(run_dir)
         self.devfs_dir = os.path.abspath(devfs_dir)
@@ -41,26 +42,40 @@ class SimDaemonProc:
         os.makedirs(self.devfs_dir, exist_ok=True)
         cfg_path = os.path.join(self.run_dir, "daemon_config.json")
         simconfig.dump_resolved(self.cfg, cfg_path)
-        log = open(os.path.join(self.run_dir, "daemon.log"), "ab")
-        self.proc = subprocess.Popen(
-            [sys.executable, "-m", "sim.daemon",
-             "--config", cfg_path,
-             "--run-dir", self.run_dir,
-             "--devfs", self.devfs_dir,
-             "--episode-index", str(self.episode_index),
-             "--port", str(self.port)],
-            cwd=self.repo_root, stdout=log, stderr=log)
+        cmd = [sys.executable, "-m", "sim.daemon",
+               "--config", cfg_path,
+               "--run-dir", self.run_dir,
+               "--devfs", self.devfs_dir,
+               "--episode-index", str(self.episode_index),
+               "--port", str(self.port)]
+        if self.start_paused:
+            cmd.append("--start-paused")
+        with open(os.path.join(self.run_dir, "daemon.log"), "ab") as log:
+            self.proc = subprocess.Popen(cmd, cwd=self.repo_root,
+                                         stdout=log, stderr=log)
         deadline = time.time() + timeout_s
         while time.time() < deadline:
             if self.proc.poll() is not None:
                 raise RuntimeError(
                     f"sim daemon exited early; see {self.run_dir}/daemon.log")
             try:
-                if api_get(self.port, "/health").get("ok"):
+                h = api_get(self.port, "/health")
+                if h.get("ok"):
+                    # Verify identity: a stale daemon holding this port
+                    # would answer with the wrong pid/run dir.
+                    if h.get("pid") != self.proc.pid:
+                        raise RuntimeError(
+                            f"port {self.port} is served by another sim "
+                            f"daemon (pid {h.get('pid')}, run_dir "
+                            f"{h.get('run_dir')!r}); kill it or change "
+                            f"sim.api_port")
                     return self
             except OSError:
                 time.sleep(0.1)
         raise RuntimeError("sim daemon did not become healthy")
+
+    def resume(self):
+        self.post("/resume")
 
     def get(self, path):
         return api_get(self.port, path)

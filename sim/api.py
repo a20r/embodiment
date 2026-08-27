@@ -6,6 +6,7 @@ served on this port is reachable from inside the bot container
 """
 
 import json
+import os
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
@@ -29,7 +30,11 @@ def make_handler(daemon):
             u = urlparse(self.path)
             q = parse_qs(u.query)
             if u.path == "/health":
-                self._json({"ok": True, "tick": daemon.world.tick})
+                # run_dir + pid let a client verify it reached THIS
+                # daemon, not a stale one holding the same port.
+                self._json({"ok": True, "tick": daemon.world.tick,
+                            "run_dir": daemon.run_dir,
+                            "pid": os.getpid()})
             elif u.path == "/state":
                 since = int(q.get("since", ["0"])[0])
                 snap = daemon.world.snapshot(since_tick=since)

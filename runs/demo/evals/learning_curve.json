@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "episode": 1,
+      "solved": true,
+      "end_reason": "solved",
+      "ticks_to_solve": 13565,
+      "sim_s_to_solve": 271.3,
+      "wall_s": 72.9,
+      "turns": 20,
+      "execs": 19,
+      "restarts": 0,
+      "collisions": 4,
+      "tokens_out": 2320,
+      "maze_hash": "a80368043dbff2e4"
+    }
+  ],
+  "summary": {
+    "episodes": 1,
+    "solved": 1,
+    "solve_rate": 1.0,
+    "first_solve_sim_s": 271.3,
+    "best_sim_s": 271.3,
+    "last_sim_s": 271.3,
+    "improvement_first_to_last": null
+  }
+}

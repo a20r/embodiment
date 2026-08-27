@@ -45,18 +45,23 @@ class Check:
 
 
 def start_stack(name, cfg, perturb_state=None):
+    import shutil
     run_dir = os.path.join(REPO, "runs", "smoke", name)
-    os.makedirs(run_dir, exist_ok=True)
+    if os.path.exists(run_dir):
+        shutil.rmtree(run_dir)  # stale runs must not contaminate the log
+    os.makedirs(run_dir)
     if perturb_state:
         cfg = dict(cfg, perturb_state=perturb_state)
     devfs = os.path.join(run_dir, "devfs")
-    daemon = SimDaemonProc(cfg, run_dir, devfs, repo_root=REPO).start()
+    daemon = SimDaemonProc(cfg, run_dir, devfs, repo_root=REPO,
+                           start_paused=True).start()
     box = BotContainer(f"mazebot-smoke-{name}",
                        {devfs: "/dev/robot"}, workdir="/")
     box.start()
     box.exec("mkdir -p /smoke", timeout_s=10)
     for script in ("wall_follower.py", "probe.py"):
         box.cp_in(os.path.join(REPO, "scripts", script), f"/smoke/{script}")
+    daemon.resume()
     return daemon, box, run_dir
 
 

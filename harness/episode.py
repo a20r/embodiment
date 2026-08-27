@@ -86,15 +86,17 @@ def run_episode(cfg, series_dir, episode_index):
     prepare_bot_dir(cfg, bot_dir)
     seed_memory_if_needed(cfg, memory_dir)
 
+    # start_paused: container boot time must not count as sim time.
     daemon = SimDaemonProc(cfg, ep_dir, devfs,
                            episode_index=episode_index,
-                           repo_root=REPO).start()
+                           repo_root=REPO, start_paused=True).start()
     box = BotContainer(
         f"mazebot-{cfg['series']['name']}-ep{episode_index}",
         {os.path.abspath(devfs): "/dev/robot",
          os.path.abspath(bot_dir): "/bot",
          os.path.abspath(memory_dir): "/memory"})
     box.start()
+    daemon.resume()
 
     transcript = Transcript(os.path.join(ep_dir, "transcript.jsonl"))
     model = llm.make_model(cfg["model"], REPO)

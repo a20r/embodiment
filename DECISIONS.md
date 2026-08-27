@@ -133,14 +133,13 @@ container can reach it.
 
 ## No API key in the build environment
 
-The harness's model client is stdlib `urllib` against the Anthropic
-Messages API (keeps the dependency count at exactly one: PyYAML).  This
-build/CI environment has no `ANTHROPIC_API_KEY`, so the recorded
+This build/CI environment has no `ANTHROPIC_API_KEY`, so the recorded
 reference episode uses the built-in `mock:wall-follower` model — a
 scripted agent that exercises the identical harness path (bash tool
 calls through `docker exec`, transcript, budgets, /memory writes).  Set
-`ANTHROPIC_API_KEY` and `model: claude-fable-5` for live episodes; the
-code path is the same.
+`ANTHROPIC_API_KEY` (or an `ant auth login` profile) and
+`model: claude-fable-5` for live episodes; the code path is the same.
+(See "Harness model layer" below for the client itself.)
 
 ## Harness model layer
 
@@ -218,3 +217,36 @@ by realpath containment.
   reader holding every device open just gets frame streams.
 - `botctl shell` requires a running episode (containers are removed at
   episode end).
+
+## Review-driven hardening (adversarial review pass)
+
+An adversarial multi-agent review of the sim core confirmed and led to
+these changes:
+
+- **Ground-truth log truncates on daemon start** ("w", not "a"): one
+  daemon lifetime = one episode run; stale records from a reused run dir
+  must never contaminate the eval substrate.  Smoke also wipes its run
+  dirs.
+- **Sim starts paused; the harness resumes it once the container is up**
+  (`--start-paused` + POST /resume): container boot time never counts
+  as sim time, so `goal_tick` measures the agent, not Docker.
+- **Actuator FIFOs are held open O_RDWR** by the bridge: a writer
+  closing never delivers EOF, eliminating the close/reopen window in
+  which a rapid one-shot write could be discarded.
+- **Poison motor writes can't kill a device**: `inf`/`1e999` raise
+  OverflowError, now caught alongside ValueError (regression-tested).
+- **Deleted device files re-enumerate**: a watchdog recreates a FIFO the
+  agent `rm`'d and spawns a fresh serving thread (capped at 20 heals per
+  device; the old thread parks harmlessly on the orphaned inode).
+- **Daemon identity check**: /health reports pid + run dir and the
+  harness verifies the pid, so a stale daemon squatting the port is an
+  error, not a silent mis-bind.
+- **Frame/tick atomicity**: device read/write events log the tick the
+  values were computed at (RLock around emission), keeping provenance
+  exact.
+- **World.reset() reseeds all noise streams**, heading can never read
+  "360.0", maze hashes include cell_size, and each sensor_remap step is
+  guaranteed to differ from both identity and the wiring it replaces.
+- Dashboard: all agent-influenced strings (transcript, memory, quiz
+  answers, eval rows) are HTML-escaped before rendering — the agent
+  writes /memory, so eval tables are an injection surface.

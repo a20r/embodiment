@@ -49,12 +49,15 @@ def compute_bindings(seed, labels_on, remap_index=0, motor_swapped=False):
     change") in both label modes; motor_swapped crosses the two channels.
     """
     sensors = list(SENSOR_DEVICES)
-    if remap_index > 0:
-        rng = random.Random(stable_seed(seed, "sensor_remap", remap_index))
+    # Walk the remap chain so each remap step observably differs from
+    # BOTH the identity wiring and the wiring it replaces.
+    for i in range(1, remap_index + 1):
+        rng = random.Random(stable_seed(seed, "sensor_remap", i))
+        prev = sensors[:]
         while True:
-            shuffled = sensors[:]
+            shuffled = prev[:]
             rng.shuffle(shuffled)
-            if shuffled != sensors:
+            if shuffled != prev and shuffled != list(SENSOR_DEVICES):
                 break
         sensors = shuffled
     actuators = list(ACTUATOR_DEVICES)
@@ -93,32 +96,68 @@ class DeviceBridge:
         for name in os.listdir(self.dir):
             os.unlink(os.path.join(self.dir, name))
         for filename, logical in self.bindings.items():
-            path = os.path.join(self.dir, filename)
-            os.mkfifo(path)
-            if logical in ACTUATOR_DEVICES:
-                t = threading.Thread(target=self._actuator_loop,
-                                     args=(path, filename, logical),
-                                     daemon=True)
-            else:
-                t = threading.Thread(target=self._sensor_loop,
-                                     args=(path, filename, logical),
-                                     daemon=True)
-            t.start()
-            self.threads.append(t)
+            os.mkfifo(os.path.join(self.dir, filename))
+            self._spawn(filename, logical)
+        t = threading.Thread(target=self._watchdog_loop, daemon=True)
+        t.start()
+        self.threads.append(t)
+
+    def _spawn(self, filename, logical):
+        path = os.path.join(self.dir, filename)
+        target = self._actuator_loop if logical in ACTUATOR_DEVICES \
+            else self._sensor_loop
+        t = threading.Thread(target=target,
+                             args=(path, filename, logical), daemon=True)
+        t.start()
+        self.threads.append(t)
+
+    def _watchdog_loop(self):
+        """The bus re-enumerates: a device file the agent deleted comes
+        back with a fresh serving thread (the old thread is parked on
+        the orphaned inode; capped so an rm loop can't grow us
+        unboundedly)."""
+        import time
+        heals = {}
+        while self.running:
+            time.sleep(0.5)
+            for filename, logical in self.bindings.items():
+                path = os.path.join(self.dir, filename)
+                if os.path.exists(path):
+                    continue
+                heals[filename] = heals.get(filename, 0) + 1
+                if heals[filename] > 20:
+                    continue
+                try:
+                    os.mkfifo(path)
+                except OSError:
+                    continue
+                self.log(dict(event="device_recreated", dev=filename,
+                              physical=logical, t=self.world.tick))
+                self._spawn(filename, logical)
 
     def stop(self):
         self.running = False
-        # Unblock threads stuck in open() by briefly opening the other end.
+        # Unblock sensor threads stuck in open() by briefly opening the
+        # read end; wake actuator threads (blocked in read) with a
+        # newline they will ignore.
         for filename, logical in self.bindings.items():
             path = os.path.join(self.dir, filename)
             try:
                 if logical in ACTUATOR_DEVICES:
                     fd = os.open(path, os.O_WRONLY | os.O_NONBLOCK)
+                    os.write(fd, b"\n")
                 else:
                     fd = os.open(path, os.O_RDONLY | os.O_NONBLOCK)
                 os.close(fd)
             except OSError:
                 pass
+
+    def _heal(self, path):
+        """Backoff for transient open failures; if our file is gone the
+        watchdog recreates it with a fresh thread, so this thread ends."""
+        import time
+        time.sleep(0.2)
+        return os.path.exists(path)
 
     # -- frames -------------------------------------------------------------
 
@@ -148,7 +187,9 @@ class DeviceBridge:
                 # Blocks until a reader opens the file.
                 fd = os.open(path, os.O_WRONLY)
             except OSError:
-                continue
+                if self._heal(path):
+                    continue
+                return  # file gone; the watchdog spawns a successor
             if not self.running:
                 os.close(fd)
                 return
@@ -159,13 +200,17 @@ class DeviceBridge:
                     self.log(dict(event="read_dropped", dev=filename,
                                   physical=logical, t=self.world.tick))
                 else:
-                    frame = self._emit(logical)
+                    # Frame and tick sampled atomically (RLock) so the
+                    # logged t is the tick the values describe.
+                    with self.world.lock:
+                        frame = self._emit(logical)
+                        tick = self.world.tick
                     os.write(fd, (frame + "\n").encode())
                     self.read_counts[filename] = \
                         self.read_counts.get(filename, 0) + 1
                     self.log(dict(event="read", dev=filename,
                                   physical=logical, value=frame,
-                                  t=self.world.tick))
+                                  t=tick))
             except (BrokenPipeError, OSError):
                 pass
             finally:
@@ -181,30 +226,38 @@ class DeviceBridge:
         side = ACTUATOR_DEVICES.index(logical)
         while self.running:
             try:
-                f = open(path, "r")  # blocks until a writer opens
+                # O_RDWR: our own write end keeps the FIFO alive, so a
+                # writer closing never delivers EOF — there is no
+                # close/reopen window in which a fresh writer's command
+                # could be discarded.
+                fd = os.open(path, os.O_RDWR)
+                f = os.fdopen(fd, "r")
             except OSError:
-                continue
-            if not self.running:
-                f.close()
-                return
+                if self._heal(path):
+                    continue
+                return  # file gone; the watchdog spawns a successor
             with f:
                 for line in f:
+                    if not self.running:
+                        return
                     line = line.strip()
                     if not line:
                         continue
                     try:
                         val = int(float(line))
-                    except ValueError:
+                    except (ValueError, OverflowError):
                         self.log(dict(event="write_invalid", dev=filename,
                                       physical=logical, raw=line[:100],
                                       t=self.world.tick))
                         continue
-                    self.world.set_motor(side, val)
+                    with self.world.lock:
+                        self.world.set_motor(side, val)
+                        tick = self.world.tick
                     self.write_counts[filename] = \
                         self.write_counts.get(filename, 0) + 1
                     self.log(dict(event="write", dev=filename,
                                   physical=logical, value=val,
-                                  t=self.world.tick))
+                                  t=tick))
 
     def stats(self):
         return {
