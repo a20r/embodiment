@@ -41,13 +41,18 @@ def ask_model(model, memory_blob, questions):
             messages=[{"role": "user", "content": user}]) as stream:
         resp = stream.get_final_message()
     text = "".join(b.text for b in resp.content if b.type == "text")
-    m = re.search(r"\{[\s\S]*\}", text)
+    # Parse the FIRST valid JSON object; tolerate code fences and any
+    # prose (even prose containing braces) around it.
     answers = {}
-    if m:
+    decoder = json.JSONDecoder()
+    for m in re.finditer(r"\{", text):
         try:
-            answers = json.loads(m.group())
+            obj, _end = decoder.raw_decode(text, m.start())
         except json.JSONDecodeError:
-            pass
+            continue
+        if isinstance(obj, dict):
+            answers = obj
+            break
     return ({q["id"]: str(answers.get(q["id"], "UNKNOWN"))
              for q in questions}, model)
 
