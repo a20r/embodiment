@@ -1,0 +1,200 @@
+E t=43 x=-24.2 y=-5.9 m=follow s=0.853 h=175 r0=1.41 tick=567225 goal=0 d7=0
+E t=45 x=-25.3 y=-5.9 m=follow s=0.849 h=178 r0=1.37 tick=567427 goal=0 d7=0
+E t=47 x=-26.3 y=-5.9 m=follow s=0.847 h=182 r0=1.33 tick=567629 goal=0 d7=0
+E t=49 x=-28.2 y=-6.0 m=follow s=0.849 h=182 r0=1.27 tick=567833 goal=0 d7=0
+E t=51 x=-30.2 y=-6.1 m=follow s=0.850 h=180 r0=1.25 tick=568037 goal=0 d7=
+E t=53 x=-31.3 y=-6.2 m=follow s=0.851 h=182 r0=1.20 tick=568242 goal=0 d7=0
+E t=55 x=-32.4 y=-6.2 m=follow s=0.853 h=185 r0=1.13 tick=568451 goal=0 d7=0
+E t=57 x=-33.4 y=-6.3 m=follow s=0.852 h=184 r0=1.08 tick=568657 goal=0 d7=0
+RXe t=59 'ALPHA: following your beacon. goalflag=0'
+E t=59 x=-33.0 y=-6.3 m=turn s=0.853 h=214 r0=0.62 tick=568860 goal=0 d7=0
+RXe t=61 'ALPHA: following your beacon. goalflag=0'
+E t=61 x=-33.1 y=-6.4 m=turn s=0.870 h=268 r0=0.27  d7=0
+RXe t=63 'ALPHA: following your beacon. goalflag=0'
+E t=63 x=-32.9 y=-6.6 m=follow s=0.877 h=321 r0=0.45 tick=569266 goal=0 d7=
+E t=66 x=-32.1 y=-7.3 m=follow s=0.867 h=315 r0=0.36 tick=569474 goal=0 d7=0
+E t=68 x=-31.3 y=-8.1 m=follow s=0.861 h=309 r0=0.35 tick=569683 goal=0 d7=0
+E t=70 x=-31.1 y=-8.4 m=turn s=0.852 h=352 r0=1.28 tick=569889 goal=0 d7=0
+E t=72 x=-30.6 y=-8.2 m=follow s=0.846 h=17 r0=1.31 tick=570091 goal=0 d7=0
+E t=74 x=-29.6 y=-8.1 m=follow s=0.843 h=3 r0=1.27 tick=570292 goal=0 d7=0
+E t=76 x=-27.3 y=-8.1 m=follow s=0.839 h=358 r0=1.24 tick=570496 goal=0 d7=
+E t=78 x=-25.9 y=-8.2 m=follow s=0.838 h=355 r0=1.21 tick=570698 goal=0 d7=0
+E t=80 x=-24.9 y=-8.4 m=follow s=0.847 h=350 r0=0.82 tick=570901 goal=0 d7=0
+RXe t=82 'ALPHA: following your beacon. goalflag=0'
+E t=82 x=-23.9 y=-8.6 m=follow s=0.859 h=347 r0=0.69 tick=571103 goal=0 d7=0
+RXe t=84 'ALPHA: following your beacon. goalflag=0'
+E t=84 x=-22.9 y=-8.9 m=follow s=0.885 h=342 r0=0.61 tick=571304 goal=0 d7=0
+RXe t=86 'ALPHA: following your beacon. goalflag=0'
+E t=86 x=-22.9 y=-8.9 m=turn s=0.893 h=42 r0=0.36 tick=571508 goal=0 d7=0
+RXe t=88 'ALPHA: following your beacon. goalflag=0'
+E t=88 x=-22.8 y=-8.8 m=turn s=0.885 h=112 r0=0.32 tick=571707 goal=0 d7=0
+RXe t=90 'ALPHA: following your beacon. goalflag=0'
+E t=90 x=-23.3 y=-8.2 m=turn s=0.883 h=136 r0=0.36 tick=571916 goal=0 d7=0
+RXe t=92 'ALPHA: following your beacon. goalflag=0'
+E t=92 x=-23.4 y=-8.3 m=follow s=0.886 h=203 r0=0.64 tick=572123 goal=0 d7=0
+RXe t=94 'ALPHA: following your beacon. goalflag=0'
+E t=94 x=-24.7 y=-8.5 m=follow s=0.891 h=187 r0=1.39 tick=572325 goal=0 d7=0
+RXe t=96 'ALPHA: following your beacon. goalflag=0'
+E t=96 x=-26.8 y=-8.5 m=follow s=0.894 h=177 r0=1.35 tick=572527 goal=0 d7=0
+RXe t=98 'ALPHA: following your beacon. goalflag=0'
+E t=98 x=-28.2 y=-8.4 m=follow s=0.891 h=173 r0=1.82 tick=572731 goal=0 d7=0
+RXe t=100 'ALPHA: following your beacon. goalflag=0'
+E t=100 x=-29.2 y=-8.2 m=follow s=0.893 h=174 r0=1.79 tick=572933 goal=0 d7=0
+RXe t=102 'ALPHA: following your beacon. goalflag=0'
+E t=102 x=-30.2 y=-8.0 m=follow s=0.903 h=168 r0=1.76 tick=573140 goal=0 d7=0
+RXe t=104 'ALPHA: following your beacon. goalflag=0'
+E t=104 x=-31.2 y=-7.7 m=follow s=0.905 h=161 r0=0.69 tick=573347 goal=0 d7=0
+RXe t=106 'ALPHA: following your beacon. goalflag=0'
+E t=106 x=-32.2 y=-7.4 m=follow s=0.891 h=166 r0=0.60 tick=573549 goal=0 d7=0
+E t=108 x=-33.2 y=-7.1 m=follow s=0.864 h=161 r0=0.57 tick=573755 goal=0 d7=0
+E t=110 x=-34.0 y=-6.9 m=turn s=0.853 h=176 r0=1.11 tick=573959 goal=0 d7=0
+E t=112 x=-34.1 y=-7.0 m=follow s=0.841 h=236 r0=0.40 tick=574161 goal=0 d7=0
+E t=114 x=-35.0 y=-7.6 m=follow s=0.823 h=200 r0=0.83 tick=574367 goal=0 d7=0
+E t=117 x=-36.0 y=-7.8 m=follow s=0.810 h=188 r0=1.05 tick=574571 goal=0 d7=0
+E t=119 x=-37.3 y=-7.9 m=follow s=0.811 h=176 r0=1.08 tick=574775 goal=0 d7=0
+E t=121 x=-38.3 y=-7.8 m=follow s=0.817 h=173 r0=1.00 tick=574977 goal=0 d7=0
+E t=123 x=-39.3 y=-7.7 m=follow s=0.824 h=169 r0=0.98 tick=575184 goal=0 d7=0
+E t=125 x=-40.4 y=-7.5 m=follow s=0.833 h=171 r0=1.48 tick=575392 goal=0 d7=0
+E t=127 x=-41.4 y=-7.3 m=follow s=0.837 h=168 r0=1.48 tick=575592 goal=0 d7=0
+E t=129 x=-42.4 y=-7.1 m=follow s=0.836 h=169 r0=1.43 tick=575794 goal=0 d7=0
+E t=131 x=-43.5 y=-6.9 m=follow s=0.836 h=172 r0=0.87 tick=575995 goal=0 d7=0
+E t=133 x=-44.6 y=-6.7 m=follow s=0.847 h=176 r0=0.84 tick=576198 goal=0 d7=0
+E t=135 x=-47.0 y=-6.6 m=follow s=0.843 h=180 r0=0.79 tick=576399 goal=0 d7=0
+E t=137 x=-49.3 y=-6.6 m=follow s=0.806 h=187 r0=0.70 tick=576607 goal=0 d7=0
+E t=139 x=-51.7 y=-6.4 m=follow s=0.800 h=169 r0=0.62 tick=576808 goal=0 d7=0
+E t=141 x=-53.8 y=-5.7 m=follow s=0.796 h=152 r0=1.18 tick=577010 goal=0 d7=0
+E t=143 x=-54.9 y=-4.9 m=follow s=0.796 h=142 r0=1.28 tick=577216 goal=0 d7=0
+E t=145 x=-56.7 y=-3.4 m=follow s=0.794 h=136 r0=1.42 tick=577418 goal=0 d7=0
+E t=147 x=-57.6 y=-2.5 m=follow s=0.791 h=132 r0=1.38 tick=577620 goal=0 d7=0
+E t=149 x=-58.3 y=-1.7 m=follow s=0.785 h=130 r0=0.67 tick=577827 goal=0 d7=0
+E t=151 x=-58.9 y=-0.9 m=follow s=0.788 h=123 r0=0.60 tick=578028 goal=0 d7=0
+E t=153 x=-59.5 y=-0.0 m=follow s=0.795 h=118 r0=0.56 tick=578230 goal=0 d7=0
+E t=155 x=-60.0 y=0.9 m=follow s=0.788 h=116 r0=0.49 tick=578431 goal=0 d7=0
+E t=157 x=-60.4 y=1.9 m=follow s=0.768 h=108 r0=0.41 tick=578637 goal=0 d7=0
+E t=159 x=-60.7 y=2.9 m=follow s=0.756 h=106 r0=0.37 tick=578839 goal=0 d7=0
+E t=161 x=-60.9 y=3.9 m=follow s=0.736 h=103 r0=0.35 tick=579039 goal=0 d7=0
+E t=163 x=-61.1 y=4.9 m=follow s=0.704 h=104 r0=0.34 tick=579240 goal=0 d7=0
+E t=165 x=-61.3 y=5.8 m=turn s=0.695 h=112 r0=0.30 tick=579440 goal=0 d7=0
+E t=167 x=-61.5 y=5.8 m=follow s=0.700 h=173 r0=0.82 tick=579650 goal=0 d7=0
+E t=169 x=-63.8 y=6.3 m=follow s=0.709 h=161 r0=0.81 tick=579852 goal=0 d7=0
+E t=171 x=-66.1 y=7.3 m=follow s=0.710 h=153 r0=0.83 tick=580060 goal=0 d7=0
+E t=173 x=-68.2 y=8.6 m=follow s=0.702 h=148 r0=0.80 tick=580262 goal=0 d7=0
+E t=176 x=-70.3 y=9.9 m=follow s=0.692 h=150 r0=0.70 tick=580470 goal=0 d7=0
+E t=178 x=-71.6 y=10.8 m=follow s=0.677 h=145 r0=0.67 tick=580677 goal=0 d7=0
+E t=180 x=-72.4 y=11.4 m=follow s=0.675 h=140 r0=0.77 tick=580877 goal=0 d7=0
+E t=182 x=-73.6 y=13.0 m=follow s=0.677 h=112 r0=0.59 tick=581088 goal=0 d7=0
+E t=184 x=-73.6 y=12.9 m=turn s=0.665 h=117 r0=0.59 tick=581291 goal=0 d7=0
+E t=186 x=-73.8 y=12.9 m=follow s=0.642 h=181 r0=0.48 tick=581493 goal=0 d7=0
+E t=188 x=-74.7 y=13.3 m=follow s=0.645 h=142 r0=0.58 tick=581698 goal=0 d7=0
+E t=190 x=-75.4 y=14.0 m=follow s=0.649 h=117 r0=0.62 tick=581901 goal=0 d7=0
+E t=192 x=-75.6 y=15.1 m=follow s=0.651 h=81 r0=1.11 tick=582103 goal=0 d7=0
+E t=194 x=-75.7 y=14.8 m=turn s=0.653 h=82 r0=1.10 tick=582305 goal=0 d7=0
+E t=196 x=-75.9 y=15.0 m=follow s=0.655 h=131 r0=0.68 tick=582508 goal=0 d7=0
+E t=198 x=-76.2 y=16.0 m=follow s=0.663 h=91 r0=0.52 tick=582709 goal=0 d7=0
+E t=200 x=-75.8 y=17.1 m=follow s=0.675 h=55 r0=1.20 tick=582911 goal=0 d7=0
+E t=202 x=-74.5 y=18.2 m=follow s=0.685 h=25 r0=0.58 tick=583115 goal=0 d7=0
+E t=204 x=-74.6 y=18.2 m=turn s=0.685 h=18 r0=0.61 tick=583321 goal=0 d7=0
+E t=206 x=-74.6 y=18.4 m=follow s=0.673 h=84 r0=1.01 tick=583525 goal=0 d7=0
+E t=208 x=-74.0 y=19.7 m=follow s=0.652 h=57 r0=1.12 tick=583728 goal=0 d7=0
+E t=210 x=-73.3 y=20.6 m=follow s=0.653 h=36 r0=0.62 tick=583930 goal=0 d7=0
+E t=212 x=-72.4 y=21.1 m=follow s=0.664 h=30 r0=0.52 tick=584131 goal=0 d7=0
+E t=214 x=-71.5 y=21.6 m=follow s=0.659 h=25 r0=0.48 tick=584332 goal=0 d7=0
+E t=216 x=-70.5 y=22.1 m=follow s=0.652 h=25 r0=0.44 tick=584535 goal=0 d7=0
+E t=218 x=-69.6 y=22.5 m=follow s=0.647 h=24 r0=0.41 tick=584736 goal=0 d7=0
+E t=220 x=-68.6 y=22.9 m=follow s=0.639 h=18 r0=0.38 tick=584940 goal=0 d7=0
+E t=222 x=-67.6 y=23.2 m=follow s=0.632 h=16 r0=0.39 tick=585141 goal=0 d7=0
+E t=224 x=-66.5 y=23.4 m=follow s=0.629 h=11 r0=0.34 tick=585347 goal=0 d7=0
+E t=226 x=-65.9 y=23.5 m=turn s=0.616 h=33 r0=0.31 tick=585554 goal=0 d7=0
+E t=228 x=-65.8 y=24.2 m=follow s=0.603 h=80 r0=0.79 tick=585754 goal=0 d7=0
+E t=230 x=-65.2 y=26.5 m=follow s=0.609 h=75 r0=0.77 tick=585954 goal=0 d7=0
+E t=232 x=-64.5 y=29.0 m=follow s=0.608 h=70 r0=0.71 tick=586162 goal=0 d7=0
+E t=234 x=-63.7 y=31.2 m=follow s=0.587 h=69 r0=0.67 tick=586364 goal=0 d7=0
+E t=237 x=-63.2 y=32.3 m=follow s=0.571 h=60 r0=0.65 tick=586569 goal=0 d7=0
+E t=239 x=-62.6 y=33.3 m=follow s=0.547 h=60 r0=0.62 tick=586771 goal=0 d7=0
+E t=241 x=-62.0 y=34.2 m=follow s=0.527 h=54 r0=0.60 tick=586979 goal=0 d7=0
+E t=243 x=-61.3 y=34.9 m=follow s=0.518 h=51 r0=0.74 tick=587183 goal=0 d7=
+E t=245 x=-60.6 y=35.7 m=follow s=0.516 h=44 r0=0.73 tick=587390 goal=0 d7=0
+E t=247 x=-59.9 y=36.5 m=follow s=0.518 h=44 r0=1.57 tick=587597 goal=0 d7=0
+E t=249 x=-59.0 y=37.1 m=follow s=0.519 h=34 r0=1.76 tick=587798 goal=0 d7=0
+E t=251 x=-58.0 y=37.8 m=follow s=0.520 h=29 r0=1.72 tick=588004 goal=0 d7=0
+E t=253 x=-55.8 y=39.0 m=follow s=0.521 h=25 r0=1.05 tick=588210 goal=0 d7=0
+E t=255 x=-53.5 y=39.8 m=follow s=0.526 h=19 r0=0.95 tick=588417 goal=0 d7=0
+E t=257 x=-51.1 y=40.6 m=follow s=0.531 h=19 r0=0.87 tick=588622 goal=0 d7=0
+E t=259 x=-48.7 y=41.3 m=follow s=0.514 h=9 r0=0.73 tick=588831 goal=0 d7=0
+E t=261 x=-46.2 y=41.7 m=follow s=0.501 h=5 r0=0.68 tick=589036 goal=0 d7=0
+E t=263 x=-43.7 y=41.6 m=follow s=0.497 h=354 r0=0.65 tick=589241 goal=0 d7=
+E t=265 x=-42.0 y=41.2 m=follow s=0.491 h=339 r0=0.61 tick=589448 goal=0 d7=0
+E t=267 x=-40.6 y=40.6 m=follow s=0.490 h=331 r0=0.69 tick=589653 goal=0 d7=0
+E t=269 x=-39.8 y=40.1 m=follow s=0.487 h=324 r0=0.67 tick=589855 goal=0 d7=0
+E t=271 x=-38.8 y=39.3 m=follow s=0.486 h=316 r0=0.77 tick=590062 goal=0 d7=0
+E t=273 x=-37.9 y=38.1 m=backup s=0.497 h=295 r0=0.65 tick=590265 goal=0 d7=0
+E t=275 x=-38.1 y=38.4 m=turn s=0.522 h=346 r0=0.48  d7=0
+E t=278 x=-37.3 y=38.3 m=follow s=0.526 h=340 r0=0.50 tick=590669 goal=0 d7=0
+E t=280 x=-36.4 y=37.7 m=follow s=0.528 h=315 r0=0.61 tick=590871 goal=0 d7=0
+E t=282 x=-35.9 y=36.8 m=follow s=0.533 h=281 r0=0.54 tick=591073 goal=0 d7=0
+E t=284 x=-35.9 y=36.0 m=backup s=0.544 h=247 r0=1.14 tick=591281 goal=0 d7=0
+E t=286 x=-35.8 y=36.4 m=turn s=0.551 h=298 r0=0.56 tick=591483 goal=0 d7=0
+E t=288 x=-35.4 y=35.7 m=follow s=0.557 h=286 r0=0.53 tick=591686 goal=0 d7=0
+E t=290 x=-35.5 y=34.6 m=follow s=0.567 h=244 r0=1.12 tick=591894 goal=0 d7=0
+E t=292 x=-36.9 y=33.0 m=follow s=0.579 h=218 r0=0.65 tick=592093 goal=0 d7=0
+E t=294 x=-38.0 y=32.3 m=follow s=0.594 h=208 r0=0.54 tick=592293 goal=0 d7=0
+E t=296 x=-39.0 y=31.8 m=follow s=0.607 h=206 r0=0.51 tick=592497 goal=0 d7=0
+E t=298 x=-39.9 y=31.3 m=follow s=0.613 h=209 r0=0.48 tick=592703 goal=0 d7=0
+E t=300 x=-40.8 y=30.8 m=follow s=0.616 h=204 r0=0.44 tick=592909 goal=0 d7=0
+E t=302 x=-41.8 y=30.4 m=follow s=0.619 h=203 r0=0.42 tick=593115 goal=0 d7=0
+E t=304 x=-42.8 y=30.0 m=follow s=0.623 h=201 r0=0.37 tick=593321 goal=0 d7=0
+E t=306 x=-43.8 y=29.7 m=follow s=0.621 h=196 r0=0.35 tick=593522 goal=0 d7=0
+E t=308 x=-43.7 y=29.7 m=turn s=0.615 h=204 r0=0.34  d7=0
+E t=310 x=-43.8 y=29.4 m=follow s=0.608 h=263 r0=0.79 tick=593935 goal=0 d7=0
+E t=312 x=-44.1 y=28.2 m=follow s=0.593 h=249 r0=0.90 tick=594141 goal=0 d7=0
+E t=314 x=-44.5 y=27.2 m=follow s=0.595 h=238 r0=0.68 tick=594342 goal=0 d7=0
+E t=316 x=-45.1 y=26.4 m=follow s=0.635 h=235 r0=0.43 tick=594542 goal=0 d7=0
+E t=318 x=-45.3 y=26.2 m=turn s=0.639 h=278 r0=0.77 tick=594743 goal=0 d7=0
+E t=320 x=-44.9 y=25.5 m=follow s=0.636 h=288 r0=0.73 tick=594946 goal=0 d7=0
+E t=322 x=-44.7 y=23.1 m=follow s=0.637 h=264 r0=0.62 tick=595150 goal=0 d7=0
+E t=324 x=-44.8 y=21.5 m=follow s=0.648 h=259 r0=0.60 tick=595350 goal=0 d7=0
+E t=326 x=-45.1 y=20.5 m=follow s=0.655 h=252 r0=0.63 tick=595552 goal=0 d7=0
+E t=328 x=-45.4 y=19.6 m=follow s=0.656 h=249 r0=0.63  d7=0
+E t=330 x=-45.9 y=18.6 m=follow s=0.649 h=243 r0=0.60 tick=595959 goal=0 d7=0
+E t=332 x=-46.1 y=18.2 m=turn s=0.631 h=282 r0=0.51 tick=596165 goal=0 d7=0
+E t=334 x=-45.7 y=17.9 m=follow s=0.631 h=310 r0=0.63 tick=596366 goal=0 d7=0
+E t=336 x=-45.2 y=17.0 m=follow s=0.659 h=290 r0=0.49  d7=0
+E t=339 x=-45.0 y=15.9 m=follow s=0.665 h=272 r0=0.44 tick=596769 goal=0 d7=0
+E t=341 x=-45.1 y=14.9 m=follow s=0.664 h=262 r0=0.39 tick=596970 goal=0 d7=0
+E t=343 x=-45.4 y=13.9 m=follow s=0.659 h=250 r0=0.44 tick=597173 goal=0 d7=0
+E t=345 x=-45.8 y=13.0 m=follow s=0.649 h=245 r0=0.44 tick=597375 goal=0 d7=0
+E t=347 x=-46.3 y=12.0 m=follow s=0.641 h=241 r0=0.42 tick=597578 goal=0 d7=0
+E t=349 x=-46.6 y=11.5 m=turn s=0.634 h=265 r0=0.31 tick=597780 goal=0 d7=0
+E t=351 x=-46.4 y=11.3 m=follow s=0.625 h=315 r0=0.39 tick=597982 goal=0 d7=0
+E t=353 x=-45.7 y=10.5 m=follow s=0.608 h=312 r0=0.38 tick=598184 goal=0 d7=0
+E t=355 x=-45.0 y=9.7 m=follow s=0.608 h=308 r0=0.32 tick=598387 goal=0 d7=0
+E t=357 x=-44.8 y=9.4 m=turn s=0.626 h=351 r0=0.73 tick=598589 goal=0 d7=0
+E t=359 x=-44.2 y=9.6 m=follow s=0.623 h=19 r0=0.72 tick=598791 goal=0 d7=0
+E t=361 x=-42.8 y=9.8 m=follow s=0.613 h=2 r0=0.73 tick=598993 goal=0 d7=0
+E t=363 x=-40.8 y=9.7 m=follow s=0.604 h=352 r0=0.62 tick=599193 goal=0 d7=0
+E t=365 x=-39.8 y=9.5 m=follow s=0.609 h=347 r0=0.58 tick=599397 goal=0 d7=0
+E t=367 x=-38.8 y=9.2 m=follow s=0.613 h=346 r0=0.59 tick=599600 goal=0 d7=0
+E t=369 x=-37.8 y=8.9 m=follow s=0.602 h=345 r0=0.56 tick=599801 goal=0 d7=0
+E t=371 x=-37.3 y=8.7 m=turn s=0.597 h=10 r0=0.55 tick=600010 goal=0 d7=0
+E t=373 x=-37.2 y=8.7 m=turn s=0.596 h=76 r0=0.27 tick=600212 goal=0 d7=0
+E t=375 x=-37.5 y=9.1 m=follow s=0.587 h=129 r0=0.89 tick=600420 goal=0 d7=0
+E t=377 x=-38.7 y=11.0 m=follow s=0.569 h=120 r0=0.79 tick=600623 goal=0 d7=0
+E t=379 x=-39.6 y=13.0 m=follow s=0.546 h=102 r0=0.60 tick=600827 goal=0 d7=0
+E t=381 x=-39.8 y=14.3 m=follow s=0.526 h=92 r0=0.60 tick=601028 goal=0 d7=0
+E t=383 x=-39.8 y=15.4 m=follow s=0.525 h=82 r0=1.56 tick=601238 goal=0 d7=0
+E t=385 x=-39.8 y=15.3 m=turn s=0.525 h=85 r0=1.62 tick=601439 goal=0 d7=0
+E t=387 x=-40.0 y=15.4 m=follow s=0.523 h=140 r0=0.69 tick=601644 goal=0 d7=
+E t=389 x=-40.5 y=16.3 m=follow s=0.530 h=102 r0=0.52 tick=601844 goal=0 d7=0
+E t=391 x=-40.3 y=17.3 m=follow s=0.540 h=65 r0=1.09 tick=602052 goal=0 d7=0
+E t=393 x=-39.1 y=18.7 m=follow s=0.552 h=40 r0=0.63 tick=602256 goal=0 d7=0
+E t=395 x=-38.3 y=19.3 m=follow s=0.565 h=34 r0=0.65 tick=602462 goal=0 d7=0
+E t=398 x=-37.4 y=19.8 m=follow s=0.583 h=27 r0=0.57 tick=602668 goal=0 d7=0
+E t=400 x=-36.4 y=20.2 m=follow s=0.583 h=23 r0=0.53 tick=602869 goal=0 d7=0
+E t=402 x=-35.4 y=20.5 m=follow s=0.577 h=17 r0=0.48 tick=603070 goal=0 d7=0
+E t=404 x=-34.4 y=20.8 m=follow s=0.575 h=19 r0=0.48 tick=603271 goal=0 d7=0
+E t=406 x=-33.5 y=21.2 m=follow s=0.578 h=24 r0=0.51 tick=603475 goal=0 d7=0
+E t=408 x=-32.6 y=21.7 m=follow s=0.581 h=34 r0=0.49 tick=603677 goal=0 d7=0
+E t=410 x=-31.7 y=22.3 m=follow s=0.585 h=34 r0=0.47 tick=603877 goal=0 d7=0
+E t=412 x=-30.9 y=22.8 m=follow s=0.589 h=33 r0=0.43 tick=604077 goal=0 d7=0
+E t=414 x=-30.0 y=23.3 m=follow s=0.598 h=24 r0=0.41 tick=604284 goal=0 d7=0
+E t=416 x=-29.2 y=23.7 m=turn s=0.601 h=39 r0=0.40 tick=604491 goal=0 d7=0

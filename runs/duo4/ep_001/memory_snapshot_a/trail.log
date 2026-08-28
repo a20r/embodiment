@@ -1,0 +1,155 @@
+0.0 POS x=0.00 y=0.00 h=101.4 f=0.17 r=0.30 st=turnleft d0=0 d7=0 d6=0.131 d9=tick=25948 goal=0
+0.0 FLAG d0=0
+0.0 FLAG d7=0
+2.1 POS x=0.00 y=0.00 h=235.3 f=0.17 r=0.28 st=turnleft d0=0 d7=0 d6=0.149 d9=tick=26156 goal=0
+4.3 POS x=0.00 y=0.00 h=24.8 f=0.25 r=0.28 st=turnleft d0=0 d7=0 d6=0.148 d9=tick=26375 goal=0
+6.3 POS x=0.04 y=0.16 h=156.4 f=0.23 r=0.37 st=turnleft d0=0 d7=0 d6=0.145 d9=tick=26573 goal=0
+8.4 POS x=0.04 y=0.16 h=256.1 f=0.14 r=0.31 st=turnleft d0=0 d7=0 d6=0.149 d9=tick=26784 goal=0
+10.5 POS x=0.04 y=0.16 h=37.7 f=0.34 r=0.27 st=turnleft d0=0 d7=0 d6=0.149 d9=tick=26995 goal=0
+12.6 POS x=0.07 y=0.37 h=179.6 f=0.21 r=0.58 st=turnleft d0=0 d7=0 d6=0.146 d9=tick=27204 goal=0
+14.7 POS x=0.07 y=0.37 h=311.2 f=0.20 r=0.33 st=turnleft d0=0 d7=0 d6=0.144 d9=tick=27412 goal=0
+16.9 POS x=0.18 y=0.62 h=98.9 f=0.19 r=0.31 st=turnleft d0=0 d7=0 d6=0.130 d9=tick=27637 goal=0
+19.0 POS x=0.18 y=0.62 h=204.3 f=0.21 r=0.55 st=turnleft d0=0 d7=0 d6=0.145 d9=tick=27850 goal=0
+21.1 POS x=0.18 y=0.62 h=319.0 f=0.17 r=0.30 st=turnleft d0=0 d7=0 d6=0.158 d9=tick=28052 goal=0
+23.1 POS x=0.20 y=0.78 h=96.9 f=0.29 r=0.31 st=follow d0=0 d7=0 d6=0.150 d9=tick=28255 goal=0
+25.1 POS x=0.20 y=0.78 h=171.9 f=0.21 r=0.54 st=turnleft d0=0 d7=0 d6=0.151 d9=tick=28453 goal=0
+27.1 POS x=0.20 y=0.78 h=306.8 f=0.24 r=0.33 st=turnleft d0=0 d7=0 d6=0.158 d9=tick=28654 goal=0
+29.3 POS x=0.26 y=1.00 h=100.7 f=0.15 r=0.33 st=turnleft d0=0 d7=0 d6=0.143 d9=tick=28881 goal=0
+31.6 POS x=0.26 y=1.00 h=198.7 f=0.22 r=0.55 st=turnleft d0=0 d7=0 d6=0.146 d9=tick=29105 goal=0
+33.7 POS x=0.26 y=1.00 h=341.7 f=0.20 r=0.34 st=turnleft d0=0 d7=0 d6=0.143 d9=tick=29318 goal=0
+35.8 POS x=0.30 y=1.22 h=121.3 f=0.15 r=0.30 st=turnleft d0=0 d7=0 d6=0.141 d9=tick=29525 goal=0
+37.8 POS x=0.30 y=1.22 h=220.2 f=0.23 r=0.42 st=turnleft d0=0 d7=0 d6=0.151 d9=tick=29722 goal=0
+0.0 POS x=0.00 y=0.00 h=None d0=0 d6=None d7=None None
+0.0 POS x=0.00 y=0.00 h=None d0=0 d6=None d7=None None
+2.0 POS x=0.00 y=0.00 h=252.5 d0=0 d6=0.123 d7=0 tick=39359 goal=0
+4.1 POS x=0.00 y=0.00 h=252.5 d0=0 d6=0.138 d7=0 tick=39568 goal=0
+6.2 POS x=0.00 y=0.00 h=253.9 d0=0 d6=0.139 d7=0 tick=39775 goal=0
+8.2 POS x=0.00 y=0.00 h=254.9 d0=0 d6=0.133 d7=0 tick=39974 goal=0
+10.2 POS x=0.00 y=0.00 h=251.4 d0=0 d6=0.150 d7=0 tick=40182 goal=0
+12.2 POS x=0.00 y=0.00 h=252.1 d0=0 d6=0.135 d7=0 tick=40383 goal=0
+14.5 POS x=0.00 y=0.00 h=248.9 d0=0 d6=0.146 d7=0 tick=40609 goal=0
+16.6 POS x=0.00 y=0.00 h=252.3 d0=0 d6=0.139 d7=0 tick=40824 goal=0
+18.9 POS x=0.00 y=0.00 h=250.2 d0=0 d6=0.163 d7=0 tick=41048 goal=0
+21.0 POS x=-0.00 y=-0.00 h=251.1 d0=0 d6=0.127 d7=0 tick=41256 goal=0
+23.0 POS x=-0.00 y=-0.00 h=253.0 d0=0 d6=0.144 d7=0 tick=41462 goal=0
+25.2 POS x=-0.00 y=-0.00 h=253.6 d0=0 d6=0.153 d7=0 tick=41680 goal=0
+27.8 POS x=-0.01 y=-0.01 h=244.2 d0=0 d6=0.131 d7=0 tick=41940 goal=0
+30.2 POS x=-0.01 y=-0.02 h=241.3 d0=0 d6=0.138 d7=0 tick=42176 goal=0
+32.2 POS x=-0.02 y=-0.03 h=238.9 d0=0 d6=0.138 d7=0 tick=42376 goal=0
+34.2 POS x=-0.20 y=-0.10 h=187.0 d0=0 d6=0.136 d7=0 tick=42581 goal=0
+36.3 POS x=-0.29 y=-0.10 h=149.9 d0=0 d6=0.124 d7=0 tick=42793 goal=0
+38.7 POS x=-0.29 y=-0.04 h=64.9 d0=0 d6=0.146 d7=0 tick=43028 goal=0
+40.7 POS x=-0.10 y=0.25 h=40.2 d0=0 d6=0.138 d7=0 tick=43231 goal=0
+42.8 POS x=0.14 y=0.45 h=40.7 d0=0 d6=0.131 d7=0 tick=43443 goal=0
+44.9 POS x=0.26 y=0.69 h=157.4 d0=0 d6=0.135 d7=0 tick=43646 goal=0
+47.1 POS x=0.08 y=0.59 h=217.8 d0=0 d6=0.138 d7=0 tick=43866 goal=0
+49.4 POS x=-0.13 y=0.45 h=174.8 d0=0 d6=0.148 d7=0 tick=44097 goal=0
+51.5 POS x=-0.13 y=0.45 h=59.6 d0=0 d6=0.118 d7=0 tick=44309 goal=0
+53.7 POS x=-0.01 y=0.44 h=356.2 d0=0 d6=0.122 d7=0 tick=44526 goal=0
+0.0 POS x=0.00 y=0.00 h=None d0=0 d6=None d7=None None
+2.0 POS x=0.00 y=0.00 h=135.7 d0=0 d6=0.128 d7=0 tick=49360 goal=0
+4.0 POS x=0.00 y=0.00 h=134.9 d0=0 d6=0.129 d7=0 tick=49560 goal=0
+6.0 POS x=0.00 y=0.00 h=131.7 d0=0 d6=0.132 d7=0 tick=49762 goal=0
+8.0 POS x=0.00 y=0.00 h=132.2 d0=0 d6=0.142 d7=0 tick=49959 goal=0
+10.0 POS x=0.00 y=0.00 h=133.1 d0=0 d6=0.121 d7=0 tick=50161 goal=0
+12.0 POS x=0.00 y=0.00 h=133.5 d0=0 d6=0.133 d7=0 tick=50362 goal=0
+14.1 POS x=0.00 y=0.00 h=133.5 d0=0 d6=0.137 d7=0 tick=50571 goal=0
+16.1 POS x=0.00 y=0.00 h=131.9 d0=0 d6=0.129 d7=0 tick=50772 goal=0
+18.3 POS x=0.00 y=0.00 h=134.9 d0=0 d6=0.121 d7=0 tick=50990 goal=0
+20.3 POS x=0.00 y=0.00 h=132.6 d0=0 d6=0.126 d7=0 tick=51189 goal=0
+22.4 POS x=0.00 y=0.00 h=132.3 d0=0 d6=0.125 d7=0 tick=51402 goal=0
+24.4 POS x=0.00 y=0.00 h=131.9 d0=0 d6=0.129 d7=0 tick=51602 goal=0
+26.6 POS x=0.00 y=0.00 h=132.2 d0=0 d6=0.113 d7=0 tick=51821 goal=0
+28.6 POS x=0.00 y=0.00 h=136.1 d0=0 d6=0.113 d7=0 tick=52022 goal=0
+30.7 POS x=0.00 y=0.00 h=135.2 d0=0 d6=0.124 d7=0 tick=52231 goal=0
+32.7 POS x=0.00 y=0.00 h=135.1 d0=0 d6=0.120 d7=0 tick=52432 goal=0
+35.0 POS x=0.00 y=0.00 h=133.1 d0=0 d6=0.114 d7=0 tick=52666 goal=0
+37.1 POS x=0.00 y=0.00 h=130.9 d0=0 d6=0.117 d7=0 tick=52875 goal=0
+39.1 POS x=0.00 y=0.00 h=132.8 d0=0 d6=0.120 d7=0 tick=53074 goal=0
+41.2 POS x=0.00 y=0.00 h=131.6 d0=0 d6=0.104 d7=0 tick=53281 goal=0
+43.2 POS x=0.00 y=0.00 h=129.7 d0=0 d6=0.116 d7=0 tick=53480 goal=0
+45.2 POS x=0.00 y=0.00 h=130.1 d0=0 d6=0.107 d7=0 tick=53678 goal=0
+47.2 POS x=0.00 y=0.00 h=131.8 d0=0 d6=0.115 d7=0 tick=53878 goal=0
+49.4 POS x=0.00 y=0.00 h=130.4 d0=0 d6=0.106 d7=0 tick=54105 goal=0
+0.0 POS x=0.00 y=0.00 h=None d0=None d6=0.125 d7=None None
+2.0 POS x=0.02 y=0.39 h=87.5 d0=0 d6=0.133 d7=0 tick=59914 goal=0
+4.0 POS x=0.03 y=0.78 h=89.0 d0=0 d6=0.134 d7=0 tick=60114 goal=0
+6.0 POS x=0.04 y=1.17 h=88.8 d0=0 d6=0.129 d7=0 tick=60312 goal=0
+8.0 POS x=0.06 y=1.56 h=89.2 d0=1 d6=0.141 d7=0 tick=60517 goal=0
+10.0 POS x=0.07 y=1.96 h=86.5 d0=1 d6=0.132 d7=0 tick=60717 goal=0
+12.1 POS x=0.08 y=2.35 h=91.2 d0=1 d6=0.140 d7=0 tick=60920 goal=0
+14.1 POS x=0.09 y=2.74 h=87.0 d0=1 d6=0.145 d7=0 tick=61122 goal=0
+16.1 POS x=0.10 y=3.14 h=89.2 d0=0 d6=0.131 d7=0 tick=61324 goal=0
+18.1 POS x=0.12 y=3.53 h=87.9 d0=0 d6=0.148 d7=0 tick=61525 goal=0
+20.1 POS x=0.13 y=3.93 h=87.3 d0=1 d6=0.132 d7=0 tick=61724 goal=0
+22.1 POS x=0.14 y=4.32 h=88.8 d0=0 d6=0.137 d7=0 tick=61927 goal=0
+24.1 POS x=0.15 y=4.71 h=87.5 d0=0 d6=0.146 d7=0 tick=62127 goal=0
+26.2 POS x=0.16 y=5.10 h=88.6 d0=1 d6=0.163 d7=0 tick=62328 goal=0
+28.2 POS x=0.18 y=5.50 h=88.6 d0=1 d6=0.153 d7=0 tick=62532 goal=0
+30.2 POS x=0.19 y=5.89 h=85.7 d0=0 d6=0.140 d7=0 tick=62731 goal=0
+32.2 POS x=0.20 y=6.28 h=86.7 d0=0 d6=0.140 d7=0 tick=62933 goal=0
+34.2 POS x=0.21 y=6.68 h=90.3 d0=0 d6=0.143 d7=0 tick=63132 goal=0
+36.2 POS x=0.22 y=7.07 h=88.5 d0=0 d6=0.170 d7=0 tick=63336 goal=0
+38.2 POS x=0.23 y=7.47 h=88.0 d0=1 d6=0.150 d7=0 tick=63539 goal=0
+40.3 POS x=0.24 y=7.86 h=89.6 d0=0 d6=0.159 d7=0 tick=63740 goal=0
+42.3 POS x=0.26 y=8.25 h=86.2 d0=0 d6=0.143 d7=0 tick=63942 goal=0
+44.3 POS x=0.27 y=8.64 h=89.1 d0=0 d6=0.157 d7=0 tick=64141 goal=0
+46.3 POS x=0.28 y=9.04 h=88.9 d0=1 d6=0.151 d7=0 tick=64341 goal=0
+48.3 POS x=0.29 y=9.43 h=92.2 d0=0 d6=0.147 d7=0 tick=64544 goal=0
+50.3 POS x=0.31 y=9.82 h=84.8 d0=0 d6=0.155 d7=0 tick=64746 goal=0
+52.3 POS x=0.32 y=10.21 h=84.9 d0=1 d6=0.162 d7=0 tick=64946 goal=0
+54.3 POS x=0.33 y=10.61 h=87.9 d0=1 d6=0.149 d7=0 tick=65147 goal=0
+56.3 POS x=0.34 y=11.00 h=89.4 d0=0 d6=0.152 d7=0 tick=65345 goal=0
+58.4 POS x=0.35 y=11.39 h=88.8 d0=1 d6=0.164 d7=0 tick=65548 goal=0
+60.4 POS x=0.36 y=11.79 h=88.4 d0=1 d6=0.155 d7=0 tick=65751 goal=0
+62.4 POS x=0.38 y=12.18 h=86.0 d0=1 d6=0.156 d7=0 tick=65952 goal=0
+64.4 POS x=0.39 y=12.57 h=88.6 d0=0 d6=0.153 d7=0 tick=66154 goal=0
+66.4 POS x=0.40 y=12.97 h=87.8 d0=1 d6=0.161 d7=0 tick=66352 goal=0
+68.4 POS x=0.41 y=13.36 h=88.0 d0=1 d6=0.161 d7=0 tick=66558 goal=0
+70.4 POS x=0.42 y=13.75 h=90.0 d0=1 d6=0.166 d7=0 tick=66758 goal=0
+72.5 POS x=0.43 y=14.14 h=90.0 d0=1 d6=0.154 d7=0 tick=66960 goal=0
+74.5 POS x=0.44 y=14.54 h=89.8 d0=1 d6=0.169 d7=0 tick=67162 goal=0
+76.5 POS x=0.46 y=14.93 h=86.4 d0=0 d6=0.172 d7=0 tick=67361 goal=0
+78.5 POS x=0.47 y=15.33 h=89.2 d0=1 d6=0.172 d7=0 tick=67562 goal=0
+80.5 POS x=0.48 y=15.72 h=91.1 d0=1 d6=0.178 d7=0 tick=67765 goal=0
+82.5 POS x=0.49 y=16.11 h=86.7 d0=0 d6=0.181 d7=0 tick=67967 goal=0
+84.5 POS x=0.50 y=16.51 h=87.7 d0=0 d6=0.167 d7=0 tick=68167 goal=0
+86.6 POS x=0.52 y=16.90 h=88.7 d0=1 d6=0.177 d7=0 tick=68370 goal=0
+88.6 POS x=0.53 y=17.30 h=90.8 d0=1 d6=0.172 d7=0 tick=68571 goal=0
+90.6 POS x=0.54 y=17.69 h=88.7 d0=0 d6=0.172 d7=0 tick=68774 goal=0
+92.6 POS x=0.55 y=18.08 h=88.2 d0=1 d6=0.180 d7=0 tick=68975 goal=0
+94.6 POS x=0.56 y=18.47 h=88.3 d0=1 d6=0.179 d7=0 tick=69174 goal=0
+96.6 POS x=0.58 y=18.87 h=89.3 d0=1 d6=0.148 d7=0 tick=69377 goal=0
+98.6 POS x=0.59 y=19.26 h=88.7 d0=1 d6=0.170 d7=0 tick=69575 goal=0
+100.6 POS x=0.60 y=19.65 h=87.0 d0=1 d6=0.163 d7=0 tick=69780 goal=0
+102.7 POS x=0.61 y=20.04 h=86.5 d0=0 d6=0.169 d7=0 tick=69979 goal=0
+104.7 POS x=0.62 y=20.44 h=83.9 d0=1 d6=0.168 d7=0 tick=70181 goal=0
+106.7 POS x=0.63 y=20.83 h=89.4 d0=0 d6=0.156 d7=0 tick=70382 goal=0
+108.7 POS x=0.64 y=21.22 h=90.0 d0=1 d6=0.148 d7=0 tick=70583 goal=0
+110.7 POS x=0.66 y=21.61 h=87.8 d0=1 d6=0.162 d7=0 tick=70784 goal=0
+112.7 POS x=0.67 y=22.01 h=89.0 d0=1 d6=0.156 d7=0 tick=70987 goal=0
+114.7 POS x=0.68 y=22.40 h=88.2 d0=1 d6=0.158 d7=0 tick=71189 goal=0
+116.8 POS x=0.69 y=22.79 h=85.9 d0=1 d6=0.143 d7=0 tick=71389 goal=0
+118.8 POS x=0.70 y=23.19 h=88.3 d0=1 d6=0.157 d7=0 tick=71591 goal=0
+120.8 POS x=0.71 y=23.57 h=88.4 d0=0 d6=0.139 d7=0 tick=71791 goal=0
+122.8 POS x=0.73 y=23.96 h=87.4 d0=1 d6=0.150 d7=0 tick=71992 goal=0
+124.8 POS x=0.74 y=24.36 h=88.5 d0=1 d6=0.147 d7=0 tick=72195 goal=0
+126.8 POS x=0.75 y=24.75 h=89.9 d0=1 d6=0.150 d7=0 tick=72396 goal=0
+128.8 POS x=0.76 y=25.15 h=89.7 d0=0 d6=0.144 d7=0 tick=72597 goal=0
+130.8 POS x=0.77 y=25.54 h=87.4 d0=1 d6=0.138 d7=0 tick=72798 goal=0
+132.9 POS x=0.78 y=25.93 h=87.6 d0=1 d6=0.138 d7=0 tick=73000 goal=0
+134.9 POS x=0.80 y=26.33 h=89.6 d0=0 d6=0.144 d7=0 tick=73203 goal=0
+136.9 POS x=0.81 y=26.72 h=87.4 d0=1 d6=0.148 d7=0 tick=73402 goal=0
+138.9 POS x=0.82 y=27.11 h=87.7 d0=1 d6=0.140 d7=0 tick=73605 goal=0
+140.9 POS x=0.83 y=27.51 h=89.7 d0=1 d6=0.133 d7=0 tick=73807 goal=0
+142.9 POS x=0.84 y=27.90 h=90.4 d0=1 d6=0.131 d7=0 tick=74008 goal=0
+145.0 POS x=0.85 y=28.29 h=92.4 d0=0 d6=0.127 d7=0 tick=74209 goal=0
+147.0 POS x=0.87 y=28.69 h=88.3 d0=1 d6=0.141 d7=0 tick=74411 goal=0
+149.0 POS x=0.88 y=29.08 h=88.5 d0=1 d6=0.129 d7=0 tick=74613 goal=0
+151.0 POS x=0.89 y=29.47 h=89.0 d0=1 d6=0.149 d7=0 tick=74814 goal=0
+153.0 POS x=0.90 y=29.87 h=88.1 d0=1 d6=0.139 d7=0 tick=75014 goal=0
+155.0 POS x=0.91 y=30.26 h=90.4 d0=0 d6=0.133 d7=0 tick=75215 goal=0
+157.0 POS x=0.92 y=30.65 h=90.0 d0=1 d6=0.126 d7=0 tick=75417 goal=0
+159.0 POS x=0.93 y=31.05 h=89.0 d0=0 d6=0.149 d7=0 tick=75618 goal=0
+161.1 POS x=0.95 y=31.44 h=85.9 d0=1 d6=0.133 d7=0 tick=75819 goal=0
+163.1 POS x=0.96 y=31.83 h=88.9 d0=1 d6=0.124 d7=0 tick=76020 goal=0
