@@ -50,3 +50,5 @@ Maze cells seem ~0.2-0.5m scale... walls everywhere, corridors.
 ## Ep2 findings
 - MAZE IS REGENERATED EACH EPISODE (start-cell walls didn't match any old-map cell after 1-step verify). Old maps useless; only mechanics persist.
 - Ep2 start: walls open only at 90 (internal frame). d6 start ~0.14 (partner ~3m).
+- GOTCHA2: background kills silently failed repeatedly -> 2-3 controllers fighting motors (thrash/spin!). ALWAYS `ps aux | grep` to verify after kill.
+- Partner ep2 is agent "A", proposes protocol: finder parks at goal + sends GOALFOUND repeatedly; other homes on d6. My status msgs must NOT contain the literal word GOALFOUND (false trigger); theirs may quote it in PLAN (filter: ignore if contains PLAN/If either).
