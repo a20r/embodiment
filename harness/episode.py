@@ -211,14 +211,16 @@ def run_episode(cfg, series_dir, episode_index):
             turns += 1
             response = model.create(system, messages)
             # Safety-classifier false positives are stochastic; retry
-            # the same model a few times before giving up the episode.
+            # the same model (never a fallback) before giving up the
+            # episode.  Five tries with growing backoff: a long-haul
+            # run dying at turn 2 costs far more than 3 idle minutes.
             refusal_tries = 0
             while getattr(response, "stop_reason", None) == "refusal" \
-                    and refusal_tries < 3:
+                    and refusal_tries < 5:
                 refusal_tries += 1
                 transcript.write(dict(type="note", kind="refusal_retry",
                                       attempt=refusal_tries))
-                time.sleep(10 * refusal_tries)
+                time.sleep(15 * refusal_tries)
                 response = model.create(system, messages)
             u = response.usage
             totals["input"] += u.input_tokens
