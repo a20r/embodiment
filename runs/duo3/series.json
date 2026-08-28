@@ -74,16 +74,16 @@
     },
     "budget": {
       "max_context_tokens": 160000,
-      "max_total_output_tokens": 200000,
-      "max_turns": 500,
-      "max_wallclock_s": 9000,
+      "max_total_output_tokens": 150000,
+      "max_turns": 400,
+      "max_wallclock_s": 6000,
       "on_context_full": "restart",
       "exec_timeout_s": 60,
       "output_truncate_bytes": 20000
     },
     "series": {
       "name": "duo3",
-      "episodes": 1
+      "episodes": 2
     },
     "perturbations": [],
     "dashboard": {

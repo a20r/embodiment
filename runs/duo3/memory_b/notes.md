@@ -31,3 +31,9 @@
 - Other robot modes seen: E exploring / B roaming "will HOLD when adjacent" / T mapping / H homing. Sends s=signal values.
 - No goal found yet by either. Maze big (>100 cells seen across runs), open rooms exist (grid breaks there; wander mode helps).
 - If new episode: copy /memory/src_backup/* to /bot/src, start agent.py. Check d9 for goal=1.
+## EP2 (this episode)
+- World appears to persist between episodes (maze static). Spawn maybe same spot; frame per-run.
+- CORRECTION: ep1 "166 cells" was mixed frames from multiple runs. Biggest single-run map = 63 cells (/memory/ep1_bigrun.json, frame of ep1 big run).
+- grid.ep1.log = ep1 full log. reloc.py: matches current grid.log run to ep1_bigrun by translation.
+- EP2 reloc estimate: cur+(2,6)=ep1frame (early, verify later).
+- agent.py running, ~1 cell/5s. Other robot 'E exploring' too.

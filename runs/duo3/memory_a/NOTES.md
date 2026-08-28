@@ -46,3 +46,7 @@ Maze cells seem ~0.2-0.5m scale... walls everywhere, corridors.
 - Bot.step: compass-hold + side centering, front-dist snap to 0.23+k*0.5. base cmd 140, ~2-3s/cell.
 - HYPOTHESIS: d7 flips when standing on goal cell; d9 'goal=N' maybe count at goal. Strategy: explore all cells watching d7/d9, then camp on goal to lure partner (they chase our d6 signal).
 - Current: mouse3.py full DFS running, watching d7/d9 (logs /tmp/m3.out, map /memory/map3.json)
+
+## Ep2 findings
+- MAZE IS REGENERATED EACH EPISODE (start-cell walls didn't match any old-map cell after 1-step verify). Old maps useless; only mechanics persist.
+- Ep2 start: walls open only at 90 (internal frame). d6 start ~0.14 (partner ~3m).
