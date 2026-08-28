@@ -1,0 +1,20 @@
+00:02:16 === wallfollow right start ===
+00:02:17 blocked f=0.13 w=0.52: turning left 60
+00:02:30 blocked f=0.22 w=0.56: turning left 60
+00:02:48 blocked f=0.21 w=0.14: turning left 60
+00:03:08 blocked f=0.22 w=0.34: turning left 60
+00:03:24 blocked f=0.22 w=0.45: turning left 60
+00:03:41 blocked f=0.20 w=0.37: turning left 60
+00:03:53 blocked f=0.19 w=0.36: turning left 60
+00:04:15 lost wall w=2.55 wf=1.43: turn toward wall 45 + creep
+00:04:26 lost wall w=0.76 wf=1.71: turn toward wall 45 + creep
+00:04:40 lost wall w=1.25 wf=0.82: turn toward wall 45 + creep
+00:04:56 lost wall w=1.67 wf=1.54: turn toward wall 45 + creep
+00:05:13 blocked f=0.21 w=0.60: turning left 60
+00:05:22 lost wall w=0.93 wf=1.55: turn toward wall 45 + creep
+00:05:42 blocked f=0.21 w=0.61: turning left 60
+00:05:54 lost wall w=3.00 wf=0.75: turn toward wall 45 + creep
+00:06:08 blocked f=0.20 w=0.60: turning left 60
+00:07:10 lost wall w=3.00 wf=1.08: turn toward wall 45 + creep
+00:08:20 blocked f=0.18 w=1.66: turning left 60
+00:08:36 blocked f=0.21 w=0.12: turning left 60

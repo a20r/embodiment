@@ -1,0 +1,24 @@
+23:45:34 === explorer start ===
+23:45:34 pos=(0.00,0.00) h=37 pick beam2 wa=82 d=1.41 pen=0 score=1.76
+23:45:48   drive: time pos=(0.09,0.41) d0= tick=103041 goal=0
+23:45:48 pos=(0.09,0.41) h=84 pick beam0 wa=84 d=0.69 pen=0 score=1.03
+23:45:52   drive: blocked pos=(0.12,0.64) d0= tick=103433 goal=0
+23:45:52 pos=(0.12,0.64) h=87 pick beam9 wa=289 d=1.73 pen=0 score=1.43
+23:46:36   drive: time pos=(0.57,-0.21) d0= tick=107834 goal=0
+23:46:36 pos=(0.57,-0.21) h=293 pick beam3 wa=0 d=2.43 pen=0 score=2.89
+23:47:00   drive: time pos=(1.14,-0.07) d0= tick=110236 goal=0
+23:47:00 pos=(1.14,-0.07) h=358 pick beam0 wa=358 d=1.31 pen=0 score=2.04
+23:47:08   drive: blocked pos=(1.63,-0.08) d0= tick=110989 goal=0
+23:47:08 pos=(1.63,-0.08) h=1 pick beam8 wa=181 d=2.80 pen=1 score=2.07
+23:47:47   drive: blocked pos=(1.33,0.17) d0= tick=114920 goal=0
+23:47:47 pos=(1.33,0.17) h=188 pick beam2 wa=234 d=0.87 pen=0 score=1.00
+23:48:02   drive: time pos=(1.35,-0.10) d0= tick=116403 goal=0
+23:48:02 pos=(1.35,-0.10) h=235 pick beam13 wa=167 d=2.31 pen=0 score=2.77
+23:48:25   drive: time pos=(0.94,0.17) d0= tick=118686 goal=0
+23:48:25 pos=(0.94,0.17) h=166 pick beam1 wa=189 d=1.43 pen=1 score=1.71
+23:48:36   drive: time pos=(0.67,0.15) d0= tick=119801 goal=0
+23:48:36 pos=(0.67,0.15) h=184 pick beam8 wa=4 d=2.58 pen=1 score=1.85
+23:49:24   drive: time pos=(1.33,0.14) d0= tick=124654 goal=0
+23:49:24 pos=(1.33,0.14) h=5 pick beam0 wa=5 d=1.08 pen=0 score=1.75
+23:49:32   drive: blocked pos=(1.78,0.17) d0= tick=125390 goal=0
+23:49:32 pos=(1.78,0.17) h=3 pick beam8 wa=183 d=2.83 pen=2 score=1.85
