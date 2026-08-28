@@ -24,7 +24,9 @@ DEFAULTS = {
     "prompt_variant": "standard",
     # None = derived from labels (labeled/unlabeled); "minimal" = a
     # README that only says it's a robot with ports under /dev/robot;
-    # "minimal_duo" additionally mentions the transceiver mechanics.
+    # "minimal_duo" additionally mentions the transceiver mechanics;
+    # "minimal_duo_named" also names the TX/RX port files (the harness
+    # substitutes the episode's real anonymous filenames).
     "readme_variant": None,
     # Two robots in one world, each running its own agent, with a
     # proximity-gated serial link (TX/RX port pair per robot).

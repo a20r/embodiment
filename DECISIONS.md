@@ -327,3 +327,14 @@ Verified by `scripts/duo_check.py` (26 checks: spawn clearance, peer
 blip, disc-disc collision + bump, range gating, byte cap, queue cap,
 FIFO end-to-end a->b with comms accounting) plus a full mock duo
 episode through two containers; the solo smoke suite is unchanged.
+
+### Duo variant: named transceiver ports (readme_variant minimal_duo_named)
+
+Run duo1 showed port identification dominating the outcome (bot A
+adopted TX as its right motor and hailed its own wheel).  The named
+variant removes exactly that variable: the README names the TX and RX
+files (the harness substitutes the episode's real anonymous filenames
+after the daemon writes device_map.json).  Everything else — the peer's
+existence, the protocol, what the link is for — stays discoverable.
+Also hardened run_duo_episode: a container-start failure now stops the
+daemon instead of leaking it onto the port.

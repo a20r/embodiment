@@ -230,6 +230,23 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
     return summary
 
 
+def _name_ports(ep_dir, bot_dirs):
+    """READMEs with {tx}/{rx} placeholders (readme_variant
+    minimal_duo_named) get the real anonymous filenames from this
+    episode's device map — the one concession beyond the transceiver
+    sentence; every other port stays a mystery."""
+    with open(os.path.join(ep_dir, "device_map.json")) as f:
+        fmap = json.load(f)["file_to_physical"]
+    tx = next(k for k, v in fmap.items() if v == "serial_tx")
+    rx = next(k for k, v in fmap.items() if v == "serial_rx")
+    for bd in bot_dirs.values():
+        path = os.path.join(bd, "README.md")
+        text = open(path).read()
+        if "{tx}" in text or "{rx}" in text:
+            with open(path, "w") as f:
+                f.write(text.replace("{tx}", tx).replace("{rx}", rx))
+
+
 def run_duo_episode(cfg, series_dir, episode_index):
     if not cfg.get("duo", {}).get("enabled"):
         raise ValueError("run_duo_episode requires duo.enabled: true")
@@ -247,14 +264,24 @@ def run_duo_episode(cfg, series_dir, episode_index):
     daemon = SimDaemonProc(cfg, ep_dir, devfs,
                            episode_index=episode_index,
                            repo_root=REPO, start_paused=True).start()
+    _name_ports(ep_dir, bot_dirs)
     boxes = {}
-    for bid in BOTS:
-        boxes[bid] = BotContainer(
-            f"mazebot-{cfg['series']['name']}-ep{episode_index}{bid}",
-            {os.path.abspath(os.path.join(devfs, bid)): "/dev/robot",
-             os.path.abspath(bot_dirs[bid]): "/bot",
-             os.path.abspath(mem_dirs[bid]): "/memory"})
-        boxes[bid].start()
+    try:
+        for bid in BOTS:
+            boxes[bid] = BotContainer(
+                f"mazebot-{cfg['series']['name']}"
+                f"-ep{episode_index}{bid}",
+                {os.path.abspath(os.path.join(devfs, bid)): "/dev/robot",
+                 os.path.abspath(bot_dirs[bid]): "/bot",
+                 os.path.abspath(mem_dirs[bid]): "/memory"})
+            boxes[bid].start()
+    except Exception:
+        # A half-started episode must not leak its daemon (it would
+        # squat the port and trip the next run's stale-daemon check).
+        for box in boxes.values():
+            box.stop()
+        daemon.stop()
+        raise
     daemon.resume()
 
     results = {}
