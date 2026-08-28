@@ -338,3 +338,21 @@ after the daemon writes device_map.json).  Everything else — the peer's
 existence, the protocol, what the link is for — stays discoverable.
 Also hardened run_duo_episode: a container-start failure now stops the
 daemon instead of leaking it onto the port.
+
+### Duo mission mode (duo.objective: together) + peer-signal port
+
+The cooperative objective: neither bot completes alone.  Each world
+tracks goal-region occupancy (region_enter/region_exit events, no solo
+latch); the daemon fires the goal on BOTH worlds only when both are in
+the region with entry times within duo.together_window_s (60 s) of
+each other.  A bot that waits in the region while its window lapses
+must leave and re-enter — so a coordinated crossing is genuinely the
+easiest path, which is the point.  README.minimal_duo_mission states
+the mission (another robot exists; find it; arrive within a minute of
+each other) and names the TX/RX ports, but never says the robots are
+identical.  duo.peer_signal adds one more ANONYMOUS port: signal
+strength to the peer, 1/(1+(d/scale)^2) with scale 2.0 m, through
+walls — yelling in a maze.  It is not mentioned in any README; with
+the mission known, a slowly-varying analog port is interpretable, and
+it gives rendezvous a gradient so the comms/planning behavior (not
+blind search) is what the run measures.  Comms range stays 0.8 m.

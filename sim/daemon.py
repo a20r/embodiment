@@ -126,6 +126,12 @@ class Daemon:
         self.paused = start_paused
         self.rtf = float(cfg["sim"]["realtime_factor"])
         self.tick_hz = cfg["sim"]["tick_hz"]
+        # together objective: both bots must be in the goal region with
+        # entries within the window; then the goal latches on both.
+        self.joint_window_ticks = None
+        if duo and cfg["duo"].get("objective") == "together":
+            self.joint_window_ticks = int(
+                cfg["duo"].get("together_window_s", 60) * self.tick_hz)
         self.running = True
         self._server = None
 
@@ -146,6 +152,15 @@ class Daemon:
                 continue
             for world in self.worlds:
                 world.step()
+            if self.joint_window_ticks is not None:
+                wa, wb = self.worlds
+                if not wa.goal_reached \
+                        and wa.region_entry is not None \
+                        and wb.region_entry is not None \
+                        and abs(wa.region_entry - wb.region_entry) \
+                        <= self.joint_window_ticks:
+                    wa.set_joint_goal()
+                    wb.set_joint_goal()
             if self.rtf > 0:
                 period = 1.0 / (self.tick_hz * self.rtf)
                 next_t += period

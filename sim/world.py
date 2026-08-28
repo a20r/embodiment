@@ -102,6 +102,11 @@ class World:
         self.duo_range = float(duo.get("comms_range", 0.8))
         self.duo_max_bytes = int(duo.get("max_line_bytes", 256))
         self.duo_queue = int(duo.get("queue_depth", 64))
+        # together: no individual goal latch — the daemon fires
+        # set_joint_goal() on both worlds when both are in the goal
+        # region with entries inside the together window.
+        self.joint_goal = duo.get("objective", "solo") == "together"
+        self.peer_signal_scale = float(duo.get("peer_signal_scale", 2.0))
         self.model = cfg["robot"].get("model", "diffdrive")
         self.car_cfg = cfg["robot"].get("car", {})
         self.actuators = ["accel", "steer"] if self.model == "car" \
@@ -178,6 +183,7 @@ class World:
             self.collision_count = 0
             self.goal_reached = False
             self.goal_tick = None
+            self.region_entry = None   # tick of current goal-region stay
             self.trail = []            # [(tick, x, y)]
             self.events = []           # experimenter-facing event tail
             self._event(dict(event="reset",
@@ -374,7 +380,17 @@ class World:
                     gx, gy = self.maze.cell_center(self.maze.goal_cell)
                     reached = math.hypot(self.x - gx, self.y - gy) \
                         < 0.35 * self.maze.cell_size
-                if reached:
+                if self.joint_goal:
+                    # No solo completion: only track region occupancy;
+                    # the daemon fires the joint latch on both worlds.
+                    if reached and self.region_entry is None:
+                        self.region_entry = self.tick
+                        self._event(dict(event="region_enter"))
+                    elif not reached and self.region_entry is not None:
+                        self._event(dict(event="region_exit",
+                                         entered=self.region_entry))
+                        self.region_entry = None
+                elif reached:
                     self.goal_reached = True
                     self.goal_tick = self.tick
                     # Power down: an escaped robot must not keep driving
@@ -547,6 +563,34 @@ class World:
                          delivered=delivered,
                          dist=None if dist is None else round(dist, 3)))
 
+    def set_joint_goal(self):
+        """Both bots arrived together — latch the goal on this world.
+        Called by the daemon on both worlds in the same tick."""
+        with self.lock:
+            if self.goal_reached:
+                return
+            self.goal_reached = True
+            self.goal_tick = self.tick
+            for a in self.actuators:
+                self.cmd[a] = 0
+                self.cmd_eff[a] = 0
+            self.pending = []
+            self._event(dict(event="goal_reached", joint=True))
+
+    def peer_signal_frame(self):
+        """Signal strength to the peer (yelling in a maze): rises as
+        the other robot nears, passes through walls, long tail."""
+        n = self.noise
+        with self.lock:
+            if self.peer is None:
+                return "0.000"
+            d = math.hypot(self.x - self.peer.x, self.y - self.peer.y)
+            s = 1.0 / (1.0 + (d / self.peer_signal_scale) ** 2)
+            sigma = n.get("peer_signal_sigma", 0.0)
+            if sigma > 0:
+                s += self.rng_beacon.gauss(0.0, sigma)
+            return f"{max(0.0, min(1.0, s)):.3f}"
+
     def serial_rx_frame(self):
         """Oldest pending received line; an empty line means nothing
         waiting.  popleft is atomic, so the peer may append mid-read."""
@@ -587,6 +631,7 @@ class World:
                 "bump": [self.bump[0], self.bump[1]],
                 "goal_reached": self.goal_reached,
                 "goal_tick": self.goal_tick,
+                "in_region": self.region_entry is not None,
                 "key_carried": self.key_carried,
                 "door_open": self.door_open,
                 "trail": [p for p in self.trail if p[0] > since_tick],

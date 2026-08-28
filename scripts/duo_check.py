@@ -129,6 +129,76 @@ def in_process():
     check("reset clears rx queue", len(wb.serial_rx) == 0)
 
 
+def mission_mode():
+    print("== mission mode (objective: together, peer_signal) ==")
+    cfg = duo_cfg(duo={"enabled": True, "objective": "together",
+                       "together_window_s": 60, "peer_signal": True})
+    cfg["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    sensors, actuators = simconfig.device_sets(cfg)
+    check("peer_signal in sensor set", "peer_signal" in sensors)
+    m = cfg["maze"]
+    maze = Maze(m["seed"], m["width"], m["height"],
+                cell_size=m["cell_size"], style="organic",
+                curviness=m["curviness"],
+                robot_radius=cfg["robot"]["radius"], duo=True)
+    wa = World(cfg, maze, bot_id="a", spawn_cell=maze.start_cell)
+    wb = World(cfg, maze, bot_id="b", spawn_cell=maze.spawn_b_cell)
+    wa.set_peer(wb)
+    wb.set_peer(wa)
+
+    # Signal strength: strictly decreasing with distance, in (0, 1].
+    vals = []
+    for d in (0.5, 1.0, 2.0, 4.0):
+        wb.x, wb.y = wa.x + d, wa.y
+        vals.append(float(wa.peer_signal_frame()))
+    check("peer signal falls with distance",
+          all(a > b for a, b in zip(vals, vals[1:])), str(vals))
+    check("peer signal in range",
+          all(0.0 < v <= 1.0 for v in vals))
+
+    # No solo latch: a bot alone in the goal region does not complete.
+    out_x = -0.5   # outside the maze bounding box
+    wa.x, wa.y = out_x, 1.0
+    wa.step()
+    check("region entry tracked", wa.region_entry is not None)
+    check("no solo completion", not wa.goal_reached)
+    # Leaving the region clears the entry (a lapsed arrival must
+    # re-cross).
+    wa.x, wa.y = 1.0, 1.0
+    wa.step()
+    check("region exit clears entry", wa.region_entry is None)
+
+    # The daemon's joint predicate: entries within the window fire the
+    # latch on both; outside the window they do not.
+    window = int(cfg["duo"]["together_window_s"]
+                 * cfg["sim"]["tick_hz"])
+    wa.x, wa.y = out_x, 1.0
+    wa.step()
+    for _ in range(window + 100):
+        wb.tick += 1   # advance B's clock past the window
+    wb.x, wb.y = out_x, 2.0
+    wb.step()
+    gap = abs(wa.region_entry - wb.region_entry)
+    check("stale entries do not fire", gap > window, f"gap={gap}")
+    # A re-crosses: exit, then re-enter close to B's entry time.
+    wa.x, wa.y = 1.0, 1.0
+    wa.step()
+    wa.tick = wb.tick
+    wa.x, wa.y = out_x, 1.0
+    wa.step()
+    gap = abs(wa.region_entry - wb.region_entry)
+    check("re-entry refreshes the window", gap <= window, f"gap={gap}")
+    if gap <= window:
+        wa.set_joint_goal()
+        wb.set_joint_goal()
+    check("joint latch on both", wa.goal_reached and wb.goal_reached)
+    check("joint latch zeroes motors",
+          all(v == 0 for v in wa.cmd_eff.values())
+          and all(v == 0 for v in wb.cmd_eff.values()))
+    check("goal ticks recorded",
+          wa.goal_tick is not None and wb.goal_tick is not None)
+
+
 def end_to_end():
     print("== end-to-end daemon (port %d) ==" % PORT)
     import shutil
@@ -207,6 +277,7 @@ def end_to_end():
 
 if __name__ == "__main__":
     in_process()
+    mission_mode()
     end_to_end()
     print("PASS" if not FAILS else f"FAILED: {FAILS}")
     sys.exit(1 if FAILS else 0)

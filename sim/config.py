@@ -35,6 +35,16 @@ DEFAULTS = {
         "comms_range": 0.8,       # meters; out of range, TX vanishes
         "max_line_bytes": 256,    # per transmitted line
         "queue_depth": 64,        # undelivered RX lines kept
+        # "solo": each bot's goal latches individually (a solved bot
+        # powers down).  "together": nobody completes alone — the goal
+        # fires for both only when both are in the goal region with
+        # entries within together_window_s of each other.
+        "objective": "solo",
+        "together_window_s": 60,
+        # Anonymous signal-strength port that rises as the peer nears
+        # (yelling in a maze: through walls, long tail).
+        "peer_signal": False,
+        "peer_signal_scale": 2.0,  # meters at which strength = 0.5
     },
     "noise_profile": "default_noisy",
     "maze": {
@@ -132,6 +142,7 @@ NOISE_PROFILES = {
         # seeded per episode.  Integrated heading walks away over time.
         "heading_bias_deg_per_min": 0.0,
         "speed_sigma_ms": 0.0,         # speedometer noise (car model)
+        "peer_signal_sigma": 0.0,      # duo peer-signal noise
     },
     "default_noisy": {
         "lidar_sigma_m": 0.01,
@@ -148,6 +159,7 @@ NOISE_PROFILES = {
         "beacon_sigma": 0.008,
         "heading_bias_deg_per_min": 0.0,
         "speed_sigma_ms": 0.01,
+        "peer_signal_sigma": 0.008,
     },
 }
 
@@ -208,6 +220,8 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("prompt_variant must be 'standard' or 'lost'")
     if cfg["robot"].get("model", "diffdrive") not in ("diffdrive", "car"):
         raise ValueError("robot.model must be 'diffdrive' or 'car'")
+    if cfg["duo"].get("objective", "solo") not in ("solo", "together"):
+        raise ValueError("duo.objective must be 'solo' or 'together'")
     return cfg
 
 
@@ -228,6 +242,8 @@ def device_sets(cfg):
         sensors.append("beacon")
     if cfg.get("duo", {}).get("enabled"):
         sensors.append("serial_rx")
+        if cfg["duo"].get("peer_signal"):
+            sensors.append("peer_signal")
         actuators = list(actuators) + ["serial_tx"]
     return sensors, actuators
 

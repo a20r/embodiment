@@ -197,6 +197,8 @@ class DeviceBridge:
             return w.speed_frame()
         if logical == "serial_rx":
             return w.serial_rx_frame()
+        if logical == "peer_signal":
+            return w.peer_signal_frame()
         raise ValueError(logical)
 
     def _sensor_loop(self, path, filename, logical):
