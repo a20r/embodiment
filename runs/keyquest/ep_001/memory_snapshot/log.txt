@@ -1,0 +1,2 @@
+episode start Thu Aug 27 18:23:55 UTC 2026
+ep1 end: peakR climbing s=0.53 when power-down. GOAL NEVER TRIPPED (d9 goal=0).

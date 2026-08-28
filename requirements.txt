@@ -1,0 +1,4 @@
+# Host-side dependencies only; the bot container gets nothing but
+# stock Debian + python3.
+pyyaml>=6.0
+anthropic>=1.0

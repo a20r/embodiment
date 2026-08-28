@@ -1,0 +1,24 @@
+23:50:16 === explorer2 start ===
+23:50:16 pos=(0.00,0.00) h=128 beam2 wa=174 d=2.74 pen=0.0 sc=1.75 cells=1
+23:50:30   drive: blocked pos=(-0.74,0.30)
+23:50:30 pos=(-0.74,0.30) h=169 beam1 wa=192 d=1.72 pen=0.0 sc=1.50 cells=3
+23:50:30   drive: blocked pos=(-0.73,0.30)
+23:50:30 pos=(-0.73,0.30) h=174 beam1 wa=196 d=1.72 pen=0.0 sc=1.50 cells=3
+23:50:39   drive: bump pos=(-0.74,0.29)
+23:50:39 pos=(-0.74,0.29) h=182 beam0 wa=182 d=1.65 pen=0.0 sc=1.65 cells=3
+23:50:42   drive: bump pos=(-0.83,0.28)
+23:50:42 pos=(-0.83,0.28) h=181 beam0 wa=181 d=1.65 pen=0.0 sc=1.65 cells=4
+23:50:45   drive: bump pos=(-0.90,0.27)
+23:50:45 pos=(-0.90,0.27) h=185 beam0 wa=185 d=1.66 pen=0.0 sc=1.66 cells=4
+23:50:49   drive: bump pos=(-0.99,0.27)
+23:50:49 pos=(-0.99,0.27) h=184 beam0 wa=184 d=1.66 pen=0.0 sc=1.66 cells=4
+23:50:52   drive: bump pos=(-1.06,0.26)
+23:50:52 pos=(-1.06,0.26) h=182 beam0 wa=182 d=1.66 pen=0.0 sc=1.66 cells=4
+23:50:55   drive: bump pos=(-1.15,0.26)
+23:50:55 pos=(-1.15,0.26) h=189 beam0 wa=189 d=1.66 pen=0.0 sc=1.66 cells=4
+23:50:59   drive: bump pos=(-1.24,0.26)
+23:50:59 pos=(-1.24,0.26) h=184 beam0 wa=184 d=1.67 pen=0.0 sc=1.67 cells=5
+23:51:09   drive: time pos=(-1.82,0.22)
+23:51:09 pos=(-1.82,0.22) h=184 beam0 wa=184 d=1.61 pen=0.0 sc=1.61 cells=6
+23:51:19   drive: time pos=(-2.40,0.19)
+23:51:19 pos=(-2.40,0.19) h=182 beam0 wa=182 d=1.62 pen=0.0 sc=1.62 cells=8

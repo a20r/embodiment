@@ -1,0 +1,29 @@
+{
+  "episode": 1,
+  "arm": "A",
+  "labels": "on",
+  "model": "claude-haiku-4-5",
+  "noise_profile": "default_noisy",
+  "maze_hash": "a80368043dbff2e4",
+  "perturb_state": {
+    "family_index": 0,
+    "remap_index": 0,
+    "motor_swapped": false
+  },
+  "end_reason": "max_turns",
+  "solved": false,
+  "goal_tick": null,
+  "final_tick": 43554,
+  "sim_time_s": 871.08,
+  "wall_s": 871.1,
+  "turns": 63,
+  "execs": 62,
+  "restarts": 0,
+  "tokens": {
+    "input": 14218,
+    "output": 16021,
+    "cache_read": 1122857,
+    "cache_creation": 31800
+  },
+  "collisions": 337
+}

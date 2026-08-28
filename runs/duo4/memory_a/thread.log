@@ -1,0 +1,201 @@
+68.2 HB d6=0.787 tick=577489 goal=0
+68.5 THREAD dir=175 res=time d6 0.865->0.803 xy=-8.4,0.5
+70.2 HB d6=0.789 tick=577691 goal=0
+72.2 HB d6=0.791 tick=577887 goal=0
+73.2 SCAN [{"dir": 175.0, "width": 40, "dmin": 0.38, "dmax": 1.77, "span": 0.26}, {"dir": 357.5, "width": 55, "dmin": 0.36, "dmax": 1.26, "span": 0.35}, {"dir": 12.5, "width": 25, "dmin": 0.36, "dmax": 1.11, "span": 0.16}]
+73.2 GRAD 274
+74.2 HB d6=0.808 tick=578090 goal=0
+76.2 HB d6=0.766 tick=578290 goal=0
+78.2 HB d6=0.747 tick=578492 goal=0
+78.4 THREAD dir=358 res=worse d6 0.803->0.750 xy=-7.0,0.3
+80.2 HB d6=0.756 tick=578690 goal=0
+82.2 HB d6=0.721 tick=578888 goal=0
+83.8 SCAN [{"dir": 177.5, "width": 45, "dmin": 0.36, "dmax": 1.88, "span": 0.28}, {"dir": 355.0, "width": 50, "dmin": 0.42, "dmax": 1.21, "span": 0.37}, {"dir": 10.0, "width": 20, "dmin": 0.45, "dmax": 1.06, "span": 0.16}]
+83.8 GRAD 274
+84.2 HB d6=0.697 tick=579090 goal=0
+86.2 HB d6=0.702 tick=579290 goal=0
+88.2 HB d6=0.709 tick=579490 goal=0
+90.2 HB d6=0.726 tick=579689 goal=0
+92.2 HB d6=0.709 tick=579891 goal=0
+94.2 HB d6=0.680 tick=580093 goal=0
+96.2 HB d6=0.699 tick=580293 goal=0
+97.2 THREAD dir=178 res=worse d6 0.689->0.676 xy=-11.3,0.5
+98.2 HB d6=0.681 tick=580491 goal=0
+100.2 HB d6=0.678 tick=580693 goal=0
+102.0 SCAN [{"dir": 180.0, "width": 60, "dmin": 0.36, "dmax": 1.86, "span": 0.38}, {"dir": 352.5, "width": 35, "dmin": 0.39, "dmax": 1.51, "span": 0.24}, {"dir": 5.0, "width": 10, "dmin": 0.39, "dmax": 0.89, "span": 0.07}]
+102.0 GRAD 274
+102.3 HB d6=0.701 tick=580889 goal=0
+104.3 HB d6=0.638 tick=581093 goal=0
+106.3 HB d6=0.646 tick=581295 goal=0
+108.3 HB d6=0.641 tick=581495 goal=0
+110.3 HB d6=0.640 tick=581698 goal=0
+112.3 HB d6=0.649 tick=581900 goal=0
+114.3 HB d6=0.635 tick=582101 goal=0
+116.3 HB d6=0.666 tick=582300 goal=0
+117.1 THREAD dir=180 res=time d6 0.692->0.666 xy=-15.4,0.6
+118.3 HB d6=0.646 tick=582501 goal=0
+120.3 HB d6=0.683 tick=582701 goal=0
+122.3 HB d6=0.688 tick=582901 goal=0
+122.4 SCAN [{"dir": 2.5, "width": 45, "dmin": 0.36, "dmax": 1.75, "span": 0.28}, {"dir": 170.0, "width": 50, "dmin": 0.42, "dmax": 1.48, "span": 0.36}, {"dir": 12.5, "width": 25, "dmin": 0.36, "dmax": 0.79, "span": 0.16}]
+122.4 GRAD 272
+0.0 HB d6=None 
+2.0 HB d6=0.665 tick=583326 goal=0
+4.0 HB d6=0.651 tick=583524 goal=0
+4.5 SCAN [{"dir": 2.5, "width": 45, "dmin": 0.37, "dmax": 1.72, "span": 0.29}, {"dir": 170.0, "width": 60, "dmin": 0.38, "dmax": 1.47, "span": 0.4}, {"dir": 12.5, "width": 25, "dmin": 0.37, "dmax": 0.75, "span": 0.16}]
+6.0 HB d6=0.666 tick=583724 goal=0
+8.0 HB d6=0.675 tick=583923 goal=0
+10.0 HB d6=0.651 tick=584125 goal=0
+12.0 HB d6=0.654 tick=584326 goal=0
+14.0 HB d6=0.641 tick=584527 goal=0
+16.1 HB d6=0.641 tick=584729 goal=0
+18.1 HB d6=0.632 tick=584929 goal=0
+19.2 THREAD dir=2 res=time d6 0.624->0.639 xy=4.1,0.2
+20.1 HB d6=0.636 tick=585127 goal=0
+22.1 HB d6=0.622 tick=585331 goal=0
+24.0 SCAN [{"dir": 185.0, "width": 60, "dmin": 0.36, "dmax": 1.83, "span": 0.38}, {"dir": 347.5, "width": 35, "dmin": 0.43, "dmax": 1.57, "span": 0.26}, {"dir": 2.5, "width": 5, "dmin": 0.43, "dmax": 0.43, "span": 0.04}]
+24.0 GRAD 267
+24.1 HB d6=0.583 tick=585532 goal=0
+26.1 HB d6=0.638 tick=585734 goal=0
+28.1 HB d6=0.614 tick=585931 goal=0
+30.1 HB d6=0.565 tick=586133 goal=0
+31.7 THREAD dir=348 res=worse d6 0.587->0.561 xy=5.4,-0.2
+32.1 HB d6=0.575 tick=586335 goal=0
+34.1 HB d6=0.534 tick=586532 goal=0
+36.1 HB d6=0.514 tick=586732 goal=0
+36.6 SCAN [{"dir": 175.0, "width": 50, "dmin": 0.39, "dmax": 1.64, "span": 0.34}, {"dir": 350.0, "width": 40, "dmin": 0.4, "dmax": 1.45, "span": 0.28}, {"dir": 5.0, "width": 10, "dmin": 0.69, "dmax": 0.77, "span": 0.12}]
+36.6 GRAD 95
+38.1 HB d6=0.517 tick=586934 goal=0
+40.1 HB d6=0.514 tick=587127 goal=0
+42.1 HB d6=0.519 tick=587335 goal=0
+44.1 HB d6=0.519 tick=587537 goal=0
+46.1 HB d6=0.510 tick=587735 goal=0
+48.2 HB d6=0.512 tick=587938 goal=0
+48.8 THREAD dir=175 res=time d6 0.511->0.509 xy=1.4,0.1
+50.2 HB d6=0.510 tick=588137 goal=0
+52.2 HB d6=0.537 tick=588339 goal=0
+53.0 SCAN [{"dir": 355.0, "width": 50, "dmin": 0.39, "dmax": 1.73, "span": 0.34}, {"dir": 180.0, "width": 50, "dmin": 0.36, "dmax": 1.69, "span": 0.32}, {"dir": 10.0, "width": 20, "dmin": 0.51, "dmax": 0.59, "span": 0.18}]
+53.0 GRAD 93
+54.2 HB d6=0.529 tick=588539 goal=0
+56.2 HB d6=0.493 tick=588738 goal=0
+58.2 HB d6=0.488 tick=588941 goal=0
+60.2 HB d6=0.491 tick=589140 goal=0
+62.2 HB d6=0.486 tick=589343 goal=0
+64.2 HB d6=0.495 tick=589546 goal=0
+66.2 HB d6=0.489 tick=589740 goal=0
+67.8 THREAD dir=180 res=time d6 0.548->0.483 xy=-2.6,0.2
+68.2 HB d6=0.496 tick=589947 goal=0
+70.2 HB d6=0.524 tick=590147 goal=0
+72.2 HB d6=0.532 tick=590347 goal=0
+73.2 SCAN [{"dir": 352.5, "width": 55, "dmin": 0.37, "dmax": 1.47, "span": 0.36}, {"dir": 172.5, "width": 45, "dmin": 0.38, "dmax": 1.27, "span": 0.29}, {"dir": 10.0, "width": 20, "dmin": 0.48, "dmax": 0.9, "span": 0.17}]
+73.2 GRAD 273
+74.2 HB d6=0.535 tick=590544 goal=0
+76.2 HB d6=0.527 tick=590746 goal=0
+78.2 HB d6=0.543 tick=590945 goal=0
+80.2 HB d6=0.546 tick=591146 goal=0
+82.3 HB d6=0.556 tick=591347 goal=0
+84.3 HB d6=0.559 tick=591548 goal=0
+86.3 HB d6=0.584 tick=591748 goal=0
+88.3 HB d6=0.571 tick=591953 goal=0
+90.3 HB d6=0.596 tick=592154 goal=0
+92.3 HB d6=0.619 tick=592355 goal=0
+94.3 HB d6=0.609 tick=592557 goal=0
+96.3 HB d6=0.614 tick=592758 goal=0
+98.4 HB d6=0.618 tick=592959 goal=0
+100.4 HB d6=0.622 tick=593158 goal=0
+102.4 HB d6=0.619 tick=593360 goal=0
+104.2 THREAD dir=352 res=time d6 0.531->0.615 xy=8.0,-0.7
+104.4 HB d6=0.620 tick=593561 goal=0
+106.4 HB d6=0.599 tick=593763 goal=0
+108.4 HB d6=0.580 tick=593962 goal=0
+109.2 SCAN [{"dir": 170.0, "width": 40, "dmin": 0.4, "dmax": 1.39, "span": 0.28}, {"dir": 0.0, "width": 50, "dmin": 0.41, "dmax": 1.25, "span": 0.36}, {"dir": 12.5, "width": 25, "dmin": 0.45, "dmax": 1.06, "span": 0.2}]
+109.2 GRAD 274
+110.4 HB d6=0.611 tick=594160 goal=0
+112.4 HB d6=0.654 tick=594360 goal=0
+114.4 HB d6=0.640 tick=594561 goal=0
+116.4 HB d6=0.639 tick=594763 goal=0
+118.4 HB d6=0.635 tick=594962 goal=0
+120.4 HB d6=0.651 tick=595163 goal=0
+122.4 HB d6=0.657 tick=595365 goal=0
+124.2 THREAD dir=0 res=time d6 0.578->0.646 xy=12.0,-0.6
+124.4 HB d6=0.653 tick=595564 goal=0
+126.4 HB d6=0.643 tick=595763 goal=0
+128.4 HB d6=0.620 tick=595964 goal=0
+129.9 SCAN [{"dir": 177.5, "width": 45, "dmin": 0.38, "dmax": 1.61, "span": 0.3}, {"dir": 357.5, "width": 45, "dmin": 0.42, "dmax": 0.89, "span": 0.33}, {"dir": 10.0, "width": 20, "dmin": 0.47, "dmax": 0.84, "span": 0.16}]
+129.9 GRAD 273
+130.4 HB d6=0.625 tick=596167 goal=0
+132.4 HB d6=0.661 tick=596365 goal=0
+134.4 HB d6=0.669 tick=596567 goal=0
+136.4 HB d6=0.662 tick=596766 goal=0
+138.5 HB d6=0.653 tick=596967 goal=0
+140.5 HB d6=0.653 tick=597172 goal=0
+142.5 HB d6=0.648 tick=597372 goal=0
+144.3 THREAD dir=358 res=time d6 0.614->0.634 xy=15.7,-0.8
+144.5 HB d6=0.623 tick=597572 goal=0
+146.5 HB d6=0.634 tick=597772 goal=0
+148.5 HB d6=0.600 tick=597973 goal=0
+149.2 SCAN [{"dir": 177.5, "width": 55, "dmin": 0.38, "dmax": 1.11, "span": 0.37}, {"dir": 340.0, "width": 80, "dmin": 0.37, "dmax": 0.74, "span": 0.52}, {"dir": 10.0, "width": 20, "dmin": 0.37, "dmax": 0.55, "span": 0.13}]
+149.2 GRAD 277
+150.5 HB d6=0.602 tick=598173 goal=0
+152.5 HB d6=0.642 tick=598370 goal=0
+154.5 HB d6=0.626 tick=598569 goal=0
+156.5 HB d6=0.592 tick=598772 goal=0
+158.5 HB d6=0.600 tick=598972 goal=0
+159.4 THREAD dir=340 res=worse d6 0.585->0.592 xy=18.2,-1.4
+160.5 HB d6=0.607 tick=599172 goal=0
+162.5 HB d6=0.609 tick=599373 goal=0
+164.3 SCAN [{"dir": 170.0, "width": 40, "dmin": 0.37, "dmax": 1.26, "span": 0.26}, {"dir": 282.5, "width": 75, "dmin": 0.36, "dmax": 0.64, "span": 0.47}]
+164.3 GRAD 93
+164.5 HB d6=0.586 tick=599573 goal=0
+166.5 HB d6=0.620 tick=599773 goal=0
+168.5 HB d6=0.597 tick=599974 goal=0
+170.5 HB d6=0.582 tick=600174 goal=0
+172.5 HB d6=0.578 tick=600375 goal=0
+174.5 HB d6=0.527 tick=600579 goal=0
+176.6 HB d6=0.526 tick=600778 goal=0
+176.7 THREAD dir=282 res=worse d6 0.603->0.521 xy=18.8,-4.6
+178.6 HB d6=0.520 tick=600980 goal=0
+180.6 HB d6=0.532 tick=601180 goal=0
+181.4 SCAN [{"dir": 237.5, "width": 95, "dmin": 0.39, "dmax": 1.37, "span": 0.64}, {"dir": 110.0, "width": 90, "dmin": 0.42, "dmax": 0.95, "span": 0.66}]
+181.4 GRAD 125
+182.6 HB d6=0.509 tick=601379 goal=0
+184.6 HB d6=0.535 tick=601582 goal=0
+186.6 HB d6=0.543 tick=601784 goal=0
+188.6 HB d6=0.555 tick=601985 goal=0
+190.6 HB d6=0.566 tick=602183 goal=0
+192.6 HB d6=0.575 tick=602389 goal=0
+194.6 HB d6=0.586 tick=602588 goal=0
+194.9 THREAD dir=110 res=wall d6 0.533->0.595 xy=16.9,-0.6
+196.6 HB d6=0.577 tick=602790 goal=0
+198.6 HB d6=0.573 tick=602989 goal=0
+199.7 SCAN [{"dir": 187.5, "width": 55, "dmin": 0.37, "dmax": 1.8, "span": 0.36}, {"dir": 302.5, "width": 75, "dmin": 0.37, "dmax": 0.69, "span": 0.48}, {"dir": 15.0, "width": 10, "dmin": 0.37, "dmax": 0.4, "span": 0.06}]
+199.7 GRAD 140
+200.7 HB d6=0.570 tick=603187 goal=0
+202.7 HB d6=0.573 tick=603388 goal=0
+204.7 HB d6=0.579 tick=603589 goal=0
+206.7 HB d6=0.598 tick=603789 goal=0
+208.7 HB d6=0.595 tick=603990 goal=0
+210.7 HB d6=0.610 tick=604192 goal=0
+212.7 HB d6=0.602 tick=604393 goal=0
+214.7 HB d6=0.605 tick=604594 goal=0
+216.7 THREAD dir=188 res=wall d6 0.586->0.598 xy=12.2,-1.3
+216.7 HB d6=0.604 tick=604796 goal=0
+218.7 HB d6=0.607 tick=604994 goal=0
+220.7 HB d6=0.629 tick=605194 goal=0
+222.1 SCAN [{"dir": 177.5, "width": 35, "dmin": 0.47, "dmax": 1.59, "span": 0.28}, {"dir": 2.5, "width": 55, "dmin": 0.42, "dmax": 0.77, "span": 0.41}, {"dir": 15.0, "width": 30, "dmin": 0.42, "dmax": 0.74, "span": 0.22}]
+222.1 GRAD 118
+222.7 HB d6=0.610 tick=605396 goal=0
+224.7 HB d6=0.578 tick=605597 goal=0
+226.8 HB d6=0.586 tick=605798 goal=0
+228.8 HB d6=0.582 tick=605998 goal=0
+230.8 HB d6=0.577 tick=606197 goal=0
+232.8 HB d6=0.583 tick=606399 goal=0
+233.4 THREAD dir=178 res=wall d6 0.628->0.575 xy=9.7,-1.0
+234.8 HB d6=0.606 tick=606602 goal=0
+236.8 HB d6=0.622 tick=606800 goal=0
+238.3 SCAN [{"dir": 165.0, "width": 50, "dmin": 0.37, "dmax": 1.67, "span": 0.32}, {"dir": 355.0, "width": 60, "dmin": 0.37, "dmax": 1.0, "span": 0.39}, {"dir": 12.5, "width": 25, "dmin": 0.39, "dmax": 0.99, "span": 0.17}]
+238.3 GRAD 273
+238.8 HB d6=0.626 tick=607002 goal=0
+240.8 HB d6=0.632 tick=607202 goal=0
+242.8 HB d6=0.631 tick=607404 goal=0
+244.8 HB d6=0.633 tick=607603 goal=0
+246.8 HB d6=0.616 tick=607804 goal=0

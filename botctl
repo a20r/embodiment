@@ -1,0 +1,331 @@
+#!/usr/bin/env python3
+"""botctl — operate the Mazebot platform.
+
+  run        start an episode series (arm, labels, model overridable)
+  reset      wipe a series' episodes/memory/perturbation state
+  perturb    queue a perturbation for the series' next episode
+  quiz       probe-quiz a fresh LLM on the series' /memory
+  ablate     delete/corrupt a memory file, measure the regression
+  savings    apply a perturbation, measure re-learning speed
+  report     render a series summary (runs offline evals first)
+  shell      drop into the running bot container
+  tail       print/follow an episode transcript
+  dashboard  serve the web dashboard
+  smoke      run the non-LLM smoke suite
+"""
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+import time
+
+REPO = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, REPO)
+
+from sim import config as simconfig  # noqa: E402
+
+
+def parse_sets(pairs):
+    """--set a.b.c=value (value parsed as YAML scalar)."""
+    import yaml
+    out = {}
+    for pair in pairs or []:
+        key, _, raw = pair.partition("=")
+        node = out
+        parts = key.strip().split(".")
+        for part in parts[:-1]:
+            node = node.setdefault(part, {})
+        node[parts[-1]] = yaml.safe_load(raw)
+    return out
+
+
+def load_cfg(args, extra=None):
+    overrides = simconfig.deep_merge(
+        dict(extra or {}), parse_sets(getattr(args, "set", None)))
+    for key in ("arm", "labels", "model"):
+        v = getattr(args, key, None)
+        if v:
+            overrides[key] = v
+    if getattr(args, "noise", None):
+        overrides["noise_profile"] = args.noise
+    if getattr(args, "series", None):
+        overrides.setdefault("series", {})["name"] = args.series
+    if getattr(args, "episodes", None):
+        overrides.setdefault("series", {})["episodes"] = args.episodes
+    return simconfig.resolve(args.config, overrides)
+
+
+def series_name(args, cfg=None):
+    if getattr(args, "series", None):
+        return args.series
+    cfg = cfg or simconfig.resolve(args.config)
+    return cfg["series"]["name"]
+
+
+def cmd_run(args):
+    cfg = load_cfg(args)
+    from harness.series import run_series
+    summaries = run_series(cfg, fresh=args.fresh)
+    solved = sum(1 for s in summaries if s["solved"])
+    print(f"\nseries {cfg['series']['name']}: "
+          f"{solved}/{len(summaries)} solved")
+    return 0
+
+
+def cmd_reset(args):
+    import shutil
+    name = series_name(args)
+    sdir = os.path.join(REPO, "runs", name)
+    if not os.path.isdir(sdir):
+        print(f"series {name!r} has no runs directory; nothing to do")
+        return 0
+    if args.hard:
+        shutil.rmtree(sdir)
+        print(f"removed {sdir}")
+        return 0
+    for entry in list(os.listdir(sdir)):
+        if entry.startswith("ep_") or entry in (
+                "memory", "state.json", "pending_perturbations.json"):
+            path = os.path.join(sdir, entry)
+            shutil.rmtree(path) if os.path.isdir(path) else os.unlink(path)
+    print(f"reset series {name!r} (episodes, memory, perturbation "
+          f"state removed; evals kept — use --hard to remove all)")
+    return 0
+
+
+def cmd_perturb(args):
+    from sim import perturb
+    name = series_name(args)
+    perturb.queue(os.path.join(REPO, "runs", name), args.name)
+    print(f"queued perturbation {args.name!r} for series {name!r}; "
+          f"it applies at the next episode start")
+    return 0
+
+
+def cmd_quiz(args):
+    from evals import quiz
+    model = args.model
+    if model is None:
+        model = "none" if not os.environ.get("ANTHROPIC_API_KEY") \
+            else simconfig.resolve(args.config)["model"]
+    quiz.run(series_name(args), args.episode, model)
+    return 0
+
+
+def cmd_ablate(args):
+    from evals import ablate
+    ablate.run(series_name(args), args.file, args.mode, args.model)
+    return 0
+
+
+def cmd_savings(args):
+    from evals import savings
+    savings.run(series_name(args), args.name, args.episodes_count,
+                args.model)
+    return 0
+
+
+def cmd_report(args):
+    from evals import learning_curve, provenance, common
+    name = series_name(args)
+    print(f"=== series {name} ===")
+    sj_path = os.path.join(REPO, "runs", name, "series.json")
+    if os.path.exists(sj_path):
+        with open(sj_path) as f:
+            c = json.load(f)["config"]
+        m = c.get("maze", {})
+        print(f"config: arm {c.get('arm')} · labels {c.get('labels')} · "
+              f"{c.get('noise_profile')} · model {c.get('model')} · "
+              f"maze {m.get('width')}x{m.get('height')} "
+              f"seed {m.get('seed')} braid {m.get('braid')}")
+    lc = learning_curve.run(name)
+    if not lc:
+        return 1
+    prov = provenance.run(name)
+    print(f"\nsolve rate: {lc['solve_rate'] * 100:.0f}% over "
+          f"{lc['episodes']} episode(s)")
+    if lc["first_solve_sim_s"] is not None:
+        print(f"time-to-solve: first {lc['first_solve_sim_s']}s · "
+              f"best {lc['best_sim_s']}s · last {lc['last_sim_s']}s"
+              + (f" · improvement {lc['improvement_first_to_last']}s"
+                 if lc["improvement_first_to_last"] is not None else ""))
+    edir = common.eval_dir(name)
+    for fname in sorted(os.listdir(edir)):
+        if fname.endswith(".json") and (
+                fname.startswith("quiz") or fname.startswith("ablation")
+                or fname.startswith("savings")):
+            with open(os.path.join(edir, fname)) as f:
+                s = json.load(f).get("summary", {})
+            print(f"{fname[:-5]}: " + " · ".join(
+                f"{k}={v}" for k, v in s.items()))
+    print(f"\nartifacts: {edir}")
+    print(f"dashboard: ./botctl dashboard   (then pick series {name!r})")
+    return 0
+
+
+def cmd_shell(args):
+    name = series_name(args)
+    r = subprocess.run(["docker", "ps", "--format", "{{.Names}}"],
+                       capture_output=True, text=True)
+    boxes = [n for n in r.stdout.split()
+             if n.startswith(f"mazebot-{name}-ep")]
+    if not boxes:
+        print(f"no running bot container for series {name!r}")
+        return 1
+    os.execvp("docker", ["docker", "exec", "-it", "-w", "/bot",
+                         boxes[-1], "bash"])
+
+
+def render_transcript_event(ev):
+    t = ev.get("type")
+    if t == "assistant":
+        for b in ev.get("content", []):
+            if b.get("type") == "text" and b.get("text"):
+                print(f"\n[agent] {b['text']}")
+            elif b.get("type") == "tool_use":
+                print(f"  $ {(b.get('input') or {}).get('command', '')}")
+    elif t == "exec_result":
+        out = ev.get("output", "")
+        if len(out) > 400:
+            out = out[:400] + f"... [{len(out)} chars]"
+        print("  | " + out.replace("\n", "\n  | "))
+    elif t == "note":
+        print(f"\n--- {ev.get('kind')}"
+              f"{': ' + str(ev.get('reason')) if ev.get('reason') else ''}"
+              f" ---")
+
+
+def cmd_tail(args):
+    name = series_name(args)
+    sdir = os.path.join(REPO, "runs", name)
+    eps = sorted(e for e in os.listdir(sdir) if e.startswith("ep_")) \
+        if os.path.isdir(sdir) else []
+    if not eps:
+        print(f"series {name!r} has no episodes")
+        return 1
+    ep = f"ep_{args.episode:03d}" if args.episode else eps[-1]
+    path = os.path.join(sdir, ep, "transcript.jsonl")
+    print(f"transcript: {path}")
+    pos = 0
+    while True:
+        with open(path) as f:
+            f.seek(pos)
+            for line in f:
+                try:
+                    render_transcript_event(json.loads(line))
+                except json.JSONDecodeError:
+                    pass
+            pos = f.tell()
+        if not args.follow:
+            return 0
+        time.sleep(1.5)
+
+
+def cmd_dashboard(args):
+    from dashboard import server
+    argv = ["--config", args.config]
+    if args.port:
+        argv += ["--port", str(args.port)]
+    return server.main(argv)
+
+
+def cmd_smoke(args):
+    from scripts import smoke
+    argv = ["--variant", args.variant] if args.variant else []
+    return smoke.main() if not argv else \
+        subprocess.call([sys.executable, "-m", "scripts.smoke"] + argv,
+                        cwd=REPO)
+
+
+def main():
+    ap = argparse.ArgumentParser(
+        prog="botctl", description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--config", default=os.path.join(REPO, "config.yaml"))
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    def series_arg(p):
+        p.add_argument("--series", default=None,
+                       help="series name (default: from config)")
+
+    p = sub.add_parser("run", help="run an episode series")
+    series_arg(p)
+    p.add_argument("--episodes", type=int, default=None)
+    p.add_argument("--arm", choices=["A", "B"], default=None)
+    p.add_argument("--labels", choices=["on", "off"], default=None)
+    p.add_argument("--model", default=None)
+    p.add_argument("--noise", choices=["clean", "default_noisy"],
+                   default=None)
+    p.add_argument("--fresh", action="store_true",
+                   help="wipe existing episodes/memory first")
+    p.add_argument("--set", action="append", metavar="KEY.PATH=VALUE",
+                   help="override any config key, e.g. "
+                        "--set sim.realtime_factor=4")
+    p.set_defaults(fn=cmd_run)
+
+    p = sub.add_parser("reset", help="wipe a series")
+    series_arg(p)
+    p.add_argument("--hard", action="store_true",
+                   help="remove the whole series directory")
+    p.set_defaults(fn=cmd_reset)
+
+    p = sub.add_parser("perturb", help="queue a perturbation")
+    p.add_argument("name",
+                   choices=["motor_swap", "maze_regen", "sensor_remap"])
+    series_arg(p)
+    p.set_defaults(fn=cmd_perturb)
+
+    p = sub.add_parser("quiz", help="probe-quiz the series' memory")
+    series_arg(p)
+    p.add_argument("--episode", type=int, default=None)
+    p.add_argument("--model", default=None,
+                   help="'none' = offline scoring")
+    p.set_defaults(fn=cmd_quiz)
+
+    p = sub.add_parser("ablate", help="ablate a memory file")
+    p.add_argument("file", help="path relative to /memory")
+    series_arg(p)
+    p.add_argument("--mode", choices=["delete", "corrupt"],
+                   default="delete")
+    p.add_argument("--model", default=None)
+    p.set_defaults(fn=cmd_ablate)
+
+    p = sub.add_parser("savings", help="perturb + measure re-learning")
+    p.add_argument("name",
+                   choices=["motor_swap", "maze_regen", "sensor_remap"])
+    series_arg(p)
+    p.add_argument("--episodes", dest="episodes_count", type=int,
+                   default=3)
+    p.add_argument("--model", default=None)
+    p.set_defaults(fn=cmd_savings)
+
+    p = sub.add_parser("report", help="series summary")
+    series_arg(p)
+    p.set_defaults(fn=cmd_report)
+
+    p = sub.add_parser("shell", help="shell into the bot container")
+    series_arg(p)
+    p.set_defaults(fn=cmd_shell)
+
+    p = sub.add_parser("tail", help="print/follow a transcript")
+    series_arg(p)
+    p.add_argument("--episode", type=int, default=None)
+    p.add_argument("-f", "--follow", action="store_true")
+    p.set_defaults(fn=cmd_tail)
+
+    p = sub.add_parser("dashboard", help="serve the dashboard")
+    p.add_argument("--port", type=int, default=None)
+    p.set_defaults(fn=cmd_dashboard)
+
+    p = sub.add_parser("smoke", help="run the smoke suite")
+    p.add_argument("--variant", default=None)
+    p.set_defaults(fn=cmd_smoke)
+
+    args = ap.parse_args()
+    return args.fn(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

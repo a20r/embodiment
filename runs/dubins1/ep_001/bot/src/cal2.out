@@ -1,0 +1,5 @@
+steer=30 thr=5 dur=3 dh=2.8 rate=0.93 deg/s
+steer=90 thr=5 dur=3 dh=9.5 rate=3.17 deg/s
+steer=180 thr=5 dur=3 dh=8.4 rate=2.80 deg/s
+steer=90 thr=-5 dur=3 dh=-6.2 rate=-2.07 deg/s
+steer=-90 thr=5 dur=3 dh=-8.1 rate=-2.70 deg/s

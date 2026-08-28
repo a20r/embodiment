@@ -1,0 +1,15 @@
+{
+  "file_to_physical": {
+    "d0": "status",
+    "d1": "steer",
+    "d2": "lidar",
+    "d3": "accel",
+    "d4": "heading",
+    "d5": "bump_front",
+    "d6": "bump_rear",
+    "d7": "speed"
+  },
+  "labels": "off",
+  "motor_swapped": false,
+  "remap_index": 0
+}

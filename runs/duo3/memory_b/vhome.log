@@ -1,0 +1,25 @@
+    0.0 VHOME start h=101
+    7.4 leg h=101 s 0.069->0.056 blocked=False
+   13.1 leg h=11 s 0.056->0.049 blocked=False
+   18.8 leg h=236 s 0.049->0.051 blocked=False
+   24.5 leg h=146 s 0.051->0.051 blocked=False
+   30.2 leg h=236 s 0.051->0.055 blocked=False
+   36.0 leg h=11 s 0.055->0.051 blocked=False
+   41.6 leg h=281 s 0.051->0.055 blocked=False
+   47.4 leg h=191 s 0.055->0.070 blocked=False
+   53.1 leg h=191 s 0.070->0.076 blocked=False
+   58.9 leg h=56 s 0.076->0.052 blocked=False
+   64.6 leg h=281 s 0.052->0.049 blocked=False
+   70.3 leg h=101 s 0.049->0.061 blocked=False
+   76.0 leg h=101 s 0.061->0.056 blocked=False
+   81.7 leg h=236 s 0.056->0.061 blocked=False
+   87.4 leg h=326 s 0.061->0.079 blocked=False
+   91.5 leg h=326 s 0.079->0.081 blocked=True
+   91.5 STRUCTURE/obstacle reached
+   97.2 leg h=56 s 0.081->0.059 blocked=False
+  102.8 leg h=236 s 0.059->0.072 blocked=False
+  108.4 leg h=236 s 0.072->0.095 blocked=False
+  114.1 leg h=236 s 0.095->0.122 blocked=False
+  119.9 leg h=236 s 0.122->0.170 blocked=False
+  125.6 leg h=236 s 0.170->0.176 blocked=False
+  131.2 leg h=56 s 0.176->0.180 blocked=False

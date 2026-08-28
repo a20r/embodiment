@@ -1,0 +1,17 @@
+{
+  "file_to_physical": {
+    "d0": "bump_front",
+    "d1": "lidar",
+    "d2": "heading",
+    "d3": "serial_rx",
+    "d4": "motor_left",
+    "d5": "motor_right",
+    "d6": "peer_signal",
+    "d7": "bump_rear",
+    "d8": "serial_tx",
+    "d9": "status"
+  },
+  "labels": "off",
+  "motor_swapped": false,
+  "remap_index": 0
+}

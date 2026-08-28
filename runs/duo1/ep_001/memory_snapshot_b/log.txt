@@ -1,0 +1,4 @@
+Episode start Fri Aug 28 05:38:12 UTC 2026
+Episode 1 end Fri Aug 28 06:45:21 UTC 2026
+Episode end: cover.py running, goal still 0, all knowledge in /memory
+Episode 1 ended Fri Aug 28 07:39:01 UTC 2026: goal not found, world >30u, full protocol+tools saved. See notes.md EPISODE 2 PRIORITY LIST.

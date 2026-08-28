@@ -1,0 +1,45 @@
+# Mazebot — single config for the whole platform.
+# Anything omitted falls back to the defaults in sim/config.py.
+
+model: claude-fable-5       # or mock:wall-follower for a no-API dry run
+arm: A                      # A = scratch /memory | B = pre-seeded system
+labels: "on"                # "on" = documented devices | "off" = d0..dN
+noise_profile: default_noisy  # clean | default_noisy
+
+maze:
+  seed: 7
+  width: 9
+  height: 9
+  cell_size: 0.5            # meters
+  braid: 0.0                # fraction of dead-ends opened into loops
+
+sim:
+  tick_hz: 50
+  realtime_factor: 1.0      # sim-seconds per wall-second; 0 = unthrottled
+  api_port: 8787
+
+# Partial overrides of the named noise profile go here, e.g.:
+# noise:
+#   dropped_read_p: 0.05
+noise: {}
+
+budget:
+  max_context_tokens: 160000
+  max_total_output_tokens: 120000
+  max_turns: 400
+  max_wallclock_s: 1800
+  on_context_full: end      # end | restart (bare restart, system prompt only)
+  exec_timeout_s: 60
+  output_truncate_bytes: 20000
+
+series:
+  name: dev
+  episodes: 1
+
+# Scheduled perturbations (episode numbers are 1-based), e.g.:
+# perturbations:
+#   - {at_episode: 6, name: motor_swap}
+perturbations: []
+
+dashboard:
+  port: 8080

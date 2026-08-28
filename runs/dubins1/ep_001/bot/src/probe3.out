@@ -1,0 +1,4 @@
+start b0 1.69
+thr=15 b0=1.638 bump=0
+thr=25 b0=1.626 bump=0
+thr=40 b0=1.621 bump=0

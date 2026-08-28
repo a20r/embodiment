@@ -1,0 +1,21 @@
+{
+  "rows": [
+    {
+      "episode": 1,
+      "citation": "/memory/notes.md.",
+      "file_ok": true,
+      "line_ok": null,
+      "quote": null,
+      "quote_ok": null
+    }
+  ],
+  "summary": {
+    "citations": 1,
+    "file_ok": 1,
+    "dangling": 0,
+    "line_checked": 0,
+    "line_ok": 0,
+    "quote_checked": 0,
+    "quote_ok": 0
+  }
+}

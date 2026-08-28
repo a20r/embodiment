@@ -1,0 +1,6 @@
+thr=-10: beam0 0.095->0.222 rate=0.064/s
+  back fwd: beam0 0.157
+thr=-20: beam0 0.157->0.332 rate=0.088/s
+  back fwd: beam0 0.333
+thr=-50: beam0 0.333->0.569 rate=0.118/s
+  back fwd: beam0 0.441

@@ -1,0 +1,65 @@
+{
+  "config": {
+    "model": "mock:wall-follower",
+    "arm": "A",
+    "labels": "on",
+    "noise_profile": "default_noisy",
+    "maze": {
+      "seed": 7,
+      "width": 9,
+      "height": 9,
+      "cell_size": 0.5,
+      "braid": 0.0
+    },
+    "robot": {
+      "radius": 0.09,
+      "wheelbase": 0.16,
+      "wheel_radius": 0.03,
+      "max_speed": 0.35,
+      "encoder_ticks_per_rev": 360
+    },
+    "lidar": {
+      "rays": 16,
+      "fov_deg": 360.0,
+      "max_range": 3.0
+    },
+    "sim": {
+      "tick_hz": 50,
+      "realtime_factor": 4,
+      "api_host": "127.0.0.1",
+      "api_port": 8787
+    },
+    "noise": {
+      "lidar_sigma_m": 0.01,
+      "lidar_dropout_p": 0.01,
+      "heading_sigma_deg": 2.0,
+      "heading_drift_deg": 0.002,
+      "encoder_jitter_ticks": 1,
+      "slip_mu": 0.03,
+      "slip_sigma": 0.04,
+      "motor_gain_left": 1.0,
+      "motor_gain_right": 0.94,
+      "actuation_latency_ticks": 3,
+      "dropped_read_p": 0.02
+    },
+    "budget": {
+      "max_context_tokens": 160000,
+      "max_total_output_tokens": 120000,
+      "max_turns": 400,
+      "max_wallclock_s": 900,
+      "on_context_full": "end",
+      "exec_timeout_s": 60,
+      "output_truncate_bytes": 20000
+    },
+    "series": {
+      "name": "demo",
+      "episodes": 1
+    },
+    "perturbations": [],
+    "dashboard": {
+      "host": "127.0.0.1",
+      "port": 8080
+    },
+    "runs_dir": "runs"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "file_to_physical": {
+    "d0": "heading",
+    "d1": "bump_front",
+    "d2": "encoder_right",
+    "d3": "motor_left",
+    "d4": "beacon",
+    "d5": "motor_right",
+    "d6": "encoder_left",
+    "d7": "lidar",
+    "d8": "bump_rear",
+    "d9": "status"
+  },
+  "labels": "off",
+  "motor_swapped": false,
+  "remap_index": 0
+}

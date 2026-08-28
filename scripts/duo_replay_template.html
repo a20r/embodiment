@@ -1,0 +1,440 @@
+<title>__TITLE__</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground: #f7f6f3;
+  --surface: #fcfcfb;
+  --border: #e2e0da;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --ink-3: #8a897f;
+  --bota: #2a78d6;
+  --botb: #d97b16;
+  --link: #1baf7a;
+  --hit: #e34948;
+  --goal: #008300;
+  --chip: #efede8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #141413;
+    --surface: #1a1a19;
+    --border: #33322e;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --ink-3: #8a897f;
+    --bota: #3987e5;
+    --botb: #e08a2e;
+    --link: #199e70;
+    --hit: #e66767;
+    --goal: #35b135;
+    --chip: #232320;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #141413;
+  --surface: #1a1a19;
+  --border: #33322e;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --ink-3: #8a897f;
+  --bota: #3987e5;
+  --botb: #e08a2e;
+  --link: #199e70;
+  --hit: #e66767;
+  --goal: #35b135;
+  --chip: #232320;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: Archivo, system-ui, sans-serif; font-size: 15px;
+  line-height: 1.5;
+}
+header {
+  padding: 20px 22px 14px; border-bottom: 1px solid var(--border);
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 18px;
+}
+h1 {
+  font-family: "Martian Mono", monospace; font-size: 19px; margin: 0;
+  letter-spacing: -0.02em;
+}
+.sub { color: var(--ink-2); font-size: 13.5px; }
+.sub code { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 22px;
+  border-bottom: 1px solid var(--border); }
+.chip {
+  background: var(--chip); border: 1px solid var(--border);
+  border-radius: 4px; padding: 5px 11px; font-size: 12px;
+  color: var(--ink-2); letter-spacing: 0.02em;
+}
+.chip b {
+  font-family: "Martian Mono", monospace; font-size: 13px;
+  color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.chip.state-solved { border-color: var(--goal); color: var(--goal); }
+.chip.state-live { border-color: var(--botb); color: var(--botb); }
+.chip.bot-a { border-color: var(--bota); }
+.chip.bot-b { border-color: var(--botb); }
+main {
+  display: grid; grid-template-columns: minmax(340px, 56%) 1fr;
+  gap: 18px; padding: 18px 22px; align-items: start;
+}
+@media (max-width: 880px) { main { grid-template-columns: 1fr; } }
+.panel {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; overflow: hidden;
+}
+.panel-label {
+  font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--ink-3); padding: 10px 14px 0;
+}
+#stage { padding: 8px 12px 4px; }
+#cv { width: 100%; height: auto; display: block; }
+.controls {
+  display: flex; align-items: center; gap: 12px; padding: 8px 14px 14px;
+}
+button {
+  font-family: "Martian Mono", monospace; font-size: 12px;
+  background: var(--chip); color: var(--ink);
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 7px 16px; cursor: pointer;
+}
+button:hover { border-color: var(--ink-3); }
+button:focus-visible { outline: 2px solid var(--bota); outline-offset: 1px; }
+input[type="range"] { flex: 1; accent-color: var(--botb); }
+#clock {
+  font-family: "Martian Mono", monospace; font-size: 12px;
+  color: var(--ink-2); min-width: 150px; text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.legend { display: flex; gap: 14px; padding: 0 14px 12px; flex-wrap: wrap;
+  font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px;
+  border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.col-right { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.tabs { display: flex; gap: 6px; padding: 10px 14px 0; }
+.tabs button { padding: 6px 12px; font-size: 11px; }
+.tabs button.on { border-color: var(--ink); }
+#feed { max-height: 520px; overflow-y: auto; padding: 6px 14px 14px; }
+.ev { margin: 10px 0; }
+.ev.agent { font-size: 14px; }
+.ev.agent::before {
+  content: "AGENT"; display: block; font-size: 10px; letter-spacing: 0.09em;
+  color: var(--ink-3); margin-bottom: 2px;
+}
+.ev.cmd, .ev.out {
+  font-family: "IBM Plex Mono", monospace; font-size: 12px;
+  white-space: pre-wrap; word-break: break-word;
+  padding: 7px 10px; border-radius: 4px;
+}
+.ev.cmd { background: var(--chip); border-left: 3px solid var(--bota); }
+.feed-b .ev.cmd { border-left-color: var(--botb); }
+.ev.out { color: var(--ink-2); border-left: 3px solid var(--border);
+  max-height: 150px; overflow-y: auto; }
+.ev.note { color: var(--ink-3); font-style: italic; font-size: 13px;
+  text-align: center; }
+.msg {
+  font-family: "IBM Plex Mono", monospace; font-size: 12px;
+  margin: 8px 0; padding: 7px 10px; border-radius: 4px;
+  background: var(--chip); cursor: pointer;
+  white-space: pre-wrap; word-break: break-word;
+}
+.msg:hover { outline: 1px solid var(--ink-3); }
+.msg.from-a { border-left: 3px solid var(--bota); }
+.msg.from-b { border-left: 3px solid var(--botb); }
+.msg.lost { opacity: 0.55; }
+.msg .who { font-size: 10px; letter-spacing: 0.08em; color: var(--ink-3);
+  display: block; margin-bottom: 2px; }
+#memlist { padding: 6px 14px 14px; }
+.memhead { font-size: 11px; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--ink-3); margin: 10px 0 2px; }
+.memfile { margin: 8px 0; }
+.memfile summary {
+  font-family: "IBM Plex Mono", monospace; font-size: 12.5px;
+  cursor: pointer; color: var(--ink); padding: 4px 0;
+}
+.memfile pre {
+  font-family: "IBM Plex Mono", monospace; font-size: 12px;
+  white-space: pre-wrap; word-break: break-word; color: var(--ink-2);
+  background: var(--chip); padding: 10px; border-radius: 4px; margin: 4px 0;
+}
+.empty { color: var(--ink-3); padding: 10px 14px 16px; font-size: 13px; }
+footer { color: var(--ink-3); font-size: 12px; padding: 4px 22px 24px; }
+</style>
+
+<header>
+  <h1>__TITLE__</h1>
+  <span class="sub" id="subtitle"></span>
+</header>
+<div class="chips" id="chips"></div>
+<main>
+  <section class="panel">
+    <div class="panel-label">Ground truth — both robots, one world</div>
+    <div id="stage"><canvas id="cv" width="960" height="960"></canvas></div>
+    <div class="controls">
+      <button id="play" aria-label="play or pause replay">PLAY</button>
+      <input type="range" id="scrub" min="0" max="0" value="0"
+        aria-label="replay position">
+      <span id="clock"></span>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--bota)"></i>bot A</span>
+      <span><i style="background:var(--botb)"></i>bot B</span>
+      <span><i style="background:var(--link)"></i>radio link (in range)</span>
+      <span><i style="background:var(--hit)"></i>collision</span>
+      <span><i style="background:var(--goal)"></i>exit</span>
+    </div>
+  </section>
+  <div class="col-right">
+    <section class="panel">
+      <div class="panel-label">Transcripts</div>
+      <div class="tabs">
+        <button id="tab-a" class="on">BOT A</button>
+        <button id="tab-b">BOT B</button>
+        <button id="tab-c">COMMS</button>
+      </div>
+      <div id="feed"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-label">/memory — per bot</div>
+      <div id="memlist"></div>
+    </section>
+  </div>
+</main>
+<footer>
+  Recorded by the Mazebot platform's ground-truth logs. Neither agent
+  sees this view, or knows the other exists — inside each container the
+  world is only <code>/dev/robot</code> device files, including one
+  unlabeled transceiver pair that only delivers within
+  <span id="rng"></span> m.
+</footer>
+
+<script>
+"use strict";
+const D = __DATA__;
+const $ = (s) => document.querySelector(s);
+const css = (n) => getComputedStyle(document.documentElement)
+  .getPropertyValue(n).trim();
+const secs = (t) => (t / 50).toFixed(0) + " s";
+
+/* header */
+const m = D.meta, A = D.bots.a, B = D.bots.b;
+$("#subtitle").textContent =
+  `duo · arm ${m.arm} · labels ${m.labels} · ${m.noise} · ` +
+  `maze ${m.maze_hash} · ${m.model}`;
+$("#rng").textContent = D.range;
+const nTx = D.tx_total != null ? D.tx_total : D.comms.length;
+const nOk = D.tx_delivered != null ? D.tx_delivered
+  : D.comms.filter((c) => c.ok).length;
+const botChip = (bid, bot) => {
+  const s = bot.stats;
+  if (D.live && !s.solved) return [`bot ${bid.toUpperCase()}`,
+    "IN PROGRESS", `bot-${bid} state-live`];
+  return [`bot ${bid.toUpperCase()}`,
+    s.solved ? `ESCAPED ${bot.goal_tick ? secs(bot.goal_tick) : ""}`
+             : (s.end_reason || "ended").toUpperCase(),
+    `bot-${bid}` + (s.solved ? " state-solved" : "")];
+};
+const chips = [
+  botChip("a", A), botChip("b", B),
+  ["messages", `${nTx} sent / ${nOk} heard`, ""],
+  D.first_contact != null
+    ? ["first contact", secs(D.first_contact), "state-solved"]
+    : ["first contact", "never", ""],
+  ["collisions", `${A.collisions.length} + ${B.collisions.length}`, ""],
+  ["sim time", D.frames.length
+    ? secs(D.frames[D.frames.length - 1][0]) : "0 s", ""],
+];
+$("#chips").innerHTML = chips.filter(Boolean).map(([k, v, cls]) =>
+  `<span class="chip ${cls}">${k} <b>${v}</b></span>`).join("");
+
+/* canvas replay */
+const cv = $("#cv"), ctx = cv.getContext("2d");
+const MZ = D.maze, F = D.frames;
+let idx = F.length - 1, playing = false;
+const deliveredTicks = D.comms.filter((c) => c.ok).map((c) => c.t);
+
+function draw() {
+  const w = cv.width, h = cv.height;
+  ctx.fillStyle = css("--surface");
+  ctx.fillRect(0, 0, w, h);
+  const worldW = MZ.width * MZ.cell_size, worldH = MZ.height * MZ.cell_size;
+  const pad = 26;
+  const sc = Math.min((w - 2 * pad) / worldW, (h - 2 * pad) / worldH);
+  const X = (x) => pad + x * sc, Y = (y) => h - pad - y * sc;
+  const cs = MZ.cell_size;
+
+  ctx.globalAlpha = 0.16;
+  ctx.fillStyle = css("--goal");
+  ctx.fillRect(X(MZ.goal_cell[0] * cs), Y((MZ.goal_cell[1] + 1) * cs),
+    cs * sc, cs * sc);
+  ctx.fillStyle = css("--bota");
+  ctx.fillRect(X(MZ.start_cell[0] * cs), Y((MZ.start_cell[1] + 1) * cs),
+    cs * sc, cs * sc);
+  if (MZ.spawn_b_cell) {
+    ctx.fillStyle = css("--botb");
+    ctx.fillRect(X(MZ.spawn_b_cell[0] * cs),
+      Y((MZ.spawn_b_cell[1] + 1) * cs), cs * sc, cs * sc);
+  }
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = css("--ink-2");
+  ctx.font = `${Math.round(0.34 * cs * sc)}px Archivo, sans-serif`;
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText("A", X((MZ.start_cell[0] + 0.5) * cs),
+    Y((MZ.start_cell[1] + 0.5) * cs));
+  if (MZ.spawn_b_cell)
+    ctx.fillText("B", X((MZ.spawn_b_cell[0] + 0.5) * cs),
+      Y((MZ.spawn_b_cell[1] + 0.5) * cs));
+  ctx.fillText("G", X((MZ.goal_cell[0] + 0.5) * cs),
+    Y((MZ.goal_cell[1] + 0.5) * cs));
+
+  ctx.strokeStyle = css("--ink");
+  ctx.lineWidth = 3; ctx.lineCap = "round";
+  ctx.beginPath();
+  for (const [x1, y1, x2, y2] of MZ.segments) {
+    ctx.moveTo(X(x1), Y(y1)); ctx.lineTo(X(x2), Y(y2));
+  }
+  ctx.stroke();
+
+  if (!F.length) return;
+  const upto = Math.min(idx, F.length - 1);
+  for (const [off, color] of [[1, "--bota"], [5, "--botb"]]) {
+    ctx.strokeStyle = css(color);
+    ctx.lineWidth = 1.7; ctx.globalAlpha = 0.75;
+    ctx.beginPath();
+    ctx.moveTo(X(F[0][off]), Y(F[0][off + 1]));
+    for (let i = 1; i <= upto; i++)
+      ctx.lineTo(X(F[i][off]), Y(F[i][off + 1]));
+    ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+
+  const fr = F[upto], t = fr[0];
+  const bots = [
+    { x: fr[1], y: fr[2], th: fr[3], col: fr[4], c: "--bota" },
+    { x: fr[5], y: fr[6], th: fr[7], col: fr[8], c: "--botb" },
+  ];
+  const d = Math.hypot(bots[0].x - bots[1].x, bots[0].y - bots[1].y);
+  if (d <= D.range) {
+    const recent = deliveredTicks.some((ct) => ct <= t && t - ct < 150);
+    ctx.strokeStyle = css("--link");
+    ctx.lineWidth = recent ? 3.5 : 1.5;
+    ctx.setLineDash(recent ? [] : [6, 6]);
+    ctx.globalAlpha = recent ? 0.95 : 0.55;
+    ctx.beginPath();
+    ctx.moveTo(X(bots[0].x), Y(bots[0].y));
+    ctx.lineTo(X(bots[1].x), Y(bots[1].y));
+    ctx.stroke();
+    ctx.setLineDash([]); ctx.globalAlpha = 1;
+  }
+  for (const b of bots) {
+    const rr = 0.09 * sc;
+    if (b.col) {
+      ctx.strokeStyle = css("--hit"); ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.arc(X(b.x), Y(b.y), rr + 5, 0, 7); ctx.stroke();
+    }
+    ctx.fillStyle = css(b.c);
+    ctx.beginPath(); ctx.arc(X(b.x), Y(b.y), rr, 0, 7); ctx.fill();
+    ctx.strokeStyle = css("--surface"); ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(X(b.x), Y(b.y));
+    ctx.lineTo(X(b.x + 0.09 * Math.cos(b.th)),
+      Y(b.y + 0.09 * Math.sin(b.th)));
+    ctx.stroke();
+  }
+
+  $("#clock").textContent =
+    `tick ${t} · ${(t / 50).toFixed(1)} s · gap ${d.toFixed(2)} m`;
+}
+
+const scrub = $("#scrub");
+scrub.max = Math.max(0, F.length - 1);
+scrub.value = idx;
+scrub.addEventListener("input", (e) => {
+  idx = Number(e.target.value); stopPlay(); draw();
+});
+function stopPlay() { playing = false; $("#play").textContent = "PLAY"; }
+$("#play").addEventListener("click", () => {
+  playing = !playing;
+  $("#play").textContent = playing ? "PAUSE" : "PLAY";
+  if (playing) {
+    if (idx >= F.length - 1) idx = 0;
+    const stepN = Math.max(1, Math.round(F.length / 700));
+    const tickFn = () => {
+      if (!playing) return;
+      idx = Math.min(idx + stepN, F.length - 1);
+      scrub.value = idx;
+      draw();
+      if (idx >= F.length - 1) { stopPlay(); return; }
+      requestAnimationFrame(tickFn);
+    };
+    requestAnimationFrame(tickFn);
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && e.target === document.body) {
+    e.preventDefault(); $("#play").click();
+  }
+});
+
+/* transcript tabs */
+const esc = (s) => { const d = document.createElement("i");
+  d.textContent = s; return d.innerHTML; };
+const feedHTML = (items) => items.map((e) => {
+  if (e.k === "agent") return `<div class="ev agent">${esc(e.t)}</div>`;
+  if (e.k === "cmd") return `<div class="ev cmd">$ ${esc(e.t)}</div>`;
+  if (e.k === "out") return `<div class="ev out">${esc(e.t)}</div>`;
+  return `<div class="ev note">— ${esc(e.t)} —</div>`;
+}).join("") || '<div class="empty">no transcript yet</div>';
+const commsHTML = () => D.comms.map((c, i) =>
+  `<div class="msg from-${c.from}${c.ok ? "" : " lost"}" data-i="${i}">` +
+  `<span class="who">${c.from.toUpperCase()} → ` +
+  `${c.from === "a" ? "B" : "A"} · ${secs(c.t)} · ` +
+  `${c.ok ? "heard" : "lost"}` +
+  `${c.n > 1 ? " · ×" + c.n : ""}` +
+  `${c.dist != null ? " · " + c.dist.toFixed(2) + " m" : ""}</span>` +
+  `${esc(c.line)}</div>`).join("") ||
+  '<div class="empty">nothing transmitted yet</div>';
+const tabs = { a: $("#tab-a"), b: $("#tab-b"), c: $("#tab-c") };
+function showTab(which) {
+  for (const k in tabs) tabs[k].classList.toggle("on", k === which);
+  const feed = $("#feed");
+  feed.className = which === "b" ? "feed-b" : "";
+  feed.innerHTML = which === "a" ? feedHTML(A.transcript)
+    : which === "b" ? feedHTML(B.transcript) : commsHTML();
+  if (which === "c") {
+    feed.querySelectorAll(".msg").forEach((el) => {
+      el.addEventListener("click", () => {
+        const t = D.comms[Number(el.dataset.i)].t;
+        let lo = 0;
+        while (lo < F.length - 1 && F[lo][0] < t) lo++;
+        idx = lo; scrub.value = idx; stopPlay(); draw();
+      });
+    });
+  }
+}
+tabs.a.addEventListener("click", () => showTab("a"));
+tabs.b.addEventListener("click", () => showTab("b"));
+tabs.c.addEventListener("click", () => showTab("c"));
+showTab("a");
+
+/* memory */
+const memBlock = (bid, mem) => {
+  const names = Object.keys(mem);
+  return `<div class="memhead">bot ${bid.toUpperCase()}</div>` +
+    (names.length ? names.map((p) =>
+      `<details class="memfile"><summary>/memory/${esc(p)} ` +
+      `(${mem[p].length}b)</summary><pre>${esc(mem[p])}` +
+      `</pre></details>`).join("")
+      : '<div class="empty">memory is empty so far</div>');
+};
+$("#memlist").innerHTML = memBlock("a", A.memory) + memBlock("b", B.memory);
+
+/* theme changes repaint the canvas */
+matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", draw);
+new MutationObserver(draw).observe(document.documentElement,
+  { attributes: true, attributeFilter: ["data-theme"] });
+
+draw();
+</script>

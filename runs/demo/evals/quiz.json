@@ -1,0 +1,117 @@
+{
+  "rows": [
+    {
+      "id": "dev_motor_left",
+      "question": "Which device file under /dev/robot is the LEFT motor? (give the file name)",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "motor_left"
+    },
+    {
+      "id": "dev_motor_right",
+      "question": "Which device file under /dev/robot is the RIGHT motor? (give the file name)",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "motor_right"
+    },
+    {
+      "id": "dev_lidar",
+      "question": "Which device file under /dev/robot is the range/lidar sensor? (give the file name)",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "lidar"
+    },
+    {
+      "id": "dev_heading",
+      "question": "Which device file under /dev/robot is the heading/orientation sensor? (give the file name)",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "heading"
+    },
+    {
+      "id": "dev_status",
+      "question": "Which device file under /dev/robot is the status readout that reports goal progress? (give the file name)",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "status"
+    },
+    {
+      "id": "lidar_beams",
+      "question": "How many range beams does the lidar return per reading?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "16"
+    },
+    {
+      "id": "beam0_dir",
+      "question": "Which direction does the first lidar beam point, relative to the robot?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "['forward', 'front', 'ahead', 'straight']"
+    },
+    {
+      "id": "pwm_sign",
+      "question": "Does a positive motor PWM value drive a wheel forward or backward?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "['forward', 'ahead']"
+    },
+    {
+      "id": "goal_signal",
+      "question": "How can you tell, from the devices, that the robot has reached the goal?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "['goal=1', 'goal = 1', 'status', 'goal flag', 'goal field']"
+    },
+    {
+      "id": "maze_dims",
+      "question": "How many cells wide and tall is the maze?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "(9, 9)"
+    },
+    {
+      "id": "corridor_width",
+      "question": "Approximately how wide are the maze corridors, in meters?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "0.5"
+    },
+    {
+      "id": "dead_end",
+      "question": "Using a grid where the robot's starting cell is (0,0) and +x is the robot's initial heading, give the (col,row) of one dead-end cell in the maze.",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "[[0, 0], [0, 1], [0, 4], [1, 7], [2, 0], [2, 2], [4, 8], [6, 2], [7, 7], [8, 1]]"
+    },
+    {
+      "id": "wheelbase",
+      "question": "Approximately how far apart are the two wheels (track width), in meters?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "0.16"
+    },
+    {
+      "id": "enc_ticks",
+      "question": "Approximately how many encoder ticks correspond to one wheel revolution?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "360"
+    },
+    {
+      "id": "max_speed",
+      "question": "Approximately what is the robot's top wheel speed in m/s (at full PWM)?",
+      "answer": "UNKNOWN",
+      "correct": false,
+      "expected": "0.35"
+    }
+  ],
+  "summary": {
+    "score": 0,
+    "total": 15,
+    "pct": 0.0,
+    "model": "offline",
+    "episode": 1,
+    "memory_bytes": 407
+  }
+}
