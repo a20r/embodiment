@@ -60,7 +60,7 @@ class Daemon:
         self.cfg = cfg
         self.run_dir = run_dir
         os.makedirs(run_dir, exist_ok=True)
-        self.gt = GroundTruthLog(os.path.join(run_dir, "ground_truth.jsonl"))
+        duo = bool(cfg.get("duo", {}).get("enabled"))
 
         m = cfg["maze"]
         pert = cfg.get("perturb_state", {})
@@ -70,9 +70,7 @@ class Daemon:
                          style=m.get("style", "grid"),
                          curviness=m.get("curviness", 1.0),
                          robot_radius=cfg["robot"]["radius"],
-                         locked=m.get("locked", False))
-        self.world = World(cfg, self.maze, episode_index=episode_index,
-                           log_fn=self.gt.write)
+                         locked=m.get("locked", False), duo=duo)
 
         labels_on = cfg["labels"] == "on"
         sensors, actuators = simconfig.device_sets(cfg)
@@ -81,9 +79,36 @@ class Daemon:
             remap_index=pert.get("remap_index", 0),
             motor_swapped=pert.get("motor_swapped", False),
             sensors=sensors, actuators=actuators)
-        self.bridge = DeviceBridge(devfs_dir, self.world, bindings,
-                                   log_fn=self.gt.write,
-                                   actuators=actuators)
+
+        # Duo: two worlds share the maze; each gets its own GT log,
+        # its own devfs subtree (a/, b/) and its own bridge.  Both
+        # bots are the same model of robot, so the port permutation is
+        # identical — knowledge about ports transfers between them.
+        if duo:
+            bots = [("a", self.maze.start_cell, 0.0),
+                    ("b", self.maze.spawn_b_cell, 3.14159)]
+        else:
+            bots = [("", None, 0.0)]
+        self.gts, self.worlds, self.bridges = [], [], []
+        for bot_id, spawn_cell, theta in bots:
+            suffix = f"_{bot_id}" if bot_id else ""
+            gt = GroundTruthLog(os.path.join(
+                run_dir, f"ground_truth{suffix}.jsonl"))
+            world = World(cfg, self.maze, episode_index=episode_index,
+                          log_fn=gt.write, bot_id=bot_id,
+                          spawn_cell=spawn_cell, spawn_theta=theta)
+            sub = os.path.join(devfs_dir, bot_id) if bot_id else devfs_dir
+            bridge = DeviceBridge(sub, world, bindings,
+                                  log_fn=gt.write, actuators=actuators)
+            self.gts.append(gt)
+            self.worlds.append(world)
+            self.bridges.append(bridge)
+        if duo:
+            self.worlds[0].set_peer(self.worlds[1])
+            self.worlds[1].set_peer(self.worlds[0])
+        self.gt = self.gts[0]
+        self.world = self.worlds[0]
+        self.bridge = self.bridges[0]
 
         write_device_map(run_dir, bindings, labels_on,
                          pert.get("remap_index", 0),
@@ -92,9 +117,11 @@ class Daemon:
             json.dump(self.maze.to_dict(), f)
         simconfig.dump_resolved(
             cfg, os.path.join(run_dir, "resolved_config.json"))
-        self.gt.write(dict(event="daemon_start", maze_hash=self.maze.hash(),
-                           episode_index=episode_index,
-                           perturb_state=pert, t=0))
+        for gt, world in zip(self.gts, self.worlds):
+            gt.write(dict(event="daemon_start",
+                          maze_hash=self.maze.hash(),
+                          episode_index=episode_index, bot=world.bot_id,
+                          perturb_state=pert, t=0))
 
         self.paused = start_paused
         self.rtf = float(cfg["sim"]["realtime_factor"])
@@ -106,7 +133,8 @@ class Daemon:
         self.rtf = max(0.0, factor)
 
     def run(self):
-        self.bridge.start()
+        for bridge in self.bridges:
+            bridge.start()
         self._server = serve(self, self.cfg["sim"]["api_host"],
                              self.cfg["sim"]["api_port"])
         print(f"READY {self.cfg['sim']['api_port']}", flush=True)
@@ -116,7 +144,8 @@ class Daemon:
                 time.sleep(0.05)
                 next_t = time.perf_counter()
                 continue
-            self.world.step()
+            for world in self.worlds:
+                world.step()
             if self.rtf > 0:
                 period = 1.0 / (self.tick_hz * self.rtf)
                 next_t += period
@@ -131,12 +160,15 @@ class Daemon:
         self.running = False
 
     def _teardown(self):
-        self.bridge.stop()
+        for bridge in self.bridges:
+            bridge.stop()
         if self._server:
             self._server.shutdown()
-        self.gt.write(dict(event="daemon_stop", t=self.world.tick,
-                           device_stats=self.bridge.stats()))
-        self.gt.close()
+        for gt, world, bridge in zip(self.gts, self.worlds,
+                                     self.bridges):
+            gt.write(dict(event="daemon_stop", t=world.tick,
+                          device_stats=bridge.stats()))
+            gt.close()
 
 
 def main(argv=None):

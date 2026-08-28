@@ -43,6 +43,15 @@ def make_handler(daemon):
                 snap["lidar_true"] = daemon.world.lidar_true()
                 snap["ray_angles"] = daemon.world.ray_angles()
                 snap["device_stats"] = daemon.bridge.stats()
+                if len(daemon.worlds) > 1:
+                    bots = []
+                    for world, bridge in zip(daemon.worlds,
+                                             daemon.bridges):
+                        b = world.snapshot(since_tick=since)
+                        b["lidar_true"] = world.lidar_true()
+                        b["device_stats"] = bridge.stats()
+                        bots.append(b)
+                    snap["bots"] = bots
                 self._json(snap)
             elif u.path == "/maze":
                 self._json(daemon.maze.to_dict())
@@ -60,7 +69,8 @@ def make_handler(daemon):
                 except json.JSONDecodeError:
                     body = {}
             if self.path == "/reset":
-                daemon.world.reset()
+                for world in daemon.worlds:
+                    world.reset()
                 self._json({"ok": True})
             elif self.path == "/pause":
                 daemon.paused = True

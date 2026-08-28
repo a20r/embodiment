@@ -23,8 +23,17 @@ DEFAULTS = {
     # will be obvious" (no maze, no robot morphology)
     "prompt_variant": "standard",
     # None = derived from labels (labeled/unlabeled); "minimal" = a
-    # README that only says it's a robot with ports under /dev/robot
+    # README that only says it's a robot with ports under /dev/robot;
+    # "minimal_duo" additionally mentions the transceiver mechanics.
     "readme_variant": None,
+    # Two robots in one world, each running its own agent, with a
+    # proximity-gated serial link (TX/RX port pair per robot).
+    "duo": {
+        "enabled": False,
+        "comms_range": 0.8,       # meters; out of range, TX vanishes
+        "max_line_bytes": 256,    # per transmitted line
+        "queue_depth": 64,        # undelivered RX lines kept
+    },
     "noise_profile": "default_noisy",
     "maze": {
         "seed": 7,
@@ -215,6 +224,9 @@ def device_sets(cfg):
         actuators = list(ACTUATOR_DEVICES)
     if cfg["maze"].get("locked"):
         sensors.append("beacon")
+    if cfg.get("duo", {}).get("enabled"):
+        sensors.append("serial_rx")
+        actuators = list(actuators) + ["serial_tx"]
     return sensors, actuators
 
 

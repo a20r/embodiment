@@ -104,3 +104,25 @@ tool loop, transcripts, memory, evals, dashboard):
   `./botctl dashboard --port …`.
 - A wedged container: `docker rm -f $(docker ps -aq
   --filter name=mazebot-)`.
+
+## 6. Duo (two bots, one world)
+
+```bash
+./botctl run --set duo.enabled=true --set labels=off \
+  --set prompt_variant=lost --set readme_variant=minimal_duo \
+  --set maze.style=organic --set series.name=duo1
+```
+
+Two containers come up (`...-ep1a`, `...-ep1b`), each with its own
+/dev/robot, /bot and /memory; transcripts land as
+`transcript_a.jsonl` / `transcript_b.jsonl`, ground truth as
+`ground_truth_a.jsonl` / `ground_truth_b.jsonl`.  The bots can only
+talk over the in-world transceiver, and only within
+`duo.comms_range` meters.  Replay:
+
+```bash
+python scripts/make_duo_replay.py duo1 ep_001 duo1_replay.html "Duo"
+```
+
+Validate the machinery without spending tokens:
+`python scripts/duo_check.py` (host-side, no docker needed).

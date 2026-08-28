@@ -69,9 +69,18 @@ def run_series(cfg, episodes=None, fresh=False):
                                    "motor_swapped")}
         print(f"=== episode {ep}/{total} (arm {cfg['arm']}, "
               f"labels {cfg['labels']}, {cfg['noise_profile']}) ===")
-        summary = run_episode(epcfg, series_dir, ep)
-        print(json.dumps({k: summary[k] for k in
-                          ("solved", "end_reason", "goal_tick", "wall_s",
-                           "turns", "restarts")}, indent=None))
+        if cfg.get("duo", {}).get("enabled"):
+            from harness.duo import run_duo_episode
+            summary = run_duo_episode(epcfg, series_dir, ep)
+            print(json.dumps(
+                {bid: {k: s.get(k) for k in ("solved", "end_reason",
+                                             "goal_tick", "turns")}
+                 for bid, s in summary["bots"].items()}, indent=None))
+        else:
+            summary = run_episode(epcfg, series_dir, ep)
+            print(json.dumps({k: summary[k] for k in
+                              ("solved", "end_reason", "goal_tick",
+                               "wall_s", "turns", "restarts")},
+                             indent=None))
         summaries.append(summary)
     return summaries

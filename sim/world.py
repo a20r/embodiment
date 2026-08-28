@@ -13,6 +13,7 @@ import math
 import random
 import threading
 import zlib
+from collections import deque
 
 TWO_PI = 2.0 * math.pi
 
@@ -84,11 +85,23 @@ def _ray_seg(px, py, ddx, ddy, x1, y1, x2, y2):
 
 
 class World:
-    def __init__(self, cfg, maze, episode_index=0, log_fn=None):
+    def __init__(self, cfg, maze, episode_index=0, log_fn=None,
+                 bot_id="", spawn_cell=None, spawn_theta=0.0):
         self.cfg = cfg
         self.maze = maze
         self.noise = cfg["noise"]
         self.robot_cfg = cfg["robot"]
+        # Duo: a second World may share this maze.  The peer shows up on
+        # lidar (a moving octagon), blocks motion (disc-disc), and is
+        # reachable over a proximity-gated serial link.
+        self.bot_id = bot_id
+        self.spawn_cell = spawn_cell
+        self.spawn_theta = spawn_theta
+        self.peer = None
+        duo = cfg.get("duo", {})
+        self.duo_range = float(duo.get("comms_range", 0.8))
+        self.duo_max_bytes = int(duo.get("max_line_bytes", 256))
+        self.duo_queue = int(duo.get("queue_depth", 64))
         self.model = cfg["robot"].get("model", "diffdrive")
         self.car_cfg = cfg["robot"].get("car", {})
         self.actuators = ["accel", "steer"] if self.model == "car" \
@@ -118,10 +131,18 @@ class World:
             self._door_center = ((dx1 + dx2) / 2, (dy1 + dy2) / 2)
         self.reset()
 
+    def set_peer(self, other):
+        """Wire in the other robot (duo mode).  Peer state is read
+        without taking the peer's lock: attribute reads are atomic under
+        the GIL and a one-tick-stale pose is harmless, while cross-lock
+        acquisition between two worlds could deadlock."""
+        self.peer = other
+
     def reset(self):
         with self.lock:
             # Reseed noise streams so a reset world replays identically.
-            base = (self.maze.seed, self.episode_index)
+            # bot_id keeps the two duo robots' noise streams distinct.
+            base = (self.maze.seed, self.episode_index, self.bot_id)
             self.rng_slip = random.Random(stable_seed(*base, "slip"))
             self.rng_lidar = random.Random(stable_seed(*base, "lidar"))
             self.rng_heading = random.Random(
@@ -139,8 +160,11 @@ class World:
                 stable_seed(*base, "gyro_bias")).random() < 0.5 else -1.0
             self._heading_bias_per_tick = sign * mag * self.dt / 60.0
             self.tick = 0
-            sx, sy = self.maze.cell_center(self.maze.start_cell)
-            self.x, self.y, self.theta = sx, sy, 0.0
+            sx, sy = self.maze.cell_center(
+                self.spawn_cell or self.maze.start_cell)
+            self.x, self.y, self.theta = sx, sy, self.spawn_theta % TWO_PI
+            self.serial_rx = deque(maxlen=self.duo_queue)
+            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0}
             self.v = 0.0
             self.w = 0.0
             self.phi = 0.0             # car: current steering angle, rad
@@ -199,6 +223,19 @@ class World:
                     else list(candidates) + list(extra)):
             d, cx, cy = _seg_dist(x, y, *seg)
             if d < r:
+                if worst is None or d < worst[0]:
+                    worst = (d, cx, cy)
+        if self.peer is not None:
+            px, py = self.peer.x, self.peer.y
+            pr = self.peer.robot_cfg["radius"]
+            dc = math.hypot(x - px, y - py)
+            d = dc - pr   # our center to the peer's surface
+            if d < r:
+                if dc > 1e-9:
+                    cx = px + pr * (x - px) / dc
+                    cy = py + pr * (y - py) / dc
+                else:
+                    cx, cy = px, py
                 if worst is None or d < worst[0]:
                     worst = (d, cx, cy)
         return worst
@@ -340,6 +377,12 @@ class World:
                 if reached:
                     self.goal_reached = True
                     self.goal_tick = self.tick
+                    # Power down: an escaped robot must not keep driving
+                    # on its last command while its peer plays on.
+                    for a in self.actuators:
+                        self.cmd[a] = 0
+                        self.cmd_eff[a] = 0
+                    self.pending = []
                     self._event(dict(event="goal_reached"))
 
             if self.tick % 5 == 0:
@@ -385,6 +428,16 @@ class World:
         cand.extend(self._solid_extra())
         if self._key_segments and not self.key_carried:
             cand.extend(self._key_segments)
+        if self.peer is not None:
+            # The other robot is a real obstacle: a small moving octagon
+            # on the scan, indistinguishable in kind from any other
+            # surface until the agent notices it moves.
+            px, py = self.peer.x, self.peer.y
+            pr = self.peer.robot_cfg["radius"]
+            pts = [(px + pr * math.cos(a), py + pr * math.sin(a))
+                   for a in [k * TWO_PI / 8 for k in range(9)]]
+            cand.extend((p[0], p[1], q[0], q[1])
+                        for p, q in zip(pts, pts[1:]))
         return cand
 
     def ray_angles(self):
@@ -468,6 +521,42 @@ class World:
                 s += self.rng_beacon.gauss(0.0, sigma)
             return f"{max(0.0, min(1.0, s)):.3f}"
 
+    # -- serial link (duo) ---------------------------------------------------
+
+    def send_serial(self, raw):
+        """One line written to the TX port.  Delivered into the peer's
+        RX queue only if the peer is currently within comms_range;
+        otherwise it simply vanishes (radio semantics: no error, no
+        buffering).  Lock-free toward the peer — deque.append is atomic
+        and we never take the peer's lock (see set_peer)."""
+        line = raw[:self.duo_max_bytes]
+        peer = self.peer
+        delivered = False
+        dist = None
+        if peer is not None:
+            dist = math.hypot(self.x - peer.x, self.y - peer.y)
+            if dist <= self.duo_range:
+                peer.serial_rx.append(line)
+                peer._event(dict(event="comms_rx", frm=self.bot_id,
+                                 line=line))
+                delivered = True
+        self.comms["tx"] += 1
+        if delivered:
+            self.comms["tx_delivered"] += 1
+        self._event(dict(event="comms_tx", line=line,
+                         delivered=delivered,
+                         dist=None if dist is None else round(dist, 3)))
+
+    def serial_rx_frame(self):
+        """Oldest pending received line; an empty line means nothing
+        waiting.  popleft is atomic, so the peer may append mid-read."""
+        try:
+            line = self.serial_rx.popleft()
+        except IndexError:
+            return ""
+        self.comms["rx_read"] += 1
+        return line
+
     def status_frame(self):
         with self.lock:
             line = f"tick={self.tick} goal={int(self.goal_reached)}"
@@ -484,6 +573,9 @@ class World:
             return {
                 "tick": self.tick,
                 "sim_time_s": round(self.tick * self.dt, 3),
+                "bot_id": self.bot_id,
+                "comms": dict(self.comms),
+                "rx_pending": len(self.serial_rx),
                 "pose": [self.x, self.y, self.theta],
                 "cmd": list(self.cmd.values()),
                 "cmd_eff": list(self.cmd_eff.values()),

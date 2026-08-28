@@ -289,3 +289,41 @@ encoders are replaced by a signed speedometer port.  Nothing in any
 prompt or README changes between vehicle classes: which machine you woke
 up on is itself a discovery.  All dynamics verified analytically
 (coast decay, slew rate, turn radius exact); diffdrive smoke unchanged.
+
+## Duo mode (duo.enabled): two robots, one world, a serial link
+
+Two full Worlds share one maze and tick in lockstep in one daemon.
+Each bot gets its own devfs subtree (`devfs/a`, `devfs/b`), its own
+container, agent loop, transcript, /memory and ground-truth log; the
+port permutation is deliberately identical (same robot model), so
+knowledge about ports transfers between them.  Design choices:
+
+- **The peer is just another obstacle.**  It appears on lidar as a
+  small octagon at the peer's live pose and blocks motion (disc-disc
+  collision, front/rear bumps fire).  Nothing marks it as an agent;
+  noticing that one wall blip moves is the discovery.
+- **Serial is a radio, not a pipe.**  One anonymous TX port and one RX
+  port per bot.  A line written to TX (raw text, capped at
+  `max_line_bytes`) is delivered into the peer's RX queue only if the
+  peer is within `comms_range` (default 0.8 m) at that instant;
+  otherwise it vanishes silently — no carrier detect, no ACK.  RX reads
+  drain one line per open (empty line = nothing pending, queue keeps
+  the newest `queue_depth` lines).  Every TX is ground-truth logged
+  with delivered/dist, so "shouting into the void" is measurable.
+- **Prompting stays minimal.**  README.minimal_duo adds exactly one
+  sentence: a pair of ports is a short-range transceiver.  Not that a
+  peer exists, not a protocol, not that cooperation is possible.
+- **Spawns are far apart** (max-min BFS distance from both the first
+  spawn and the exit, clearance-checked during organicization), and
+  bot B faces the other way.  Noise streams are per-bot (bot_id in the
+  seed tuple).  An escaped robot latches its actuators to zero so it
+  does not ghost-drive while its peer plays on.
+- **No cross-lock deadlocks by construction**: a world reads its
+  peer's pose without taking the peer's lock (atomic attribute reads
+  under the GIL; one tick of staleness is harmless), and RX queues are
+  lock-free deques.
+
+Verified by `scripts/duo_check.py` (26 checks: spawn clearance, peer
+blip, disc-disc collision + bump, range gating, byte cap, queue cap,
+FIFO end-to-end a->b with comms accounting) plus a full mock duo
+episode through two containers; the solo smoke suite is unchanged.

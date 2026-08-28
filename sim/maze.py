@@ -28,7 +28,7 @@ def _pt_seg_dist(px, py, x1, y1, x2, y2):
 class Maze:
     def __init__(self, seed, width, height, cell_size=0.5, braid=0.0,
                  family_index=0, style="grid", curviness=1.0,
-                 robot_radius=0.09, locked=False):
+                 robot_radius=0.09, locked=False, duo=False):
         self.base_seed = seed
         self.family_index = family_index
         self.seed = seed + 1000 * family_index
@@ -60,6 +60,16 @@ class Maze:
             self._open_exit()
         else:
             self.goal_cell = self._farthest_cell(self.start_cell)
+        # Duo: a second spawn, deep in the map but away from both the
+        # first spawn and the exit, so neither bot starts near the goal.
+        self.spawn_b_cell = None
+        if duo:
+            d_start = self._bfs_dist(self.start_cell)
+            d_goal = self._bfs_dist(self.goal_cell)
+            self.spawn_b_cell = max(
+                d_start,
+                key=lambda c: (min(d_start.get(c, 0), d_goal.get(c, 0)),
+                               d_start.get(c, 0)))
         if self.style == "organic":
             if self.locked:
                 self._place_key()
@@ -260,6 +270,8 @@ class Maze:
                          ex2 + j2[0], ey2 + j2[1])]
             sx, sy = self.cell_center(self.start_cell)
             probes = [(sx, sy)]
+            if self.spawn_b_cell:
+                probes.append(self.cell_center(self.spawn_b_cell))
             if self.key_pos:
                 probes.append(self.key_pos)
             clear = min(_pt_seg_dist(px, py, *s)
@@ -368,6 +380,8 @@ class Maze:
             "cell_size": self.cell_size,
             "braid": self.braid,
             "start_cell": list(self.start_cell),
+            "spawn_b_cell": list(self.spawn_b_cell)
+            if self.spawn_b_cell else None,
             "goal_cell": list(self.goal_cell),
             "segments": [list(s) for s in self.segments()],
             "dead_ends": [list(c) for c in self.dead_ends()],

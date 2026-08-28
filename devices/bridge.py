@@ -97,7 +97,8 @@ class DeviceBridge:
                                 else ACTUATOR_DEVICES)
         self.log = log_fn or (lambda rec: None)
         self.rng_drop = random.Random(
-            stable_seed(world.maze.seed, world.episode_index, "drops"))
+            stable_seed(world.maze.seed, world.episode_index,
+                        getattr(world, "bot_id", ""), "drops"))
         self.running = True
         self.threads = []
         self.read_counts = {}   # filename -> served frames
@@ -194,6 +195,8 @@ class DeviceBridge:
             return w.beacon_frame()
         if logical == "speed":
             return w.speed_frame()
+        if logical == "serial_rx":
+            return w.serial_rx_frame()
         raise ValueError(logical)
 
     def _sensor_loop(self, path, filename, logical):
@@ -258,6 +261,14 @@ class DeviceBridge:
                         return
                     line = line.strip()
                     if not line:
+                        continue
+                    if logical == "serial_tx":
+                        # Transceiver: raw text lines, not integers.
+                        # Delivery (range gate, byte cap, GT comms
+                        # events) is the world's business.
+                        self.world.send_serial(line)
+                        self.write_counts[filename] = \
+                            self.write_counts.get(filename, 0) + 1
                         continue
                     try:
                         val = int(float(line))
