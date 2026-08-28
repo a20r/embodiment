@@ -4,6 +4,7 @@ Usage: python scripts/make_duo_replay.py <series> <ep_dir> <out.html> [title]
 """
 import json
 import os
+import re
 import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -52,6 +53,35 @@ step = max(1, len(ticks) // 4000)
 frames = [[t] + bots["a"]["poses"][t] + bots["b"]["poses"][t]
           for t in ticks[::step]]
 comms.sort(key=lambda c: c["t"])
+
+# A chatty controller can radiate tens of thousands of lines; the page
+# collapses consecutive repeats and keeps every worded line, then
+# downsamples the numeric chatter to keep the DOM sane.  Totals are
+# preserved separately for the header chips.
+tx_total = len(comms)
+tx_delivered = sum(1 for c in comms if c["ok"])
+runs = []
+for c in comms:
+    prev = runs[-1] if runs else None
+    if prev and prev["from"] == c["from"] and prev["line"] == c["line"] \
+            and prev["ok"] == c["ok"]:
+        prev["n"] += 1
+    else:
+        runs.append(dict(c, n=1))
+for r in runs:
+    r["w"] = bool(re.search(r"[A-Za-z]{2,}", r["line"]))
+CAP = 1400
+worded = [r for r in runs if r["w"]]
+numeric = [r for r in runs if not r["w"]]
+keep_n = max(0, CAP - len(worded))
+if len(numeric) > keep_n and keep_n > 0:
+    stride = len(numeric) / keep_n
+    numeric = [numeric[int(i * stride)] for i in range(keep_n)]
+elif keep_n == 0:
+    numeric = []
+comms = sorted(worded + numeric, key=lambda c: c["t"])
+for c in comms:
+    c.pop("w", None)
 
 
 def load_transcript(bid):
@@ -128,6 +158,8 @@ for bid in BOTS:
 
 first_contact = next((c["t"] for c in comms if c["ok"]), None)
 data = {
+    "tx_total": tx_total,
+    "tx_delivered": tx_delivered,
     "maze": {k: maze.get(k) for k in
              ("width", "height", "cell_size", "segments", "start_cell",
               "spawn_b_cell", "goal_cell", "hash")},

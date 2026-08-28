@@ -224,8 +224,9 @@ $("#subtitle").textContent =
   `duo · arm ${m.arm} · labels ${m.labels} · ${m.noise} · ` +
   `maze ${m.maze_hash} · ${m.model}`;
 $("#rng").textContent = D.range;
-const nTx = D.comms.length;
-const nOk = D.comms.filter((c) => c.ok).length;
+const nTx = D.tx_total != null ? D.tx_total : D.comms.length;
+const nOk = D.tx_delivered != null ? D.tx_delivered
+  : D.comms.filter((c) => c.ok).length;
 const botChip = (bid, bot) => {
   const s = bot.stats;
   if (D.live && !s.solved) return [`bot ${bid.toUpperCase()}`,
@@ -390,6 +391,7 @@ const commsHTML = () => D.comms.map((c, i) =>
   `<span class="who">${c.from.toUpperCase()} → ` +
   `${c.from === "a" ? "B" : "A"} · ${secs(c.t)} · ` +
   `${c.ok ? "heard" : "lost"}` +
+  `${c.n > 1 ? " · ×" + c.n : ""}` +
   `${c.dist != null ? " · " + c.dist.toFixed(2) + " m" : ""}</span>` +
   `${esc(c.line)}</div>`).join("") ||
   '<div class="empty">nothing transmitted yet</div>';
