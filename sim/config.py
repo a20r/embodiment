@@ -63,6 +63,10 @@ DEFAULTS = {
         # (lidar-visible post, picked up by rolling over it) and an
         # anonymous signal-strength port that rises near the key.
         "locked": False,
+        # organic only: wall in a small chamber outside the exit so an
+        # escaped robot stays penned at the goal instead of wandering
+        # off into unbounded space (it can also re-enter the maze).
+        "goal_chamber": False,
     },
     "robot": {
         "radius": 0.09,             # disc radius, m

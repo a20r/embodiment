@@ -198,6 +198,33 @@ def mission_mode():
     check("goal ticks recorded",
           wa.goal_tick is not None and wb.goal_tick is not None)
 
+    # Goal chamber: the space beyond the exit is walled in.
+    mc = Maze(m["seed"], m["width"], m["height"],
+              cell_size=m["cell_size"], style="organic",
+              curviness=m["curviness"],
+              robot_radius=cfg["robot"]["radius"], duo=True,
+              goal_chamber=True)
+    check("chamber adds 3 walls",
+          len(mc._chamber_segments) == 3)
+    x1, y1, x2, y2 = mc.exit_wall
+    cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
+    if abs(x1 - x2) < 1e-9:
+        ox, oy = (-1, 0) if x1 <= 1e-9 else (1, 0)
+    else:
+        ox, oy = (0, -1) if y1 <= 1e-9 else (0, 1)
+    inside = (cx + ox * 0.35, cy + oy * 0.35)
+    check("chamber interior is the goal region", mc.escaped(*inside))
+    clear = min(_seg_dist(inside[0], inside[1], *s)[0]
+                for s in mc.segments())
+    check("chamber fits the robot",
+          clear > cfg["robot"]["radius"] + 0.04, f"clear={clear:.3f}")
+    behind = (cx + ox * 1.0, cy + oy * 1.0)
+    near = min(_seg_dist(behind[0], behind[1], *s)[0]
+               for s in mc.segments())
+    check("back wall pens the robot in", near < 0.35,
+          f"nearest={near:.3f}")
+    check("chamber changes maze hash", mc.hash() != maze.hash())
+
 
 def end_to_end():
     print("== end-to-end daemon (port %d) ==" % PORT)

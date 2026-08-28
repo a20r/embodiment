@@ -70,7 +70,8 @@ class Daemon:
                          style=m.get("style", "grid"),
                          curviness=m.get("curviness", 1.0),
                          robot_radius=cfg["robot"]["radius"],
-                         locked=m.get("locked", False), duo=duo)
+                         locked=m.get("locked", False), duo=duo,
+                         goal_chamber=m.get("goal_chamber", False))
 
         labels_on = cfg["labels"] == "on"
         sensors, actuators = simconfig.device_sets(cfg)

@@ -28,7 +28,8 @@ def _pt_seg_dist(px, py, x1, y1, x2, y2):
 class Maze:
     def __init__(self, seed, width, height, cell_size=0.5, braid=0.0,
                  family_index=0, style="grid", curviness=1.0,
-                 robot_radius=0.09, locked=False, duo=False):
+                 robot_radius=0.09, locked=False, duo=False,
+                 goal_chamber=False):
         self.base_seed = seed
         self.family_index = family_index
         self.seed = seed + 1000 * family_index
@@ -41,6 +42,7 @@ class Maze:
         self.robot_radius = robot_radius
         self.has_exit = style == "organic"
         self.locked = locked and self.has_exit
+        self.goal_chamber = goal_chamber and self.has_exit
         self.exit_wall = None
         self.door_segments = None   # closes the exit until unlocked
         self.key_pos = None         # world coords of the key
@@ -74,6 +76,8 @@ class Maze:
             if self.locked:
                 self._place_key()
             self._organicize()
+            if self.goal_chamber:
+                self._add_goal_chamber()
 
     # -- generation ---------------------------------------------------------
 
@@ -284,6 +288,31 @@ class Maze:
         self._organic_segments = segs  # heavily damped fallback
         self.door_segments = door
 
+    def _add_goal_chamber(self):
+        """Pen in the space beyond the exit: three straight walls form
+        a small chamber attached to the outside of the opening.  An
+        escaped robot stays at the goal (and can re-enter the maze);
+        the gaps where the chamber meets the jittered boundary are far
+        narrower than the robot, so there is no way out of the world.
+        """
+        x1, y1, x2, y2 = self.exit_wall
+        m = 0.25   # widen beyond the opening posts
+        depth = 0.7
+        if abs(x1 - x2) < 1e-9:    # vertical wall: west or east edge
+            out = -1.0 if x1 <= 1e-9 else 1.0
+            lo, hi = min(y1, y2) - m, max(y1, y2) + m
+            bx = x1 + out * depth
+            segs = [(x1, lo, bx, lo), (bx, lo, bx, hi),
+                    (bx, hi, x1, hi)]
+        else:                       # horizontal wall: south or north
+            out = -1.0 if y1 <= 1e-9 else 1.0
+            lo, hi = min(x1, x2) - m, max(x1, x2) + m
+            by = y1 + out * depth
+            segs = [(lo, y1, lo, by), (lo, by, hi, by),
+                    (hi, by, hi, y1)]
+        self._chamber_segments = segs
+        self._organic_segments.extend(segs)
+
     def _place_key(self):
         """The key sits in a dead-end far from the door (and from the
         start as a tie-break), so the door is usually found first."""
@@ -355,7 +384,7 @@ class Maze:
 
     def hash(self):
         canon = repr((self.width, self.height, self.cell_size, self.style,
-                      self.locked, self.key_cell,
+                      self.locked, self.goal_chamber, self.key_cell,
                       [tuple(r) for r in self.h_walls],
                       [tuple(c) for c in self.v_walls],
                       [tuple(round(v, 6) for v in s)
