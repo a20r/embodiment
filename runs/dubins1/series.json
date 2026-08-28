@@ -72,7 +72,7 @@
     },
     "series": {
       "name": "dubins1",
-      "episodes": 1
+      "episodes": 2
     },
     "perturbations": [],
     "dashboard": {
