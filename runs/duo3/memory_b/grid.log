@@ -1,0 +1,3870 @@
+    0.1 START2 facing=0
+   13.8 CELL (0,0) f=0 open=[90] op={0: 0.32, 90: 0.49, 180: 0.11, 270: 0.4}
+   20.8 CELL (0,1) f=90 open=[90] op={0: 0.53, 90: 0.13, 180: 0.23, 270: 0.36}
+   26.7 STALL during adv, unstick
+   45.3 ADV FAIL dir 90
+   71.6 CELL (0,1) f=90 open=[] op={0: 0.26, 90: 0.05, 180: 0.09, 270: 0.4}
+   75.8 STALL during adv, unstick
+   94.7 BACKTRACK ADV FAIL
+    0.1 START3 f=90
+    0.2 CELL (0, 0) f=90 open=[270] op={0: 0.32, 90: 0.36, 180: 0.6, 270: 0.12}
+    0.2 COMPLETE
+    0.1 START3 f=90
+    0.3 CELL (0, 0) f=90 open=[270] op={0: 0.05, 90: 0.35, 180: 0.59, 270: 0.12}
+    4.5 CELL (0, -1) f=270 open=[270] op={0: 0.58, 90: 0.18, 180: 0.26, 270: 0.3}
+    5.7 CELL (0, -2) f=270 open=[] op={0: 0.05, 90: 0.15, 180: 0.3, 270: 0.3}
+   13.3 CELL (0, -1) f=90 open=[90, 270] op={0: 0.46, 90: 0.27, 180: 0.6, 270: 0.22}
+   14.8 CELL (0, 0) f=90 open=[90, 270] op={0: 0.56, 90: 0.26, 180: 0.48, 270: 0.19}
+   19.7 CELL (0, 1) f=90 open=[90, 270] op={0: 0.54, 90: 0.27, 180: 0.5, 270: 0.2}
+   22.2 CELL (0, 2) f=90 open=[180, 270] op={0: 0.32, 90: 0.76, 180: 0.63, 270: 0.16}
+   30.7 CELL (-1, 2) f=180 open=[0, 270] op={0: 0.24, 90: 0.62, 180: 0.68, 270: 0.05}
+   37.5 CELL (-1, 1) f=270 open=[90, 180] op={0: 0.22, 90: 0.26, 180: 0.72, 270: 0.6}
+   43.6 CELL (-2, 1) f=180 open=[0, 270] op={0: 0.05, 90: 0.52, 180: 0.66, 270: 0.19}
+   50.0 CELL (-2, 0) f=270 open=[90] op={0: 0.41, 90: 0.14, 180: 0.77, 270: 0.27}
+   58.5 CELL (-2, 1) f=90 open=[270] op={0: 0.27, 90: 0.3, 180: 0.51, 270: 0.43}
+   66.2 CELL (-1, 1) f=0 open=[180] op={0: 0.22, 90: 0.05, 180: 0.68, 270: 0.19}
+   74.2 CELL (-1, 2) f=90 open=[0, 270] op={0: 0.26, 90: 0.25, 180: 0.62, 270: 0.66}
+   81.5 CELL (0, 2) f=0 open=[180] op={0: 0.25, 90: 0.31, 180: 0.68, 270: 0.42}
+   85.7 CELL (0, 1) f=270 open=[90, 270] op={0: 0.48, 90: 0.28, 180: 0.57, 270: 0.2}
+   87.8 CELL (0, 0) f=270 open=[270] op={0: 0.51, 90: 0.27, 180: 0.05, 270: 0.19}
+   87.8 COMPLETE
+    0.1 START3 f=270
+    0.3 CELL (0, 0) f=270 open=[90, 270] op={0: 3.0, 90: 0.3, 180: 0.82, 270: 0.19}
+    2.9 CELL (0, -1) f=270 open=[90, 270] op={0: 3.0, 90: 0.29, 180: 1.12, 270: 0.19}
+    4.8 CELL (0, -2) f=270 open=[90, 270] op={0: 3.0, 90: 0.3, 180: 1.27, 270: 0.22}
+    7.3 CELL (0, -3) f=270 open=[90, 270] op={0: 2.91, 90: 0.26, 180: 1.62, 270: 0.22}
+   10.0 CELL (0, -4) f=270 open=[90, 270] op={0: 2.61, 90: 0.28, 180: 1.85, 270: 0.19}
+   14.8 CELL (0, -5) f=270 open=[90, 270] op={0: 2.02, 90: 0.32, 180: 2.41, 270: 0.2}
+   19.8 CELL (0, -6) f=270 open=[90, 270] op={0: 1.46, 90: 0.28, 180: 3.0, 270: 0.24}
+   24.5 CELL (0, -7) f=270 open=[90, 180, 270] op={0: 0.92, 90: 0.32, 180: 2.99, 270: 1.27}
+   30.7 CELL (0, -8) f=270 open=[90, 180] op={0: 0.34, 90: 0.32, 180: 3.0, 270: 1.68}
+   36.2 CELL (-1, -8) f=180 open=[0, 180] op={0: 1.17, 90: 0.29, 180: 0.83, 270: 0.15}
+   41.1 CELL (-2, -8) f=180 open=[0, 180] op={0: 0.61, 90: 0.32, 180: 1.4, 270: 0.18}
+   42.2 CELL (-3, -8) f=180 open=[0, 180] op={0: 0.53, 90: 0.28, 180: 1.4, 270: 0.19}
+   46.5 CELL (-4, -8) f=180 open=[0] op={0: 0.24, 90: 0.34, 180: 1.74, 270: 0.17}
+   56.6 CELL (-3, -8) f=0 open=[0, 180] op={0: 0.8, 90: 0.27, 180: 1.15, 270: 0.21}
+   62.9 CELL (-2, -8) f=0 open=[90, 180] op={0: 0.25, 90: 3.0, 180: 1.68, 270: 0.18}
+   76.6 CELL (-2, -8) f=90 open=[90, 270] op={0: 2.69, 90: 0.31, 180: 1.73, 270: 0.25}
+   79.3 CELL (-2, -7) f=90 open=[90, 270] op={0: 2.4, 90: 0.29, 180: 2.02, 270: 0.23}
+   81.1 CELL (-2, -6) f=90 open=[90, 270] op={0: 2.23, 90: 0.29, 180: 2.22, 270: 0.21}
+   86.7 CELL (-2, -5) f=90 open=[90, 270] op={0: 1.63, 90: 0.32, 180: 2.88, 270: 0.18}
+   92.0 CELL (-2, -4) f=90 open=[90, 270] op={0: 1.01, 90: 0.27, 180: 3.0, 270: 0.2}
+   98.3 CELL (-2, -3) f=90 open=[180, 270] op={0: 0.4, 90: 0.81, 180: 3.0, 270: 0.16}
+  106.1 CELL (-3, -3) f=180 open=[0, 270] op={0: 0.24, 90: 0.65, 180: 0.7, 270: 0.3}
+  108.0 CELL (-3, -4) f=270 open=[0, 270] op={0: 0.64, 90: 0.68, 180: 0.3, 270: 0.24}
+  113.8 CELL (-3, -5) f=270 open=[90, 180] op={0: 0.25, 90: 0.28, 180: 0.71, 270: 0.81}
+  122.0 CELL (-4, -5) f=180 open=[0, 270] op={0: 0.26, 90: 1.32, 180: 0.85, 270: 0.23}
+  128.3 CELL (-4, -6) f=270 open=[90, 270] op={0: 0.79, 90: 0.29, 180: 0.75, 270: 0.18}
+  134.5 CELL (-4, -7) f=270 open=[0, 90] op={0: 0.26, 90: 0.77, 180: 1.24, 270: 0.14}
+  142.6 CELL (-3, -7) f=0 open=[90, 180, 270] op={0: 0.27, 90: 0.79, 180: 0.67, 270: 0.72}
+  151.5 CELL (-3, -6) f=90 open=[270] op={0: 0.26, 90: 0.28, 180: 1.32, 270: 0.23}
+  159.0 CELL (-3, -7) f=270 open=[90, 180, 270] op={0: 0.68, 90: 0.3, 180: 0.79, 270: 0.64}
+  166.2 CELL (-4, -7) f=180 open=[0, 90] op={0: 0.26, 90: 0.22, 180: 0.69, 270: 1.25}
+  172.4 CELL (-4, -6) f=90 open=[90, 270] op={0: 0.71, 90: 0.3, 180: 0.75, 270: 0.18}
+  173.8 CELL (-4, -5) f=90 open=[90, 270] op={0: 0.61, 90: 0.31, 180: 0.87, 270: 0.18}
+  175.3 CELL (-4, -4) f=90 open=[90, 270] op={0: 0.53, 90: 0.35, 180: 0.96, 270: 0.14}
+  179.1 CELL (-4, -3) f=90 open=[0, 270] op={0: 0.24, 90: 0.39, 180: 1.23, 270: 0.69}
+  182.6 CELL (-4, -4) f=270 open=[0, 270] op={0: 1.2, 90: 0.67, 180: 0.32, 270: 0.37}
+  186.1 CELL (-4, -5) f=270 open=[90, 270] op={0: 0.83, 90: 0.18, 180: 0.7, 270: 0.26}
+  188.6 CELL (-3, -5) f=0 open=[90, 270] op={0: 0.25, 90: 0.74, 180: 0.22, 270: 0.8}
+  196.2 CELL (-3, -4) f=90 open=[0, 270] op={0: 0.25, 90: 0.34, 180: 1.28, 270: 0.76}
+  196.9 CELL (-3, -3) f=90 open=[0, 270] op={0: 0.26, 90: 0.35, 180: 1.27, 270: 0.77}
+  198.8 CELL (-2, -3) f=0 open=[0, 270] op={0: 0.76, 90: 0.26, 180: 0.34, 270: 1.26}
+  203.1 CELL (-1, -3) f=0 open=[90, 180] op={0: 0.39, 90: 0.79, 180: 0.72, 270: 0.27}
+  210.1 CELL (-1, -2) f=90 open=[0, 270] op={0: 0.3, 90: 0.17, 180: 0.73, 270: 0.77}
+  218.9 CELL (-1, -3) f=270 open=[90, 180] op={0: 0.26, 90: 0.35, 180: 0.75, 270: 0.74}
+  226.5 CELL (-2, -3) f=180 open=[0, 270] op={0: 0.23, 90: 1.31, 180: 0.88, 270: 0.24}
+  232.8 CELL (-2, -4) f=270 open=[90, 270] op={0: 0.77, 90: 0.27, 180: 0.76, 270: 0.17}
+  237.1 CELL (-2, -5) f=270 open=[0, 90] op={0: 0.39, 90: 0.74, 180: 1.16, 270: 0.11}
+  244.4 CELL (-1, -5) f=0 open=[90, 180, 270] op={0: 0.29, 90: 0.71, 180: 0.58, 270: 0.79}
+  248.1 CELL (-1, -6) f=270 open=[90, 180, 270] op={0: 0.58, 90: 0.34, 180: 0.91, 270: 0.64}
+  251.5 CELL (-1, -7) f=270 open=[90, 180] op={0: 0.33, 90: 0.3, 180: 1.18, 270: 1.5}
+  263.8 CELL (-1, -6) f=90 open=[270] op={0: 0.25, 90: 0.22, 180: 1.26, 270: 0.27}
+  264.6 CELL (-1, -5) f=90 open=[270] op={0: 0.23, 90: 0.19, 180: 1.28, 270: 0.3}
+  267.0 CELL (-2, -5) f=180 open=[270] op={0: 0.23, 90: 1.3, 180: 0.26, 270: 0.22}
+  273.2 CELL (-2, -6) f=270 open=[90, 180, 270] op={0: 0.74, 90: 0.27, 180: 0.77, 270: 0.63}
+  279.6 CELL (-2, -7) f=270 open=[90, 180] op={0: 0.22, 90: 0.33, 180: 1.29, 270: 2.21}
+  280.2 CELL (-2, -8) f=270 open=[90, 180] op={0: 0.25, 90: 0.29, 180: 1.27, 270: 2.23}
+  283.5 CELL (-1, -8) f=0 open=[90, 180] op={0: 0.24, 90: 1.2, 180: 2.3, 270: 0.29}
+  283.9 CELL (0, -8) f=0 open=[90, 180] op={0: 0.26, 90: 1.23, 180: 2.31, 270: 0.28}
+  290.2 CELL (0, -7) f=90 open=[90, 180, 270] op={0: 0.68, 90: 0.7, 180: 0.82, 270: 0.18}
+  296.5 CELL (0, -6) f=90 open=[270] op={0: 0.24, 90: 0.29, 180: 1.3, 270: 0.21}
+  296.9 CELL (0, -5) f=90 open=[270] op={0: 0.24, 90: 0.29, 180: 1.29, 270: 0.2}
+  297.6 CELL (0, -4) f=90 open=[270] op={0: 0.28, 90: 0.32, 180: 1.27, 270: 0.21}
+  298.3 CELL (0, -3) f=90 open=[270] op={0: 0.23, 90: 0.3, 180: 1.32, 270: 0.23}
+  298.7 CELL (0, -2) f=90 open=[270] op={0: 0.24, 90: 0.27, 180: 1.32, 270: 0.21}
+  300.3 CELL (0, -1) f=90 open=[270] op={0: 0.31, 90: 0.33, 180: 1.26, 270: 0.2}
+  301.6 CELL (0, 0) f=90 open=[270] op={0: 0.23, 90: 0.28, 180: 1.32, 270: 0.22}
+  301.6 COMPLETE - reset visited, continue
+  301.7 CELL (0, 0) f=90 open=[270] op={0: 0.22, 90: 0.28, 180: 1.32, 270: 0.23}
+  309.2 CELL (0, -1) f=270 open=[90, 180, 270] op={0: 0.72, 90: 0.26, 180: 0.76, 270: 0.65}
+  315.8 CELL (0, -2) f=270 open=[90, 180] op={0: 0.27, 90: 0.3, 180: 1.28, 270: 2.25}
+  322.1 CELL (-1, -2) f=180 open=[0, 180] op={0: 1.64, 90: 0.24, 180: 0.82, 270: 0.19}
+  327.5 CELL (-2, -2) f=180 open=[0, 180] op={0: 1.04, 90: 0.29, 180: 1.47, 270: 0.24}
+  333.5 CELL (-3, -2) f=180 open=[0, 90] op={0: 0.43, 90: 0.25, 180: 2.1, 270: 0.71}
+  342.9 CELL (-3, -1) f=90 open=[0, 90] op={0: 0.55, 90: 0.44, 180: 0.42, 270: 2.06}
+  353.6 CELL (-3, 0) f=90 open=[0, 90] op={0: 0.55, 90: 0.43, 180: 0.42, 270: 2.06}
+  355.0 CELL (-3, 1) f=90 open=[0, 90] op={0: 0.56, 90: 0.44, 180: 0.42, 270: 2.07}
+  367.1 D0 1
+  367.3 CELL (-3, 1) f=90 open=[0, 90] op={0: 0.56, 90: 0.42, 180: 0.42, 270: 2.09}
+  372.3 CELL (-3, 2) f=90 open=[0, 90] op={0: 0.55, 90: 0.43, 180: 0.42, 270: 2.07}
+  374.3 CELL (-3, 3) f=90 open=[0, 90] op={0: 0.55, 90: 0.42, 180: 0.42, 270: 2.06}
+    0.1 START3 f=90
+    0.1 D0 1
+    0.2 CELL (0, 0) f=90 open=[0, 180, 270] op={0: 0.25, 90: 0.94, 180: 0.47, 270: 1.65}
+   13.7 CELL (0, 0) f=0 open=[0, 180] op={0: 1.34, 90: 0.23, 180: 1.26, 270: 0.28}
+   18.4 CELL (1, 0) f=0 open=[0, 180] op={0: 0.77, 90: 0.26, 180: 1.8, 270: 0.26}
+   25.5 CELL (2, 0) f=0 open=[90, 180] op={0: 0.25, 90: 1.26, 180: 2.28, 270: 0.27}
+   31.8 CELL (2, 1) f=90 open=[90, 180, 270] op={0: 0.69, 90: 0.71, 180: 0.83, 270: 0.14}
+   38.2 CELL (2, 2) f=90 open=[270] op={0: 0.23, 90: 0.32, 180: 1.3, 270: 0.2}
+   45.5 CELL (2, 1) f=270 open=[90, 180, 270] op={0: 0.7, 90: 0.26, 180: 0.8, 270: 0.68}
+   53.2 CELL (1, 1) f=180 open=[0, 90] op={0: 0.23, 90: 0.22, 180: 0.7, 270: 1.26}
+   59.4 CELL (1, 2) f=90 open=[90, 270] op={0: 0.72, 90: 0.29, 180: 0.77, 270: 0.18}
+   65.7 CELL (1, 3) f=90 open=[0, 270] op={0: 0.24, 90: 0.38, 180: 1.26, 270: 0.73}
+   73.4 CELL (2, 3) f=0 open=[90, 180] op={0: 0.26, 90: 0.72, 180: 0.86, 270: 0.24}
+   81.5 CELL (2, 4) f=90 open=[0, 270] op={0: 0.24, 90: 0.29, 180: 0.71, 270: 0.67}
+   88.7 CELL (3, 4) f=0 open=[180, 270] op={0: 0.25, 90: 0.3, 180: 0.72, 270: 2.99}
+   92.8 CELL (3, 3) f=270 open=[90, 270] op={0: 3.0, 90: 0.3, 180: 0.57, 270: 0.22}
+   95.3 CELL (3, 2) f=270 open=[90, 270] op={0: 3.0, 90: 0.29, 180: 0.84, 270: 0.2}
+   97.8 CELL (3, 1) f=270 open=[90, 270] op={0: 3.0, 90: 0.27, 180: 1.09, 270: 0.19}
+  100.2 CELL (3, 0) f=270 open=[90, 270] op={0: 2.99, 90: 0.27, 180: 1.4, 270: 0.19}
+  102.6 CELL (3, -1) f=270 open=[90, 270] op={0: 2.88, 90: 0.27, 180: 1.65, 270: 0.24}
+  104.3 CELL (3, -1) f=270 open=[90, 270] op={0: 2.67, 90: 0.31, 180: 1.77, 270: 0.21}
+  106.8 CELL (3, -2) f=270 open=[90, 270] op={0: 2.43, 90: 0.28, 180: 2.08, 270: 0.21}
+  111.3 CELL (3, -3) f=270 open=[90, 270] op={0: 1.86, 90: 0.27, 180: 2.52, 270: 0.18}
+  116.0 CELL (3, -4) f=270 open=[90, 270] op={0: 1.37, 90: 0.26, 180: 3.0, 270: 0.2}
+  121.0 CELL (3, -5) f=270 open=[90, 180, 270] op={0: 0.79, 90: 0.27, 180: 2.95, 270: 1.92}
+  128.1 CELL (3, -6) f=270 open=[90, 180] op={0: 0.25, 90: 0.29, 180: 3.0, 270: 1.64}
+  133.5 RX: B holding s=0.853 come to me
+  133.6 CELL (2, -6) f=180 open=[0, 180] op={0: 1.17, 90: 0.23, 180: 0.76, 270: 0.26}
+  138.3 RX: B holding s=0.881 come to me
+  138.3 RX: B holding s=0.918 come to me
+  138.3 RX: B holding s=0.928 come to me
+  138.3 RX: B holding s=0.942 come to me
+  138.3 RX: B holding s=0.951 come to me
+  138.4 CELL (1, -6) f=180 open=[0, 180] op={0: 0.64, 90: 0.27, 180: 1.34, 270: 0.21}
+  144.0 RX: B holding s=0.946 come to me
+  144.0 RX: B holding s=0.954 come to me
+  144.0 RX: B holding s=0.943 come to me
+  144.0 RX: B holding s=0.966 come to me
+  144.0 RX: B holding s=0.944 come to me
+  144.0 RX: B holding s=0.929 come to me
+  144.1 CELL (0, -6) f=180 open=[0] op={0: 0.24, 90: 0.31, 180: 1.73, 270: 0.2}
+  151.7 RX: B holding s=0.937 come to me
+  151.7 RX: B holding s=0.945 come to me
+  151.7 RX: B holding s=0.934 come to me
+  151.7 RX: B holding s=0.952 come to me
+  151.7 RX: B holding s=0.942 come to me
+  151.7 RX: B holding s=0.952 come to me
+  151.7 RX: B holding s=0.946 come to me
+  151.8 CELL (1, -6) f=0 open=[0, 180] op={0: 1.12, 90: 0.24, 180: 0.83, 270: 0.25}
+  157.2 RX: B holding s=0.929 come to me
+  157.2 RX: B holding s=0.925 come to me
+  157.2 RX: B holding s=0.903 come to me
+  157.2 RX: B holding s=0.877 come to me
+  157.3 CELL (2, -6) f=0 open=[0, 180] op={0: 0.53, 90: 0.24, 180: 1.44, 270: 0.2}
+  161.7 CELL (3, -6) f=0 open=[90, 180] op={0: 0.27, 90: 3.0, 180: 1.68, 270: 0.19}
+  165.5 CELL (3, -5) f=90 open=[90, 270] op={0: 3.0, 90: 0.41, 180: 0.47, 270: 0.26}
+  168.0 CELL (3, -4) f=90 open=[90, 180, 270] op={0: 3.0, 90: 2.75, 180: 0.73, 270: 0.24}
+  181.7 D0 1
+  181.7 RX: B holding s=0.880 come to me
+  181.7 RX: B holding s=0.918 come to me
+  181.7 RX: B holding s=0.959 come to me
+  181.7 RX: B holding s=0.969 come to me
+  181.7 RX: B holding s=0.984 come to me
+  181.7 RX: B holding s=1.000 come to me
+  181.7 RX: B holding s=0.985 come to me
+  181.7 RX: B holding s=0.991 come to me
+  181.7 RX: B holding s=0.991 come to me
+  181.8 CELL (3, -4) f=180 open=[0, 180] op={0: 1.76, 90: 0.33, 180: 1.25, 270: 0.27}
+  192.5 RX: B holding s=0.997 come to me
+  192.5 RX: B holding s=1.000 come to me
+  192.5 RX: B holding s=0.991 come to me
+  192.5 RX: H HOLD STILL homing on you
+  192.6 CELL (2, -4) f=180 open=[0, 180] op={0: 1.16, 90: 0.34, 180: 1.87, 270: 0.21}
+  193.7 CELL (1, -4) f=180 open=[0, 180] op={0: 1.07, 90: 0.3, 180: 1.97, 270: 0.2}
+  194.4 CELL (0, -4) f=180 open=[0] op={0: 0.28, 90: 0.3, 180: 2.0, 270: 0.18}
+  201.6 CELL (1, -4) f=0 open=[0, 180] op={0: 1.39, 90: 0.3, 180: 1.62, 270: 0.25}
+  206.4 RX: H stuck; HOLD STILL, I retry
+  206.4 RX: H stuck; HOLD STILL, I retry
+  206.4 RX: H stuck; HOLD STILL, I retry
+  206.5 CELL (2, -4) f=0 open=[0, 180] op={0: 0.81, 90: 0.29, 180: 0.84, 270: 0.25}
+  209.2 CELL (3, -4) f=0 open=[0, 180] op={0: 0.54, 90: 0.29, 180: 2.47, 270: 0.25}
+  213.8 CELL (4, -4) f=0 open=[90, 180, 270] op={0: 0.26, 90: 3.0, 180: 2.75, 270: 0.69}
+  221.5 CELL (4, -5) f=270 open=[90, 180] op={0: 0.24, 90: 0.27, 180: 3.0, 270: 1.66}
+  226.7 CELL (4, -4) f=90 open=[90, 270] op={0: 2.99, 90: 0.44, 180: 0.51, 270: 0.28}
+  229.0 CELL (4, -3) f=90 open=[90, 180, 270] op={0: 3.0, 90: 2.74, 180: 0.77, 270: 0.26}
+  231.5 CELL (4, -2) f=90 open=[90, 270] op={0: 2.99, 90: 0.23, 180: 1.06, 270: 0.28}
+  234.0 CELL (4, -1) f=90 open=[90, 270] op={0: 3.0, 90: 0.23, 180: 1.33, 270: 0.22}
+  236.5 CELL (4, 0) f=90 open=[90, 270] op={0: 2.87, 90: 0.27, 180: 1.57, 270: 0.25}
+  238.9 CELL (4, 1) f=90 open=[90, 270] op={0: 2.62, 90: 0.24, 180: 1.81, 270: 0.22}
+  244.2 CELL (4, 2) f=90 open=[90, 270] op={0: 2.05, 90: 0.28, 180: 2.43, 270: 0.2}
+  244.8 CELL (4, 3) f=90 open=[90, 270] op={0: 2.04, 90: 0.29, 180: 2.45, 270: 0.2}
+  246.4 CELL (4, 4) f=90 open=[90, 270] op={0: 2.03, 90: 0.27, 180: 2.45, 270: 0.2}
+  251.6 CELL (4, 5) f=90 open=[90, 270] op={0: 1.5, 90: 0.27, 180: 3.0, 270: 0.2}
+  253.8 CELL (4, 6) f=90 open=[90, 270] op={0: 1.24, 90: 0.29, 180: 3.0, 270: 0.23}
+  258.5 CELL (4, 7) f=90 open=[90, 270] op={0: 0.69, 90: 0.28, 180: 3.0, 270: 0.21}
+  264.5 CELL (4, 8) f=90 open=[180, 270] op={0: 0.25, 90: 0.82, 180: 3.0, 270: 0.22}
+  272.0 CELL (3, 8) f=180 open=[0, 270] op={0: 0.28, 90: 0.76, 180: 0.75, 270: 0.18}
+  277.4 CELL (3, 7) f=270 open=[90] op={0: 0.42, 90: 0.25, 180: 0.52, 270: 0.33}
+  282.6 CELL (3, 8) f=90 open=[0, 270] op={0: 0.36, 90: 0.25, 180: 0.59, 270: 0.73}
+  296.1 BT fail
+  296.2 CELL (3, 8) f=0 open=[0, 180, 270] op={0: 0.49, 90: 0.37, 180: 0.49, 270: 0.63}
+  299.5 CELL (3, 8) f=180 open=[0, 270] op={0: 0.45, 90: 0.63, 180: 0.54, 270: 0.36}
+  312.5 CELL (3, 7) f=270 open=[90, 180] op={0: 0.31, 90: 0.19, 180: 0.7, 270: 0.87}
+  319.1 CELL (2, 7) f=180 open=[0, 270] op={0: 0.4, 90: 1.31, 180: 0.67, 270: 0.17}
+  322.6 CELL (2, 6) f=270 open=[0, 270] op={0: 1.07, 90: 0.67, 180: 0.4, 270: 0.37}
+  328.0 CELL (2, 5) f=270 open=[0, 90, 270] op={0: 0.52, 90: 0.72, 180: 1.01, 270: 0.26}
+  336.6 CELL (3, 5) f=0 open=[0, 90] op={0: 0.59, 90: 1.03, 180: 0.39, 270: 0.42}
+  339.1 CELL (3, 6) f=90 open=[0, 90] op={0: 1.02, 90: 0.39, 180: 0.42, 270: 0.58}
+  344.3 CELL (3, 5) f=270 open=[0, 90] op={0: 0.26, 90: 0.57, 180: 1.2, 270: 0.31}
+  346.8 BT fail
+  346.9 CELL (3, 5) f=180 open=[0, 90] op={0: 0.26, 90: 0.27, 180: 0.6, 270: 1.18}
+  353.5 CELL (3, 6) f=90 open=[90, 270] op={0: 0.61, 90: 0.3, 180: 0.86, 270: 0.18}
+  357.0 CELL (3, 7) f=90 open=[0, 270] op={0: 0.34, 90: 0.34, 180: 1.16, 270: 0.68}
+  364.5 CELL (4, 7) f=0 open=[90, 180] op={0: 0.24, 90: 0.9, 180: 0.74, 270: 0.11}
+  366.2 BT fail
+  366.2 CELL (4, 7) f=270 open=[90, 180] op={0: 0.12, 90: 0.25, 180: 0.9, 270: 0.76}
+  366.8 BT fail
+  366.9 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.26, 180: 0.83, 270: 0.76}
+  367.1 BT fail
+  367.2 CELL (4, 7) f=270 open=[90, 180] op={0: 0.11, 90: 0.24, 180: 0.84, 270: 0.77}
+  367.4 BT fail
+  367.5 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.25, 180: 0.84, 270: 0.77}
+  367.8 BT fail
+  367.8 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.24, 180: 0.83, 270: 0.76}
+  368.1 BT fail
+  368.2 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.24, 180: 0.83, 270: 0.76}
+  368.4 BT fail
+  368.5 CELL (4, 7) f=270 open=[90, 180] op={0: 0.11, 90: 0.25, 180: 0.84, 270: 0.77}
+  368.7 BT fail
+  368.8 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.25, 180: 0.84, 270: 0.76}
+  369.0 BT fail
+  369.1 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.24, 180: 0.83, 270: 0.76}
+  369.4 BT fail
+  369.5 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.26, 180: 0.85, 270: 0.76}
+  369.7 BT fail
+  369.8 CELL (4, 7) f=270 open=[90, 180] op={0: 0.1, 90: 0.25, 180: 0.84, 270: 0.76}
+  373.0 CELL (3, 7) f=180 open=[90, 180] op={0: 0.62, 90: 0.17, 180: 0.43, 270: 0.89}
+  380.7 CELL (3, 8) f=90 open=[0, 270] op={0: 0.33, 90: 0.12, 180: 0.73, 270: 0.82}
+  382.2 BT fail
+  382.3 CELL (3, 8) f=90 open=[0, 270] op={0: 0.23, 90: 0.18, 180: 0.84, 270: 0.85}
+  382.5 BT fail
+  382.6 CELL (3, 8) f=90 open=[0, 270] op={0: 0.23, 90: 0.19, 180: 0.84, 270: 0.85}
+  383.0 BT fail
+  383.1 CELL (3, 8) f=90 open=[0, 270] op={0: 0.21, 90: 0.19, 180: 0.83, 270: 0.85}
+  383.5 BT fail
+  383.6 CELL (3, 8) f=90 open=[0, 270] op={0: 0.21, 90: 0.2, 180: 0.84, 270: 0.85}
+  383.9 BT fail
+  384.0 CELL (3, 8) f=90 open=[0, 270] op={0: 0.22, 90: 0.19, 180: 0.85, 270: 0.86}
+  384.3 BT fail
+  384.4 CELL (3, 8) f=90 open=[0, 270] op={0: 0.22, 90: 0.18, 180: 0.85, 270: 0.86}
+  384.6 BT fail
+  384.7 CELL (3, 8) f=90 open=[0, 270] op={0: 0.23, 90: 0.2, 180: 0.83, 270: 0.85}
+  386.5 BT fail
+  386.6 CELL (3, 8) f=180 open=[0, 270] op={0: 0.19, 90: 0.84, 180: 0.86, 270: 0.22}
+  393.0 CELL (3, 7) f=270 open=[90, 180] op={0: 0.39, 90: 0.31, 180: 0.66, 270: 0.66}
+  400.8 CELL (2, 7) f=180 open=[0, 270] op={0: 0.25, 90: 1.4, 180: 0.74, 270: 0.15}
+  407.2 CELL (2, 6) f=270 open=[90, 270] op={0: 0.82, 90: 0.3, 180: 0.71, 270: 0.19}
+  413.7 CELL (2, 5) f=270 open=[0, 90] op={0: 0.27, 90: 0.76, 180: 1.24, 270: 0.14}
+  421.3 CELL (3, 5) f=0 open=[90, 180, 270] op={0: 0.28, 90: 0.79, 180: 0.66, 270: 0.73}
+  429.1 CELL (3, 4) f=270 open=[90, 180] op={0: 0.26, 90: 0.31, 180: 1.29, 270: 2.27}
+  435.3 CELL (2, 4) f=180 open=[0, 180] op={0: 1.68, 90: 0.26, 180: 0.8, 270: 0.18}
+    0.1 HOMER start pos=[2, 4] facing=180
+    0.1 path len 10
+   10.6 go fail toward 270 at (3, 4)
+   10.6 path len 9
+   10.9 go fail toward 270 at (3, 4)
+   10.9 path len 9
+   11.1 go fail toward 270 at (3, 4)
+   11.1 HOMER done at (3, 4)
+   31.1 svals recent: []
+    0.1 HOMER start pos=[2, 4] facing=270
+    0.1 path len 10
+    6.5 go fail toward 270 at (3, 4)
+    6.5 path len 17
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: E exploring (0, 4)
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   20.5 RX: T mapping you, keep moving
+   21.0 go fail toward 90 at (3, 6)
+   21.0 path len 19
+   21.0 RX: T mapping you, keep moving
+   21.0 RX: T mapping you, keep moving
+   28.0 RX: T mapping you, keep moving
+   28.0 RX: T mapping you, keep moving
+   28.0 RX: T mapping you, keep moving
+   28.0 RX: T mapping you, keep moving
+   28.0 RX: E exploring (0, 6)
+   28.0 RX: T mapping you, keep moving
+   28.0 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: E exploring (-2, 4)
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   40.6 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: E exploring (-2, -2)
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: E exploring (0, -3)
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   47.4 RX: T mapping you, keep moving
+   54.9 RX: T mapping you, keep moving
+   54.9 RX: T mapping you, keep moving
+   54.9 RX: T mapping you, keep moving
+   54.9 RX: T mapping you, keep moving
+   54.9 RX: T mapping you, keep moving
+   54.9 RX: E exploring (0, -4)
+   54.9 RX: T mapping you, keep moving
+   54.9 RX: T mapping you, keep moving
+   55.5 go fail toward 0 at (3, 7)
+   55.5 path len 16
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: E exploring (1, -4)
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+   63.2 RX: T mapping you, keep moving
+  108.2 go fail toward 270 at (3, -3)
+  108.2 path len 4
+  126.7 HOMER done at (3, -4)
+  146.8 svals recent: []
+    0.1 AGENT start f=180
+    0.1 RX: E exploring (2, -10)
+    0.2 CELL (0, 0) f=180 open=[0, 180] sig=None
+    4.9 RX: E exploring (1, -9)
+    4.9 RX: E exploring (-1, -9)
+    5.0 CELL (-1, 0) f=180 open=[0, 180] sig=0.831
+   10.8 CELL (-2, 0) f=180 open=[0] sig=0.879
+   17.7 RX: E exploring (-2, -9)
+   17.8 CELL (-1, 0) f=0 open=[0, 180] sig=0.583
+   21.3 CELL (0, 0) f=0 open=[0, 180] sig=0.327
+   23.0 CELL (1, 0) f=0 open=[0, 180] sig=0.293
+   28.7 CELL (2, 0) f=0 open=[90, 180] sig=0.243
+   39.8 CELL (2, 1) f=90 open=[90, 270] sig=0.259
+   42.1 CELL (2, 2) f=90 open=[90, 270] sig=0.239
+   44.6 CELL (2, 3) f=90 open=[90, 270] sig=0.196
+   49.5 CELL (2, 4) f=90 open=[90, 270] sig=0.260
+   51.0 CELL (2, 5) f=90 open=[90, 270] sig=0.230
+   56.2 CELL (2, 6) f=90 open=[90, 270] sig=0.264
+   61.0 CELL (2, 7) f=90 open=[90, 270] sig=0.296
+   67.1 CELL (2, 8) f=90 open=[180, 270] sig=0.193
+   74.6 CELL (1, 8) f=180 open=[0, 270] sig=0.174
+   82.3 CELL (1, 7) f=270 open=[90, 180] sig=0.280
+   89.8 CELL (0, 7) f=180 open=[0, 270] sig=0.350
+   96.2 CELL (0, 6) f=270 open=[90, 270] sig=0.418
+  102.6 CELL (0, 5) f=270 open=[0, 90] sig=0.497
+  110.9 CELL (1, 5) f=0 open=[90, 180, 270] sig=0.465
+  118.7 CELL (1, 4) f=270 open=[90, 180] sig=0.338
+  125.5 CELL (0, 4) f=180 open=[0, 180] sig=0.337
+  130.1 CELL (-1, 4) f=180 open=[0, 180] sig=0.502
+  134.8 CELL (-2, 4) f=180 open=[0, 180] sig=0.510
+  140.3 CELL (-3, 4) f=180 open=[0, 90] sig=0.584
+  146.3 CELL (-3, 5) f=90 open=[180, 270] sig=0.412
+  154.6 CELL (-4, 5) f=180 open=[0, 90, 270] sig=0.643
+  162.7 CELL (-4, 6) f=90 open=[0, 270] sig=0.473
+  171.0 CELL (-3, 6) f=0 open=[90, 180] sig=0.356
+  177.0 CELL (-3, 7) f=90 open=[0, 270] sig=0.317
+  184.4 CELL (-2, 7) f=0 open=[0, 180] sig=0.409
+  190.7 CELL (-1, 7) f=0 open=[90, 180, 270] sig=0.408
+  198.2 CELL (-1, 6) f=270 open=[90, 180] sig=0.508
+  205.7 CELL (-2, 6) f=180 open=[0, 270] sig=0.488
+  211.5 CELL (-2, 5) f=270 open=[0, 90] sig=0.592
+  219.6 CELL (-1, 5) f=0 open=[180] sig=0.617
+  227.5 CELL (-2, 5) f=180 open=[0, 90] sig=0.614
+  232.6 CELL (-2, 6) f=90 open=[0, 270] sig=0.537
+  240.5 CELL (-1, 6) f=0 open=[0, 90, 180, 270] sig=0.533
+  242.9 CELL (-1, 7) f=90 open=[90, 180, 270] sig=0.519
+  246.2 CELL (-1, 8) f=90 open=[0, 90, 180, 270] sig=0.458
+  249.7 CELL (-1, 9) f=90 open=[90, 180, 270] sig=0.441
+  253.4 CELL (-1, 10) f=90 open=[90, 270] sig=0.359
+  258.6 CELL (-1, 11) f=90 open=[0, 180, 270] sig=0.298
+  265.9 CELL (0, 11) f=0 open=[180] sig=0.312
+  271.0 CELL (-1, 11) f=180 open=[0, 180, 270] sig=0.296
+  273.5 CELL (-2, 11) f=180 open=[0, 180, 270] sig=0.302
+  278.1 CELL (-3, 11) f=180 open=[0, 180] sig=0.295
+  283.0 CELL (-4, 11) f=180 open=[0, 180] sig=0.267
+  283.7 CELL (-5, 11) f=180 open=[0, 180] sig=0.275
+  288.1 CELL (-6, 11) f=180 open=[0, 180] sig=0.243
+  294.5 CELL (-7, 11) f=180 open=[0, 270] sig=0.197
+  302.3 CELL (-7, 10) f=270 open=[0, 90] sig=0.301
+  308.2 CELL (-6, 10) f=0 open=[0, 180, 270] sig=0.278
+  313.4 CELL (-5, 10) f=0 open=[180] sig=0.258
+  321.0 CELL (-6, 10) f=180 open=[0, 180, 270] sig=0.219
+  334.7 CELL (-6, 10) f=270 open=[0, 180, 270] sig=0.275
+  339.5 CELL (-6, 9) f=270 open=[0, 180, 270] sig=0.407
+  344.2 CELL (-6, 8) f=270 open=[0, 180, 270] sig=0.351
+  356.4 CELL (-6, 8) f=270 open=[0, 180, 270] sig=0.452
+  368.7 CELL (-6, 8) f=270 open=[0, 180, 270] sig=0.368
+  370.7 CELL (-6, 7) f=270 open=[0, 180, 270] sig=0.406
+  383.0 CELL (-6, 7) f=270 open=[0, 180, 270] sig=0.237
+  395.2 CELL (-6, 7) f=270 open=[0, 180, 270] sig=0.283
+  404.4 CELL (-6, 6) f=270 open=[0, 180, 270] sig=0.362
+  409.8 CELL (-6, 5) f=270 open=[0, 180, 270] sig=0.259
+  422.1 CELL (-6, 5) f=270 open=[0, 180, 270] sig=0.170
+  424.7 CELL (-6, 4) f=270 open=[0, 180, 270] sig=0.176
+  433.3 CELL (-6, 3) f=270 open=[0, 180, 270] sig=0.191
+  437.1 CELL (-6, 2) f=270 open=[0, 180, 270] sig=0.174
+  445.5 CELL (-6, 1) f=270 open=[0, 180, 270] sig=0.203
+  454.5 CELL (-6, 0) f=270 open=[0, 180, 270] sig=0.160
+  459.5 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.185
+  471.8 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.178
+  484.1 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.214
+  496.3 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.347
+  508.6 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.306
+  509.2 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.332
+  521.6 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.229
+  522.5 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.234
+  534.7 CELL (-6, -1) f=270 open=[0, 180, 270] sig=0.228
+  539.5 CELL (-6, -2) f=270 open=[0, 180, 270] sig=0.211
+  551.9 CELL (-6, -2) f=270 open=[0, 180, 270] sig=0.236
+  564.2 CELL (-6, -2) f=270 open=[0, 180, 270] sig=0.352
+  576.6 CELL (-6, -2) f=270 open=[0, 180, 270] sig=0.282
+  588.8 CELL (-6, -2) f=270 open=[0, 180, 270] sig=0.184
+  597.5 CELL (-6, -3) f=270 open=[0, 180, 270] sig=0.193
+  609.8 CELL (-6, -3) f=270 open=[0, 180, 270] sig=0.197
+  622.0 CELL (-6, -3) f=270 open=[0, 180, 270] sig=0.186
+  634.4 CELL (-6, -3) f=270 open=[0, 180, 270] sig=0.173
+  646.6 CELL (-6, -4) f=270 open=[0, 180, 270] sig=0.219
+    0.1 AGENT start f=270
+    0.2 CELL (0, 0) f=270 open=[180, 270] sig=0.264
+   12.5 CELL (0, 0) f=270 open=[180] sig=0.315
+   16.1 CELL (-1, 0) f=180 open=[0, 180, 270] sig=0.283
+   19.8 CELL (-2, 0) f=180 open=[0, 180, 270] sig=0.253
+   21.2 WANDER
+   36.9 CELL (-2, 0) f=270 open=[0, 270] sig=0.248
+   47.7 CELL (-2, -1) f=270 open=[0, 180, 270] sig=0.162
+   60.0 CELL (-2, -1) f=270 open=[0, 180] sig=0.213
+   65.3 CELL (-3, -1) f=180 open=[0, 180, 270] sig=0.242
+   71.3 CELL (-4, -1) f=180 open=[0, 90] sig=0.175
+   75.2 CELL (-4, 0) f=90 open=[0, 90, 270] sig=0.148
+   81.2 CELL (-4, 1) f=90 open=[0, 270] sig=0.132
+   85.2 CELL (-3, 1) f=0 open=[0, 180] sig=0.140
+   87.7 CELL (-2, 1) f=0 open=[0, 180] sig=0.165
+   92.5 CELL (-1, 1) f=0 open=[0, 180] sig=0.239
+   97.5 CELL (0, 1) f=0 open=[0, 180] sig=0.212
+  102.4 CELL (1, 1) f=0 open=[0, 180, 270] sig=0.180
+  103.4 CELL (2, 1) f=0 open=[0, 180, 270] sig=0.182
+  109.6 CELL (3, 1) f=0 open=[180] sig=0.216
+  121.6 CELL (2, 1) f=180 open=[0, 180] sig=0.241
+  126.3 CELL (1, 1) f=180 open=[0, 180] sig=0.305
+  127.6 CELL (0, 1) f=180 open=[0, 180] sig=0.293
+  132.1 CELL (-1, 1) f=180 open=[0, 180] sig=0.220
+  136.7 CELL (-2, 1) f=180 open=[0] sig=0.253
+  139.8 CELL (-3, 1) f=180 open=[0] sig=0.260
+  140.2 CELL (-3, 1) f=180 open=[0] sig=0.274
+  147.0 CELL (-3, 0) f=270 open=[0, 90] sig=0.209
+  149.7 CELL (-3, -1) f=270 open=[0] sig=0.233
+  155.6 CELL (-2, -1) f=0 open=[0, 180] sig=0.235
+  161.3 CELL (-1, -1) f=0 open=[180] sig=0.238
+  168.7 CELL (-2, -1) f=180 open=[0, 180] sig=0.241
+  171.9 CELL (-1, -1) f=0 open=[180] sig=0.247
+  174.0 CELL (-1, -1) f=90 open=[180] sig=0.316
+  181.0 CELL (0, -1) f=0 open=[180] sig=0.289
+  182.5 CELL (0, -1) f=0 open=[180] sig=0.271
+  182.5 COMPLETE reset
+  182.6 CELL (0, -1) f=0 open=[180] sig=0.263
+  189.7 CELL (-1, -1) f=180 open=[180] sig=0.374
+  195.5 CELL (-2, -1) f=180 open=[0] sig=0.247
+  202.1 CELL (-1, -1) f=0 open=[180] sig=0.217
+  208.2 CELL (0, -1) f=0 open=[180] sig=0.252
+  208.2 COMPLETE reset
+  208.3 CELL (0, -1) f=0 open=[180] sig=0.249
+  215.5 CELL (-1, -1) f=180 open=[180] sig=0.229
+  220.5 CELL (-2, -1) f=180 open=[0] sig=0.190
+  227.3 CELL (-1, -1) f=0 open=[180] sig=0.208
+  233.5 CELL (0, -1) f=0 open=[180] sig=0.260
+  233.6 COMPLETE reset
+  233.7 CELL (0, -1) f=0 open=[180] sig=0.258
+  240.6 CELL (-1, -1) f=180 open=[180] sig=0.226
+  246.3 CELL (-2, -1) f=180 open=[0] sig=0.181
+  250.9 CELL (-1, -1) f=0 open=[] sig=0.196
+    0.1 AGENT start f=0
+    0.3 CELL (0, 0) f=0 open=[180] sig=0.436
+    7.5 CELL (-1, 0) f=180 open=[0, 180, 270] sig=0.505
+   10.3 CELL (-2, 0) f=180 open=[0, 90] sig=0.643
+   18.5 CELL (-2, 1) f=90 open=[0, 270] sig=0.250
+   22.5 CELL (-1, 1) f=0 open=[0, 180] sig=0.191
+   25.0 CELL (0, 1) f=0 open=[0, 180] sig=0.236
+   30.2 CELL (1, 1) f=0 open=[0, 180] sig=0.237
+   34.9 CELL (2, 1) f=0 open=[0, 180] sig=0.260
+   36.0 CELL (3, 1) f=0 open=[0, 180] sig=0.271
+   40.9 CELL (4, 1) f=0 open=[0, 180, 270] sig=0.223
+   42.0 CELL (5, 1) f=0 open=[0, 180, 270] sig=0.214
+   48.3 CELL (6, 1) f=0 open=[180] sig=0.203
+   51.6 CELL (5, 1) f=180 open=[180] sig=0.216
+   54.5 CELL (4, 1) f=180 open=[0, 180, 270] sig=0.187
+   60.1 CELL (4, 0) f=270 open=[90, 180, 270] sig=0.214
+   67.7 CELL (4, -1) f=270 open=[90, 180] sig=0.283
+   75.7 CELL (3, -1) f=180 open=[0, 270] sig=0.535
+   82.8 CELL (3, -2) f=270 open=[0, 90] sig=0.571
+   87.2 CELL (4, -2) f=0 open=[0, 90, 180] sig=0.428
+   92.0 CELL (5, -2) f=0 open=[180] sig=0.478
+   97.3 CELL (4, -2) f=180 open=[0, 180] sig=0.464
+  101.6 CELL (3, -2) f=180 open=[0, 90] sig=0.537
+  108.9 CELL (3, -1) f=90 open=[0, 270] sig=0.543
+  116.6 CELL (4, -1) f=0 open=[90, 180] sig=0.425
+  123.0 CELL (4, 0) f=90 open=[90, 180, 270] sig=0.336
+  128.8 CELL (3, 0) f=180 open=[0, 180] sig=0.394
+  135.5 CELL (2, 0) f=180 open=[0, 270] sig=0.490
+  143.2 CELL (2, -1) f=270 open=[90, 180] sig=0.615
+  148.8 CELL (1, -1) f=180 open=[0, 270] sig=0.612
+  155.3 CELL (1, -2) f=270 open=[0, 90, 270] sig=0.798
+  161.7 RX: B roaming; will HOLD when adjacent. s=0.873
+  161.7 RX: B roaming; will HOLD when adjacent. s=0.907
+  161.8 CELL (1, -3) f=270 open=[90] sig=0.922
+  168.7 CELL (1, -2) f=90 open=[0, 90, 270] sig=0.775
+  170.7 RX: B roaming; will HOLD when adjacent. s=0.875
+  170.8 CELL (2, -2) f=0 open=[0, 90, 270] sig=0.877
+  174.4 CELL (2, -3) f=270 open=[0, 90, 270] sig=0.839
+  179.4 CELL (2, -4) f=270 open=[90] sig=0.922
+  187.0 RX: B roaming; will HOLD when adjacent. s=0.907
+  187.2 CELL (2, -3) f=90 open=[0, 90, 270] sig=0.666
+  195.0 CELL (3, -3) f=0 open=[180, 270] sig=0.683
+  201.9 CELL (3, -4) f=270 open=[0, 90] sig=0.744
+  208.1 CELL (4, -4) f=0 open=[0, 180] sig=0.606
+    0.0 AGENT start f=270
+    0.0 RX: B roaming; will HOLD when adjacent. s=0.875
+    0.1 CELL (0, 0) f=270 open=[90, 180] sig=0.959
+    1.4 CELL (0, 0) f=180 open=[90] sig=0.956
+    6.4 RX: B roaming; will HOLD when adjacent. s=0.951
+    6.5 CELL (0, 1) f=90 open=[0, 180] sig=0.769
+   13.4 CELL (1, 1) f=0 open=[0, 180] sig=0.672
+   18.2 CELL (2, 1) f=0 open=[90, 180] sig=0.708
+   24.3 CELL (2, 2) f=90 open=[90, 180, 270] sig=0.410
+   24.9 CELL (2, 3) f=90 open=[90, 180, 270] sig=0.392
+   31.1 CELL (2, 4) f=90 open=[270] sig=0.274
+   38.5 CELL (2, 3) f=270 open=[90, 180, 270] sig=0.284
+   45.8 CELL (1, 3) f=180 open=[0, 90] sig=0.328
+   48.5 CELL (1, 4) f=90 open=[0, 90] sig=0.306
+   53.6 CELL (1, 5) f=90 open=[90, 270] sig=0.334
+   58.7 CELL (1, 6) f=90 open=[0, 270] sig=0.279
+   62.4 CELL (2, 6) f=0 open=[0, 90, 180] sig=0.269
+   67.0 CELL (3, 6) f=0 open=[90, 180] sig=0.272
+   73.9 CELL (3, 7) f=90 open=[0, 270] sig=0.227
+   76.3 CELL (4, 7) f=0 open=[0, 270] sig=0.207
+   81.6 CELL (5, 7) f=0 open=[180, 270] sig=0.192
+   84.4 WANDER
+   99.8 CELL (5, 7) f=270 open=[] sig=0.214
+  101.7 CELL (5, 7) f=180 open=[] sig=0.203
+  102.0 CELL (5, 7) f=180 open=[] sig=0.214
+  108.3 CELL (5, 6) f=270 open=[90, 270] sig=0.204
+  110.5 CELL (5, 5) f=270 open=[90, 270] sig=0.204
+  115.3 CELL (5, 4) f=270 open=[90, 180, 270] sig=0.200
+  118.8 CELL (5, 3) f=270 open=[90, 180, 270] sig=0.215
+  123.6 CELL (5, 2) f=270 open=[90, 180] sig=0.185
+  130.0 CELL (4, 2) f=180 open=[0, 180] sig=0.246
+  134.6 CELL (3, 2) f=180 open=[0, 180] sig=0.294
+  141.6 CELL (4, 2) f=0 open=[0, 180] sig=0.255
+  147.4 CELL (5, 2) f=0 open=[90, 180] sig=0.189
+  151.4 CELL (5, 3) f=90 open=[90, 270] sig=0.210
+  154.0 CELL (5, 4) f=90 open=[90, 180, 270] sig=0.245
+  164.0 CELL (4, 4) f=180 open=[0, 180] sig=0.339
+  168.6 CELL (3, 4) f=180 open=[0, 180] sig=0.415
+  176.0 CELL (4, 4) f=0 open=[0, 180] sig=0.330
+  180.8 CELL (5, 4) f=0 open=[180] sig=0.281
+  184.0 CELL (5, 4) f=90 open=[180] sig=0.267
+  184.4 CELL (5, 4) f=90 open=[180] sig=0.272
+  196.8 CELL (4, 4) f=180 open=[0, 180] sig=0.410
+  202.9 CELL (3, 4) f=180 open=[0] sig=0.567
+  205.6 CELL (3, 4) f=270 open=[0] sig=0.473
+  206.1 CELL (3, 4) f=270 open=[0] sig=0.491
+  206.6 CELL (3, 4) f=270 open=[0] sig=0.483
+  213.7 CELL (4, 4) f=0 open=[0, 180] sig=0.545
+  219.3 CELL (4, 3) f=270 open=[180, 270] sig=0.715
+  227.5 CELL (3, 3) f=180 open=[0, 180, 270] sig=0.712
+  231.8 CELL (4, 3) f=0 open=[180, 270] sig=0.700
+  238.0 CELL (4, 2) f=270 open=[180] sig=0.625
+  240.2 CELL (3, 2) f=180 open=[180] sig=0.633
+  245.1 CELL (2, 2) f=180 open=[180] sig=0.646
+  251.2 CELL (1, 2) f=180 open=[0] sig=0.665
+  258.0 CELL (2, 2) f=0 open=[180] sig=0.566
+  261.0 CELL (2, 2) f=270 open=[180] sig=0.609
+  261.0 COMPLETE reset
+  261.1 CELL (2, 2) f=270 open=[180] sig=0.626
+  268.4 CELL (1, 2) f=180 open=[0] sig=0.412
+  275.9 CELL (2, 2) f=0 open=[180] sig=0.626
+  275.9 COMPLETE reset
+  276.0 CELL (2, 2) f=0 open=[180] sig=0.617
+  282.7 CELL (1, 2) f=180 open=[0] sig=0.543
+  289.9 CELL (2, 2) f=0 open=[180] sig=0.594
+  290.0 COMPLETE reset
+  290.1 CELL (2, 2) f=0 open=[180] sig=0.586
+  296.8 CELL (1, 2) f=180 open=[0] sig=0.630
+  303.8 CELL (2, 2) f=0 open=[180] sig=0.605
+  303.8 COMPLETE reset
+  304.0 CELL (2, 2) f=0 open=[180] sig=0.611
+  307.0 CELL (1, 2) f=180 open=[0] sig=0.527
+  315.6 CELL (2, 2) f=0 open=[180] sig=0.553
+  315.6 COMPLETE reset
+  315.7 CELL (2, 2) f=0 open=[180] sig=0.544
+  323.4 CELL (1, 2) f=180 open=[0] sig=0.523
+  328.8 CELL (2, 2) f=0 open=[180] sig=0.561
+  328.8 COMPLETE reset
+  328.9 CELL (2, 2) f=0 open=[180] sig=0.547
+  336.4 CELL (1, 2) f=180 open=[0] sig=0.402
+  343.4 CELL (2, 2) f=0 open=[180] sig=0.403
+  343.4 COMPLETE reset
+  343.5 CELL (2, 2) f=0 open=[180] sig=0.396
+  351.1 CELL (1, 2) f=180 open=[0] sig=0.562
+  354.2 CELL (2, 2) f=0 open=[180] sig=0.574
+  354.2 COMPLETE reset
+  354.3 CELL (2, 2) f=0 open=[180] sig=0.567
+  363.2 CELL (1, 2) f=180 open=[0] sig=0.651
+  370.3 CELL (2, 2) f=0 open=[180] sig=0.658
+  370.3 COMPLETE reset
+  370.3 CELL (2, 2) f=0 open=[180] sig=0.657
+  374.3 CELL (1, 2) f=180 open=[0] sig=0.643
+  377.2 CELL (2, 2) f=0 open=[180] sig=0.659
+  377.2 COMPLETE reset
+  377.3 CELL (2, 2) f=0 open=[180] sig=0.668
+    0.0 AGENT start f=90
+    0.1 CELL (0, 0) f=90 open=[0, 90, 270] sig=0.569
+    7.1 CELL (0, 1) f=90 open=[0, 270] sig=0.663
+    8.9 CELL (1, 1) f=0 open=[0, 270] sig=0.668
+    9.7 CELL (2, 1) f=0 open=[0, 270] sig=0.659
+   21.4 CELL (3, 1) f=0 open=[0, 180] sig=0.443
+   22.9 CELL (4, 1) f=0 open=[0, 180] sig=0.432
+   27.7 CELL (5, 1) f=0 open=[0, 180] sig=0.349
+   33.6 CELL (6, 1) f=0 open=[90, 180] sig=0.299
+   41.6 CELL (6, 2) f=90 open=[180, 270] sig=0.280
+   55.3 CELL (6, 2) f=180 open=[] sig=0.504
+   58.1 CELL (6, 2) f=270 open=[] sig=0.478
+   61.8 CELL (5, 2) f=180 open=[0, 180] sig=0.553
+   67.8 CELL (4, 2) f=180 open=[0, 180] sig=0.700
+   74.2 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.884
+   74.3 CELL (3, 2) f=180 open=[0, 90] sig=0.885
+   80.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.897
+   80.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.902
+   80.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.919
+   80.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.923
+   81.0 CELL (3, 3) f=90 open=[180, 270] sig=0.910
+   87.0 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.904
+   87.0 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.925
+   87.0 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.951
+   87.0 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.984
+   87.1 CELL (2, 3) f=180 open=[0, 270] sig=0.993
+   94.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.989
+   94.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.994
+   94.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.998
+   94.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=1.000
+   94.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.987
+   94.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.993
+   94.7 CELL (2, 2) f=270 open=[90, 270] sig=0.967
+   97.8 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.980
+   97.8 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.966
+   97.9 CELL (2, 2) f=90 open=[270] sig=0.965
+   99.8 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.979
+   99.9 CELL (2, 2) f=0 open=[270] sig=0.973
+  103.8 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.984
+  103.8 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.968
+  103.8 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.904
+  103.9 CELL (2, 1) f=270 open=[270] sig=0.927
+  108.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.898
+  109.1 CELL (2, 0) f=270 open=[90, 270] sig=0.752
+  113.8 CELL (2, -1) f=270 open=[90, 270] sig=0.589
+  118.1 CELL (2, -2) f=270 open=[90] sig=0.506
+  129.3 CELL (2, -1) f=90 open=[90, 270] sig=0.829
+  135.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.885
+  135.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.911
+  135.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.941
+  135.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.973
+  135.4 CELL (2, 0) f=90 open=[270] sig=0.963
+  136.5 CELL (2, 0) f=90 open=[270] sig=0.973
+  138.1 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.966
+  138.2 CELL (2, 0) f=0 open=[270] sig=0.980
+  138.6 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.967
+  138.6 CELL (2, 0) f=0 open=[270] sig=0.972
+  141.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.987
+  141.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.977
+  142.0 CELL (2, 0) f=180 open=[270] sig=0.971
+  142.6 CELL (2, 0) f=180 open=[270] sig=0.972
+  142.9 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.960
+  143.0 CELL (2, 0) f=180 open=[270] sig=0.975
+  143.5 CELL (2, 0) f=180 open=[270] sig=0.980
+  144.0 CELL (2, 0) f=180 open=[270] sig=0.980
+  148.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.967
+  148.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.963
+  148.3 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.936
+  148.4 CELL (2, -1) f=270 open=[90, 270] sig=0.910
+  148.4 COMPLETE reset
+  148.5 CELL (2, -1) f=270 open=[90, 270] sig=0.899
+  153.4 RX: A please RESUME and home on my signal - I HOLD STILL until you are adjacent (sig>1.2). Then we co-travel, you lead. s=0.904
+  153.4 RX: B tailing you s=0.88
+  153.4 RX: B tailing you s=0.87
+  153.5 CELL (2, -2) f=270 open=[90] sig=0.714
+  157.4 CELL (2, -1) f=90 open=[90, 270] sig=0.785
+  160.4 CELL (2, 0) f=90 open=[270] sig=0.970
+  165.3 RX: B tailing you s=0.97
+  165.3 RX: B tailing you s=0.97
+  165.3 RX: B tailing you s=0.97
+  165.3 RX: B tailing you s=0.98
+  165.3 RX: B tailing you s=0.98
+  165.3 RX: B tailing you s=0.97
+  165.3 RX: B tailing you s=0.96
+  165.3 RX: B tailing you s=0.95
+  165.3 RX: B tailing you s=0.93
+  165.4 CELL (2, -1) f=270 open=[90, 270] sig=0.920
+  165.4 COMPLETE reset
+  165.5 CELL (2, -1) f=270 open=[90, 270] sig=0.916
+  170.3 RX: B tailing you s=0.92
+  170.3 RX: B tailing you s=0.9
+  170.3 RX: B tailing you s=0.9
+  170.3 RX: B tailing you s=0.87
+  170.4 CELL (2, -2) f=270 open=[] sig=0.948
+    0.0 MEET start
+    1.5 MEET sig=0.973
+    2.8 HOME base sig=0.974 pos=(0, 0)
+   12.1 HOME moved 270 sig 0.974->0.936
+   20.1 HOME no improving dir; wait
+   24.7 MEET sig=0.941
+   25.9 HOME base sig=0.974 pos=(0, 0)
+   35.2 HOME moved 270 sig 0.974->0.935
+   43.4 HOME no improving dir; wait
+   47.9 MEET sig=0.935
+   49.2 HOME base sig=0.969 pos=(0, 0)
+   58.3 HOME moved 270 sig 0.969->0.933
+   66.5 HOME no improving dir; wait
+   71.1 MEET sig=0.941
+   72.3 HOME base sig=0.973 pos=(0, 0)
+   77.6 HOME moved 270 sig 0.973->0.964
+   80.7 HOME could not return; continue from here
+   82.2 MEET sig=0.953
+   83.4 HOME base sig=0.955 pos=(0, -1)
+   91.1 HOME moved 270 sig 0.955->0.929
+   99.4 HOME no improving dir; wait
+  103.9 MEET sig=0.941
+  105.1 HOME base sig=0.974 pos=(0, -1)
+  114.1 HOME moved 270 sig 0.974->0.939
+  122.1 HOME no improving dir; wait
+  126.6 MEET sig=0.940
+  127.9 HOME base sig=0.974 pos=(0, -1)
+  137.6 HOME moved 270 sig 0.974->0.936
+  143.5 HOME no improving dir; wait
+  148.0 MEET sig=0.925
+    0.0 MEET2 start
+    2.0 M2 base=0.952 pos=(0, 0) see=False
+    8.4 M2 no better dir; hold 5s
+   15.5 M2 base=0.950 pos=(0, 0) see=False
+   28.2 M2 try 270 -> 0.930
+   36.4 M2 no better dir; hold 5s
+   43.4 M2 base=0.946 pos=(0, 0) see=False
+   57.4 M2 try 270 -> 0.945
+   76.0 M2 commit 270 sig now 0.929
+   78.0 M2 base=0.889 pos=(0, -1) see=False
+    0.0 HOLD start - asking partner to home on us
+    3.0 RX: B HOLDING STILL as agreed. my sig of you s=0.905. come adjacent; then you lead, I tail you.
+    3.0 RX: B HOLDING STILL as agreed. my sig of you s=0.874. come adjacent; then you lead, I tail you.
+    3.0 HOLD sig=0.890 see=False
+    6.0 RX: B HOLDING STILL as agreed. my sig of you s=0.889. come adjacent; then you lead, I tail you.
+    6.0 RX: B HOLDING STILL as agreed. my sig of you s=0.891. come adjacent; then you lead, I tail you.
+    6.0 HOLD sig=0.890 see=False
+    9.0 RX: B HOLDING STILL as agreed. my sig of you s=0.895. come adjacent; then you lead, I tail you.
+    9.0 RX: B HOLDING STILL as agreed. my sig of you s=0.888. come adjacent; then you lead, I tail you.
+    9.0 HOLD sig=0.888 see=False
+   12.1 RX: B HOLDING STILL as agreed. my sig of you s=0.900. come adjacent; then you lead, I tail you.
+   12.1 RX: B HOLDING STILL as agreed. my sig of you s=0.875. come adjacent; then you lead, I tail you.
+   12.1 HOLD sig=0.888 see=False
+   15.1 RX: B HOLDING STILL as agreed. my sig of you s=0.889. come adjacent; then you lead, I tail you.
+   15.1 RX: B HOLDING STILL as agreed. my sig of you s=0.882. come adjacent; then you lead, I tail you.
+   15.1 HOLD sig=0.888 see=False
+   18.1 RX: B HOLDING STILL as agreed. my sig of you s=0.895. come adjacent; then you lead, I tail you.
+   18.1 RX: B HOLDING STILL as agreed. my sig of you s=0.889. come adjacent; then you lead, I tail you.
+   18.1 HOLD sig=0.888 see=False
+   21.1 RX: B HOLDING STILL as agreed. my sig of you s=0.890. come adjacent; then you lead, I tail you.
+   21.1 RX: B HOLDING STILL as agreed. my sig of you s=0.876. come adjacent; then you lead, I tail you.
+   21.1 HOLD sig=0.888 see=False
+   24.1 RX: B HOLDING STILL as agreed. my sig of you s=0.889. come adjacent; then you lead, I tail you.
+   24.1 RX: B HOLDING STILL as agreed. my sig of you s=0.878. come adjacent; then you lead, I tail you.
+   24.1 HOLD sig=0.888 see=False
+   27.2 RX: B HOLDING STILL as agreed. my sig of you s=0.894. come adjacent; then you lead, I tail you.
+   27.2 RX: B HOLDING STILL as agreed. my sig of you s=0.895. come adjacent; then you lead, I tail you.
+   27.2 HOLD sig=0.888 see=False
+   30.2 RX: B HOLDING STILL as agreed. my sig of you s=0.895. come adjacent; then you lead, I tail you.
+   30.2 RX: B HOLDING STILL as agreed. my sig of you s=0.885. come adjacent; then you lead, I tail you.
+   30.2 HOLD sig=0.887 see=False
+   33.2 RX: B HOLDING STILL as agreed. my sig of you s=0.881. come adjacent; then you lead, I tail you.
+   33.2 RX: B manual homing to you; HOLD STILL please
+   33.2 HOLD sig=0.888 see=False
+   36.3 HOLD sig=0.888 see=False
+   39.3 HOLD sig=0.888 see=False
+   42.3 HOLD sig=0.888 see=False
+   45.4 HOLD sig=0.888 see=False
+   48.4 HOLD sig=0.887 see=False
+   51.4 HOLD sig=0.888 see=False
+   54.5 RX: B crept forward, s=0.961
+   54.5 HOLD sig=0.943 see=False
+   57.5 HOLD sig=0.958 see=False
+   60.5 HOLD sig=0.957 see=False
+   63.5 HOLD sig=0.957 see=False
+   66.5 RX: ADJACENT - B is right behind you, front dist 0.24 s=0.966. You lead-explore SLOWLY, I tail your blob.
+   66.5 HOLD sig=0.964 see=False
+   66.5 HOLD: partner adjacent!
+   66.5 AGENT start f=0
+   66.6 CELL (0, 0) f=0 open=[] sig=0.974
+   66.6 COMPLETE reset
+   66.7 CELL (0, 0) f=0 open=[] sig=0.966
+   66.7 COMPLETE reset
+   66.8 CELL (0, 0) f=0 open=[] sig=0.965
+   66.8 COMPLETE reset
+   66.9 CELL (0, 0) f=0 open=[] sig=0.973
+   66.9 COMPLETE reset
+   67.0 CELL (0, 0) f=0 open=[] sig=0.984
+   67.0 COMPLETE reset
+   67.1 CELL (0, 0) f=0 open=[] sig=0.992
+   67.1 COMPLETE reset
+   67.1 RX: ADJACENT - B is right behind you, front dist 0.22 s=0.981. You lead-explore SLOWLY, I tail your blob.
+   67.2 CELL (0, 0) f=0 open=[] sig=0.969
+   67.2 COMPLETE reset
+   67.3 CELL (0, 0) f=0 open=[] sig=0.970
+   67.3 COMPLETE reset
+   67.4 CELL (0, 0) f=0 open=[] sig=0.985
+   67.4 COMPLETE reset
+   67.5 CELL (0, 0) f=0 open=[] sig=0.970
+   67.5 COMPLETE reset
+   67.6 CELL (0, 0) f=0 open=[] sig=0.991
+   67.6 COMPLETE reset
+   67.7 CELL (0, 0) f=0 open=[] sig=0.964
+   67.7 COMPLETE reset
+   67.8 CELL (0, 0) f=0 open=[] sig=0.962
+   67.8 COMPLETE reset
+   67.9 CELL (0, 0) f=0 open=[] sig=0.973
+   67.9 COMPLETE reset
+   67.9 CELL (0, 0) f=0 open=[] sig=0.982
+   67.9 COMPLETE reset
+   68.0 CELL (0, 0) f=0 open=[] sig=0.978
+   68.0 COMPLETE reset
+   68.1 CELL (0, 0) f=0 open=[] sig=0.987
+   68.1 COMPLETE reset
+   68.1 RX: ADJACENT - B is right behind you, front dist 0.21 s=0.978. You lead-explore SLOWLY, I tail your blob.
+   68.2 CELL (0, 0) f=0 open=[] sig=0.964
+   68.2 COMPLETE reset
+   68.3 CELL (0, 0) f=0 open=[] sig=0.967
+   68.3 COMPLETE reset
+   68.4 CELL (0, 0) f=0 open=[] sig=0.974
+   68.4 COMPLETE reset
+   68.5 CELL (0, 0) f=0 open=[] sig=0.974
+   68.5 COMPLETE reset
+   68.6 CELL (0, 0) f=0 open=[] sig=0.989
+   68.6 COMPLETE reset
+   68.7 CELL (0, 0) f=0 open=[] sig=0.987
+   68.7 COMPLETE reset
+   68.8 CELL (0, 0) f=0 open=[] sig=0.992
+   68.8 COMPLETE reset
+   68.9 CELL (0, 0) f=0 open=[] sig=0.970
+   68.9 COMPLETE reset
+   69.0 CELL (0, 0) f=0 open=[] sig=0.969
+   69.0 COMPLETE reset
+   69.1 CELL (0, 0) f=0 open=[] sig=0.979
+   69.1 COMPLETE reset
+   69.2 CELL (0, 0) f=0 open=[] sig=0.976
+   69.2 COMPLETE reset
+   69.2 RX: ADJACENT - B is right behind you, front dist 0.23 s=0.985. You lead-explore SLOWLY, I tail your blob.
+   69.3 CELL (0, 0) f=0 open=[] sig=0.972
+   69.3 COMPLETE reset
+   69.3 CELL (0, 0) f=0 open=[] sig=0.963
+   69.3 COMPLETE reset
+   69.4 CELL (0, 0) f=0 open=[] sig=0.970
+   69.4 COMPLETE reset
+   69.5 CELL (0, 0) f=0 open=[] sig=0.979
+   69.5 COMPLETE reset
+   69.6 CELL (0, 0) f=0 open=[] sig=0.980
+   69.6 COMPLETE reset
+   69.7 CELL (0, 0) f=0 open=[] sig=0.980
+   69.7 COMPLETE reset
+   69.8 CELL (0, 0) f=0 open=[] sig=0.981
+   69.8 COMPLETE reset
+   69.9 CELL (0, 0) f=0 open=[] sig=0.979
+   69.9 COMPLETE reset
+   70.0 CELL (0, 0) f=0 open=[] sig=0.990
+   70.0 COMPLETE reset
+   70.1 CELL (0, 0) f=0 open=[] sig=0.982
+   70.1 COMPLETE reset
+   70.2 CELL (0, 0) f=0 open=[] sig=0.980
+   70.2 COMPLETE reset
+   70.2 RX: ADJACENT - B is right behind you, front dist 0.24 s=0.963. You lead-explore SLOWLY, I tail your blob.
+   70.3 CELL (0, 0) f=0 open=[] sig=0.972
+   70.3 COMPLETE reset
+   70.4 CELL (0, 0) f=0 open=[] sig=0.962
+   70.4 COMPLETE reset
+   70.5 CELL (0, 0) f=0 open=[] sig=0.981
+   70.5 COMPLETE reset
+   70.5 CELL (0, 0) f=0 open=[] sig=0.981
+   70.5 COMPLETE reset
+   70.6 CELL (0, 0) f=0 open=[] sig=0.980
+   70.6 COMPLETE reset
+   70.7 CELL (0, 0) f=0 open=[] sig=0.975
+   70.7 COMPLETE reset
+   70.8 CELL (0, 0) f=0 open=[] sig=0.975
+   70.8 COMPLETE reset
+   70.9 CELL (0, 0) f=0 open=[] sig=0.962
+   70.9 COMPLETE reset
+   71.0 CELL (0, 0) f=0 open=[] sig=0.978
+   71.0 COMPLETE reset
+   71.1 CELL (0, 0) f=0 open=[] sig=0.990
+   71.1 COMPLETE reset
+   71.1 RX: ADJACENT - B is right behind you, front dist 0.23 s=0.962. You lead-explore SLOWLY, I tail your blob.
+   71.2 CELL (0, 0) f=0 open=[] sig=0.980
+   71.2 COMPLETE reset
+   71.3 CELL (0, 0) f=0 open=[] sig=0.985
+   71.3 COMPLETE reset
+   71.4 CELL (0, 0) f=0 open=[] sig=0.980
+   71.4 COMPLETE reset
+   71.5 CELL (0, 0) f=0 open=[] sig=0.973
+   71.5 COMPLETE reset
+   71.6 CELL (0, 0) f=0 open=[] sig=0.996
+   71.6 COMPLETE reset
+   71.7 CELL (0, 0) f=0 open=[] sig=0.966
+   71.7 COMPLETE reset
+   71.8 CELL (0, 0) f=0 open=[] sig=0.987
+   71.8 COMPLETE reset
+   71.9 CELL (0, 0) f=0 open=[] sig=0.988
+   71.9 COMPLETE reset
+   72.0 CELL (0, 0) f=0 open=[] sig=0.984
+   72.0 COMPLETE reset
+   72.1 CELL (0, 0) f=0 open=[] sig=0.978
+   72.1 COMPLETE reset
+   72.2 CELL (0, 0) f=0 open=[] sig=0.957
+   72.2 COMPLETE reset
+   72.4 CELL (0, 0) f=0 open=[] sig=0.970
+   72.4 COMPLETE reset
+   72.5 CELL (0, 0) f=0 open=[] sig=0.979
+   72.5 COMPLETE reset
+   72.6 CELL (0, 0) f=0 open=[] sig=0.985
+   72.6 COMPLETE reset
+   72.7 CELL (0, 0) f=0 open=[] sig=0.980
+   72.7 COMPLETE reset
+   72.8 CELL (0, 0) f=0 open=[] sig=0.971
+   72.8 COMPLETE reset
+   72.9 CELL (0, 0) f=0 open=[] sig=0.971
+   72.9 COMPLETE reset
+   73.0 CELL (0, 0) f=0 open=[] sig=0.966
+   73.0 COMPLETE reset
+   73.1 CELL (0, 0) f=0 open=[] sig=0.979
+   73.1 COMPLETE reset
+   73.2 CELL (0, 0) f=0 open=[] sig=0.988
+   73.2 COMPLETE reset
+   73.3 CELL (0, 0) f=0 open=[] sig=0.987
+   73.3 COMPLETE reset
+   73.4 CELL (0, 0) f=0 open=[] sig=0.976
+   73.4 COMPLETE reset
+   73.5 CELL (0, 0) f=0 open=[] sig=0.977
+   73.5 COMPLETE reset
+   73.6 CELL (0, 0) f=0 open=[] sig=0.959
+   73.6 COMPLETE reset
+   73.7 CELL (0, 0) f=0 open=[] sig=0.966
+   73.7 COMPLETE reset
+   73.8 CELL (0, 0) f=0 open=[] sig=0.975
+   73.8 COMPLETE reset
+   73.9 CELL (0, 0) f=0 open=[] sig=0.969
+   73.9 COMPLETE reset
+   74.0 CELL (0, 0) f=0 open=[] sig=0.970
+   74.0 COMPLETE reset
+   74.0 CELL (0, 0) f=0 open=[] sig=0.975
+   74.0 COMPLETE reset
+   74.1 CELL (0, 0) f=0 open=[] sig=0.970
+   74.1 COMPLETE reset
+   74.2 CELL (0, 0) f=0 open=[] sig=0.974
+   74.2 COMPLETE reset
+   74.3 CELL (0, 0) f=0 open=[] sig=0.978
+   74.3 COMPLETE reset
+   74.4 CELL (0, 0) f=0 open=[] sig=0.969
+   74.4 COMPLETE reset
+   74.6 CELL (0, 0) f=0 open=[] sig=0.972
+   74.6 COMPLETE reset
+   74.7 CELL (0, 0) f=0 open=[] sig=0.970
+   74.7 COMPLETE reset
+   74.8 CELL (0, 0) f=0 open=[] sig=0.981
+   74.8 COMPLETE reset
+   74.9 CELL (0, 0) f=0 open=[] sig=0.966
+   74.9 COMPLETE reset
+   75.0 CELL (0, 0) f=0 open=[] sig=0.980
+   75.0 COMPLETE reset
+   75.1 CELL (0, 0) f=0 open=[] sig=0.978
+   75.1 COMPLETE reset
+   75.2 CELL (0, 0) f=0 open=[] sig=0.955
+   75.2 COMPLETE reset
+   75.3 CELL (0, 0) f=0 open=[] sig=0.974
+   75.3 COMPLETE reset
+   75.4 CELL (0, 0) f=0 open=[] sig=0.973
+   75.4 COMPLETE reset
+   75.5 CELL (0, 0) f=0 open=[] sig=0.983
+   75.5 COMPLETE reset
+   75.6 CELL (0, 0) f=0 open=[] sig=0.972
+   75.6 COMPLETE reset
+   75.7 CELL (0, 0) f=0 open=[] sig=0.976
+   75.7 COMPLETE reset
+   75.8 CELL (0, 0) f=0 open=[] sig=0.979
+   75.8 COMPLETE reset
+   75.9 CELL (0, 0) f=0 open=[] sig=0.982
+   75.9 COMPLETE reset
+   76.0 CELL (0, 0) f=0 open=[] sig=0.980
+   76.0 COMPLETE reset
+   76.1 CELL (0, 0) f=0 open=[] sig=0.981
+   76.1 COMPLETE reset
+   76.2 CELL (0, 0) f=0 open=[] sig=0.986
+   76.2 COMPLETE reset
+   76.3 CELL (0, 0) f=0 open=[] sig=0.977
+   76.3 COMPLETE reset
+   76.4 CELL (0, 0) f=0 open=[] sig=0.970
+   76.4 COMPLETE reset
+   76.5 CELL (0, 0) f=0 open=[] sig=0.973
+   76.5 COMPLETE reset
+   76.5 CELL (0, 0) f=0 open=[] sig=0.984
+   76.5 COMPLETE reset
+   76.6 CELL (0, 0) f=0 open=[] sig=0.991
+   76.6 COMPLETE reset
+   76.7 CELL (0, 0) f=0 open=[] sig=0.973
+   76.7 COMPLETE reset
+   76.8 CELL (0, 0) f=0 open=[] sig=0.973
+   76.8 COMPLETE reset
+   76.9 CELL (0, 0) f=0 open=[] sig=0.976
+   76.9 COMPLETE reset
+   77.0 CELL (0, 0) f=0 open=[] sig=0.958
+   77.0 COMPLETE reset
+   77.1 CELL (0, 0) f=0 open=[] sig=0.973
+   77.1 COMPLETE reset
+   77.2 CELL (0, 0) f=0 open=[] sig=0.986
+   77.2 COMPLETE reset
+   77.3 CELL (0, 0) f=0 open=[] sig=0.980
+   77.3 COMPLETE reset
+   77.4 CELL (0, 0) f=0 open=[] sig=0.955
+   77.4 COMPLETE reset
+   77.5 CELL (0, 0) f=0 open=[] sig=0.977
+   77.5 COMPLETE reset
+   77.6 CELL (0, 0) f=0 open=[] sig=0.977
+   77.6 COMPLETE reset
+   77.7 CELL (0, 0) f=0 open=[] sig=0.974
+   77.7 COMPLETE reset
+   77.8 CELL (0, 0) f=0 open=[] sig=0.972
+   77.8 COMPLETE reset
+   77.9 CELL (0, 0) f=0 open=[] sig=0.980
+   77.9 COMPLETE reset
+   78.0 CELL (0, 0) f=0 open=[] sig=0.983
+   78.0 COMPLETE reset
+   78.1 CELL (0, 0) f=0 open=[] sig=0.981
+   78.1 COMPLETE reset
+   78.2 CELL (0, 0) f=0 open=[] sig=0.981
+   78.2 COMPLETE reset
+   78.3 CELL (0, 0) f=0 open=[] sig=0.975
+   78.3 COMPLETE reset
+   78.4 CELL (0, 0) f=0 open=[] sig=0.968
+   78.4 COMPLETE reset
+   78.5 CELL (0, 0) f=0 open=[] sig=0.971
+   78.5 COMPLETE reset
+   78.6 CELL (0, 0) f=0 open=[] sig=0.990
+   78.6 COMPLETE reset
+   78.7 CELL (0, 0) f=0 open=[] sig=0.968
+   78.7 COMPLETE reset
+   78.8 CELL (0, 0) f=0 open=[] sig=0.986
+   78.8 COMPLETE reset
+   78.9 CELL (0, 0) f=0 open=[] sig=0.989
+   78.9 COMPLETE reset
+   79.0 CELL (0, 0) f=0 open=[] sig=0.974
+   79.0 COMPLETE reset
+   79.1 CELL (0, 0) f=0 open=[] sig=0.967
+   79.1 COMPLETE reset
+   79.2 CELL (0, 0) f=0 open=[] sig=0.975
+   79.2 COMPLETE reset
+   79.3 CELL (0, 0) f=0 open=[] sig=0.976
+   79.3 COMPLETE reset
+   79.3 CELL (0, 0) f=0 open=[] sig=0.975
+   79.3 COMPLETE reset
+   79.4 CELL (0, 0) f=0 open=[] sig=0.983
+   79.4 COMPLETE reset
+   79.5 CELL (0, 0) f=0 open=[] sig=0.972
+   79.5 COMPLETE reset
+   79.6 CELL (0, 0) f=0 open=[] sig=0.975
+   79.6 COMPLETE reset
+   79.7 CELL (0, 0) f=0 open=[] sig=0.980
+   79.7 COMPLETE reset
+   79.8 CELL (0, 0) f=0 open=[] sig=0.990
+   79.8 COMPLETE reset
+   79.9 CELL (0, 0) f=0 open=[] sig=0.976
+   79.9 COMPLETE reset
+   80.0 CELL (0, 0) f=0 open=[] sig=0.977
+   80.0 COMPLETE reset
+   80.1 CELL (0, 0) f=0 open=[] sig=0.987
+   80.1 COMPLETE reset
+   80.2 CELL (0, 0) f=0 open=[] sig=0.979
+   80.2 COMPLETE reset
+   80.3 CELL (0, 0) f=0 open=[] sig=0.980
+   80.3 COMPLETE reset
+   80.4 CELL (0, 0) f=0 open=[] sig=0.971
+   80.4 COMPLETE reset
+   80.5 CELL (0, 0) f=0 open=[] sig=0.984
+   80.5 COMPLETE reset
+   80.6 CELL (0, 0) f=0 open=[] sig=0.969
+   80.6 COMPLETE reset
+   80.7 CELL (0, 0) f=0 open=[] sig=0.971
+   80.7 COMPLETE reset
+   80.8 CELL (0, 0) f=0 open=[] sig=0.969
+   80.8 COMPLETE reset
+   80.9 CELL (0, 0) f=0 open=[] sig=0.988
+   80.9 COMPLETE reset
+   81.0 CELL (0, 0) f=0 open=[] sig=0.978
+   81.0 COMPLETE reset
+   81.0 CELL (0, 0) f=0 open=[] sig=0.972
+   81.0 COMPLETE reset
+   81.1 CELL (0, 0) f=0 open=[] sig=0.981
+   81.1 COMPLETE reset
+   81.2 CELL (0, 0) f=0 open=[] sig=0.974
+   81.2 COMPLETE reset
+   81.3 CELL (0, 0) f=0 open=[] sig=0.977
+   81.3 COMPLETE reset
+   81.4 CELL (0, 0) f=0 open=[] sig=0.980
+   81.4 COMPLETE reset
+   81.5 CELL (0, 0) f=0 open=[] sig=0.987
+   81.5 COMPLETE reset
+   81.6 CELL (0, 0) f=0 open=[] sig=0.980
+   81.6 COMPLETE reset
+   81.7 CELL (0, 0) f=0 open=[] sig=0.978
+   81.7 COMPLETE reset
+   81.8 CELL (0, 0) f=0 open=[] sig=0.971
+   81.8 COMPLETE reset
+   81.9 CELL (0, 0) f=0 open=[] sig=0.982
+   81.9 COMPLETE reset
+   82.0 CELL (0, 0) f=0 open=[] sig=0.977
+   82.0 COMPLETE reset
+   82.1 CELL (0, 0) f=0 open=[] sig=0.974
+   82.1 COMPLETE reset
+   82.2 CELL (0, 0) f=0 open=[] sig=0.968
+   82.2 COMPLETE reset
+   82.3 CELL (0, 0) f=0 open=[] sig=0.970
+   82.3 COMPLETE reset
+   82.4 CELL (0, 0) f=0 open=[] sig=0.978
+   82.4 COMPLETE reset
+   82.5 CELL (0, 0) f=0 open=[] sig=0.975
+   82.5 COMPLETE reset
+   82.6 CELL (0, 0) f=0 open=[] sig=0.980
+   82.6 COMPLETE reset
+   82.7 CELL (0, 0) f=0 open=[] sig=0.972
+   82.7 COMPLETE reset
+   82.8 CELL (0, 0) f=0 open=[] sig=0.976
+   82.8 COMPLETE reset
+   82.8 CELL (0, 0) f=0 open=[] sig=0.977
+   82.8 COMPLETE reset
+   83.0 CELL (0, 0) f=0 open=[] sig=0.984
+   83.0 COMPLETE reset
+   83.1 CELL (0, 0) f=0 open=[] sig=0.978
+   83.1 COMPLETE reset
+   83.1 CELL (0, 0) f=0 open=[] sig=0.974
+   83.1 COMPLETE reset
+   83.2 CELL (0, 0) f=0 open=[] sig=0.976
+   83.2 COMPLETE reset
+   83.3 CELL (0, 0) f=0 open=[] sig=0.981
+   83.3 COMPLETE reset
+   83.4 CELL (0, 0) f=0 open=[] sig=0.972
+   83.4 COMPLETE reset
+   83.5 CELL (0, 0) f=0 open=[] sig=0.974
+   83.5 COMPLETE reset
+   83.6 CELL (0, 0) f=0 open=[] sig=0.967
+   83.6 COMPLETE reset
+   83.7 CELL (0, 0) f=0 open=[] sig=0.976
+   83.7 COMPLETE reset
+   83.8 CELL (0, 0) f=0 open=[] sig=0.975
+   83.8 COMPLETE reset
+   84.0 CELL (0, 0) f=0 open=[] sig=0.973
+   84.0 COMPLETE reset
+   84.1 CELL (0, 0) f=0 open=[] sig=0.991
+   84.1 COMPLETE reset
+   84.2 CELL (0, 0) f=0 open=[] sig=0.970
+   84.2 COMPLETE reset
+   84.3 CELL (0, 0) f=0 open=[] sig=0.984
+   84.3 COMPLETE reset
+   84.4 CELL (0, 0) f=0 open=[] sig=0.976
+   84.4 COMPLETE reset
+   84.5 CELL (0, 0) f=0 open=[] sig=0.969
+   84.5 COMPLETE reset
+   84.6 CELL (0, 0) f=0 open=[] sig=0.974
+   84.6 COMPLETE reset
+   84.7 CELL (0, 0) f=0 open=[] sig=0.988
+   84.7 COMPLETE reset
+   84.8 CELL (0, 0) f=0 open=[] sig=0.971
+   84.8 COMPLETE reset
+   84.9 CELL (0, 0) f=0 open=[] sig=0.984
+   84.9 COMPLETE reset
+   85.0 CELL (0, 0) f=0 open=[] sig=0.982
+   85.0 COMPLETE reset
+   85.1 CELL (0, 0) f=0 open=[] sig=0.961
+   85.1 COMPLETE reset
+   85.2 CELL (0, 0) f=0 open=[] sig=0.984
+   85.2 COMPLETE reset
+   85.3 CELL (0, 0) f=0 open=[] sig=0.984
+   85.3 COMPLETE reset
+   85.4 CELL (0, 0) f=0 open=[] sig=0.977
+   85.4 COMPLETE reset
+   85.4 CELL (0, 0) f=0 open=[] sig=0.976
+   85.4 COMPLETE reset
+   85.5 CELL (0, 0) f=0 open=[] sig=0.979
+   85.5 COMPLETE reset
+   85.6 CELL (0, 0) f=0 open=[] sig=0.969
+   85.6 COMPLETE reset
+   85.7 CELL (0, 0) f=0 open=[] sig=0.962
+   85.7 COMPLETE reset
+   85.8 CELL (0, 0) f=0 open=[] sig=0.969
+   85.8 COMPLETE reset
+   85.9 CELL (0, 0) f=0 open=[] sig=0.968
+   85.9 COMPLETE reset
+   86.0 CELL (0, 0) f=0 open=[] sig=0.962
+   86.0 COMPLETE reset
+   86.1 CELL (0, 0) f=0 open=[] sig=0.976
+   86.1 COMPLETE reset
+   86.2 CELL (0, 0) f=0 open=[] sig=0.983
+   86.2 COMPLETE reset
+   86.3 CELL (0, 0) f=0 open=[] sig=0.986
+   86.3 COMPLETE reset
+   86.4 CELL (0, 0) f=0 open=[] sig=0.993
+   86.4 COMPLETE reset
+   86.5 CELL (0, 0) f=0 open=[] sig=0.966
+   86.5 COMPLETE reset
+   86.6 CELL (0, 0) f=0 open=[] sig=0.980
+   86.6 COMPLETE reset
+   86.7 CELL (0, 0) f=0 open=[] sig=0.983
+   86.7 COMPLETE reset
+   86.8 CELL (0, 0) f=0 open=[] sig=0.979
+   86.8 COMPLETE reset
+   86.9 CELL (0, 0) f=0 open=[] sig=0.983
+   86.9 COMPLETE reset
+   87.0 CELL (0, 0) f=0 open=[] sig=0.978
+   87.0 COMPLETE reset
+   87.1 CELL (0, 0) f=0 open=[] sig=0.969
+   87.1 COMPLETE reset
+   87.1 CELL (0, 0) f=0 open=[] sig=0.975
+   87.2 COMPLETE reset
+   87.3 CELL (0, 0) f=0 open=[] sig=0.967
+   87.3 COMPLETE reset
+   87.4 CELL (0, 0) f=0 open=[] sig=0.979
+   87.4 COMPLETE reset
+   87.5 CELL (0, 0) f=0 open=[] sig=0.979
+   87.5 COMPLETE reset
+   87.5 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   87.6 CELL (0, 0) f=0 open=[] sig=0.991
+   87.6 COMPLETE reset
+   87.7 CELL (0, 0) f=0 open=[] sig=0.970
+   87.7 COMPLETE reset
+   87.8 CELL (0, 0) f=0 open=[] sig=0.982
+   87.8 COMPLETE reset
+   88.0 CELL (0, 0) f=0 open=[] sig=0.989
+   88.0 COMPLETE reset
+   88.1 CELL (0, 0) f=0 open=[] sig=0.969
+   88.1 COMPLETE reset
+   88.1 CELL (0, 0) f=0 open=[] sig=0.982
+   88.1 COMPLETE reset
+   88.2 CELL (0, 0) f=0 open=[] sig=0.989
+   88.2 COMPLETE reset
+   88.4 CELL (0, 0) f=0 open=[] sig=0.979
+   88.4 COMPLETE reset
+   88.4 CELL (0, 0) f=0 open=[] sig=0.978
+   88.4 COMPLETE reset
+   88.5 CELL (0, 0) f=0 open=[] sig=0.972
+   88.5 COMPLETE reset
+   88.6 CELL (0, 0) f=0 open=[] sig=0.977
+   88.6 COMPLETE reset
+   88.7 CELL (0, 0) f=0 open=[] sig=0.984
+   88.7 COMPLETE reset
+   88.8 CELL (0, 0) f=0 open=[] sig=0.955
+   88.8 COMPLETE reset
+   88.9 CELL (0, 0) f=0 open=[] sig=0.979
+   88.9 COMPLETE reset
+   89.0 CELL (0, 0) f=0 open=[] sig=0.976
+   89.0 COMPLETE reset
+   89.1 CELL (0, 0) f=0 open=[] sig=0.991
+   89.1 COMPLETE reset
+   89.1 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   89.2 CELL (0, 0) f=0 open=[] sig=0.964
+   89.2 COMPLETE reset
+   89.3 CELL (0, 0) f=0 open=[] sig=0.963
+   89.3 COMPLETE reset
+   89.4 CELL (0, 0) f=0 open=[] sig=0.975
+   89.4 COMPLETE reset
+   89.5 CELL (0, 0) f=0 open=[] sig=0.972
+   89.5 COMPLETE reset
+   89.6 CELL (0, 0) f=0 open=[] sig=0.968
+   89.6 COMPLETE reset
+   89.7 CELL (0, 0) f=0 open=[] sig=0.975
+   89.7 COMPLETE reset
+   89.8 CELL (0, 0) f=0 open=[] sig=0.982
+   89.8 COMPLETE reset
+   89.9 CELL (0, 0) f=0 open=[] sig=0.978
+   89.9 COMPLETE reset
+   90.0 CELL (0, 0) f=0 open=[] sig=0.972
+   90.0 COMPLETE reset
+   90.1 CELL (0, 0) f=0 open=[] sig=0.979
+   90.1 COMPLETE reset
+   90.1 CELL (0, 0) f=0 open=[] sig=0.956
+   90.1 COMPLETE reset
+   90.2 CELL (0, 0) f=0 open=[] sig=0.965
+   90.2 COMPLETE reset
+   90.3 CELL (0, 0) f=0 open=[] sig=0.973
+   90.3 COMPLETE reset
+   90.4 CELL (0, 0) f=0 open=[] sig=0.961
+   90.4 COMPLETE reset
+   90.5 CELL (0, 0) f=0 open=[] sig=0.971
+   90.5 COMPLETE reset
+   90.6 CELL (0, 0) f=0 open=[] sig=0.983
+   90.6 COMPLETE reset
+   90.6 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   90.7 CELL (0, 0) f=0 open=[] sig=0.979
+   90.7 COMPLETE reset
+   90.8 CELL (0, 0) f=0 open=[] sig=0.981
+   90.8 COMPLETE reset
+   90.9 CELL (0, 0) f=0 open=[] sig=0.979
+   90.9 COMPLETE reset
+   91.0 CELL (0, 0) f=0 open=[] sig=0.982
+   91.0 COMPLETE reset
+   91.1 CELL (0, 0) f=0 open=[] sig=0.974
+   91.1 COMPLETE reset
+   91.2 CELL (0, 0) f=0 open=[] sig=0.987
+   91.2 COMPLETE reset
+   91.3 CELL (0, 0) f=0 open=[] sig=0.975
+   91.3 COMPLETE reset
+   91.4 CELL (0, 0) f=0 open=[] sig=0.989
+   91.4 COMPLETE reset
+   91.5 CELL (0, 0) f=0 open=[] sig=0.976
+   91.5 COMPLETE reset
+   91.6 CELL (0, 0) f=0 open=[] sig=0.967
+   91.6 COMPLETE reset
+   91.7 CELL (0, 0) f=0 open=[] sig=0.974
+   91.7 COMPLETE reset
+   91.8 CELL (0, 0) f=0 open=[] sig=0.970
+   91.8 COMPLETE reset
+   91.9 CELL (0, 0) f=0 open=[] sig=0.970
+   91.9 COMPLETE reset
+   92.0 CELL (0, 0) f=0 open=[] sig=0.980
+   92.0 COMPLETE reset
+   92.1 CELL (0, 0) f=0 open=[] sig=0.974
+   92.1 COMPLETE reset
+   92.1 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   92.2 CELL (0, 0) f=0 open=[] sig=0.987
+   92.2 COMPLETE reset
+   92.3 CELL (0, 0) f=0 open=[] sig=0.973
+   92.3 COMPLETE reset
+   92.4 CELL (0, 0) f=0 open=[] sig=0.978
+   92.4 COMPLETE reset
+   92.5 CELL (0, 0) f=0 open=[] sig=0.975
+   92.5 COMPLETE reset
+   92.5 CELL (0, 0) f=0 open=[] sig=0.973
+   92.5 COMPLETE reset
+   92.6 CELL (0, 0) f=0 open=[] sig=0.980
+   92.6 COMPLETE reset
+   92.7 CELL (0, 0) f=0 open=[] sig=0.972
+   92.8 COMPLETE reset
+   92.8 CELL (0, 0) f=0 open=[] sig=0.984
+   92.8 COMPLETE reset
+   92.9 CELL (0, 0) f=0 open=[] sig=0.977
+   92.9 COMPLETE reset
+   93.0 CELL (0, 0) f=0 open=[] sig=0.974
+   93.0 COMPLETE reset
+   93.1 CELL (0, 0) f=0 open=[] sig=0.979
+   93.1 COMPLETE reset
+   93.3 CELL (0, 0) f=0 open=[] sig=0.981
+   93.3 COMPLETE reset
+   93.4 CELL (0, 0) f=0 open=[] sig=0.988
+   93.4 COMPLETE reset
+   93.4 CELL (0, 0) f=0 open=[] sig=0.976
+   93.4 COMPLETE reset
+   93.5 CELL (0, 0) f=0 open=[] sig=0.981
+   93.5 COMPLETE reset
+   93.6 CELL (0, 0) f=0 open=[] sig=0.959
+   93.6 COMPLETE reset
+   93.6 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   93.7 CELL (0, 0) f=0 open=[] sig=0.981
+   93.7 COMPLETE reset
+   93.8 CELL (0, 0) f=0 open=[] sig=0.963
+   93.8 COMPLETE reset
+   93.9 CELL (0, 0) f=0 open=[] sig=0.979
+   93.9 COMPLETE reset
+   94.0 CELL (0, 0) f=0 open=[] sig=0.968
+   94.0 COMPLETE reset
+   94.1 CELL (0, 0) f=0 open=[] sig=0.979
+   94.1 COMPLETE reset
+   94.2 CELL (0, 0) f=0 open=[] sig=0.987
+   94.2 COMPLETE reset
+   94.3 CELL (0, 0) f=0 open=[] sig=0.980
+   94.3 COMPLETE reset
+   94.4 CELL (0, 0) f=0 open=[] sig=0.980
+   94.4 COMPLETE reset
+   94.5 CELL (0, 0) f=0 open=[] sig=0.960
+   94.5 COMPLETE reset
+   94.6 CELL (0, 0) f=0 open=[] sig=0.986
+   94.6 COMPLETE reset
+   94.7 CELL (0, 0) f=0 open=[] sig=0.979
+   94.7 COMPLETE reset
+   94.8 CELL (0, 0) f=0 open=[] sig=0.974
+   94.8 COMPLETE reset
+   94.9 CELL (0, 0) f=0 open=[] sig=0.974
+   94.9 COMPLETE reset
+   95.0 CELL (0, 0) f=0 open=[] sig=0.985
+   95.0 COMPLETE reset
+   95.1 CELL (0, 0) f=0 open=[] sig=0.981
+   95.1 COMPLETE reset
+   95.2 CELL (0, 0) f=0 open=[] sig=0.993
+   95.2 COMPLETE reset
+   95.2 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   95.3 CELL (0, 0) f=0 open=[] sig=0.975
+   95.3 COMPLETE reset
+   95.4 CELL (0, 0) f=0 open=[] sig=0.971
+   95.4 COMPLETE reset
+   95.5 CELL (0, 0) f=0 open=[] sig=0.960
+   95.5 COMPLETE reset
+   95.6 CELL (0, 0) f=0 open=[] sig=0.975
+   95.6 COMPLETE reset
+   95.7 CELL (0, 0) f=0 open=[] sig=0.971
+   95.7 COMPLETE reset
+   95.8 CELL (0, 0) f=0 open=[] sig=0.967
+   95.8 COMPLETE reset
+   95.9 CELL (0, 0) f=0 open=[] sig=0.964
+   95.9 COMPLETE reset
+   96.0 CELL (0, 0) f=0 open=[] sig=0.976
+   96.0 COMPLETE reset
+   96.1 CELL (0, 0) f=0 open=[] sig=0.968
+   96.1 COMPLETE reset
+   96.2 CELL (0, 0) f=0 open=[] sig=0.974
+   96.2 COMPLETE reset
+   96.3 CELL (0, 0) f=0 open=[] sig=0.981
+   96.3 COMPLETE reset
+   96.4 CELL (0, 0) f=0 open=[] sig=0.980
+   96.4 COMPLETE reset
+   96.5 CELL (0, 0) f=0 open=[] sig=0.960
+   96.5 COMPLETE reset
+   96.6 CELL (0, 0) f=0 open=[] sig=0.984
+   96.6 COMPLETE reset
+   96.7 CELL (0, 0) f=0 open=[] sig=0.967
+   96.7 COMPLETE reset
+   96.7 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   96.8 CELL (0, 0) f=0 open=[] sig=0.973
+   96.8 COMPLETE reset
+   96.9 CELL (0, 0) f=0 open=[] sig=0.976
+   96.9 COMPLETE reset
+   97.0 CELL (0, 0) f=0 open=[] sig=0.983
+   97.0 COMPLETE reset
+   97.1 CELL (0, 0) f=0 open=[] sig=0.988
+   97.1 COMPLETE reset
+   97.2 CELL (0, 0) f=0 open=[] sig=0.970
+   97.2 COMPLETE reset
+   97.3 CELL (0, 0) f=0 open=[] sig=0.980
+   97.3 COMPLETE reset
+   97.3 CELL (0, 0) f=0 open=[] sig=0.976
+   97.3 COMPLETE reset
+   97.4 CELL (0, 0) f=0 open=[] sig=0.981
+   97.4 COMPLETE reset
+   97.5 CELL (0, 0) f=0 open=[] sig=0.979
+   97.5 COMPLETE reset
+   97.6 CELL (0, 0) f=0 open=[] sig=0.974
+   97.6 COMPLETE reset
+   97.7 CELL (0, 0) f=0 open=[] sig=0.969
+   97.7 COMPLETE reset
+   97.8 CELL (0, 0) f=0 open=[] sig=0.980
+   97.8 COMPLETE reset
+   97.9 CELL (0, 0) f=0 open=[] sig=0.963
+   97.9 COMPLETE reset
+   98.0 CELL (0, 0) f=0 open=[] sig=0.970
+   98.0 COMPLETE reset
+   98.1 CELL (0, 0) f=0 open=[] sig=0.992
+   98.1 COMPLETE reset
+   98.1 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   98.2 CELL (0, 0) f=0 open=[] sig=0.971
+   98.2 COMPLETE reset
+   98.3 CELL (0, 0) f=0 open=[] sig=0.978
+   98.3 COMPLETE reset
+   98.4 CELL (0, 0) f=0 open=[] sig=0.998
+   98.4 COMPLETE reset
+   98.5 CELL (0, 0) f=0 open=[] sig=0.977
+   98.5 COMPLETE reset
+   98.6 CELL (0, 0) f=0 open=[] sig=0.976
+   98.6 COMPLETE reset
+   98.7 CELL (0, 0) f=0 open=[] sig=0.988
+   98.7 COMPLETE reset
+   98.8 CELL (0, 0) f=0 open=[] sig=0.976
+   98.8 COMPLETE reset
+   98.9 CELL (0, 0) f=0 open=[] sig=0.982
+   98.9 COMPLETE reset
+   99.0 CELL (0, 0) f=0 open=[] sig=0.973
+   99.0 COMPLETE reset
+   99.1 CELL (0, 0) f=0 open=[] sig=0.976
+   99.1 COMPLETE reset
+   99.2 CELL (0, 0) f=0 open=[] sig=0.976
+   99.2 COMPLETE reset
+   99.3 CELL (0, 0) f=0 open=[] sig=0.976
+   99.3 COMPLETE reset
+   99.4 CELL (0, 0) f=0 open=[] sig=0.976
+   99.4 COMPLETE reset
+   99.5 CELL (0, 0) f=0 open=[] sig=0.980
+   99.5 COMPLETE reset
+   99.6 CELL (0, 0) f=0 open=[] sig=0.984
+   99.6 COMPLETE reset
+   99.7 CELL (0, 0) f=0 open=[] sig=0.976
+   99.7 COMPLETE reset
+   99.7 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+   99.8 CELL (0, 0) f=0 open=[] sig=0.991
+   99.8 COMPLETE reset
+   99.9 CELL (0, 0) f=0 open=[] sig=0.975
+   99.9 COMPLETE reset
+  100.0 CELL (0, 0) f=0 open=[] sig=0.974
+  100.0 COMPLETE reset
+  100.1 CELL (0, 0) f=0 open=[] sig=0.957
+  100.1 COMPLETE reset
+  100.2 CELL (0, 0) f=0 open=[] sig=0.965
+  100.2 COMPLETE reset
+  100.3 CELL (0, 0) f=0 open=[] sig=0.971
+  100.3 COMPLETE reset
+  100.4 CELL (0, 0) f=0 open=[] sig=0.989
+  100.4 COMPLETE reset
+  100.5 CELL (0, 0) f=0 open=[] sig=0.980
+  100.5 COMPLETE reset
+  100.6 CELL (0, 0) f=0 open=[] sig=0.963
+  100.6 COMPLETE reset
+  100.7 CELL (0, 0) f=0 open=[] sig=0.984
+  100.7 COMPLETE reset
+  100.8 CELL (0, 0) f=0 open=[] sig=0.974
+  100.8 COMPLETE reset
+  100.9 CELL (0, 0) f=0 open=[] sig=0.970
+  100.9 COMPLETE reset
+  101.0 CELL (0, 0) f=0 open=[] sig=0.965
+  101.0 COMPLETE reset
+  101.1 CELL (0, 0) f=0 open=[] sig=0.969
+  101.1 COMPLETE reset
+  101.1 CELL (0, 0) f=0 open=[] sig=0.982
+  101.1 COMPLETE reset
+  101.1 RX: B: confirm identity - please MOVE/wiggle 0.2m now; I watch my front lidar 0.23. If it changes you are the blob ahead of me.
+  101.3 CELL (0, 0) f=0 open=[] sig=0.966
+  101.3 COMPLETE reset
+  101.3 CELL (0, 0) f=0 open=[] sig=0.971
+  101.3 COMPLETE reset
+  101.4 CELL (0, 0) f=0 open=[] sig=0.968
+  101.4 COMPLETE reset
+  101.5 CELL (0, 0) f=0 open=[] sig=0.983
+  101.5 COMPLETE reset
+  101.6 CELL (0, 0) f=0 open=[] sig=0.983
+  101.6 COMPLETE reset
+  101.7 CELL (0, 0) f=0 open=[] sig=0.985
+  101.7 COMPLETE reset
+  101.8 CELL (0, 0) f=0 open=[] sig=0.998
+  101.8 COMPLETE reset
+  101.9 CELL (0, 0) f=0 open=[] sig=0.988
+  101.9 COMPLETE reset
+  102.0 CELL (0, 0) f=0 open=[] sig=0.978
+  102.0 COMPLETE reset
+  102.1 CELL (0, 0) f=0 open=[] sig=0.967
+  102.1 COMPLETE reset
+  102.2 CELL (0, 0) f=0 open=[] sig=0.985
+  102.2 COMPLETE reset
+  102.3 CELL (0, 0) f=0 open=[] sig=0.986
+  102.3 COMPLETE reset
+  102.4 CELL (0, 0) f=0 open=[] sig=0.965
+  102.4 COMPLETE reset
+  102.5 CELL (0, 0) f=0 open=[] sig=0.969
+  102.5 COMPLETE reset
+  102.6 CELL (0, 0) f=0 open=[] sig=0.973
+  102.6 COMPLETE reset
+  102.8 CELL (0, 0) f=0 open=[] sig=0.970
+  102.8 COMPLETE reset
+  103.0 CELL (0, 0) f=0 open=[] sig=0.975
+  103.0 COMPLETE reset
+  103.1 CELL (0, 0) f=0 open=[] sig=0.979
+  103.1 COMPLETE reset
+  103.2 CELL (0, 0) f=0 open=[] sig=0.980
+  103.2 COMPLETE reset
+  103.3 CELL (0, 0) f=0 open=[] sig=0.980
+  103.3 COMPLETE reset
+  103.3 CELL (0, 0) f=0 open=[] sig=0.958
+  103.3 COMPLETE reset
+  103.4 CELL (0, 0) f=0 open=[] sig=0.980
+  103.4 COMPLETE reset
+  103.5 CELL (0, 0) f=0 open=[] sig=0.968
+  103.5 COMPLETE reset
+  103.7 CELL (0, 0) f=0 open=[] sig=0.979
+  103.7 COMPLETE reset
+  103.8 CELL (0, 0) f=0 open=[] sig=0.971
+  103.8 COMPLETE reset
+  103.9 CELL (0, 0) f=0 open=[] sig=0.980
+  103.9 COMPLETE reset
+  104.0 CELL (0, 0) f=0 open=[] sig=0.981
+  104.0 COMPLETE reset
+  104.1 CELL (0, 0) f=0 open=[] sig=0.967
+  104.1 COMPLETE reset
+  104.2 CELL (0, 0) f=0 open=[] sig=0.973
+  104.2 COMPLETE reset
+  104.2 CELL (0, 0) f=0 open=[] sig=0.965
+  104.2 COMPLETE reset
+  104.4 CELL (0, 0) f=0 open=[] sig=0.987
+  104.4 COMPLETE reset
+  104.4 CELL (0, 0) f=0 open=[] sig=0.986
+  104.4 COMPLETE reset
+  104.5 CELL (0, 0) f=0 open=[] sig=0.966
+  104.5 COMPLETE reset
+  104.7 CELL (0, 0) f=0 open=[] sig=0.965
+  104.7 COMPLETE reset
+  104.8 CELL (0, 0) f=0 open=[] sig=0.974
+  104.8 COMPLETE reset
+  104.8 CELL (0, 0) f=0 open=[] sig=0.980
+  104.8 COMPLETE reset
+  105.0 CELL (0, 0) f=0 open=[] sig=0.977
+  105.0 COMPLETE reset
+  105.1 CELL (0, 0) f=0 open=[] sig=0.964
+  105.1 COMPLETE reset
+  105.2 CELL (0, 0) f=0 open=[] sig=0.967
+  105.2 COMPLETE reset
+  105.3 CELL (0, 0) f=0 open=[] sig=0.967
+  105.3 COMPLETE reset
+  105.4 CELL (0, 0) f=0 open=[] sig=0.977
+  105.4 COMPLETE reset
+  105.4 CELL (0, 0) f=0 open=[] sig=0.978
+  105.4 COMPLETE reset
+  105.5 CELL (0, 0) f=0 open=[] sig=0.988
+  105.5 COMPLETE reset
+  105.6 CELL (0, 0) f=0 open=[] sig=0.975
+  105.6 COMPLETE reset
+  105.7 CELL (0, 0) f=0 open=[] sig=0.968
+  105.7 COMPLETE reset
+  105.8 CELL (0, 0) f=0 open=[] sig=0.987
+  105.8 COMPLETE reset
+  105.9 CELL (0, 0) f=0 open=[] sig=0.982
+  105.9 COMPLETE reset
+  106.0 CELL (0, 0) f=0 open=[] sig=0.979
+  106.0 COMPLETE reset
+  106.1 CELL (0, 0) f=0 open=[] sig=0.972
+  106.1 COMPLETE reset
+  106.2 CELL (0, 0) f=0 open=[] sig=0.980
+  106.2 COMPLETE reset
+  106.3 CELL (0, 0) f=0 open=[] sig=0.986
+  106.3 COMPLETE reset
+  106.4 CELL (0, 0) f=0 open=[] sig=0.963
+  106.4 COMPLETE reset
+  106.5 CELL (0, 0) f=0 open=[] sig=0.982
+  106.5 COMPLETE reset
+  106.6 CELL (0, 0) f=0 open=[] sig=0.966
+  106.6 COMPLETE reset
+  106.7 CELL (0, 0) f=0 open=[] sig=0.991
+  106.7 COMPLETE reset
+  106.8 CELL (0, 0) f=0 open=[] sig=0.988
+  106.8 COMPLETE reset
+  106.9 CELL (0, 0) f=0 open=[] sig=0.979
+  106.9 COMPLETE reset
+  106.9 CELL (0, 0) f=0 open=[] sig=0.969
+  106.9 COMPLETE reset
+  107.1 CELL (0, 0) f=0 open=[] sig=0.976
+  107.1 COMPLETE reset
+  107.2 CELL (0, 0) f=0 open=[] sig=0.984
+  107.2 COMPLETE reset
+  107.2 CELL (0, 0) f=0 open=[] sig=0.967
+  107.2 COMPLETE reset
+  107.3 CELL (0, 0) f=0 open=[] sig=0.981
+  107.3 COMPLETE reset
+  107.4 CELL (0, 0) f=0 open=[] sig=0.993
+  107.4 COMPLETE reset
+  107.5 CELL (0, 0) f=0 open=[] sig=0.975
+  107.5 COMPLETE reset
+  107.6 CELL (0, 0) f=0 open=[] sig=0.975
+  107.6 COMPLETE reset
+  107.7 CELL (0, 0) f=0 open=[] sig=0.975
+  107.7 COMPLETE reset
+  107.8 CELL (0, 0) f=0 open=[] sig=0.973
+  107.8 COMPLETE reset
+  107.9 CELL (0, 0) f=0 open=[] sig=0.970
+  107.9 COMPLETE reset
+  108.0 CELL (0, 0) f=0 open=[] sig=0.996
+  108.0 COMPLETE reset
+  108.1 CELL (0, 0) f=0 open=[] sig=0.971
+  108.1 COMPLETE reset
+  108.2 CELL (0, 0) f=0 open=[] sig=0.984
+  108.2 COMPLETE reset
+  108.3 CELL (0, 0) f=0 open=[] sig=0.970
+  108.3 COMPLETE reset
+  108.4 CELL (0, 0) f=0 open=[] sig=0.966
+  108.4 COMPLETE reset
+  108.5 CELL (0, 0) f=0 open=[] sig=0.972
+  108.5 COMPLETE reset
+  108.6 CELL (0, 0) f=0 open=[] sig=0.974
+  108.6 COMPLETE reset
+  108.7 CELL (0, 0) f=0 open=[] sig=0.964
+  108.7 COMPLETE reset
+  108.8 CELL (0, 0) f=0 open=[] sig=0.986
+  108.8 COMPLETE reset
+  108.8 CELL (0, 0) f=0 open=[] sig=0.977
+  108.8 COMPLETE reset
+  108.9 CELL (0, 0) f=0 open=[] sig=0.976
+  108.9 COMPLETE reset
+  109.1 CELL (0, 0) f=0 open=[] sig=0.972
+  109.1 COMPLETE reset
+  109.2 CELL (0, 0) f=0 open=[] sig=0.989
+  109.2 COMPLETE reset
+  109.3 CELL (0, 0) f=0 open=[] sig=0.981
+  109.3 COMPLETE reset
+  109.4 CELL (0, 0) f=0 open=[] sig=0.978
+  109.4 COMPLETE reset
+  109.5 CELL (0, 0) f=0 open=[] sig=0.985
+  109.5 COMPLETE reset
+  109.5 CELL (0, 0) f=0 open=[] sig=0.973
+  109.5 COMPLETE reset
+  109.6 CELL (0, 0) f=0 open=[] sig=0.984
+  109.6 COMPLETE reset
+  109.8 CELL (0, 0) f=0 open=[] sig=0.963
+  109.8 COMPLETE reset
+  109.9 CELL (0, 0) f=0 open=[] sig=0.994
+  109.9 COMPLETE reset
+  110.0 CELL (0, 0) f=0 open=[] sig=0.987
+  110.0 COMPLETE reset
+  110.1 CELL (0, 0) f=0 open=[] sig=0.966
+  110.1 COMPLETE reset
+  110.2 CELL (0, 0) f=0 open=[] sig=0.959
+  110.2 COMPLETE reset
+  110.2 CELL (0, 0) f=0 open=[] sig=0.979
+  110.2 COMPLETE reset
+  110.3 CELL (0, 0) f=0 open=[] sig=0.991
+  110.3 COMPLETE reset
+  110.4 CELL (0, 0) f=0 open=[] sig=0.968
+  110.4 COMPLETE reset
+  110.5 CELL (0, 0) f=0 open=[] sig=0.993
+  110.5 COMPLETE reset
+  110.6 CELL (0, 0) f=0 open=[] sig=0.988
+  110.6 COMPLETE reset
+  110.7 CELL (0, 0) f=0 open=[] sig=0.973
+  110.7 COMPLETE reset
+  110.8 CELL (0, 0) f=0 open=[] sig=0.987
+  110.8 COMPLETE reset
+  110.9 CELL (0, 0) f=0 open=[] sig=0.988
+  110.9 COMPLETE reset
+  111.0 CELL (0, 0) f=0 open=[] sig=0.979
+  111.0 COMPLETE reset
+  111.1 CELL (0, 0) f=0 open=[] sig=0.976
+  111.1 COMPLETE reset
+  111.2 CELL (0, 0) f=0 open=[] sig=0.984
+  111.2 COMPLETE reset
+  111.3 CELL (0, 0) f=0 open=[] sig=0.965
+  111.3 COMPLETE reset
+  111.4 CELL (0, 0) f=0 open=[] sig=0.961
+  111.4 COMPLETE reset
+  111.5 CELL (0, 0) f=0 open=[] sig=0.975
+  111.5 COMPLETE reset
+  111.6 CELL (0, 0) f=0 open=[] sig=0.980
+  111.6 COMPLETE reset
+  111.7 CELL (0, 0) f=0 open=[] sig=0.980
+  111.7 COMPLETE reset
+  111.8 CELL (0, 0) f=0 open=[] sig=0.978
+  111.8 COMPLETE reset
+  111.9 CELL (0, 0) f=0 open=[] sig=0.965
+  111.9 COMPLETE reset
+  112.0 CELL (0, 0) f=0 open=[] sig=0.984
+  112.0 COMPLETE reset
+  112.1 CELL (0, 0) f=0 open=[] sig=0.980
+  112.1 COMPLETE reset
+  112.2 CELL (0, 0) f=0 open=[] sig=0.972
+  112.2 COMPLETE reset
+  112.3 CELL (0, 0) f=0 open=[] sig=0.962
+  112.3 COMPLETE reset
+  112.4 CELL (0, 0) f=0 open=[] sig=0.958
+  112.4 COMPLETE reset
+  112.5 CELL (0, 0) f=0 open=[] sig=0.962
+  112.5 COMPLETE reset
+  112.6 CELL (0, 0) f=0 open=[] sig=0.975
+  112.6 COMPLETE reset
+  112.7 CELL (0, 0) f=0 open=[] sig=0.978
+  112.7 COMPLETE reset
+  112.7 CELL (0, 0) f=0 open=[] sig=0.977
+  112.7 COMPLETE reset
+  112.8 CELL (0, 0) f=0 open=[] sig=0.996
+  112.8 COMPLETE reset
+  112.9 CELL (0, 0) f=0 open=[] sig=0.973
+  112.9 COMPLETE reset
+  113.0 CELL (0, 0) f=0 open=[] sig=0.979
+  113.0 COMPLETE reset
+  113.1 CELL (0, 0) f=0 open=[] sig=0.976
+  113.1 COMPLETE reset
+  113.2 CELL (0, 0) f=0 open=[] sig=0.986
+  113.2 COMPLETE reset
+  113.3 CELL (0, 0) f=0 open=[] sig=0.976
+  113.3 COMPLETE reset
+  113.4 CELL (0, 0) f=0 open=[] sig=0.975
+  113.4 COMPLETE reset
+  113.5 CELL (0, 0) f=0 open=[] sig=0.963
+  113.5 COMPLETE reset
+  113.6 CELL (0, 0) f=0 open=[] sig=0.977
+  113.6 COMPLETE reset
+  113.7 CELL (0, 0) f=0 open=[] sig=0.985
+  113.7 COMPLETE reset
+  113.8 CELL (0, 0) f=0 open=[] sig=0.978
+  113.8 COMPLETE reset
+  113.9 CELL (0, 0) f=0 open=[] sig=0.976
+  113.9 COMPLETE reset
+  114.0 CELL (0, 0) f=0 open=[] sig=0.967
+  114.0 COMPLETE reset
+  114.1 CELL (0, 0) f=0 open=[] sig=0.974
+  114.1 COMPLETE reset
+  114.2 CELL (0, 0) f=0 open=[] sig=0.975
+  114.2 COMPLETE reset
+  114.3 CELL (0, 0) f=0 open=[] sig=0.978
+  114.3 COMPLETE reset
+  114.4 CELL (0, 0) f=0 open=[] sig=0.967
+  114.4 COMPLETE reset
+  114.5 CELL (0, 0) f=0 open=[] sig=0.986
+  114.5 COMPLETE reset
+  114.6 CELL (0, 0) f=0 open=[] sig=0.981
+  114.6 COMPLETE reset
+  114.7 CELL (0, 0) f=0 open=[] sig=0.967
+  114.7 COMPLETE reset
+  114.8 CELL (0, 0) f=0 open=[] sig=0.972
+  114.8 COMPLETE reset
+  114.9 CELL (0, 0) f=0 open=[] sig=0.982
+  114.9 COMPLETE reset
+  115.0 CELL (0, 0) f=0 open=[] sig=0.967
+  115.0 COMPLETE reset
+  115.1 CELL (0, 0) f=0 open=[] sig=0.977
+  115.1 COMPLETE reset
+  115.2 CELL (0, 0) f=0 open=[] sig=0.970
+  115.2 COMPLETE reset
+  115.3 CELL (0, 0) f=0 open=[] sig=0.986
+  115.3 COMPLETE reset
+  115.4 CELL (0, 0) f=0 open=[] sig=0.993
+  115.4 COMPLETE reset
+  115.5 CELL (0, 0) f=0 open=[] sig=0.965
+  115.5 COMPLETE reset
+  115.6 CELL (0, 0) f=0 open=[] sig=0.955
+  115.6 COMPLETE reset
+  115.7 CELL (0, 0) f=0 open=[] sig=0.965
+  115.7 COMPLETE reset
+  115.8 CELL (0, 0) f=0 open=[] sig=0.972
+  115.8 COMPLETE reset
+  115.8 CELL (0, 0) f=0 open=[] sig=0.981
+  115.8 COMPLETE reset
+  115.9 CELL (0, 0) f=0 open=[] sig=0.974
+  115.9 COMPLETE reset
+  116.1 CELL (0, 0) f=0 open=[] sig=0.983
+  116.1 COMPLETE reset
+  116.1 CELL (0, 0) f=0 open=[] sig=0.967
+  116.1 COMPLETE reset
+  116.3 CELL (0, 0) f=0 open=[] sig=0.982
+  116.3 COMPLETE reset
+  116.3 CELL (0, 0) f=0 open=[] sig=0.981
+  116.3 COMPLETE reset
+  116.4 CELL (0, 0) f=0 open=[] sig=0.980
+  116.4 COMPLETE reset
+  116.5 CELL (0, 0) f=0 open=[] sig=0.983
+  116.5 COMPLETE reset
+  116.6 CELL (0, 0) f=0 open=[] sig=0.978
+  116.6 COMPLETE reset
+  116.7 CELL (0, 0) f=0 open=[] sig=1.000
+  116.7 COMPLETE reset
+  116.8 CELL (0, 0) f=0 open=[] sig=0.979
+  116.8 COMPLETE reset
+  116.9 CELL (0, 0) f=0 open=[] sig=0.987
+  116.9 COMPLETE reset
+  117.0 CELL (0, 0) f=0 open=[] sig=0.984
+  117.0 COMPLETE reset
+  117.1 CELL (0, 0) f=0 open=[] sig=0.983
+  117.1 COMPLETE reset
+  117.2 CELL (0, 0) f=0 open=[] sig=0.975
+  117.2 COMPLETE reset
+  117.3 CELL (0, 0) f=0 open=[] sig=0.968
+  117.3 COMPLETE reset
+  117.4 CELL (0, 0) f=0 open=[] sig=0.982
+  117.4 COMPLETE reset
+  117.5 CELL (0, 0) f=0 open=[] sig=0.970
+  117.5 COMPLETE reset
+  117.6 CELL (0, 0) f=0 open=[] sig=0.981
+  117.6 COMPLETE reset
+  117.7 CELL (0, 0) f=0 open=[] sig=0.991
+  117.7 COMPLETE reset
+  117.8 CELL (0, 0) f=0 open=[] sig=0.978
+  117.8 COMPLETE reset
+  117.9 CELL (0, 0) f=0 open=[] sig=0.960
+  117.9 COMPLETE reset
+  117.9 CELL (0, 0) f=0 open=[] sig=0.982
+  117.9 COMPLETE reset
+  118.0 CELL (0, 0) f=0 open=[] sig=0.975
+  118.0 COMPLETE reset
+  118.1 CELL (0, 0) f=0 open=[] sig=0.966
+  118.1 COMPLETE reset
+  118.2 CELL (0, 0) f=0 open=[] sig=0.960
+  118.2 COMPLETE reset
+  118.3 CELL (0, 0) f=0 open=[] sig=0.982
+  118.3 COMPLETE reset
+  118.4 CELL (0, 0) f=0 open=[] sig=0.972
+  118.4 COMPLETE reset
+  118.5 CELL (0, 0) f=0 open=[] sig=0.985
+  118.5 COMPLETE reset
+  118.6 CELL (0, 0) f=0 open=[] sig=0.966
+  118.6 COMPLETE reset
+  118.7 CELL (0, 0) f=0 open=[] sig=0.975
+  118.7 COMPLETE reset
+  118.8 CELL (0, 0) f=0 open=[] sig=0.974
+  118.8 COMPLETE reset
+  118.9 CELL (0, 0) f=0 open=[] sig=0.981
+  118.9 COMPLETE reset
+  119.0 CELL (0, 0) f=0 open=[] sig=0.967
+  119.0 COMPLETE reset
+  119.1 CELL (0, 0) f=0 open=[] sig=0.986
+  119.1 COMPLETE reset
+  119.2 CELL (0, 0) f=0 open=[] sig=0.989
+  119.2 COMPLETE reset
+  119.3 CELL (0, 0) f=0 open=[] sig=0.973
+  119.3 COMPLETE reset
+  119.4 CELL (0, 0) f=0 open=[] sig=0.971
+  119.4 COMPLETE reset
+  119.5 CELL (0, 0) f=0 open=[] sig=0.972
+  119.5 COMPLETE reset
+  119.6 CELL (0, 0) f=0 open=[] sig=0.974
+  119.6 COMPLETE reset
+  119.6 CELL (0, 0) f=0 open=[] sig=0.968
+  119.6 COMPLETE reset
+  119.8 CELL (0, 0) f=0 open=[] sig=0.969
+  119.8 COMPLETE reset
+  119.9 CELL (0, 0) f=0 open=[] sig=0.972
+  119.9 COMPLETE reset
+  119.9 CELL (0, 0) f=0 open=[] sig=0.968
+  119.9 COMPLETE reset
+  120.0 CELL (0, 0) f=0 open=[] sig=0.984
+  120.0 COMPLETE reset
+  120.1 CELL (0, 0) f=0 open=[] sig=0.973
+  120.1 COMPLETE reset
+  120.2 CELL (0, 0) f=0 open=[] sig=0.974
+  120.2 COMPLETE reset
+  120.3 CELL (0, 0) f=0 open=[] sig=0.980
+  120.3 COMPLETE reset
+  120.4 CELL (0, 0) f=0 open=[] sig=0.979
+  120.4 COMPLETE reset
+  120.5 CELL (0, 0) f=0 open=[] sig=0.976
+  120.5 COMPLETE reset
+  120.6 CELL (0, 0) f=0 open=[] sig=0.963
+  120.6 COMPLETE reset
+  120.8 CELL (0, 0) f=0 open=[] sig=0.988
+  120.8 COMPLETE reset
+  120.9 CELL (0, 0) f=0 open=[] sig=0.976
+  120.9 COMPLETE reset
+  121.0 CELL (0, 0) f=0 open=[] sig=0.982
+  121.0 COMPLETE reset
+  121.1 CELL (0, 0) f=0 open=[] sig=0.980
+  121.1 COMPLETE reset
+  121.2 CELL (0, 0) f=0 open=[] sig=0.975
+  121.2 COMPLETE reset
+  121.3 CELL (0, 0) f=0 open=[] sig=0.970
+  121.3 COMPLETE reset
+  121.4 CELL (0, 0) f=0 open=[] sig=0.986
+  121.4 COMPLETE reset
+  121.5 CELL (0, 0) f=0 open=[] sig=0.977
+  121.5 COMPLETE reset
+  121.6 CELL (0, 0) f=0 open=[] sig=0.981
+  121.6 COMPLETE reset
+  121.7 CELL (0, 0) f=0 open=[] sig=0.989
+  121.7 COMPLETE reset
+  121.8 CELL (0, 0) f=0 open=[] sig=0.981
+  121.8 COMPLETE reset
+  121.9 CELL (0, 0) f=0 open=[] sig=0.973
+  121.9 COMPLETE reset
+  121.9 CELL (0, 0) f=0 open=[] sig=0.982
+  121.9 COMPLETE reset
+  122.0 CELL (0, 0) f=0 open=[] sig=0.982
+  122.0 COMPLETE reset
+  122.1 CELL (0, 0) f=0 open=[] sig=0.958
+  122.1 COMPLETE reset
+  122.2 CELL (0, 0) f=0 open=[] sig=0.987
+  122.2 COMPLETE reset
+  122.3 CELL (0, 0) f=0 open=[] sig=0.977
+  122.3 COMPLETE reset
+  122.4 CELL (0, 0) f=0 open=[] sig=0.971
+  122.4 COMPLETE reset
+  122.5 CELL (0, 0) f=0 open=[] sig=0.979
+  122.5 COMPLETE reset
+  122.6 CELL (0, 0) f=0 open=[] sig=0.979
+  122.6 COMPLETE reset
+  122.7 CELL (0, 0) f=0 open=[] sig=0.975
+  122.7 COMPLETE reset
+  122.8 CELL (0, 0) f=0 open=[] sig=0.978
+  122.8 COMPLETE reset
+  122.9 CELL (0, 0) f=0 open=[] sig=0.967
+  122.9 COMPLETE reset
+  123.0 CELL (0, 0) f=0 open=[] sig=0.976
+  123.0 COMPLETE reset
+  123.1 CELL (0, 0) f=0 open=[] sig=0.983
+  123.1 COMPLETE reset
+  123.2 CELL (0, 0) f=0 open=[] sig=0.968
+  123.2 COMPLETE reset
+  123.3 CELL (0, 0) f=0 open=[] sig=0.973
+  123.3 COMPLETE reset
+  123.3 CELL (0, 0) f=0 open=[] sig=0.995
+  123.3 COMPLETE reset
+  123.5 CELL (0, 0) f=0 open=[] sig=0.984
+  123.5 COMPLETE reset
+  123.5 CELL (0, 0) f=0 open=[] sig=0.994
+  123.5 COMPLETE reset
+  123.6 CELL (0, 0) f=0 open=[] sig=0.977
+  123.6 COMPLETE reset
+  123.7 CELL (0, 0) f=0 open=[] sig=0.981
+  123.7 COMPLETE reset
+  123.8 CELL (0, 0) f=0 open=[] sig=0.989
+  123.8 COMPLETE reset
+  123.9 CELL (0, 0) f=0 open=[] sig=0.982
+  123.9 COMPLETE reset
+  124.0 CELL (0, 0) f=0 open=[] sig=0.973
+  124.0 COMPLETE reset
+  124.1 CELL (0, 0) f=0 open=[] sig=0.979
+  124.1 COMPLETE reset
+  124.2 CELL (0, 0) f=0 open=[] sig=0.966
+  124.2 COMPLETE reset
+  124.3 CELL (0, 0) f=0 open=[] sig=0.965
+  124.3 COMPLETE reset
+  124.4 CELL (0, 0) f=0 open=[] sig=0.984
+  124.4 COMPLETE reset
+  124.5 CELL (0, 0) f=0 open=[] sig=0.983
+  124.5 COMPLETE reset
+  124.6 CELL (0, 0) f=0 open=[] sig=0.971
+  124.6 COMPLETE reset
+  124.7 CELL (0, 0) f=0 open=[] sig=0.985
+  124.7 COMPLETE reset
+  124.8 CELL (0, 0) f=0 open=[] sig=0.990
+  124.8 COMPLETE reset
+  124.9 CELL (0, 0) f=0 open=[] sig=0.987
+  124.9 COMPLETE reset
+  125.0 CELL (0, 0) f=0 open=[] sig=0.987
+  125.0 COMPLETE reset
+  125.1 CELL (0, 0) f=0 open=[] sig=0.976
+  125.1 COMPLETE reset
+  125.2 CELL (0, 0) f=0 open=[] sig=0.983
+  125.2 COMPLETE reset
+  125.3 CELL (0, 0) f=0 open=[] sig=0.993
+  125.3 COMPLETE reset
+  125.3 CELL (0, 0) f=0 open=[] sig=0.986
+  125.3 COMPLETE reset
+  125.4 CELL (0, 0) f=0 open=[] sig=0.979
+  125.4 COMPLETE reset
+  125.5 CELL (0, 0) f=0 open=[] sig=0.977
+  125.5 COMPLETE reset
+  125.7 CELL (0, 0) f=0 open=[] sig=0.961
+  125.7 COMPLETE reset
+  125.8 CELL (0, 0) f=0 open=[] sig=0.969
+  125.8 COMPLETE reset
+  125.9 CELL (0, 0) f=0 open=[] sig=0.979
+  125.9 COMPLETE reset
+  125.9 CELL (0, 0) f=0 open=[] sig=0.977
+  125.9 COMPLETE reset
+  126.0 CELL (0, 0) f=0 open=[] sig=0.989
+  126.0 COMPLETE reset
+  126.2 CELL (0, 0) f=0 open=[] sig=0.971
+  126.2 COMPLETE reset
+  126.2 CELL (0, 0) f=0 open=[] sig=0.977
+  126.2 COMPLETE reset
+  126.3 CELL (0, 0) f=0 open=[] sig=0.978
+  126.3 COMPLETE reset
+  126.4 CELL (0, 0) f=0 open=[] sig=0.970
+  126.4 COMPLETE reset
+  126.5 CELL (0, 0) f=0 open=[] sig=0.971
+  126.5 COMPLETE reset
+  126.6 CELL (0, 0) f=0 open=[] sig=0.984
+  126.6 COMPLETE reset
+  126.7 CELL (0, 0) f=0 open=[] sig=0.987
+  126.7 COMPLETE reset
+  126.8 CELL (0, 0) f=0 open=[] sig=0.981
+  126.8 COMPLETE reset
+  126.9 CELL (0, 0) f=0 open=[] sig=0.973
+  126.9 COMPLETE reset
+  127.0 CELL (0, 0) f=0 open=[] sig=0.980
+  127.0 COMPLETE reset
+  127.2 CELL (0, 0) f=0 open=[] sig=0.975
+  127.2 COMPLETE reset
+  127.3 CELL (0, 0) f=0 open=[] sig=0.992
+  127.3 COMPLETE reset
+  127.3 RX: B: wall between us, sig 0.97. Route around to my corridor; I HOLD STILL.
+  127.4 CELL (0, 0) f=0 open=[] sig=0.982
+  127.4 COMPLETE reset
+  127.5 CELL (0, 0) f=0 open=[] sig=0.970
+  127.5 COMPLETE reset
+  127.6 CELL (0, 0) f=0 open=[] sig=0.978
+  127.6 COMPLETE reset
+  127.7 CELL (0, 0) f=0 open=[] sig=0.967
+  127.7 COMPLETE reset
+  127.8 CELL (0, 0) f=0 open=[] sig=0.979
+  127.8 COMPLETE reset
+  127.9 CELL (0, 0) f=0 open=[] sig=0.981
+  127.9 COMPLETE reset
+  128.0 CELL (0, 0) f=0 open=[] sig=0.972
+  128.0 COMPLETE reset
+  128.1 CELL (0, 0) f=0 open=[] sig=0.982
+  128.1 COMPLETE reset
+  128.2 CELL (0, 0) f=0 open=[] sig=0.978
+  128.2 COMPLETE reset
+  128.3 CELL (0, 0) f=0 open=[] sig=0.968
+  128.3 COMPLETE reset
+  128.4 CELL (0, 0) f=0 open=[] sig=0.960
+  128.4 COMPLETE reset
+  128.5 CELL (0, 0) f=0 open=[] sig=0.970
+  128.5 COMPLETE reset
+  128.6 CELL (0, 0) f=0 open=[] sig=0.980
+  128.6 COMPLETE reset
+  128.7 CELL (0, 0) f=0 open=[] sig=0.978
+  128.7 COMPLETE reset
+  128.8 CELL (0, 0) f=0 open=[] sig=0.978
+  128.8 COMPLETE reset
+  128.9 CELL (0, 0) f=0 open=[] sig=0.972
+  128.9 COMPLETE reset
+  129.0 CELL (0, 0) f=0 open=[] sig=0.991
+  129.0 COMPLETE reset
+  129.1 CELL (0, 0) f=0 open=[] sig=0.976
+  129.1 COMPLETE reset
+  129.2 CELL (0, 0) f=0 open=[] sig=0.981
+  129.2 COMPLETE reset
+  129.3 CELL (0, 0) f=0 open=[] sig=0.981
+  129.3 COMPLETE reset
+  129.3 RX: B info: I explored ~100 cells + full left-wall circuit. d7 always 0, d9 goal always 0. No goal seen.
+  129.4 CELL (0, 0) f=0 open=[] sig=0.985
+  129.4 COMPLETE reset
+  129.5 CELL (0, 0) f=0 open=[] sig=0.983
+  129.5 COMPLETE reset
+  129.6 CELL (0, 0) f=0 open=[] sig=0.976
+  129.6 COMPLETE reset
+  129.7 CELL (0, 0) f=0 open=[] sig=0.961
+  129.7 COMPLETE reset
+  129.9 CELL (0, 0) f=0 open=[] sig=0.982
+  129.9 COMPLETE reset
+  130.0 CELL (0, 0) f=0 open=[] sig=0.984
+  130.0 COMPLETE reset
+    0.0 AROUND start
+    0.0 RX: B: when you reach me (blob in your lidar, front<0.3, sig>0.95 same corridor) say LEADING; then explore, I tail your blob.
+    0.0 RX: B: wall between us, sig 0.97. Route around to my corridor; I HOLD STILL.
+    0.4 RX: B info: I explored ~100 cells + full left-wall circuit. d7 always 0, d9 goal always 0. No goal seen.
+    0.4 RX: B asks: have you seen ANY unusual cell / sensor change? Reply info pls.
+    0.4 RX: B: when you reach me (blob in your lidar, front<0.3, sig>0.95 same corridor) say LEADING; then explore, I tail your blob.
+    0.4 RX: B: wall between us, sig 0.97. Route around to my corridor; I HOLD STILL.
+    0.4 RX: B info: I explored ~100 cells + full left-wall circuit. d7 always 0, d9 goal always 0. No goal seen.
+    0.4 RX: B asks: have you seen ANY unusual cell / sensor change? Reply info pls.
+    0.4 RX: B: when you reach me (blob in your lidar, front<0.3, sig>0.95 same corridor) say LEADING; then explore, I tail your blob.
+    0.4 RX: B: wall between us, sig 0.97. Route around to my corridor; I HOLD STILL.
+    0.4 RX: B info: I explored ~100 cells + full left-wall circuit. d7 always 0, d9 goal always 0. No goal seen.
+    0.4 RX: B asks: have you seen ANY unusual cell / sensor change? Reply info pls.
+    0.7 RX: B: when you reach me (blob in your lidar, front<0.3, sig>0.95 same corridor) say LEADING; then explore, I tail your blob.
+    0.7 RX: B: NO, my front 0.23 did not move - it is a wall. Wiggle AGAIN 5s; I watch all 16 beams now.
+    2.6 RX: B: beam diffs ['0.02', '0.02', '0.01', '0.03', '0.02', '0.02', '0.02', '0.02', '0.02', '0.03', '0.01', '0.02', '0.02', '0.01', '0.02', '0.31']
+    9.8 AROUND: d0 SIGHT!
+   10.0 AROUND: d0 SIGHT!
+   10.4 AROUND: d0 SIGHT!
+   10.6 AROUND: d0 SIGHT!
+   10.8 AROUND: d0 SIGHT!
+   11.1 AROUND: d0 SIGHT!
+   11.5 AROUND: d0 SIGHT!
+   12.1 AROUND: d0 SIGHT!
+   12.8 AROUND: d0 SIGHT!
+   12.9 AROUND: d0 SIGHT!
+   13.4 AROUND: d0 SIGHT!
+   14.0 AROUND: d0 SIGHT!
+   14.4 AROUND: d0 SIGHT!
+   15.1 AROUND: d0 SIGHT!
+   15.5 AROUND: d0 SIGHT!
+   16.0 AROUND: d0 SIGHT!
+   16.1 AROUND: d0 SIGHT!
+   16.6 AROUND: d0 SIGHT!
+   17.1 AROUND: d0 SIGHT!
+   17.2 AROUND: d0 SIGHT!
+   17.7 AROUND: d0 SIGHT!
+   18.1 AROUND: d0 SIGHT!
+   18.3 AROUND: d0 SIGHT!
+   18.7 AROUND: d0 SIGHT!
+   19.2 AROUND: d0 SIGHT!
+   19.5 RX: B HOLDING, watching for your blob. beam15 (NNE of me) flickered during wiggle - you are just N/NE behind my wall.
+   19.7 AROUND: d0 SIGHT!
+   19.9 AROUND: d0 SIGHT!
+   20.6 AROUND: d0 SIGHT!
+   20.8 AROUND: d0 SIGHT!
+   21.2 AROUND: d0 SIGHT!
+   21.4 RX: B: I see movement beams [(15, 0.43)] s=1.0
+   21.4 AROUND: d0 SIGHT!
+   21.8 AROUND: d0 SIGHT!
+   22.0 RX: B: I see movement beams [(15, 0.44)] s=0.991
+   22.0 AROUND: d0 SIGHT!
+   22.6 RX: B: I see movement beams [(15, 0.43)] s=0.994
+   22.8 AROUND: d0 SIGHT!
+   23.1 RX: B: I see movement beams [(15, 0.43)] s=0.988
+   23.3 AROUND: d0 SIGHT!
+   23.4 RX: B: I see movement beams [(15, 0.44)] s=0.996
+   23.4 AROUND: d0 SIGHT!
+   23.6 AROUND: d0 SIGHT!
+   23.9 RX: B: I see movement beams [(15, 0.46)] s=0.991
+   24.1 AROUND: d0 SIGHT!
+   24.5 RX: B: I see movement beams [(15, 0.44)] s=0.988
+   24.5 AROUND: d0 SIGHT!
+   24.7 AROUND: d0 SIGHT!
+   25.0 RX: B: I see movement beams [(15, 0.43)] s=0.998
+   25.5 RX: B: I see movement beams [(15, 0.44)] s=1.0
+   25.5 AROUND: d0 SIGHT!
+   25.6 AROUND: d0 SIGHT!
+   26.0 RX: B: I see movement beams [(15, 0.43)] s=0.997
+   26.1 AROUND: d0 SIGHT!
+   26.6 RX: B: I see movement beams [(15, 0.44)] s=0.971
+   26.6 AROUND: d0 SIGHT!
+   26.7 AROUND: d0 SIGHT!
+   27.0 RX: B: I see movement beams [(15, 0.44)] s=0.996
+   27.2 AROUND: d0 SIGHT!
+   27.5 RX: B: I see movement beams [(15, 0.44)] s=1.0
+   27.6 AROUND: d0 SIGHT!
+   28.1 RX: B: I see movement beams [(15, 0.46)] s=0.982
+   28.1 AROUND: d0 SIGHT!
+   28.2 AROUND: d0 SIGHT!
+   28.5 RX: B: I see movement beams [(15, 0.43)] s=0.992
+   29.0 RX: B: I see movement beams [(15, 0.45)] s=0.997
+   29.0 AROUND: d0 SIGHT!
+   29.2 AROUND: d0 SIGHT!
+   29.7 RX: B: I see movement beams [(15, 0.44)] s=0.997
+   29.7 AROUND: d0 SIGHT!
+   29.8 AROUND: d0 SIGHT!
+   30.1 RX: B: I see movement beams [(15, 0.43)] s=0.98
+   30.6 RX: B: I see movement beams [(15, 0.43)] s=0.992
+   30.6 AROUND: d0 SIGHT!
+   30.8 AROUND: d0 SIGHT!
+   31.0 RX: B: I see movement beams [(15, 0.43)] s=0.995
+   31.2 AROUND: d0 SIGHT!
+   31.6 RX: B: I see movement beams [(15, 0.43)] s=0.985
+   31.7 AROUND: d0 SIGHT!
+   31.9 AROUND: d0 SIGHT!
+   32.2 RX: B: I see movement beams [(15, 0.45)] s=0.991
+   32.6 RX: B: I see movement beams [(15, 0.43)] s=0.986
+   32.6 AROUND: d0 SIGHT!
+   33.2 RX: B: I see movement beams [(15, 0.45)] s=0.977
+   33.8 RX: B: I see movement beams [(15, 0.42)] s=0.991
+   34.2 RX: B: I see movement beams [(15, 0.43)] s=1.0
+   34.8 RX: B: I see movement beams [(15, 0.44)] s=0.998
+   35.1 RX: B: I see movement beams [(15, 0.44)] s=0.99
+   35.7 RX: B: I see movement beams [(15, 0.44)] s=0.976
+   36.3 RX: B: I see movement beams [(15, 0.44)] s=0.984
+   36.7 RX: B: I see movement beams [(15, 0.43)] s=0.98
+   37.3 RX: B: I see movement beams [(15, 0.44)] s=0.988
+   37.9 RX: B: I see movement beams [(15, 0.44)] s=0.991
+   38.2 RX: B: I see movement beams [(15, 0.43)] s=1.0
+   38.8 RX: B: I see movement beams [(15, 0.42)] s=0.99
+   39.4 RX: B: I see movement beams [(15, 0.43)] s=0.998
+   39.7 RX: B: I see movement beams [(15, 0.45)] s=0.99
+   39.9 AROUND: d0 SIGHT!
+   40.1 AROUND: d0 SIGHT!
+   40.2 RX: B: I see movement beams [(15, 0.45)] s=1.0
+   40.2 AROUND: d0 SIGHT!
+   40.8 RX: B: I see movement beams [(15, 0.45)] s=0.997
+   41.3 RX: B: I see movement beams [(15, 0.45)] s=0.995
+   41.8 RX: B: I see movement beams [(15, 0.44)] s=0.983
+   42.4 RX: B: I see movement beams [(15, 0.44)] s=0.972
+   42.8 RX: B: I see movement beams [(15, 0.45)] s=0.993
+   43.9 RX: B: I see movement beams [(13, 0.17)] s=0.974
+   44.3 RX: B: I see movement beams [(13, 0.17)] s=0.983
+   44.8 RX: B: I see movement beams [(13, 0.19)] s=0.984
+   45.4 RX: B: I see movement beams [(13, 0.18), (14, 0.37)] s=0.98
+   46.0 RX: B: I see movement beams [(13, 0.19), (14, 0.39)] s=0.979
+   46.5 RX: B: I see movement beams [(13, 0.16), (14, 0.37)] s=0.985
+   47.0 RX: B: I see movement beams [(13, 0.16), (14, 0.37)] s=0.982
+   47.4 RX: B: I see movement beams [(0, -0.25), (13, 0.16), (14, 0.38)] s=0.971
+   48.0 RX: B: I see movement beams [(0, -0.26), (13, 0.18), (14, 0.37)] s=0.97
+   48.6 RX: B: I see movement beams [(0, -0.3), (13, 0.16), (14, 0.35)] s=0.988
+   49.0 RX: B: I see movement beams [(0, -0.28), (13, 0.19), (14, 0.38), (15, 0.12)] s=0.965
+   49.6 RX: B: I see movement beams [(0, -0.29), (13, 0.17), (14, 0.36), (15, 0.14)] s=0.976
+   50.2 RX: B: I see movement beams [(0, -0.27), (13, 0.17), (14, 0.37), (15, 0.15)] s=0.978
+   50.5 RX: B: I see movement beams [(0, -0.28), (13, 0.17), (14, 0.37), (15, 0.15)] s=0.98
+   51.0 RX: B: I see movement beams [(0, -0.28), (13, 0.17), (14, 0.36), (15, 0.13)] s=0.978
+   51.7 RX: B: I see movement beams [(0, -0.31), (13, 0.14), (14, 0.38), (15, 0.13)] s=0.977
+   52.0 RX: B: I see movement beams [(0, -0.31), (13, 0.16), (14, 0.37), (15, 0.44)] s=0.975
+   52.5 RX: B: I see movement beams [(0, -0.35), (13, 0.18), (14, 0.38), (15, 0.45)] s=0.982
+   53.1 RX: B: I see movement beams [(0, -0.34), (13, 0.17), (14, 0.38), (15, 0.44)] s=0.981
+   53.6 RX: B: I see movement beams [(0, -0.37), (1, -0.32), (13, 0.16), (14, 0.38), (15, 0.43)] s=0.985
+   54.1 RX: B: I see movement beams [(0, -0.39), (1, -0.34), (13, 0.18), (14, 0.37), (15, 0.43)] s=0.98
+   54.7 RX: B: I see movement beams [(0, -0.35), (1, -0.31), (13, 0.17), (14, 0.38), (15, 0.43)] s=0.97
+   55.0 RX: B: I see movement beams [(0, -0.36), (1, -0.32), (13, 0.17), (14, 0.36), (15, 0.45)] s=0.981
+   55.7 RX: B: I see movement beams [(0, -0.36), (1, -0.31), (13, 0.18), (14, 0.37), (15, 0.46)] s=0.993
+   56.3 RX: B: I see movement beams [(0, -0.39), (1, -0.31), (13, 0.17), (14, 0.38), (15, 0.44)] s=0.98
+   56.6 RX: B: I see movement beams [(0, -0.37), (1, -0.31), (13, 0.17), (14, 0.39), (15, 0.45)] s=0.984
+   57.2 RX: B: I see movement beams [(0, -0.37), (1, -0.31), (13, 0.17), (14, 0.37), (15, 0.43)] s=0.986
+   57.8 RX: B: I see movement beams [(0, -0.36), (1, -0.31), (13, 0.17), (14, 0.4), (15, 0.44)] s=0.984
+   58.1 RX: B: I see movement beams [(0, -0.36), (1, -0.31), (13, 0.17), (14, 0.37), (15, 0.44)] s=0.99
+   58.7 RX: B: I see movement beams [(0, -0.39), (1, -0.33), (13, 0.18), (14, 0.36), (15, 0.44)] s=0.979
+   59.3 RX: B: I see movement beams [(0, -0.41), (1, -0.33), (13, 0.16), (14, 0.38)] s=0.981
+   59.7 AROUND: d0 SIGHT!
+   59.9 AROUND: d0 SIGHT!
+   60.0 AROUND: d0 SIGHT!
+   60.5 AROUND: d0 SIGHT!
+   60.7 AROUND: d0 SIGHT!
+   60.9 AROUND: d0 SIGHT!
+   61.1 AROUND: d0 SIGHT!
+   61.3 AROUND: d0 SIGHT!
+   61.4 AROUND: d0 SIGHT!
+   61.7 AROUND: d0 SIGHT!
+   62.1 AROUND: d0 SIGHT!
+   62.3 AROUND: d0 SIGHT!
+   62.6 AROUND: d0 SIGHT!
+   63.2 AROUND: d0 SIGHT!
+   64.2 AROUND: d0 SIGHT!
+   64.3 AROUND: d0 SIGHT!
+   64.8 AROUND: d0 SIGHT!
+   64.9 AROUND: d0 SIGHT!
+   65.4 AROUND: d0 SIGHT!
+   65.9 AROUND: d0 SIGHT!
+   66.0 AROUND: d0 SIGHT!
+   66.5 AROUND: d0 SIGHT!
+   66.9 AROUND: d0 SIGHT!
+   67.1 AROUND: d0 SIGHT!
+   67.6 AROUND: d0 SIGHT!
+   68.1 AROUND: d0 SIGHT!
+   78.8 RX: B: I SEE YOUR BLOB in my front sector, you are ~0.2-0.5m from my nose. We are TRULY ADJACENT now.
+   78.9 AROUND done mode_done=True
+   78.9 AGENT start f=270
+   79.0 CELL (0, 0) f=270 open=[90] sig=0.985
+   82.7 CELL (0, 1) f=90 open=[90] sig=1.000
+   84.1 CELL (0, 2) f=90 open=[90] sig=0.999
+   85.4 CELL (0, 3) f=90 open=[90] sig=1.000
+    0.1 AGENT start f=90
+    0.1 RX: B: static check done
+    0.2 CELL (0, 0) f=90 open=[] sig=1.000
+    0.2 COMPLETE reset
+    0.3 CELL (0, 0) f=90 open=[] sig=0.987
+    0.3 COMPLETE reset
+    0.4 CELL (0, 0) f=90 open=[] sig=0.992
+    0.4 COMPLETE reset
+    0.5 CELL (0, 0) f=90 open=[] sig=1.000
+    0.5 COMPLETE reset
+    0.6 CELL (0, 0) f=90 open=[] sig=0.997
+    0.6 COMPLETE reset
+    0.8 CELL (0, 0) f=90 open=[] sig=0.976
+    0.8 COMPLETE reset
+    0.9 CELL (0, 0) f=90 open=[] sig=0.997
+    0.9 COMPLETE reset
+    1.0 CELL (0, 0) f=90 open=[] sig=0.985
+    1.0 COMPLETE reset
+    1.0 CELL (0, 0) f=90 open=[] sig=0.978
+    1.0 COMPLETE reset
+    1.1 CELL (0, 0) f=90 open=[] sig=0.991
+    1.1 COMPLETE reset
+    1.2 CELL (0, 0) f=90 open=[] sig=0.993
+    1.2 COMPLETE reset
+    1.3 CELL (0, 0) f=90 open=[] sig=0.994
+    1.3 COMPLETE reset
+    1.4 CELL (0, 0) f=90 open=[] sig=0.998
+    1.4 COMPLETE reset
+    1.5 CELL (0, 0) f=90 open=[] sig=0.983
+    1.5 COMPLETE reset
+    1.6 CELL (0, 0) f=90 open=[] sig=0.998
+    1.6 COMPLETE reset
+    1.7 CELL (0, 0) f=90 open=[] sig=0.989
+    1.7 COMPLETE reset
+    1.8 CELL (0, 0) f=90 open=[] sig=0.993
+    1.8 COMPLETE reset
+    1.9 CELL (0, 0) f=90 open=[] sig=0.996
+    1.9 COMPLETE reset
+    2.0 CELL (0, 0) f=90 open=[] sig=0.984
+    2.0 COMPLETE reset
+    2.1 CELL (0, 0) f=90 open=[] sig=0.996
+    2.1 COMPLETE reset
+    2.2 CELL (0, 0) f=90 open=[] sig=0.995
+    2.2 COMPLETE reset
+    2.2 CELL (0, 0) f=90 open=[] sig=1.000
+    2.2 COMPLETE reset
+    2.3 CELL (0, 0) f=90 open=[] sig=0.991
+    2.3 COMPLETE reset
+    2.4 CELL (0, 0) f=90 open=[] sig=1.000
+    2.4 COMPLETE reset
+    2.5 CELL (0, 0) f=90 open=[] sig=0.996
+    2.5 COMPLETE reset
+    2.6 CELL (0, 0) f=90 open=[] sig=0.985
+    2.6 COMPLETE reset
+    2.7 CELL (0, 0) f=90 open=[] sig=0.998
+    2.7 COMPLETE reset
+    2.8 CELL (0, 0) f=90 open=[] sig=0.990
+    2.8 COMPLETE reset
+    2.9 CELL (0, 0) f=90 open=[] sig=0.984
+    2.9 COMPLETE reset
+    3.0 CELL (0, 0) f=90 open=[] sig=1.000
+    3.0 COMPLETE reset
+    3.1 CELL (0, 0) f=90 open=[] sig=0.991
+    3.1 COMPLETE reset
+    3.2 CELL (0, 0) f=90 open=[] sig=0.997
+    3.2 COMPLETE reset
+    3.3 CELL (0, 0) f=90 open=[] sig=0.998
+    3.3 COMPLETE reset
+    3.4 CELL (0, 0) f=90 open=[] sig=0.999
+    3.4 COMPLETE reset
+    3.5 CELL (0, 0) f=90 open=[] sig=0.975
+    3.5 COMPLETE reset
+    3.6 CELL (0, 0) f=90 open=[] sig=0.991
+    3.6 COMPLETE reset
+    3.7 CELL (0, 0) f=90 open=[] sig=0.996
+    3.7 COMPLETE reset
+    3.8 CELL (0, 0) f=90 open=[] sig=0.991
+    3.8 COMPLETE reset
+    3.9 CELL (0, 0) f=90 open=[] sig=0.993
+    3.9 COMPLETE reset
+    3.9 CELL (0, 0) f=90 open=[] sig=0.977
+    3.9 COMPLETE reset
+    4.0 CELL (0, 0) f=90 open=[] sig=1.000
+    4.0 COMPLETE reset
+    4.2 CELL (0, 0) f=90 open=[] sig=0.994
+    4.2 COMPLETE reset
+    4.2 CELL (0, 0) f=90 open=[] sig=0.998
+    4.2 COMPLETE reset
+    4.4 CELL (0, 0) f=90 open=[] sig=0.998
+    4.4 COMPLETE reset
+    4.5 CELL (0, 0) f=90 open=[] sig=0.981
+    4.5 COMPLETE reset
+    4.5 CELL (0, 0) f=90 open=[] sig=0.992
+    4.5 COMPLETE reset
+    4.6 CELL (0, 0) f=90 open=[] sig=0.992
+    4.6 COMPLETE reset
+    4.7 CELL (0, 0) f=90 open=[] sig=0.997
+    4.7 COMPLETE reset
+    4.8 CELL (0, 0) f=90 open=[] sig=0.990
+    4.8 COMPLETE reset
+    4.9 CELL (0, 0) f=90 open=[] sig=1.000
+    4.9 COMPLETE reset
+    5.0 CELL (0, 0) f=90 open=[] sig=1.000
+    5.0 COMPLETE reset
+    5.1 CELL (0, 0) f=90 open=[] sig=0.994
+    5.1 COMPLETE reset
+    5.2 CELL (0, 0) f=90 open=[] sig=0.996
+    5.2 COMPLETE reset
+    5.3 CELL (0, 0) f=90 open=[] sig=0.986
+    5.3 COMPLETE reset
+    5.4 CELL (0, 0) f=90 open=[] sig=0.989
+    5.4 COMPLETE reset
+    5.5 CELL (0, 0) f=90 open=[] sig=0.996
+    5.5 COMPLETE reset
+    5.6 CELL (0, 0) f=90 open=[] sig=0.982
+    5.6 COMPLETE reset
+    5.7 CELL (0, 0) f=90 open=[] sig=0.997
+    5.7 COMPLETE reset
+    5.8 CELL (0, 0) f=90 open=[] sig=0.987
+    5.8 COMPLETE reset
+    5.8 CELL (0, 0) f=90 open=[] sig=0.985
+    5.8 COMPLETE reset
+    5.9 CELL (0, 0) f=90 open=[] sig=0.982
+    5.9 COMPLETE reset
+    6.2 CELL (0, 0) f=90 open=[] sig=0.989
+    6.2 COMPLETE reset
+    6.3 CELL (0, 0) f=90 open=[] sig=0.973
+    6.3 COMPLETE reset
+    6.4 CELL (0, 0) f=90 open=[] sig=0.982
+    6.4 COMPLETE reset
+    6.5 CELL (0, 0) f=90 open=[] sig=0.985
+    6.5 COMPLETE reset
+    6.6 CELL (0, 0) f=90 open=[] sig=0.992
+    6.6 COMPLETE reset
+    6.7 CELL (0, 0) f=90 open=[] sig=0.999
+    6.7 COMPLETE reset
+    6.8 CELL (0, 0) f=90 open=[] sig=0.991
+    6.8 COMPLETE reset
+    6.9 CELL (0, 0) f=90 open=[] sig=0.983
+    6.9 COMPLETE reset
+    7.0 CELL (0, 0) f=90 open=[] sig=0.988
+    7.0 COMPLETE reset
+    7.1 CELL (0, 0) f=90 open=[] sig=0.986
+    7.1 COMPLETE reset
+    7.2 CELL (0, 0) f=90 open=[] sig=1.000
+    7.2 COMPLETE reset
+    7.3 CELL (0, 0) f=90 open=[] sig=0.985
+    7.3 COMPLETE reset
+    7.4 CELL (0, 0) f=90 open=[] sig=0.993
+    7.4 COMPLETE reset
+    7.5 CELL (0, 0) f=90 open=[] sig=0.996
+    7.5 COMPLETE reset
+    7.5 CELL (0, 0) f=90 open=[] sig=0.996
+    7.5 COMPLETE reset
+    7.6 CELL (0, 0) f=90 open=[] sig=0.980
+    7.6 COMPLETE reset
+    7.7 CELL (0, 0) f=90 open=[] sig=0.996
+    7.7 COMPLETE reset
+    7.8 CELL (0, 0) f=90 open=[] sig=0.993
+    7.8 COMPLETE reset
+    7.9 CELL (0, 0) f=90 open=[] sig=0.994
+    7.9 COMPLETE reset
+    8.0 CELL (0, 0) f=90 open=[] sig=0.994
+    8.0 COMPLETE reset
+    8.1 CELL (0, 0) f=90 open=[] sig=1.000
+    8.1 COMPLETE reset
+    8.2 CELL (0, 0) f=90 open=[] sig=0.993
+    8.2 COMPLETE reset
+    8.3 CELL (0, 0) f=90 open=[] sig=0.989
+    8.3 COMPLETE reset
+    8.4 CELL (0, 0) f=90 open=[] sig=0.992
+    8.4 COMPLETE reset
+    8.5 CELL (0, 0) f=90 open=[] sig=0.988
+    8.5 COMPLETE reset
+    8.6 CELL (0, 0) f=90 open=[] sig=0.995
+    8.6 COMPLETE reset
+    8.7 CELL (0, 0) f=90 open=[] sig=0.992
+    8.7 COMPLETE reset
+    8.7 CELL (0, 0) f=90 open=[] sig=1.000
+    8.7 COMPLETE reset
+    8.8 CELL (0, 0) f=90 open=[] sig=0.997
+    8.8 COMPLETE reset
+    9.0 CELL (0, 0) f=90 open=[] sig=0.991
+    9.0 COMPLETE reset
+    9.0 CELL (0, 0) f=90 open=[] sig=0.993
+    9.0 COMPLETE reset
+    9.2 CELL (0, 0) f=90 open=[] sig=0.994
+    9.2 COMPLETE reset
+    9.3 CELL (0, 0) f=90 open=[] sig=0.992
+    9.3 COMPLETE reset
+    9.4 CELL (0, 0) f=90 open=[] sig=1.000
+    9.4 COMPLETE reset
+    9.4 RX: B: sorry, that 0.09 was a wall I was jammed against. Repositioning. Please DRIVE IN SMALL CIRCLES continuously for 30s; I will find your true bearing.
+    9.5 CELL (0, 0) f=90 open=[] sig=0.990
+    9.5 COMPLETE reset
+    9.6 CELL (0, 0) f=90 open=[] sig=0.989
+    9.6 COMPLETE reset
+    9.7 CELL (0, 0) f=90 open=[] sig=0.995
+    9.7 COMPLETE reset
+    9.8 CELL (0, 0) f=90 open=[] sig=0.976
+    9.8 COMPLETE reset
+    9.9 CELL (0, 0) f=90 open=[] sig=0.979
+    9.9 COMPLETE reset
+   10.0 CELL (0, 0) f=90 open=[] sig=0.975
+   10.0 COMPLETE reset
+   10.1 CELL (0, 0) f=90 open=[] sig=0.977
+   10.1 COMPLETE reset
+   10.2 CELL (0, 0) f=90 open=[] sig=0.972
+   10.2 COMPLETE reset
+   10.3 CELL (0, 0) f=90 open=[] sig=0.970
+   10.3 COMPLETE reset
+   10.4 CELL (0, 0) f=90 open=[] sig=0.964
+   10.4 COMPLETE reset
+   10.5 CELL (0, 0) f=90 open=[] sig=0.963
+   10.5 COMPLETE reset
+   10.6 CELL (0, 0) f=90 open=[] sig=0.960
+   10.6 COMPLETE reset
+   10.7 CELL (0, 0) f=90 open=[] sig=0.961
+   10.7 COMPLETE reset
+   10.8 CELL (0, 0) f=90 open=[] sig=0.943
+   10.8 COMPLETE reset
+   10.9 CELL (0, 0) f=90 open=[] sig=0.957
+   10.9 COMPLETE reset
+   11.0 CELL (0, 0) f=90 open=[] sig=0.940
+   11.0 COMPLETE reset
+   11.1 CELL (0, 0) f=90 open=[] sig=0.948
+   11.1 COMPLETE reset
+   11.2 CELL (0, 0) f=90 open=[] sig=0.955
+   11.2 COMPLETE reset
+   11.3 CELL (0, 0) f=90 open=[] sig=0.951
+   11.3 COMPLETE reset
+   11.4 CELL (0, 0) f=90 open=[] sig=0.947
+   11.4 COMPLETE reset
+   11.5 CELL (0, 0) f=90 open=[] sig=0.952
+   11.5 COMPLETE reset
+   11.6 CELL (0, 0) f=90 open=[] sig=0.939
+   11.6 COMPLETE reset
+   11.7 CELL (0, 0) f=90 open=[] sig=0.939
+   11.7 COMPLETE reset
+   11.8 CELL (0, 0) f=90 open=[] sig=0.949
+   11.8 COMPLETE reset
+   11.9 CELL (0, 0) f=90 open=[] sig=0.962
+   11.9 COMPLETE reset
+   12.0 CELL (0, 0) f=90 open=[] sig=0.949
+   12.0 COMPLETE reset
+   12.0 CELL (0, 0) f=90 open=[] sig=0.941
+   12.0 COMPLETE reset
+   12.1 CELL (0, 0) f=90 open=[] sig=0.951
+   12.1 COMPLETE reset
+   12.2 CELL (0, 0) f=90 open=[] sig=0.949
+   12.2 COMPLETE reset
+   12.3 CELL (0, 0) f=90 open=[] sig=0.963
+   12.3 COMPLETE reset
+   12.4 CELL (0, 0) f=90 open=[] sig=0.955
+   12.4 COMPLETE reset
+   12.5 CELL (0, 0) f=90 open=[] sig=0.943
+   12.5 COMPLETE reset
+   12.6 CELL (0, 0) f=90 open=[] sig=0.940
+   12.6 COMPLETE reset
+   12.7 CELL (0, 0) f=90 open=[] sig=0.964
+   12.7 COMPLETE reset
+   12.8 CELL (0, 0) f=90 open=[] sig=0.943
+   12.8 COMPLETE reset
+   12.9 CELL (0, 0) f=90 open=[] sig=0.935
+   12.9 COMPLETE reset
+   13.0 CELL (0, 0) f=90 open=[] sig=0.943
+   13.0 COMPLETE reset
+   13.1 CELL (0, 0) f=90 open=[] sig=0.958
+   13.1 COMPLETE reset
+   13.2 CELL (0, 0) f=90 open=[] sig=0.942
+   13.2 COMPLETE reset
+   13.3 CELL (0, 0) f=90 open=[] sig=0.947
+   13.3 COMPLETE reset
+   13.4 CELL (0, 0) f=90 open=[] sig=0.942
+   13.4 COMPLETE reset
+   13.5 CELL (0, 0) f=90 open=[] sig=0.944
+   13.5 COMPLETE reset
+   13.5 CELL (0, 0) f=90 open=[] sig=0.946
+   13.5 COMPLETE reset
+   13.6 CELL (0, 0) f=90 open=[] sig=0.947
+   13.7 COMPLETE reset
+   13.7 CELL (0, 0) f=90 open=[] sig=0.950
+   13.7 COMPLETE reset
+   13.8 CELL (0, 0) f=90 open=[] sig=0.945
+   13.8 COMPLETE reset
+   13.9 CELL (0, 0) f=90 open=[] sig=0.931
+   13.9 COMPLETE reset
+   14.0 CELL (0, 0) f=90 open=[] sig=0.958
+   14.0 COMPLETE reset
+   14.1 CELL (0, 0) f=90 open=[] sig=0.943
+   14.1 COMPLETE reset
+   14.2 CELL (0, 0) f=90 open=[] sig=0.948
+   14.2 COMPLETE reset
+   14.3 CELL (0, 0) f=90 open=[] sig=0.949
+   14.3 COMPLETE reset
+   14.4 CELL (0, 0) f=90 open=[] sig=0.956
+   14.4 COMPLETE reset
+   14.5 CELL (0, 0) f=90 open=[] sig=0.954
+   14.5 COMPLETE reset
+   14.6 CELL (0, 0) f=90 open=[] sig=0.952
+   14.6 COMPLETE reset
+   14.7 CELL (0, 0) f=90 open=[] sig=0.947
+   14.7 COMPLETE reset
+   14.7 CELL (0, 0) f=90 open=[] sig=0.952
+   14.7 COMPLETE reset
+   14.8 CELL (0, 0) f=90 open=[] sig=0.951
+   14.8 COMPLETE reset
+   14.9 CELL (0, 0) f=90 open=[] sig=0.945
+   14.9 COMPLETE reset
+   15.0 CELL (0, 0) f=90 open=[] sig=0.944
+   15.0 COMPLETE reset
+   15.1 CELL (0, 0) f=90 open=[] sig=0.954
+   15.1 COMPLETE reset
+   15.2 CELL (0, 0) f=90 open=[] sig=0.950
+   15.2 COMPLETE reset
+   15.3 CELL (0, 0) f=90 open=[] sig=0.950
+   15.3 COMPLETE reset
+   15.4 CELL (0, 0) f=90 open=[] sig=0.937
+   15.4 COMPLETE reset
+   15.5 CELL (0, 0) f=90 open=[] sig=0.949
+   15.5 COMPLETE reset
+   15.6 CELL (0, 0) f=90 open=[] sig=0.950
+   15.6 COMPLETE reset
+   15.7 CELL (0, 0) f=90 open=[] sig=0.950
+   15.7 COMPLETE reset
+   15.8 CELL (0, 0) f=90 open=[] sig=0.961
+   15.8 COMPLETE reset
+   15.9 CELL (0, 0) f=90 open=[] sig=0.949
+   15.9 COMPLETE reset
+   16.0 CELL (0, 0) f=90 open=[] sig=0.940
+   16.0 COMPLETE reset
+   16.1 CELL (0, 0) f=90 open=[] sig=0.958
+   16.1 COMPLETE reset
+   16.2 CELL (0, 0) f=90 open=[] sig=0.950
+   16.2 COMPLETE reset
+   16.3 CELL (0, 0) f=90 open=[] sig=0.948
+   16.3 COMPLETE reset
+   16.4 CELL (0, 0) f=90 open=[] sig=0.943
+   16.4 COMPLETE reset
+   16.5 CELL (0, 0) f=90 open=[] sig=0.956
+   16.5 COMPLETE reset
+   16.6 CELL (0, 0) f=90 open=[] sig=0.967
+   16.6 COMPLETE reset
+   16.7 CELL (0, 0) f=90 open=[] sig=0.940
+   16.7 COMPLETE reset
+   16.8 CELL (0, 0) f=90 open=[] sig=0.948
+   16.8 COMPLETE reset
+   16.8 CELL (0, 0) f=90 open=[] sig=0.941
+   16.8 COMPLETE reset
+   16.9 CELL (0, 0) f=90 open=[] sig=0.952
+   16.9 COMPLETE reset
+   17.0 CELL (0, 0) f=90 open=[] sig=0.964
+   17.0 COMPLETE reset
+   17.1 CELL (0, 0) f=90 open=[] sig=0.949
+   17.1 COMPLETE reset
+   17.2 CELL (0, 0) f=90 open=[] sig=0.956
+   17.2 COMPLETE reset
+   17.3 CELL (0, 0) f=90 open=[] sig=0.950
+   17.3 COMPLETE reset
+   17.5 CELL (0, 0) f=90 open=[] sig=0.934
+   17.5 COMPLETE reset
+   17.5 CELL (0, 0) f=90 open=[] sig=0.934
+   17.5 COMPLETE reset
+   17.6 CELL (0, 0) f=90 open=[] sig=0.944
+   17.6 COMPLETE reset
+   17.7 CELL (0, 0) f=90 open=[] sig=0.942
+   17.7 COMPLETE reset
+   17.8 CELL (0, 0) f=90 open=[] sig=0.933
+   17.8 COMPLETE reset
+   17.9 CELL (0, 0) f=90 open=[] sig=0.950
+   17.9 COMPLETE reset
+   18.0 CELL (0, 0) f=90 open=[] sig=0.942
+   18.0 COMPLETE reset
+   18.1 CELL (0, 0) f=90 open=[] sig=0.942
+   18.1 COMPLETE reset
+   18.2 CELL (0, 0) f=90 open=[] sig=0.945
+   18.2 COMPLETE reset
+   18.3 CELL (0, 0) f=90 open=[] sig=0.950
+   18.3 COMPLETE reset
+   18.4 CELL (0, 0) f=90 open=[] sig=0.967
+   18.4 COMPLETE reset
+   18.5 CELL (0, 0) f=90 open=[] sig=0.946
+   18.5 COMPLETE reset
+   18.6 CELL (0, 0) f=90 open=[] sig=0.950
+   18.6 COMPLETE reset
+   18.7 CELL (0, 0) f=90 open=[] sig=0.951
+   18.7 COMPLETE reset
+   18.8 CELL (0, 0) f=90 open=[] sig=0.947
+   18.8 COMPLETE reset
+   18.9 CELL (0, 0) f=90 open=[] sig=0.943
+   18.9 COMPLETE reset
+   19.0 CELL (0, 0) f=90 open=[] sig=0.943
+   19.0 COMPLETE reset
+   19.1 CELL (0, 0) f=90 open=[] sig=0.956
+   19.1 COMPLETE reset
+   19.2 CELL (0, 0) f=90 open=[] sig=0.954
+   19.2 COMPLETE reset
+   19.3 CELL (0, 0) f=90 open=[] sig=0.948
+   19.3 COMPLETE reset
+   19.4 CELL (0, 0) f=90 open=[] sig=0.935
+   19.4 COMPLETE reset
+   19.5 CELL (0, 0) f=90 open=[] sig=0.956
+   19.5 COMPLETE reset
+   19.6 CELL (0, 0) f=90 open=[] sig=0.944
+   19.6 COMPLETE reset
+   19.6 CELL (0, 0) f=90 open=[] sig=0.962
+   19.6 COMPLETE reset
+   19.7 CELL (0, 0) f=90 open=[] sig=0.962
+   19.8 COMPLETE reset
+   19.9 CELL (0, 0) f=90 open=[] sig=0.940
+   19.9 COMPLETE reset
+   20.0 CELL (0, 0) f=90 open=[] sig=0.933
+   20.0 COMPLETE reset
+   20.1 CELL (0, 0) f=90 open=[] sig=0.935
+   20.1 COMPLETE reset
+   20.1 CELL (0, 0) f=90 open=[] sig=0.936
+   20.1 COMPLETE reset
+   20.2 CELL (0, 0) f=90 open=[] sig=0.946
+   20.2 COMPLETE reset
+   20.3 CELL (0, 0) f=90 open=[] sig=0.945
+   20.3 COMPLETE reset
+   20.4 CELL (0, 0) f=90 open=[] sig=0.948
+   20.4 COMPLETE reset
+   20.5 CELL (0, 0) f=90 open=[] sig=0.964
+   20.5 COMPLETE reset
+   20.6 CELL (0, 0) f=90 open=[] sig=0.953
+   20.6 COMPLETE reset
+   20.7 CELL (0, 0) f=90 open=[] sig=0.961
+   20.7 COMPLETE reset
+   20.8 CELL (0, 0) f=90 open=[] sig=0.965
+   20.8 COMPLETE reset
+   20.9 CELL (0, 0) f=90 open=[] sig=0.938
+   20.9 COMPLETE reset
+   21.0 CELL (0, 0) f=90 open=[] sig=0.969
+   21.0 COMPLETE reset
+   21.1 CELL (0, 0) f=90 open=[] sig=0.951
+   21.1 COMPLETE reset
+   21.2 CELL (0, 0) f=90 open=[] sig=0.948
+   21.2 COMPLETE reset
+   21.3 CELL (0, 0) f=90 open=[] sig=0.947
+   21.3 COMPLETE reset
+   21.4 CELL (0, 0) f=90 open=[] sig=0.939
+   21.4 COMPLETE reset
+   21.4 CELL (0, 0) f=90 open=[] sig=0.943
+   21.4 COMPLETE reset
+   21.5 CELL (0, 0) f=90 open=[] sig=0.950
+   21.5 COMPLETE reset
+   21.6 CELL (0, 0) f=90 open=[] sig=0.937
+   21.6 COMPLETE reset
+   21.7 CELL (0, 0) f=90 open=[] sig=0.960
+   21.7 COMPLETE reset
+   21.8 CELL (0, 0) f=90 open=[] sig=0.964
+   21.8 COMPLETE reset
+   21.9 CELL (0, 0) f=90 open=[] sig=0.940
+   21.9 COMPLETE reset
+   22.0 CELL (0, 0) f=90 open=[] sig=0.958
+   22.0 COMPLETE reset
+   22.1 CELL (0, 0) f=90 open=[] sig=0.944
+   22.1 COMPLETE reset
+   22.2 CELL (0, 0) f=90 open=[] sig=0.925
+   22.2 COMPLETE reset
+   22.3 CELL (0, 0) f=90 open=[] sig=0.952
+   22.3 COMPLETE reset
+   22.4 CELL (0, 0) f=90 open=[] sig=0.952
+   22.4 COMPLETE reset
+   22.5 CELL (0, 0) f=90 open=[] sig=0.955
+   22.5 COMPLETE reset
+   22.6 CELL (0, 0) f=90 open=[] sig=0.948
+   22.6 COMPLETE reset
+   22.7 CELL (0, 0) f=90 open=[] sig=0.950
+   22.7 COMPLETE reset
+   22.8 CELL (0, 0) f=90 open=[] sig=0.950
+   22.8 COMPLETE reset
+   22.9 CELL (0, 0) f=90 open=[] sig=0.963
+   22.9 COMPLETE reset
+   23.0 CELL (0, 0) f=90 open=[] sig=0.936
+   23.0 COMPLETE reset
+   23.0 CELL (0, 0) f=90 open=[] sig=0.946
+   23.0 COMPLETE reset
+   23.1 CELL (0, 0) f=90 open=[] sig=0.953
+   23.1 COMPLETE reset
+   23.3 CELL (0, 0) f=90 open=[] sig=0.950
+   23.3 COMPLETE reset
+   23.4 CELL (0, 0) f=90 open=[] sig=0.950
+   23.4 COMPLETE reset
+   23.5 CELL (0, 0) f=90 open=[] sig=0.942
+   23.5 COMPLETE reset
+   23.5 CELL (0, 0) f=90 open=[] sig=0.946
+   23.5 COMPLETE reset
+   23.6 CELL (0, 0) f=90 open=[] sig=0.934
+   23.6 COMPLETE reset
+   23.7 CELL (0, 0) f=90 open=[] sig=0.930
+   23.7 COMPLETE reset
+   23.8 CELL (0, 0) f=90 open=[] sig=0.949
+   23.8 COMPLETE reset
+   23.9 CELL (0, 0) f=90 open=[] sig=0.955
+   23.9 COMPLETE reset
+   24.0 CELL (0, 0) f=90 open=[] sig=0.947
+   24.0 COMPLETE reset
+   24.1 CELL (0, 0) f=90 open=[] sig=0.954
+   24.1 COMPLETE reset
+   24.2 CELL (0, 0) f=90 open=[] sig=0.949
+   24.2 COMPLETE reset
+   24.3 CELL (0, 0) f=90 open=[] sig=0.955
+   24.3 COMPLETE reset
+   24.4 CELL (0, 0) f=90 open=[] sig=0.967
+   24.4 COMPLETE reset
+   24.5 CELL (0, 0) f=90 open=[] sig=0.944
+   24.5 COMPLETE reset
+   24.6 CELL (0, 0) f=90 open=[] sig=0.942
+   24.6 COMPLETE reset
+   24.7 CELL (0, 0) f=90 open=[] sig=0.938
+   24.7 COMPLETE reset
+   24.7 CELL (0, 0) f=90 open=[] sig=0.944
+   24.7 COMPLETE reset
+   24.8 CELL (0, 0) f=90 open=[] sig=0.945
+   24.8 COMPLETE reset
+   24.9 CELL (0, 0) f=90 open=[] sig=0.943
+   24.9 COMPLETE reset
+   25.0 CELL (0, 0) f=90 open=[] sig=0.946
+   25.0 COMPLETE reset
+   25.2 CELL (0, 0) f=90 open=[] sig=0.948
+   25.2 COMPLETE reset
+   25.3 CELL (0, 0) f=90 open=[] sig=0.942
+   25.3 COMPLETE reset
+   25.4 CELL (0, 0) f=90 open=[] sig=0.947
+   25.4 COMPLETE reset
+   25.5 CELL (0, 0) f=90 open=[] sig=0.956
+   25.5 COMPLETE reset
+   25.6 CELL (0, 0) f=90 open=[] sig=0.952
+   25.6 COMPLETE reset
+   25.7 CELL (0, 0) f=90 open=[] sig=0.953
+   25.7 COMPLETE reset
+   25.8 CELL (0, 0) f=90 open=[] sig=0.943
+   25.8 COMPLETE reset
+   25.9 CELL (0, 0) f=90 open=[] sig=0.955
+   25.9 COMPLETE reset
+   26.0 CELL (0, 0) f=90 open=[] sig=0.945
+   26.0 COMPLETE reset
+   26.0 CELL (0, 0) f=90 open=[] sig=0.945
+   26.0 COMPLETE reset
+   26.2 CELL (0, 0) f=90 open=[] sig=0.948
+   26.2 COMPLETE reset
+   26.2 CELL (0, 0) f=90 open=[] sig=0.947
+   26.2 COMPLETE reset
+   26.3 CELL (0, 0) f=90 open=[] sig=0.945
+   26.3 COMPLETE reset
+   26.4 CELL (0, 0) f=90 open=[] sig=0.944
+   26.4 COMPLETE reset
+   26.5 CELL (0, 0) f=90 open=[] sig=0.939
+   26.5 COMPLETE reset
+   26.6 CELL (0, 0) f=90 open=[] sig=0.938
+   26.6 COMPLETE reset
+   26.7 CELL (0, 0) f=90 open=[] sig=0.956
+   26.7 COMPLETE reset
+   26.8 CELL (0, 0) f=90 open=[] sig=0.944
+   26.8 COMPLETE reset
+   26.9 CELL (0, 0) f=90 open=[] sig=0.957
+   26.9 COMPLETE reset
+   27.0 CELL (0, 0) f=90 open=[] sig=0.952
+   27.0 COMPLETE reset
+   27.1 CELL (0, 0) f=90 open=[] sig=0.958
+   27.1 COMPLETE reset
+   27.2 CELL (0, 0) f=90 open=[] sig=0.963
+   27.2 COMPLETE reset
+   27.3 CELL (0, 0) f=90 open=[] sig=0.948
+   27.3 COMPLETE reset
+   27.4 CELL (0, 0) f=90 open=[] sig=0.949
+   27.4 COMPLETE reset
+   27.5 CELL (0, 0) f=90 open=[] sig=0.931
+   27.5 COMPLETE reset
+   27.5 CELL (0, 0) f=90 open=[] sig=0.952
+   27.5 COMPLETE reset
+   27.6 CELL (0, 0) f=90 open=[] sig=0.932
+   27.6 COMPLETE reset
+   27.7 CELL (0, 0) f=90 open=[] sig=0.939
+   27.7 COMPLETE reset
+   27.8 CELL (0, 0) f=90 open=[] sig=0.937
+   27.8 COMPLETE reset
+   27.9 CELL (0, 0) f=90 open=[] sig=0.955
+   27.9 COMPLETE reset
+   28.0 CELL (0, 0) f=90 open=[] sig=0.950
+   28.0 COMPLETE reset
+   28.1 CELL (0, 0) f=90 open=[] sig=0.948
+   28.1 COMPLETE reset
+   28.2 CELL (0, 0) f=90 open=[] sig=0.934
+   28.2 COMPLETE reset
+   28.3 CELL (0, 0) f=90 open=[] sig=0.959
+   28.3 COMPLETE reset
+   28.4 CELL (0, 0) f=90 open=[] sig=0.940
+   28.4 COMPLETE reset
+   28.5 CELL (0, 0) f=90 open=[] sig=0.941
+   28.5 COMPLETE reset
+   28.6 CELL (0, 0) f=90 open=[] sig=0.944
+   28.6 COMPLETE reset
+   28.7 CELL (0, 0) f=90 open=[] sig=0.954
+   28.7 COMPLETE reset
+   28.8 CELL (0, 0) f=90 open=[] sig=0.946
+   28.8 COMPLETE reset
+   28.9 CELL (0, 0) f=90 open=[] sig=0.947
+   28.9 COMPLETE reset
+   29.0 CELL (0, 0) f=90 open=[] sig=0.945
+   29.0 COMPLETE reset
+   29.1 CELL (0, 0) f=90 open=[] sig=0.944
+   29.1 COMPLETE reset
+   29.2 CELL (0, 0) f=90 open=[] sig=0.944
+   29.2 COMPLETE reset
+   29.3 CELL (0, 0) f=90 open=[] sig=0.945
+   29.3 COMPLETE reset
+   29.3 CELL (0, 0) f=90 open=[] sig=0.946
+   29.3 COMPLETE reset
+   29.4 CELL (0, 0) f=90 open=[] sig=0.952
+   29.4 COMPLETE reset
+   29.5 CELL (0, 0) f=90 open=[] sig=0.943
+   29.5 COMPLETE reset
+   29.6 CELL (0, 0) f=90 open=[] sig=0.961
+   29.6 COMPLETE reset
+   29.7 CELL (0, 0) f=90 open=[] sig=0.951
+   29.7 COMPLETE reset
+   29.8 CELL (0, 0) f=90 open=[] sig=0.955
+   29.8 COMPLETE reset
+   29.9 CELL (0, 0) f=90 open=[] sig=0.951
+   29.9 COMPLETE reset
+   30.0 CELL (0, 0) f=90 open=[] sig=0.929
+   30.0 COMPLETE reset
+   30.1 CELL (0, 0) f=90 open=[] sig=0.955
+   30.1 COMPLETE reset
+   30.2 CELL (0, 0) f=90 open=[] sig=0.941
+   30.2 COMPLETE reset
+   30.3 CELL (0, 0) f=90 open=[] sig=0.950
+   30.3 COMPLETE reset
+   30.4 CELL (0, 0) f=90 open=[] sig=0.947
+   30.4 COMPLETE reset
+   30.5 CELL (0, 0) f=90 open=[] sig=0.951
+   30.5 COMPLETE reset
+   30.6 CELL (0, 0) f=90 open=[] sig=0.949
+   30.6 COMPLETE reset
+   30.6 CELL (0, 0) f=90 open=[] sig=0.960
+   30.6 COMPLETE reset
+   30.7 CELL (0, 0) f=90 open=[] sig=0.947
+   30.7 COMPLETE reset
+   30.8 CELL (0, 0) f=90 open=[] sig=0.957
+   30.8 COMPLETE reset
+   31.0 CELL (0, 0) f=90 open=[] sig=0.937
+   31.0 COMPLETE reset
+   31.0 CELL (0, 0) f=90 open=[] sig=0.944
+   31.0 COMPLETE reset
+   31.1 CELL (0, 0) f=90 open=[] sig=0.954
+   31.1 COMPLETE reset
+   31.3 CELL (0, 0) f=90 open=[] sig=0.955
+   31.3 COMPLETE reset
+   31.5 CELL (0, 0) f=90 open=[] sig=0.949
+   31.5 COMPLETE reset
+   31.6 CELL (0, 0) f=90 open=[] sig=0.935
+   31.6 COMPLETE reset
+   31.7 CELL (0, 0) f=90 open=[] sig=0.947
+   31.7 COMPLETE reset
+   31.7 CELL (0, 0) f=90 open=[] sig=0.968
+   31.7 COMPLETE reset
+   31.9 CELL (0, 0) f=90 open=[] sig=0.943
+   31.9 COMPLETE reset
+   32.0 CELL (0, 0) f=90 open=[] sig=0.953
+   32.0 COMPLETE reset
+   32.1 CELL (0, 0) f=90 open=[] sig=0.940
+   32.1 COMPLETE reset
+   32.2 CELL (0, 0) f=90 open=[] sig=0.963
+   32.2 COMPLETE reset
+   32.3 CELL (0, 0) f=90 open=[] sig=0.943
+   32.3 COMPLETE reset
+   32.4 CELL (0, 0) f=90 open=[] sig=0.937
+   32.4 COMPLETE reset
+   32.5 CELL (0, 0) f=90 open=[] sig=0.947
+   32.5 COMPLETE reset
+   32.6 CELL (0, 0) f=90 open=[] sig=0.943
+   32.6 COMPLETE reset
+   32.7 CELL (0, 0) f=90 open=[] sig=0.940
+   32.7 COMPLETE reset
+   32.8 CELL (0, 0) f=90 open=[] sig=0.949
+   32.8 COMPLETE reset
+   32.8 CELL (0, 0) f=90 open=[] sig=0.958
+   32.8 COMPLETE reset
+   32.9 CELL (0, 0) f=90 open=[] sig=0.946
+   32.9 COMPLETE reset
+   33.0 CELL (0, 0) f=90 open=[] sig=0.942
+   33.0 COMPLETE reset
+   33.1 CELL (0, 0) f=90 open=[] sig=0.951
+   33.1 COMPLETE reset
+   33.2 CELL (0, 0) f=90 open=[] sig=0.937
+   33.2 COMPLETE reset
+   33.3 CELL (0, 0) f=90 open=[] sig=0.952
+   33.3 COMPLETE reset
+   33.4 CELL (0, 0) f=90 open=[] sig=0.949
+   33.4 COMPLETE reset
+   33.5 CELL (0, 0) f=90 open=[] sig=0.956
+   33.5 COMPLETE reset
+   33.6 CELL (0, 0) f=90 open=[] sig=0.954
+   33.6 COMPLETE reset
+   33.7 CELL (0, 0) f=90 open=[] sig=0.955
+   33.7 COMPLETE reset
+   33.8 CELL (0, 0) f=90 open=[] sig=0.945
+   33.8 COMPLETE reset
+   33.9 CELL (0, 0) f=90 open=[] sig=0.945
+   33.9 COMPLETE reset
+   34.0 CELL (0, 0) f=90 open=[] sig=0.947
+   34.0 COMPLETE reset
+   34.1 CELL (0, 0) f=90 open=[] sig=0.951
+   34.1 COMPLETE reset
+   34.2 CELL (0, 0) f=90 open=[] sig=0.946
+   34.2 COMPLETE reset
+   34.3 CELL (0, 0) f=90 open=[] sig=0.958
+   34.3 COMPLETE reset
+   34.4 CELL (0, 0) f=90 open=[] sig=0.953
+   34.4 COMPLETE reset
+   34.5 CELL (0, 0) f=90 open=[] sig=0.940
+   34.5 COMPLETE reset
+   34.6 CELL (0, 0) f=90 open=[] sig=0.947
+   34.6 COMPLETE reset
+   34.7 CELL (0, 0) f=90 open=[] sig=0.941
+   34.7 COMPLETE reset
+   34.8 CELL (0, 0) f=90 open=[] sig=0.951
+   34.8 COMPLETE reset
+   34.9 CELL (0, 0) f=90 open=[] sig=0.959
+   34.9 COMPLETE reset
+   35.0 CELL (0, 0) f=90 open=[] sig=0.959
+   35.0 COMPLETE reset
+   35.1 CELL (0, 0) f=90 open=[] sig=0.953
+   35.1 COMPLETE reset
+   35.2 CELL (0, 0) f=90 open=[] sig=0.950
+   35.2 COMPLETE reset
+   35.2 CELL (0, 0) f=90 open=[] sig=0.964
+   35.2 COMPLETE reset
+   35.3 CELL (0, 0) f=90 open=[] sig=0.957
+   35.3 COMPLETE reset
+   35.4 CELL (0, 0) f=90 open=[] sig=0.946
+   35.4 COMPLETE reset
+   35.5 CELL (0, 0) f=90 open=[] sig=0.959
+   35.5 COMPLETE reset
+   35.6 CELL (0, 0) f=90 open=[] sig=0.937
+   35.6 COMPLETE reset
+   35.7 CELL (0, 0) f=90 open=[] sig=0.950
+   35.7 COMPLETE reset
+   35.8 CELL (0, 0) f=90 open=[] sig=0.948
+   35.8 COMPLETE reset
+   35.9 CELL (0, 0) f=90 open=[] sig=0.951
+   35.9 COMPLETE reset
+   36.0 CELL (0, 0) f=90 open=[] sig=0.947
+   36.0 COMPLETE reset
+   36.1 CELL (0, 0) f=90 open=[] sig=0.943
+   36.1 COMPLETE reset
+   36.2 CELL (0, 0) f=90 open=[] sig=0.945
+   36.2 COMPLETE reset
+   36.3 CELL (0, 0) f=90 open=[] sig=0.961
+   36.3 COMPLETE reset
+   36.4 CELL (0, 0) f=90 open=[] sig=0.962
+   36.4 COMPLETE reset
+   36.5 CELL (0, 0) f=90 open=[] sig=0.943
+   36.5 COMPLETE reset
+   36.6 CELL (0, 0) f=90 open=[] sig=0.957
+   36.6 COMPLETE reset
+   36.7 CELL (0, 0) f=90 open=[] sig=0.952
+   36.7 COMPLETE reset
+   36.7 CELL (0, 0) f=90 open=[] sig=0.943
+   36.7 COMPLETE reset
+   36.8 CELL (0, 0) f=90 open=[] sig=0.947
+   36.9 COMPLETE reset
+   37.0 CELL (0, 0) f=90 open=[] sig=0.949
+   37.0 COMPLETE reset
+   37.0 CELL (0, 0) f=90 open=[] sig=0.943
+   37.0 COMPLETE reset
+   37.1 CELL (0, 0) f=90 open=[] sig=0.953
+   37.1 COMPLETE reset
+   37.2 CELL (0, 0) f=90 open=[] sig=0.957
+   37.2 COMPLETE reset
+   37.3 CELL (0, 0) f=90 open=[] sig=0.966
+   37.3 COMPLETE reset
+   37.4 CELL (0, 0) f=90 open=[] sig=0.945
+   37.4 COMPLETE reset
+   37.5 CELL (0, 0) f=90 open=[] sig=0.960
+   37.5 COMPLETE reset
+   37.6 CELL (0, 0) f=90 open=[] sig=0.948
+   37.6 COMPLETE reset
+   37.7 CELL (0, 0) f=90 open=[] sig=0.941
+   37.7 COMPLETE reset
+   37.8 CELL (0, 0) f=90 open=[] sig=0.950
+   37.8 COMPLETE reset
+   37.9 CELL (0, 0) f=90 open=[] sig=0.938
+   37.9 COMPLETE reset
+   38.0 CELL (0, 0) f=90 open=[] sig=0.945
+   38.0 COMPLETE reset
+   38.1 CELL (0, 0) f=90 open=[] sig=0.951
+   38.1 COMPLETE reset
+   38.2 CELL (0, 0) f=90 open=[] sig=0.958
+   38.2 COMPLETE reset
+   38.3 CELL (0, 0) f=90 open=[] sig=0.945
+   38.3 COMPLETE reset
+   38.4 CELL (0, 0) f=90 open=[] sig=0.953
+   38.4 COMPLETE reset
+   38.4 CELL (0, 0) f=90 open=[] sig=0.953
+   38.4 COMPLETE reset
+   38.5 CELL (0, 0) f=90 open=[] sig=0.946
+   38.5 COMPLETE reset
+   38.6 CELL (0, 0) f=90 open=[] sig=0.950
+   38.6 COMPLETE reset
+   38.7 CELL (0, 0) f=90 open=[] sig=0.958
+   38.7 COMPLETE reset
+   38.8 CELL (0, 0) f=90 open=[] sig=0.943
+   38.8 COMPLETE reset
+   38.9 CELL (0, 0) f=90 open=[] sig=0.951
+   38.9 COMPLETE reset
+   39.0 CELL (0, 0) f=90 open=[] sig=0.945
+   39.0 COMPLETE reset
+   39.1 CELL (0, 0) f=90 open=[] sig=0.955
+   39.1 COMPLETE reset
+   39.2 CELL (0, 0) f=90 open=[] sig=0.948
+   39.2 COMPLETE reset
+   39.3 CELL (0, 0) f=90 open=[] sig=0.942
+   39.3 COMPLETE reset
+   39.4 CELL (0, 0) f=90 open=[] sig=0.946
+   39.4 COMPLETE reset
+   39.5 CELL (0, 0) f=90 open=[] sig=0.951
+   39.5 COMPLETE reset
+   39.6 CELL (0, 0) f=90 open=[] sig=0.945
+   39.6 COMPLETE reset
+   39.6 CELL (0, 0) f=90 open=[] sig=0.950
+   39.6 COMPLETE reset
+   39.7 CELL (0, 0) f=90 open=[] sig=0.942
+   39.7 COMPLETE reset
+   39.8 CELL (0, 0) f=90 open=[] sig=0.960
+   39.8 COMPLETE reset
+   39.9 CELL (0, 0) f=90 open=[] sig=0.955
+   39.9 COMPLETE reset
+   40.0 CELL (0, 0) f=90 open=[] sig=0.934
+   40.0 COMPLETE reset
+   40.1 CELL (0, 0) f=90 open=[] sig=0.945
+   40.1 COMPLETE reset
+   40.2 CELL (0, 0) f=90 open=[] sig=0.955
+   40.2 COMPLETE reset
+   40.3 CELL (0, 0) f=90 open=[] sig=0.943
+   40.3 COMPLETE reset
+   40.4 CELL (0, 0) f=90 open=[] sig=0.937
+   40.4 COMPLETE reset
+   40.5 CELL (0, 0) f=90 open=[] sig=0.947
+   40.5 COMPLETE reset
+   40.6 CELL (0, 0) f=90 open=[] sig=0.943
+   40.6 COMPLETE reset
+   40.7 CELL (0, 0) f=90 open=[] sig=0.952
+   40.7 COMPLETE reset
+   40.8 CELL (0, 0) f=90 open=[] sig=0.945
+   40.8 COMPLETE reset
+   40.9 CELL (0, 0) f=90 open=[] sig=0.952
+   40.9 COMPLETE reset
+   41.0 CELL (0, 0) f=90 open=[] sig=0.952
+   41.0 COMPLETE reset
+   41.0 CELL (0, 0) f=90 open=[] sig=0.951
+   41.0 COMPLETE reset
+   41.2 CELL (0, 0) f=90 open=[] sig=0.952
+   41.2 COMPLETE reset
+   41.3 CELL (0, 0) f=90 open=[] sig=0.970
+   41.3 COMPLETE reset
+   41.3 CELL (0, 0) f=90 open=[] sig=0.945
+   41.3 COMPLETE reset
+   41.4 CELL (0, 0) f=90 open=[] sig=0.946
+   41.4 COMPLETE reset
+   41.5 CELL (0, 0) f=90 open=[] sig=0.946
+   41.5 COMPLETE reset
+   41.6 CELL (0, 0) f=90 open=[] sig=0.946
+   41.6 COMPLETE reset
+   41.7 CELL (0, 0) f=90 open=[] sig=0.943
+   41.7 COMPLETE reset
+   41.8 CELL (0, 0) f=90 open=[] sig=0.966
+   41.8 COMPLETE reset
+   41.9 CELL (0, 0) f=90 open=[] sig=0.945
+   41.9 COMPLETE reset
+   42.0 CELL (0, 0) f=90 open=[] sig=0.942
+   42.0 COMPLETE reset
+   42.1 CELL (0, 0) f=90 open=[] sig=0.943
+   42.1 COMPLETE reset
+   42.2 CELL (0, 0) f=90 open=[] sig=0.956
+   42.2 COMPLETE reset
+   42.3 CELL (0, 0) f=90 open=[] sig=0.945
+   42.3 COMPLETE reset
+   42.4 CELL (0, 0) f=90 open=[] sig=0.961
+   42.4 COMPLETE reset
+   42.5 CELL (0, 0) f=90 open=[] sig=0.955
+   42.5 COMPLETE reset
+   42.6 CELL (0, 0) f=90 open=[] sig=0.952
+   42.6 COMPLETE reset
+   42.7 CELL (0, 0) f=90 open=[] sig=0.953
+   42.7 COMPLETE reset
+   42.8 CELL (0, 0) f=90 open=[] sig=0.958
+   42.8 COMPLETE reset
+   42.9 CELL (0, 0) f=90 open=[] sig=0.952
+   42.9 COMPLETE reset
+   43.0 CELL (0, 0) f=90 open=[] sig=0.944
+   43.0 COMPLETE reset
+   43.1 CELL (0, 0) f=90 open=[] sig=0.937
+   43.1 COMPLETE reset
+   43.2 CELL (0, 0) f=90 open=[] sig=0.947
+   43.2 COMPLETE reset
+   43.3 CELL (0, 0) f=90 open=[] sig=0.929
+   43.3 COMPLETE reset
+   43.4 CELL (0, 0) f=90 open=[] sig=0.955
+   43.4 COMPLETE reset
+   43.5 CELL (0, 0) f=90 open=[] sig=0.945
+   43.5 COMPLETE reset
+   43.5 CELL (0, 0) f=90 open=[] sig=0.939
+   43.5 COMPLETE reset
+   43.6 CELL (0, 0) f=90 open=[] sig=0.955
+   43.6 COMPLETE reset
+   43.7 CELL (0, 0) f=90 open=[] sig=0.954
+   43.7 COMPLETE reset
+   43.8 CELL (0, 0) f=90 open=[] sig=0.939
+   43.8 COMPLETE reset
+   43.9 CELL (0, 0) f=90 open=[] sig=0.956
+   43.9 COMPLETE reset
+   44.0 CELL (0, 0) f=90 open=[] sig=0.951
+   44.0 COMPLETE reset
+   44.1 CELL (0, 0) f=90 open=[] sig=0.923
+   44.1 COMPLETE reset
+   44.2 CELL (0, 0) f=90 open=[] sig=0.943
+   44.2 COMPLETE reset
+   44.3 CELL (0, 0) f=90 open=[] sig=0.943
+   44.3 COMPLETE reset
+   44.4 CELL (0, 0) f=90 open=[] sig=0.952
+   44.4 COMPLETE reset
+   44.5 CELL (0, 0) f=90 open=[] sig=0.951
+   44.5 COMPLETE reset
+   44.5 CELL (0, 0) f=90 open=[] sig=0.951
+   44.5 COMPLETE reset
+   44.6 CELL (0, 0) f=90 open=[] sig=0.945
+   44.6 COMPLETE reset
+   44.7 CELL (0, 0) f=90 open=[] sig=0.957
+   44.7 COMPLETE reset
+   44.8 CELL (0, 0) f=90 open=[] sig=0.955
+   44.8 COMPLETE reset
+   44.9 CELL (0, 0) f=90 open=[] sig=0.946
+   44.9 COMPLETE reset
+   45.0 CELL (0, 0) f=90 open=[] sig=0.959
+   45.0 COMPLETE reset
+   45.1 CELL (0, 0) f=90 open=[] sig=0.952
+   45.1 COMPLETE reset
+   45.2 CELL (0, 0) f=90 open=[] sig=0.957
+   45.2 COMPLETE reset
+   45.3 CELL (0, 0) f=90 open=[] sig=0.946
+   45.3 COMPLETE reset
+   45.4 CELL (0, 0) f=90 open=[] sig=0.960
+   45.4 COMPLETE reset
+   45.5 CELL (0, 0) f=90 open=[] sig=0.947
+   45.5 COMPLETE reset
+   45.6 CELL (0, 0) f=90 open=[] sig=0.946
+   45.6 COMPLETE reset
+   45.7 CELL (0, 0) f=90 open=[] sig=0.945
+   45.7 COMPLETE reset
+   45.8 CELL (0, 0) f=90 open=[] sig=0.951
+   45.8 COMPLETE reset
+   45.9 CELL (0, 0) f=90 open=[] sig=0.941
+   45.9 COMPLETE reset
+   46.0 CELL (0, 0) f=90 open=[] sig=0.956
+   46.0 COMPLETE reset
+   46.0 CELL (0, 0) f=90 open=[] sig=0.952
+   46.0 COMPLETE reset
+   46.1 CELL (0, 0) f=90 open=[] sig=0.954
+   46.1 COMPLETE reset
+   46.2 CELL (0, 0) f=90 open=[] sig=0.952
+   46.2 COMPLETE reset
+   46.3 CELL (0, 0) f=90 open=[] sig=0.947
+   46.3 COMPLETE reset
+   46.4 CELL (0, 0) f=90 open=[] sig=0.958
+   46.4 COMPLETE reset
+   46.5 CELL (0, 0) f=90 open=[] sig=0.947
+   46.5 COMPLETE reset
+   46.6 CELL (0, 0) f=90 open=[] sig=0.961
+   46.6 COMPLETE reset
+   46.7 CELL (0, 0) f=90 open=[] sig=0.947
+   46.7 COMPLETE reset
+   46.8 CELL (0, 0) f=90 open=[] sig=0.953
+   46.8 COMPLETE reset
+   46.9 CELL (0, 0) f=90 open=[] sig=0.939
+   46.9 COMPLETE reset
+   47.0 CELL (0, 0) f=90 open=[] sig=0.953
+   47.0 COMPLETE reset
+   47.1 CELL (0, 0) f=90 open=[] sig=0.949
+   47.1 COMPLETE reset
+   47.2 CELL (0, 0) f=90 open=[] sig=0.962
+   47.2 COMPLETE reset
+   47.3 CELL (0, 0) f=90 open=[] sig=0.948
+   47.3 COMPLETE reset
+   47.4 CELL (0, 0) f=90 open=[] sig=0.944
+   47.4 COMPLETE reset
+   47.5 CELL (0, 0) f=90 open=[] sig=0.966
+   47.5 COMPLETE reset
+   47.6 CELL (0, 0) f=90 open=[] sig=0.949
+   47.6 COMPLETE reset
+   47.7 CELL (0, 0) f=90 open=[] sig=0.950
+   47.7 COMPLETE reset
+   47.8 CELL (0, 0) f=90 open=[] sig=0.959
+   47.8 COMPLETE reset
+   47.9 CELL (0, 0) f=90 open=[] sig=0.946
+   47.9 COMPLETE reset
+   48.0 CELL (0, 0) f=90 open=[] sig=0.940
+   48.0 COMPLETE reset
+   48.1 CELL (0, 0) f=90 open=[] sig=0.934
+   48.1 COMPLETE reset
+   48.2 CELL (0, 0) f=90 open=[] sig=0.945
+   48.2 COMPLETE reset
+   48.3 CELL (0, 0) f=90 open=[] sig=0.961
+   48.3 COMPLETE reset
+   48.4 CELL (0, 0) f=90 open=[] sig=0.963
+   48.4 COMPLETE reset
+   48.4 CELL (0, 0) f=90 open=[] sig=0.942
+   48.4 COMPLETE reset
+   48.5 CELL (0, 0) f=90 open=[] sig=0.943
+   48.5 COMPLETE reset
+   48.6 CELL (0, 0) f=90 open=[] sig=0.946
+   48.6 COMPLETE reset
+   48.7 CELL (0, 0) f=90 open=[] sig=0.955
+   48.7 COMPLETE reset
+   48.8 CELL (0, 0) f=90 open=[] sig=0.950
+   48.8 COMPLETE reset
+   48.9 CELL (0, 0) f=90 open=[] sig=0.951
+   48.9 COMPLETE reset
+   49.0 CELL (0, 0) f=90 open=[] sig=0.948
+   49.0 COMPLETE reset
+   49.1 CELL (0, 0) f=90 open=[] sig=0.952
+   49.1 COMPLETE reset
+   49.2 CELL (0, 0) f=90 open=[] sig=0.952
+   49.2 COMPLETE reset
+   49.3 CELL (0, 0) f=90 open=[] sig=0.955
+   49.3 COMPLETE reset
+   49.4 CELL (0, 0) f=90 open=[] sig=0.951
+   49.4 COMPLETE reset
+   49.5 CELL (0, 0) f=90 open=[] sig=0.921
+   49.5 COMPLETE reset
+   49.6 CELL (0, 0) f=90 open=[] sig=0.946
+   49.6 COMPLETE reset
+   49.7 CELL (0, 0) f=90 open=[] sig=0.945
+   49.7 COMPLETE reset
+   49.8 CELL (0, 0) f=90 open=[] sig=0.952
+   49.8 COMPLETE reset
+   49.9 CELL (0, 0) f=90 open=[] sig=0.942
+   49.9 COMPLETE reset
+   50.0 CELL (0, 0) f=90 open=[] sig=0.958
+   50.0 COMPLETE reset
+   50.0 CELL (0, 0) f=90 open=[] sig=0.954
+   50.0 COMPLETE reset
+   50.2 CELL (0, 0) f=90 open=[] sig=0.963
+   50.2 COMPLETE reset
+   50.3 CELL (0, 0) f=90 open=[] sig=0.949
+   50.3 COMPLETE reset
+   50.4 CELL (0, 0) f=90 open=[] sig=0.932
+   50.4 COMPLETE reset
+   50.5 CELL (0, 0) f=90 open=[] sig=0.955
+   50.5 COMPLETE reset
+   50.5 CELL (0, 0) f=90 open=[] sig=0.948
+   50.5 COMPLETE reset
+   50.6 CELL (0, 0) f=90 open=[] sig=0.945
+   50.6 COMPLETE reset
+   50.7 CELL (0, 0) f=90 open=[] sig=0.965
+   50.7 COMPLETE reset
+   50.8 CELL (0, 0) f=90 open=[] sig=0.961
+   50.8 COMPLETE reset
+   50.9 CELL (0, 0) f=90 open=[] sig=0.958
+   50.9 COMPLETE reset
+   51.0 CELL (0, 0) f=90 open=[] sig=0.957
+   51.0 COMPLETE reset
+   51.1 CELL (0, 0) f=90 open=[] sig=0.952
+   51.1 COMPLETE reset
+   51.2 CELL (0, 0) f=90 open=[] sig=0.943
+   51.2 COMPLETE reset
+   51.3 CELL (0, 0) f=90 open=[] sig=0.948
+   51.3 COMPLETE reset
+   51.4 CELL (0, 0) f=90 open=[] sig=0.947
+   51.4 COMPLETE reset
+   51.5 CELL (0, 0) f=90 open=[] sig=0.955
+   51.5 COMPLETE reset
+   51.6 CELL (0, 0) f=90 open=[] sig=0.950
+   51.6 COMPLETE reset
+   51.6 CELL (0, 0) f=90 open=[] sig=0.949
+   51.6 COMPLETE reset
+   51.8 CELL (0, 0) f=90 open=[] sig=0.956
+   51.8 COMPLETE reset
+   51.9 CELL (0, 0) f=90 open=[] sig=0.947
+   51.9 COMPLETE reset
+   52.0 CELL (0, 0) f=90 open=[] sig=0.946
+   52.0 COMPLETE reset
+   52.1 CELL (0, 0) f=90 open=[] sig=0.950
+   52.1 COMPLETE reset
+   52.1 CELL (0, 0) f=90 open=[] sig=0.936
+   52.1 COMPLETE reset
+   52.2 CELL (0, 0) f=90 open=[] sig=0.948
+   52.2 COMPLETE reset
+   52.3 CELL (0, 0) f=90 open=[] sig=0.958
+   52.3 COMPLETE reset
+   52.4 CELL (0, 0) f=90 open=[] sig=0.952
+   52.4 COMPLETE reset
+   52.5 CELL (0, 0) f=90 open=[] sig=0.954
+   52.5 COMPLETE reset
+   52.6 CELL (0, 0) f=90 open=[] sig=0.933
+   52.6 COMPLETE reset
+   52.7 CELL (0, 0) f=90 open=[] sig=0.957
+   52.7 COMPLETE reset
+   52.8 CELL (0, 0) f=90 open=[] sig=0.945
+   52.8 COMPLETE reset
+   52.9 CELL (0, 0) f=90 open=[] sig=0.963
+   52.9 COMPLETE reset
+   53.0 CELL (0, 0) f=90 open=[] sig=0.944
+   53.0 COMPLETE reset
+   53.1 CELL (0, 0) f=90 open=[] sig=0.955
+   53.1 COMPLETE reset
+   53.2 CELL (0, 0) f=90 open=[] sig=0.958
+   53.2 COMPLETE reset
+   53.3 CELL (0, 0) f=90 open=[] sig=0.942
+   53.3 COMPLETE reset
+   53.4 CELL (0, 0) f=90 open=[] sig=0.958
+   53.4 COMPLETE reset
+   53.5 CELL (0, 0) f=90 open=[] sig=0.955
+   53.5 COMPLETE reset
+   53.6 CELL (0, 0) f=90 open=[] sig=0.947
+   53.6 COMPLETE reset
+   53.7 CELL (0, 0) f=90 open=[] sig=0.945
+   53.7 COMPLETE reset
+   53.7 CELL (0, 0) f=90 open=[] sig=0.950
+   53.7 COMPLETE reset
+   53.8 CELL (0, 0) f=90 open=[] sig=0.953
+   53.8 COMPLETE reset
+   53.9 CELL (0, 0) f=90 open=[] sig=0.945
+   53.9 COMPLETE reset
+   54.0 CELL (0, 0) f=90 open=[] sig=0.950
+   54.0 COMPLETE reset
+   54.1 CELL (0, 0) f=90 open=[] sig=0.949
+   54.1 COMPLETE reset
+   54.2 CELL (0, 0) f=90 open=[] sig=0.942
+   54.2 COMPLETE reset
+   54.3 CELL (0, 0) f=90 open=[] sig=0.948
+   54.3 COMPLETE reset
+   54.4 CELL (0, 0) f=90 open=[] sig=0.954
+   54.4 COMPLETE reset
+   54.5 CELL (0, 0) f=90 open=[] sig=0.949
+   54.5 COMPLETE reset
+   54.6 CELL (0, 0) f=90 open=[] sig=0.928
+   54.6 COMPLETE reset
+   54.7 CELL (0, 0) f=90 open=[] sig=0.960
+   54.7 COMPLETE reset
+   54.8 CELL (0, 0) f=90 open=[] sig=0.941
+   54.8 COMPLETE reset
+   54.9 CELL (0, 0) f=90 open=[] sig=0.941
+   54.9 COMPLETE reset
+   55.0 CELL (0, 0) f=90 open=[] sig=0.937
+   55.0 COMPLETE reset
+   55.1 CELL (0, 0) f=90 open=[] sig=0.954
+   55.1 COMPLETE reset
+   55.2 CELL (0, 0) f=90 open=[] sig=0.945
+   55.2 COMPLETE reset
+   55.2 CELL (0, 0) f=90 open=[] sig=0.941
+   55.2 COMPLETE reset
+   55.3 CELL (0, 0) f=90 open=[] sig=0.945
+   55.3 COMPLETE reset
+   55.4 CELL (0, 0) f=90 open=[] sig=0.941
+   55.4 COMPLETE reset
+   55.5 CELL (0, 0) f=90 open=[] sig=0.955
+   55.5 COMPLETE reset
+   55.6 CELL (0, 0) f=90 open=[] sig=0.940
+   55.6 COMPLETE reset
+   55.7 CELL (0, 0) f=90 open=[] sig=0.945
+   55.7 COMPLETE reset
+   55.8 CELL (0, 0) f=90 open=[] sig=0.955
+   55.8 COMPLETE reset
+   55.9 CELL (0, 0) f=90 open=[] sig=0.952
+   55.9 COMPLETE reset
+   56.0 CELL (0, 0) f=90 open=[] sig=0.954
+   56.0 COMPLETE reset
+   56.1 CELL (0, 0) f=90 open=[] sig=0.964
+   56.1 COMPLETE reset
+   56.2 CELL (0, 0) f=90 open=[] sig=0.949
+   56.2 COMPLETE reset
+   56.3 CELL (0, 0) f=90 open=[] sig=0.958
+   56.3 COMPLETE reset
+   56.4 CELL (0, 0) f=90 open=[] sig=0.948
+   56.4 COMPLETE reset
+   56.5 CELL (0, 0) f=90 open=[] sig=0.950
+   56.5 COMPLETE reset
+   56.5 CELL (0, 0) f=90 open=[] sig=0.946
+   56.5 COMPLETE reset
+   56.6 CELL (0, 0) f=90 open=[] sig=0.950
+   56.6 COMPLETE reset
+   56.7 CELL (0, 0) f=90 open=[] sig=0.943
+   56.7 COMPLETE reset
+   56.8 CELL (0, 0) f=90 open=[] sig=0.949
+   56.8 COMPLETE reset
+   56.9 CELL (0, 0) f=90 open=[] sig=0.939
+   56.9 COMPLETE reset
+   57.0 CELL (0, 0) f=90 open=[] sig=0.940
+   57.0 COMPLETE reset
+   57.1 CELL (0, 0) f=90 open=[] sig=0.951
+   57.1 COMPLETE reset
+   57.2 CELL (0, 0) f=90 open=[] sig=0.935
+   57.2 COMPLETE reset
+   57.3 CELL (0, 0) f=90 open=[] sig=0.951
+   57.3 COMPLETE reset
+   57.4 CELL (0, 0) f=90 open=[] sig=0.948
+   57.4 COMPLETE reset
+   57.5 CELL (0, 0) f=90 open=[] sig=0.957
+   57.5 COMPLETE reset
+   57.6 CELL (0, 0) f=90 open=[] sig=0.962
+   57.6 COMPLETE reset
+   57.7 CELL (0, 0) f=90 open=[] sig=0.950
+   57.7 COMPLETE reset
+   57.8 CELL (0, 0) f=90 open=[] sig=0.957
+   57.8 COMPLETE reset
+   57.9 CELL (0, 0) f=90 open=[] sig=0.951
+   57.9 COMPLETE reset
+   58.0 CELL (0, 0) f=90 open=[] sig=0.945
+   58.0 COMPLETE reset
+   58.1 CELL (0, 0) f=90 open=[] sig=0.954
+   58.1 COMPLETE reset
+   58.2 CELL (0, 0) f=90 open=[] sig=0.965
+   58.2 COMPLETE reset
+   58.3 CELL (0, 0) f=90 open=[] sig=0.941
+   58.3 COMPLETE reset
+   58.3 CELL (0, 0) f=90 open=[] sig=0.944
+   58.3 COMPLETE reset
+   58.4 CELL (0, 0) f=90 open=[] sig=0.961
+   58.4 COMPLETE reset
+   58.5 CELL (0, 0) f=90 open=[] sig=0.947
+   58.5 COMPLETE reset
+   58.6 CELL (0, 0) f=90 open=[] sig=0.941
+   58.6 COMPLETE reset
+   58.7 CELL (0, 0) f=90 open=[] sig=0.953
+   58.7 COMPLETE reset
+   58.8 CELL (0, 0) f=90 open=[] sig=0.955
+   58.8 COMPLETE reset
+   58.9 CELL (0, 0) f=90 open=[] sig=0.958
+   58.9 COMPLETE reset
+   59.0 CELL (0, 0) f=90 open=[] sig=0.945
+   59.0 COMPLETE reset
+   59.1 CELL (0, 0) f=90 open=[] sig=0.953
+   59.1 COMPLETE reset
+   59.2 CELL (0, 0) f=90 open=[] sig=0.949
+   59.2 COMPLETE reset
+   59.3 CELL (0, 0) f=90 open=[] sig=0.949
+   59.3 COMPLETE reset
+   59.4 CELL (0, 0) f=90 open=[] sig=0.946
+   59.4 COMPLETE reset
+   59.5 CELL (0, 0) f=90 open=[] sig=0.950
+   59.5 COMPLETE reset
+   59.5 CELL (0, 0) f=90 open=[] sig=0.947
+   59.5 COMPLETE reset
+   59.6 CELL (0, 0) f=90 open=[] sig=0.938
+   59.6 COMPLETE reset
+   59.8 CELL (0, 0) f=90 open=[] sig=0.952
+   59.8 COMPLETE reset
+   59.8 CELL (0, 0) f=90 open=[] sig=0.939
+   59.8 COMPLETE reset
+   60.0 CELL (0, 0) f=90 open=[] sig=0.940
+   60.0 COMPLETE reset
+   60.1 CELL (0, 0) f=90 open=[] sig=0.958
+   60.1 COMPLETE reset
+   60.2 CELL (0, 0) f=90 open=[] sig=0.949
+   60.2 COMPLETE reset
+   60.3 CELL (0, 0) f=90 open=[] sig=0.935
+   60.3 COMPLETE reset
+   60.3 CELL (0, 0) f=90 open=[] sig=0.948
+   60.3 COMPLETE reset
+   60.4 CELL (0, 0) f=90 open=[] sig=0.951
+   60.4 COMPLETE reset
+   60.5 CELL (0, 0) f=90 open=[] sig=0.951
+   60.5 COMPLETE reset
+   60.7 CELL (0, 0) f=90 open=[] sig=0.927
+   60.7 COMPLETE reset
+   60.8 CELL (0, 0) f=90 open=[] sig=0.966
+   60.8 COMPLETE reset
+   60.9 CELL (0, 0) f=90 open=[] sig=0.949
+   60.9 COMPLETE reset
+   60.9 CELL (0, 0) f=90 open=[] sig=0.935
+   60.9 COMPLETE reset
+   61.0 CELL (0, 0) f=90 open=[] sig=0.946
+   61.0 COMPLETE reset
+   61.1 CELL (0, 0) f=90 open=[] sig=0.954
+   61.1 COMPLETE reset
+   61.2 CELL (0, 0) f=90 open=[] sig=0.936
+   61.2 COMPLETE reset
+   61.3 CELL (0, 0) f=90 open=[] sig=0.945
+   61.3 COMPLETE reset
+   61.5 CELL (0, 0) f=90 open=[] sig=0.957
+   61.5 COMPLETE reset
+   61.6 CELL (0, 0) f=90 open=[] sig=0.938
+   61.6 COMPLETE reset
+   61.7 CELL (0, 0) f=90 open=[] sig=0.955
+   61.7 COMPLETE reset
+   61.8 CELL (0, 0) f=90 open=[] sig=0.942
+   61.8 COMPLETE reset
+   61.9 CELL (0, 0) f=90 open=[] sig=0.946
+   61.9 COMPLETE reset
+   62.0 CELL (0, 0) f=90 open=[] sig=0.937
+   62.0 COMPLETE reset
+   62.1 CELL (0, 0) f=90 open=[] sig=0.929
+   62.1 COMPLETE reset
+   62.2 CELL (0, 0) f=90 open=[] sig=0.946
+   62.2 COMPLETE reset
+   62.3 CELL (0, 0) f=90 open=[] sig=0.950
+   62.3 COMPLETE reset
+   62.4 CELL (0, 0) f=90 open=[] sig=0.941
+   62.4 COMPLETE reset
+   62.5 CELL (0, 0) f=90 open=[] sig=0.945
+   62.5 COMPLETE reset
+   62.6 CELL (0, 0) f=90 open=[] sig=0.950
+   62.6 COMPLETE reset
+   62.7 CELL (0, 0) f=90 open=[] sig=0.941
+   62.7 COMPLETE reset
+   62.8 CELL (0, 0) f=90 open=[] sig=0.948
+   62.8 COMPLETE reset
+   62.9 CELL (0, 0) f=90 open=[] sig=0.951
+   62.9 COMPLETE reset
+   62.9 CELL (0, 0) f=90 open=[] sig=0.941
+   63.0 COMPLETE reset
+   63.1 CELL (0, 0) f=90 open=[] sig=0.948
+   63.1 COMPLETE reset
+   63.1 CELL (0, 0) f=90 open=[] sig=0.954
+   63.1 COMPLETE reset
+   63.2 CELL (0, 0) f=90 open=[] sig=0.940
+   63.2 COMPLETE reset
+   63.3 CELL (0, 0) f=90 open=[] sig=0.953
+   63.3 COMPLETE reset
+   63.4 CELL (0, 0) f=90 open=[] sig=0.958
+   63.4 COMPLETE reset
+   63.5 CELL (0, 0) f=90 open=[] sig=0.950
+   63.5 COMPLETE reset
+   63.6 CELL (0, 0) f=90 open=[] sig=0.958
+   63.6 COMPLETE reset
+   63.7 CELL (0, 0) f=90 open=[] sig=0.950
+   63.7 COMPLETE reset
+   63.8 CELL (0, 0) f=90 open=[] sig=0.944
+   63.8 COMPLETE reset
+   63.9 CELL (0, 0) f=90 open=[] sig=0.957
+   63.9 COMPLETE reset
+   64.0 CELL (0, 0) f=90 open=[] sig=0.957
+   64.0 COMPLETE reset
+   64.1 CELL (0, 0) f=90 open=[] sig=0.948
+   64.1 COMPLETE reset
+   64.2 CELL (0, 0) f=90 open=[] sig=0.939
+   64.2 COMPLETE reset
+   64.3 CELL (0, 0) f=90 open=[] sig=0.958
+   64.3 COMPLETE reset
+   64.4 CELL (0, 0) f=90 open=[] sig=0.949
+   64.4 COMPLETE reset
+   64.5 CELL (0, 0) f=90 open=[] sig=0.941
+   64.5 COMPLETE reset
+   64.5 CELL (0, 0) f=90 open=[] sig=0.938
+   64.5 COMPLETE reset
+   64.6 CELL (0, 0) f=90 open=[] sig=0.951
+   64.6 COMPLETE reset
+   64.8 CELL (0, 0) f=90 open=[] sig=0.956
+   64.8 COMPLETE reset
+   64.8 CELL (0, 0) f=90 open=[] sig=0.937
+   64.8 COMPLETE reset
+   64.9 CELL (0, 0) f=90 open=[] sig=0.956
+   64.9 COMPLETE reset
+   65.0 CELL (0, 0) f=90 open=[] sig=0.954
+   65.0 COMPLETE reset
+   65.1 CELL (0, 0) f=90 open=[] sig=0.960
+   65.1 COMPLETE reset
+   65.2 CELL (0, 0) f=90 open=[] sig=0.955
+   65.2 COMPLETE reset
+   65.3 CELL (0, 0) f=90 open=[] sig=0.951
+   65.3 COMPLETE reset
+   65.5 CELL (0, 0) f=90 open=[] sig=0.945
+   65.5 COMPLETE reset
+   65.6 CELL (0, 0) f=90 open=[] sig=0.932
+   65.6 COMPLETE reset
+   65.7 CELL (0, 0) f=90 open=[] sig=0.958
+   65.7 COMPLETE reset
+   65.8 CELL (0, 0) f=90 open=[] sig=0.957
+   65.8 COMPLETE reset
+   65.9 CELL (0, 0) f=90 open=[] sig=0.944
+   65.9 COMPLETE reset
+   66.0 CELL (0, 0) f=90 open=[] sig=0.955
+   66.0 COMPLETE reset
+   66.1 CELL (0, 0) f=90 open=[] sig=0.942
+   66.1 COMPLETE reset
+   66.1 CELL (0, 0) f=90 open=[] sig=0.936
+   66.2 COMPLETE reset
+   66.3 CELL (0, 0) f=90 open=[] sig=0.935
+   66.3 COMPLETE reset
+   66.3 CELL (0, 0) f=90 open=[] sig=0.954
+   66.3 COMPLETE reset
+   66.5 CELL (0, 0) f=90 open=[] sig=0.946
+   66.5 COMPLETE reset
+   66.6 CELL (0, 0) f=90 open=[] sig=0.956
+   66.6 COMPLETE reset
+   66.7 CELL (0, 0) f=90 open=[] sig=0.943
+   66.7 COMPLETE reset
+   66.7 CELL (0, 0) f=90 open=[] sig=0.950
+   66.7 COMPLETE reset
+   66.8 CELL (0, 0) f=90 open=[] sig=0.939
+   66.8 COMPLETE reset
+   66.9 CELL (0, 0) f=90 open=[] sig=0.936
+   66.9 COMPLETE reset
+   67.0 CELL (0, 0) f=90 open=[] sig=0.953
+   67.0 COMPLETE reset
+   67.1 CELL (0, 0) f=90 open=[] sig=0.943
+   67.1 COMPLETE reset
+   67.2 CELL (0, 0) f=90 open=[] sig=0.949
+   67.2 COMPLETE reset
+   67.3 CELL (0, 0) f=90 open=[] sig=0.930
+   67.3 COMPLETE reset
+   67.4 CELL (0, 0) f=90 open=[] sig=0.950
+   67.4 COMPLETE reset
+   67.5 CELL (0, 0) f=90 open=[] sig=0.938
+   67.5 COMPLETE reset
+   67.6 CELL (0, 0) f=90 open=[] sig=0.947
+   67.6 COMPLETE reset
+   67.7 CELL (0, 0) f=90 open=[] sig=0.951
+   67.7 COMPLETE reset
+   67.8 CELL (0, 0) f=90 open=[] sig=0.950
+   67.8 COMPLETE reset
+   67.9 CELL (0, 0) f=90 open=[] sig=0.951
+   67.9 COMPLETE reset
+   68.0 CELL (0, 0) f=90 open=[] sig=0.948
+   68.0 COMPLETE reset
+   68.1 CELL (0, 0) f=90 open=[] sig=0.959
+   68.1 COMPLETE reset
+   68.2 CELL (0, 0) f=90 open=[] sig=0.943
+   68.2 COMPLETE reset
+   68.3 CELL (0, 0) f=90 open=[] sig=0.945
+   68.3 COMPLETE reset
+   68.4 CELL (0, 0) f=90 open=[] sig=0.966
+   68.4 COMPLETE reset
+   68.5 CELL (0, 0) f=90 open=[] sig=0.945
+   68.5 COMPLETE reset
+   68.6 CELL (0, 0) f=90 open=[] sig=0.941
+   68.6 COMPLETE reset
+   68.7 CELL (0, 0) f=90 open=[] sig=0.956
+   68.7 COMPLETE reset
+   68.8 CELL (0, 0) f=90 open=[] sig=0.957
+   68.8 COMPLETE reset
+   68.9 CELL (0, 0) f=90 open=[] sig=0.956
+   68.9 COMPLETE reset
+   69.0 CELL (0, 0) f=90 open=[] sig=0.954
+   69.0 COMPLETE reset
+   69.1 CELL (0, 0) f=90 open=[] sig=0.950
+   69.1 COMPLETE reset
+   69.2 CELL (0, 0) f=90 open=[] sig=0.945
+   69.2 COMPLETE reset
+   69.3 CELL (0, 0) f=90 open=[] sig=0.952
+   69.3 COMPLETE reset
+   69.3 CELL (0, 0) f=90 open=[] sig=0.954
+   69.3 COMPLETE reset
+   69.4 CELL (0, 0) f=90 open=[] sig=0.954
+   69.4 COMPLETE reset
+   69.5 CELL (0, 0) f=90 open=[] sig=0.966
+   69.5 COMPLETE reset
+   69.6 CELL (0, 0) f=90 open=[] sig=0.939
+   69.6 COMPLETE reset
+   69.7 CELL (0, 0) f=90 open=[] sig=0.946
+   69.7 COMPLETE reset
+   69.8 CELL (0, 0) f=90 open=[] sig=0.949
+   69.8 COMPLETE reset
+   69.9 CELL (0, 0) f=90 open=[] sig=0.957
+   69.9 COMPLETE reset
+   70.0 CELL (0, 0) f=90 open=[] sig=0.944
+   70.0 COMPLETE reset
+   70.1 CELL (0, 0) f=90 open=[] sig=0.949
+   70.1 COMPLETE reset
+   70.2 CELL (0, 0) f=90 open=[] sig=0.935
+   70.2 COMPLETE reset
+   70.3 CELL (0, 0) f=90 open=[] sig=0.948
+   70.3 COMPLETE reset
+   70.4 CELL (0, 0) f=90 open=[] sig=0.935
+   70.4 COMPLETE reset
+   70.5 CELL (0, 0) f=90 open=[] sig=0.941
+   70.5 COMPLETE reset
+   70.5 CELL (0, 0) f=90 open=[] sig=0.946
+   70.5 COMPLETE reset
+   70.6 CELL (0, 0) f=90 open=[] sig=0.970
+   70.6 COMPLETE reset
+   70.7 CELL (0, 0) f=90 open=[] sig=0.942
+   70.7 COMPLETE reset
+   70.8 CELL (0, 0) f=90 open=[] sig=0.951
+   70.8 COMPLETE reset
+   70.9 CELL (0, 0) f=90 open=[] sig=0.959
+   70.9 COMPLETE reset
+   71.0 CELL (0, 0) f=90 open=[] sig=0.960
+   71.0 COMPLETE reset
+   71.1 CELL (0, 0) f=90 open=[] sig=0.949
+   71.1 COMPLETE reset
+   71.2 CELL (0, 0) f=90 open=[] sig=0.951
+   71.2 COMPLETE reset
+   71.3 CELL (0, 0) f=90 open=[] sig=0.954
+   71.3 COMPLETE reset
+   71.4 CELL (0, 0) f=90 open=[] sig=0.956
+   71.4 COMPLETE reset
+   71.5 CELL (0, 0) f=90 open=[] sig=0.947
+   71.5 COMPLETE reset
+   71.6 CELL (0, 0) f=90 open=[] sig=0.954
+   71.6 COMPLETE reset
+   71.7 CELL (0, 0) f=90 open=[] sig=0.944
+   71.7 COMPLETE reset
+   71.8 CELL (0, 0) f=90 open=[] sig=0.947
+   71.8 COMPLETE reset
+   71.8 CELL (0, 0) f=90 open=[] sig=0.946
+   71.8 COMPLETE reset
+   71.9 CELL (0, 0) f=90 open=[] sig=0.940
+   71.9 COMPLETE reset
+   72.0 CELL (0, 0) f=90 open=[] sig=0.952
+   72.0 COMPLETE reset
+   72.1 CELL (0, 0) f=90 open=[] sig=0.941
+   72.1 COMPLETE reset
+   72.2 CELL (0, 0) f=90 open=[] sig=0.957
+   72.2 COMPLETE reset
+   72.3 CELL (0, 0) f=90 open=[] sig=0.949
+   72.3 COMPLETE reset
+   72.4 CELL (0, 0) f=90 open=[] sig=0.935
+   72.4 COMPLETE reset
+   72.5 CELL (0, 0) f=90 open=[] sig=0.938
+   72.5 COMPLETE reset
+   72.6 CELL (0, 0) f=90 open=[] sig=0.938
+   72.6 COMPLETE reset
+   72.7 CELL (0, 0) f=90 open=[] sig=0.943
+   72.7 COMPLETE reset
+   72.8 CELL (0, 0) f=90 open=[] sig=0.950
+   72.8 COMPLETE reset
+   72.9 CELL (0, 0) f=90 open=[] sig=0.952
+   72.9 COMPLETE reset
+   73.0 CELL (0, 0) f=90 open=[] sig=0.944
+   73.0 COMPLETE reset
+   73.1 CELL (0, 0) f=90 open=[] sig=0.946
+   73.1 COMPLETE reset
+   73.2 CELL (0, 0) f=90 open=[] sig=0.942
+   73.2 COMPLETE reset
+   73.3 CELL (0, 0) f=90 open=[] sig=0.945
+   73.3 COMPLETE reset
+   73.4 CELL (0, 0) f=90 open=[] sig=0.953
+   73.4 COMPLETE reset
