@@ -107,6 +107,9 @@ class World:
         # region with entries inside the together window.
         self.joint_goal = duo.get("objective", "solo") == "together"
         self.peer_signal_scale = float(duo.get("peer_signal_scale", 2.0))
+        rate = float(duo.get("tx_rate_hz", 0) or 0)
+        self.tx_min_ticks = (cfg["sim"]["tick_hz"] / rate) if rate > 0 \
+            else 0
         self.model = cfg["robot"].get("model", "diffdrive")
         self.car_cfg = cfg["robot"].get("car", {})
         self.actuators = ["accel", "steer"] if self.model == "car" \
@@ -169,7 +172,9 @@ class World:
                 self.spawn_cell or self.maze.start_cell)
             self.x, self.y, self.theta = sx, sy, self.spawn_theta % TWO_PI
             self.serial_rx = deque(maxlen=self.duo_queue)
-            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0}
+            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0,
+                          "tx_rate_dropped": 0}
+            self._last_tx_tick = None
             self.v = 0.0
             self.w = 0.0
             self.phi = 0.0             # car: current steering angle, rad
@@ -546,6 +551,20 @@ class World:
         buffering).  Lock-free toward the peer — deque.append is atomic
         and we never take the peer's lock (see set_peer)."""
         line = raw[:self.duo_max_bytes]
+        # Duty cycle: excess lines vanish before the range gate, with
+        # no error back to the writer.  Logged in aggregate — a spam
+        # loop must not flood the ground-truth record.
+        if self.tx_min_ticks:
+            now = self.tick
+            if self._last_tx_tick is not None and \
+                    now - self._last_tx_tick < self.tx_min_ticks:
+                self.comms["tx_rate_dropped"] += 1
+                if self.comms["tx_rate_dropped"] % 500 == 1:
+                    self._event(dict(
+                        event="comms_rate_drop",
+                        total=self.comms["tx_rate_dropped"]))
+                return
+            self._last_tx_tick = now
         peer = self.peer
         delivered = False
         dist = None

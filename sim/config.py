@@ -45,6 +45,13 @@ DEFAULTS = {
         # (yelling in a maze: through walls, long tail).
         "peer_signal": False,
         "peer_signal_scale": 2.0,  # meters at which strength = 0.5
+        # Radio duty cycle: max accepted transmissions per second of
+        # sim time (0 = unlimited).  Excess lines are silently dropped
+        # before the range gate — the sender gets no error, so the cap
+        # itself must be discovered.  Scarcity is the point: with free
+        # bandwidth, blind repetition is optimal and no reliability
+        # protocol needs to emerge.
+        "tx_rate_hz": 0,
     },
     "noise_profile": "default_noisy",
     "maze": {

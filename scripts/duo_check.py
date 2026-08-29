@@ -198,6 +198,23 @@ def mission_mode():
     check("goal ticks recorded",
           wa.goal_tick is not None and wb.goal_tick is not None)
 
+    # TX duty cycle: excess lines vanish silently; the window re-arms.
+    cfg_r = duo_cfg(duo={"enabled": True, "tx_rate_hz": 1.0})
+    cfg_r["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    wr = World(cfg_r, maze, bot_id="a", spawn_cell=maze.start_cell)
+    ws = World(cfg_r, maze, bot_id="b", spawn_cell=maze.spawn_b_cell)
+    wr.set_peer(ws)
+    ws.set_peer(wr)
+    ws.x, ws.y = wr.x + 0.5, wr.y
+    for i in range(5):
+        wr.send_serial(f"burst{i}")
+    check("rate cap accepts first line only", wr.comms["tx"] == 1
+          and wr.comms["tx_rate_dropped"] == 4, str(wr.comms))
+    check("capped lines never reach the peer", len(ws.serial_rx) == 1)
+    wr.tick += 60   # past the 50-tick window at 1 Hz
+    wr.send_serial("after window")
+    check("window re-arms", wr.comms["tx"] == 2, str(wr.comms))
+
     # Goal chamber: the space beyond the exit is walled in.
     mc = Maze(m["seed"], m["width"], m["height"],
               cell_size=m["cell_size"], style="organic",

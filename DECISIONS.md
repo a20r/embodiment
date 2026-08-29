@@ -356,3 +356,16 @@ walls — yelling in a maze.  It is not mentioned in any README; with
 the mission known, a slowly-varying analog port is interpretable, and
 it gives rendezvous a gradient so the comms/planning behavior (not
 blind search) is what the run measures.  Comms range stays 0.8 m.
+
+### Duo TX duty cycle (duo.tx_rate_hz)
+
+With free bandwidth, blind repetition is the optimal reliability
+strategy for idempotent telemetry, and the duo pairs rationally
+converged on it (beacon floods, "repeat every 3s" contracts) — no
+per-message acknowledgment needed to emerge.  duo.tx_rate_hz caps
+accepted transmissions per sim-second; excess lines vanish silently
+before the range gate (the cap itself must be discovered), logged in
+aggregate so spam cannot flood ground truth.  Hypothesis: scarcity,
+not lossiness, is what breeds reliability protocols — with expensive
+retransmission, knowing whether a specific message landed becomes
+worth a round trip.  Default 0 (unlimited) preserves all prior runs.
