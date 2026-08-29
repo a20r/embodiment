@@ -1,0 +1,100 @@
+{
+  "arm": "A",
+  "budget": {
+    "exec_timeout_s": 60,
+    "max_context_tokens": 160000,
+    "max_total_output_tokens": 150000,
+    "max_turns": 400,
+    "max_wallclock_s": 6000,
+    "on_context_full": "restart",
+    "output_truncate_bytes": 20000
+  },
+  "dashboard": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "duo": {
+    "comms_range": 1.5,
+    "enabled": true,
+    "max_line_bytes": 256,
+    "objective": "together",
+    "peer_signal": true,
+    "peer_signal_scale": 2.0,
+    "queue_depth": 64,
+    "together_window_s": 60,
+    "tx_rate_hz": 0.5
+  },
+  "labels": "off",
+  "lidar": {
+    "fov_deg": 360.0,
+    "max_range": 3.0,
+    "rays": 16
+  },
+  "maze": {
+    "braid": 0.0,
+    "cell_size": 0.5,
+    "curviness": 0.9,
+    "goal_chamber": true,
+    "height": 9,
+    "locked": false,
+    "seed": 51,
+    "style": "organic",
+    "width": 9
+  },
+  "model": "claude-fable-5",
+  "noise": {
+    "actuation_latency_ticks": 3,
+    "beacon_sigma": 0.008,
+    "dropped_read_p": 0.02,
+    "encoder_jitter_ticks": 1,
+    "heading_bias_deg_per_min": 0.0,
+    "heading_drift_deg": 0.002,
+    "heading_sigma_deg": 2.0,
+    "lidar_dropout_p": 0.01,
+    "lidar_sigma_m": 0.01,
+    "motor_gain_left": 1.0,
+    "motor_gain_right": 0.94,
+    "peer_signal_sigma": 0.008,
+    "slip_mu": 0.03,
+    "slip_sigma": 0.04,
+    "speed_sigma_ms": 0.01
+  },
+  "noise_profile": "default_noisy",
+  "perturb_state": {
+    "family_index": 0,
+    "motor_swapped": false,
+    "remap_index": 0
+  },
+  "perturbations": [],
+  "prompt_variant": "lost",
+  "readme_variant": "minimal_duo_mission",
+  "robot": {
+    "car": {
+      "accel_max": 0.4,
+      "drag": 0.35,
+      "steer_max_deg": 35.0,
+      "steer_rate_deg_s": 120.0,
+      "v_max": 0.5,
+      "v_rev_max": 0.15,
+      "wheelbase": 0.12
+    },
+    "encoder_ticks_per_rev": 360,
+    "encoders": true,
+    "max_speed": 0.35,
+    "model": "diffdrive",
+    "radius": 0.09,
+    "wheel_radius": 0.03,
+    "wheelbase": 0.16
+  },
+  "runs_dir": "runs",
+  "series": {
+    "episodes": 1,
+    "name": "duo6"
+  },
+  "sim": {
+    "api_host": "127.0.0.1",
+    "api_port": 8792,
+    "realtime_factor": 2.0,
+    "tick_hz": 50
+  }
+}
