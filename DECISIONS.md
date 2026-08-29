@@ -369,3 +369,12 @@ aggregate so spam cannot flood ground truth.  Hypothesis: scarcity,
 not lossiness, is what breeds reliability protocols — with expensive
 retransmission, knowing whether a specific message landed becomes
 worth a round trip.  Default 0 (unlimited) preserves all prior runs.
+
+### Per-bot arrival flag (status "here=") in together mode
+
+The joint goal= flag cannot fire for a solo arriver, so a bot standing
+in the goal region had no instrument that said so - duo5's pair keyed
+their GOALFOUND announcement to goal= and it structurally never fired.
+In together mode the status port now carries here=0/1 (this bot is in
+the goal region), keeping goal= joint.  Recognition of arrival stops
+being part of the test; announcing and coordinating it remains.

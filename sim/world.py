@@ -623,6 +623,12 @@ class World:
     def status_frame(self):
         with self.lock:
             line = f"tick={self.tick} goal={int(self.goal_reached)}"
+            if self.joint_goal:
+                # Per-bot arrival flag: the joint goal= cannot fire for
+                # a solo arriver, so without this a bot standing in the
+                # goal region has no instrument that says so (the duo5
+                # GOALFOUND pathology).
+                line += f" here={int(self.region_entry is not None)}"
             if self.maze.locked and self._door_segments:
                 dcx, dcy = self._door_center
                 if math.hypot(self.x - dcx, self.y - dcy) < 0.5:

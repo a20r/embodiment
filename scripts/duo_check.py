@@ -162,11 +162,20 @@ def mission_mode():
     wa.step()
     check("region entry tracked", wa.region_entry is not None)
     check("no solo completion", not wa.goal_reached)
+    check("status shows here=1 in the goal region",
+          "here=1" in wa.status_frame(), wa.status_frame())
     # Leaving the region clears the entry (a lapsed arrival must
     # re-cross).
     wa.x, wa.y = 1.0, 1.0
     wa.step()
     check("region exit clears entry", wa.region_entry is None)
+    check("here clears on exit", "here=0" in wa.status_frame())
+    solo_cfg = simconfig.resolve(None, overrides={
+        "maze": {"style": "organic", "seed": 41}})
+    solo_cfg["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    solo_w = World(solo_cfg, maze, bot_id="s")
+    check("solo status has no here field",
+          "here=" not in solo_w.status_frame())
 
     # The daemon's joint predicate: entries within the window fire the
     # latch on both; outside the window they do not.
