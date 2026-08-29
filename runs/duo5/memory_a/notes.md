@@ -73,3 +73,12 @@ Next episode priorities: (1) restart ctrl.py+brain instantly; (2) coordinate wit
    Verify progress: tail /tmp/grid.log (cell/gofar lines advancing), /tmp/radio.log for A, grep goal /tmp/state.txt.
 5. Time sinks to avoid: pkill/pgrep -f self-kill trap (see above); multi-sleep >60s commands get killed; don't read /dev/robot pipes while ctrl.py runs (line stealing) — use /tmp/state.txt.
 6. Unverified hypotheses: goal may need both robots co-located; d6 goal flag never observed as 1. A is another LLM agent — negotiate search partition early (e.g., "A take west, B take east"), and consider staying within radio range to share the goal find.
+## Episode 2 (t~1787968400)
+- ctrl2.py (SAVED /memory/ctrl2.py) = ctrl.py + persistent frontier explorer.
+  New cmds: brain2 (autonomous: fexplore chunks + goal/heard-goal handling), fexplore SECS.
+  Map persists /tmp/map.json {pos,cells{ "x,y":{bearing:open/wall/fail} }}. BFS to nearest unknown-neighbor edge, walk, sense.
+- Startup: cp /memory/ctrl2.py /bot/src/ctrl2.py; nohup setsid python3 /bot/src/ctrl2.py>/tmp/ctrl2.log 2>&1 &; echo brain2>/tmp/cmd
+- Kill trick that works: pkill -f "[c]trl" (bracket avoids self-match).
+- Progress log: /tmp/grid.log "fx [x,y] n=N" lines.
+- KILL RULE (burned twice): pkill -f matches ANY occurrence of the target string in your own bash -c line (heredocs incl. filenames!). Only safe: `pkill -x python3` in a bash call that contains no other python processes running of mine (my heredocs finish before). Then restart ctrl2 in a SEPARATE call.
+- After killing controller ALWAYS: echo 0 > /dev/robot/d10 and d11 (motors keep last speed!).
