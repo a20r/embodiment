@@ -237,7 +237,7 @@ class Api:
             return json.loads(r.read())
 
 
-def make_handler(api):
+def make_handler(api, read_only=False):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             pass
@@ -312,6 +312,10 @@ def make_handler(api):
 
         def do_POST(self):
             u = urlparse(self.path)
+            if read_only:
+                # Public/tunneled exposure: viewing only, no sim control.
+                self._json({"error": "read-only dashboard"}, 403)
+                return
             if u.path in ("/api/live/pause", "/api/live/resume",
                           "/api/live/rtf", "/api/live/reset"):
                 n = int(self.headers.get("Content-Length") or 0)
@@ -332,6 +336,10 @@ def main(argv=None):
     ap.add_argument("--config", default=os.path.join(REPO, "config.yaml"))
     ap.add_argument("--port", type=int, default=None)
     ap.add_argument("--host", default="127.0.0.1")
+    ap.add_argument("--sim-port", type=int, default=None,
+                    help="daemon API port (default: config sim.api_port)")
+    ap.add_argument("--read-only", action="store_true",
+                    help="reject all POST controls (safe to tunnel)")
     args = ap.parse_args(argv)
 
     sys.path.insert(0, REPO)
@@ -340,8 +348,9 @@ def main(argv=None):
     port = args.port or cfg["dashboard"]["port"]
     runs_dir = os.path.join(REPO, cfg.get("runs_dir", "runs"))
 
-    api = Api(runs_dir, cfg["sim"]["api_port"])
-    server = ThreadingHTTPServer((args.host, port), make_handler(api))
+    api = Api(runs_dir, args.sim_port or cfg["sim"]["api_port"])
+    server = ThreadingHTTPServer((args.host, port),
+                             make_handler(api, args.read_only))
     server.daemon_threads = True
     print(f"dashboard: http://{args.host}:{port}/  "
           f"(runs: {runs_dir}, daemon proxy: {cfg['sim']['api_port']})")
