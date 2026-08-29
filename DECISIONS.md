@@ -378,3 +378,12 @@ their GOALFOUND announcement to goal= and it structurally never fired.
 In together mode the status port now carries here=0/1 (this bot is in
 the goal region), keeping goal= joint.  Recognition of arrival stops
 being part of the test; announcing and coordinating it remains.
+
+### Purity fix: the mission README no longer says "maze"
+
+The duo mission text ("another robot somewhere in the maze") leaked
+environment structure that the solo lost condition deliberately
+withholds - an agent told "maze" can skip discovery and go straight to
+wall-following.  Now "another robot out there somewhere."  Affected
+runs: duo3-duo8 (noted as a confound in the paper's limitations); the
+per-run committed READMEs preserve exactly what each pair saw.

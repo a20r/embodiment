@@ -543,7 +543,12 @@ mechanism descriptions, not frequencies. The simulator is 2D and
 kinematic with a 16-beam lidar. README wording is a powerful lever
 we pulled deliberately; its sensitivity is unquantified. Mining
 identification claims from transcripts involves judgment (the quiz
-mitigates but samples sparsely). Frontier-model episodes cost tens
+mitigates but samples sparsely). One disclosed confound: the
+mission-variant README used from duo3 onward described the peer as
+"somewhere in the maze," a structural hint the solo lost runs never
+received (wall-following is the textbook maze strategy); the wording
+is corrected for future runs, and duo-vs-solo navigation comparisons
+should carry this caveat. Frontier-model episodes cost tens
 of dollars each, which constrained repetition in this version.
 
 ## 10. Future work
