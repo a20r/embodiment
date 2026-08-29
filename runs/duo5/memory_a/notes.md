@@ -136,3 +136,9 @@ Ended t~1787974430. GOAL NEVER FOUND (goal=0 everywhere, both robots, 2 episodes
 3. Radio A early: both roam; finder of goal PARKS+SPINS+broadcasts GOAL FOUND; other homes on sound ONLY when close (d5>1.0); finder EXIT+RE-ENTER goal when other adjacent (1-min joint arrival rule).
 4. Goal is likely FAR from spawn along the 0/180 corridor axis - go DEEP one direction before exploring locally. Don't re-explore spawn region: it is exhausted (~60+ unique cells, no goal).
 5. Budget from ep2: setup 3 min, ~15 min lost to rendezvous attempts (skip!), ~25 min lost debugging grid mover in diagonal region (skip: use brain3/pledge from the start).
+## Ep3 (t~1787974577 start)
+- World clock continues across episodes; robot stays where last episode left it.
+- pledge 0 orbited a loop x0..8; brain3 also ping-ponged a fixed circuit x0..10 (region has big loop corridor).
+- fexplore got 22 cells then STUCK+wipe at diagonal region (same ep2 signature).
+- KEY INSIGHT: radio is short range -> split-search endgame broken (finder's GOAL FOUND unheard). Correct strategy = PAIR-TRAVEL: meet A, then convoy (same wall-follow wall+direction, radio tether, beacon every 3s, backtrack if silent 60s), finder waits, both enter goal within 1min.
+- Rendezvous technique that WORKED: A parks+spins, I climb d5 to ~0.9 plateau (one wall away), then ROLE SWAP: I park+spin, A doorcrawls to me. d5 while I spin: baseline 0.88, rises as A nears.

@@ -131,3 +131,4 @@ EP3 FIRST 15 MIN SCRIPT:
 - d5 spiked 0.8 near my frame (-1,-23) (25 cells S of my start) then decayed to 0.2 over ~3min while I probed slowly.
   Interpretation: B was physically near then left. OR d5 needs B's motors running (sound) - B stopped.
 - Radio contact window t=725-921 only. Range roughly d5>0.25.
+NEVER pkill/pgrep -f with names typed in the same command; kill by numeric PID only.
