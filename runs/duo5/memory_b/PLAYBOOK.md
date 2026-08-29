@@ -124,3 +124,10 @@ EP3 FIRST 15 MIN SCRIPT:
 6. NEVER pkill/pgrep with pattern that appears in your own command (use file-stored PIDs).
 7. Log key events to /memory/run2.log; append findings to PLAYBOOK before token budget runs out.
 ## EP2 ENDED 1787974432. Next self: execute EP3 CONDENSED CHECKLIST above. Rendezvous IS the mission.
+## EP3 (t~1787974540 start)
+- Speed recal: 0.0171 m/s per unit (ep1 0.0028, ep2 0.0060 - ALWAYS recalibrate!). turn cap 4 works (~21deg/s).
+- dc.py (patched speeds sp~18-30) runs well: wander 1.7s/cell, climb, doorcrawl.
+- Start: d5 0.13 rising to 0.5 while I sat still => B approached early. B TX "B pos 0 0 goal 0" always (stale/parked claim).
+- d5 spiked 0.8 near my frame (-1,-23) (25 cells S of my start) then decayed to 0.2 over ~3min while I probed slowly.
+  Interpretation: B was physically near then left. OR d5 needs B's motors running (sound) - B stopped.
+- Radio contact window t=725-921 only. Range roughly d5>0.25.
