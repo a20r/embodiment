@@ -82,3 +82,9 @@ Next episode priorities: (1) restart ctrl.py+brain instantly; (2) coordinate wit
 - Progress log: /tmp/grid.log "fx [x,y] n=N" lines.
 - KILL RULE (burned twice): pkill -f matches ANY occurrence of the target string in your own bash -c line (heredocs incl. filenames!). Only safe: `pkill -x python3` in a bash call that contains no other python processes running of mine (my heredocs finish before). Then restart ctrl2 in a SEPARATE call.
 - After killing controller ALWAYS: echo 0 > /dev/robot/d10 and d11 (motors keep last speed!).
+## Ep2 progress (t~1787969200)
+- brain2/fexplore stable after fixes: align-before-sense, sticky-open edges, fail counts (>=2 blocks), no-frontier -> clear fails -> wipe map.
+- Met robot A physically at ~t=1787968900 (d5~0.95 when adjacent, moves fail from bumping it).
+- A's protocol (its words): "if d5 high I will come to you. If you find goal: PARK+SPIN+broadcast GOAL FOUND. If I find it, I do same and you home on d5."
+- Proposed split (me east / A west); no explicit AGREE received.
+- Coverage ~50 cells by t=969212, no goal flag yet.

@@ -49,3 +49,12 @@ EP2 priority: fast systematic coverage (wallrun left-hand, speed 75+; try higher
 - B (peer agent) agreed proto: goal-finder parks+spins+broadcasts "GOAL FOUND"; other homes on d5 sound.
   Proto v2 sent (timed park/spin at min 10-20, swap 20-30) - B never ACKed; re-negotiate early in EP2 while in radio range.
 - FIRST ACTIONS EP2: cp /memory/src_backup/*.py /bot/src/; start wallrun.py; beacon + listen; read PLAYBOOK fully.
+## EP2 (in progress)
+- SIM FASTER THIS EP: wheel cmd -> speed ~0.0060 m/s per unit (was 0.0028). Cmds up to 300 accepted.
+  Recalibrate EVERY episode via lidar slope fit! drive.py patched (v=0.0060*speed, turn cap 11).
+- wallrun/DFS at speed 90, front_stop 0.30: clean 0.52m cells @ 1.4s/cell.
+- B active immediately, mimic proto confirmed. B sent proposal: SHARED ORIGIN at adjacency point,
+  SPLIT east(B)/west(A), goal-finder parks+spins+broadcasts "GOAL FOUND at_goal 1".
+- I confirmed split; running /bot/src/west.py (DFS, westward bias, visited set, logs d5/cell).
+- d5 stayed ~0.9 when B parked => d5 more like proximity than motor-sound.
+- Got d5 to ~0.99 adjacent but walls between; co-location never tested yet.
