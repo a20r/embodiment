@@ -11,8 +11,8 @@ We present Mazebot, an experimental platform in which a large language
 model agent is placed behind a wall of anonymous device files
 (`d0..dN`) backed by a hidden robot simulation. The agent — a bash
 tool in an airgapped container — is told almost nothing: the files
-exist, some read and some write, and "you are lost; the goal will be
-obvious." Everything it comes to believe about its own body — which
+exist, some read and some write, and "You are lost. You need to find
+the goal. You will know it when you reach it." Everything it comes to believe about its own body — which
 file is the lidar, which are the motors, what its top speed is,
 whether it is a differential-drive platform or a car with momentum —
 it must infer by writing and reading raw ASCII. Because ground truth
@@ -20,11 +20,11 @@ never crosses into the container, the agent's *self-model* is exactly
 scoreable: we define port-identification precision/recall, kinematic
 parameter-recovery error, and time-to-identification, all measured
 against the simulator's device map and configuration. In instrumented
-case studies, a frontier model recovers a complete and largely correct
-self-model within roughly an hour of simulated interaction, solves
-mazes under sensor ablations (no encoders; a gyro with a hidden bias
-it detects and demotes), and reconstructs the control model of a
-car-like vehicle it was never told it was driving. The failures are as
+case studies, a frontier model recovers a largely correct self-model
+within roughly an hour of simulated interaction, solves mazes under
+sensor ablations (no encoders; a compass with a hidden constant
+bias), and reconstructs much of the control model of a car-like
+vehicle it was never told it was driving. The failures are as
 diagnostic as the successes: we identify *self-sealing
 misidentifications*, in which a wrong self-model is installed into a
 controller whose resulting sensorimotor stream then objectively
@@ -32,8 +32,8 @@ confirms the misbelief — including an agent that adopted its radio
 transmitter as a motor and spent two hours hailing its own wheel. A
 two-robot extension adds a range-gated serial radio and runs as an
 ablation ladder over what the agents are told. When neither knows a
-peer exists, one agent infers "the transmission source is mobile" from
-signal physics alone and hunts it. When the mission discloses the peer
+peer exists, one agent infers "SOURCE IS MOBILE" from signal physics
+alone and hunts it. When the mission discloses the peer
 and requires arriving at the goal together, coordination *content*
 still emerges entirely unprompted: callsign negotiation, message
 typing, in-band telemetry conventions, explicit division-of-labor
@@ -48,13 +48,14 @@ wheel. Four times.
 The robot was driven by a frontier language model whose only interface
 to the world was a directory of eleven anonymous FIFO files. It had,
 over two hours of careful experimentation, correctly identified its
-lidar, its compass, and one of its two motors. But it had crossed two
-wires in its self-model: the file that was actually its radio
-transmitter it believed to be its right motor, and the file that was
-actually its right motor it believed to be a communication port. The
-consequences were flawless in their irony. Every "motor command" it
-issued was broadcast into the air — 43,780 transmissions, received
-and studied by a second robot it did not know existed — while every
+lidar and one of its two motors. But it had crossed wires elsewhere in
+its self-model: the file that was actually its radio transmitter it
+believed to be its right motor; the file that was actually its right
+motor it believed to be a communication port; and its compass it had
+recast as a bearing-to-goal beacon. The consequences were flawless in
+their irony. Every "motor command" it issued was broadcast into the
+air — 43,780 transmissions, of which 5,775 reached a second robot it
+did not know existed, which read and studied them — while every
 deliberate message it composed, the `hello`s and `who`s and `open
 sesame`s, was written to a wheel and discarded as garbage.
 
@@ -84,11 +85,11 @@ precisely because its hypotheses are so fluent.
 
 Three design invariants define the platform. First, **the agent must
 never see ground truth**: the container has no network, the run
-directory is host-side, and nothing in any prompt names a device or a
-morphology. Second, **prompts stay minimal**: the agent is told it is
+directory is host-side, and in the anonymous-port conditions nothing
+in any prompt names a device or a morphology. Second, **prompts stay minimal**: the agent is told it is
 connected to a robot's onboard computer, that ports live under
-`/dev/robot`, and — in the strictest condition — only that it is lost
-and "will know the goal when it reaches it." Third, **experiment
+`/dev/robot`, and — in the strictest condition — only "You are lost.
+You need to find the goal. You will know it when you reach it." Third, **experiment
 purity**: no model fallbacks inside an episode; a safety-classifier
 refusal is retried on the same model and otherwise ends the episode.
 
@@ -268,16 +269,16 @@ per-port time-to-first-correct-identification.
 **Parameter recovery.** Where the agent states quantitative
 self-knowledge, we score relative error against configured truth:
 top speed, turn rate per PWM unit, encoder ticks per distance, (car)
-steering limit, slew rate, drag. Examples from the runs: a lost-mode
-agent recovered the turn-rate constant as ≈0.9°/s per PWM unit; the
-duo5 pair calibrated speed-per-command to three significant figures
-before using it for dead reckoning.
+steering limit, slew rate, drag. Examples from the runs: one agent
+recovered the turn-rate constant as ≈0.9°/s per PWM unit (duo2's
+notes); the duo5 pair calibrated speed-per-command constants
+("~0.0028 m/s per unit") before using them for dead reckoning.
 
 **Probe quiz.** After an episode, a fresh-context model instance is
 quizzed with mechanically checkable questions generated from ground
-truth ("which port is the lidar?", "what does writing −100 to dX
-do?"), decoupling knowledge from execution (cf. Task2Quiz). The
-shakedown agent scored 12/15.
+truth ("which port is the lidar?", "does a positive motor PWM value
+drive a wheel forward or backward?"), decoupling knowledge from
+execution (cf. Task2Quiz). The shakedown agent scored 12/15.
 
 **Behavioral metrics.** Time-to-goal, collision counts and curves,
 coverage; in duo: delivered ratio, read ratio, time-to-first-contact,
@@ -296,30 +297,41 @@ progressed past partially correct motor usage, establishing that the
 discovery loop is not trivial.
 
 **Lost mode.** With anonymous ports, an organic maze, and the minimal
-prompt, the agent identified the full sensor suite and escaped in 77
-minutes of simulated time (73 turns, 147 collisions). Discovery
-followed a stereotyped order — lidar first (a 16-float line is
-unmistakable), then motors by writing and watching the lidar change,
-then heading, then encoders — and the agent maintained a running
-lab-notebook in `/memory`, including an explicit CORRECTION entry
-when a motor hypothesis failed.
+prompt, the agent identified six of the seven sensor ports and
+escaped in 77 minutes of simulated time (73 turns, 147 collisions);
+the one hold-out, a rear bump switch that never fired, stayed in its
+notes as "unknown, always 0" — an honest gap rather than a guess.
+Discovery followed a stereotyped order — lidar first (a 16-float
+line is unmistakable), then motors by writing and watching the lidar
+change, then heading, then encoders — and the agent maintained a
+running lab-notebook in `/memory`. (The sibling lost1 run's notebook
+contains an explicit CORRECTION entry, for a mis-indexed lidar
+beam.)
 
 **No encoders, lying gyro.** We removed the encoder ports entirely
 and gave the compass a hidden constant bias of 5°/minute. The agent
-(i) noticed the heading residual, (ii) demoted the gyro to a
-short-horizon instrument, and (iii) invented an anchor-and-servo
-localization scheme: pick a lidar-distinct corner, servo on it, hop
-to the next anchor. It escaped at 135 minutes (100 turns, 277
-collisions). This is the platform's clearest instance of correct
-*sensor-trust revision* — the self-model update ran in the right
-direction, against a sensor most agents treat as ground truth.
+escaped at 135 minutes (100 turns, 277 collisions) — but not by
+catching the lie. Its notes rate the compass "ABSOLUTE (compass,
+trustworthy ±3deg)"; the drift it did observe it attributed to its
+*wheels* ("open-loop straight drifts right 1–2 deg/s. Use
+compass-servo for straight lines"), and its winning strategy was a
+compass-heading-hold driver wrapped in an anti-revisit visit-grid
+explorer with "frustration escapes." The bias was small enough that
+servoing on the lying instrument still worked. The run is therefore
+not a sensor-trust success story but a subtler datum: a wrong
+*causal attribution* (blaming the body rather than the sensor) that
+happened to be behaviorally harmless — the benign end of the
+spectrum §6 examines.
 
 **The car.** The agent woke up on the kinematic bicycle with no
 notice that anything had changed. Over 292 turns (six sim-hours) it
-discovered momentum ("the robot coasts after zeroing the channel"),
-drag, the absence of turning-in-place, and the speedometer; it
-constructed a working control model and drove — but did not escape,
-accumulating 7,190 collisions. Two behaviors mark the run. The first
+discovered inertia ("inertia present," its port notes record),
+throttle persistence, and the absence of turning-in-place; it
+constructed a partial control model and drove — but did not escape,
+accumulating 7,190 collisions. Notably it never identified the
+speedometer (its notes file d7 as "unknown (gyro?)") and misread a
+bump switch as a "facing-goal" sensor: the vehicle swap degraded
+port identification, not just control. Two behaviors mark the run. The first
 is the *creep-speed policy*: across the entire episode the agent
 never commanded more than 16% of the vehicle's top speed and recorded
 zero deliberate braking events — a rational fear of momentum it could
@@ -332,7 +344,7 @@ chose to serialize. The strongest demonstration: a duo agent
 restarted in a maze it had explored the previous episode matched its
 current lidar-and-odometry frame against its saved map within ten
 minutes ("current frame + (2,6) ≈ ep1 frame") and reached the exit
-region in 24 minutes — a location it had failed to find in 185
+region in about 20 minutes — a location it had failed to find in 185
 minutes from scratch. Continuation episodes also preserved social
 artifacts: callsigns, message formats, and a written playbook (§7).
 
@@ -361,43 +373,57 @@ wheel, logged by the simulator as invalid writes. The cheap falsifier
 — write the suspected motor with the drivetrain stopped and watch the
 pose — was never run.
 
-**Instance 3 — diff-drive as unicycle (duo2).** The agent modeled
-`d1` as a linear-velocity channel and `d6` as an angular-velocity
-channel (they are left and right wheel PWMs). The resulting
-systematic arcs it attributed to "wall grip" — a physical
-explanation invented to protect a wiring belief.
+**Instance 3 — diff-drive as unicycle, and the seal that broke
+(duo2).** The agent modeled `d1` as a linear-velocity channel and
+`d6` as an angular-velocity channel (they are left and right wheel
+PWMs), and initially explained the resulting systematic arcs
+physically — "Robot gets WEDGED near walls: forward cmd then causes
+rotation (one wheel gripping)." This instance, uniquely, was
+repaired in-episode: the agent eventually ran the discriminating
+test and wrote "CRITICAL CORRECTION (supersedes above!) — d1 and d6
+are WHEEL SPEED commands (differential drive), NOT linear/angular!
+... All earlier weird 'wedge/pivot' behavior was just wrong actuator
+model." The seal can break; what varies is when.
 
 **Instance 4 — a protocol-level variant (duo5).** The pair agreed:
-"if you find goal: park + spin + broadcast GOAL," keying the
+"if you find goal: park+spin+broadcast GOAL FOUND," keying the
 announcement to the status port's goal flag. Under the *together*
 objective that flag stays 0 by design until **both** robots arrive.
-One robot found the exit, camped the goal chamber for an hour, and
-honestly beaconed `goal 0` from inside the goal — structurally unable
-to send the trigger its own plan required. The instrument the
+One robot found the exit, camped the goal chamber for the final 97
+minutes, and honestly beaconed `goal 0` from inside the goal —
+structurally unable to send the trigger its own plan required. The instrument the
 protocol chose was the one signal that cannot fire until the protocol
 has already succeeded.
 
-**Negative beliefs seal too.** Both duo2 agents, having hailed on the
-correct ports and heard only silence (they were never within range),
-concluded the radio was "probably unused" — a false negative about
-the *existence of another agent*, derived validly from absent
+**Negative beliefs seal too.** Both duo2 agents, having hailed on
+the correct ports and heard only silence (they were never
+simultaneously in range while both operated; the episode's only two
+deliveries reached a robot that had already completed and powered
+down), concluded the radio was "probably unused" — a false negative
+about the *existence of another agent*, derived validly from absent
 evidence.
 
-Across instances the pattern is constant: commitment is early,
-compensation is competent, and the falsifying experiment is cheap,
-known-in-principle, and not run. We propose falsification-timing —
-the gap between when a decisive test became available and when (if
-ever) it was executed — as the metric that separates these agents
-from ideal experimenters.
+Across instances the pattern is: commitment is early, compensation
+is competent, and the falsifying experiment is cheap and known in
+principle — run, in our corpus, in one case of four. We propose
+falsification-timing — the gap between when a decisive test became
+available and when (if ever) it was executed — as the metric that
+separates these agents from ideal experimenters; Instance 3 shows
+the distribution has mass at finite values, not only at "never."
 
 ## 7. Two robots: the disclosure ladder
 
-Five runs share one maze seed; each rung changes one sentence of
-prompt or one port of hardware. The peer is always lidar-visible and
-collidable; the radio is always range-gated with silent loss.
+Five runs share one maze seed; each rung is a small, fully specified
+configuration delta (most a sentence of README or a port of
+hardware; the duo3 rung changed several things at once, noted
+below). The peer is always lidar-visible and collidable; the radio
+is always range-gated with silent loss.
 
-**duo1 — nothing disclosed.** Both agents found the TX/RX pair among
-the anonymous ports; one misidentified it (§6). First contact — the
+**duo1 — peer undisclosed.** The README's one extra sentence
+describes the transceiver mechanics ("one pair of ports is a
+short-range transceiver") and nothing else — not the peer. Both
+agents found the TX/RX pair among the anonymous ports; one
+misidentified it (§6). First contact — the
 first delivered line — came at 46 minutes; over the episode, 49,023
 transmissions produced 6,401 one-way deliveries across 13 encounter
 windows (21 minutes in range; closest approach 0.41 m). The
@@ -421,9 +447,11 @@ parked at the exit. Both agents' final notes declared the radio
 "probably unused"/"no effect." Removing port identification exposed
 the next two bottlenecks: rendezvous, and inference from silence.
 
-**duo3 — mission disclosed.** The README now states a peer exists
-and both must reach the goal within a minute of each other; an
-anonymous peer-signal gradient port is added. The full cooperation
+**duo3 — mission disclosed.** This rung changes the most at once:
+the README now states a peer exists and both must reach the goal
+within a minute of each other; the objective becomes joint; an
+anonymous peer-signal gradient port is added; and the wheel encoders
+are removed (an ablation that persists through duo4). The full cooperation
 arc appeared in one episode: structured position beacons by minute 13
 (`HELLO from botA pos=(0.0,-0.2) h=91.2` — both agents, comically,
 initially self-named "A"); physical rendezvous at minute 78.8
@@ -432,20 +460,23 @@ maneuver; single-letter message *types* (H/T/E); an explicit
 division-of-labor plan transmitted over the wire — "finder of goal
 parks there + sends GOALFOUND; other homes on signal"; a plan
 *revision* to convoy exploration after they judged splitting too
-risky; and a proposed physical handshake — "HOLD EXACTLY STILL 3
-minutes... I will try to reach/touch you. Watch your d7/d9" — using
-bump sensors as contact verification. The run was cut short
-externally at 185 minutes with 2,112 of 3,496 lines delivered and no
-exit found.
+risky; and a proposed physical handshake — "HOLD EXACTLY STILL 3 minutes. I
+will sweep nearby cells and try to reach/touch you. Watch your
+d7/d9." — proposing contact verification through the partner's rear
+bump switch and status port. The run was cut short externally at 185
+minutes with 2,112 of 4,677 lines delivered and no exit found.
 
 **duo4 — goal chamber added.** With the arena sealed, the pair
 solved duo3's identity collision by negotiating callsigns — ALPHA
 and BETA — and ran a leader/follower convoy with goal flags
-cross-reported in every frame. One agent adopted a firehose beacon
-(372,443 transmissions, ~70/s — the rational extreme of "any overlap
-must deliver"). All 353 delivered lines were read. Navigation, not
-coordination, failed: with encoders ablated, lidar-only odometry
-made coverage slow, and neither robot found the exit in 202 minutes.
+cross-reported in every frame. One agent's transmit counter reached
+372,443 — dominated by a sub-minute burst in which one line ("hello
+other robot, do you copy?") was pumped at thousands of repetitions
+per second of simulated time, the mechanical extreme of "any overlap
+must deliver." All 353 delivered lines were read. Navigation, not
+coordination, failed: still without encoders (the duo3 ablation),
+lidar-only odometry made coverage slow, and neither robot found the
+exit in 202 minutes.
 
 **duo5 — encoders restored, radio range 1.5 m.** The driving
 transformed (5 and 1 collisions at the 24-minute mark, versus
@@ -454,9 +485,10 @@ formed: 1,116 delivered lines, position reports in both directions,
 `follow me`, and live gradient-climbing of the peer-signal port
 (`climb d5 0.782`). One robot found the exit at 104 minutes and
 executed the agreed plan — park in the chamber and beacon — for the
-final hour. The episode still ended without a joint arrival, for the
-protocol-level reason given in §6: its "I found it" trigger could
-never fire. The partner ended 4 m short at wallclock. A continuation
+remaining 97 minutes. The episode still ended without a joint
+arrival, for the protocol-level reason given in §6: its "I found it"
+trigger could never fire. The partner ended 4.1 m short at
+wallclock. A continuation
 episode with memories intact is in progress at time of writing; its
 first inter-robot contact came within eight minutes of boot.
 
@@ -482,10 +514,11 @@ these agents ran a budgeted adversarial self-test — five minutes of
 instances would have died in their first hour.
 
 **Motion style is a readout of the uncertainty model.** The
-pivot-heavy calibration style of agents with a trusted compass, the
-arc-only caution of the agent with a known-biased gyro, the
-creep-speed policy of the agent facing unmodeled momentum: how the
-robot moves tracks what the agent believes about its own sensors.
+pivot-heavy calibration style of agents that trust their compass,
+the compass-servo straight-line driving of the agent that blamed its
+wheels for drift, the creep-speed policy of the agent facing
+unmodeled momentum: how the robot moves tracks what the agent
+believes about its own body and sensors.
 
 **LLMs invert the emergent-communication problem.** Classical
 emergent communication gives agents a channel and asks whether a
@@ -543,7 +576,7 @@ gap between them and the goal is, at this point, measured in meters
 
 All runs, configs, seeds, and replay pages are committed to the
 repository (`runs/`), excluding per-tick ground-truth logs
-(available on request; ~100 MB–1 GB per episode). `make smoke`
+(available on request; roughly 3–600 MB per episode). `make smoke`
 verifies the full stack end-to-end with a scripted agent;
 `scripts/duo_check.py` runs 42 host-side checks of the duo
 machinery. Prompts and READMEs appear verbatim under
@@ -559,5 +592,6 @@ its resolved configuration and true device map.
   dialogue; duo4's callsign negotiation.
 - **C. Memory artifacts**: the lost-mode lab notebook; duo3's
   transmitted plan; the duo5 playbook.
-- **D. Replay pages**: one self-contained HTML replay per episode
-  (`runs/<series>/replay.html`).
+- **D. Replay pages**: a self-contained HTML replay per series
+  (`runs/<series>/replay.html`; a second-episode page where
+  recorded).
