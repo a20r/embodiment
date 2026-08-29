@@ -236,8 +236,11 @@ const botChip = (bid, bot) => {
              : (s.end_reason || "ended").toUpperCase(),
     `bot-${bid}` + (s.solved ? " state-solved" : "")];
 };
+const SG = D.signs || {};
 const chips = [
   botChip("a", A), botChip("b", B),
+  SG.a ? ["bot A signs as", SG.a, "bot-a"] : null,
+  SG.b ? ["bot B signs as", SG.b, "bot-b"] : null,
   ["messages", `${nTx} sent / ${nOk} heard`, ""],
   D.first_contact != null
     ? ["first contact", secs(D.first_contact), "state-solved"]

@@ -157,9 +157,28 @@ for bid in BOTS:
     }
 
 first_contact = next((c["t"] for c in comms if c["ok"]), None)
+
+# Agents choose their own callsigns, which need not match the
+# physical a/b labels (in one series physical A named itself "B").
+# Infer each bot's dominant self-signature: the most common leading
+# token WITHOUT a trailing colon (a colon marks an addressee).
+signs = {}
+for bid in BOTS:
+    counts = {}
+    for r in runs:
+        if r["from"] != bid or not re.search(r"[A-Za-z]{2,}", r["line"]):
+            continue
+        tok = r["line"].split()[0] if r["line"].split() else ""
+        if tok and not tok.endswith(":") and len(tok) <= 6:
+            counts[tok] = counts.get(tok, 0) + r["n"]
+    if counts:
+        top, n = max(counts.items(), key=lambda kv: kv[1])
+        if n >= 10 and top.lower() != bid:
+            signs[bid] = top
 data = {
     "tx_total": tx_total,
     "tx_delivered": tx_delivered,
+    "signs": signs,
     "maze": {k: maze.get(k) for k in
              ("width", "height", "cell_size", "segments", "start_cell",
               "spawn_b_cell", "goal_cell", "hash")},
