@@ -26,10 +26,14 @@ Target shape: benchmark/platform paper with instrumented case studies
   (diff-drive → Dubins-style car); a taxonomy of "self-sealing"
   misidentifications where a wrong self-model drives a controller
   whose feedback confirms the error.
-- Two-robot extension: agents not told a peer exists discover each
-  other through a range-gated radio; across an ablation ladder they
-  progress from accidental broadcasting to callsign negotiation,
-  role assignment, and an explicit joint plan.
+- Two-robot extension with a range-gated radio, run as an ablation
+  ladder over what the agents are told. When neither knows a peer
+  exists (duo1-2), one agent infers "another mobile agent" from
+  signal physics alone. When the mission discloses the peer and
+  requires arriving together (duo3-5), coordination *content* still
+  emerges unprompted: callsign negotiation, role assignment,
+  telemetry conventions, and explicit joint plans transmitted over
+  the wire.
 - Platform, metrics, and all run records released.
 
 ## 1. Introduction
@@ -59,9 +63,11 @@ Target shape: benchmark/platform paper with instrumented case studies
      and the car-model sysID run.
   4. Self-sealing misidentification: mechanism, three instances,
      falsification-timing analysis.
-  5. Duo: mutual discovery and emergent coordination over an
-     in-world radio, with a one-sentence prompt ablation isolating
-     port identification from protocol formation.
+  5. Duo: an ablation ladder over disclosure — peer unknown
+     (mutual discovery from channel physics) vs peer disclosed with
+     a joint objective (unprompted protocol and plan formation) —
+     with one-sentence README deltas separating port identification,
+     peer awareness, and coordination.
 
 ## 2. Related work
 
@@ -233,7 +239,9 @@ Target shape: benchmark/platform paper with instrumented case studies
     DNF on navigation (lidar-only odometry).
   - duo5 (+encoders, comms 1.5 m): [slot in results — the run
     designed to let coordination + navigation both succeed].
-- **7.2 What emerged without being asked**: self-naming, message
+- **7.2 What emerged without being asked**: even in the disclosed
+  runs, the README says only that a peer exists and both must arrive
+  together — everything about *how* is invented: self-naming, message
   typing (H/T/E prefixes), telemetry conventions (pos/heading/signal
   in-band), plan proposal + revision, physical handshake protocols.
 - **7.3 What kept failing**: symmetric-role deadlocks ("you hold
