@@ -27,7 +27,7 @@ class Drive:
                 r.update()
                 d=angdiff(target,r.h)
                 if abs(d)<tol: break
-                sp=max(6,min(22,abs(d)*0.5))
+                sp=max(4,min(11,abs(d)*0.35))
                 if d>0: r.wheels(sp,-sp)
                 else: r.wheels(-sp,sp)
                 time.sleep(0.04)
@@ -40,7 +40,7 @@ class Drive:
         r=self.r
         if target_h is None:
             r.update(); target_h=r.h
-        v=0.0028*speed
+        v=0.0060*speed
         traveled=0.0
         last=time.time()
         reason='dist'

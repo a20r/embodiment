@@ -44,7 +44,7 @@ def clearance():
     return best
 def move(ax):
     if abs(angdiff(ax,r.h))>8: d.turn_to(ax)
-    tr,_=d.forward(0.5,target_h=ax,front_stop=0.23,speed=75)
+    tr,_=d.forward(0.5,target_h=ax,front_stop=0.30,speed=85)
     return tr
 pos=(0,0)
 samples={}; edges=collections.defaultdict(set)
@@ -64,7 +64,7 @@ while True:
     for ax in AXES:
         if c[ax]<0.55: continue
         dv=DIRV[ax]; n=(pos[0]+dv[0],pos[1]+dv[1])
-        if abs(n[0])+abs(n[1])>4: continue
+        if abs(n[0])+abs(n[1])>7: continue
         edges[pos].add(n); edges[n].add(pos)
         if n not in samples: cands.append((ax,n))
     if cands:

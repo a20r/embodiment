@@ -58,3 +58,51 @@ EP2 priority: fast systematic coverage (wallrun left-hand, speed 75+; try higher
 - I confirmed split; running /bot/src/west.py (DFS, westward bias, visited set, logs d5/cell).
 - d5 stayed ~0.9 when B parked => d5 more like proximity than motor-sound.
 - Got d5 to ~0.99 adjacent but walls between; co-location never tested yet.
+## EP2 mid-episode insight (t~1787972100)
+- Two robots likely must BOTH be at goal for flag; sweeping alone may never show goal=1.
+- WINNING STRUCTURE once met: one robot follows other (servo d5~1.5+), convoy sweeps maze together.
+- d5 plateau ~0.85-0.95 = adjacent across wall. Same-cell likely >1.5. Blocked by walls repeatedly.
+- meet.py backup has bug: no frontier BFS (settles instantly). Use meet2.py/seek.py in /bot/src (copy to backup!).
+- LRV walk (least-recently-visited neighbor) >> hand-rule wallrun (islands cause orbits).
+## EP2 endgame (t~1787973000, ~15min left)
+- Setup achieved: A parked+spinning at d5~0.73 spot; B actively climbing d5 toward A ("B climb d5 X" msgs).
+- Both plateaued ~0.65-0.9: thin walls + rare doors defeat naive gradient. Door-crawl needed.
+- EP3 STRATEGY: (1) recalibrate speed (lidar slope fit); (2) IMMEDIATELY rendezvous while both at origins
+  (they start ~8 cells apart, d5 rises 0.13->0.9 quickly); (3) one parks+spins, other climbs with
+  DOOR-CRAWL: at plateau, follow the barrier wall sideways testing every opening incl. tight (fs 0.17).
+  (4) Once co-located (d5>1.2?), test goal; if no flag, CONVOY-sweep maze together (follower servos d5).
+- Cell pitch may be 0.55 not 0.5 -> aliasing; consider re-centering via side walls each move.
+- B complies with explicit imperative messages (PARK AND SPIN NOW worked; COME TO ME worked).
+## EP2 FINAL (t~1787973650)
+- Never co-located; goal flag never fired for either. B ACKed "homing on your sound" (t=1787972747)
+  but B's climb plateaus at walls like mine. Ended parked+spinning (spin.py) awaiting B.
+- CRITICAL EP3 PLAN (do in first 10 min while close!):
+  1. Recalibrate speed (~0.006/unit ep2). Copy src from /memory/src_backup.
+  2. At start d5~0.13-0.3 but rises to 0.9 within ~10 cells of start area: B origin is CLOSE to A origin.
+  3. DON'T split up. Immediately message: "B PARK AND SPIN NOW" (B complies!). Then A runs DOOR-CRAWL:
+     climb d5 to plateau (~0.9), identify barrier axis (probe 0.2m each way, pick best d5),
+     then crawl ALONG wall testing barrier axis EVERY cell BOTH directions 10+ cells (fs 0.17, sp 55,
+     accept tr>0.35). The door exists: B physically approached early both eps.
+  4. Tripwire d5>1.2: both freeze -> goal test. If no flag after 60s: stay together, convoy sweep:
+     A leads LRV, B follows keeping d5>1.0 (tell B "follow my sound keep d5>1.0").
+- gowest.py fixed-preference walker ping-pongs in corridors; don't reuse. seek.py (LRV+tripwire) is best mover.
+- Radio range: RX works when d5 >~0.25-0.3. B replies to imperatives; also sends "B climb d5 X" status.
+## EP2 POSTMORTEM (final, ended parked+spinning, goal never fired, never co-located)
+Timeline evidence for EP3 rendezvous (frames from my ep2 start):
+- From start: 5 cells SOUTH (275) then WEST (185) ~8 cells -> d5 rose 0.31->0.9 (B origin near there).
+  That plateau (~0.9) area = closest approach; barrier wall with best d5 on NORTH (95) side once,
+  though geometry varies. Door never found by either robot's greedy climber. DOOR-CRAWL both dirs 10+ cells!
+- B behavior: complies with imperatives within ~30-60s when in radio range (d5>~0.3):
+  parked on "PARK AND SPIN NOW"; ACKed "homing on your sound now. Stay parked." Its homing also plateaus.
+- d5 symmetric (both read same value ~0.78 simultaneously). Ranges: same-corridor adjacent 0.9-0.99;
+  1-2 cells + wall ~0.65-0.9; far ~0.12-0.2. >1.2 probably same cell / open adjacency (never achieved).
+- Do NOT waste time on big exploration: goal flag almost certainly needs BOTH robots (300+ cells, 2 robots,
+  2 episodes, zero goal=1 events).
+EP3 FIRST 15 MIN SCRIPT:
+ 1. cp /memory/src_backup/*.py /bot/src/; calibrate speed const; sed into drive.py.
+ 2. TX "B PARK AND SPIN NOW at your origin, do not move until I say" x5.
+ 3. Run seek.py (LRV+tripwire) until d5>0.8, then door-crawl (write doorcrawl using notes above:
+    at plateau cell probe 4 axes 0.22m for best d5 -> barrier axis; crawl perpendicular BOTH ways
+    up to 12 cells; each cell push barrier axis fs=0.17 sp=55 accept tr>0.35; on breakthrough re-climb).
+ 4. On d5>1.2: freeze, TX STOP TEST, watch d6 60s. If goal=0, convoy: "B follow my sound keep d5~1.0",
+    then LRV sweep with follower.

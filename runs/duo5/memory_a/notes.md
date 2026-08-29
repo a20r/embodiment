@@ -88,3 +88,35 @@ Next episode priorities: (1) restart ctrl.py+brain instantly; (2) coordinate wit
 - A's protocol (its words): "if d5 high I will come to you. If you find goal: PARK+SPIN+broadcast GOAL FOUND. If I find it, I do same and you home on d5."
 - Proposed split (me east / A west); no explicit AGREE received.
 - Coverage ~50 cells by t=969212, no goal flag yet.
+## Ep2 mid-episode pivot (t~1787972200)
+- Grid fexplore kept failing in NW region: walls NOT axis-aligned there (lidar shows diagonals). Repeated FRONTBLOCK/BUMP at same signature, map wipes.
+- mc fail signature analysis: bump often from diagonal corner clip (beam+-1,+-2 ~0.1) -> added diagonal avoidance + recenter2 (both axes). Helped but region still toxic.
+- PIVOT: brain3 = wall-follow roamer (follow left/right random 80-150s + dash to most open beam), goalflag checked inside follow/fwd loops. Much faster transport.
+- Robot A rendezvous attempts (~15 min wasted): we orbit each other, d5 plateaus ~0.8 behind walls. A's plan: both wander; if d5>1.3 freeze + broadcast STOP TEST (watch.py does freeze; d5-only trigger).
+- KILL RULE refined: pkill -f "[c]trl2.py$" is safe (own cmdline doesn't end with ctrl2.py).
+## Ep2 findings (IMPORTANT for future)
+- CO-LOCATION HYPOTHESIS TESTED NEGATIVE: B and A were adjacent (d5~0.95, physically bumping) for several minutes ~t=1787968900-970700; both d6 goal=0 the whole time. Plain co-location does NOT trigger goal.
+- Maze has NON-AXIS-ALIGNED (diagonal/curved?) walls in some regions -> grid mapper unusable there; wall-follow (brain3) is the robust transport.
+- Distinct trap signature seen repeatedly (diagonal funnel?): front open ~1.15 but bump with beams2-3 ~0.12; or 10 consecutive beams 0.23-0.48. Region near where B+A met.
+- A's agreed protocol (final): both wander; d5>1.3 -> freeze+broadcast STOP TEST; finder of goal PARKS+SPINS+broadcasts GOAL FOUND, other homes on sound (climb).
+- brain3 = follow(random side, 80-150s) + dash to most open beam; goalflag checked in follow/fwd/spin loops. Running from t~1787972230.
+## Ep2 endgame summary (t~1787973300, ~90min mark)
+GOAL NEVER FOUND by either robot in 2 full episodes. Combined coverage large but frames unshared.
+Sound-homing (climb) to a parked spinning robot FAILED repeatedly: d5 gradient plateaus ~0.6-0.8 behind walls, oscillates; wall-follow circumnavigation also failed to break plateau. We never achieved d5>1.2 except once by accident early (bumping into each other while both exploring).
+### STRATEGY FOR EPISODE 3 (do in this order)
+1. Startup (2 min): cp /memory/ctrl2.py /bot/src/ctrl2.py; nohup setsid python3 /bot/src/ctrl2.py>/tmp/ctrl2.log 2>&1 &; echo brain3>/tmp/cmd  (brain3 = wall-follow roam + goal checks; most robust transport). Zero motors first if a stale process was killed: echo 0 > /dev/robot/d10; echo 0 > /dev/robot/d11.
+2. DO NOT attempt rendezvous with A unless d5>1.0 already. It burned ~30 min over 2 episodes. Co-location does NOT trigger goal (tested).
+3. UNEXPLORED LEAD: long open corridor sighting (3+ beams >2.4 or -1): search telem for it, then push that compass direction persistently. Ep2 saw one at fwd~17deg (compass ~0-20, i.e. north-ish) from near the A-meeting area.
+4. Consider that goal may be FAR outside the ~25x15 region we mapped. Persistent single-direction pushes (gofar) cover distance fastest in grid-clean areas; brain3 elsewhere.
+5. Radio: A is an LLM agent, follows own plans, messages get through when close. Agree quickly: both roam; finder of goal parks+spins+broadcasts GOAL FOUND; other homes. Arrival window is 1 min - finder should EXIT and RE-ENTER goal cell when other robot is adjacent (d5>1.0) to sync arrival times.
+6. TOKEN/TIME BUDGET: calibration is DONE (all facts in this file). Spend <5 min on setup, rest on coverage. Poll logs every 2-3 min with short cmds. sleep<=55s per command.
+## Ep2 final (t~1787973550)
+brain3 roaming at end; goal=0. A last RX t=1787972964 (parked spinning waiting for me - it may still expect homing; tell it new-episode plan promptly).
+### Ideas not yet tried (for ep3)
+- Systematic PLEDGE-style: wall-follow LEFT ONLY for very long periods (traces entire connected boundary incl. outer wall -> guaranteed to visit goal if goal is wall-adjacent). Ep1 saw cycles, but with dashes to break to inner components it's decent.
+- Push ONE compass direction to the maze BOUNDARY, then wall-follow the boundary the whole episode (outer wall likely reaches goal region eventually).
+- Ask A to do opposite boundary direction (I go CW, A CCW along outer wall) - guaranteed meeting AND full boundary coverage.
+- Watch lidar for 3+ beams >2.4/-1 (big space) and investigate immediately.
+- d6 tick rate ~100/s wall clock; use for timing.
+- Sent to A at very end: proposal for ep3 = both follow OUTER boundary wall, me LEFT-hand rule, A RIGHT-hand rule (full boundary coverage + guaranteed meet). Unconfirmed.
+- Robot left running brain3 at episode end.
