@@ -132,3 +132,42 @@ EP3 FIRST 15 MIN SCRIPT:
   Interpretation: B was physically near then left. OR d5 needs B's motors running (sound) - B stopped.
 - Radio contact window t=725-921 only. Range roughly d5>0.25.
 NEVER pkill/pgrep -f with names typed in the same command; kill by numeric PID only.
+## EP3 late status (t~1787978060)
+- B's agent session ENDED at t~1787977807. B left PARKED at an "open junction, NOT in pocket", ROCKING LOUD NONSTOP forever.
+  B auto-FREEZEs at d5>1.05 (it said protocol persists). B's radio beacon "B pos 11 -1" may persist.
+- d5 behaves like ZONES (acoustic room-coupling), not smooth distance: 0.9 zone=adjacent w/ 1 wall, 0.7 zone, 0.5, 0.2.
+  Flat within zone; gradient only at zone boundaries. Homing = climb zone values; doorcrawl at zone edges.
+- MY controller: /bot/src/dc.py running (tripwire 1.05). If new episode: B is STATIONARY rocking; just climb d5 to max & find door; goal test when d5>1.05.
+- Robot got STUCK once: symptom = identical clearances+d5 many "cells" (dead-reckon ghost). Fix: turn to most open ray, drive.
+- Wall-thickness math from clearance reports can locate B's side (my E clr + wall + B's W clr = k*0.52).
+## EP3 FINAL (t~1787978950, ~15min left)
+- NEVER co-located; goal never fired. BUT big progress in protocol with B:
+- B FINAL STATE: agent session ended EARLY (t~1787977807) leaving B PARKED FOREVER at the NORTH END of a
+  N-S corridor, ROCKING LOUD NONSTOP. Its beacons persist: "B pos 11 -1", plus repeated NAV HINT:
+  "approach me heading compass 350 up the N-S corridor, I am at north end. If your d5 plateaus ~0.8 you are
+  1 wall WEST or SOUTH of me - find the corridor MOUTH at compass-170 (south) side."
+- EP4 FIRST ACTIONS: recalibrate speed (lidar slope; ep3 was 0.0171 m/s/unit at cmd - x2.85 each ep?!),
+  cp /memory/src_backup; run dc.py-style LRV sampling d5 per cell; climb to d5>=0.8 zone; then hunt the SOUTH
+  MOUTH of B's corridor (test E/N openings, enter, head 350); tripwire d5>1.05 freeze 90s watching d6 goal.
+- d5 = ZONES not smooth: 0.9=1 wall between; 0.8=near B's corridor SW; 0.7=large middle region; <0.5 far.
+  Zone boundaries are where gradient exists. Long samples not needed when B rocks nonstop.
+- B may auto-resume protocol if its agent restarts; it complies with imperatives when its agent lives.
+- STUCK DETECTION: identical clearances+d5 over many "cells" = wheels blocked, dead-reckon ghost. Turn to most open ray.
+- BASH TRAP struck twice more: any pgrep/pkill -f STRING where STRING appears in your own command self-kills.
+  Kill ONLY by numeric PID from prior ps output.
+- Scripts this ep in /bot/src (copy to src_backup!): fin.py (zone seek + mouth hunt), pn2.py (phase walker),
+  west2.py, goback.py, spin3/4.py, dc.py tuned (climb trig 0.78, tripwire 1.05, speeds sp18-30 for 0.0171 cal).
+- EP3 last minutes: fin.py phase2 found 0.93 peak zone then oscillated N/S around it (tolerance -0.02 too loose;
+  tighten to require nv>base). Peak ~0.93 area = closest to B (B rocking at N end of its corridor).
+  EP4: get to 0.9+ zone fast (LRV, it is findable), then EXHAUSTIVE door test on ALL 4 sides of EVERY cell in
+  the 0.9 zone with fs=0.13 accept tr>0.35 (tight doors!), esp. seeking the corridor MOUTH on the SOUTH (170) side.
+  Remember B corridor runs N-S, B at north end; approach heading 350.
+## EP3 ENDGAME MAP (CRITICAL for EP4)
+- Reached d5=0.95 CORE (record). Route from 0.90 MAX cell: take WEST tight door (fs 0.115, d5 0.88),
+  then SOUTH twice (0.88->0.93->0.95). Core cells ~4 at 0.93-0.95; EAST tight doors from core give 0.91-0.92
+  (maybe accept and continue east next time!). B one THIN wall from core, rocking forever, auto-freeze d5>1.02.
+- fin4.py left RUNNING: basin explorer + lidar-variance detector (spots B rocking if line of sight; chases it),
+  tripwire 1.02 freeze, goal-hold broadcast. fin3.py = strict climb + tight doors (worked to 0.95).
+- EP4 OPENING: recalibrate speed; run fin3/fin4 style directly (skip negotiation, B's agent may be dead);
+  d5>0.88 zone reachable by LRV wander in ~2-5 min. Then try EAST tight doors from 0.94 core AND
+  lidar-variance scans. Same-cell d5 unknown but >1.02 assumed; goal test = freeze both + watch d6.

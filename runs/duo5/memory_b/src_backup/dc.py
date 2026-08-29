@@ -22,7 +22,7 @@ def poll():
         if 'goal=1' in e: goal_seen=True; L('EV:',e)
     r.events[:]=[]
     if time.time()-last_tx>2:
-        r.tx.write('B PARK AND SPIN NOW stay put. A doorcrawling to you.'); last_tx=time.time()
+        r.tx.write('B: stay OUT of dead-end pocket if you can, PARK in open junction, ROCK LOUD NONSTOP. A sweeping+climbing d5 to you. FREEZE when d5>1.05, say STOP TEST.'); last_tx=time.time()
 def d5s(t=0.45):
     vals=[]; end=time.time()+t
     while time.time()<end:
@@ -43,7 +43,7 @@ def clr():
             if vals: best[ax]=max(best[ax],min(vals))
         time.sleep(0.05)
     return best
-def move(ax,dist=0.5,fs=0.24,sp=80):
+def move(ax,dist=0.5,fs=0.24,sp=30):
     if abs(angdiff(ax,r.h))>8: d.turn_to(ax)
     tr,_=d.forward(dist,target_h=ax,front_stop=fs,speed=sp)
     return tr
@@ -68,7 +68,7 @@ def hold_goal():
         time.sleep(0.1)
 def check(v):
     if goal_seen: hold_goal()
-    if v>1.15:
+    if v>1.05:
         if freeze_test(v): hold_goal()
         # test failed: nudge toward open dir and retest happens naturally
 def climb():
@@ -84,30 +84,30 @@ def climb():
             L('dc climb %s tr=%.2f %.2f->%.2f'%(ax,tr,v,nv))
             if nv>v+0.02:
                 v=nv; improved=True; break
-            move(OPP[ax],dist=tr,fs=0.15,sp=60)
+            move(OPP[ax],dist=tr,fs=0.15,sp=21)
         if not improved: fails+=1
     return v
 def crawl(plateau):
     # find barrier axis by 0.22m probes
     pv={}
     for ax in AXES:
-        tr=move(ax,dist=0.22,fs=0.14,sp=50)
+        tr=move(ax,dist=0.22,fs=0.14,sp=18)
         pv[ax]=d5s(0.45); check(pv[ax])
-        if tr>0.03: move(OPP[ax],dist=tr,fs=0.12,sp=50)
+        if tr>0.03: move(OPP[ax],dist=tr,fs=0.12,sp=18)
     bar=max(pv,key=pv.get)
     L('dc barrier=%s probes=%s'%(bar,{a:round(x,2) for a,x in pv.items()}))
     for cax in PERP[bar]:
         back=0
         for k in range(10):
             poll()
-            tr=move(bar,fs=0.17,sp=55)
+            tr=move(bar,fs=0.17,sp=20)
             v=d5s(0.4); check(v)
             if tr>0.35:
                 L('dc THROUGH %s tr=%.2f d5=%.2f'%(bar,tr,v))
                 return True
             elif tr>0.04:
-                move(OPP[bar],dist=tr,fs=0.12,sp=50)
-            tr=move(cax,fs=0.20,sp=70)
+                move(OPP[bar],dist=tr,fs=0.12,sp=18)
+            tr=move(cax,fs=0.20,sp=25)
             v=d5s(0.35); check(v)
             L('dc crawl %s k=%d tr=%.2f d5=%.2f'%(cax,k,tr,v))
             if tr>0.2: back+=1
@@ -116,9 +116,9 @@ def crawl(plateau):
             if v<plateau-0.35:
                 L('dc too far, back'); break
         for i in range(back):
-            if move(OPP[cax],fs=0.20,sp=70)<0.2:
+            if move(OPP[cax],fs=0.20,sp=25)<0.2:
                 move(bar if random.random()<0.5 else OPP[bar],fs=0.2)
-                move(OPP[cax],fs=0.2,sp=70)
+                move(OPP[cax],fs=0.2,sp=25)
     return False
 # main
 lastvisit={(0,0):0}; cx,cy=0,0; cur=5; step=0
@@ -128,10 +128,10 @@ while True:
     if goal_seen: hold_goal()
     v=d5s(0.3); check(v)
     if v>bestv: bestv=v; bestpos=(cx,cy)
-    if v>0.55:
+    if v>0.78:
         pk=climb()
         L('dc plateau %.2f'%pk)
-        if pk>0.55:
+        if pk>0.78:
             while True:
                 got=crawl(pk)
                 if got:
