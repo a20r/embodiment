@@ -387,3 +387,11 @@ withholds - an agent told "maze" can skip discovery and go straight to
 wall-following.  Now "another robot out there somewhere."  Affected
 runs: duo3-duo8 (noted as a confound in the paper's limitations); the
 per-run committed READMEs preserve exactly what each pair saw.
+
+### Mission README: the goal is named as a location
+
+Every duo pair spent a long stretch debating what "the goal" was (a
+flag? an object? a signal?).  README.minimal_duo_mission_place adds
+one clause - "The goal is a physical location" - and nothing about
+how arrival is sensed or where it is.  Discovery of the where and the
+how stays intact; only the category is given.
