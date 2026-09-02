@@ -28,6 +28,9 @@ DEFAULTS = {
     # "minimal_duo_named" also names the TX/RX port files (the harness
     # substitutes the episode's real anonymous filenames).
     "readme_variant": None,
+    # Bot image; a README that demands a toolchain (e.g. Rust) pairs
+    # with an image that has it.  Built from `dockerfile` if missing.
+    "container": {"image": "mazebot-bot", "dockerfile": "Dockerfile.bot"},
     # Two robots in one world, each running its own agent, with a
     # proximity-gated serial link (TX/RX port pair per robot).
     "duo": {

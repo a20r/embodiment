@@ -285,7 +285,9 @@ def run_duo_episode(cfg, series_dir, episode_index):
                 f"-ep{episode_index}{bid}",
                 {os.path.abspath(os.path.join(devfs, bid)): "/dev/robot",
                  os.path.abspath(bot_dirs[bid]): "/bot",
-                 os.path.abspath(mem_dirs[bid]): "/memory"})
+                 os.path.abspath(mem_dirs[bid]): "/memory"},
+                image=(cfg.get("container") or {}).get("image",
+                                                        "mazebot-bot"))
             boxes[bid].start()
     except Exception:
         # A half-started episode must not leak its daemon (it would

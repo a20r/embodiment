@@ -96,7 +96,8 @@ def run_episode(cfg, series_dir, episode_index):
         f"mazebot-{cfg['series']['name']}-ep{episode_index}",
         {os.path.abspath(devfs): "/dev/robot",
          os.path.abspath(bot_dir): "/bot",
-         os.path.abspath(memory_dir): "/memory"})
+         os.path.abspath(memory_dir): "/memory"},
+        image=(cfg.get("container") or {}).get("image", "mazebot-bot"))
     box.start()
     daemon.resume()
 

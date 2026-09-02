@@ -492,3 +492,16 @@ severe throttling under load, so the same pre-spend probe applies and
 a duo pilot is the way to learn the real concurrency.  Plain JSON
 (no stream) for now: no documented gateway cutoff, and Z.ai's streamed
 tool calls need an extra tool_stream flag.
+
+### Bot image is a config knob; the Rust flavour adds only the toolchain
+
+A README that says "all code must be written in Rust" is meaningless
+in an image that has no compiler, so `container.image` (built from
+`container.dockerfile` when missing) joins the resolved config and is
+recorded with every run.  `Dockerfile.bot-rust` is the stock image plus
+Debian's rustc/cargo and nothing else: still airgapped, so std only and
+no crates.  python3 stays present (it is the base image) but the Rust
+README does not mention it - the constraint is stated, not enforced,
+and whether the agent honours it is part of what the run measures.
+The README variant otherwise repeats minimal_duo_mission_place word
+for word, one-variable delta as with every other duo ladder step.
