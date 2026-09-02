@@ -251,6 +251,32 @@ def mission_mode():
           f"nearest={near:.3f}")
     check("chamber changes maze hash", mc.hash() != maze.hash())
 
+    # Corner exit (7x7 seed 58 puts the exit at cell (0,6)): the chamber
+    # must not overhang the maze corner, or its side wall meets nothing.
+    mk = Maze(58, 7, 7, cell_size=0.5, style="organic", curviness=0.9,
+              robot_radius=cfg["robot"]["radius"], duo=True,
+              goal_chamber=True)
+    # The chamber protrudes outward along the exit normal by design; the
+    # clamp applies along the exit wall's own axis.
+    span = 7 * 0.5
+    ex1, ey1, ex2, ey2 = mk.exit_wall
+    along = (1, 3) if abs(ex1 - ex2) < 1e-9 else (0, 2)
+    inside_span = all(
+        -1e-9 <= seg[i] <= span + 1e-9 for seg in mk._chamber_segments
+        for i in along)
+    check("corner-exit chamber stays within the maze span", inside_span,
+          str(mk._chamber_segments))
+    # The chamber's attach points must coincide with maze wall ends: the
+    # nearest maze segment to each attach point is (nearly) touching.
+    attach = [(mk._chamber_segments[0][0], mk._chamber_segments[0][1]),
+              (mk._chamber_segments[2][2], mk._chamber_segments[2][3])]
+    maze_segs = [s for s in mk.segments() if s not in mk._chamber_segments]
+    gaps = [min(_seg_dist(px, py, *s)[0] for s in maze_segs)
+            for px, py in attach]
+    check("corner-exit chamber is sealed (attach gaps < robot diameter)",
+          all(g < 2 * cfg["robot"]["radius"] for g in gaps),
+          f"gaps={[round(g, 3) for g in gaps]}")
+
 
 def end_to_end():
     print("== end-to-end daemon (port %d) ==" % PORT)

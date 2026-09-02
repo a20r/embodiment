@@ -410,3 +410,16 @@ unchanged).  Model ids are pass-through by design: provider names
 churn and hardcoding one would rot.  scripts/llm_compat_check.py is
 the token-free gate: a stub server scripts a tool call and a final
 turn and asserts both translation directions.
+
+### Goal chamber clamped to the maze span at corner exits
+
+The chamber's 0.25 m side margin was applied symmetrically around the
+exit wall; when the exit sits in a corner cell (duo11: seed 58, 7x7,
+exit on the north wall of cell (0,6)) one side overhung past the
+maze's outer corner and its side wall attached to nothing, leaving a
+robot-sized gap - bot B drove through it into the void.  The margin is
+now clamped to [0, span] along the exit wall's axis, so the side wall
+lands on the corner and the chamber stays sealed.  duo_check gates it
+(chamber within span; attach gaps < robot diameter).  duo11's world
+was generated before the fix and is compromised for the together
+objective; it is recorded as-is, not re-scored.
