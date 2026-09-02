@@ -1,0 +1,24 @@
+wallbug hybrid start
+ACQUIRE at 0.447
+A dir=351 drop=-0.009 blk=False
+A dir=68 drop=0.000 blk=True
+A dir=98 drop=-0.013 blk=True
+A dir=132 drop=0.012 blk=True
+A dir=217 drop=-0.009 blk=True
+A dir=250 drop=0.001 blk=False
+A dir=32 drop=-0.011 blk=True
+A dir=288 drop=-0.005 blk=False
+acquire fails= 1
+A dir=12 drop=0.018 blk=True
+A dir=47 drop=-0.006 blk=True
+A dir=85 drop=0.003 blk=False
+A dir=123 drop=0.005 blk=True
+A dir=156 drop=0.008 blk=True
+A dir=189 drop=0.009 blk=True
+A dir=329 drop=-0.006 blk=True
+A dir=290 drop=-0.008 blk=False
+A dir=258 drop=0.013 blk=False
+acquire fails= 2
+-> WALL mode side= 1
+ACQUIRE at 0.559
+A dir=38 drop=-0.015 blk=False

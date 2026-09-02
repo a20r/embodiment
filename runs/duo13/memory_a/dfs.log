@@ -1,0 +1,2134 @@
+[1788376346] DFS START
+[1788376346] S#1 (0.00,0.00,185) -> beam6 abs=325 clear=1.81 new=True
+[1788376351]   res=ok
+[1788376351] S#2 (0.40,-0.29,326) -> beam15 abs=302 clear=1.62 new=True
+[1788376355]   res=ok
+[1788376356] S#3 (0.67,-0.72,301) -> beam0 abs=299 clear=1.04 new=True
+[1788376359]   res=bump
+[1788376359]   blocked ((2, -4),7) n=1
+[1788376359] S#4 (0.80,-0.97,304) -> beam8 abs=118 clear=1.51 new=True
+[1788376364]   res=ok
+[1788376364] S#5 (0.57,-0.52,119) -> beam1 abs=141 clear=1.37 new=True
+[1788376367]   res=ok
+[1788376368] S#6 (0.18,-0.20,147) -> beam0 abs=144 clear=0.88 new=True
+[1788376372]   res=wall
+[1788376372]   blocked ((-1, 0),3) n=1
+[1788376372] S#7 (-0.21,0.08,144) -> beam5 abs=251 clear=1.47 new=True
+[1788376377]   res=ok
+[1788376377] NO CAND (idle=1) spin 75
+[1788376378] S#9 (-0.38,-0.39,321) -> beam14 abs=275 clear=2.23 new=True
+[1788376382]   res=ok
+[1788376382] S#10 (-0.34,-0.89,275) -> beam0 abs=273 clear=1.73 new=True
+[1788376386]   res=ok
+[1788376386] S#11 (-0.32,-1.40,276) -> beam8 abs=95 clear=1.75 new=True
+[1788376390]   res=ok
+[1788376391] S#12 (-0.35,-0.90,97) -> beam15 abs=72 clear=1.31 new=True
+[1788376394]   res=ok
+[1788376395] S#13 (-0.19,-0.42,73) -> beam2 abs=117 clear=0.77 new=True
+[1788376400]   res=wall
+[1788376400]   blocked ((-2, 0),3) n=1
+[1788376400] S#14 (-0.38,-0.04,115) -> beam13 abs=51 clear=0.59 new=True
+[1788376403]   res=wall
+[1788376403]   blocked ((0, 1),1) n=1
+[1788376403] NO CAND (idle=1) spin 75
+[1788376404] S#16 (-0.24,0.12,124) -> beam11 abs=15 clear=0.76 new=True
+[1788376408]   res=wall
+[1788376408]   blocked ((1, 0),0) n=1
+[1788376408] S#17 (0.11,0.21,16) -> beam10 abs=239 clear=1.30 new=True
+[1788376413]   res=ok
+[1788376413] SENSOR d0=0 d5=1 at (-0.14,-0.20)
+[1788376413] S#18 (-0.15,-0.22,236) -> beam3 abs=307 clear=1.47 new=True
+[1788376417]   res=ok
+[1788376417] S#19 (0.14,-0.62,308) -> beam0 abs=307 clear=0.98 new=True
+[1788376419]   res=bump
+[1788376419]   blocked ((1, -4),7) n=1
+[1788376419] S#20 (0.21,-0.71,308) -> beam3 abs=13 clear=0.62 new=True
+[1788376422]   res=wall
+[1788376422]   blocked ((2, -2),0) n=1
+[1788376422] NO CAND (idle=1) spin 75
+[1788376423] S#22 (0.42,-0.67,82) -> beam9 abs=285 clear=0.75 new=True
+[1788376428]   res=wall
+[1788376428]   blocked ((1, -4),6) n=1
+[1788376428] S#23 (0.50,-0.99,284) -> beam3 abs=349 clear=0.86 new=True
+[1788376433]   res=wall
+[1788376433]   blocked ((3, -4),0) n=1
+[1788376433] NO CAND (idle=1) spin 75
+[1788376434] NO CAND (idle=2) spin 75
+[1788376435] S#26 (0.96,-1.08,134) -> beam7 abs=288 clear=0.86 new=True
+[1788376441]   res=wall
+[1788376441]   blocked ((3, -5),6) n=1
+[1788376441] S#27 (1.10,-1.51,291) -> beam12 abs=199 clear=1.44 new=True
+[1788376445]   res=ok
+[1788376445] S#28 (0.62,-1.67,201) -> beam14 abs=156 clear=0.95 new=True
+[1788376450]   res=ok
+[1788376450] S#29 (0.17,-1.46,155) -> beam5 abs=270 clear=1.40 new=True
+[1788376454]   res=ok
+[1788376455] S#30 (0.16,-1.96,267) -> beam8 abs=89 clear=1.08 new=True
+[1788376459]   res=ok
+[1788376460] S#31 (0.18,-1.46,92) -> beam12 abs=359 clear=1.14 new=True
+[1788376461]   res=bump
+[1788376461]   blocked ((2, -5),0) n=1
+[1788376462] S#32 (0.12,-1.47,5) -> beam11 abs=252 clear=0.97 new=True
+[1788376466]   res=ok
+[1788376467] NO CAND (idle=1) spin 75
+[1788376468] NO CAND (idle=2) spin 75
+[1788376469] S#35 (-0.04,-1.94,43) -> beam2 abs=86 clear=1.05 new=True
+[1788376474]   res=ok
+[1788376474] S#36 (-0.01,-1.45,82) -> beam11 abs=328 clear=0.85 new=True
+[1788376477]   res=wall
+[1788376477]   blocked ((1, -6),7) n=1
+[1788376478] S#37 (0.24,-1.60,328) -> beam13 abs=260 clear=1.32 new=True
+[1788376482]   res=ok
+[1788376482] NO CAND (idle=1) spin 75
+[1788376483] S#39 (0.15,-2.09,335) -> beam13 abs=268 clear=0.90 new=True
+[1788376488]   res=wall
+[1788376488]   blocked ((0, -8),6) n=1
+[1788376488] NO CAND (idle=1) spin 75
+[1788376489] S#41 (0.12,-2.57,346) -> beam0 abs=341 clear=1.24 new=True
+[1788376493]   res=ok
+[1788376493] S#42 (0.59,-2.75,338) -> beam2 abs=31 clear=1.33 new=True
+[1788376497]   res=ok
+[1788376497] S#43 (1.03,-2.49,33) -> beam8 abs=212 clear=0.87 new=True
+[1788376502]   res=wall
+[1788376502]   blocked ((1, -9),5) n=1
+[1788376503] S#44 (0.64,-2.73,215) -> beam8 abs=37 clear=1.21 new=True
+[1788376504] DFS START
+[1788376504] NO CAND (idle=1) spin 75
+[1788376506] S#2 (-0.00,-0.00,36) -> beam5 abs=147 clear=1.02 new=True
+[1788376508]   res=bump
+[1788376508]   blocked ((-2, 0),3) n=1
+[1788376509] NO CAND (idle=1) spin 75
+[1788376510] S#4 (-0.06,0.04,219) -> beam7 abs=18 clear=1.21 new=True
+[1788376515]   res=ok
+[1788376515] S#5 (0.41,0.19,19) -> beam6 abs=152 clear=0.85 new=True
+[1788376521]   res=wall
+[1788376521]   blocked ((-1, 1),3) n=1
+[1788376521] S#6 (0.01,0.40,154) -> beam9 abs=356 clear=1.12 new=True
+[1788376526]   res=ok
+[1788376526] S#7 (0.51,0.36,357) -> beam15 abs=334 clear=1.58 new=True
+[1788376529]   res=ok
+[1788376530] SENSOR d0=0 d5=1 at (0.93,0.15)
+[1788376530] S#8 (0.96,0.14,332) -> beam10 abs=198 clear=1.54 new=True
+[1788376534]   res=bump
+[1788376534]   blocked ((1, -1),4) n=1
+[1788376534] NO CAND (idle=1) spin 75
+[1788376535] S#10 (0.65,0.04,273) -> beam13 abs=200 clear=1.16 new=True
+[1788376539]   res=ok
+[1788376539] S#11 (0.17,-0.13,201) -> beam15 abs=176 clear=0.80 new=True
+[1788376544]   res=wall
+[1788376544]   blocked ((-2, -1),4) n=1
+[1788376544] S#12 (-0.23,-0.10,175) -> beam13 abs=107 clear=1.39 new=True
+[1788376548]   res=ok
+[1788376548] NO CAND (idle=1) spin 75
+[1788376549] NO CAND (idle=2) spin 75
+[1788376550] S#15 (-0.37,0.39,252) -> beam9 abs=95 clear=1.20 new=True
+[1788376555]   res=ok
+[1788376555] S#16 (-0.41,0.88,90) -> beam12 abs=2 clear=1.31 new=True
+[1788376559]   res=ok
+[1788376560] S#17 (0.10,0.90,2) -> beam10 abs=231 clear=1.12 new=True
+[1788376561]   res=wall
+[1788376561]   blocked ((-1, 1),5) n=1
+[1788376561] S#18 (0.09,0.89,235) -> beam12 abs=144 clear=0.88 new=True
+[1788376563]   res=bump
+[1788376563]   blocked ((-2, 3),3) n=1
+[1788376563] S#19 (0.13,0.87,149) -> beam11 abs=35 clear=0.89 new=True
+[1788376565]   res=bump
+[1788376565]   blocked ((1, 3),1) n=1
+[1788376565] S#20 (0.10,0.85,35) -> beam15 abs=15 clear=0.81 new=True
+[1788376569]   res=wall
+[1788376569]   blocked ((1, 2),0) n=1
+[1788376570] S#21 (0.50,0.95,16) -> beam5 abs=126 clear=2.07 new=True
+[1788376574]   res=ok
+[1788376574] S#22 (0.20,1.36,130) -> beam0 abs=131 clear=1.51 new=True
+[1788376578]   res=ok
+[1788376578] NO CAND (idle=1) spin 75
+[1788376579] S#24 (-0.13,1.76,205) -> beam13 abs=134 clear=1.14 new=True
+[1788376584]   res=ok
+[1788376584] S#25 (-0.47,2.11,136) -> beam8 abs=315 clear=1.81 new=True
+[1788376589]   res=ok
+[1788376589] S#26 (-0.11,1.75,315) -> beam7 abs=111 clear=0.89 new=True
+[1788376595]   res=wall
+[1788376595]   blocked ((-1, 6),2) n=1
+[1788376595] S#27 (-0.28,2.20,113) -> beam8 abs=293 clear=1.22 new=True
+[1788376600]   res=ok
+[1788376600] S#28 (-0.09,1.75,295) -> beam1 abs=318 clear=1.30 new=True
+[1788376604]   res=ok
+[1788376604] NO CAND (idle=1) spin 75
+[1788376605] S#30 (0.27,1.40,29) -> beam13 abs=325 clear=0.77 new=True
+[1788376609]   res=wall
+[1788376609]   blocked ((2, 3),7) n=1
+[1788376609] S#31 (0.57,1.20,328) -> beam9 abs=168 clear=0.76 new=True
+[1788376614]   res=wall
+[1788376614]   blocked ((-1, 3),4) n=1
+[1788376614] NO CAND (idle=1) spin 75
+[1788376615] NO CAND (idle=2) spin 75
+[1788376616] S#34 (0.19,1.29,309) -> beam6 abs=87 clear=0.79 new=True
+[1788376621]   res=wall
+[1788376621]   blocked ((0, 5),2) n=1
+[1788376621] NO CAND (idle=1) spin 75
+[1788376622] S#36 (0.21,1.67,163) -> beam0 abs=163 clear=0.84 new=True
+[1788376627]   res=wall
+[1788376627]   blocked ((-2, 5),4) n=1
+[1788376627] S#37 (-0.25,1.81,167) -> beam15 abs=137 clear=1.12 new=True
+[1788376631]   res=ok
+[1788376631] S#38 (-0.61,2.15,138) -> beam4 abs=231 clear=0.79 new=True
+[1788376636]   res=ok
+[1788376636] SENSOR d0=0 d5=1 at (-0.92,1.79)
+[1788376636] NO CAND (idle=1) spin 75
+[1788376637] S#40 (-0.94,1.77,309) -> beam0 abs=306 clear=1.44 new=True
+[1788376640]   res=ok
+[1788376641] S#41 (-0.65,1.36,308) -> beam1 abs=330 clear=1.39 new=True
+[1788376644]   res=ok
+[1788376645] S#42 (-0.21,1.10,331) -> beam7 abs=126 clear=1.37 new=True
+[1788376649]   res=ok
+[1788376650] S#43 (-0.50,1.52,129) -> beam1 abs=153 clear=1.15 new=True
+[1788376654]   res=ok
+[1788376654] S#44 (-0.94,1.75,156) -> beam4 abs=246 clear=1.38 new=True
+[1788376658]   res=bump
+[1788376658]   blocked ((-4, 3),5) n=1
+[1788376659] S#45 (-1.11,1.39,247) -> beam15 abs=225 clear=0.75 new=True
+[1788376662]   res=wall
+[1788376662]   blocked ((-5, 2),5) n=1
+[1788376663] NO CAND (idle=1) spin 75
+[1788376664] S#47 (-1.37,1.14,299) -> beam14 abs=249 clear=1.16 new=True
+[1788376668]   res=wall
+[1788376668]   blocked ((-5, 1),6) n=1
+[1788376669] NO CAND (idle=1) spin 75
+[1788376670] S#49 (-1.55,0.69,322) -> beam14 abs=276 clear=2.03 new=True
+[1788376674]   res=ok
+[1788376674] S#50 (-1.50,0.18,279) -> beam7 abs=74 clear=1.55 new=True
+[1788376679]   res=ok
+[1788376679] S#51 (-1.36,0.66,78) -> beam1 abs=102 clear=0.99 new=True
+[1788376683]   res=ok
+[1788376684] S#52 (-1.46,1.14,100) -> beam13 abs=38 clear=0.91 new=True
+[1788376688]   res=wall
+[1788376688]   blocked ((-3, 4),1) n=1
+[1788376688] S#53 (-1.13,1.40,37) -> beam12 abs=308 clear=2.13 new=True
+[1788376692]   res=ok
+[1788376692] S#54 (-0.82,1.00,310) -> beam7 abs=103 clear=0.70 new=True
+[1788376697]   res=wall
+[1788376697]   blocked ((-3, 4),2) n=1
+[1788376697] S#55 (-0.88,1.30,102) -> beam8 abs=284 clear=0.71 new=True
+[1788376701]   res=wall
+[1788376701]   blocked ((-3, 1),6) n=1
+[1788376702] S#56 (-0.80,0.95,285) -> beam2 abs=330 clear=1.26 new=True
+[1788376706]   res=bump
+[1788376706]   blocked ((-1, 1),7) n=1
+[1788376706] NO CAND (idle=1) spin 75
+[1788376707] NO CAND (idle=2) spin 75
+[1788376709] S#59 (-0.46,0.74,119) -> beam2 abs=168 clear=0.76 new=True
+[1788376712] loaded zone (-0.92, 1.79)
+[1788376712] DFS START
+[1788376712] ZONESCAN d=(2.01) ang=117
+[1788376716] ZONESCAN d=(1.66) ang=117
+[1788376718] ZONESCAN d=(1.45) ang=117
+[1788376718] ZONESCAN d=(1.44) ang=117
+[1788376718] ZONESCAN d=(1.44) ang=117
+[1788376718] ZONESCAN d=(1.44) ang=117
+[1788376718] ZONESCAN d=(1.44) ang=117
+[1788376718] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376719] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376720] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376721] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376722] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376723] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376724] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376725] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376726] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.44) ang=117
+[1788376727] ZONESCAN d=(1.43) ang=117
+[1788376727] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376728] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376729] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376730] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376731] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376732] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376733] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376734] ZONESCAN d=(1.43) ang=117
+[1788376735] ZONESCAN d=(1.43) ang=117
+[1788376735] ZONESCAN d=(1.43) ang=117
+[1788376735] ZONESCAN d=(1.43) ang=117
+[1788376735] ZONESCAN d=(1.43) ang=117
+[1788376735] ZONESCAN d=(1.42) ang=117
+[1788376735] ZONESCAN d=(1.42) ang=117
+[1788376735] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376736] ZONESCAN d=(1.42) ang=117
+[1788376737] ZONESCAN d=(1.42) ang=117
+[1788376737] ZONESCAN d=(1.42) ang=117
+[1788376737] ZONESCAN d=(1.42) ang=117
+[1788376737] ZONESCAN d=(1.42) ang=117
+[1788376737] ZONESCAN d=(1.42) ang=117
+[1788376737] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376738] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376739] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376740] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376741] ZONESCAN d=(1.42) ang=117
+[1788376742] ZONESCAN d=(1.42) ang=117
+[1788376742] ZONESCAN d=(1.42) ang=117
+[1788376742] ZONESCAN d=(1.42) ang=117
+[1788376742] ZONESCAN d=(1.42) ang=117
+[1788376742] ZONESCAN d=(1.42) ang=117
+[1788376742] S#1 (-0.28,0.54,117) -> beam8 abs=298 clear=1.34 new=True
+[1788376747]   res=ok
+[1788376748] S#2 (-0.04,0.09,300) -> beam1 abs=322 clear=1.45 new=True
+[1788376751]   res=ok
+[1788376752] S#3 (0.36,-0.23,327) -> beam7 abs=117 clear=1.22 new=True
+[1788376757]   res=bump
+[1788376757]   blocked ((0, 0),3) n=1
+[1788376757] S#4 (0.18,0.14,122) -> beam8 abs=297 clear=1.43 new=True
+[1788376761]   res=ok
+[1788376762] S#5 (0.41,-0.31,298) -> beam0 abs=298 clear=0.94 new=True
+[1788376764]   res=bump
+[1788376764]   blocked ((2, -3),7) n=1
+[1788376764] S#6 (0.49,-0.46,300) -> beam9 abs=143 clear=1.10 new=True
+[1788376768]   res=bump
+[1788376768]   blocked ((-1, -1),3) n=1
+[1788376768] S#7 (0.33,-0.34,145) -> beam8 abs=326 clear=0.92 new=True
+[1788376774]   res=ok
+[1788376774] S#8 (0.74,-0.62,328) -> beam9 abs=166 clear=0.62 new=True
+[1788376778]   res=wall
+[1788376778]   blocked ((0, -2),4) n=1
+[1788376778] NO CAND (idle=1) spin 75
+[1788376779] S#10 (0.47,-0.55,239) -> beam6 abs=16 clear=0.66 new=True
+[1788376783]   res=wall
+[1788376783]   blocked ((3, -2),0) n=1
+[1788376783] S#11 (0.72,-0.48,19) -> beam10 abs=241 clear=0.70 new=True
+[1788376786]   res=bump
+[1788376786]   blocked ((1, -3),5) n=1
+[1788376786] NO CAND (idle=1) spin 75
+[1788376788] S#13 (0.68,-0.53,317) -> beam7 abs=111 clear=0.93 new=True
+[1788376789]   res=wall
+[1788376789]   blocked ((1, 0),2) n=1
+[1788376789] S#14 (0.69,-0.53,104) -> beam6 abs=243 clear=0.65 new=True
+[1788376795]   res=ok
+[1788376795] SENSOR d0=0 d5=1 at (0.47,-0.95)
+[1788376795] ZONESCAN d=(0.00) ang=55
+[1788376798] ZONESCAN d=(0.16) ang=110
+[1788376799] ZONESCAN d=(0.16) ang=165
+[1788376801] ZONESCAN d=(0.18) ang=220
+[1788376802] ZONESCAN d=(0.18) ang=275
+[1788376804] ZONESCAN d=(0.05) ang=330
+[1788376806] ZONESCAN d=(0.02) ang=25
+[1788376807] ZONESCAN d=(0.02) ang=80
+[1788376809] ZONESCAN d=(0.14) ang=135
+[1788376810] ZONESCAN d=(0.26) ang=190
+[1788376812] ZONESCAN d=(0.30) ang=245
+[1788376813] ZONESCAN d=(0.30) ang=300
+[1788376816] ZONESCAN d=(0.14) ang=355
+[1788376817] ZONESCAN d=(0.10) ang=50
+[1788376819] ZONESCAN d=(0.20) ang=105
+[1788376820] ZONESCAN d=(0.20) ang=160
+[1788376822] ZONESCAN d=(0.28) ang=215
+[1788376823] ZONESCAN d=(0.28) ang=270
+[1788376825] ZONESCAN d=(0.15) ang=325
+[1788376827] NO CAND (idle=1) spin 75
+[1788376828] S#16 (0.45,-0.93,40) -> beam4 abs=127 clear=1.92 new=True
+[1788376832]   res=ok
+[1788376832] NO CAND (idle=1) spin 75
+[1788376833] S#18 (0.15,-0.52,202) -> beam14 abs=157 clear=0.91 new=True
+[1788376838]   res=ok
+[1788376838] S#19 (-0.30,-0.32,158) -> beam7 abs=315 clear=1.53 new=True
+[1788376840]   res=bump
+[1788376840]   blocked ((0, -3),7) n=1
+[1788376841] S#20 (-0.34,-0.29,320) -> beam7 abs=114 clear=0.95 new=True
+[1788376846]   res=ok
+[1788376846] S#21 (-0.54,0.17,118) -> beam4 abs=206 clear=0.76 new=True
+[1788376848]   res=bump
+[1788376848]   blocked ((-4, -1),5) n=1
+[1788376848] S#22 (-0.52,0.18,204) -> beam4 abs=295 clear=0.72 new=True
+[1788376852]   res=wall
+[1788376852]   blocked ((-1, -2),7) n=1
+[1788376853] S#23 (-0.39,-0.12,292) -> beam9 abs=139 clear=1.01 new=True
+[1788376856]   res=bump
+[1788376856]   blocked ((-3, 0),3) n=1
+[1788376856] NO CAND (idle=1) spin 75
+[1788376857] S#25 (-0.48,-0.03,212) -> beam12 abs=122 clear=0.74 new=True
+[1788376861]   res=wall
+[1788376861]   blocked ((-3, 1),3) n=1
+[1788376862] S#26 (-0.65,0.25,119) -> beam6 abs=258 clear=2.17 new=True
+[1788376865]   res=bump
+[1788376865]   blocked ((-3, -2),6) n=1
+[1788376865] S#27 (-0.70,0.08,257) -> beam2 abs=303 clear=1.49 new=True
+[1788376869]   res=ok
+[1788376869] S#28 (-0.42,-0.36,303) -> beam0 abs=305 clear=0.97 new=True
+[1788376871]   res=bump
+[1788376871]   blocked ((-1, -3),7) n=1
+[1788376871] NO CAND (idle=1) spin 75
+[1788376873] S#30 (-0.38,-0.42,14) -> beam13 abs=307 clear=1.54 new=True
+[1788376874]   res=bump
+[1788376874]   blocked ((-1, -3),7) n=2
+[1788376875] S#31 (-0.36,-0.45,310) -> beam1 abs=331 clear=1.24 new=True
+[1788376878]   res=ok
+[1788376879] S#32 (0.07,-0.70,330) -> beam15 abs=310 clear=0.98 new=True
+[1788376883]   res=ok
+[1788376884] NO CAND (idle=1) spin 75
+[1788376885] NO CAND (idle=2) spin 75
+[1788376886] S#35 (0.38,-1.08,98) -> beam2 abs=150 clear=1.47 new=True
+[1788376890]   res=wall
+[1788376890]   blocked ((-1, -3),3) n=1
+[1788376891] S#36 (0.07,-0.90,150) -> beam15 abs=125 clear=1.61 new=True
+[1788376894]   res=ok
+[1788376895] S#37 (-0.22,-0.49,128) -> beam7 abs=281 clear=0.64 new=True
+[1788376898]   res=wall
+[1788376898]   blocked ((-1, -4),6) n=1
+[1788376899] S#38 (-0.16,-0.77,280) -> beam2 abs=325 clear=1.09 new=True
+[1788376903]   res=ok
+[1788376903] S#39 (0.24,-1.06,328) -> beam15 abs=306 clear=0.76 new=True
+[1788376907]   res=wall
+[1788376907]   blocked ((1, -5),7) n=1
+[1788376907] S#40 (0.44,-1.35,305) -> beam11 abs=191 clear=1.31 new=True
+[1788376911]   res=ok
+[1788376911] NO CAND (idle=1) spin 75
+[1788376913] S#42 (-0.04,-1.44,267) -> beam10 abs=136 clear=1.05 new=True
+[1788376915]   res=bump
+[1788376915]   blocked ((-2, -3),3) n=1
+[1788376916] S#43 (-0.10,-1.39,136) -> beam4 abs=228 clear=0.99 new=True
+[1788376918]   res=bump
+[1788376918]   blocked ((-2, -6),5) n=1
+[1788376918] S#44 (-0.17,-1.47,224) -> beam12 abs=141 clear=0.82 new=True
+[1788376923]   res=wall
+[1788376923]   blocked ((-2, -4),3) n=1
+[1788376923] S#45 (-0.48,-1.22,142) -> beam6 abs=275 clear=1.39 new=True
+[1788376928]   res=ok
+[1788376928] S#46 (-0.45,-1.71,272) -> beam15 abs=247 clear=0.96 new=True
+[1788376932]   res=wall
+[1788376932]   blocked ((-2, -7),5) n=1
+[1788376932] S#47 (-0.61,-2.08,245) -> beam4 abs=338 clear=1.34 new=True
+[1788376936]   res=ok
+[1788376937] S#48 (-0.14,-2.27,337) -> beam0 abs=340 clear=0.98 new=True
+[1788376940]   res=ok
+[1788376941] S#49 (0.33,-2.45,343) -> beam3 abs=48 clear=1.04 new=True
+[1788376945]   res=ok
+[1788376946] S#50 (0.66,-2.09,46) -> beam13 abs=340 clear=1.67 new=True
+[1788376947]   res=bump
+[1788376947]   blocked ((3, -7),0) n=1
+[1788376947] NO CAND (idle=1) spin 75
+[1788376948] S#52 (0.59,-2.07,60) -> beam5 abs=168 clear=0.89 new=True
+[1788376954]   res=wall
+[1788376954]   blocked ((-1, -6),4) n=1
+[1788376954] S#53 (0.11,-1.97,169) -> beam8 abs=350 clear=1.14 new=True
+[1788376959]   res=ok
+[1788376959] NO CAND (idle=1) spin 75
+[1788376960] S#55 (0.60,-2.06,66) -> beam12 abs=337 clear=1.62 new=True
+[1788376962]   res=bump
+[1788376962]   blocked ((3, -7),7) n=1
+[1788376963] S#56 (0.64,-2.07,338) -> beam11 abs=226 clear=0.85 new=True
+[1788376967]   res=wall
+[1788376967]   blocked ((0, -8),5) n=1
+[1788376967] S#57 (0.37,-2.35,228) -> beam7 abs=26 clear=1.02 new=True
+[1788376969]   res=wall
+[1788376969]   blocked ((2, -6),1) n=1
+[1788376969] NO CAND (idle=1) spin 75
+[1788376970] NO CAND (idle=2) spin 75
+[1788376971] S#60 (0.42,-2.33,167) -> beam12 abs=78 clear=0.70 new=True
+[1788376975]   res=wall
+[1788376975]   blocked ((1, -5),2) n=1
+[1788376976] S#61 (0.49,-2.00,77) -> beam13 abs=8 clear=0.80 new=True
+[1788376980]   res=wall
+[1788376980]   blocked ((3, -6),0) n=1
+[1788376980] S#62 (0.91,-1.94,8) -> beam13 abs=299 clear=0.85 new=True
+[1788376985]   res=wall
+[1788376985]   blocked ((3, -8),7) n=1
+[1788376985] S#63 (1.13,-2.35,297) -> beam2 abs=347 clear=1.17 new=True
+[1788376989]   res=ok
+[1788376990] S#64 (1.62,-2.47,347) -> beam3 abs=53 clear=1.18 new=True
+[1788376994]   res=ok
+[1788376994] STOP FILE
+[1788376998] loaded zone (0.68, 0.89)
+[1788376998] restored pose -0.47,-1.22
+[1788376998] DFS START
+[1788376998] ZONESCAN d=(2.40) ang=61
+[1788377001] ZONESCAN d=(2.08) ang=62
+[1788377001] ZONESCAN d=(2.08) ang=62
+[1788377001] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377002] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377003] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377004] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377005] ZONESCAN d=(2.08) ang=62
+[1788377006] ZONESCAN d=(2.08) ang=62
+[1788377006] ZONESCAN d=(2.08) ang=62
+[1788377006] ZONESCAN d=(2.06) ang=62
+[1788377006] ZONESCAN d=(2.06) ang=62
+[1788377006] ZONESCAN d=(2.06) ang=62
+[1788377006] ZONESCAN d=(2.06) ang=62
+[1788377006] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377007] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377008] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377009] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377010] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377011] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377012] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377013] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377014] ZONESCAN d=(2.06) ang=62
+[1788377015] ZONESCAN d=(2.06) ang=62
+[1788377015] ZONESCAN d=(2.06) ang=62
+[1788377015] ZONESCAN d=(2.06) ang=62
+[1788377015] ZONESCAN d=(2.06) ang=62
+[1788377015] ZONESCAN d=(2.05) ang=62
+[1788377015] ZONESCAN d=(2.05) ang=62
+[1788377015] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377016] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377017] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377018] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377019] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377020] ZONESCAN d=(2.05) ang=62
+[1788377021] ZONESCAN d=(2.05) ang=62
+[1788377021] ZONESCAN d=(2.05) ang=62
+[1788377021] ZONESCAN d=(2.03) ang=62
+[1788377021] ZONESCAN d=(2.03) ang=62
+[1788377021] ZONESCAN d=(2.03) ang=62
+[1788377021] ZONESCAN d=(2.03) ang=62
+[1788377021] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377022] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377023] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377024] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377025] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377026] ZONESCAN d=(2.03) ang=62
+[1788377027] ZONESCAN d=(2.03) ang=62
+[1788377027] ZONESCAN d=(2.03) ang=62
+[1788377027] ZONESCAN d=(2.03) ang=62
+[1788377027] ZONESCAN d=(2.03) ang=62
+[1788377027] ZONESCAN d=(2.03) ang=62
+[1788377027] ZONESCAN d=(2.03) ang=62
+[1788377028] ZONESCAN d=(2.03) ang=62
+[1788377028] ZONESCAN d=(2.03) ang=62
+[1788377028] ZONESCAN d=(2.03) ang=62
+[1788377028] S#1 (-0.28,-0.88,60) -> beam2 abs=106 clear=2.12 new=True
+[1788377032]   res=ok
+[1788377032] S#2 (-0.42,-0.39,109) -> beam0 abs=109 clear=1.70 new=True
+[1788377036]   res=bump
+[1788377036]   blocked ((-2, 0),2) n=1
+[1788377036] NO CAND (idle=1) spin 75
+[1788377037] NO CAND (idle=2) spin 75
+[1788377038] S#5 (-0.53,-0.04,254) -> beam10 abs=117 clear=1.11 new=True
+[1788377043]   res=ok
+[1788377043] NO CAND (idle=1) spin 75
+[1788377044] S#7 (-0.75,0.40,191) -> beam12 abs=100 clear=0.91 new=True
+[1788377049]   res=ok
+[1788377049] S#8 (-0.83,0.89,103) -> beam8 abs=280 clear=2.70 new=True
+[1788377054]   res=ok
+[1788377054] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377055] NO CAND (idle=1) spin 75
+[1788377056] S#10 (-0.75,0.39,351) -> beam4 abs=83 clear=0.86 new=True
+[1788377060]   res=wall
+[1788377060]   blocked ((-2, 2),2) n=1
+[1788377061] S#11 (-0.69,0.83,84) -> beam15 abs=59 clear=1.15 new=True
+[1788377065]   res=ok
+[1788377065] S#12 (-0.43,1.26,60) -> beam5 abs=173 clear=1.20 new=True
+[1788377067]   res=bump
+[1788377067]   blocked ((-3, 3),4) n=1
+[1788377067] S#13 (-0.42,1.26,174) -> beam5 abs=285 clear=1.04 new=True
+[1788377072]   res=ok
+[1788377072] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377073] S#14 (-0.29,0.78,290) -> beam7 abs=84 clear=1.07 new=True
+[1788377078]   res=ok
+[1788377078] S#15 (-0.24,1.27,85) -> beam3 abs=152 clear=1.14 new=True
+[1788377082]   res=ok
+[1788377083] S#16 (-0.67,1.50,149) -> beam2 abs=200 clear=1.00 new=True
+[1788377087]   res=ok
+[1788377088] S#17 (-1.14,1.34,202) -> beam3 abs=266 clear=0.86 new=True
+[1788377089]   res=bump
+[1788377089]   blocked ((-4, 2),6) n=1
+[1788377090] S#18 (-1.14,1.40,266) -> beam14 abs=221 clear=0.64 new=True
+[1788377091]   res=wall
+[1788377091]   blocked ((-5, 2),5) n=1
+[1788377091] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377091] S#19 (-1.18,1.36,219) -> beam8 abs=41 clear=0.57 new=True
+[1788377094]   res=wall
+[1788377094]   blocked ((-3, 5),1) n=1
+[1788377094] S#20 (-1.04,1.48,38) -> beam9 abs=240 clear=1.44 new=True
+[1788377099]   res=ok
+[1788377099] SENSOR d0=0 d5=1 at (-1.28,1.08)
+[1788377099] ZONESCAN d=(0.00) ang=55
+[1788377101] ZONESCAN d=(0.15) ang=110
+[1788377103] ZONESCAN d=(0.25) ang=165
+[1788377104] ZONESCAN d=(0.27) ang=220
+[1788377105] ZONESCAN d=(0.26) ang=275
+[1788377106] ZONESCAN d=(0.26) ang=330
+[1788377107] ZONESCAN d=(0.26) ang=25
+[1788377110] ZONESCAN d=(0.34) ang=80
+[1788377110] ZONESCAN d=(0.34) ang=135
+[1788377111] ZONESCAN d=(0.34) ang=190
+[1788377113] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377113] ZONESCAN d=(0.31) ang=245
+[1788377114] ZONESCAN d=(0.31) ang=300
+[1788377115] ZONESCAN d=(0.31) ang=355
+[1788377117] ZONESCAN d=(0.33) ang=50
+[1788377117] ZONESCAN d=(0.33) ang=105
+[1788377119] ZONESCAN d=(0.33) ang=160
+[1788377121] ZONESCAN d=(0.35) ang=215
+[1788377123] ZONESCAN d=(0.30) ang=270
+[1788377124] ZONESCAN d=(0.30) ang=325
+[1788377124] ZONESCAN d=(0.30) ang=20
+[1788377126] ZONESCAN d=(0.33) ang=75
+[1788377127] ZONESCAN d=(0.33) ang=130
+[1788377128] ZONESCAN d=(0.33) ang=185
+[1788377130] S#21 (-1.28,1.40,178) -> beam4 abs=274 clear=2.34 new=True
+[1788377135]   res=ok
+[1788377135] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377135] S#22 (-1.24,0.90,273) -> beam0 abs=272 clear=1.84 new=True
+[1788377139]   res=ok
+[1788377139] NO CAND (idle=1) spin 75
+[1788377140] S#24 (-1.23,0.40,348) -> beam12 abs=257 clear=1.71 new=True
+[1788377144]   res=ok
+[1788377144] S#25 (-1.35,-0.10,255) -> beam1 abs=279 clear=1.45 new=True
+[1788377148]   res=ok
+[1788377148] S#26 (-1.28,-0.60,279) -> beam9 abs=121 clear=2.02 new=True
+[1788377153]   res=ok
+[1788377153] NO CAND (idle=1) spin 75
+[1788377154] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377154] S#28 (-1.53,-0.16,195) -> beam4 abs=287 clear=1.24 new=True
+[1788377158]   res=ok
+[1788377159] S#29 (-1.39,-0.65,286) -> beam0 abs=289 clear=1.26 new=True
+[1788377162]   res=ok
+[1788377162] NO CAND (idle=1) spin 75
+[1788377164] S#31 (-1.23,-1.13,2) -> beam5 abs=116 clear=2.01 new=True
+[1788377168]   res=wall
+[1788377168]   blocked ((-5, -2),3) n=1
+[1788377168] S#32 (-1.45,-0.69,119) -> beam9 abs=322 clear=1.02 new=True
+[1788377171]   res=bump
+[1788377171]   blocked ((-3, -4),7) n=1
+[1788377171] S#33 (-1.35,-0.77,322) -> beam12 abs=234 clear=0.55 new=True
+[1788377174]   res=wall
+[1788377174]   blocked ((-5, -4),5) n=1
+[1788377174] NO CAND (idle=1) spin 75
+[1788377175] S#35 (-1.44,-0.90,310) -> beam2 abs=351 clear=0.78 new=True
+[1788377180]   res=ok
+[1788377180] S#36 (-0.94,-0.97,356) -> beam13 abs=282 clear=0.95 new=True
+[1788377185]   res=ok
+[1788377185] S#37 (-0.84,-1.46,282) -> beam6 abs=57 clear=0.65 new=True
+[1788377189]   res=wall
+[1788377189]   blocked ((-2, -3),1) n=1
+[1788377189] S#38 (-0.69,-1.24,55) -> beam9 abs=259 clear=0.67 new=True
+[1788377193]   res=wall
+[1788377193]   blocked ((-3, -6),6) n=1
+[1788377193] S#39 (-0.75,-1.50,258) -> beam8 abs=78 clear=0.61 new=True
+[1788377197]   res=wall
+[1788377197]   blocked ((-2, -3),2) n=1
+[1788377197] S#40 (-0.70,-1.30,81) -> beam7 abs=234 clear=0.59 new=True
+[1788377200]   res=wall
+[1788377200]   blocked ((-4, -6),5) n=1
+[1788377200] S#41 (-0.80,-1.43,234) -> beam9 abs=73 clear=0.57 new=True
+[1788377203]   res=wall
+[1788377203]   blocked ((-2, -3),2) n=2
+[1788377203] NO CAND (idle=1) spin 75
+[1788377205] NO CAND (idle=2) spin 75
+[1788377206] S#44 (-0.74,-1.26,224) -> beam1 abs=248 clear=0.67 new=True
+[1788377209]   res=wall
+[1788377209]   blocked ((-3, -6),6) n=2
+[1788377209] NO CAND (idle=1) spin 75
+[1788377211] NO CAND (idle=2) spin 75
+[1788377212] S#47 (-0.85,-1.51,37) -> beam1 abs=57 clear=0.60 new=True
+[1788377214]   res=wall
+[1788377214]   blocked ((-2, -3),1) n=2
+[1788377214] S#48 (-0.76,-1.37,60) -> beam3 abs=123 clear=1.22 new=False
+[1788377218]   res=ok
+[1788377218] NO CAND (idle=1) spin 75
+[1788377219] NO CAND (idle=2) spin 75
+[1788377220] !! RX: B1->B2: I trilaterate from your PINGs+d11. Please PING every 1-2s. HOLD STILL 30s if you can. Then both go GOAL x~0.4 y~-0.8. ACK?
+[1788377220] S#51 (-1.02,-0.95,266) -> beam2 abs=311 clear=0.82 new=True
+[1788377225]   res=wall
+[1788377225]   blocked ((-2, -5),7) n=1
+[1788377225] S#52 (-0.72,-1.31,311) -> beam13 abs=244 clear=0.59 new=True
+[1788377228]   res=wall
+[1788377228]   blocked ((-3, -6),5) n=1
+[1788377228] S#53 (-0.81,-1.49,247) -> beam10 abs=111 clear=2.09 new=False
+[1788377232]   res=ok
+[1788377233] S#54 (-0.99,-1.01,114) -> beam9 abs=315 clear=0.65 new=True
+[1788377237]   res=wall
+[1788377237]   blocked ((-2, -5),7) n=2
+[1788377237] S#55 (-0.75,-1.25,315) -> beam13 abs=245 clear=0.66 new=True
+[1788377240]   res=bump
+[1788377240]   blocked ((-3, -6),5) n=2
+[1788377241] NO CAND (idle=1) spin 75
+[1788377242] S#57 (-0.81,-1.37,310) -> beam7 abs=108 clear=1.98 new=False
+[1788377246]   res=bump
+[1788377246]   blocked ((-3, -3),2) n=1
+[1788377246] NO CAND (idle=1) spin 75
+[1788377247] S#59 (-0.89,-1.07,184) -> beam0 abs=182 clear=0.60 new=True
+[1788377249]   res=wall
+[1788377249]   blocked ((-5, -4),4) n=1
+[1788377250] S#60 (-1.11,-1.08,179) -> beam8 abs=5 clear=0.57 new=True
+[1788377253]   res=wall
+[1788377253]   blocked ((-2, -3),0) n=1
+[1788377253] S#61 (-0.90,-1.06,3) -> beam8 abs=182 clear=0.58 new=True
+[1788377257]   res=wall
+[1788377257]   blocked ((-5, -4),4) n=2
+[1788377257] S#62 (-1.08,-1.07,184) -> beam12 abs=86 clear=1.71 new=True
+[1788377262]   res=bump
+[1788377262]   blocked ((-3, -2),2) n=1
+[1788377262] S#63 (-1.05,-0.67,86) -> beam0 abs=87 clear=1.85 new=True
+[1788377263]   res=bump
+[1788377263]   blocked ((-3, -1),2) n=1
+[1788377263] NO CAND (idle=1) spin 75
+[1788377264] S#65 (-1.05,-0.70,160) -> beam3 abs=228 clear=0.61 new=True
+[1788377267]   res=wall
+[1788377267]   blocked ((-5, -4),5) n=2
+[1788377268] S#66 (-1.21,-0.87,230) -> beam9 abs=68 clear=0.65 new=True
+[1788377271]   res=wall
+[1788377271]   blocked ((-3, -1),2) n=2
+[1788377272] S#67 (-1.12,-0.65,68) -> beam9 abs=270 clear=0.75 new=False
+[1788377276]   res=wall
+[1788377276]   blocked ((-4, -4),6) n=1
+[1788377276] !! RX: B1 coming! d11=0.78 STAY AT GOAL!
+[1788377276] NO CAND (idle=1) spin 75
+[1788377277] !! RX: B1 coming! d11=0.71 STAY AT GOAL!
+[1788377278] NO CAND (idle=2) spin 75
+[1788377279] S#70 (-1.12,-1.01,60) -> beam1 abs=84 clear=2.16 new=False
+[1788377283]   res=ok
+[1788377283] STOP FILE
+[1788377435] loaded zone (-1.2762181479914925, 1.077313143572832)
+[1788377435] restored pose -1.0605525464572485,-0.5282735817267802
+[1788377435] DFS START
+[1788377435] !! RX: B1 coming! d11=0.99 STAY AT GOAL!
+[1788377435] ZONESCAN d=(1.62) ang=98
+[1788377438] REQUEST goto (0.40,-0.80)
+[1788377440] REQUEST res=bump
+[1788377440] !! RX: B1 coming! d11=0.95 STAY AT GOAL!
+[1788377440] ZONESCAN d=(1.27) ang=98
+[1788377443] !! RX: B1 coming! d11=0.93 STAY AT GOAL!
+[1788377443] ZONESCAN d=(0.92) ang=98
+[1788377446] !! RX: B1 coming! d11=0.90 STAY AT GOAL!
+[1788377446] ZONESCAN d=(0.56) ang=55
+[1788377448] !! RX: B1->B2: keep PINGing! I am navigating to your GOALSEEN. Please also send GOALSEEN often!
+[1788377448] ZONESCAN d=(0.46) ang=110
+[1788377450] !! RX: B1->B2: keep PINGing! I am navigating to your GOALSEEN. Please also send GOALSEEN often!
+[1788377450] ZONESCAN d=(0.36) ang=165
+[1788377451] ZONESCAN d=(0.36) ang=220
+[1788377452] ZONESCAN d=(0.36) ang=275
+[1788377454] ZONESCAN d=(0.52) ang=330
+[1788377455] ZONESCAN d=(0.52) ang=25
+[1788377456] ZONESCAN d=(0.52) ang=80
+[1788377459] ZONESCAN d=(0.38) ang=135
+[1788377460] ZONESCAN d=(0.34) ang=190
+[1788377461] ZONESCAN d=(0.34) ang=245
+[1788377463] ZONESCAN d=(0.47) ang=300
+[1788377465] ZONESCAN d=(0.61) ang=355
+[1788377467] S#1 (-1.19,0.50,351) -> beam12 abs=261 clear=1.75 new=True
+[1788377471]   res=ok
+[1788377472] S#2 (-1.27,0.01,262) -> beam10 abs=126 clear=1.45 new=True
+[1788377475]   res=bump
+[1788377475]   blocked ((-5, 1),3) n=1
+[1788377475] S#3 (-1.38,0.16,126) -> beam14 abs=81 clear=1.12 new=True
+[1788377479]   res=ok
+[1788377480] S#4 (-1.30,0.65,84) -> beam14 abs=35 clear=1.08 new=True
+[1788377484]   res=ok
+[1788377484] S#5 (-0.89,0.93,33) -> beam15 abs=13 clear=0.98 new=True
+[1788377488]   res=ok
+[1788377488] STOP FILE
+[1788377507] restored pose -0.41559418443209795,1.0378804936555293
+[1788377507] DFS START
+[1788377511] GOALNAV d=2.01 res=ok
+[1788377514] GOALNAV d=1.55 res=wall
+[1788377515]  sidestep 60 res=bump
+[1788377517]  sidestep -60 res=wall
+[1788377519] GOALNAV d=1.26 res=wall
+[1788377520]  sidestep 60 res=bump
+[1788377521]  sidestep -60 res=wall
+[1788377522] GOALNAV d=1.11 res=wall
+[1788377523]  sidestep 60 res=wall
+[1788377524]  sidestep -60 res=wall
+[1788377524] GOALNAV d=1.14 res=wall
+[1788377525]  sidestep 60 res=wall
+[1788377526]  sidestep -60 res=wall
+[1788377527] GOALNAV d=1.14 res=wall
+[1788377528]  sidestep 60 res=wall
+[1788377529]  sidestep -60 res=wall
+[1788377529] GOALNAV d=1.14 res=wall
+[1788377530]  sidestep 60 res=wall
+[1788377531]  sidestep -60 res=wall
+[1788377532] GOALNAV d=1.14 res=wall
+[1788377532]  sidestep 60 res=wall
+[1788377533]  sidestep -60 res=wall
+[1788377534] GOALNAV d=1.14 res=wall
+[1788377535]  sidestep 60 res=wall
+[1788377536]  sidestep -60 res=wall
+[1788377536] GOALNAV d=1.14 res=wall
+[1788377537]  sidestep 60 res=wall
+[1788377538]  sidestep -60 res=wall
+[1788377539] GOALNAV d=1.14 res=wall
+[1788377540]  sidestep 60 res=wall
+[1788377541]  sidestep -60 res=wall
+[1788377541] GOALNAV d=1.14 res=wall
+[1788377542]  sidestep 60 res=wall
+[1788377543]  sidestep -60 res=wall
+[1788377544] GOALNAV d=1.14 res=wall
+[1788377545]  sidestep 60 res=wall
+[1788377545]  sidestep -60 res=wall
+[1788377546] GOALNAV d=1.14 res=wall
+[1788377547]  sidestep 60 res=wall
+[1788377548]  sidestep -60 res=wall
+[1788377548] GOALNAV d=1.14 res=wall
+[1788377549]  sidestep 60 res=wall
+[1788377550]  sidestep -60 res=wall
+[1788377551] GOALNAV d=1.14 res=wall
+[1788377552]  sidestep 60 res=wall
+[1788377553]  sidestep -60 res=wall
+[1788377554] GOALNAV d=1.13 res=wall
+[1788377554]  sidestep 60 res=wall
+[1788377555]  sidestep -60 res=wall
+[1788377556] GOALNAV d=1.13 res=wall
+[1788377557]  sidestep 60 res=wall
+[1788377558]  sidestep -60 res=wall
+[1788377559] GOALNAV d=1.13 res=wall
+[1788377559]  sidestep 60 res=wall
+[1788377560]  sidestep -60 res=wall
+[1788377560] STOP FILE
+[1788377568] restored pose -0.06573706903966425,0.2252788475990452
+[1788377568] DFS START
+[1788377569] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377569]  penalize (2, 1)
+[1788377569] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377569]  penalize (2, 1)
+[1788377570] GOALBFS d=1.13 path=15 wp=(4, -1) res=bump
+[1788377570]  penalize (2, 1)
+[1788377570] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377570]  penalize (2, 1)
+[1788377570] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377570]  penalize (2, 1)
+[1788377570] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377570]  penalize (2, 1)
+[1788377570] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377570]  penalize (2, 1)
+[1788377570] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377570]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377571] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377571]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377572] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377572]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377573] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377573]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377574] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377574]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377575] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377575]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377576] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377576]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377577] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377577]  penalize (2, 1)
+[1788377578] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377578]  penalize (2, 1)
+[1788377578] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377578]  penalize (2, 1)
+[1788377578] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377578]  penalize (2, 1)
+[1788377578] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377578]  penalize (2, 1)
+[1788377578] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377578]  penalize (2, 1)
+[1788377578] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377578]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377579] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377579]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377580] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377580]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377581] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377581]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377582] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377582]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377583] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377583]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377584] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377584]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377585] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377585]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377586] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377586]  penalize (2, 1)
+[1788377587] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377587]  penalize (2, 1)
+[1788377587] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377587]  penalize (2, 1)
+[1788377587] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377587]  penalize (2, 1)
+[1788377587] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377587]  penalize (2, 1)
+[1788377587] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377587]  penalize (2, 1)
+[1788377587] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377587]  penalize (2, 1)
+[1788377588] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377588]  penalize (2, 1)
+[1788377588] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377588]  penalize (2, 1)
+[1788377588] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377588]  penalize (2, 1)
+[1788377588] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377588]  penalize (2, 1)
+[1788377588] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377588]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377589] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377589]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377590] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377590]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377591] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377591]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377592] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377592]  penalize (2, 1)
+[1788377593] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377593]  penalize (2, 1)
+[1788377593] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377593]  penalize (2, 1)
+[1788377593] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377593]  penalize (2, 1)
+[1788377593] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377593]  penalize (2, 1)
+[1788377593] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377593]  penalize (2, 1)
+[1788377593] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377593]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377594] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377594]  penalize (2, 1)
+[1788377595] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377595]  penalize (2, 1)
+[1788377595] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377595]  penalize (2, 1)
+[1788377595] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377595]  penalize (2, 1)
+[1788377595] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377595]  penalize (2, 1)
+[1788377595] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377595]  penalize (2, 1)
+[1788377595] GOALBFS d=1.13 path=15 wp=(4, -1) res=wall
+[1788377595]  penalize (2, 0)
+[1788377596] GOALBFS d=1.11 path=15 wp=(3, -2) res=wall
+[1788377596]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377597] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377597]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377598] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377598]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377599] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377599]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377600] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377600]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377601] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377601]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377602] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377602]  penalize (2, -1)
+[1788377603] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377603]  penalize (2, -1)
+[1788377603] GOALBFS d=1.04 path=14 wp=(3, -3) res=wall
+[1788377603]  penalize (2, -1)
+[1788377603] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377603]  penalize (2, -1)
+[1788377603] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377603]  penalize (2, -1)
+[1788377603] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377603]  penalize (2, -1)
+[1788377603] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377603]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377604] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377604]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377605] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377605]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377606] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377606]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377607] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377607]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377608] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377608]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377609] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377609]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377610] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377610]  penalize (2, -1)
+[1788377611] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377611] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377611] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377611] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377611] GOALBFS d=1.02 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377611] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377611] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377611]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377612] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377612]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377613] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377613]  penalize (2, -1)
+[1788377614] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377614]  penalize (2, -1)
+[1788377614] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377614]  penalize (2, -1)
+[1788377614] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377614]  penalize (2, -1)
+[1788377614] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377614]  penalize (2, -1)
+[1788377614] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377614]  penalize (2, -1)
+[1788377614] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377614]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377615] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377615]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377616] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377616]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377617] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377617]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377618] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377618]  penalize (2, -1)
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377619] !! RX: B1->B2: NEW PLAN. You GO TO GOAL (x=0.4 y=-0.8) and STAY THERE 5 minutes. I am homing to you via d11 sensor. When I arrive we BOTH WIN (both at goal). Please HOLD at goal. ACK!
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377619] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377619]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377620] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377620]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377621] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377621]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377622] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377622]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377623] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377623]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377624] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377624]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377625] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377625]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377626] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377626]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377627] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377627]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377628] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377628]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377629] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377629]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377630] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377630]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377631] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377631]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377632] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377632]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377633] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377633]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377634] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377634]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377635] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377635]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377636] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377636]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377637] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377637]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377638] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377638]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377639] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377639]  penalize (2, -1)
+[1788377640] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377640]  penalize (2, -1)
+[1788377640] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377640]  penalize (2, -1)
+[1788377640] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377640]  penalize (2, -1)
+[1788377640] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377640]  penalize (2, -1)
+[1788377640] STOP FILE
+[1788377644] restored pose 0.015438818970223086,0.1324119547857895
+[1788377644] DFS START
+[1788377644] GOALBFS d=1.01 path=13 wp=(4, -3) res=wall
+[1788377644]  penalize (2, -1)
+[1788377646] GOALBFS d=1.01 path=21 wp=(5, 4) res=bump
+[1788377646]  penalize (3, 3)
+[1788377647] GOALBFS d=1.01 path=24 wp=(3, 5) res=wall
+[1788377647]  penalize (2, 4)
+[1788377650] GOALBFS d=1.04 path=30 wp=(-5, 5) res=bump
+[1788377650]  penalize (-3, 4)
+[1788377655] GOALBFS d=1.12 path=31 wp=(1, 8) res=ok
+[1788377657] GOALBFS d=1.50 path=28 wp=(5, 3) res=bump
+[1788377657]  penalize (3, 5)
+[1788377658] GOALBFS d=1.52 path=27 wp=(5, 10) res=bump
+[1788377658]  penalize (3, 9)
+[1788377663] GOALBFS d=1.56 path=29 wp=(-5, 4) res=ok
+[1788377666] GOALBFS d=1.49 path=23 wp=(-5, -1) res=ok
+[1788377669] GOALBFS d=1.22 path=17 wp=(-1, -4) res=bump
+[1788377669]  penalize (-2, -3)
+[1788377670] GOALBFS d=1.04 path=15 wp=(0, -5) res=bump
+[1788377670]  penalize (-2, -3)
+[1788377673] GOALBFS d=1.07 path=16 wp=(-1, -5) res=ok
+[1788377673] SENSOR d0=0 d5=1 at (-0.19,-0.38)
+[1788377674] GOALBFS d=0.72 path=10 wp=(4, -4) res=bump
+[1788377674]  penalize (1, -4)
+[1788377675] GOALBFS d=0.72 path=10 wp=(4, -6) res=bump
+[1788377675]  penalize (0, -5)
+[1788377680] GOALBFS d=0.77 path=11 wp=(2, -7) res=ok
+[1788377937] DFS START
+[1788377937] S#1 (0.00,0.00,149) -> beam5 abs=264 clear=1.92 new=True
+[1788377942]   res=ok
+[1788377942] NO CAND (idle=1) spin 75
+[1788377943] S#3 (-0.06,-0.49,342) -> beam6 abs=117 clear=1.78 new=True
+[1788377948]   res=ok
+[1788377948] NO CAND (idle=1) spin 75
+[1788377949] S#5 (-0.28,-0.05,188) -> beam13 abs=124 clear=1.05 new=True
+[1788377953]   res=ok
+[1788377954] STOP FILE

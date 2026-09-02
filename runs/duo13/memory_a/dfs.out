@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/bot/src/dfs.py", line 194, in <module>
+    try: d.run()
+         ^^^^^^^
+  File "/bot/src/dfs.py", line 184, in run
+    res=self.goto(tx,ty)
+        ^^^^^^^^^^^^^^^^
+  File "/bot/src/dfs.py", line 84, in goto
+    err=wrap(ang-h)
+             ~~~^~
+TypeError: unsupported operand type(s) for -: 'float' and 'NoneType'
+  File "/bot/src/dfs.py", line 229
+    if self.zone and (time.time()-self.zonetime)<30:
+SyntaxError: expected 'except' or 'finally' block

@@ -1,0 +1,31 @@
+CHASE2 start d11= 0.359
+t=0 base=0.363 best=0.355 ang=270 res=ok stall=1
+t=13 base=0.359 best=0.384 ang=270 res=ok stall=2
+t=27 base=0.360 best=0.366 ang=270 res=ok stall=3
+stall - random jump
+t=39 base=0.355 best=0.357 ang=135 res=wall stall=0
+t=50 base=0.322 best=0.334 ang=135 res=wall stall=1
+t=61 base=0.310 best=0.333 ang=315 res=ok stall=2
+t=73 base=0.372 best=0.431 ang=225 res=ok stall=0
+t=85 base=0.455 best=0.572 ang=135 res=wall stall=0
+t=102 base=0.596 best=0.626 ang=225 res=ok stall=0
+t=116 base=0.619 best=0.630 ang=225 res=ok stall=0
+t=130 base=0.653 best=0.659 ang=225 res=ok stall=0
+t=143 base=0.671 best=0.672 ang=225 res=ok stall=1
+t=157 base=0.665 best=0.667 ang=315 res=ok stall=3
+stall - random jump
+t=172 base=0.645 best=0.639 ang=180 res=ok stall=0
+t=184 base=0.657 best=0.653 ang=180 res=ok stall=2
+stall - random jump
+t=201 base=0.628 best=0.626 ang=315 res=wall stall=0
+t=215 base=0.591 best=0.609 ang=135 res=ok stall=1
+t=227 base=0.518 best=0.534 ang=225 res=ok stall=2
+CHASE2 start d11= 0.5315000000000001
+t=0 base=0.532 best=0.517 ang=0 res=wall stall=1
+t=15 base=0.444 best=0.447 ang=0 res=wall stall=3
+stall - random jump
+t=27 base=0.379 best=0.390 ang=315 res=wall stall=0
+t=40 base=0.352 best=0.351 ang=315 res=wall stall=2
+stall - random jump
+t=54 base=0.321 best=0.319 ang=90 res=ok stall=0
+t=66 base=0.278 best=0.298 ang=270 res=ok stall=1

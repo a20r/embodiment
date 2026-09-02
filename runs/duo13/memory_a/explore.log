@@ -1,0 +1,360 @@
+[1788375443] EXPLORER v2 START
+[1788375443] S#1 (-0.15,-0.15,15) goal=0 here=0 d0=0 d5=0 f=0.35
+[1788375443] GO beam5 abs=128 clear=2.18 unk=0 blocked=False
+[1788375444] BUMP -> nogo oct3 at (0,0)
+[1788375444] S#2 (-0.15,-0.23,121) goal=0 here=0 d0=0 d5=0 f=2.19
+[1788375444] NOGO at (0,0) oct4
+[1788375444] GO beam3 abs=188 clear=1.31 unk=0 blocked=True
+[1788375445] S#3 (-0.10,-0.23,182) goal=0 here=0 d0=0 d5=0 f=1.29
+[1788375445] NOGO at (0,0) oct2
+[1788375445] GO beam12 abs=92 clear=0.79 unk=0 blocked=True
+[1788375448] S#4 (-0.19,0.09,87) goal=0 here=0 d0=0 d5=0 f=0.43
+[1788375448] GO beam2 abs=132 clear=2.05 unk=0 blocked=False
+[1788375449] S#5 (-0.20,0.11,130) goal=0 here=0 d0=0 d5=0 f=-1.00
+[1788375449] GO beam0 abs=130 clear=1.89 unk=15 blocked=False
+[1788375449] S#6 (-0.25,0.11,130) goal=0 here=0 d0=0 d5=0 f=1.91
+[1788375449] GO beam0 abs=130 clear=1.91 unk=0 blocked=False
+[1788375449] S#7 (-0.30,0.11,129) goal=0 here=0 d0=0 d5=0 f=1.89
+[1788375449] GO beam0 abs=129 clear=1.91 unk=0 blocked=False
+[1788375450] S#8 (-0.30,0.11,127) goal=0 here=0 d0=0 d5=0 f=1.81
+[1788375450] GO beam0 abs=127 clear=1.81 unk=0 blocked=False
+[1788375450] S#9 (-0.30,0.06,127) goal=0 here=0 d0=0 d5=0 f=1.79
+[1788375450] GO beam0 abs=127 clear=1.83 unk=0 blocked=False
+[1788375450] S#10 (-0.35,0.06,127) goal=0 here=0 d0=0 d5=0 f=1.81
+[1788375450] GO beam0 abs=127 clear=1.80 unk=0 blocked=False
+[1788375451] STUCK - big spin
+[1788375452] S#11 (-0.35,0.11,244) goal=0 here=0 d0=0 d5=0 f=0.65
+[1788375452] GO beam11 abs=131 clear=1.94 unk=0 blocked=False
+[1788375453] S#12 (-0.35,0.11,135) goal=0 here=0 d0=0 d5=0 f=2.02
+[1788375453] GO beam0 abs=135 clear=2.03 unk=0 blocked=False
+[1788375453] S#13 (-0.20,0.11,134) goal=0 here=0 d0=0 d5=0 f=2.02
+[1788375453] NOGO at (0,0) oct5
+[1788375453] GO beam4 abs=224 clear=0.73 unk=0 blocked=True
+[1788375454] S#14 (-0.35,0.07,221) goal=0 here=0 d0=0 d5= f=0.91
+[1788375454] GO beam12 abs=131 clear=1.89 unk=0 blocked=False
+[1788375455] S#15 (-0.35,0.07,134) goal=0 here=0 d0=0 d5=0 f=2.02
+[1788375455] NOGO at (-1,0) oct3
+[1788375455] GO beam0 abs=134 clear=2.02 unk=0 blocked=True
+[1788375456] S#16 (-0.35,0.07,136) goal=0 here=0 d0=0 d5=0 f=2.02
+[1788375456] NOGO at (-1,0) oct3
+[1788375456] GO beam0 abs=136 clear=2.03 unk=0 blocked=True
+[1788375456] STUCK - big spin
+[1788375457] S#17 (-0.35,0.08,252) goal=0 here=0 d0=0 d5=0 f=0.57
+[1788375457] NOGO at (-1,0) oct5
+[1788375457] GO beam14 abs=207 clear=1.45 unk=0 blocked=True
+[1788375458] S#18 (-0.30,0.08,208) goal=0 here=0 d0=0 d5=0 f=1.44
+[1788375458] NOGO at (-1,0) oct4
+[1788375458] GO beam14 abs=164 clear=0.77 unk=0 blocked=True
+[1788375458] S#19 (-0.30,0.03,164) goal=0 here=0 d0=0 d5=0 f=0.78
+[1788375459] NOGO at (-1,0) oct5
+[1788375459] GO beam2 abs=209 clear=1.45 unk=0 blocked=True
+[1788375460] S#20 (-0.35,0.05,206) goal=0 here=0 d0=0 d5=0 f=1.35
+[1788375460] NOGO at (-1,0) oct7
+[1788375460] GO beam4 abs=296 clear=0.61 unk=0 blocked=True
+[1788375461] S#21 (-0.30,0.00,294) goal=0 here=0 d0=0 d5= f=0.60
+[1788375461] NOGO at (-1,0) oct6
+[1788375461] GO beam14 abs=248 clear=0.59 unk=0 blocked=True
+[1788375462] S#22 (-0.39,-0.09,249) goal=0 here=0 d0=0 d5=0 f=0.48
+[1788375462] NOGO at (-1,0) oct3
+[1788375462] GO beam11 abs=136 clear=2.17 unk=0 blocked=True
+[1788375465] S#23 (-0.61,0.15,133) goal=0 here=0 d0=0 d5=0 f=1.80
+[1788375465] NOGO at (-1,0) oct2
+[1788375465] GO beam15 abs=110 clear=0.90 unk=0 blocked=True
+[1788375467] S#24 (-0.71,0.47,106) goal=0 here=0 d0=0 d5=0 f=0.44
+[1788375467] NOGO at (-1,1) oct3
+[1788375467] GO beam1 abs=128 clear=1.25 unk=0 blocked=True
+[1788375468] S#25 (-0.73,0.44,127) goal=0 here=0 d0=0 d5=0 f=1.23
+[1788375468] NOGO at (-1,1) oct7
+[1788375468] GO beam8 abs=307 clear=1.11 unk=0 blocked=True
+[1788375471] S#26 (-0.62,0.38,303) goal=0 here=0 d0=0 d5=0 f=1.08
+[1788375471] NOGO at (-1,1) oct0
+[1788375471] GO beam2 abs=348 clear=0.63 unk=0 blocked=True
+[1788375472] S#27 (-0.67,0.38,347) goal=0 here=0 d0=0 d5=0 f=0.68
+[1788375472] NOGO at (-1,1) oct4
+[1788375472] GO beam8 abs=167 clear=0.89 unk=0 blocked=True
+[1788375473] FATAL TypeError("unsupported operand type(s) for +: 'NoneType' and 'float'")
+Traceback (most recent call last):
+  File "/bot/src/explore.py", line 208, in <module>
+    try: b.run()
+         ^^^^^^^
+  File "/bot/src/explore.py", line 171, in run
+    nx,ny=self.match(x,y,th,rg or [])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore.py", line 64, in match
+    a=math.radians(th+k*22.5)
+                   ~~^~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
+[1788375538] EXPLORER v2 START
+[1788375538] S#1 (-0.15,-0.15,166) goal=0 here=0 d0=0 d5=0 f=0.48
+[1788375538] NOGO at (0,0) oct3
+[1788375538] GO beam14 abs=121 clear=1.28 unk=0 blocked=True
+[1788375540] S#2 (-0.24,-0.04,119) goal=0 here=0 d0=0 d5=0 f=1.13
+[1788375540] NOGO at (0,0) oct7
+[1788375540] GO beam8 abs=299 clear=1.16 unk=0 blocked=True
+[1788375543] S#3 (-0.11,-0.22,294) goal=0 here=0 d0=0 d5= f=0.96
+[1788375543] GO beam9 abs=136 clear=1.70 unk=0 blocked=False
+[1788375549] S#4 (-0.80,0.56,134) goal=0 here=0 d0=0 d5=0 f=0.54
+[1788375549] GO beam2 abs=179 clear=0.63 unk=28 blocked=False
+[1788375551] S#5 (-1.08,0.56,179) goal=0 here=0 d0=0 d5=0 f=0.44
+[1788375551] NOGO at (-2,1) oct6
+[1788375551] GO beam4 abs=269 clear=2.64 unk=0 blocked=True
+[1788375552] BUMP -> nogo oct6 at (-2,1)
+[1788375553] S#6 (-1.08,0.60,268) goal=0 here=0 d0=0 d5=0 f=1.41
+[1788375553] NOGO at (-2,1) oct7
+[1788375553] GO beam2 abs=313 clear=2.21 unk=0 blocked=True
+[1788375556] S#7 (-1.23,0.70,308) goal=0 here=0 d0=0 d5=0 f=1.84
+[1788375556] NOGO at (-2,1) oct7
+[1788375556] GO beam0 abs=308 clear=1.86 unk=0 blocked=True
+[1788375556] S#8 (-1.23,0.70,307) goal=0 here=0 d0=0 d5=0 f=1.72
+[1788375556] NOGO at (-2,1) oct3
+[1788375556] GO beam9 abs=149 clear=0.89 unk=0 blocked=True
+[1788375558] BUMP -> nogo oct3 at (-2,1)
+[1788375558] S#9 (-1.21,0.67,154) goal=0 here=0 d0=0 d5=0 f=0.33
+[1788375558] NOGO at (-2,1) oct0
+[1788375558] GO beam9 abs=357 clear=0.68 unk=0 blocked=True
+[1788375559] S#10 (-1.25,0.62,5) goal=0 here=0 d0=0 d5=0 f=0.72
+[1788375559] NOGO at (-3,1) oct7
+[1788375559] GO beam14 abs=320 clear=1.58 unk=0 blocked=True
+[1788375562] S#11 (-0.97,0.47,320) goal=0 here=0 d0=0 d5=0 f=1.29
+[1788375562] NOGO at (-2,1) oct4
+[1788375562] GO beam10 abs=185 clear=0.56 unk=0 blocked=True
+[1788375563] STUCK - big spin
+[1788375564] S#12 (-0.97,0.43,80) goal=0 here=0 d0=0 d5=0 f=0.34
+[1788375564] NOGO at (-2,1) oct2
+[1788375564] GO beam1 abs=103 clear=0.89 unk=0 blocked=True
+[1788375565] S#13 (-0.92,0.43,102) goal=0 here=0 d0=0 d5=0 f=0.80
+[1788375565] NOGO at (-2,1) oct1
+[1788375565] GO beam13 abs=34 clear=0.56 unk=0 blocked=True
+[1788375566] S#14 (-0.96,0.43,36) goal=0 here=0 d0=0 d5= f=0.55
+[1788375566] NOGO at (-2,1) oct2
+[1788375566] GO beam3 abs=104 clear=0.83 unk=0 blocked=True
+[1788375567] S#15 (-0.96,0.43,100) goal=0 here=0 d0=0 d5=0 f=0.80
+[1788375567] NOGO at (-2,1) oct1
+[1788375567] GO beam13 abs=32 clear=0.56 unk=0 blocked=True
+[1788375567] S#16 (-1.01,0.43,34) goal=0 here=0 d0=0 d5=0 f=0.57
+[1788375567] NOGO at (-2,1) oct4
+[1788375567] GO beam7 abs=192 clear=0.56 unk=0 blocked=True
+[1788375569] S#17 (-1.06,0.43,192) goal=None here=None d0=0 d5=0 f=0.56
+[1788375569] NOGO at (-2,1) oct7
+[1788375569] GO beam5 abs=305 clear=1.33 unk=0 blocked=True
+[1788375571] STUCK - big spin
+[1788375572] S#18 (-0.84,0.19,310) goal=0 here=0 d0=0 d5=0 f=1.23
+[1788375572] NOGO at (-2,0) oct3
+[1788375572] GO beam8 abs=130 clear=1.39 unk=0 blocked=True
+[1788375576] S#19 (-1.12,0.54,128) goal=0 here=0 d0= d5=0 f=0.93
+[1788375576] NOGO at (-2,1) oct0
+[1788375576] GO beam11 abs=16 clear=0.63 unk=0 blocked=True
+[1788375578] BUMP -> nogo oct0 at (-2,1)
+[1788375578] S#20 (-1.25,0.47,22) goal=0 here=0 d0=0 d5=0 f=0.64
+[1788375578] NOGO at (-2,1) oct7
+[1788375578] GO beam13 abs=314 clear=1.70 unk=0 blocked=True
+[1788375579] S#21 (-1.24,0.51,319) goal=0 here=0 d0=0 d5=0 f=1.53
+[1788375579] NOGO at (-2,1) oct2
+[1788375579] GO beam6 abs=94 clear=0.77 unk=0 blocked=True
+[1788375581] S#22 (-1.26,0.79,93) goal=0 here=0 d0=0 d5=0 f=0.50
+[1788375581] NOGO at (-3,2) oct7
+[1788375581] GO beam10 abs=318 clear=1.67 unk=0 blocked=True
+[1788375584] S#23 (-0.93,0.62,315) goal=0 here=0 d0=0 d5=0 f=1.35
+[1788375584] NOGO at (-2,1) oct5
+[1788375584] GO beam11 abs=203 clear=0.60 unk=0 blocked=True
+[1788375586] S#24 (-1.14,0.59,204) goal=0 here=0 d0=0 d5=0 f=0.53
+[1788375586] NOGO at (-2,1) oct5
+[1788375586] GO beam0 abs=204 clear=0.52 unk=0 blocked=True
+[1788375586] S#25 (-1.14,0.59,203) goal=0 here=0 d0=0 d5=0 f=0.54
+[1788375586] NOGO at (-2,1) oct5
+[1788375586] GO beam0 abs=203 clear=0.52 unk=0 blocked=True
+[1788375587] S#26 (-1.19,0.54,207) goal=0 here=0 d0=0 d5=0 f=0.54
+[1788375587] NOGO at (-2,1) oct4
+[1788375587] GO beam14 abs=162 clear=0.52 unk=0 blocked=True
+[1788375588] S#27 (-1.19,0.64,164) goal=0 here=0 d0=0 d5=0 f=0.50
+[1788375588] NOGO at (-2,1) oct3
+[1788375588] GO beam15 abs=141 clear=0.99 unk=0 blocked=True
+[1788375588] S#28 (-1.07,0.67,140) goal=0 here=0 d0=0 d5=0 f=1.10
+[1788375588] NOGO at (-2,1) oct6
+[1788375588] GO beam6 abs=276 clear=0.89 unk=0 blocked=True
+[1788375590] S#29 (-1.22,0.52,275) goal=0 here=0 d0=0 d5=0 f=0.39
+[1788375590] NOGO at (-2,1) oct7
+[1788375590] GO beam2 abs=320 clear=1.43 unk=0 blocked=True
+[1788375591] S#30 (-1.10,0.56,319) goal=0 here=0 d0=0 d5=0 f=1.35
+[1788375591] NOGO at (-2,1) oct5
+[1788375591] GO beam11 abs=207 clear=0.60 unk=0 blocked=True
+[1788375592] S#31 (-1.05,0.61,206) goal=0 here=0 d0=0 d5=0 f=0.56
+[1788375592] NOGO at (-2,1) oct2
+[1788375592] GO beam11 abs=94 clear=0.68 unk=0 blocked=True
+[1788375594] BUMP -> nogo oct2 at (-2,1)
+[1788375594] S#32 (-1.09,0.43,98) goal=0 here=0 d0=0 d5=0 f=0.79
+[1788375594] NOGO at (-2,1) oct1
+[1788375594] GO beam13 abs=31 clear=0.56 unk=0 blocked=True
+[1788375595] STUCK - big spin
+[1788375596] S#33 (-1.04,0.43,220) goal=0 here=0 d0=0 d5=0 f=0.39
+[1788375596] NOGO at (-2,1) oct4
+[1788375596] GO beam14 abs=175 clear=0.58 unk=0 blocked=True
+[1788375598] S#34 (-1.24,0.49,173) goal=0 here=0 d0=0 d5=0 f=0.43
+[1788375598] NOGO at (-2,1) oct1
+[1788375598] GO beam10 abs=38 clear=0.52 unk=0 blocked=True
+[1788375599] S#35 (-1.24,0.39,42) goal=0 here=0 d0=0 d5=0 f=0.51
+[1788375599] NOGO at (-2,1) oct3
+[1788375599] GO beam4 abs=132 clear=1.02 unk=0 blocked=True
+[1788375601] S#36 (-1.33,0.55,129) goal=0 here=0 d0=0 d5=0 f=0.93
+[1788375601] NOGO at (-3,1) oct3
+[1788375601] GO beam0 abs=129 clear=0.95 unk=0 blocked=True
+[1788375601] S#37 (-1.33,0.50,130) goal=0 here=0 d0=0 d5=0 f=0.94
+[1788375601] NOGO at (-3,1) oct7
+[1788375601] GO beam8 abs=310 clear=1.64 unk=0 blocked=True
+[1788375604] S#38 (-0.97,0.16,308) goal=0 here=0 d0=0 d5=0 f=1.14
+[1788375604] NOGO at (-2,0) oct7
+[1788375604] GO beam0 abs=308 clear=1.12 unk=0 blocked=True
+[1788375605] S#39 (-1.02,0.16,308) goal=0 here=0 d0=0 d5=0 f=1.09
+[1788375605] NOGO at (-2,0) oct2
+[1788375605] GO beam7 abs=106 clear=1.06 unk=0 blocked=True
+[1788375607] S#40 (-1.10,0.40,106) goal=0 here=0 d0=0 d5=0 f=0.98
+[1788375607] NOGO at (-2,1) oct4
+[1788375607] GO beam3 abs=174 clear=0.62 unk=0 blocked=True
+[1788375608] BUMP -> nogo oct4 at (-2,1)
+[1788375608] S#41 (-1.01,0.24,175) goal=0 here=0 d0=0 d5=0 f=0.71
+[1788375608] NOGO at (-2,0) oct4
+[1788375608] GO beam0 abs=175 clear=0.70 unk=0 blocked=True
+[1788375609] BUMP -> nogo oct4 at (-2,0)
+[1788375609] S#42 (-0.88,0.33,175) goal=0 here=0 d0=0 d5=0 f=0.81
+[1788375609] NOGO at (-2,1) oct5
+[1788375609] GO beam3 abs=243 clear=0.61 unk=0 blocked=True
+[1788375610] S#43 (-0.87,0.28,238) goal=0 here=0 d0=0 d5=0 f=0.58
+[1788375610] NOGO at (-2,1) oct6
+[1788375610] GO beam2 abs=283 clear=0.57 unk=0 blocked=True
+[1788375611] S#44 (-0.91,0.18,281) goal=0 here=0 d0=0 d5=0 f=0.52
+[1788375611] NOGO at (-2,0) oct0
+[1788375611] GO beam3 abs=348 clear=0.69 unk=0 blocked=True
+[1788375612] BUMP -> nogo oct0 at (-2,0)
+[1788375613] S#45 (-1.00,0.14,350) goal=0 here=0 d0=0 d5=0 f=0.76
+[1788375613] NOGO at (-2,0) oct1
+[1788375613] GO beam3 abs=57 clear=0.57 unk=0 blocked=True
+[1788375614] BUMP -> nogo oct1 at (-2,0)
+[1788375614] S#46 (-1.09,0.07,61) goal=0 here=0 d0=0 d5=0 f=0.68
+[1788375614] NOGO at (-2,0) oct3
+[1788375614] GO beam3 abs=129 clear=1.40 unk=0 blocked=True
+[1788375618] S#47 (-1.33,0.48,129) goal=0 here=0 d0=0 d5=0 f=0.95
+[1788375618] NOGO at (-3,1) oct2
+[1788375618] GO beam15 abs=106 clear=0.76 unk=0 blocked=True
+[1788375620] S#48 (-1.26,0.70,106) goal=0 here=0 d0=0 d5=0 f=0.47
+[1788375620] NOGO at (-3,1) oct4
+[1788375620] GO beam3 abs=173 clear=0.82 unk=0 blocked=True
+[1788375621] S#49 (-1.21,0.85,169) goal=None here=None d0=0 d5=0 f=0.81
+[1788375621] NOGO at (-2,2) oct7
+[1788375621] GO beam6 abs=304 clear=1.92 unk=0 blocked=True
+[1788375623] S#50 (-1.25,0.54,302) goal=0 here=0 d0=0 d5=0 f=1.61
+[1788375623] NOGO at (-3,1) oct0
+[1788375623] GO beam2 abs=347 clear=0.57 unk=0 blocked=True
+[1788375625] S#51 (-1.17,0.51,346) goal=0 here=0 d0=0 d5=0 f=0.41
+[1788375625] NOGO at (-2,1) oct7
+[1788375625] GO beam14 abs=301 clear=1.61 unk=0 blocked=True
+[1788375628] S#52 (-0.94,0.19,301) goal=0 here=0 d0=0 d5= f=0.95
+[1788375628] NOGO at (-2,0) oct5
+[1788375628] GO beam13 abs=233 clear=0.51 unk=0 blocked=True
+[1788375629] S#53 (-0.99,0.24,235) goal=0 here=0 d0=0 d5=0 f=0.50
+[1788375629] NOGO at (-2,0) oct7
+[1788375629] GO beam3 abs=303 clear=0.97 unk=0 blocked=True
+[1788375630] S#54 (-1.04,0.24,300) goal=0 here=0 d0=0 d5=0 f=0.98
+[1788375630] NOGO at (-2,0) oct2
+[1788375630] GO beam6 abs=75 clear=0.64 unk=0 blocked=True
+[1788375632] BUMP -> nogo oct2 at (-2,0)
+[1788375632] S#55 (-0.92,0.01,74) goal=0 here=0 d0=0 d5=0 f=0.71
+[1788375632] NOGO at (-2,0) oct3
+[1788375632] GO beam2 abs=119 clear=1.42 unk=0 blocked=True
+[1788375634] S#56 (-0.99,0.23,119) goal=0 here=0 d0=0 d5=0 f=1.08
+[1788375634] NOGO at (-2,0) oct6
+[1788375634] GO beam7 abs=276 clear=0.53 unk=0 blocked=True
+[1788375636] S#57 (-0.99,0.18,276) goal=0 here=0 d0=0 d5=0 f=0.44
+[1788375636] NOGO at (-2,0) oct6
+[1788375636] GO beam15 abs=253 clear=0.51 unk=0 blocked=True
+[1788375636] S#58 (-1.04,0.12,256) goal=0 here=0 d0=0 d5=0 f=0.51
+[1788375636] NOGO at (-2,0) oct7
+[1788375636] GO beam2 abs=301 clear=1.10 unk=0 blocked=True
+[1788375637] STUCK - big spin
+[1788375638] S#59 (-1.09,0.12,14) goal=0 here=0 d0=0 d5=0 f=0.27
+[1788375638] NOGO at (-2,0) oct3
+[1788375638] GO beam5 abs=127 clear=1.34 unk=0 blocked=True
+[1788375643] S#60 (-1.45,0.64,126) goal=0 here=0 d0=0 d5=0 f=0.57
+[1788375643] NOGO at (-3,1) oct6
+[1788375643] GO beam7 abs=284 clear=0.56 unk=0 blocked=True
+[1788375645] S#61 (-1.38,0.58,284) goal=0 here=0 d0=0 d5=0 f=0.45
+[1788375645] NOGO at (-3,1) oct5
+[1788375645] GO beam14 abs=239 clear=0.53 unk=0 blocked=True
+[1788375646] S#62 (-1.43,0.63,240) goal=0 here=0 d0=0 d5=0 f=0.48
+[1788375646] NOGO at (-3,1) oct7
+[1788375646] GO beam3 abs=308 clear=1.81 unk=0 blocked=True
+[1788375648] S#63 (-1.39,0.59,307) goal=0 here=0 d0=0 d5=0 f=1.66
+[1788375648] NOGO at (-3,1) oct3
+[1788375648] GO beam9 abs=150 clear=0.97 unk=0 blocked=True
+[1788375649] S#64 (-1.40,0.54,150) goal=0 here=0 d0=0 d5=0 f=0.96
+[1788375649] NOGO at (-3,1) oct0
+[1788375649] GO beam9 abs=353 clear=0.67 unk=0 blocked=True
+[1788375651] S#65 (-1.44,0.54,351) goal=0 here=0 d0=0 d5=0 f=0.69
+[1788375651] NOGO at (-3,1) oct2
+[1788375651] GO beam5 abs=104 clear=0.63 unk=0 blocked=True
+[1788375653] S#66 (-1.47,0.79,101) goal=0 here=0 d0=0 d5=0 f=0.47
+[1788375653] NOGO at (-3,2) oct7
+[1788375653] GO beam9 abs=303 clear=1.78 unk=0 blocked=True
+[1788375655] STUCK - big spin
+[1788375656] S#67 (-1.61,0.56,224) goal=0 here=0 d0=0 d5=0 f=0.56
+[1788375656] NOGO at (-3,1) oct6
+[1788375656] GO beam3 abs=291 clear=0.94 unk=0 blocked=True
+[1788375657] S#68 (-1.61,0.51,286) goal=0 here=0 d0=0 d5=0 f=0.92
+[1788375657] NOGO at (-3,1) oct5
+[1788375657] GO beam13 abs=218 clear=0.59 unk=0 blocked=True
+[1788375658] S#69 (-1.61,0.51,222) goal=0 here=0 d0=0 d5=0 f=0.58
+[1788375658] NOGO at (-3,1) oct3
+[1788375658] GO beam13 abs=154 clear=1.02 unk=0 blocked=True
+[1788375659] S#70 (-1.61,0.51,157) goal=0 here=0 d0=0 d5=0 f=1.02
+[1788375659] NOGO at (-3,1) oct6
+[1788375659] GO beam6 abs=292 clear=0.92 unk=0 blocked=True
+[1788375661] S#71 (-1.62,0.52,290) goal=0 here=0 d0=0 d5=0 f=0.94
+[1788375661] NOGO at (-3,1) oct7
+[1788375661] GO beam1 abs=312 clear=1.55 unk=0 blocked=True
+[1788375662] S#72 (-1.48,0.42,306) goal=0 here=0 d0=0 d5=0 f=1.36
+[1788375662] NOGO at (-3,1) oct4
+[1788375662] GO beam11 abs=194 clear=0.63 unk=0 blocked=True
+[1788375664] STUCK - big spin
+[1788375665] S#73 (-1.42,0.38,70) goal=0 here=0 d0=0 d5=0 f=0.28
+[1788375665] NOGO at (-3,1) oct1
+[1788375665] GO beam14 abs=25 clear=0.53 unk=0 blocked=True
+[1788375666] S#74 (-1.27,0.38,23) goal=0 here=0 d0=0 d5=0 f=0.52
+[1788375666] NOGO at (-3,1) oct1
+[1788375666] GO beam0 abs=23 clear=0.50 unk=0 blocked=True
+[1788375666] S#75 (-1.42,0.33,26) goal=0 here=0 d0=0 d5=0 f=0.51
+[1788375666] NOGO at (-3,1) oct4
+[1788375666] GO beam6 abs=161 clear=0.62 unk=0 blocked=True
+[1788375668] S#76 (-1.46,0.40,156) goal=0 here=0 d0=0 d5=0 f=0.45
+[1788375669] NOGO at (-3,1) oct2
+[1788375669] GO beam14 abs=111 clear=0.83 unk=0 blocked=True
+[1788375671] S#77 (-1.47,0.69,111) goal=0 here=0 d0=0 d5=0 f=0.44
+[1788375671] NOGO at (-3,1) oct5
+[1788375671] GO beam6 abs=246 clear=0.64 unk=0 blocked=True
+[1788375672] S#78 (-1.47,0.65,248) goal=0 here=0 d0=0 d5=0 f=0.62
+[1788375672] NOGO at (-3,1) oct0
+[1788375672] GO beam4 abs=338 clear=0.74 unk=0 blocked=True
+[1788375674] BUMP -> nogo oct0 at (-3,1)
+[1788375674] S#79 (-1.55,0.68,338) goal=0 here=0 d0=0 d5=0 f=0.84
+[1788375674] NOGO at (-3,1) oct7
+[1788375674] GO beam15 abs=315 clear=1.78 unk=0 blocked=True
+[1788375677] S#80 (-1.26,0.36,308) goal=0 here=0 d0=0 d5=0 f=1.34
+[1788375677] NOGO at (-3,1) oct3
+[1788375677] GO beam8 abs=128 clear=1.07 unk=0 blocked=True
+[1788375681] S#81 (-1.46,0.82,129) goal=0 here=0 d0=0 d5=0 f=0.54
+[1788375681] NOGO at (-3,2) oct4
+[1788375681] GO beam2 abs=174 clear=0.82 unk=0 blocked=True
+[1788375682] S#82 (-1.51,0.72,171) goal=0 here=0 d0=0 d5=0 f=0.83
+[1788375682] NOGO at (-3,1) oct4
+[1788375682] GO beam0 abs=171 clear=0.84 unk=0 blocked=True
+[1788375682] S#83 (-1.61,0.77,172) goal=0 here=0 d0=0 d5=0 f=0.82
+[1788375682] NOGO at (-3,2) oct3
+[1788375682] GO beam15 abs=149 clear=0.82 unk=0 blocked=True
+[1788375684] S#84 (-1.61,0.76,149) goal=0 here=0 d0=0 d5=0 f=0.68
+[1788375684] NOGO at (-3,2) oct5
+[1788375684] GO beam3 abs=217 clear=0.80 unk=0 blocked=True
+[1788375685] S#85 (-1.61,0.71,216) goal=0 here=0 d0=0 d5=0 f=0.81
+[1788375685] NOGO at (-3,1) oct5
+[1788375685] GO beam0 abs=216 clear=0.77 unk=0 blocked=True
+[1788375685] S#86 (-1.61,0.76,214) goal=0 here=0 d0=0 d5=0 f=0.77
+[1788375685] NOGO at (-3,2) oct6
+[1788375685] GO beam3 abs=282 clear=0.74 unk=0 blocked=True
+[1788375686] STOP FILE
