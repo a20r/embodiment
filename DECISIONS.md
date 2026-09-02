@@ -468,3 +468,27 @@ Comparability caveat for the paper: echoed reasoning sits inside
 prompt_tokens, so K3 reaches `max_context_tokens` and
 `max_total_output_tokens` sooner than Claude at the same settings, and
 multi-minute turns mean fewer turns per wallclock hour.
+
+### Z.ai GLM as a first-class provider (zai:), thinking preserved server-side
+
+"Ox Alpha", the stealth model of late August 2026, turned out to be
+Z.ai's glm-5.3-flash - a 320B/18B MoE reasoning model with open
+weights, tool calling, a 1M window and a price forty-fold below Kimi
+K3.  It gets its own PROVIDERS entry rather than riding on `compat:`
+because the endpoint has model-specific settings that must be recorded
+per run: thinking cannot be disabled on 5.3-flash and the API's
+`thinking.clear_thinking` defaults to true, which strips prior
+reasoning_content from the context server-side; the model card
+recommends false, and false is what makes the trace the adapter
+already echoes actually count ("Preserved Thinking" requires the
+client to forward the full historical reasoning_content).  The entry
+sets that via the request's extra_body and model_spec records it.  The
+effort set follows the API reference minus none/minimal (they mean
+"skip thinking", impossible here); the server default max is sent
+explicitly for the same record-keeping reason as kimi.  Z.ai's
+moderation surfaces as finish_reason "sensitive" and maps to refusal.
+Z.ai does not document rate tiers, and there are public reports of
+severe throttling under load, so the same pre-spend probe applies and
+a duo pilot is the way to learn the real concurrency.  Plain JSON
+(no stream) for now: no documented gateway cutoff, and Z.ai's streamed
+tool calls need an extra tool_stream flag.

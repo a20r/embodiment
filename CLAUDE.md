@@ -27,14 +27,16 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   (default 127.0.0.1:8080) against the running daemon.
 - No API key? `--set model=mock:wall-follower` drives the identical
   harness path with a scripted agent.
-- Other providers: `--set model=kimi:<id>[@effort]` / `gemini:<id>` /
-  `openai:<id>` / `compat:<id>` (OpenAI-compatible adapter in
-  `harness/llm.py`; keys from `MOONSHOT_API_KEY` / `GEMINI_API_KEY` /
-  `OPENAI_API_KEY` / `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is
-  `kimi:kimi-k3@max`; its reasoning trace is stored as a thinking block
-  and echoed back verbatim (Moonshot requires it). Token-free check and
-  the gate for any `harness/llm.py` change:
-  `python scripts/llm_compat_check.py` (62 checks).
+- Other providers: `--set model=kimi:<id>[@effort]` / `zai:<id>[@effort]`
+  / `gemini:<id>` / `openai:<id>` / `compat:<id>` (OpenAI-compatible
+  adapter in `harness/llm.py`; keys from `MOONSHOT_API_KEY` /
+  `ZAI_API_KEY` / `GEMINI_API_KEY` / `OPENAI_API_KEY` /
+  `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is `kimi:kimi-k3@max`;
+  "Ox Alpha" is `zai:glm-5.3-flash`; reasoning traces are stored as
+  thinking blocks and echoed back verbatim (Moonshot requires it, Z.ai
+  keeps it with clear_thinking=false). Token-free check and the gate
+  for any `harness/llm.py` change: `python scripts/llm_compat_check.py`
+  (72 checks).
 
 ## Architecture
 

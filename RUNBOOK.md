@@ -219,3 +219,32 @@ wallclock hour than Claude.  Transcripts record `usage.cached` per turn
 so the hit share is auditable.  Aggregators (OpenRouter, Novita,
 DeepInfra) list `moonshotai/kimi-k3` at list price plus fees and
 surface reasoning under other field names; use Moonshot direct.
+
+### 7.2 Z.ai GLM-5.3-Flash ("Ox Alpha")
+
+The stealth "Ox Alpha" of August 2026 is Z.ai's `glm-5.3-flash`: a
+320B/18B MoE reasoning model, MIT weights, tool calling, 1M context,
+128K max output, always thinking.  Z.ai's OpenAI-compatible endpoint
+is `https://api.z.ai/api/paas/v4/`; the `zai:` provider sends
+`thinking: {type: enabled, clear_thinking: false}` so the server keeps
+the reasoning trace the adapter echoes (the API default `true` strips
+it), and `reasoning_effort` from the `@low|medium|high|xhigh|max`
+suffix (`max` by default; `none`/`minimal` are refused because 5.3-flash
+cannot stop thinking).  Moderation arrives as `finish_reason:
+sensitive` and maps to `refusal`.
+
+```bash
+install -m 600 /dev/null /root/.mazebot_zai_key      # then paste the key in
+ZAI_API_KEY="$(cat /root/.mazebot_zai_key)" \
+  ./botctl run --set model=zai:glm-5.3-flash@max ...
+```
+
+Pricing (Z.ai direct): $0.075/M input, $0.015/M cached input, $0.25/M
+output as a launch promotion through 9 Sept 2026 (reported list price
+after that: $0.15/$0.50) — roughly a fortieth of Kimi K3, so a
+150-turn episode is well under $1 even at `max`.  OpenRouter
+(`z-ai/glm-5.3-flash`), Novita and DeepInfra serve it at about the same
+price.  Z.ai publishes no rate-limit tiers and there are public
+reports of heavy throttling under load; run the same pre-spend probe
+as for Kimi and treat the first duo as a concurrency pilot.  Plain
+JSON requests (no streaming) for now.

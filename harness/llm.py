@@ -258,6 +258,17 @@ PROVIDERS = {
                  # non-streaming requests at 900 s (a max-effort turn over
                  # a long history can exceed that) - so stream.
                  pad_reasoning=True, stream=True),
+    # Z.ai (GLM; "Ox Alpha" was glm-5.3-flash).  Thinking is always on
+    # for 5.3-flash; clear_thinking=false is the model card's
+    # recommendation and makes the server keep the reasoning_content we
+    # echo (default true would strip it).  Efforts per the API reference
+    # (none/minimal excluded: they cannot turn thinking off here).
+    "zai": dict(base_url="https://api.z.ai/api/paas/v4/",
+                key_env="ZAI_API_KEY",
+                efforts=("low", "medium", "high", "xhigh", "max"),
+                default_effort="max",
+                extra_body={"thinking": {"type": "enabled",
+                                         "clear_thinking": False}}),
     "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
                             "v1beta/openai/",
                    key_env="GEMINI_API_KEY"),
@@ -424,8 +435,11 @@ class OpenAICompatModel:
     """Chat-completions adapter presenting the same interface as
     AnthropicModel (content blocks, stop_reason, usage)."""
 
+    # "sensitive" is Z.ai's moderation finish_reason; like content_filter
+    # it becomes the refusal the loop retries-then-ends on.
     STOP_MAP = {"tool_calls": "tool_use", "stop": "end_turn",
-                "length": "max_tokens", "content_filter": "refusal"}
+                "length": "max_tokens", "content_filter": "refusal",
+                "sensitive": "refusal"}
 
     # A max-effort reasoning turn over a 100k-token history can run for
     # minutes; the SDK's own retries are off because the loop below owns
@@ -449,6 +463,7 @@ class OpenAICompatModel:
         self.tokens_param = spec.get("tokens_param", "max_tokens")
         self.pad_reasoning = spec.get("pad_reasoning", False)
         self.stream = spec.get("stream", False)
+        self.extra_body = spec.get("extra_body")
         self._openai = openai
         self.client = openai.OpenAI(api_key=key, base_url=spec["base_url"],
                                     timeout=self.TIMEOUT_S, max_retries=0)
@@ -461,6 +476,8 @@ class OpenAICompatModel:
         if self.stream:
             kwargs.update(stream=True,
                           stream_options={"include_usage": True})
+        if self.extra_body:
+            kwargs["extra_body"] = self.extra_body
         attempts, deadline = 0, time.time() + self.RETRY_WINDOW_S
         while True:
             attempts += 1
@@ -559,9 +576,12 @@ def model_spec(model):
     records (the cfg string alone leaves a default effort implicit).
     Never the base_url or the key."""
     if isinstance(model, OpenAICompatModel):
-        return dict(provider=model.provider, model_id=model.model,
-                    reasoning_effort=model.reasoning_effort,
-                    tokens_param=model.tokens_param, stream=model.stream)
+        d = dict(provider=model.provider, model_id=model.model,
+                 reasoning_effort=model.reasoning_effort,
+                 tokens_param=model.tokens_param, stream=model.stream)
+        if model.extra_body:
+            d["extra_body"] = model.extra_body
+        return d
     if isinstance(model, AnthropicModel):
         return dict(provider="anthropic", model_id=model.model,
                     thinking=thinking_param(model.model))

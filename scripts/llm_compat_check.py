@@ -87,6 +87,14 @@ class Stub(BaseHTTPRequestHandler):
         usage = {"prompt_tokens": 100 * turn, "completion_tokens": 20}
 
         if not body.get("stream"):
+            if "[sensitive]" in key:      # Z.ai moderation finish_reason
+                return self._json(200, {
+                    "id": "stub-s", "object": "chat.completion",
+                    "created": 0, "model": body.get("model"),
+                    "choices": [{"index": 0, "finish_reason": "sensitive",
+                                 "message": {"role": "assistant",
+                                             "content": ""}}],
+                    "usage": usage})
             if key == "Begin.":
                 msg = {"role": "assistant", "content": "Let me look around.",
                        "reasoning_content": TRACE,
@@ -458,10 +466,48 @@ def main():
           == dict(provider="mock", model_id="wall-follower"))
     llm.PROVIDERS["kimi"]["base_url"] = real_base
 
+    print("== zai: GLM request shape ==")
+    os.environ["ZAI_API_KEY"] = "stub"
+    real_zai = llm.PROVIDERS["zai"]["base_url"]
+    llm.PROVIDERS["zai"]["base_url"] = base
+    zai = llm.make_model("zai:glm-5.3-flash@low", ".")
+    check("zai provider selected: plain JSON, max_tokens, no padding",
+          isinstance(zai, llm.OpenAICompatModel) and not zai.stream
+          and zai.tokens_param == "max_tokens" and not zai.pad_reasoning
+          and zai.reasoning_effort == "low")
+    n0 = len(REQUESTS)
+    rz = zai.create(system, [{"role": "user", "content": "Begin."}])
+    bz = REQUESTS[n0][1]
+    check("zai sends thinking enabled with clear_thinking false",
+          bz.get("thinking") == {"type": "enabled",
+                                 "clear_thinking": False})
+    check("zai sends reasoning_effort and max_tokens",
+          bz.get("reasoning_effort") == "low" and "max_tokens" in bz
+          and "max_completion_tokens" not in bz and "stream" not in bz)
+    check("zai trace captured like any other provider",
+          rz.content[0].type == "thinking" and rz.content[0].thinking == TRACE)
+    check("zai default effort is max",
+          llm.make_model("zai:glm-5.3-flash", ".").reasoning_effort == "max")
+    check("zai accepts @xhigh",
+          llm.make_model("zai:glm-5.3-flash@xhigh", ".").reasoning_effort
+          == "xhigh")
+    try:
+        llm.make_model("zai:glm-5.3-flash@none", ".")
+        check("zai rejects @none (thinking cannot be disabled)", False)
+    except ValueError:
+        check("zai rejects @none (thinking cannot be disabled)", True)
+    rs = zai.create(system, [{"role": "user", "content": "[sensitive] x"}])
+    check("finish_reason sensitive -> refusal", rs.stop_reason == "refusal")
+    check("model_spec records the thinking config",
+          llm.model_spec(zai)["extra_body"]["thinking"]["clear_thinking"]
+          is False)
+    llm.PROVIDERS["zai"]["base_url"] = real_zai
+    os.environ.pop("ZAI_API_KEY")
+
     print("== provider table ==")
-    check("kimi/gemini providers registered",
-          {"kimi", "gemini"} <= set(llm.PROVIDERS))
-    for name in ("kimi", "gemini"):
+    check("kimi/zai/gemini providers registered",
+          {"kimi", "zai", "gemini"} <= set(llm.PROVIDERS))
+    for name in ("kimi", "zai", "gemini"):
         os.environ.pop(llm.PROVIDERS[name]["key_env"], None)
         try:
             llm.make_model(f"{name}:some-model", ".")
