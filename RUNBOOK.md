@@ -149,40 +149,73 @@ export LLM_BASE_URL=https://host/v1 LLM_API_KEY=...   # anything else
 
 The `<model-id>` is passed through verbatim — take it from the
 provider's model list (names change; nothing here hardcodes one).
-An optional `@low|medium|high|max` suffix on the id becomes the
-request's `reasoning_effort` (only for models that take one).
+An optional `@<effort>` suffix on the id becomes the request's
+`reasoning_effort` (`@low|high|max` for kimi, `@low|medium|high|max`
+elsewhere; only for models that take one).
 Keys live in the host environment only; they never enter the
-container or the repo.  Validate the adapter without spending tokens:
-`python scripts/llm_compat_check.py` (stub server on port 8797).
+container, the daemon's environment, or the repo.  Validate the
+adapter without spending tokens: `python scripts/llm_compat_check.py`
+(stub server on port 8797; the gate for any `harness/llm.py` change).
 Caveats: adaptive thinking is Anthropic-only (omitted elsewhere);
-`stop_reason: refusal` maps from `finish_reason: content_filter`; the
-quiz eval's server-side-fallback option remains Anthropic-only.
+`stop_reason: refusal` maps from `finish_reason: content_filter` and
+from Moonshot's HTTP 400 `type=content_filter` (same-model retry x5,
+then the episode ends); the quiz eval's server-side-fallback option
+remains Anthropic-only.  `budget.max_output_tokens_per_turn` (default
+16000) is the per-call output cap; reasoning tokens count against it
+and against `max_total_output_tokens`.
 
 ### 7.1 Kimi K3 ("K3 Max")
 
-The Kimi app's "K3 Max" is the API model `kimi-k3` at
-`https://api.moonshot.ai/v1` run at `reasoning_effort=max` (the API
-default; `low` and `high` also exist).  K3 always reasons: every reply
-carries a `reasoning_content` trace, billed as output, which the
-adapter stores as a `thinking` block and echoes back verbatim on every
-historical assistant turn — Moonshot requires the complete assistant
-message returned unchanged in tool-call chains, and dropping it
-degrades the model.  Sampling parameters are fixed server-side and are
-not sent; the output cap goes as `max_completion_tokens`.
+The Kimi app has no model called "K3 Max": its selector offers K3 with
+a Low/High/Max thinking strength.  The API equivalent is the model
+`kimi-k3` at `https://api.moonshot.ai/v1` with `reasoning_effort`
+`low|high|max` (`max` is the server default and is what the adapter
+sends when no suffix is given, so run records always state it; there
+is no `medium`).  K3 always reasons: every reply carries a
+`reasoning_content` trace, billed as output, which the adapter stores
+as a `thinking` block and echoes back verbatim on every historical
+assistant turn — Moonshot requires the complete assistant message
+returned unchanged in tool-call chains (a tool-call turn without the
+key is a 400; an empty trace is still echoed).  Sampling parameters are
+fixed server-side and are not sent; the output cap goes as
+`max_completion_tokens`; requests are streamed because Moonshot's
+gateway kills non-streaming requests at 900 s, which a max-effort turn
+over a long history can exceed.
 
 ```bash
 # one-time: key file next to the Anthropic one (never in the repo)
 install -m 600 /dev/null /root/.mazebot_kimi_key   # then paste the key in
-export MOONSHOT_API_KEY="$(cat /root/.mazebot_kimi_key)"
 
-./botctl run --set model=kimi:kimi-k3@max ...        # what the app calls K3 Max
-./botctl run --set model=kimi:kimi-k3@low ...        # same model, cheaper
+# scope the key to the launcher rather than exporting it into the shell
+MOONSHOT_API_KEY="$(cat /root/.mazebot_kimi_key)" \
+  ./botctl run --set model=kimi:kimi-k3@max \
+               --set budget.max_output_tokens_per_turn=65536 \
+               --set budget.max_total_output_tokens=600000 ...
+MOONSHOT_API_KEY="$(cat /root/.mazebot_kimi_key)" \
+  ./botctl run --set model=kimi:kimi-k3@low ...      # same model, cheaper
 ```
 
-Pricing (Moonshot direct, Sept 2026): $3.00/M input, $0.30/M on cache
-hit, $15.00/M output; 1M context; a $1 minimum top-up opens the API and
-the cumulative top-up tier sets concurrency/RPM/TPM — a duo run needs
-two concurrent long requests.  Transcripts record `usage.cached` per
-turn so the cache-hit share is auditable.  Aggregators (OpenRouter,
-Novita, DeepInfra) list `moonshotai/kimi-k3` at the same price but
-differ in how they surface reasoning; use Moonshot direct.
+Before spending: `python scripts/llm_compat_check.py`, then one
+`kimi:kimi-k3@low` solo episode with `--set budget.max_turns=5` and
+confirm `usage.cached > 0` from turn 2 and a `thinking` block on every
+assistant record.  `botctl quiz` still uses the Anthropic client; pass
+`--model claude-...` explicitly for kimi series.
+
+Pricing (Moonshot direct, Sept 2026): $3.00/M input, $0.30/M on an
+automatic prefix-cache hit, $15.00/M output (reasoning included); 1M
+context; flat.  Rate limits follow the cumulative cash top-up tier:
+Tier0 ($1) is concurrency 1 / 3 RPM / 1.5M tokens per day — it cannot
+run a duo (the second bot 429s for the whole of the peer's turn) and
+exhausts the day after a handful of 160k-context requests; **Tier1
+($10)** gives 15 concurrent / 100 RPM / 2M TPM and is the minimum for
+any real run; Tier2 ($20) only matters for two concurrent duo runs.
+Limits are charged on `prompt_tokens + max_completion_tokens`, so the
+per-turn cap above is part of the bill of each request.  Rough cost
+per 150-turn episode at ~95% cache hits: $5 solo / $10 duo at `low`,
+$7 / $14 at `high`, $12 / $24 at `max` (±2x on the reasoning-length
+assumption); at `max` raise `max_total_output_tokens` or the episode
+ends on `token_budget` after ~40 turns, and expect fewer turns per
+wallclock hour than Claude.  Transcripts record `usage.cached` per turn
+so the hit share is auditable.  Aggregators (OpenRouter, Novita,
+DeepInfra) list `moonshotai/kimi-k3` at list price plus fees and
+surface reasoning under other field names; use Moonshot direct.

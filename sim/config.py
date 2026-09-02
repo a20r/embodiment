@@ -115,6 +115,7 @@ DEFAULTS = {
     "budget": {
         "max_context_tokens": 160000,       # end/restart episode past this
         "max_total_output_tokens": 120000,  # cumulative model output per episode
+        "max_output_tokens_per_turn": 16000,  # reasoning counts (K3@max: 65536)
         "max_turns": 400,
         "max_wallclock_s": 1800,
         "on_context_full": "end",           # end | restart (bare restart)

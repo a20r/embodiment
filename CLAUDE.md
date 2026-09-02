@@ -32,8 +32,9 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   `harness/llm.py`; keys from `MOONSHOT_API_KEY` / `GEMINI_API_KEY` /
   `OPENAI_API_KEY` / `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is
   `kimi:kimi-k3@max`; its reasoning trace is stored as a thinking block
-  and echoed back verbatim (Moonshot requires it). Token-free check:
-  `python scripts/llm_compat_check.py`.
+  and echoed back verbatim (Moonshot requires it). Token-free check and
+  the gate for any `harness/llm.py` change:
+  `python scripts/llm_compat_check.py` (62 checks).
 
 ## Architecture
 

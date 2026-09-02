@@ -1,13 +1,16 @@
 """Round-trip check of the OpenAI-compatible model adapter, no API key.
 
-Boots a stub chat-completions server that scripts two turns (a bash
-tool call with a reasoning trace, then a final text), points harness.llm
-at it via the `compat:` provider, and asserts the Anthropic-shaped
-history the harness keeps is translated correctly in both directions —
-including the reasoning-model contract (Kimi K3): the trace comes back
-as a thinking block and is echoed verbatim as reasoning_content on the
-next request.  A third turn through the `kimi:` provider checks the
-Moonshot-specific request shape (max_completion_tokens, @effort suffix).
+Boots a stub chat-completions server and drives harness.llm against it
+two ways: the `compat:` provider (plain JSON responses) and the `kimi:`
+provider (streamed SSE, Moonshot request shape).  Asserts the
+Anthropic-shaped history the harness keeps is translated correctly in
+both directions, including the reasoning-model contract Kimi K3 lives
+by: the trace comes back as a thinking block (an empty trace included)
+and is echoed verbatim as reasoning_content on the next request; a
+tool-call turn is padded with "" when nothing was stored; signed
+Anthropic thinking blocks are never replayed.  Also covers the error
+mapping (400 content_filter -> refusal, typed 429s, Retry-After), the
+truncated-tool-call guard, cached-token accounting, and model_spec.
 
 Run from the repo root:  python scripts/llm_compat_check.py
 """
@@ -16,6 +19,7 @@ import json
 import os
 import sys
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(
@@ -24,7 +28,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(
 PORT = 8797
 REQUESTS = []
 FAILS = []
+SEEN = set()
 TRACE = "The README says there are ports under /dev/robot; list them."
+RAW_ARGS = '{"command":"ls   /dev/robot"}'     # odd spacing: echoed as-is
+FRAGMENT = '{"command": "rm -rf'
 
 
 def check(name, ok, detail=""):
@@ -34,62 +41,154 @@ def check(name, ok, detail=""):
         FAILS.append(name)
 
 
+def last_text(body):
+    m = body["messages"][-1]
+    c = m.get("content")
+    return c if isinstance(c, str) else json.dumps(c)
+
+
+def call(cid, args):
+    return {"id": cid, "type": "function",
+            "function": {"name": "bash", "arguments": args}}
+
+
 class Stub(BaseHTTPRequestHandler):
     def log_message(self, *a):
         pass
+
+    def _json(self, code, obj, headers=()):
+        data = json.dumps(obj).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(data)))
+        for k, v in headers:
+            self.send_header(k, v)
+        self.end_headers()
+        self.wfile.write(data)
+
+    def _sse(self, chunks):
+        self.send_response(200)
+        self.send_header("Content-Type", "text/event-stream")
+        self.end_headers()
+        for ch in chunks:
+            ch.setdefault("id", "stub")
+            ch.setdefault("object", "chat.completion.chunk")
+            ch.setdefault("created", 0)
+            ch.setdefault("model", "stub")
+            self.wfile.write(f"data: {json.dumps(ch)}\n\n".encode())
+        self.wfile.write(b"data: [DONE]\n\n")
 
     def do_POST(self):
         n = int(self.headers.get("Content-Length") or 0)
         body = json.loads(self.rfile.read(n) or b"{}")
         REQUESTS.append((self.path, body))
+        key = last_text(body)
         turn = len(REQUESTS)
         usage = {"prompt_tokens": 100 * turn, "completion_tokens": 20}
-        if turn == 1:
-            msg = {"role": "assistant", "content": "Let me look around.",
-                   "reasoning_content": TRACE,
-                   "tool_calls": [{"id": "call_1", "type": "function",
-                                   "function": {"name": "bash",
-                                                "arguments":
-                                                json.dumps({"command":
-                                                            "ls /dev/robot"})}}]}
-            finish = "tool_calls"
-        elif turn == 2:
-            msg = {"role": "assistant", "content": "Done for now."}
-            finish = "stop"
-            usage["prompt_tokens_details"] = {"cached_tokens": 150}
-        else:
-            # Moonshot-style: cache hits reported at the top level.
-            msg = {"role": "assistant", "content": "ok",
-                   "reasoning_content": "brief"}
-            finish = "stop"
-            usage["cached_tokens"] = 40
-        resp = {"id": f"stub-{turn}", "object": "chat.completion",
+
+        if not body.get("stream"):
+            if key == "Begin.":
+                msg = {"role": "assistant", "content": "Let me look around.",
+                       "reasoning_content": TRACE,
+                       "tool_calls": [call("call_1", json.dumps(
+                           {"command": "ls /dev/robot"}))]}
+                finish = "tool_calls"
+            else:
+                msg = {"role": "assistant", "content": "Done for now."}
+                finish = "stop"
+                usage["prompt_tokens_details"] = {"cached_tokens": 150}
+            return self._json(200, {
+                "id": f"stub-{turn}", "object": "chat.completion",
                 "created": 0, "model": body.get("model"),
                 "choices": [{"index": 0, "message": msg,
                              "finish_reason": finish}],
-                "usage": usage}
-        data = json.dumps(resp).encode()
-        self.send_response(200)
-        self.send_header("Content-Type", "application/json")
-        self.send_header("Content-Length", str(len(data)))
-        self.end_headers()
-        self.wfile.write(data)
+                "usage": usage})
+
+        # Streamed (kimi) scenarios, keyed on the last message.
+        err = {"message": "stub", "type": None, "param": None, "code": None}
+        if "[cf]" in key:
+            err.update(message="The request was rejected because it was "
+                       "considered high risk", type="content_filter")
+            return self._json(400, {"error": err})
+        if "[400]" in key:
+            err.update(type="invalid_request_error")
+            return self._json(400, {"error": err})
+        if "[quota]" in key:
+            err.update(type="exceeded_current_quota_error")
+            return self._json(429, {"error": err})
+        if "[overload-forever]" in key or (
+                "[overload]" in key and "[overload]" not in SEEN):
+            SEEN.add("[overload]")
+            err.update(type="engine_overloaded_error")
+            return self._json(429, {"error": err}, [("Retry-After", "1")])
+
+        def delta(d, finish=None, **extra):
+            ch = {"choices": [dict(index=0, delta=d, finish_reason=finish,
+                                   **extra)]}
+            return ch
+
+        if "[k1]" in key:
+            chunks = [delta({"role": "assistant", "reasoning_content": "br"}),
+                      delta({"reasoning_content": "ief"}),
+                      delta({"content": "o"}), delta({"content": "k"}),
+                      delta({"tool_calls": [{"index": 0, "id": "call_k1",
+                                             "type": "function",
+                                             "function": {"name": "bash",
+                                                          "arguments":
+                                                          RAW_ARGS[:9]}}]}),
+                      delta({"tool_calls": [{"index": 0, "function": {
+                          "arguments": RAW_ARGS[9:]}}]}),
+                      delta({}, "tool_calls"),
+                      {"choices": [], "usage": dict(
+                          usage, cached_tokens=40,
+                          prompt_tokens_details={"cached_tokens": 40})}]
+        elif "[k-empty]" in key:
+            chunks = [delta({"role": "assistant", "reasoning_content": ""}),
+                      delta({"tool_calls": [{"index": 0, "id": "call_k2",
+                                             "type": "function",
+                                             "function": {
+                                                 "name": "bash",
+                                                 "arguments":
+                                                 '{"command":"pwd"}'}}]}),
+                      delta({}, "tool_calls"),
+                      {"choices": [], "usage": usage}]
+        elif "[len]" in key or "[len-ok]" in key:
+            fin = "length" if "[len]" in key else "tool_calls"
+            chunks = [delta({"role": "assistant", "reasoning_content": "x"}),
+                      delta({"tool_calls": [{"index": 0, "id": "call_k3",
+                                             "type": "function",
+                                             "function": {"name": "bash",
+                                                          "arguments":
+                                                          FRAGMENT}}]}),
+                      delta({}, fin),
+                      {"choices": [], "usage": usage}]
+        elif "[usage-in-choice]" in key:
+            chunks = [delta({"role": "assistant", "content": "fine"}),
+                      delta({}, "stop", usage=dict(usage, cached_tokens=7))]
+        else:
+            chunks = [delta({"role": "assistant", "reasoning_content": "t"}),
+                      delta({"content": "ok"}), delta({}, "stop"),
+                      {"choices": [], "usage": usage}]
+        return self._sse(chunks)
 
 
 def main():
     srv = HTTPServer(("127.0.0.1", PORT), Stub)
     threading.Thread(target=srv.serve_forever, daemon=True).start()
-    os.environ["LLM_BASE_URL"] = f"http://127.0.0.1:{PORT}/v1"
+    base = f"http://127.0.0.1:{PORT}/v1"
+    os.environ["LLM_BASE_URL"] = base
     os.environ["LLM_API_KEY"] = "stub"
     # PROVIDERS reads LLM_BASE_URL at import time.
     from harness import llm
-    llm.PROVIDERS["compat"]["base_url"] = os.environ["LLM_BASE_URL"]
+    llm.PROVIDERS["compat"]["base_url"] = base
 
+    print("== compat: plain JSON ==")
     model = llm.make_model("compat:stub-model", ".")
     check("compat provider selected",
           isinstance(model, llm.OpenAICompatModel))
-    check("no effort suffix -> no reasoning_effort",
+    check("no effort suffix, no provider default -> none",
           model.reasoning_effort is None)
+    check("compat does not stream", not model.stream)
 
     system = "You are connected to a robot."
     messages = [{"role": "user", "content": "Begin."}]
@@ -103,8 +202,9 @@ def main():
           body["tools"][0]["function"]["name"] == "bash"
           and "command" in body["tools"][0]["function"]["parameters"]
           ["properties"])
-    check("compat provider sends max_tokens",
-          "max_tokens" in body and "max_completion_tokens" not in body)
+    check("compat sends max_tokens, no stream",
+          "max_tokens" in body and "max_completion_tokens" not in body
+          and "stream" not in body)
     check("reasoning_effort omitted when unset",
           "reasoning_effort" not in body)
     check("tool call -> tool_use block",
@@ -142,6 +242,8 @@ def main():
           == {"command": "ls /dev/robot"})
     check("assistant turn echoes reasoning_content verbatim",
           asst.get("reasoning_content") == TRACE)
+    check("assistant text kept alongside tool_calls",
+          asst.get("content") == "Let me look around.")
     tool = body2["messages"][3]
     check("tool result -> role=tool with matching id",
           tool == {"role": "tool", "tool_call_id": "call_1",
@@ -150,7 +252,7 @@ def main():
           r2.stop_reason == "end_turn"
           and r2.content[0].type == "text"
           and r2.content[0].text == "Done for now.")
-    check("no trace -> no thinking block",
+    check("no trace field -> no thinking block",
           all(b.type != "thinking" for b in r2.content))
     check("cached_tokens (OpenAI-style details) recorded, not "
           "double-counted",
@@ -159,38 +261,204 @@ def main():
     check("serialize_content is JSON-safe",
           json.dumps(model.serialize_content(r2.content)) is not None)
 
-    # Moonshot request shape through the kimi: provider.
+    print("== history translation (no server) ==")
+    bare = [{"role": "user", "content": "go"},
+            {"role": "assistant", "content": [
+                {"type": "tool_use", "id": "t1", "name": "bash",
+                 "input": {"command": "ls"}}]}]
+    a_plain = llm.to_openai_messages("s", bare)[2]
+    a_pad = llm.to_openai_messages("s", bare, pad_reasoning=True)[2]
+    check("no stored trace, no padding -> key absent",
+          "reasoning_content" not in a_plain)
+    check("no stored trace, padding -> reasoning_content ''",
+          a_pad.get("reasoning_content") == "")
+    check("tool-call turn without text omits content key",
+          "content" not in a_pad and "content" not in a_plain)
+    signed = [{"role": "user", "content": "go"},
+              {"role": "assistant", "content": [
+                  {"type": "thinking", "thinking": "claude's trace",
+                   "signature": "sig"},
+                  {"type": "text", "text": "hi"}]}]
+    s_plain = llm.to_openai_messages("s", signed)[2]
+    s_pad = llm.to_openai_messages("s", signed, pad_reasoning=True)[2]
+    check("signed Anthropic thinking never replayed as a trace",
+          "reasoning_content" not in s_plain
+          and "reasoning_content" not in s_pad
+          and s_plain["content"] == "hi")
+    raw_hist = [{"role": "user", "content": "go"},
+                {"role": "assistant", "content": [
+                    {"type": "tool_use", "id": "t1", "name": "bash",
+                     "input": {"command": "ls   /dev/robot"},
+                     "raw": RAW_ARGS}]}]
+    check("stored raw arguments echoed byte-for-byte",
+          llm.to_openai_messages("s", raw_hist)[2]["tool_calls"][0]
+          ["function"]["arguments"] == RAW_ARGS)
+
+    print("== kimi: streamed SSE, Moonshot request shape ==")
     os.environ["MOONSHOT_API_KEY"] = "stub"
     real_base = llm.PROVIDERS["kimi"]["base_url"]
-    llm.PROVIDERS["kimi"]["base_url"] = os.environ["LLM_BASE_URL"]
+    llm.PROVIDERS["kimi"]["base_url"] = base
     kimi = llm.make_model("kimi:kimi-k3@low", ".")
     check("kimi provider selected with effort suffix",
           isinstance(kimi, llm.OpenAICompatModel)
           and kimi.model == "kimi-k3" and kimi.reasoning_effort == "low")
-    r3 = kimi.create(system, [{"role": "user", "content": "Begin."}])
-    _, body3 = REQUESTS[2]
+    check("kimi pads reasoning and streams",
+          kimi.pad_reasoning and kimi.stream)
+    n0 = len(REQUESTS)
+    hist = [{"role": "user", "content": "[k1] Begin."}]
+    r3 = kimi.create(system, hist, max_tokens=65536)
+    _, body3 = REQUESTS[n0]
     check("kimi sends model id without the suffix",
           body3["model"] == "kimi-k3")
-    check("kimi sends max_completion_tokens, never max_tokens",
-          "max_completion_tokens" in body3 and "max_tokens" not in body3)
+    check("kimi sends max_completion_tokens (per-turn cap), never "
+          "max_tokens",
+          body3.get("max_completion_tokens") == 65536
+          and "max_tokens" not in body3)
     check("kimi sends reasoning_effort", body3.get("reasoning_effort") == "low")
-    check("kimi omits fixed sampling params",
+    check("kimi streams with usage",
+          body3.get("stream") is True
+          and body3.get("stream_options") == {"include_usage": True})
+    check("kimi omits fixed sampling params and Anthropic thinking",
           not {"temperature", "top_p", "n", "presence_penalty",
-               "frequency_penalty"} & set(body3))
-    check("kimi top-level cached_tokens recorded",
-          r3.usage.cached_input_tokens == 40)
-    check("kimi trace captured", r3.content[0].thinking == "brief")
+               "frequency_penalty", "thinking"} & set(body3))
+    check("streamed trace folded (first block)",
+          r3.content[0].type == "thinking"
+          and r3.content[0].thinking == "brief")
+    check("streamed text folded",
+          r3.content[1].type == "text" and r3.content[1].text == "ok")
+    tu = [b for b in r3.content if b.type == "tool_use"]
+    check("streamed tool call folded across chunks",
+          len(tu) == 1 and tu[0].id == "call_k1"
+          and tu[0].input == {"command": "ls   /dev/robot"}
+          and tu[0].raw == RAW_ARGS and r3.stop_reason == "tool_use")
+    check("top-level + details cached_tokens counted once",
+          r3.usage.cached_input_tokens == 40
+          and llm.context_tokens(r3.usage)
+          == r3.usage.input_tokens + r3.usage.output_tokens)
+    hist.append({"role": "assistant",
+                 "content": kimi.serialize_content(r3.content)})
+    hist.append({"role": "user", "content": [
+        {"type": "tool_result", "tool_use_id": "call_k1",
+         "content": "d0 d1"}]})
+    kimi.create(system, hist)
+    asst3 = REQUESTS[n0 + 1][1]["messages"][2]
+    check("kimi echo: reasoning_content verbatim, raw arguments, text",
+          asst3.get("reasoning_content") == "brief"
+          and asst3["tool_calls"][0]["function"]["arguments"] == RAW_ARGS
+          and asst3.get("content") == "ok")
+
+    n0 = len(REQUESTS)
+    hist = [{"role": "user", "content": "[k-empty] Begin."}]
+    r4 = kimi.create(system, hist)
+    check("empty trace -> thinking '' block, no text block",
+          r4.content[0].type == "thinking" and r4.content[0].thinking == ""
+          and all(b.type != "text" for b in r4.content))
+    ser = kimi.serialize_content(r4.content)
+    check("empty trace serializes without a signature",
+          ser[0] == {"type": "thinking", "thinking": ""})
+    hist.append({"role": "assistant", "content": ser})
+    hist.append({"role": "user", "content": [
+        {"type": "tool_result", "tool_use_id": "call_k2",
+         "content": "/bot"}]})
+    kimi.create(system, hist)
+    asst4 = REQUESTS[n0 + 1][1]["messages"][2]
+    check("empty trace echoed as reasoning_content '' with no content key",
+          "reasoning_content" in asst4 and asst4["reasoning_content"] == ""
+          and "content" not in asst4 and asst4["tool_calls"][0]["id"]
+          == "call_k2")
+
+    print("== kimi: effort selection ==")
+    dflt = llm.make_model("kimi:kimi-k3", ".")
+    check("kimi without suffix -> explicit default effort max",
+          dflt.reasoning_effort == "max")
+    n0 = len(REQUESTS)
+    dflt.create(system, [{"role": "user", "content": "hi"}])
+    check("default effort is sent on the wire",
+          REQUESTS[n0][1].get("reasoning_effort") == "max")
+    try:
+        llm.make_model("kimi:kimi-k3@medium", ".")
+        check("kimi rejects @medium at make_model time", False)
+    except ValueError as e:
+        check("kimi rejects @medium at make_model time",
+              "low|high|max" in str(e))
+    os.environ["OPENAI_API_KEY"] = "stub"
+    oa = llm.make_model("openai:gpt-x@medium", ".")
+    check("openai accepts @medium",
+          oa.reasoning_effort == "medium"
+          and oa.tokens_param == "max_completion_tokens")
+    os.environ.pop("OPENAI_API_KEY")
+
+    print("== kimi: errors ==")
+    import openai
+    n0 = len(REQUESTS)
+    rcf = kimi.create(system, [{"role": "user", "content": "[cf] x"}])
+    check("400 content_filter -> refusal, no retry inside create",
+          rcf.stop_reason == "refusal" and rcf.content == []
+          and len(REQUESTS) == n0 + 1)
+    try:
+        kimi.create(system, [{"role": "user", "content": "[400] x"}])
+        check("other 400s still raise", False)
+    except openai.BadRequestError:
+        check("other 400s still raise", True)
+    n0 = len(REQUESTS)
+    try:
+        kimi.create(system, [{"role": "user", "content": "[quota] x"}])
+        check("429 exceeded_current_quota_error raises at once", False)
+    except openai.RateLimitError:
+        check("429 exceeded_current_quota_error raises at once",
+              len(REQUESTS) == n0 + 1)
+    n0 = len(REQUESTS)
+    t0 = time.time()
+    r_ov = kimi.create(system, [{"role": "user", "content": "[overload] x"}])
+    dt = time.time() - t0
+    check("429 engine_overloaded_error retried after Retry-After",
+          r_ov.stop_reason == "end_turn" and len(REQUESTS) == n0 + 2
+          and 0.9 <= dt < 3.0, f"dt={dt:.2f}s")
+    kimi.RETRY_WINDOW_S = 2
+    n0 = len(REQUESTS)
+    t0 = time.time()
+    try:
+        kimi.create(system, [{"role": "user",
+                              "content": "[overload-forever] x"}])
+        check("429 retries bounded by RETRY_WINDOW_S", False)
+    except openai.RateLimitError:
+        dt = time.time() - t0
+        check("429 retries bounded by RETRY_WINDOW_S",
+              2.0 <= dt < 6.0 and len(REQUESTS) - n0 >= 2, f"dt={dt:.2f}s")
+    kimi.RETRY_WINDOW_S = llm.OpenAICompatModel.RETRY_WINDOW_S
+
+    print("== kimi: truncation and usage placement ==")
+    r_len = kimi.create(system, [{"role": "user", "content": "[len] x"}])
+    check("truncated tool call (finish=length) is never executed",
+          r_len.stop_reason == "max_tokens"
+          and all(b.type != "tool_use" for b in r_len.content))
+    r_ok = kimi.create(system, [{"role": "user", "content": "[len-ok] x"}])
+    tu = [b for b in r_ok.content if b.type == "tool_use"]
+    check("unparseable-but-complete arguments kept as the command",
+          len(tu) == 1 and tu[0].input == {"command": FRAGMENT})
+    r_u = kimi.create(system, [{"role": "user",
+                                "content": "[usage-in-choice] x"}])
+    check("usage inside choices[0] is picked up",
+          r_u.usage.cached_input_tokens == 7 and r_u.usage.output_tokens == 20
+          and r_u.content[0].text == "fine")
     check("client timeout is long and SDK retries are off",
           kimi.client.timeout == llm.OpenAICompatModel.TIMEOUT_S
           and kimi.client.max_retries == 0)
-    try:
-        llm.make_model("kimi:kimi-k3@turbo", ".")
-        check("unknown effort suffix rejected", False)
-    except ValueError as e:
-        check("unknown effort suffix rejected", "turbo" in str(e))
+
+    print("== model_spec ==")
+    spec = llm.model_spec(kimi)
+    check("model_spec describes provider/model/effort",
+          spec == dict(provider="kimi", model_id="kimi-k3",
+                       reasoning_effort="low",
+                       tokens_param="max_completion_tokens", stream=True))
+    check("model_spec carries no endpoint or key",
+          "http" not in json.dumps(spec) and "stub" not in json.dumps(spec))
+    check("model_spec for mock",
+          llm.model_spec(llm.make_model("mock:wall-follower", "."))
+          == dict(provider="mock", model_id="wall-follower"))
     llm.PROVIDERS["kimi"]["base_url"] = real_base
 
-    # Provider table sanity.
+    print("== provider table ==")
     check("kimi/gemini providers registered",
           {"kimi", "gemini"} <= set(llm.PROVIDERS))
     for name in ("kimi", "gemini"):

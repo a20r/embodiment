@@ -107,6 +107,7 @@ def run_episode(cfg, series_dir, episode_index):
     transcript.write(dict(type="meta", episode=episode_index,
                           arm=cfg["arm"], labels=cfg["labels"],
                           model=cfg["model"], maze_hash=maze_hash,
+                          model_spec=llm.model_spec(model),
                           noise_profile=cfg["noise_profile"],
                           perturb_state=cfg.get("perturb_state", {})))
     transcript.write(dict(type="system_prompt", content=system))
@@ -210,7 +211,9 @@ def run_episode(cfg, series_dir, episode_index):
                 messages.append({"role": "user", "content": (
                     "You are now connected to the robot. Begin.")})
             turns += 1
-            response = model.create(system, messages)
+            response = model.create(
+                system, messages,
+                max_tokens=b["max_output_tokens_per_turn"])
             # Safety-classifier false positives are stochastic; retry
             # the same model (never a fallback) before giving up the
             # episode.  Five tries with growing backoff: a long-haul
@@ -222,7 +225,9 @@ def run_episode(cfg, series_dir, episode_index):
                 transcript.write(dict(type="note", kind="refusal_retry",
                                       attempt=refusal_tries))
                 time.sleep(15 * refusal_tries)
-                response = model.create(system, messages)
+                response = model.create(
+                    system, messages,
+                    max_tokens=b["max_output_tokens_per_turn"])
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens
@@ -240,6 +245,8 @@ def run_episode(cfg, series_dir, episode_index):
                            or 0),
                 context_tokens=llm.context_tokens(u)))
             messages.append({"role": "assistant", "content": content})
+            if response.stop_reason == "max_tokens":
+                transcript.write(dict(type="note", kind="output_truncated"))
 
             if response.stop_reason == "refusal" and end_reason is None:
                 end_reason = "refusal"
@@ -299,6 +306,7 @@ def run_episode(cfg, series_dir, episode_index):
         summary = dict(
             episode=episode_index,
             arm=cfg["arm"], labels=cfg["labels"], model=cfg["model"],
+            model_spec=llm.model_spec(model),
             noise_profile=cfg["noise_profile"],
             maze_hash=maze_hash,
             perturb_state=cfg.get("perturb_state", {}),

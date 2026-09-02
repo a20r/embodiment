@@ -403,8 +403,9 @@ completions, so one adapter (harness/llm.py: OpenAICompatModel) covers
 them plus OpenAI and any `compat:` endpoint.  The harness keeps its
 Anthropic-shaped history (content blocks, tool_use/tool_result) and
 the adapter translates at the boundary: tool_use -> tool_calls,
-tool_result -> role=tool, thinking blocks dropped (not replayable
-across providers), finish_reason -> stop_reason (content_filter ->
+tool_result -> role=tool, provider reasoning traces kept as thinking
+blocks (see the reasoning-models entry below), finish_reason ->
+stop_reason (content_filter ->
 refusal so the purity rule - retry same model, then end - applies
 unchanged).  Model ids are pass-through by design: provider names
 churn and hardcoding one would rot.  scripts/llm_compat_check.py is
@@ -434,13 +435,36 @@ text and tool_calls silently degrades the model.  The compat adapter
 therefore captures reasoning_content (or `reasoning`) as a `thinking`
 block, the shape the transcript, dashboard and Anthropic path already
 know, and re-attaches it as reasoning_content at the boundary.  The
-effort knob is an `@low|medium|high|max` suffix on the model string
-rather than a config key so that every place a run records `model`
-(summary.json, transcript meta, series.json) records the effort too and
-no plumbing changes.  Per-provider `tokens_param` sends
-max_completion_tokens where max_tokens is deprecated (Moonshot,
-OpenAI); fixed sampling parameters are never sent.  The client timeout
-is 900 s with SDK retries off - the loop owns retries, and a duplicated
-max-effort request would double-bill.  OpenAI-style cache hits
-(`cached_tokens`) are recorded as `usage.cached`, a subset of input,
-never added to the context estimate.
+effort knob is an `@<effort>` suffix on the model string rather than a
+config key so that every place a run records `model` (summary.json,
+transcript meta, series.json) records the effort too and no plumbing
+changes; the allowed set is per provider (K3 has no `medium`, so
+`@medium` fails at make_model time, not after a daemon+container
+boot), and kimi sends its `max` default explicitly so the record still
+states the effort if Moonshot ever changes the server default.
+`model_spec` in meta/summary spells the same out structurally.
+Details that fell out of reading Moonshot's contract closely: an empty
+trace is still a trace and is echoed as ""; a tool-call turn with no
+stored trace is padded with "" (Moonshot 400s without the key); signed
+Anthropic thinking blocks are never replayed as another provider's
+trace; the provider's own arguments string is echoed byte-for-byte; a
+tool call cut off by the output cap (finish_reason length) is never
+executed.  Requests stream because the gateway kills non-streaming
+requests at 900 s and a max-effort turn over a long history can exceed
+that.  Moonshot's moderation is an HTTP 400 `type=content_filter`, not
+a finish_reason, so it is mapped to `refusal` and the purity rule
+(same-model retry, then end) applies unchanged; a 429 for an exhausted
+balance raises at once while overload/rate 429s honour Retry-After
+within a 30-min window (a peer's long turn can hold the only low-tier
+slot).  Per-provider `tokens_param` sends max_completion_tokens where
+max_tokens is deprecated (Moonshot, OpenAI); fixed sampling parameters
+are never sent.  The client timeout is 900 s (idle between chunks) with
+SDK retries off - the loop owns retries, and a duplicated max-effort
+request would double-bill.  OpenAI-style cache hits (`cached_tokens`)
+are recorded as `usage.cached`, a subset of input, never added to the
+context estimate.  `budget.max_output_tokens_per_turn` replaces the
+hardcoded 16000 per-call cap because reasoning counts against it.
+Comparability caveat for the paper: echoed reasoning sits inside
+prompt_tokens, so K3 reaches `max_context_tokens` and
+`max_total_output_tokens` sooner than Claude at the same settings, and
+multi-minute turns mean fewer turns per wallclock hour.

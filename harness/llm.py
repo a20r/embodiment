@@ -22,6 +22,7 @@ import json
 import os
 import time
 from dataclasses import dataclass, field
+from types import SimpleNamespace as _NS
 
 BASH_TOOL = {
     "name": "bash",
@@ -60,6 +61,7 @@ class Block:
     name: str = ""
     input: dict = field(default_factory=dict)
     thinking: str = ""
+    raw: str = ""    # provider's arguments string, echoed back as-is
 
 
 @dataclass
@@ -247,7 +249,15 @@ class MockWallFollower:
 PROVIDERS = {
     "kimi": dict(base_url="https://api.moonshot.ai/v1",
                  key_env="MOONSHOT_API_KEY",
-                 tokens_param="max_completion_tokens"),
+                 tokens_param="max_completion_tokens",
+                 # K3 has no "medium"; "max" is the server default but is
+                 # sent explicitly so run records state the effort used.
+                 efforts=("low", "high", "max"), default_effort="max",
+                 # Moonshot 400s on a tool-call turn lacking the
+                 # reasoning_content key, and its gateway kills
+                 # non-streaming requests at 900 s (a max-effort turn over
+                 # a long history can exceed that) - so stream.
+                 pad_reasoning=True, stream=True),
     "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
                             "v1beta/openai/",
                    key_env="GEMINI_API_KEY"),
@@ -276,11 +286,15 @@ OPENAI_BASH_TOOL = {
 }
 
 
-def to_openai_messages(system, messages):
+def to_openai_messages(system, messages, pad_reasoning=False):
     """Anthropic-shaped history (as the harness stores it) -> OpenAI
-    chat format.  Assistant tool_use blocks become tool_calls; user
-    tool_result blocks become role=tool messages; thinking blocks go
-    back as reasoning_content (the provider's own trace, verbatim)."""
+    chat format.  Assistant tool_use blocks become tool_calls (with the
+    provider's own arguments string when we have it); user tool_result
+    blocks become role=tool messages; thinking blocks go back as
+    reasoning_content, verbatim - an empty trace is still a trace.
+    pad_reasoning: providers that reject a tool-call turn without the
+    key get "" when none was stored.  Anthropic thinking blocks carry a
+    signature and are never replayed as another provider's trace."""
     out = [{"role": "system", "content": system}]
     for m in messages:
         role, content = m["role"], m["content"]
@@ -291,20 +305,25 @@ def to_openai_messages(system, messages):
             texts, calls, thinks = [], [], []
             for b in content:
                 b = b if isinstance(b, dict) else _block_dict(b)
-                if b.get("type") == "text" and b.get("text"):
+                if b.get("type") == "text" and "text" in b:
                     texts.append(b["text"])
                 elif b.get("type") == "tool_use":
                     calls.append({
                         "id": b["id"], "type": "function",
                         "function": {"name": b["name"],
-                                     "arguments": json.dumps(
-                                         b.get("input") or {})}})
-                elif b.get("type") == "thinking" and b.get("thinking"):
-                    thinks.append(b["thinking"])
-            msg = {"role": "assistant", "content": "\n".join(texts) or None}
+                                     "arguments": b.get("raw") or
+                                     json.dumps(b.get("input") or {})}})
+                elif (b.get("type") == "thinking" and "thinking" in b
+                      and "signature" not in b):
+                    thinks.append(b["thinking"] or "")
+            msg = {"role": "assistant"}
+            # An absent content key is always accepted alongside
+            # tool_calls; "" has been rejected by Moonshot.
+            if texts or not calls:
+                msg["content"] = "\n".join(texts)
             if calls:
                 msg["tool_calls"] = calls
-            if thinks:
+            if thinks or (calls and pad_reasoning):
                 msg["reasoning_content"] = "\n".join(thinks)
             out.append(msg)
         else:
@@ -329,20 +348,76 @@ def _block_dict(b):
         d["text"] = b.text
     elif b.type == "tool_use":
         d.update(id=b.id, name=b.name, input=b.input)
+        if b.raw:
+            d["raw"] = b.raw
     elif b.type == "thinking":
         d["thinking"] = b.thinking
     return d
 
 
 def _reasoning_of(msg):
-    """The provider's reasoning trace, whichever field carries it.  The
-    openai SDK keeps unknown response fields in model_extra."""
+    """The provider's reasoning trace, whichever field carries it, or
+    None when the provider sent no such field.  "" is a real value: the
+    model reasoned and emitted nothing, and Moonshot still wants it
+    echoed.  The openai SDK keeps unknown fields in model_extra."""
     extra = getattr(msg, "model_extra", None) or {}
     for name in REASONING_FIELDS:
-        v = getattr(msg, name, None) or extra.get(name)
-        if isinstance(v, str) and v:
+        v = getattr(msg, name, None)
+        if v is None:
+            v = extra.get(name)
+        if isinstance(v, str):
             return v
-    return ""
+    return None
+
+
+def _retry_after(e, attempts):
+    """Honour Retry-After when the provider sends one, else back off."""
+    resp = getattr(e, "response", None)
+    hdr = resp.headers.get("retry-after") if resp is not None else None
+    try:
+        return max(1, min(300, int(hdr)))
+    except (TypeError, ValueError):
+        return min(60, 2 ** attempts)
+
+
+def _collect(stream):
+    """Fold SSE chunks into the non-streaming shape _translate reads.
+    Usage rides on the final empty-choices chunk (stream_options) or,
+    older style, inside choices[0].usage."""
+    text, trace, calls, finish, usage, saw = [], [], {}, None, None, False
+    for ch in stream:
+        if getattr(ch, "usage", None) is not None:
+            usage = ch.usage
+        if not ch.choices:
+            continue
+        c = ch.choices[0]
+        cu = getattr(c, "usage", None)    # an extra field: arrives as dict
+        if cu:
+            usage = _NS(**cu) if isinstance(cu, dict) else cu
+        finish = c.finish_reason or finish
+        d = c.delta
+        if d is None:
+            continue
+        r = _reasoning_of(d)
+        if r is not None:
+            saw = True
+            trace.append(r)
+        if d.content:
+            text.append(d.content)
+        for tc in d.tool_calls or []:
+            s = calls.setdefault(tc.index, {"id": "", "name": "", "a": []})
+            s["id"] = tc.id or s["id"]
+            if tc.function:
+                s["name"] = tc.function.name or s["name"]
+                s["a"].append(tc.function.arguments or "")
+    msg = _NS(content="".join(text) or None,
+              reasoning_content="".join(trace) if saw else None,
+              model_extra={},
+              tool_calls=[_NS(id=s["id"], function=_NS(
+                  name=s["name"], arguments="".join(s["a"])))
+                  for _, s in sorted(calls.items())] or None)
+    return _NS(choices=[_NS(message=msg, finish_reason=finish or "stop")],
+               usage=usage or _NS(prompt_tokens=0, completion_tokens=0))
 
 
 class OpenAICompatModel:
@@ -355,7 +430,11 @@ class OpenAICompatModel:
     # A max-effort reasoning turn over a 100k-token history can run for
     # minutes; the SDK's own retries are off because the loop below owns
     # the retry policy (and a duplicate long request would double-bill).
+    # When streaming, the timeout is idle time between chunks.
     TIMEOUT_S = 900
+    # A peer's long turn can hold the only low-tier concurrency slot for
+    # minutes, so 429 retries are bounded by wall time, not count.
+    RETRY_WINDOW_S = 1800
 
     def __init__(self, provider, model, reasoning_effort=None):
         import openai
@@ -368,6 +447,8 @@ class OpenAICompatModel:
         self.model = model
         self.reasoning_effort = reasoning_effort
         self.tokens_param = spec.get("tokens_param", "max_tokens")
+        self.pad_reasoning = spec.get("pad_reasoning", False)
+        self.stream = spec.get("stream", False)
         self._openai = openai
         self.client = openai.OpenAI(api_key=key, base_url=spec["base_url"],
                                     timeout=self.TIMEOUT_S, max_retries=0)
@@ -377,25 +458,44 @@ class OpenAICompatModel:
         kwargs = {self.tokens_param: max_tokens}
         if self.reasoning_effort:
             kwargs["reasoning_effort"] = self.reasoning_effort
-        attempts = 0
+        if self.stream:
+            kwargs.update(stream=True,
+                          stream_options={"include_usage": True})
+        attempts, deadline = 0, time.time() + self.RETRY_WINDOW_S
         while True:
             attempts += 1
             try:
                 r = self.client.chat.completions.create(
                     model=self.model,
-                    messages=to_openai_messages(system, messages),
+                    messages=to_openai_messages(system, messages,
+                                                self.pad_reasoning),
                     tools=[OPENAI_BASH_TOOL],
                     **kwargs,
                 )
-                return self._translate(r)
-            except (o.RateLimitError, o.APIConnectionError,
-                    o.APITimeoutError):
+                return self._translate(_collect(r) if self.stream else r)
+            except o.RateLimitError as e:
+                # Moonshot 429 types: engine_overloaded_error and
+                # rate_limit_reached_error pass; an exhausted balance
+                # (exceeded_current_quota_error) will not.
+                if (getattr(e, "type", None) == "exceeded_current_quota_error"
+                        or time.time() > deadline):
+                    raise
+                time.sleep(_retry_after(e, attempts))
+            except (o.APIConnectionError, o.APITimeoutError):
                 if attempts >= 6:
                     raise
                 time.sleep(min(60, 2 ** attempts))
+            except o.BadRequestError as e:
+                # Moonshot moderation (input or output side) is HTTP 400
+                # type=content_filter, never a finish_reason; surface it
+                # as the refusal the loop already retries-then-ends on.
+                if getattr(e, "type", None) == "content_filter":
+                    return Response(content=[], stop_reason="refusal",
+                                    usage=Usage())
+                raise
             except o.APIStatusError as e:
                 if e.status_code >= 500 and attempts < 6:
-                    time.sleep(min(60, 2 ** attempts))
+                    time.sleep(_retry_after(e, attempts))
                     continue
                 raise
 
@@ -404,22 +504,27 @@ class OpenAICompatModel:
         msg = choice.message
         blocks = []
         trace = _reasoning_of(msg)
-        if trace:
+        if trace is not None:
             blocks.append(Block(type="thinking", thinking=trace))
-        if msg.content:
+        if msg.content is not None:
             blocks.append(Block(type="text", text=msg.content))
         for tc in (msg.tool_calls or []):
             try:
                 args = json.loads(tc.function.arguments or "{}")
             except json.JSONDecodeError:
+                if choice.finish_reason == "length":
+                    continue    # half a command must never run
                 args = {"command": tc.function.arguments}
             blocks.append(Block(type="tool_use", id=tc.id,
-                                name=tc.function.name, input=args))
+                                name=tc.function.name, input=args,
+                                raw=tc.function.arguments or ""))
         stop = self.STOP_MAP.get(choice.finish_reason, "end_turn")
         if msg.tool_calls and stop == "end_turn":
             stop = "tool_use"
         u = r.usage
         details = getattr(u, "prompt_tokens_details", None)
+        if isinstance(details, dict):
+            details = _NS(**details)
         cached = (getattr(details, "cached_tokens", None)
                   or getattr(u, "cached_tokens", None) or 0)
         usage = Usage(input_tokens=getattr(u, "prompt_tokens", 0) or 0,
@@ -438,9 +543,26 @@ def make_model(model_string, repo_root):
         return MockWallFollower(repo_root)
     provider, sep, rest = model_string.partition(":")
     if sep and provider in PROVIDERS:
+        spec = PROVIDERS[provider]
         model_id, at, effort = rest.partition("@")
-        if at and effort not in ("low", "medium", "high", "max"):
+        allowed = spec.get("efforts", ("low", "medium", "high", "max"))
+        if at and effort not in allowed:
             raise ValueError(f"unknown reasoning effort {effort!r} in "
-                             f"{model_string!r} (low|medium|high|max)")
-        return OpenAICompatModel(provider, model_id, effort or None)
+                             f"{model_string!r} ({'|'.join(allowed)})")
+        return OpenAICompatModel(provider, model_id,
+                                 effort or spec.get("default_effort"))
     return AnthropicModel(model_string)
+
+
+def model_spec(model):
+    """Provider-neutral description of the model actually used, for run
+    records (the cfg string alone leaves a default effort implicit).
+    Never the base_url or the key."""
+    if isinstance(model, OpenAICompatModel):
+        return dict(provider=model.provider, model_id=model.model,
+                    reasoning_effort=model.reasoning_effort,
+                    tokens_param=model.tokens_param, stream=model.stream)
+    if isinstance(model, AnthropicModel):
+        return dict(provider="anthropic", model_id=model.model,
+                    thinking=thinking_param(model.model))
+    return dict(provider="mock", model_id="wall-follower")
