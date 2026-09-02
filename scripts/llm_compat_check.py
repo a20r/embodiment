@@ -504,6 +504,24 @@ def main():
     llm.PROVIDERS["zai"]["base_url"] = real_zai
     os.environ.pop("ZAI_API_KEY")
 
+    print("== gemini: effort mapping ==")
+    os.environ["GEMINI_API_KEY"] = "stub"
+    gm = llm.make_model("gemini:gemini-3.8-flash@medium", ".")
+    check("gemini accepts @medium and asks for thought summaries",
+          gm.reasoning_effort == "medium" and gm.tokens_param == "max_tokens"
+          and gm.extra_body == {"google": {"thinking_config": {
+              "include_thoughts": True}}})
+    check("gemini default effort is high (3.x default, made explicit)",
+          llm.make_model("gemini:gemini-3.8-flash", ".").reasoning_effort
+          == "high")
+    try:
+        llm.make_model("gemini:gemini-3.8-flash@max", ".")
+        check("gemini rejects @max (no such thinking level)", False)
+    except ValueError as e:
+        check("gemini rejects @max (no such thinking level)",
+              "minimal|low|medium|high" in str(e))
+    os.environ.pop("GEMINI_API_KEY")
+
     print("== provider table ==")
     check("kimi/zai/deepseek/gemini providers registered",
           {"kimi", "zai", "deepseek", "gemini"} <= set(llm.PROVIDERS))

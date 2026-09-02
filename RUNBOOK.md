@@ -278,3 +278,40 @@ GLM-5.3-Flash is the cheapest model on the board within five points
 of the top; DeepSeek V4 Pro is the cheapest within two points.  For
 an append-only harness the cache-hit price dominates input cost, so
 compare output prices first.
+
+### 7.4 Gemini 3.8 Flash
+
+Getting a key (Google AI Studio, no Cloud console work needed):
+
+1. Sign in at https://aistudio.google.com/apikey and click *Create
+   API key*.  Every key belongs to a Google Cloud project; a default
+   one is created for you on accepting the terms.
+2. The key starts on the **Free** tier.  Free-tier prompts and
+   responses "may be used to improve Google products" and are seen by
+   human reviewers - do not run experiments on it.  Click *Set up
+   billing* in AI Studio and attach a billing account: that is Tier 1
+   (instant, $250/month cap; Tier 2 after $100 paid + 3 days).  Paid
+   traffic is not used for training.  Exact RPM/TPM limits are shown
+   per model in AI Studio rather than documented.
+3. Store it like the others; the adapter reads `GEMINI_API_KEY`.
+
+```bash
+install -m 600 /dev/null /root/.mazebot_gemini_key   # then paste the key in
+GEMINI_API_KEY="$(cat /root/.mazebot_gemini_key)" \
+  ./botctl run --set model=gemini:gemini-3.8-flash@high ...
+```
+
+Model id `gemini-3.8-flash`, OpenAI-compatible base
+`https://generativelanguage.googleapis.com/v1beta/openai/`.  The
+`@minimal|low|medium|high` suffix maps onto Gemini's thinking level
+(`high` is the 3.x default and is sent explicitly; thinking cannot be
+switched off on 3.x models).  Pricing (paid tier): $0.75/M input,
+$3.75/M output including thinking tokens, $0.075/M cached input,
+through 31 Dec 2026; doubles on 1 Jan 2027.  Two caveats to settle on
+the pre-spend probe: Google's OpenAI layer is "still in beta", and
+thought summaries requested via `include_thoughts` may not surface
+through chat completions at all ("no mechanism for out-of-band
+transmission" per Google staff), in which case Gemini runs record no
+reasoning trace - unlike Kimi, GLM and DeepSeek.  Explicit context
+caching is a separate, opt-in API; the implicit cache is what the
+`cached` usage field reflects, if the layer reports it.

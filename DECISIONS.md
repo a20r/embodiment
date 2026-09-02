@@ -505,3 +505,20 @@ README does not mention it - the constraint is stated, not enforced,
 and whether the agent honours it is part of what the run measures.
 The README variant otherwise repeats minimal_duo_mission_place word
 for word, one-variable delta as with every other duo ladder step.
+
+### DeepSeek and Gemini provider entries carry their reasoning contracts
+
+Both got explicit PROVIDERS entries instead of `compat:` for the same
+reason as Z.ai: the settings that make a run reproducible must be in
+the run record.  DeepSeek V4 (flash/pro): thinking on by default at
+effort high, and with tools present the API 400s unless every prior
+assistant turn carries its reasoning_content back - Moonshot's contract
+exactly, so pad_reasoning.  Gemini 3.x via Google's OpenAI layer:
+reasoning_effort maps onto thinking_level (minimal|low|medium|high;
+cannot be off), "high" is the default and is sent explicitly;
+include_thoughts is requested through extra_body so a thought summary
+is captured if the layer ever surfaces one - Google staff say chat
+completions has no channel for it, so Gemini runs may record no trace,
+a comparability caveat for the paper.  Model choice itself is guided
+by Terminal-Bench 2.1 against list price (RUNBOOK 7.3): the closest
+public proxy for a bash-tool agent loop.

@@ -277,9 +277,18 @@ PROVIDERS = {
                      key_env="DEEPSEEK_API_KEY",
                      efforts=("low", "high", "max"), default_effort="high",
                      pad_reasoning=True),
+    # Gemini's OpenAI layer maps reasoning_effort onto thinking_level
+    # (minimal|low|medium|high; thinking cannot be turned off on 3.x).
+    # "high" is the 3.x default, sent explicitly for the record.
+    # include_thoughts asks for thought summaries alongside the answer;
+    # they are billed as output either way.
     "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
                             "v1beta/openai/",
-                   key_env="GEMINI_API_KEY"),
+                   key_env="GEMINI_API_KEY",
+                   efforts=("minimal", "low", "medium", "high"),
+                   default_effort="high",
+                   extra_body={"google": {"thinking_config": {
+                       "include_thoughts": True}}}),
     "openai": dict(base_url=None, key_env="OPENAI_API_KEY",
                    tokens_param="max_completion_tokens"),
     # Any OpenAI-compatible endpoint: LLM_BASE_URL + LLM_API_KEY.
