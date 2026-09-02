@@ -505,9 +505,12 @@ def main():
     os.environ.pop("ZAI_API_KEY")
 
     print("== provider table ==")
-    check("kimi/zai/gemini providers registered",
-          {"kimi", "zai", "gemini"} <= set(llm.PROVIDERS))
-    for name in ("kimi", "zai", "gemini"):
+    check("kimi/zai/deepseek/gemini providers registered",
+          {"kimi", "zai", "deepseek", "gemini"} <= set(llm.PROVIDERS))
+    check("deepseek pads reasoning (400 without it when tools present)",
+          llm.PROVIDERS["deepseek"]["pad_reasoning"] is True
+          and llm.PROVIDERS["deepseek"]["default_effort"] == "high")
+    for name in ("kimi", "zai", "deepseek", "gemini"):
         os.environ.pop(llm.PROVIDERS[name]["key_env"], None)
         try:
             llm.make_model(f"{name}:some-model", ".")

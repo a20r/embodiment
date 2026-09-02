@@ -269,6 +269,14 @@ PROVIDERS = {
                 default_effort="max",
                 extra_body={"thinking": {"type": "enabled",
                                          "clear_thinking": False}}),
+    # DeepSeek (deepseek-v4-flash / deepseek-v4-pro).  Thinking is on by
+    # default (effort high); with tools present, reasoning_content must be
+    # passed back on every prior assistant turn or the API 400s - the same
+    # contract as Moonshot, hence pad_reasoning.
+    "deepseek": dict(base_url="https://api.deepseek.com",
+                     key_env="DEEPSEEK_API_KEY",
+                     efforts=("low", "high", "max"), default_effort="high",
+                     pad_reasoning=True),
     "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
                             "v1beta/openai/",
                    key_env="GEMINI_API_KEY"),

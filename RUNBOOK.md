@@ -248,3 +248,33 @@ price.  Z.ai publishes no rate-limit tiers and there are public
 reports of heavy throttling under load; run the same pre-spend probe
 as for Kimi and treat the first duo as a concurrency pilot.  Plain
 JSON requests (no streaming) for now.
+
+### 7.3 DeepSeek V4 and the cheap-tier landscape (Sept 2026)
+
+`deepseek:deepseek-v4-flash` / `deepseek:deepseek-v4-pro` at
+`https://api.deepseek.com` (`DEEPSEEK_API_KEY`).  Thinking is on by
+default at effort `high` (`@low|high|max`); with tools present the API
+requires reasoning_content passed back on every prior assistant turn
+or returns 400, so the provider pads like Moonshot.  Direct prices are
+time-of-day dependent (peak 01-04 and 06-10 UTC Mon-Fri doubles them):
+off-peak flash $0.22/M input, $0.007/M cache hit, $0.66/M output; pro
+$0.66 / $0.022 / $1.98.
+
+Terminal-Bench 2.1 (the closest public proxy for a bash-tool agent
+loop; llm-stats, 2 Sept 2026) against list prices:
+
+| model | TB 2.1 | $/M in | $/M out |
+|---|---|---|---|
+| Gemini 3.8 Flash (`gemini:gemini-3.8-flash`) | 89.4 | 0.75 | 3.75 |
+| Kimi K3 (`kimi:kimi-k3@max`) | 88.3 | 3.00 | 15.00 |
+| GLM-5.3 (`zai:glm-5.3`) | 88.2 | 1.40 | 4.40 |
+| DeepSeek V4 Pro (`deepseek:deepseek-v4-pro`) | 87.9 | 0.66 | 1.98 |
+| GPT-5.6 Luna (`openai:gpt-5.6-luna`) | 84.7 | 0.20 | 1.20 |
+| GLM-5.3-Flash (`zai:glm-5.3-flash`) | 84.3 | 0.15 | 0.50 |
+| Claude Fable 5 | 84.3 | 10.00 | 50.00 |
+| DeepSeek V4 Flash (`deepseek:deepseek-v4-flash`) | 82.7 | 0.22 | 0.66 |
+
+GLM-5.3-Flash is the cheapest model on the board within five points
+of the top; DeepSeek V4 Pro is the cheapest within two points.  For
+an append-only harness the cache-hit price dominates input cost, so
+compare output prices first.

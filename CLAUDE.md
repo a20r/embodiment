@@ -28,10 +28,10 @@ stays on the host and feeds the evals, dashboard, and replay pages.
 - No API key? `--set model=mock:wall-follower` drives the identical
   harness path with a scripted agent.
 - Other providers: `--set model=kimi:<id>[@effort]` / `zai:<id>[@effort]`
-  / `gemini:<id>` / `openai:<id>` / `compat:<id>` (OpenAI-compatible
-  adapter in `harness/llm.py`; keys from `MOONSHOT_API_KEY` /
-  `ZAI_API_KEY` / `GEMINI_API_KEY` / `OPENAI_API_KEY` /
-  `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is `kimi:kimi-k3@max`;
+  / `deepseek:<id>[@effort]` / `gemini:<id>` / `openai:<id>` /
+  `compat:<id>` (OpenAI-compatible adapter in `harness/llm.py`; keys
+  from `MOONSHOT_API_KEY` / `ZAI_API_KEY` / `DEEPSEEK_API_KEY` /
+  `GEMINI_API_KEY` / `OPENAI_API_KEY` / `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is `kimi:kimi-k3@max`;
   "Ox Alpha" is `zai:glm-5.3-flash`; reasoning traces are stored as
   thinking blocks and echoed back verbatim (Moonshot requires it, Z.ai
   keeps it with clear_thinking=false). Token-free check and the gate
