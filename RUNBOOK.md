@@ -149,9 +149,40 @@ export LLM_BASE_URL=https://host/v1 LLM_API_KEY=...   # anything else
 
 The `<model-id>` is passed through verbatim — take it from the
 provider's model list (names change; nothing here hardcodes one).
+An optional `@low|medium|high|max` suffix on the id becomes the
+request's `reasoning_effort` (only for models that take one).
 Keys live in the host environment only; they never enter the
 container or the repo.  Validate the adapter without spending tokens:
 `python scripts/llm_compat_check.py` (stub server on port 8797).
 Caveats: adaptive thinking is Anthropic-only (omitted elsewhere);
 `stop_reason: refusal` maps from `finish_reason: content_filter`; the
 quiz eval's server-side-fallback option remains Anthropic-only.
+
+### 7.1 Kimi K3 ("K3 Max")
+
+The Kimi app's "K3 Max" is the API model `kimi-k3` at
+`https://api.moonshot.ai/v1` run at `reasoning_effort=max` (the API
+default; `low` and `high` also exist).  K3 always reasons: every reply
+carries a `reasoning_content` trace, billed as output, which the
+adapter stores as a `thinking` block and echoes back verbatim on every
+historical assistant turn — Moonshot requires the complete assistant
+message returned unchanged in tool-call chains, and dropping it
+degrades the model.  Sampling parameters are fixed server-side and are
+not sent; the output cap goes as `max_completion_tokens`.
+
+```bash
+# one-time: key file next to the Anthropic one (never in the repo)
+install -m 600 /dev/null /root/.mazebot_kimi_key   # then paste the key in
+export MOONSHOT_API_KEY="$(cat /root/.mazebot_kimi_key)"
+
+./botctl run --set model=kimi:kimi-k3@max ...        # what the app calls K3 Max
+./botctl run --set model=kimi:kimi-k3@low ...        # same model, cheaper
+```
+
+Pricing (Moonshot direct, Sept 2026): $3.00/M input, $0.30/M on cache
+hit, $15.00/M output; 1M context; a $1 minimum top-up opens the API and
+the cumulative top-up tier sets concurrency/RPM/TPM — a duo run needs
+two concurrent long requests.  Transcripts record `usage.cached` per
+turn so the cache-hit share is auditable.  Aggregators (OpenRouter,
+Novita, DeepInfra) list `moonshotai/kimi-k3` at the same price but
+differ in how they surface reasoning; use Moonshot direct.

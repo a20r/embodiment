@@ -52,7 +52,8 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
 
     messages = []
     start_wall = time.time()
-    totals = dict(input=0, output=0, cache_read=0, cache_creation=0)
+    totals = dict(input=0, output=0, cache_read=0, cache_creation=0,
+                  cached=0)
     turns = execs = restarts = nudges = 0
     end_reason = None
     wrapup_rounds_left = None
@@ -158,11 +159,14 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 (getattr(u, "cache_read_input_tokens", 0) or 0)
             totals["cache_creation"] += \
                 (getattr(u, "cache_creation_input_tokens", 0) or 0)
+            totals["cached"] += (getattr(u, "cached_input_tokens", 0) or 0)
             content = model.serialize_content(response.content)
             transcript.write(dict(
                 type="assistant", content=content,
                 stop_reason=response.stop_reason,
-                usage=dict(input=u.input_tokens, output=u.output_tokens),
+                usage=dict(input=u.input_tokens, output=u.output_tokens,
+                           cached=getattr(u, "cached_input_tokens", 0)
+                           or 0),
                 context_tokens=llm.context_tokens(u)))
             messages.append({"role": "assistant", "content": content})
 

@@ -1,11 +1,13 @@
 """Model layer for the episode loop.
 
-Two implementations behind one tiny interface:
+Three implementations behind one tiny interface:
 
   AnthropicModel      real Messages API calls via the official SDK
+  OpenAICompatModel   chat-completions providers (kimi:, gemini:, openai:,
+                      compat:), translating at the boundary
   MockWallFollower    deterministic scripted agent (model: mock:wall-follower)
 
-Both return SDK-shaped objects (content blocks with .type/.text/.id/.name/
+All return SDK-shaped objects (content blocks with .type/.text/.id/.name/
 .input, .stop_reason, .usage) so `episode.py` has exactly one loop.
 
 Deliberate deviations, documented in DECISIONS.md:
@@ -45,6 +47,9 @@ class Usage:
     output_tokens: int = 0
     cache_creation_input_tokens: int = 0
     cache_read_input_tokens: int = 0
+    # OpenAI-style providers report cache hits as a subset of
+    # input_tokens; kept for billing, never added by context_tokens().
+    cached_input_tokens: int = 0
 
 
 @dataclass
@@ -230,21 +235,36 @@ class MockWallFollower:
         return out
 
 
-# OpenAI-compatible providers.  Model strings are "<provider>:<model-id>";
-# the id is passed through verbatim (check the provider's docs for the
-# exact current names).  Keys come from the environment on the host and,
-# like the Anthropic key, never enter the container or the repo.
+# OpenAI-compatible providers.  Model strings are
+# "<provider>:<model-id>[@<reasoning_effort>]"; the id is passed through
+# verbatim (check the provider's docs for the exact current names) and
+# the optional "@low|high|max" suffix becomes the request's
+# reasoning_effort (Kimi K3 always reasons; "max" is what the Kimi app
+# calls K3 Max).  Keys come from the environment on the host and, like
+# the Anthropic key, never enter the container or the repo.
+# tokens_param: the output-cap parameter the endpoint wants (Moonshot
+# and OpenAI deprecate max_tokens in favour of max_completion_tokens).
 PROVIDERS = {
     "kimi": dict(base_url="https://api.moonshot.ai/v1",
-                 key_env="MOONSHOT_API_KEY"),
+                 key_env="MOONSHOT_API_KEY",
+                 tokens_param="max_completion_tokens"),
     "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
                             "v1beta/openai/",
                    key_env="GEMINI_API_KEY"),
-    "openai": dict(base_url=None, key_env="OPENAI_API_KEY"),
+    "openai": dict(base_url=None, key_env="OPENAI_API_KEY",
+                   tokens_param="max_completion_tokens"),
     # Any OpenAI-compatible endpoint: LLM_BASE_URL + LLM_API_KEY.
     "compat": dict(base_url=os.environ.get("LLM_BASE_URL"),
                    key_env="LLM_API_KEY"),
 }
+
+# Reasoning models return their trace as reasoning_content and require
+# it echoed back verbatim on every historical assistant turn (Moonshot:
+# "return the complete assistant message unchanged in multi-turn
+# conversations and tool calls"); dropping it degrades the model.  The
+# trace is stored as a thinking block in the transcript (the dashboard
+# already renders those) and re-attached at the boundary.
+REASONING_FIELDS = ("reasoning_content", "reasoning")
 
 OPENAI_BASH_TOOL = {
     "type": "function",
@@ -259,8 +279,8 @@ OPENAI_BASH_TOOL = {
 def to_openai_messages(system, messages):
     """Anthropic-shaped history (as the harness stores it) -> OpenAI
     chat format.  Assistant tool_use blocks become tool_calls; user
-    tool_result blocks become role=tool messages; thinking blocks are
-    dropped (they are not replayable across providers)."""
+    tool_result blocks become role=tool messages; thinking blocks go
+    back as reasoning_content (the provider's own trace, verbatim)."""
     out = [{"role": "system", "content": system}]
     for m in messages:
         role, content = m["role"], m["content"]
@@ -268,7 +288,7 @@ def to_openai_messages(system, messages):
             out.append({"role": role, "content": content})
             continue
         if role == "assistant":
-            texts, calls = [], []
+            texts, calls, thinks = [], [], []
             for b in content:
                 b = b if isinstance(b, dict) else _block_dict(b)
                 if b.get("type") == "text" and b.get("text"):
@@ -279,9 +299,13 @@ def to_openai_messages(system, messages):
                         "function": {"name": b["name"],
                                      "arguments": json.dumps(
                                          b.get("input") or {})}})
+                elif b.get("type") == "thinking" and b.get("thinking"):
+                    thinks.append(b["thinking"])
             msg = {"role": "assistant", "content": "\n".join(texts) or None}
             if calls:
                 msg["tool_calls"] = calls
+            if thinks:
+                msg["reasoning_content"] = "\n".join(thinks)
             out.append(msg)
         else:
             texts = []
@@ -305,7 +329,20 @@ def _block_dict(b):
         d["text"] = b.text
     elif b.type == "tool_use":
         d.update(id=b.id, name=b.name, input=b.input)
+    elif b.type == "thinking":
+        d["thinking"] = b.thinking
     return d
+
+
+def _reasoning_of(msg):
+    """The provider's reasoning trace, whichever field carries it.  The
+    openai SDK keeps unknown response fields in model_extra."""
+    extra = getattr(msg, "model_extra", None) or {}
+    for name in REASONING_FIELDS:
+        v = getattr(msg, name, None) or extra.get(name)
+        if isinstance(v, str) and v:
+            return v
+    return ""
 
 
 class OpenAICompatModel:
@@ -315,7 +352,12 @@ class OpenAICompatModel:
     STOP_MAP = {"tool_calls": "tool_use", "stop": "end_turn",
                 "length": "max_tokens", "content_filter": "refusal"}
 
-    def __init__(self, provider, model):
+    # A max-effort reasoning turn over a 100k-token history can run for
+    # minutes; the SDK's own retries are off because the loop below owns
+    # the retry policy (and a duplicate long request would double-bill).
+    TIMEOUT_S = 900
+
+    def __init__(self, provider, model, reasoning_effort=None):
         import openai
         spec = PROVIDERS[provider]
         key = os.environ.get(spec["key_env"])
@@ -324,11 +366,17 @@ class OpenAICompatModel:
                 f"{spec['key_env']} is not set (needed for {provider}:)")
         self.provider = provider
         self.model = model
+        self.reasoning_effort = reasoning_effort
+        self.tokens_param = spec.get("tokens_param", "max_tokens")
         self._openai = openai
-        self.client = openai.OpenAI(api_key=key, base_url=spec["base_url"])
+        self.client = openai.OpenAI(api_key=key, base_url=spec["base_url"],
+                                    timeout=self.TIMEOUT_S, max_retries=0)
 
     def create(self, system, messages, max_tokens=16000):
         o = self._openai
+        kwargs = {self.tokens_param: max_tokens}
+        if self.reasoning_effort:
+            kwargs["reasoning_effort"] = self.reasoning_effort
         attempts = 0
         while True:
             attempts += 1
@@ -337,10 +385,11 @@ class OpenAICompatModel:
                     model=self.model,
                     messages=to_openai_messages(system, messages),
                     tools=[OPENAI_BASH_TOOL],
-                    max_tokens=max_tokens,
+                    **kwargs,
                 )
                 return self._translate(r)
-            except (o.RateLimitError, o.APIConnectionError):
+            except (o.RateLimitError, o.APIConnectionError,
+                    o.APITimeoutError):
                 if attempts >= 6:
                     raise
                 time.sleep(min(60, 2 ** attempts))
@@ -354,6 +403,9 @@ class OpenAICompatModel:
         choice = r.choices[0]
         msg = choice.message
         blocks = []
+        trace = _reasoning_of(msg)
+        if trace:
+            blocks.append(Block(type="thinking", thinking=trace))
         if msg.content:
             blocks.append(Block(type="text", text=msg.content))
         for tc in (msg.tool_calls or []):
@@ -367,8 +419,12 @@ class OpenAICompatModel:
         if msg.tool_calls and stop == "end_turn":
             stop = "tool_use"
         u = r.usage
+        details = getattr(u, "prompt_tokens_details", None)
+        cached = (getattr(details, "cached_tokens", None)
+                  or getattr(u, "cached_tokens", None) or 0)
         usage = Usage(input_tokens=getattr(u, "prompt_tokens", 0) or 0,
-                      output_tokens=getattr(u, "completion_tokens", 0) or 0)
+                      output_tokens=getattr(u, "completion_tokens", 0) or 0,
+                      cached_input_tokens=cached)
         return Response(content=blocks, stop_reason=stop, usage=usage)
 
     @staticmethod
@@ -382,5 +438,9 @@ def make_model(model_string, repo_root):
         return MockWallFollower(repo_root)
     provider, sep, rest = model_string.partition(":")
     if sep and provider in PROVIDERS:
-        return OpenAICompatModel(provider, rest)
+        model_id, at, effort = rest.partition("@")
+        if at and effort not in ("low", "medium", "high", "max"):
+            raise ValueError(f"unknown reasoning effort {effort!r} in "
+                             f"{model_string!r} (low|medium|high|max)")
+        return OpenAICompatModel(provider, model_id, effort or None)
     return AnthropicModel(model_string)

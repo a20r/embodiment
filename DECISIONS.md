@@ -423,3 +423,24 @@ lands on the corner and the chamber stays sealed.  duo_check gates it
 (chamber within span; attach gaps < robot diameter).  duo11's world
 was generated before the fix and is compromised for the together
 objective; it is recorded as-is, not re-scored.
+
+### Reasoning models: the trace is stored and echoed, effort rides on the model string
+
+Kimi K3 (what the Kimi app calls "K3 Max" is `kimi-k3` at
+reasoning_effort=max) always reasons and requires the complete
+assistant message - reasoning_content included - returned unchanged on
+every historical turn of a tool-call chain; a harness that keeps only
+text and tool_calls silently degrades the model.  The compat adapter
+therefore captures reasoning_content (or `reasoning`) as a `thinking`
+block, the shape the transcript, dashboard and Anthropic path already
+know, and re-attaches it as reasoning_content at the boundary.  The
+effort knob is an `@low|medium|high|max` suffix on the model string
+rather than a config key so that every place a run records `model`
+(summary.json, transcript meta, series.json) records the effort too and
+no plumbing changes.  Per-provider `tokens_param` sends
+max_completion_tokens where max_tokens is deprecated (Moonshot,
+OpenAI); fixed sampling parameters are never sent.  The client timeout
+is 900 s with SDK retries off - the loop owns retries, and a duplicated
+max-effort request would double-bill.  OpenAI-style cache hits
+(`cached_tokens`) are recorded as `usage.cached`, a subset of input,
+never added to the context estimate.
