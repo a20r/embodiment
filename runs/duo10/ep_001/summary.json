@@ -1,0 +1,71 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-fable-5",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5",
+      "noise_profile": "default_noisy",
+      "maze_hash": "a6ca4a32640bbd3e",
+      "end_reason": "wallclock",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 726872,
+      "sim_time_s": 14537.44,
+      "comms": {
+        "tx": 343,
+        "tx_delivered": 222,
+        "rx_read": 895,
+        "tx_rate_dropped": 18
+      },
+      "wall_s": 7266.3,
+      "turns": 240,
+      "execs": 250,
+      "restarts": 1,
+      "tokens": {
+        "input": 480,
+        "output": 142610,
+        "cache_read": 21986136,
+        "cache_creation": 200597
+      },
+      "collisions": 9587
+    },
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5",
+      "noise_profile": "default_noisy",
+      "maze_hash": "a6ca4a32640bbd3e",
+      "end_reason": "wallclock",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 727079,
+      "sim_time_s": 14541.58,
+      "comms": {
+        "tx": 2090,
+        "tx_delivered": 895,
+        "rx_read": 222,
+        "tx_rate_dropped": 461
+      },
+      "wall_s": 7268.4,
+      "turns": 188,
+      "execs": 191,
+      "restarts": 0,
+      "tokens": {
+        "input": 376,
+        "output": 71524,
+        "cache_read": 13895440,
+        "cache_creation": 115249
+      },
+      "collisions": 633
+    }
+  },
+  "solved_all": false,
+  "final_tick": 727087
+}
