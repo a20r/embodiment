@@ -1,0 +1,8 @@
+wall t=  11 side=1 v=0.796 pos=(27.90,-32.24) fr=0.29 st={'tick': 721689, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.778 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t=  14 side=1 v=0.792 pos=(28.06,-32.13) fr=0.25 st={'tick': 721991, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.822 COLDER (turn around). Goal=my position. Stop when your here=1.
+rx botA PING x=-4.014 y=4.002 d11=0.771 here=1 seq=1448
+rx botA COACH d11=0.778 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+rx botA COACH d11=0.765 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+rx botA: episode ending. AGREED PLAN for next time: I park ON goal (here=1) and stay. YOU enter via the DOOR at the WEST END of the long EAST-WEST corridor - door is on the corridor's NORTH wall. Approach the goal chamber from the SOUTH-EAST. If lost, minimiz
