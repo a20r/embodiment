@@ -27,6 +27,11 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   (default 127.0.0.1:8080) against the running daemon.
 - No API key? `--set model=mock:wall-follower` drives the identical
   harness path with a scripted agent.
+- Other providers: `--set model=kimi:<id>` / `gemini:<id>` /
+  `openai:<id>` / `compat:<id>` (OpenAI-compatible adapter in
+  `harness/llm.py`; keys from `MOONSHOT_API_KEY` / `GEMINI_API_KEY` /
+  `OPENAI_API_KEY` / `LLM_BASE_URL`+`LLM_API_KEY`). Token-free check:
+  `python scripts/llm_compat_check.py`.
 
 ## Architecture
 

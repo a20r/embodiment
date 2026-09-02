@@ -126,3 +126,32 @@ python scripts/make_duo_replay.py duo1 ep_001 duo1_replay.html "Duo"
 
 Validate the machinery without spending tokens:
 `python scripts/duo_check.py` (host-side, no docker needed).
+
+## 7. Other model providers
+
+The agent model is selected by `model:` (config.yaml or `--set model=`).
+Bare names are Anthropic (`claude-...`); `mock:wall-follower` is the
+scripted agent.  Any OpenAI-compatible provider works via a prefix:
+
+```bash
+export MOONSHOT_API_KEY=...   # Kimi (Moonshot)
+./botctl run --set model=kimi:<model-id> ...
+
+export GEMINI_API_KEY=...     # Google Gemini (OpenAI-compatible endpoint)
+./botctl run --set model=gemini:<model-id> ...
+
+export OPENAI_API_KEY=...     # OpenAI
+./botctl run --set model=openai:<model-id> ...
+
+export LLM_BASE_URL=https://host/v1 LLM_API_KEY=...   # anything else
+./botctl run --set model=compat:<model-id> ...
+```
+
+The `<model-id>` is passed through verbatim — take it from the
+provider's model list (names change; nothing here hardcodes one).
+Keys live in the host environment only; they never enter the
+container or the repo.  Validate the adapter without spending tokens:
+`python scripts/llm_compat_check.py` (stub server on port 8797).
+Caveats: adaptive thinking is Anthropic-only (omitted elsewhere);
+`stop_reason: refusal` maps from `finish_reason: content_filter`; the
+quiz eval's server-side-fallback option remains Anthropic-only.

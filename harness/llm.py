@@ -230,7 +230,157 @@ class MockWallFollower:
         return out
 
 
+# OpenAI-compatible providers.  Model strings are "<provider>:<model-id>";
+# the id is passed through verbatim (check the provider's docs for the
+# exact current names).  Keys come from the environment on the host and,
+# like the Anthropic key, never enter the container or the repo.
+PROVIDERS = {
+    "kimi": dict(base_url="https://api.moonshot.ai/v1",
+                 key_env="MOONSHOT_API_KEY"),
+    "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
+                            "v1beta/openai/",
+                   key_env="GEMINI_API_KEY"),
+    "openai": dict(base_url=None, key_env="OPENAI_API_KEY"),
+    # Any OpenAI-compatible endpoint: LLM_BASE_URL + LLM_API_KEY.
+    "compat": dict(base_url=os.environ.get("LLM_BASE_URL"),
+                   key_env="LLM_API_KEY"),
+}
+
+OPENAI_BASH_TOOL = {
+    "type": "function",
+    "function": {
+        "name": BASH_TOOL["name"],
+        "description": BASH_TOOL["description"],
+        "parameters": BASH_TOOL["input_schema"],
+    },
+}
+
+
+def to_openai_messages(system, messages):
+    """Anthropic-shaped history (as the harness stores it) -> OpenAI
+    chat format.  Assistant tool_use blocks become tool_calls; user
+    tool_result blocks become role=tool messages; thinking blocks are
+    dropped (they are not replayable across providers)."""
+    out = [{"role": "system", "content": system}]
+    for m in messages:
+        role, content = m["role"], m["content"]
+        if isinstance(content, str):
+            out.append({"role": role, "content": content})
+            continue
+        if role == "assistant":
+            texts, calls = [], []
+            for b in content:
+                b = b if isinstance(b, dict) else _block_dict(b)
+                if b.get("type") == "text" and b.get("text"):
+                    texts.append(b["text"])
+                elif b.get("type") == "tool_use":
+                    calls.append({
+                        "id": b["id"], "type": "function",
+                        "function": {"name": b["name"],
+                                     "arguments": json.dumps(
+                                         b.get("input") or {})}})
+            msg = {"role": "assistant", "content": "\n".join(texts) or None}
+            if calls:
+                msg["tool_calls"] = calls
+            out.append(msg)
+        else:
+            texts = []
+            for b in content:
+                if isinstance(b, dict) and b.get("type") == "tool_result":
+                    c = b.get("content", "")
+                    out.append({"role": "tool",
+                                "tool_call_id": b["tool_use_id"],
+                                "content": c if isinstance(c, str)
+                                else json.dumps(c)})
+                elif isinstance(b, dict) and b.get("type") == "text":
+                    texts.append(b.get("text", ""))
+            if texts:
+                out.append({"role": "user", "content": "\n".join(texts)})
+    return out
+
+
+def _block_dict(b):
+    d = {"type": b.type}
+    if b.type == "text":
+        d["text"] = b.text
+    elif b.type == "tool_use":
+        d.update(id=b.id, name=b.name, input=b.input)
+    return d
+
+
+class OpenAICompatModel:
+    """Chat-completions adapter presenting the same interface as
+    AnthropicModel (content blocks, stop_reason, usage)."""
+
+    STOP_MAP = {"tool_calls": "tool_use", "stop": "end_turn",
+                "length": "max_tokens", "content_filter": "refusal"}
+
+    def __init__(self, provider, model):
+        import openai
+        spec = PROVIDERS[provider]
+        key = os.environ.get(spec["key_env"])
+        if not key:
+            raise RuntimeError(
+                f"{spec['key_env']} is not set (needed for {provider}:)")
+        self.provider = provider
+        self.model = model
+        self._openai = openai
+        self.client = openai.OpenAI(api_key=key, base_url=spec["base_url"])
+
+    def create(self, system, messages, max_tokens=16000):
+        o = self._openai
+        attempts = 0
+        while True:
+            attempts += 1
+            try:
+                r = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=to_openai_messages(system, messages),
+                    tools=[OPENAI_BASH_TOOL],
+                    max_tokens=max_tokens,
+                )
+                return self._translate(r)
+            except (o.RateLimitError, o.APIConnectionError):
+                if attempts >= 6:
+                    raise
+                time.sleep(min(60, 2 ** attempts))
+            except o.APIStatusError as e:
+                if e.status_code >= 500 and attempts < 6:
+                    time.sleep(min(60, 2 ** attempts))
+                    continue
+                raise
+
+    def _translate(self, r):
+        choice = r.choices[0]
+        msg = choice.message
+        blocks = []
+        if msg.content:
+            blocks.append(Block(type="text", text=msg.content))
+        for tc in (msg.tool_calls or []):
+            try:
+                args = json.loads(tc.function.arguments or "{}")
+            except json.JSONDecodeError:
+                args = {"command": tc.function.arguments}
+            blocks.append(Block(type="tool_use", id=tc.id,
+                                name=tc.function.name, input=args))
+        stop = self.STOP_MAP.get(choice.finish_reason, "end_turn")
+        if msg.tool_calls and stop == "end_turn":
+            stop = "tool_use"
+        u = r.usage
+        usage = Usage(input_tokens=getattr(u, "prompt_tokens", 0) or 0,
+                      output_tokens=getattr(u, "completion_tokens", 0) or 0)
+        return Response(content=blocks, stop_reason=stop, usage=usage)
+
+    @staticmethod
+    def serialize_content(content):
+        return [b if isinstance(b, dict) else _block_dict(b)
+                for b in content]
+
+
 def make_model(model_string, repo_root):
     if model_string.startswith("mock:"):
         return MockWallFollower(repo_root)
+    provider, sep, rest = model_string.partition(":")
+    if sep and provider in PROVIDERS:
+        return OpenAICompatModel(provider, rest)
     return AnthropicModel(model_string)

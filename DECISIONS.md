@@ -395,3 +395,18 @@ flag? an object? a signal?).  README.minimal_duo_mission_place adds
 one clause - "The goal is a physical location" - and nothing about
 how arrival is sensed or where it is.  Discovery of the where and the
 how stays intact; only the category is given.
+
+### Multi-provider models via an OpenAI-compatible adapter
+
+Moonshot (Kimi) and Google (Gemini) both expose OpenAI-style chat
+completions, so one adapter (harness/llm.py: OpenAICompatModel) covers
+them plus OpenAI and any `compat:` endpoint.  The harness keeps its
+Anthropic-shaped history (content blocks, tool_use/tool_result) and
+the adapter translates at the boundary: tool_use -> tool_calls,
+tool_result -> role=tool, thinking blocks dropped (not replayable
+across providers), finish_reason -> stop_reason (content_filter ->
+refusal so the purity rule - retry same model, then end - applies
+unchanged).  Model ids are pass-through by design: provider names
+churn and hardcoding one would rot.  scripts/llm_compat_check.py is
+the token-free gate: a stub server scripts a tool call and a final
+turn and asserts both translation directions.
