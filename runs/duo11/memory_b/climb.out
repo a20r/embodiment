@@ -1,0 +1,16 @@
+iter 0 pose=(23.29,18.90) rssi=0.340
+  h=0 v=0.316 keep
+iter 1 pose=(24.89,18.82) rssi=0.315
+  h=0 v=0.223 back (res=done)
+  h=90 v=0.175 back (res=done)
+  h=180 v=0.365 GOOD
+iter 2 pose=(23.26,18.85) rssi=0.375
+  h=180 v=0.271 back (res=done)
+  h=0 v=0.361 keep
+iter 3 pose=(24.88,18.77) rssi=0.366
+  h=0 v=0.245 back (res=done)
+  h=90 v=0.186 back (res=done)
+  h=180 v=0.391 keep
+iter 4 pose=(23.26,18.81) rssi=0.384
+  h=180 v=0.264 back (res=done)
+  h=0 v=0.334 back (res=done)
