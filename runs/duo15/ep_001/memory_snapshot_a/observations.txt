@@ -1,0 +1,12 @@
+Observations from exploration:
+1. Robot starts at some location (distance=645+ in d6)
+2. Heading drifts naturally but can be influenced with d1
+3. Goal has not been found yet with basic searches
+4. The "here" field in d3 is still 0 after traveling hundreds of units
+5. No communication from other robot yet
+
+Hypotheses:
+- Goal might be at a very specific location (cardinal direction + distance)
+- Goal might be triggered by reaching a specific heading for a duration
+- Goal might require both robots to arrive together
+- Goal might broadcast a signal we need to detect
