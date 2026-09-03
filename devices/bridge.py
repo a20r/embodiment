@@ -203,13 +203,13 @@ class DeviceBridge:
             return w.lidar3d_frame()
         raise ValueError(logical)
 
-    # Ground truth records the exact frame served, but a point cloud is
-    # tens of kB per read; log a digest instead (count + hash), which
-    # still proves what was served without bloating the record.
+    # Ground truth records the exact frame served; the point cloud is
+    # the one device whose frames are tens of kB, so it alone is logged
+    # as a digest (count + hash), which still proves what was served.
     DIGEST_OVER = 512
 
-    def _frame_record(self, frame):
-        if len(frame) <= self.DIGEST_OVER:
+    def _frame_record(self, frame, logical):
+        if logical != "lidar3d" or len(frame) <= self.DIGEST_OVER:
             return frame
         import hashlib
         return (f"<{len(frame)}B {frame.count(';') + 1}pts "
@@ -218,8 +218,8 @@ class DeviceBridge:
     def _interval(self, logical):
         """Seconds between frames for a held-open reader."""
         if logical == "lidar3d":
-            hz = float(self.world.lidar3d_cfg.get("stream_hz", 10) or 10)
-            return 1.0 / hz
+            # stream_hz is validated > 0 in sim/config.py.
+            return 1.0 / float(self.world.lidar3d_cfg.get("stream_hz", 10))
         return FRAME_INTERVAL
 
     def _sensor_loop(self, path, filename, logical):
@@ -253,7 +253,8 @@ class DeviceBridge:
                         self.read_counts.get(filename, 0) + 1
                     self.log(dict(event="read", dev=filename,
                                   physical=logical,
-                                  value=self._frame_record(frame),
+                                  value=self._frame_record(frame,
+                                                           logical),
                                   t=tick))
             except (BrokenPipeError, OSError):
                 pass

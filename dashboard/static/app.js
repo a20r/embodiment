@@ -70,6 +70,7 @@ async function selectEpisode(ep, running) {
   S.ep = ep; S.running = !!running;
   S.liveTrail = []; S.transcriptCursor = 0; S.lastState = null;
   S.replay = { poses: [], events: [], idx: 0, playing: false };
+  if (window.view3dReset) window.view3dReset();
   $("#tab-transcript").innerHTML = "";
   $("#memory-view").innerHTML = '<div class="empty">select a file</div>';
   const q = `series=${encodeURIComponent(S.series)}&ep=${ep}`;

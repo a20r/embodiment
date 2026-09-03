@@ -320,15 +320,18 @@ caching is a separate, opt-in API; the implicit cache is what the
 
 `--set lidar3d.enabled=true` replaces the 16-beam `lidar` port with a
 `lidar3d` port: a spinning multi-ring unit (defaults: 16 rings over a
-30 deg vertical field, 180 azimuths, 3 m range, mounted 0.12 m up)
-returning one frame per `cat` as `x,y,z` triples in meters separated
-by `;`, in the sensor frame (x forward, y left, z up, origin at the
-sensor).  The world grows a floor at z=0, walls 0.40 m tall, a
-0.15 m-tall peer and a 0.25 m key post, so rings paint the floor near
-the robot, wall faces out to where the beam clears the wall top, and
-nothing beyond; no-return points are omitted.  A frame is ~55 kB and
-casts in under 10 ms; a held-open reader streams at `lidar3d.stream_hz`
-(10) instead of 40.  Ground truth logs each read as a digest
+30 deg vertical field, 180 azimuths, 3 m range, mounted 0.15 m up on
+top of the body) returning one frame per `cat` as `x,y,z` triples in
+meters separated by `;`, in the sensor frame (x forward, y left, z up,
+origin at the sensor).  The world grows a floor at z=0, walls 0.40 m
+tall, a 0.15 m-tall peer and a 0.25 m key post, so rings paint the
+floor near the robot, wall faces out to where the beam clears the wall
+top, and nothing beyond; no-return points are omitted.  A frame is
+~55 kB and casts in 5-10 ms on grid mazes, ~40 ms on organic ones, off
+the world lock; a held-open reader streams at `lidar3d.stream_hz` (10)
+instead of 40.  The mock agent and `scripts/probe.py` drive the 2D
+lidar, so `model=mock:*` is rejected with lidar3d on.  Ground truth
+logs each read as a digest
 (`<55513B 2845pts sha1=...>`) rather than the frame.  With labels on
 the README variant `labeled_lidar3d` is selected automatically; with
 labels off nothing changes and the agent must work out what a 55 kB

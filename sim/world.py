@@ -117,6 +117,7 @@ class World:
         self.lidar_cfg = cfg["lidar"]
         self.lidar3d_cfg = cfg.get("lidar3d") or {}
         self.lidar3d_on = bool(self.lidar3d_cfg.get("enabled"))
+        self._cloud_cache = None      # (tick, world-frame cloud)
         self.dt = 1.0 / cfg["sim"]["tick_hz"]
         self.log = log_fn or (lambda rec: None)
         self.episode_index = episode_index
@@ -514,44 +515,44 @@ class World:
         n = int(self.lidar3d_cfg["azimuths"])
         return [k * TWO_PI / n for k in range(n)]
 
-    def _height_groups(self):
-        """[(segments, height)] per solid class, built once per frame."""
+    def _height_groups(self, px, py):
+        """[(segments, height)] per solid class for one frame.  Solids
+        have no modelled top: config keeps the sensor no higher than the
+        peer and the post, so no ring can pass over a near face and
+        then land inside a body."""
         c = self.lidar3d_cfg
-        walls = list(self._index.near(self.x, self.y, c["max_range"] + 0.1))
+        walls = list(self._index.near(px, py, c["max_range"] + 0.1))
         walls.extend(self._solid_extra())
         groups = [(walls, c["wall_height"])]
         if self._key_segments and not self.key_carried:
             groups.append((self._key_segments, c["post_height"]))
         if self.peer is not None:
-            px, py = self.peer.x, self.peer.y
+            qx, qy = self.peer.x, self.peer.y
             pr = self.peer.robot_cfg["radius"]
-            pts = [(px + pr * math.cos(a), py + pr * math.sin(a))
+            pts = [(qx + pr * math.cos(a), qy + pr * math.sin(a))
                    for a in [k * TWO_PI / 8 for k in range(9)]]
             groups.append(([(p[0], p[1], q[0], q[1])
                             for p, q in zip(pts, pts[1:])],
                            c["robot_height"]))
         return groups
 
-    def _ring_hits(self, angle, groups):
-        """Range per ring along one azimuth; None = no return."""
-        c = self.lidar3d_cfg
-        mr = c["max_range"]
-        hs = c["sensor_height"]
+    @staticmethod
+    def _ring_hits(px, py, angle, groups, rings, mr, hs):
+        """Range per ring along one azimuth; None = no return.  rings is
+        [(cos e, sin e, tan e)], precomputed once per frame."""
         dx, dy = math.cos(angle), math.sin(angle)
         faces = []
         for segs, h in groups:
             best = None
             for seg in segs:
-                t = _ray_seg(self.x, self.y, dx, dy, *seg)
+                t = _ray_seg(px, py, dx, dy, *seg)
                 if t is not None and t < mr and (best is None or t < best):
                     best = t
             if best is not None:
                 faces.append((best, h))
         faces.sort()
         out = []
-        for e in self._ring_elevations():
-            ce, se = math.cos(e), math.sin(e)
-            tan_e = se / ce
+        for ce, se, tan_e in rings:
             d_floor = -hs / tan_e if se < -1e-9 else None
             r = None
             for d, h in faces:
@@ -565,45 +566,61 @@ class World:
             out.append(r if r is not None and r <= mr else None)
         return out
 
-    def lidar3d_points(self, noisy):
-        """Sensor-frame points (x forward, y left, z up; origin at the
-        sensor) for one frame.  Dropped points are omitted, as a real
-        unit omits no-returns."""
-        n = self.noise
-        sigma = n.get("lidar3d_sigma_m", 0.0)
-        drop = n.get("lidar3d_dropout_p", 0.0)
-        pts = []
+    def _cast_cloud(self, noisy):
+        """One frame of sensor-frame points (x forward, y left, z up;
+        origin at the sensor).  The pose and the solids are snapshotted
+        under the lock; the cast itself (tens of ms on organic mazes)
+        runs without it, so a held-open reader or the dashboard can
+        never stall the tick loop.  Dropped or out-of-range points are
+        omitted, as a real unit omits no-returns."""
+        c = self.lidar3d_cfg
         with self.lock:
-            groups = self._height_groups()
-            elevs = self._ring_elevations()
-            for a_rel in self._azimuths3d():
-                hits = self._ring_hits(self.theta + a_rel, groups)
-                ca, sa = math.cos(a_rel), math.sin(a_rel)
-                for e, r in zip(elevs, hits):
-                    if r is None:
+            px, py, theta, tick = self.x, self.y, self.theta, self.tick
+            groups = self._height_groups(px, py)
+        n = self.noise
+        sigma = n.get("lidar3d_sigma_m", 0.0) if noisy else 0.0
+        drop = n.get("lidar3d_dropout_p", 0.0) if noisy else 0.0
+        mr, hs = c["max_range"], c["sensor_height"]
+        rings = [(math.cos(e), math.sin(e), math.tan(e))
+                 for e in self._ring_elevations()]
+        pts = []
+        for a_rel in self._azimuths3d():
+            hits = self._ring_hits(px, py, theta + a_rel, groups, rings,
+                                   mr, hs)
+            ca, sa = math.cos(a_rel), math.sin(a_rel)
+            for (ce, se, _), r in zip(rings, hits):
+                if r is None:
+                    continue
+                if drop > 0 and self.rng_lidar.random() < drop:
+                    continue
+                if sigma > 0:
+                    r += self.rng_lidar.gauss(0.0, sigma)
+                    if r < 0.0 or r > mr:
                         continue
-                    if noisy:
-                        if drop > 0 and self.rng_lidar.random() < drop:
-                            continue
-                        if sigma > 0:
-                            r = max(0.0, r + self.rng_lidar.gauss(0.0, sigma))
-                    ce = math.cos(e)
-                    pts.append((r * ce * ca, r * ce * sa, r * math.sin(e)))
-        return pts
+                pts.append((r * ce * ca, r * ce * sa, r * se))
+        return tick, (px, py, theta), pts
+
+    def lidar3d_points(self, noisy):
+        return self._cast_cloud(noisy)[2]
 
     def lidar3d_frame(self):
         return ";".join(f"{x:.3f},{y:.3f},{z:.3f}"
                         for x, y, z in self.lidar3d_points(noisy=True))
 
     def lidar3d_true(self):
-        """Noise-free cloud in world coordinates (dashboard use only)."""
-        with self.lock:
-            ct, st = math.cos(self.theta), math.sin(self.theta)
-            hs = self.lidar3d_cfg["sensor_height"]
-            return [[round(self.x + x * ct - y * st, 3),
-                     round(self.y + x * st + y * ct, 3),
-                     round(hs + z, 3)]
-                    for x, y, z in self.lidar3d_points(noisy=False)]
+        """Noise-free cloud in world coordinates (dashboard use only),
+        cached per tick so concurrent pollers share one cast."""
+        cached = self._cloud_cache
+        if cached is not None and cached[0] == self.tick:
+            return cached[1]
+        tick, (px, py, theta), pts = self._cast_cloud(noisy=False)
+        ct, st = math.cos(theta), math.sin(theta)
+        hs = self.lidar3d_cfg["sensor_height"]
+        cloud = [[round(px + x * ct - y * st, 3),
+                  round(py + x * st + y * ct, 3), round(hs + z, 3)]
+                 for x, y, z in pts]
+        self._cloud_cache = (tick, cloud)
+        return cloud
 
     def heading_frame(self):
         n = self.noise

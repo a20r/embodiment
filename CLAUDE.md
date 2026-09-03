@@ -19,7 +19,7 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   maze.style=organic`). Other subcommands: `reset`, `perturb`, `quiz`,
   `ablate`, `savings`, `report`, `shell`, `tail`, `dashboard`, `smoke`.
 - `python scripts/duo_check.py` — host-side validation of duo mode
-  (51 checks, no docker needed; boots a throwaway daemon on port 8798).
+  (50 checks, no docker needed; boots a throwaway daemon on port 8798).
 - `--set lidar3d.enabled=true` swaps the 16-beam `lidar` port for a
   `lidar3d` point-cloud port (sensor-frame `x,y,z` triples, `;`-separated,
   ~55 kB frames; walls have height, floor at z=0). Gate for lidar3d

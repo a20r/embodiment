@@ -40,22 +40,28 @@ def make_handler(daemon):
                 snap = daemon.world.snapshot(since_tick=since)
                 snap["paused"] = daemon.paused
                 snap["realtime_factor"] = daemon.rtf
-                snap["lidar_true"] = daemon.world.lidar_true()
-                snap["ray_angles"] = daemon.world.ray_angles()
+                l3 = daemon.world.lidar3d_on
+                if not l3:
+                    # The beam scan only exists when the point cloud
+                    # does not; the dashboard draws whatever is here.
+                    snap["lidar_true"] = daemon.world.lidar_true()
+                    snap["ray_angles"] = daemon.world.ray_angles()
                 snap["device_stats"] = daemon.bridge.stats()
-                # The 3D cloud is ~3k points per robot; only cast it
-                # when a viewer asks (cloud=1) and the sensor exists.
-                cloud = q.get("cloud", ["0"])[0] == "1" \
-                    and daemon.world.lidar3d_on
+                # The 3D cloud is ~3k points per robot; cast it only
+                # when a viewer asks (cloud=1), once per world.
+                cloud = q.get("cloud", ["0"])[0] == "1" and l3
+                duo = len(daemon.worlds) > 1
                 if cloud:
-                    snap["lidar3d_true"] = daemon.world.lidar3d_true()
                     snap["lidar3d_cfg"] = daemon.world.lidar3d_cfg
-                if len(daemon.worlds) > 1:
+                    if not duo:
+                        snap["lidar3d_true"] = daemon.world.lidar3d_true()
+                if duo:
                     bots = []
                     for world, bridge in zip(daemon.worlds,
                                              daemon.bridges):
                         b = world.snapshot(since_tick=since)
-                        b["lidar_true"] = world.lidar_true()
+                        if not l3:
+                            b["lidar_true"] = world.lidar_true()
                         if cloud:
                             b["lidar3d_true"] = world.lidar3d_true()
                         b["device_stats"] = bridge.stats()

@@ -121,7 +121,7 @@ DEFAULTS = {
         "azimuths": 180,         # points per ring per frame (2 deg)
         "vfov_deg": 30.0,        # symmetric about horizontal
         "max_range": 3.0,        # m
-        "sensor_height": 0.12,   # m above the floor
+        "sensor_height": 0.15,   # m above the floor: on top of the body
         "wall_height": 0.40,     # m
         "robot_height": 0.15,    # m (the peer, seen as a cylinder)
         "post_height": 0.25,     # m (the key)
@@ -263,13 +263,32 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("duo.objective must be 'solo' or 'together'")
     l3 = cfg.get("lidar3d", {})
     if l3.get("enabled"):
-        if l3["rings"] < 1 or l3["azimuths"] < 1:
-            raise ValueError("lidar3d.rings and lidar3d.azimuths must be >= 1")
+        num = (int, float)
+        for k in ("rings", "azimuths"):
+            v = l3[k]
+            if not (isinstance(v, num) and v >= 1 and int(v) == v):
+                raise ValueError(f"lidar3d.{k} must be a positive integer")
         if not 0 < l3["vfov_deg"] < 180:
             raise ValueError("lidar3d.vfov_deg must be in (0, 180)")
-        if not 0 < l3["sensor_height"] < l3["wall_height"]:
-            raise ValueError("lidar3d.sensor_height must sit below "
-                             "wall_height")
+        if not (isinstance(l3["max_range"], num) and l3["max_range"] > 0):
+            raise ValueError("lidar3d.max_range must be > 0")
+        if not (isinstance(l3["stream_hz"], num) and l3["stream_hz"] > 0):
+            raise ValueError("lidar3d.stream_hz must be > 0")
+        heights = [l3[k] for k in ("wall_height", "robot_height",
+                                   "post_height")]
+        if min(heights) < 0:
+            raise ValueError("lidar3d heights must be >= 0")
+        hs = l3["sensor_height"]
+        # Solids have no modelled top face: a sensor above one would
+        # see through it, so it must sit no higher than the shortest.
+        if not (0 < hs <= min(l3["robot_height"], l3["post_height"])
+                and hs < l3["wall_height"]):
+            raise ValueError("lidar3d.sensor_height must be above the "
+                             "floor, no higher than robot_height and "
+                             "post_height, and below wall_height")
+        if str(cfg.get("model", "")).startswith("mock:"):
+            raise ValueError("model=mock:* drives the 2D lidar; it cannot "
+                             "run with lidar3d.enabled")
     return cfg
 
 

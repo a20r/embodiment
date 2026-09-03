@@ -81,10 +81,11 @@ def build(device_map, maze, cfg):
             "How high above the floor is the point-cloud sensor mounted, "
             "in meters?",
             "number", l3["sensor_height"], tol=0.03)
+        # token, not keyword: a one-letter keyword would match "axis".
         add("lidar3d_frame",
             "In the point cloud's coordinate frame, which axis points "
             "forward along the robot?",
-            "keyword", ["x"])
+            "token", "x")
     else:
         add("lidar_beams",
             "How many range beams does the lidar return per reading?",
