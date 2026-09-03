@@ -298,7 +298,9 @@ def make_handler(api, read_only=False):
                     self._json(api.metrics(q["series"]))
                 elif p == "/api/live/state":
                     since = q.get("since", "0")
-                    self._json(api.live(f"/state?since={since}"))
+                    cloud = "1" if q.get("cloud") == "1" else "0"
+                    self._json(api.live(f"/state?since={since}"
+                                        f"&cloud={cloud}"))
                 elif p == "/api/live/maze":
                     self._json(api.live("/maze"))
                 else:

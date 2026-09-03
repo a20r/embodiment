@@ -58,6 +58,10 @@ def prepare_bot_dir(cfg, bot_dir):
     os.makedirs(os.path.join(bot_dir, "src"))
     variant = cfg.get("readme_variant") or \
         ("labeled" if cfg["labels"] == "on" else "unlabeled")
+    # The labeled README documents value formats; with the point cloud
+    # in place of the beam scan it must describe that port instead.
+    if variant == "labeled" and cfg.get("lidar3d", {}).get("enabled"):
+        variant = "labeled_lidar3d"
     shutil.copy(os.path.join(REPO, "botfs", f"README.{variant}.md"),
                 os.path.join(bot_dir, "README.md"))
 

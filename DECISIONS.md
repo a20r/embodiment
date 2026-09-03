@@ -522,3 +522,28 @@ completions has no channel for it, so Gemini runs may record no trace,
 a comparability caveat for the paper.  Model choice itself is guided
 by Terminal-Bench 2.1 against list price (RUNBOOK 7.3): the closest
 public proxy for a bash-tool agent loop.
+
+### 3D lidar: lift the 2D cast, keep the world 2D
+
+A point cloud "instead of a few beams" could have meant a full 3D
+world; it does not need one.  The kinematics stay planar and every
+solid gets a height (walls 0.40 m, the peer 0.15 m, the key post
+0.25 m) over a floor at z=0; a ring at elevation e reaching a face at
+horizontal distance d meets it at z = h_s + d*tan(e), returns if that
+is on the face, passes over it otherwise, and a downward ring that
+reaches the floor first returns the floor.  The near-horizontal ring
+therefore reproduces the 2D scan exactly (checked to 1e-16), so
+lidar3d runs remain comparable with beam runs in the plane while
+adding the structure a real unit shows: a floor disc under the robot,
+wall faces that fade out with distance as the upper rings clear them,
+a short cylinder where the peer is.  Frames are sensor-frame x,y,z so
+the mount height is discoverable from the floor plane, and no-returns
+are omitted as real units omit them.  It replaces the 2D port rather
+than adding to it - one sensing modality per run keeps the discovery
+problem a one-variable delta - and ground truth records a digest of
+each 55 kB frame, which still proves what was served.  Defaults are
+VLP-16-like (16 rings, 30 deg) at 2 deg azimuth resolution: 2,880
+points, ~55 kB, under 10 ms per frame; a finer azimuth grid would
+only cost FIFO bandwidth.  The dashboard's 3D view pulls the
+ground-truth cloud on demand (`cloud=1`) so an idle dashboard costs
+the daemon nothing.

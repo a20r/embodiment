@@ -107,6 +107,26 @@ DEFAULTS = {
         "fov_deg": 360.0,
         "max_range": 3.0,    # m
     },
+    # 3D lidar: a spinning multi-ring unit (VLP-16-like) mounted on top
+    # of the disc.  The world stays 2D-kinematic; it gains a floor at
+    # z=0, walls of wall_height, a peer of robot_height and a key post
+    # of post_height, so rings paint floor near the robot, wall faces
+    # out to where the beam clears the wall top, and nothing beyond.
+    # Frames are sensor-frame x,y,z triples (x forward, y left, z up,
+    # origin at the sensor) - the mount height is discoverable from
+    # the floor plane.  Enabled: the 2D `lidar` port is replaced.
+    "lidar3d": {
+        "enabled": False,
+        "rings": 16,             # elevation channels
+        "azimuths": 180,         # points per ring per frame (2 deg)
+        "vfov_deg": 30.0,        # symmetric about horizontal
+        "max_range": 3.0,        # m
+        "sensor_height": 0.12,   # m above the floor
+        "wall_height": 0.40,     # m
+        "robot_height": 0.15,    # m (the peer, seen as a cylinder)
+        "post_height": 0.25,     # m (the key)
+        "stream_hz": 10,         # held-open reader rate (frames are big)
+    },
     "sim": {
         "tick_hz": 50,
         "realtime_factor": 1.0,   # sim-seconds per wall-second; 0 = unthrottled
@@ -143,6 +163,8 @@ NOISE_PROFILES = {
     "clean": {
         "lidar_sigma_m": 0.0,          # gaussian range noise
         "lidar_dropout_p": 0.0,        # per-ray invalid return (-1.0)
+        "lidar3d_sigma_m": 0.0,        # per-point range noise
+        "lidar3d_dropout_p": 0.0,      # per-point no-return (omitted)
         "heading_sigma_deg": 0.0,      # per-read gaussian
         "heading_drift_deg": 0.0,      # random-walk step std per tick
         "encoder_jitter_ticks": 0,     # +/- uniform jitter per read
@@ -162,6 +184,8 @@ NOISE_PROFILES = {
     "default_noisy": {
         "lidar_sigma_m": 0.01,
         "lidar_dropout_p": 0.01,
+        "lidar3d_sigma_m": 0.01,
+        "lidar3d_dropout_p": 0.01,
         "heading_sigma_deg": 2.0,
         "heading_drift_deg": 0.002,
         "encoder_jitter_ticks": 1,
@@ -237,6 +261,15 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("robot.model must be 'diffdrive' or 'car'")
     if cfg["duo"].get("objective", "solo") not in ("solo", "together"):
         raise ValueError("duo.objective must be 'solo' or 'together'")
+    l3 = cfg.get("lidar3d", {})
+    if l3.get("enabled"):
+        if l3["rings"] < 1 or l3["azimuths"] < 1:
+            raise ValueError("lidar3d.rings and lidar3d.azimuths must be >= 1")
+        if not 0 < l3["vfov_deg"] < 180:
+            raise ValueError("lidar3d.vfov_deg must be in (0, 180)")
+        if not 0 < l3["sensor_height"] < l3["wall_height"]:
+            raise ValueError("lidar3d.sensor_height must sit below "
+                             "wall_height")
     return cfg
 
 
@@ -253,6 +286,10 @@ def device_sets(cfg):
             sensors = [s for s in sensors
                        if s not in ("encoder_left", "encoder_right")]
         actuators = list(ACTUATOR_DEVICES)
+    if cfg.get("lidar3d", {}).get("enabled"):
+        # The point cloud replaces the beam scan: one sensing modality
+        # per run keeps the discovery problem a one-variable delta.
+        sensors = ["lidar3d" if s == "lidar" else s for s in sensors]
     if cfg["maze"].get("locked"):
         sensors.append("beacon")
     if cfg.get("duo", {}).get("enabled"):

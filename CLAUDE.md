@@ -19,7 +19,14 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   maze.style=organic`). Other subcommands: `reset`, `perturb`, `quiz`,
   `ablate`, `savings`, `report`, `shell`, `tail`, `dashboard`, `smoke`.
 - `python scripts/duo_check.py` — host-side validation of duo mode
-  (26 checks, no docker needed; boots a throwaway daemon on port 8798).
+  (51 checks, no docker needed; boots a throwaway daemon on port 8798).
+- `--set lidar3d.enabled=true` swaps the 16-beam `lidar` port for a
+  `lidar3d` point-cloud port (sensor-frame `x,y,z` triples, `;`-separated,
+  ~55 kB frames; walls have height, floor at z=0). Gate for lidar3d
+  changes: `python scripts/lidar3d_check.py` (23 checks, port 8796).
+  The dashboard's **3D** tab renders walls, robots and the true cloud
+  (three.js vendored; `/state?cloud=1`); headless render check:
+  `python scripts/dashboard_render_check.py <dashboard-url> <series>`.
 - `python scripts/make_replay.py <series> <ep_NNN> <out.html> [title]`
   — self-contained replay page for a solo episode;
   `scripts/make_duo_replay.py` likewise for duo episodes.

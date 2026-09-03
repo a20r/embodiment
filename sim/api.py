@@ -43,12 +43,21 @@ def make_handler(daemon):
                 snap["lidar_true"] = daemon.world.lidar_true()
                 snap["ray_angles"] = daemon.world.ray_angles()
                 snap["device_stats"] = daemon.bridge.stats()
+                # The 3D cloud is ~3k points per robot; only cast it
+                # when a viewer asks (cloud=1) and the sensor exists.
+                cloud = q.get("cloud", ["0"])[0] == "1" \
+                    and daemon.world.lidar3d_on
+                if cloud:
+                    snap["lidar3d_true"] = daemon.world.lidar3d_true()
+                    snap["lidar3d_cfg"] = daemon.world.lidar3d_cfg
                 if len(daemon.worlds) > 1:
                     bots = []
                     for world, bridge in zip(daemon.worlds,
                                              daemon.bridges):
                         b = world.snapshot(since_tick=since)
                         b["lidar_true"] = world.lidar_true()
+                        if cloud:
+                            b["lidar3d_true"] = world.lidar3d_true()
                         b["device_stats"] = bridge.stats()
                         bots.append(b)
                     snap["bots"] = bots

@@ -315,3 +315,35 @@ transmission" per Google staff), in which case Gemini runs record no
 reasoning trace - unlike Kimi, GLM and DeepSeek.  Explicit context
 caching is a separate, opt-in API; the implicit cache is what the
 `cached` usage field reflects, if the layer reports it.
+
+## 8. 3D lidar (point cloud)
+
+`--set lidar3d.enabled=true` replaces the 16-beam `lidar` port with a
+`lidar3d` port: a spinning multi-ring unit (defaults: 16 rings over a
+30 deg vertical field, 180 azimuths, 3 m range, mounted 0.12 m up)
+returning one frame per `cat` as `x,y,z` triples in meters separated
+by `;`, in the sensor frame (x forward, y left, z up, origin at the
+sensor).  The world grows a floor at z=0, walls 0.40 m tall, a
+0.15 m-tall peer and a 0.25 m key post, so rings paint the floor near
+the robot, wall faces out to where the beam clears the wall top, and
+nothing beyond; no-return points are omitted.  A frame is ~55 kB and
+casts in under 10 ms; a held-open reader streams at `lidar3d.stream_hz`
+(10) instead of 40.  Ground truth logs each read as a digest
+(`<55513B 2845pts sha1=...>`) rather than the frame.  With labels on
+the README variant `labeled_lidar3d` is selected automatically; with
+labels off nothing changes and the agent must work out what a 55 kB
+line of triples is.  The quiz asks for ring count, mount height and
+the forward axis instead of beam count.  Gate: `python
+scripts/lidar3d_check.py` (23 checks, no docker; boots a daemon on
+port 8796).
+
+The dashboard's left panel has a **3D** tab (three.js r128, vendored
+under `dashboard/static/vendor/`, so it works offline): translucent
+walls extruded to `wall_height`, floor, goal cell, each robot as a
+cylinder with a heading mark, and the live ground-truth cloud coloured
+by height when the run has `lidar3d`; orbit with the mouse, *follow*
+keeps the camera on bot A.  The cloud is only cast when that tab is
+showing (`/state?cloud=1`).  Headless render check (Playwright +
+Chromium, against a running dashboard): `python
+scripts/dashboard_render_check.py http://127.0.0.1:8080/ <series>`
+screenshots both views and fails on any page error.
