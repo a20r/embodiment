@@ -1,0 +1,111 @@
+=== DRIVE toward 106, watch d11/far/tall
+D 0.2 h=16 d11= tall=348 tallr=0.40 far=74 farr=1.03 tick=620654 goal=0 here=0
+D 0.4 h=20 d11=0.365 tall=379 tallr=0.43 far=47 farr=0.97 tick=620676 goal=0 here=0
+D 0.7 h=29 d11=0.386 tall=389 tallr=0.41 far=6 farr=0.91 tick=620698 goal=0 here=0
+D 0.9 h=32 d11=0.372 tall=386 tallr=0.43 far=0 farr=-1.00 tick=620720 goal=0 here=0
+D 1.1 h=36 d11=0.383 tall=410 tallr=0.47 far=0 farr=-1.00 tick=620742 goal=0 here=0
+D 1.3 h=45 d11=0.380 tall=442 tallr=0.51 far=0 farr=-1.00 tick=620764 goal=0 here=0
+D 1.5 h=48 d11=0.388 tall=450 tallr=0.53 far=0 farr=-1.00 tick=620785 goal=0 here=0
+D 1.8 h=59 d11=0.398 tall=435 tallr=0.54 far=0 farr=-1.00 tick=620808 goal=0 here=0
+D 2.0 h=63 d11=0.386 tall=430 tallr=0.58 far=0 farr=-1.00 tick=620830 goal=0 here=0
+D 2.2 h=66 d11=0.383 tall=414 tallr=0.60 far=0 farr=-1.00 tick=620851 goal=0 here=0
+D 2.4 h=73 d11=0.390 tall=375 tallr=0.61 far=0 farr=-1.00 tick=620873 goal=0 here=0
+D 2.6 h=79 d11=0.395 tall=354 tallr=0.56 far=0 farr=-1.00 tick=620895 goal=0 here=0
+D 2.8 h=87 d11=0.379 tall=313 tallr=0.48 far=0 farr=-1.00 tick=620917 goal=0 here=0
+D 3.1 h=86 d11=0.385 tall=200 tallr=0.81 far=1 farr=0.91 tick=620938 goal=0 here=0
+D 3.3 h=94 d11=0.393 tall=184 tallr=0.81 far=42 farr=0.91 tick=620960 goal=0 here=0
+D 3.5 h=101 d11=0.391 tall=172 tallr=0.12 far=65 farr=0.93 tick=620981 goal=0 here=0
+D 3.7 h=103 d11=0.392 tall=157 tallr=0.11 far=58 farr=0.93 tick=621004 goal=0 here=0
+D 3.9 h=104 d11=0.391 tall=138 tallr=0.10 far=51 farr=0.94 tick=621026 goal=0 here=0
+D 4.2 h=108 d11=0.405 tall=131 tallr=0.83 far=38 farr=0.92 tick=621047 goal=0 here=0
+D 4.4 h=108 d11=0.388 tall=129 tallr=0.83 far=1 farr=0.90 
+D 4.6 h=106 d11=0.392 tall=122 tallr=0.82 far=0 farr=-1.00 tick=621091 goal=0 here=0
+D 4.8 h=105 d11=0.372 tall=137 tallr=0.80 far=0 farr=-1.00 tick=621113 goal=0 here=0
+D 5.0 h=103 d11=0.385 tall=136 tallr=0.80 far=0 farr=-1.00 tick=621134 goal=0 here=0
+D 5.2 h=105 d11=0.397 tall=133 tallr=0.78 far=0 farr=-1.00 tick=621156 goal=0 here=0
+D 5.5 h=107 d11=0.393 tall=140 tallr=0.76 far=0 farr=-1.00 tick=621178 goal=0 here=0
+D 5.7 h=102 d11=0.390 tall=138 tallr=0.76 far=0 farr=-1.00 tick=621199 goal=0 here=0
+D 5.9 h=102 d11=0.395 tall=140 tallr=0.76 far=0 farr=-1.00 tick=621221 goal=0 here=0
+D 6.1 h=106 d11=0.392 tall=155 tallr=0.74 far=0 farr=-1.00 tick=621242 goal=0 here=0
+D 6.3 h=110 d11=0.388 tall=162 tallr=0.72 far=0 farr=-1.00 tick=621264 goal=0 here=0
+D 6.5 h=104 d11=0.392 tall=179 tallr=0.70 far=0 farr=-1.00 tick=621286 goal=0 here=0
+D 6.8 h=108 d11=0.392 tall=195 tallr=0.68 far=0 farr=-1.00 tick=621308 goal=0 here=0
+D 7.0 h=106 d11=0.408 tall=225 tallr=0.65 far=0 farr=-1.00 tick=621330 goal=0 here=0
+D 7.2 h=107 d11=0.397 tall=239 tallr=0.62 far=0 farr=-1.00 tick=621351 goal=0 here=0
+D 7.4 h=102 d11=0.370 tall=251 tallr=0.60 far=0 farr=-1.00 tick=621373 goal=0 here=0
+D 7.6 h=109 d11=0.393 tall=278 tallr=0.56 far=0 farr=-1.00 tick=621394 goal=0 here=0
+D 7.8 h=108 d11=0.397 tall=309 tallr=0.54 far=0 farr=-1.00 tick=621416 goal=0 here=0
+D 8.1 h=105 d11=0.382 tall=321 tallr=0.52 far=0 farr=-1.00 tick=621438 goal=0 here=0
+D 8.3 h=104 d11=0.385 tall=344 tallr=0.48 far=0 farr=-1.00 tick=621459 goal=0 here=0
+D 8.5 h=103 d11=0.378 tall=344 tallr=0.47 far=0 farr=-1.00 tick=621481 goal=0 here=0
+D 8.7 h=106 d11=0.380 tall=367 tallr=0.44 far=0 farr=-1.00 tick=621502 goal=0 here=0
+D 8.9 h=0 d11=0.386 tall=365 tallr=0.42 far=0 farr=-1.00 tick=621524 goal=0 here=0
+D 9.1 h=110 d11=0.374 tall=379 tallr=0.42 far=0 farr=-1.00 tick=621545 goal=0 here=0
+D 9.3 h=0 d11=0.359 tall=386 tallr=0.41 far=0 farr=-1.00 tick=621567 goal=0 here=0
+D 9.6 h=114 d11=0.357 tall=408 tallr=0.38 far=0 farr=-1.00 tick=621589 goal=0 here=0
+D 9.8 h=111 d11=0.359 tall=403 tallr=0.36 far=0 farr=-1.00 tick=621611 goal=0 here=0
+D 10.0 h=103 d11=0.369 tall=402 tallr=0.36 far=0 farr=-1.00 tick=621628 goal=0 here=0
+D 10.3 h=108 d11=0.365 tall=391 tallr=0.36 far=0 farr=-1.00 tick=621656 goal=0 here=0
+D 10.5 h=104 d11=0.361 tall=379 tallr=0.34 far=0 farr=-1.00 tick=621679 goal=0 here=0
+D 10.7 h=103 d11=0.354 tall=374 tallr=0.34 far=0 farr=-1.00 tick=621706 goal=0 here=0
+D 11.0 h=108 d11=0.340 tall=365 tallr=0.33 far=0 farr=-1.00 tick=621728 goal=0 here=0
+D 11.2 h=108 d11=0.351 tall=350 tallr=0.33 far=0 farr=-1.00 tick=621750 goal=0 here=0
+D 11.4 h=105 d11=0.338 tall=343 tallr=0.32 far=0 farr=-1.00 tick=621771 goal=0 here=0
+D 11.6 h=105 d11=0.340 tall=335 tallr=0.32 far=0 farr=-1.00 
+D 11.8 h=101 d11=0.336 tall=329 tallr=0.30 far=0 farr=-1.00 tick=621814 goal=0 here=0
+D 12.0 h=110 d11=0.343 tall=321 tallr=0.30 far=0 farr=-1.00 tick=621836 goal=0 here=0
+D 12.3 h=107 d11=0.336 tall=306 tallr=0.29 far=0 farr=-1.00 tick=621858 goal=0 here=0
+D 12.5 h=107 d11=0.328 tall=297 tallr=0.28 far=0 farr=-1.00 tick=621879 goal=0 here=0
+D 12.7 h=106 d11=0.349 tall=285 tallr=0.26 far=0 farr=-1.00 tick=621901 goal=0 here=0
+D 12.9 h=106 d11= tall=277 tallr=0.26 far=0 farr=-1.00 tick=621923 goal=0 here=0
+D 13.1 h=106 d11=0.317 tall=265 tallr=0.25 far=0 farr=-1.00 tick=621944 goal=0 here=0
+D 13.3 h=104 d11=0.338 tall=254 tallr=0.24 far=0 farr=-1.00 tick=621966 goal=0 here=0
+D 13.6 h=108 d11=0.324 tall=246 tallr=0.23 far=0 farr=-1.00 tick=621988 goal=0 here=0
+D 13.8 h=108 d11=0.324 tall=224 tallr=0.21 far=0 farr=-1.00 tick=622009 goal=0 here=0
+D 14.0 h=100 d11=0.310 tall=218 tallr=0.21 far=0 farr=-1.00 
+D 14.2 h=107 d11=0.320 tall=206 tallr=0.20 far=0 farr=-1.00 tick=622053 goal=0 here=0
+D 14.4 h=105 d11=0.313 tall=202 tallr=0.19 far=0 farr=-1.00 tick=622075 goal=0 here=0
+CONTACT d5 - stopping
+D 15.6 h=103 d11=0.324 tall=207 tallr=0.20 far=0 farr=-1.00 tick=622196 goal=0 here=0
+CONTACT d5 - stopping
+D 16.9 h=108 d11=0.306 tall=207 tallr=0.20 far=0 farr=-1.00 
+CONTACT d5 - stopping
+D 18.1 h=104 d11=0.333 tall=197 tallr=0.20 far=0 farr=-1.00 tick=622440 goal=0 here=0
+CONTACT d5 - stopping
+D 19.3 h=105 d11=0.339 tall=202 tallr=0.20 far=0 farr=-1.00 tick=622561 goal=0 here=0
+CONTACT d5 - stopping
+D 20.5 h=108 d11=0.318 tall=202 tallr=0.20 far=0 farr=-1.00 tick=622683 goal=0 here=0
+CONTACT d5 - stopping
+D 21.7 h=105 d11=0.314 tall=193 tallr=0.19 far=0 farr=-1.00 tick=622804 goal=0 here=0
+CONTACT d5 - stopping
+D 22.9 h=104 d11=0.312 tall=201 tallr=0.19 far=0 farr=-1.00 tick=622926 goal=0 here=0
+CONTACT d5 - stopping
+D 24.2 h=106 d11=0.310 tall=205 tallr=0.20 far=0 farr=-1.00 tick=623048 goal=0 here=0
+CONTACT d5 - stopping
+D 25.4 h=106 d11=0.326 tall=191 tallr=0.19 far=0 farr=-1.00 tick=623169 goal=0 here=0
+CONTACT d5 - stopping
+D 26.6 h=105 d11=0.323 tall=202 tallr=0.19 far=0 farr=-1.00 tick=623291 goal=0 here=0
+CONTACT d5 - stopping
+D 27.8 h=104 d11=0.324 tall=206 tallr=0.20 far=0 farr=-1.00 tick=623413 goal=0 here=0
+CONTACT d5 - stopping
+D 29.0 h=105 d11=0.327 tall=205 tallr=0.20 far=0 farr=-1.00 tick=623535 goal=0 here=0
+CONTACT d5 - stopping
+D 30.2 h=107 d11=0.326 tall=200 tallr=0.20 far=0 farr=-1.00 tick=623656 goal=0 here=0
+CONTACT d5 - stopping
+D 31.5 h=104 d11=0.319 tall=201 tallr=0.20 far=0 farr=-1.00 tick=623778 goal=0 here=0
+CONTACT d5 - stopping
+D 32.7 h=108 d11=0.324 tall=201 tallr=0.20 far=0 farr=-1.00 tick=623901 goal=0 here=0
+CONTACT d5 - stopping
+D 33.9 h=106 d11=0.317 tall=196 tallr=0.19 far=0 farr=-1.00 tick=624023 goal=0 here=0
+CONTACT d5 - stopping
+D 35.1 h=108 d11= tall=191 tallr=0.18 far=0 farr=-1.00 tick=624144 goal=0 here=0
+CONTACT d5 - stopping
+D 36.3 h=104 d11=0.323 tall=195 tallr=0.18 far=0 farr=-1.00 tick=624266 goal=0 here=0
+CONTACT d5 - stopping
+D 37.6 h=104 d11=0.322 tall=192 tallr=0.18 far=0 farr=-1.00 tick=624388 goal=0 here=0
+CONTACT d5 - stopping
+D 38.8 h=105 d11=0.321 tall=194 tallr=0.19 far=0 farr=-1.00 tick=624509 goal=0 here=0
+CONTACT d5 - stopping
+D 40.0 h=102 d11=0.313 tall=202 tallr=0.20 far=0 farr=-1.00 tick=624631 goal=0 here=0
+CONTACT d5 - stopping
+drive106 end

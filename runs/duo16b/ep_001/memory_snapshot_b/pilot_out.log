@@ -1,0 +1,8 @@
+  File "/bot/src/pilot11.py", line 286
+    it+=1
+    ^
+IndentationError: expected an indented block after 'while' statement on line 285
+  File "/bot/src/pilot11.py", line 286
+    it+=1
+    ^
+IndentationError: expected an indented block after 'while' statement on line 285

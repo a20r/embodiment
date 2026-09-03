@@ -1,0 +1,705 @@
+[03:15:33] pilot started, pid 250
+[03:15:46] CMD {"op":"scan"} -> {"pts": 19747, "pos": 10089, "neg": 9658, "pos_rmin": 0.0, "grid": {"pos": {"-0.15000000000000002": [0.0, -0.573], "-0.1": [0.0, -0.784], "-0.05": [0.0, 0.115], "0.0": [0.0, 0.123], "0.05": [0.0, 0.115], "0.1": [0.0, -0.75], "0.15000000000000002": [0.0, -0.767], "0.2": [0.0, -0.766], "0.25": [0.118, -0.842]}, "neg": {"-0.15000000000000002": [0.019, -0.539], "-0.1": [0.025, -0.727], "-0.05": [0.004
+[03:15:46] CMD {"op":"sense"} -> {"d3": "tick=125923 goal=0 here=0", "d4": "55.9", "d6": "29501", "d9": "-11007", "d11": "0.443", "d0": "0", "d5": "0", "d10": null}
+[03:18:01] SIGTERM -> stopped
+[03:18:01] pilot exited
+[03:18:02] pilot v2 started pid 282
+[03:18:37] CMD {"op":"probe11"} -> [{"h": 57.0, "d11": "0.446"}, {"h": 88.0, "d11": "0.445"}, {"h": 125.0, "d11": "0.463"}, {"h": 309.0, "d11": "0.468"}, {"h": 348.0, "d11": "0.453"}, {"h": 19.0, "d11": "0.454"}, {"h": 209.0, "d11": "0.472"}, {"h": 241.0, "d11": "0.446"}, {"h": 67.0, "d11": "0.447"}, {"h": 106.0, "d11": "0.458"}, {"h": 287.0, "d11": "0.446"}, {"h": 114.0, "d11": "0.443"}]
+[03:20:35] explore done, ticks_per_m est: 1799.4
+[03:20:35] CMD {"op":"explore","n":25} -> {"done": true, "ticks_per_m": 1799.4, "last_grid": [null, 0.235, 0.338, 0.33, 0.292, 0.33, 0.336, 0.271, 0.248]}
+[03:21:37] CMD {"op":"scan"} -> {"grid_az_-0.25..0.25": [null, 0.628, 0.509, 0.467, 0.461, 0.463, 0.511, 0.839, 0.988]}
+[03:21:42] CMD {"op":"rot","deg":60} -> {"rot": -99.7}
+[03:21:44] CMD {"op":"scan"} -> {"grid_az_-0.25..0.25": [null, 0.237, 0.337, 0.331, 0.293, 0.329, 0.337, 0.271, 0.25]}
+[03:22:55] CMD {"op":"vel","l":0,"r":0} -> {"ok": 1}
+[03:22:56] CMD {"op":"vel","l":60,"r":0} -> {"ok": 1}
+[03:22:59] CMD {"op":"sense"} -> {"d3": "tick=169345 goal=0 here=0", "d4": "89.2", "d6": "14781", "d9": "4301", "d11": "0.421", "d0": "0", "d5": "0", "d10": null}
+[03:23:01] d5 nonzero: 1
+[03:23:01] d5 nonzero: 1
+[03:23:01] CMD {"op":"vel","l":0,"r":0} -> {"ok": 1}
+[03:23:02] CMD {"op":"vel","l":0,"r":60} -> {"ok": 1}
+[03:23:03] d5 nonzero: 1
+[03:23:03] d5 nonzero: 1
+[03:23:03] d5 nonzero: 1
+[03:23:04] d5 nonzero: 1
+[03:23:04] d5 nonzero: 1
+[03:23:04] d5 nonzero: 1
+[03:23:05] CMD {"op":"sense"} -> {"d3": "tick=169956 goal=0 here=0", "d4": "112.4", "d6": "15434", "d9": "5104", "d11": "0.509", "d0": "0", "d5": "0", "d10": null}
+[03:23:07] CMD {"op":"vel","l":0,"r":0} -> {"ok": 1}
+[03:24:31] d5 nonzero: 1
+[03:24:32] d5 nonzero: 1
+[03:26:02] CMD {"op":"rot","deg":30} -> {"rot": -144.2}
+[03:26:04] CMD {"op":"rot","deg":-30} -> {"rot": -27.9}
+[03:28:26] SIGTERM -> stopped
+[03:28:26] pilot exited
+[03:28:27] pilot v2 started pid 420
+[03:28:30] CMD {"op":"rot","deg":30} -> {"rot": 39.8, "broke": true, "t": 1.11}
+[03:28:34] CMD {"op":"rot","deg":-30} -> {"rot": -33.5, "broke": true, "t": 0.93}
+[03:30:21] explore done, ticks_per_m est: 2256.4
+[03:30:21] CMD {"op":"explore","n":30} -> {"done": true, "ticks_per_m": 2256.4, "last_grid": [null, 0.603, 0.37, 0.324, 0.315, 0.324, 0.366, 0.916, 0.908]}
+[03:33:52] SIGTERM -> stopped
+[03:33:52] pilot exited
+[03:33:53] pilot v2 started pid 470
+[03:33:56] CMD {"op":"scan"} -> {"grid_az_-0.25..0.25": [null, 0.626, 0.359, 0.279, 0.256, 0.279, 0.349, 0.701, null]}
+[03:36:44] explore done, ticks_per_m est: 3348.3
+[03:36:44] CMD {"op":"explore","n":40} -> {"done": true, "ticks_per_m": 3348.3, "last_grid": [null, 0.66, 1.005, 1.001, 1.26, 1.006, 1.002, 1.013, 1.267]}
+[03:38:34] SIGTERM -> stopped
+[03:38:35] pilot v2 started pid 538
+[03:38:37] d5 nonzero: 1
+[03:38:37] d5 nonzero: 1
+[03:39:04] CMD {"op":"panscan"} -> {"min_per_heading": [[142.0, 0.37], [187.0, 0.46], [202.0, 0.46], [207.0, 0.46], [231.0, 0.47], [212.0, 0.63], [206.0, 0.46], [248.0, 0.31]]}
+[03:39:04] d5 nonzero: 1
+[03:39:05] d5 nonzero: 1
+[03:39:05] d5 nonzero: 1
+[03:39:05] d5 nonzero: 1
+[03:39:08] d5 nonzero: 1
+[03:39:08] d5 nonzero: 1
+[03:39:09] d5 nonzero: 1
+[03:39:11] d5 nonzero: 1
+[03:39:12] d5 nonzero: 1
+[03:39:12] d5 nonzero: 1
+[03:39:12] d5 nonzero: 1
+[03:39:15] d5 nonzero: 1
+[03:39:16] d5 nonzero: 1
+[03:39:16] d5 nonzero: 1
+[03:39:16] d5 nonzero: 1
+[03:39:16] d5 nonzero: 1
+[03:39:19] d5 nonzero: 1
+[03:39:20] d5 nonzero: 1
+[03:39:20] d5 nonzero: 1
+[03:39:20] d5 nonzero: 1
+[03:39:21] d5 nonzero: 1
+[03:39:24] d5 nonzero: 1
+[03:39:24] d5 nonzero: 1
+[03:39:24] d5 nonzero: 1
+[03:39:25] d5 nonzero: 1
+[03:39:28] d5 nonzero: 1
+[03:39:28] d5 nonzero: 1
+[03:39:28] d5 nonzero: 1
+[03:39:28] d5 nonzero: 1
+[03:39:29] d5 nonzero: 1
+[03:39:32] d5 nonzero: 1
+[03:39:32] d5 nonzero: 1
+[03:39:32] d5 nonzero: 1
+[03:39:33] d5 nonzero: 1
+[03:39:33] d5 nonzero: 1
+[03:39:36] d5 nonzero: 1
+[03:39:36] d5 nonzero: 1
+[03:39:37] d5 nonzero: 1
+[03:39:37] d5 nonzero: 1
+[03:39:40] d5 nonzero: 1
+[03:39:40] d5 nonzero: 1
+[03:39:40] d5 nonzero: 1
+[03:39:41] d5 nonzero: 1
+[03:39:41] d5 nonzero: 1
+[03:39:44] d5 nonzero: 1
+[03:39:44] d5 nonzero: 1
+[03:39:45] d5 nonzero: 1
+[03:39:45] d5 nonzero: 1
+[03:39:45] d5 nonzero: 1
+[03:39:48] d5 nonzero: 1
+[03:39:49] d5 nonzero: 1
+[03:39:49] d5 nonzero: 1
+[03:39:49] d5 nonzero: 1
+[03:39:52] d5 nonzero: 1
+[03:39:53] d5 nonzero: 1
+[03:39:53] d5 nonzero: 1
+[03:39:53] d5 nonzero: 1
+[03:39:54] d5 nonzero: 1
+[03:39:56] d5 nonzero: 1
+[03:39:57] d5 nonzero: 1
+[03:39:57] d5 nonzero: 1
+[03:39:57] d5 nonzero: 1
+[03:40:01] d5 nonzero: 1
+[03:40:01] d5 nonzero: 1
+[03:40:01] d5 nonzero: 1
+[03:40:02] d5 nonzero: 1
+[03:40:05] d5 nonzero: 1
+[03:40:05] d5 nonzero: 1
+[03:40:05] d5 nonzero: 1
+[03:40:06] d5 nonzero: 1
+[03:40:06] d5 nonzero: 1
+[03:40:09] d5 nonzero: 1
+[03:40:09] d5 nonzero: 1
+[03:40:09] d5 nonzero: 1
+[03:40:10] d5 nonzero: 1
+[03:40:13] d5 nonzero: 1
+[03:40:13] d5 nonzero: 1
+[03:40:14] d5 nonzero: 1
+[03:40:14] d5 nonzero: 1
+[03:40:17] d5 nonzero: 1
+[03:40:17] d5 nonzero: 1
+[03:40:18] d5 nonzero: 1
+[03:40:18] d5 nonzero: 1
+[03:40:18] d5 nonzero: 1
+[03:40:21] d5 nonzero: 1
+[03:40:21] d5 nonzero: 1
+[03:40:22] d5 nonzero: 1
+[03:40:22] d5 nonzero: 1
+[03:40:25] d5 nonzero: 1
+[03:40:25] d5 nonzero: 1
+[03:40:26] d5 nonzero: 1
+[03:40:26] d5 nonzero: 1
+[03:40:26] d5 nonzero: 1
+[03:40:29] d5 nonzero: 1
+[03:40:30] d5 nonzero: 1
+[03:40:30] d5 nonzero: 1
+[03:40:30] d5 nonzero: 1
+[03:40:34] d5 nonzero: 1
+[03:40:34] d5 nonzero: 1
+[03:40:34] d5 nonzero: 1
+[03:40:35] d5 nonzero: 1
+[03:40:37] d5 nonzero: 1
+[03:40:38] d5 nonzero: 1
+[03:40:38] d5 nonzero: 1
+[03:40:38] d5 nonzero: 1
+[03:40:39] d5 nonzero: 1
+[03:40:42] d5 nonzero: 1
+[03:40:42] d5 nonzero: 1
+[03:40:42] d5 nonzero: 1
+[03:40:43] d5 nonzero: 1
+[03:40:45] d5 nonzero: 1
+[03:40:46] d5 nonzero: 1
+[03:40:46] d5 nonzero: 1
+[03:40:49] d5 nonzero: 1
+[03:40:49] d5 nonzero: 1
+[03:40:49] d5 nonzero: 1
+[03:40:49] d5 nonzero: 1
+[03:40:52] d5 nonzero: 1
+[03:40:53] d5 nonzero: 1
+[03:40:53] d5 nonzero: 1
+[03:40:53] d5 nonzero: 1
+[03:40:54] d5 nonzero: 1
+[03:40:57] d5 nonzero: 1
+[03:40:57] d5 nonzero: 1
+[03:40:57] d5 nonzero: 1
+[03:40:57] SIGTERM -> stopped
+[03:40:57] pilot exited
+[03:40:58] pilot v2 started pid 562
+[03:41:15] explore done, ticks_per_m est: 6339.3
+[03:41:15] CMD {"op":"explore","n":60} -> {"done": true, "ticks_per_m": 6339.3, "last_grid": [null, 0.564, 0.491, 0.394, 0.397, 0.387, 0.503, 0.672, null]}
+[03:41:15] pilot exited
+[03:45:44] SIGTERM -> stopped
+[03:45:45] pilot v2 started pid 639
+[03:45:46] d5 nonzero: 1
+[03:45:46] d5 nonzero: 1
+[03:45:47] d5 nonzero: 1
+[03:45:47] d5 nonzero: 1
+[03:45:47] d5 nonzero: 1
+[03:47:19] explore done, ticks_per_m est: 3574.0
+[03:47:19] CMD {"op":"explore","n":100} -> {"done": true, "ticks_per_m": 3574.0, "last_grid": [null, 0.644, 0.689, 0.667, 0.711, 0.666, 0.686, 0.713, 1.216]}
+[03:47:19] pilot exited
+[03:53:19] SIGTERM -> stopped
+[03:53:20] pilot7 started pid 732
+[03:53:20] FLAG d5=1
+[03:53:24] FLAG d5=1
+[03:53:28] FLAG d5=1
+[03:53:28] FLAG d5=1
+[03:53:31] FLAG d5=1
+[03:53:32] FLAG d5=1
+[03:53:32] FLAG d5=1
+[03:53:34] FLAG d5=1
+[03:53:35] FLAG d5=1
+[03:53:35] FLAG d5=1
+[03:53:37] FLAG d5=1
+[03:53:37] FLAG d5=1
+[03:53:38] explore done, ticks_per_m est: None
+[03:53:38] CMD {"op":"explore","n":120} -> {"done": true, "ticks_per_m": null, "last_grid": [null, 0.653, 0.994, 0.992, 1.215, 0.992, 0.986, 0.988, 1.26]}
+[03:53:38] pilot exited
+[03:53:41] FLAG d5=1
+[03:53:41] FLAG d5=1
+[03:53:43] FLAG d5=1
+[03:53:44] FLAG d5=1
+[03:53:46] FLAG d5=1
+[03:54:21] FLAG d5=1
+[03:54:23] FLAG d5=1
+[03:54:24] FLAG d5=1
+[03:54:24] FLAG d5=1
+[03:54:27] FLAG d5=1
+[03:54:27] FLAG d5=1
+[03:54:30] FLAG d5=1
+[03:54:30] FLAG d5=1
+[03:54:33] FLAG d5=1
+[03:54:33] FLAG d5=1
+[03:54:34] FLAG d5=1
+[03:54:36] FLAG d5=1
+[03:54:37] FLAG d5=1
+[03:54:39] FLAG d5=1
+[03:54:40] FLAG d5=1
+[03:54:42] FLAG d5=1
+[03:54:43] FLAG d5=1
+[03:54:45] FLAG d5=1
+[03:54:46] FLAG d5=1
+[03:54:46] FLAG d5=1
+[03:54:49] FLAG d5=1
+[03:54:49] FLAG d5=1
+[03:54:50] FLAG d5=1
+[03:54:52] FLAG d5=1
+[03:54:52] FLAG d5=1
+[03:54:55] FLAG d5=1
+[03:54:56] FLAG d5=1
+[03:54:58] FLAG d5=1
+[03:54:58] FLAG d5=1
+[03:55:17] FLAG d5=1
+[03:55:19] FLAG d5=1
+[03:55:20] FLAG d5=1
+[03:55:21] FLAG d5=1
+[03:55:23] FLAG d5=1
+[03:55:24] FLAG d5=1
+[03:55:25] FLAG d5=1
+[03:55:26] FLAG d5=1
+[03:55:28] FLAG d5=1
+[03:55:38] FLAG d5=1
+[03:55:39] FLAG d5=1
+[03:55:40] FLAG d5=1
+[03:55:41] FLAG d5=1
+[03:55:43] FLAG d5=1
+[03:55:44] FLAG d5=1
+[03:55:46] FLAG d5=1
+[03:55:47] FLAG d5=1
+[03:55:54] CMD {"op":"explore","sec":150} -> {"iters": 94, "last": {"it": 94, "h": 158.7, "grid": [null, 0.747, 0.452, 0.262, 0.256, 0.261, 0.446, 1.177, 1.146], "turn": 50}}
+[03:57:48] SIGTERM
+[03:57:48] pilot7 exited
+[03:57:49] pilot7 started pid 788
+[03:58:08] FLAG d5=1
+[03:59:18] FLAG d5=1
+[03:59:19] FLAG d5=1
+[03:59:20] FLAG d5=1
+[03:59:41] FLAG d5=1
+[03:59:43] FLAG d5=1
+[03:59:44] FLAG d5=1
+[03:59:46] FLAG d5=1
+[03:59:47] FLAG d5=1
+[03:59:48] FLAG d5=1
+[03:59:50] FLAG d5=1
+[03:59:52] FLAG d5=1
+[03:59:52] FLAG d5=1
+[03:59:55] FLAG d5=1
+[03:59:55] FLAG d5=1
+[03:59:56] FLAG d5=1
+[03:59:58] FLAG d5=1
+[03:59:59] FLAG d5=1
+[03:59:59] FLAG d5=1
+[04:00:01] FLAG d5=1
+[04:00:02] FLAG d5=1
+[04:00:02] FLAG d5=1
+[04:00:05] FLAG d5=1
+[04:00:05] FLAG d5=1
+[04:00:07] FLAG d5=1
+[04:00:08] FLAG d5=1
+[04:00:09] FLAG d5=1
+[04:00:11] FLAG d5=1
+[04:00:11] FLAG d5=1
+[04:00:12] FLAG d5=1
+[04:00:25] FLAG d5=1
+[04:00:26] FLAG d5=1
+[04:00:28] FLAG d5=1
+[04:00:29] FLAG d5=1
+[04:00:30] FLAG d5=1
+[04:00:33] FLAG d5=1
+[04:00:39] FLAG d5=1
+[04:00:40] FLAG d5=1
+[04:00:42] FLAG d5=1
+[04:00:44] FLAG d5=1
+[04:00:45] FLAG d5=1
+[04:00:45] FLAG d5=1
+[04:00:46] FLAG d5=1
+[04:00:46] FLAG d5=1
+[04:00:49] FLAG d5=1
+[04:00:49] FLAG d5=1
+[04:00:51] FLAG d5=1
+[04:00:52] FLAG d5=1
+[04:00:53] FLAG d5=1
+[04:00:55] FLAG d5=1
+[04:00:55] FLAG d5=1
+[04:00:56] FLAG d5=1
+[04:00:58] FLAG d5=1
+[04:00:59] FLAG d5=1
+[04:01:01] FLAG d5=1
+[04:01:01] FLAG d5=1
+[04:01:02] FLAG d5=1
+[04:01:04] FLAG d5=1
+[04:01:05] FLAG d5=1
+[04:01:05] FLAG d5=1
+[04:01:06] SIGTERM
+[04:01:08] pilot8 started pid 816
+[04:01:08] FLAG d5=1
+[04:01:08] FLAG d5=1
+[04:01:10] g2 start d11=0.43339999999999995 h=194.3
+[04:01:10] CMD ERR {"op":"g2","sec":420}: NameError("name 'here_seen' is not defined")
+[04:01:10] FLAG d5=1
+[04:01:11] FLAG d5=1
+[04:01:11] FLAG d5=1
+[04:01:12] FLAG d5=1
+[04:01:40] FLAG d5=1
+[04:01:41] FLAG d5=1
+[04:01:42] FLAG d5=1
+[04:01:43] FLAG d5=1
+[04:01:45] FLAG d5=1
+[04:01:46] FLAG d5=1
+[04:01:52] CMD {"op":"explore","sec":240} -> {"iters": 160, "last": {"it": 160, "h": 199.6, "grid": [null, 0.557, 0.404, 0.321, 0.283, 0.32, 0.402, 0.555, null], "turn": -50}}
+[04:01:52] pilot7 exited
+[04:04:16] SIGTERM
+[04:04:16] pilot8 exited
+[04:04:18] pilot8 started pid 863
+[04:04:20] g2 start d11=0.5728333333333334 h=156.1
+[04:04:55] FLAG d5=1
+[04:04:56] FLAG d5=1
+[04:04:56] FLAG d5=1
+[04:04:57] g2 it2 v0=0.5986 trials=[(0, 0.506, 3.3), (90, 0.576, 10.2), (180, 0.535, 198.7), (-90, 0.617, 24.9)] pick=0
+[04:05:00] FLAG d5=1
+[04:05:08] FLAG d0=1
+[04:05:09] FLAG d0=1
+[04:05:09] FLAG d0=1
+[04:05:27] FLAG d5=1
+[04:05:29] g2 it3 v0=0.5686 trials=[(0, 0.564, 353.5), (90, 0.505, 80.4), (180, 0.564, 270.5), (-90, 0.51, 98.6)] pick=90
+[04:05:29] RADIO RX: PING
+[04:05:36] FLAG d5=1
+[04:05:39] RADIO RX: PING
+[04:05:43] FLAG d5=1
+[04:05:53] RADIO RX: PING
+[04:05:55] RADIO RX: PING
+[04:05:57] RADIO RX: PING
+[04:05:59] FLAG d0=1
+[04:06:01] RADIO RX: PING
+[04:06:02] FLAG d5=1
+[04:06:02] FLAG d5=1
+[04:06:03] FLAG d5=1
+[04:06:03] FLAG d5=1
+[04:06:03] RADIO RX: PING
+[04:06:04] FLAG d5=1
+[04:06:04] g2 it5 v0=0.5952 trials=[(0, 0.548, 269.6), (90, 0.628, 0.2), (180, 0.544, 183.6), (-90, 0.664, 11.1)] pick=180
+[04:06:05] RADIO RX: PING
+[04:06:07] RADIO RX: PING
+[04:06:08] FLAG d5=1
+[04:06:08] FLAG d5=1
+[04:06:09] RADIO RX: PING
+[04:06:11] RADIO RX: PING
+[04:06:13] RADIO RX: PING
+[04:06:15] RADIO RX: PING
+[04:06:17] RADIO RX: PING
+[04:06:18] FLAG d0=1
+[04:06:19] RADIO RX: PING
+[04:06:21] RADIO RX: PING
+[04:06:23] RADIO RX: PING
+[04:06:25] RADIO RX: PING
+[04:06:33] RADIO RX: PING
+[04:06:35] RADIO RX: PING
+[04:06:37] RADIO RX: PING
+[04:06:38] g2 it6 v0=0.6684 trials=[(0, 0.675, 166.5), (90, 0.684, 250.6), (180, 0.651, 82.0), (-90, 0.616, 272.3)] pick=-90
+[04:06:47] RADIO RX: PING
+[04:06:48] FLAG d5=1
+[04:07:04] g2 SIGN FLIP -> max
+[04:07:08] FLAG d5=1
+[04:07:09] FLAG d5=1
+[04:07:10] g2 it7 v0=0.6404 trials=[(0, 0.578, 261.2), (90, 0.651, 272.2), (180, 0.387, 96.9), (-90, 0.348, 284.8)] pick=90
+[04:08:22] SIGTERM
+[04:08:24] pilot8 started pid 909
+[04:08:26] g3 start
+[04:08:38] g3 sweep med=0.222 min=0.208@204 max=0.239@296 pick=max@296
+[04:09:00] g3 sweep med=0.225 min=0.211@234 max=0.243@30 pick=max@30
+[04:09:31] g3 sweep med=0.226 min=0.212@194 max=0.250@308 pick=max@308
+[04:09:53] g3 sweep med=0.229 min=0.205@249 max=0.240@276 pick=min@249
+[04:10:19] g3 sweep med=0.227 min=0.207@210 max=0.239@68 pick=min@210
+[04:10:40] g3 sweep med=0.228 min=0.206@246 max=0.243@34 pick=min@246
+[04:11:01] FLAG d5=1
+[04:11:03] FLAG d5=1
+[04:11:04] g3 sweep med=0.222 min=0.202@251 max=0.235@80 pick=min@251
+[04:11:33] g3 sweep med=0.221 min=0.200@276 max=0.242@22 pick=max@22
+[04:11:55] g3 sweep med=0.223 min=0.207@220 max=0.240@150 pick=max@150
+[04:12:22] g3 sweep med=0.227 min=0.214@303 max=0.243@11 pick=max@11
+[04:12:46] g3 sweep med=0.223 min=0.196@257 max=0.241@342 pick=min@257
+[04:13:17] g3 sweep med=0.226 min=0.201@300 max=0.250@73 pick=min@300
+[04:13:33] g3 sweep med=0.220 min=0.206@172 max=0.236@311 pick=max@311
+[04:13:51] g3 sweep med=0.218 min=0.202@191 max=0.242@28 pick=max@28
+[04:13:57] FLAG d5=1
+[04:13:58] FLAG d5=1
+[04:13:58] FLAG d5=1
+[04:13:59] FLAG d5=1
+[04:13:59] FLAG d5=1
+[04:14:00] FLAG d5=1
+[04:14:00] FLAG d5=1
+[04:14:00] FLAG d5=1
+[04:14:01] FLAG d5=1
+[04:14:02] FLAG d5=1
+[04:14:02] FLAG d5=1
+[04:14:03] FLAG d5=1
+[04:14:05] FLAG d5=1
+[04:14:05] FLAG d5=1
+[04:14:06] FLAG d5=1
+[04:14:06] FLAG d5=1
+[04:14:17] FLAG d5=1
+[04:14:18] FLAG d5=1
+[04:14:18] FLAG d5=1
+[04:14:19] FLAG d5=1
+[04:14:19] FLAG d5=1
+[04:14:19] FLAG d5=1
+[04:14:20] FLAG d5=1
+[04:14:20] FLAG d5=1
+[04:14:21] FLAG d5=1
+[04:14:21] FLAG d5=1
+[04:14:21] FLAG d5=1
+[04:14:22] FLAG d5=1
+[04:14:22] FLAG d5=1
+[04:14:23] FLAG d5=1
+[04:14:23] FLAG d5=1
+[04:14:28] FLAG d0=1
+[04:14:29] FLAG d0=1
+[04:14:29] FLAG d0=1
+[04:14:29] FLAG d0=1
+[04:14:30] FLAG d0=1
+[04:14:30] g3 sweep med=0.238 min=0.216@33 max=0.271@31 pick=max@31
+[04:14:32] g2 SIGN FLIP -> min
+[04:14:35] FLAG d5=1
+[04:14:35] FLAG d5=1
+[04:14:36] FLAG d5=1
+[04:14:38] FLAG d5=1
+[04:14:38] FLAG d5=1
+[04:14:39] FLAG d5=1
+[04:14:40] g2 it152 v0=0.21760000000000002 trials=[(0, 0.217, 235.4), (90, 0.232, 235.4)] pick=0
+[04:14:40] CMD {"op":"g2","sec":600} -> {"its": 152, "pos": [1.47, -1.19], "last": {"it": 152, "v0": 0.218, "trials": [[0, 0.217, 235.4], [90, 0.232, 235.4]], "pick": [0, 0.217, 235.4]}}
+[04:14:40] pilot8 exited
+[04:15:14] SIGTERM
+[04:15:15] pilot8 started pid 1007
+[04:15:17] HUNT start
+[04:15:32] g3 sweep med=0.325 min=0.299@165 max=0.351@58 pick=min@165
+[04:15:37] FLAG d5=1
+[04:15:38] FLAG d5=1
+[04:15:38] FLAG d5=1
+[04:15:38] FLAG d5=1
+[04:15:41] g3 sweep med=0.279 min=0.271@257 max=0.304@262 pick=max@262
+[04:15:42] HUNT it16 med=0.289 min=0.263@270
+[04:15:53] FLAG d5=1
+[04:15:53] FLAG d5=1
+[04:15:54] FLAG d5=1
+[04:15:54] FLAG d5=1
+[04:15:55] g3 sweep med=0.284 min=0.267@220 max=0.314@354 pick=max@354
+[04:16:02] HUNT it18 med=0.280 min=0.253@351
+[04:16:05] HUNT blocked front=0.176 grid=[None, 0.643, 0.708, 0.181, 0.176, 0.183, 0.717, 0.738, 1.045]
+[04:16:16] HUNT it19 med=0.264 min=0.229@159
+[04:16:21] HUNT blocked front=0.311 grid=[None, None, 0.36, 0.313, 0.311, 0.313, 0.355, None, None]
+[04:16:23] g3 sweep med=0.261 min=0.234@350 max=0.288@37 pick=min@350
+[04:16:31] g3 sweep med=0.262 min=0.251@222 max=0.277@222 pick=max@222
+[04:16:40] HUNT it20 med=0.264 min=0.244@237
+[04:16:43] FLAG d5=1
+[04:16:44] FLAG d5=1
+[04:16:44] FLAG d5=1
+[04:16:45] FLAG d5=1
+[04:16:45] FLAG d5=1
+[04:16:46] FLAG d5=1
+[04:16:46] FLAG d5=1
+[04:16:47] FLAG d5=1
+[04:16:47] FLAG d5=1
+[04:16:49] FLAG d5=1
+[04:16:49] FLAG d5=1
+[04:16:50] FLAG d5=1
+[04:16:53] g3 sweep med=0.252 min=0.230@0 max=0.281@304 pick=max@304
+[04:17:01] HUNT it33 med=0.258 min=0.231@227
+[04:17:03] HUNT blocked front=0.205 grid=[None, 0.545, 0.434, 0.331, 0.205, 0.34, 0.434, 0.573, None]
+[04:17:20] SIGTERM
+[04:17:21] pilot8 started pid 1038
+[04:17:21] g3 sweep med=0.258 min=0.220@314 max=0.293@80 pick=min@314
+[04:17:23] HUNT start
+[04:17:32] HUNT it61 med=0.237 min=0.205@206
+[04:17:33] FLAG d5=1
+[04:17:33] FLAG d5=1
+[04:17:33] FLAG d5=1
+[04:17:34] FLAG d5=1
+[04:17:34] FLAG d5=1
+[04:17:37] HUNT blocked front=0.207 grid=[None, None, 0.44, 0.215, 0.207, 0.217, 0.438, None, None]
+[04:17:39] HUNT it1 med=0.270 min=0.210@200
+[04:17:44] HUNT blocked front=0.311 grid=[None, 0.562, 0.576, 0.544, 0.311, 0.538, 0.575, 0.637, None]
+[04:17:45] g3 sweep med=0.299 min=0.237@42 max=0.335@358 pick=min@42
+[04:17:47] FLAG d5=1
+[04:17:48] FLAG d5=1
+[04:17:48] FLAG d5=1
+[04:17:57] HUNT it2 med=0.333 min=0.294@252
+[04:18:02] HUNT blocked front=0.282 grid=[None, 0.644, 0.849, 0.298, 0.282, 0.296, 0.842, 0.848, 0.855]
+[04:18:02] HUNT it63 med=0.331 min=0.296@312
+[04:18:05] HUNT blocked front=0.191 grid=[None, 0.556, 0.537, 0.382, 0.191, 0.374, 0.532, 0.638, None]
+[04:18:07] FLAG d5=1
+[04:18:08] FLAG d5=1
+[04:18:09] FLAG d5=1
+[04:18:09] FLAG d5=1
+[04:18:10] g3 sweep med=0.351 min=0.317@76 max=0.377@233 pick=min@76
+[04:18:11] FLAG d5=1
+[04:18:11] FLAG d5=1
+[04:18:12] FLAG d5=1
+[04:18:12] FLAG d5=1
+[04:18:13] FLAG d5=1
+[04:18:14] HUNT it64 med=0.353 min=0.337@121
+[04:18:21] HUNT it3 med=0.348 min=0.331@140
+[04:18:24] HUNT blocked front=0.174 grid=[None, 0.557, 0.566, 0.183, 0.174, 0.183, 0.567, 0.595, None]
+[04:18:29] HUNT it65 med=0.348 min=0.329@171
+[04:18:34] HUNT blocked front=0.199 grid=[None, None, 0.373, 0.211, 0.199, 0.211, 0.378, None, None]
+[04:18:38] g3 sweep med=0.346 min=0.321@88 max=0.372@70 pick=max@70
+[04:18:42] CMD {"op":"g3","sec":600} -> {"sweeps": 25, "last": {"med": 0.346, "min": 0.321, "max": 0.372, "pick_h": 70.5, "mode": "max"}}
+[04:18:42] pilot8 exited
+[04:18:43] HUNT it4 med=0.345 min=0.317@14
+[04:18:47] HUNT blocked front=0.285 grid=[None, 0.55, 0.52, 0.379, 0.285, 0.371, 0.517, 0.607, None]
+[04:18:50] SIGTERM
+[04:18:50] SIGTERM
+[04:18:52] HUNT it66 med=0.348 min=0.314@290
+[04:18:55] HUNT blocked front=0.264 grid=[None, 0.645, 0.782, 0.336, 0.264, 0.33, 0.789, 0.852, 0.87]
+[04:19:07] pilot8 started pid 1097
+[04:19:09] HUNT start
+[04:23:46] pilot8 started pid 1229
+[04:23:48] g3 start exclusive
+[04:24:04] CMD ERR {"op":"g3","sec":480}: NameError("name 'it' is not defined")
+[04:27:32] pilot8 started pid 1309
+[04:27:34] g3 start exclusive
+[04:27:50] CMD ERR {"op":"g3","sec":330}: NameError("name 'it' is not defined")
+[04:29:42] pilot8 started pid 1365
+[04:29:44] g3 start exclusive
+[04:29:58] g3 sweep med=0.324 min=0.302@207 max=0.352@107 pick=max@107
+[04:30:16] g3 sweep med=0.323 min=0.292@302 max=0.350@70 pick=min@302
+[04:30:37] g3 sweep med=0.345 min=0.321@312 max=0.373@70 pick=max@70
+[04:30:42] FLAG d5=1
+[04:30:42] FLAG d5=1
+[04:30:42] FLAG d5=1
+[04:30:43] FLAG d5=1
+[04:30:43] FLAG d5=1
+[04:30:44] FLAG d5=1
+[04:30:44] FLAG d5=1
+[04:30:44] FLAG d5=1
+[04:30:55] g3 sweep med=0.376 min=0.345@241 max=0.405@109 pick=min@241
+[04:31:16] g3 sweep med=0.373 min=0.345@256 max=0.399@83 pick=min@256
+[04:31:21] FLAG d5=1
+[04:31:22] FLAG d5=1
+[04:31:22] FLAG d5=1
+[04:31:36] g3 sweep med=0.338 min=0.318@261 max=0.366@105 pick=max@105
+[04:31:57] g3 sweep med=0.348 min=0.323@220 max=0.387@69 pick=max@69
+[04:32:02] FLAG d5=1
+[04:32:03] FLAG d5=1
+[04:32:03] FLAG d5=1
+[04:32:04] FLAG d5=1
+[04:32:04] FLAG d5=1
+[04:32:04] FLAG d5=1
+[04:32:05] FLAG d5=1
+[04:32:05] FLAG d5=1
+[04:32:06] FLAG d5=1
+[04:32:06] FLAG d5=1
+[04:32:16] g3 sweep med=0.378 min=0.340@233 max=0.404@138 pick=min@233
+[04:32:37] g3 sweep med=0.372 min=0.336@264 max=0.400@112 pick=min@264
+[04:32:48] pilot8 started pid 1444
+[04:32:51] CMD {"op":"txstorm","sec":540,"msg":"PING A"} -> {"err": "unknown txstorm"}
+[04:34:52] g3 start exclusive
+[04:35:06] g3 sweep med=0.366 min=0.335@258 max=0.396@90 pick=min@258
+[04:35:28] g3 sweep med=0.369 min=0.331@304 max=0.401@46 pick=min@304
+[04:35:47] g3 sweep med=0.388 min=0.349@276 max=0.420@95 pick=min@276
+[04:36:09] g3 sweep med=0.390 min=0.365@224 max=0.416@99 pick=max@99
+[04:36:31] g3 sweep med=0.364 min=0.338@265 max=0.400@90 pick=max@90
+[04:36:38] FLAG d5=1
+[04:36:39] FLAG d5=1
+[04:36:39] FLAG d5=1
+[04:36:40] FLAG d5=1
+[04:36:41] FLAG d5=1
+[04:36:41] FLAG d5=1
+[04:36:42] FLAG d5=1
+[04:36:42] FLAG d5=1
+[04:36:52] g3 sweep med=0.377 min=0.355@251 max=0.405@129 pick=max@129
+[04:37:12] g3 sweep med=0.388 min=0.364@286 max=0.423@116 pick=max@116
+[04:37:21] FLAG d5=1
+[04:37:21] FLAG d5=1
+[04:37:21] FLAG d5=1
+[04:37:22] FLAG d5=1
+[04:37:22] FLAG d5=1
+[04:37:34] FLAG d5=1
+[04:37:34] FLAG d5=1
+[04:37:35] g3 sweep med=0.374 min=0.345@226 max=0.402@44 pick=min@226
+[04:37:42] FLAG d5=1
+[04:37:43] FLAG d5=1
+[04:37:43] FLAG d5=1
+[04:37:44] FLAG d5=1
+[04:37:44] FLAG d5=1
+[04:37:44] FLAG d5=1
+[04:37:45] FLAG d5=1
+[04:37:45] FLAG d5=1
+[04:37:46] FLAG d5=1
+[04:37:46] FLAG d5=1
+[04:37:56] g3 sweep med=0.375 min=0.351@31 max=0.419@144 pick=max@144
+[04:38:18] g3 sweep med=0.391 min=0.369@305 max=0.411@60 pick=min@305
+[04:38:25] CMD {"op":"g3","sec":200} -> {"sweeps": 10, "last": {"med": 0.391, "min": 0.369, "max": 0.411, "pick_h": 304.7, "mode": "min"}}
+[04:40:19] g3 start exclusive
+[04:40:34] g3 sweep med=0.333 min=0.308@284 max=0.356@72 pick=min@284
+[04:40:55] g3 sweep med=0.371 min=0.327@334 max=0.404@91 pick=min@334
+[04:41:00] FLAG d5=1
+[04:41:00] FLAG d5=1
+[04:41:00] FLAG d5=1
+[04:41:01] FLAG d5=1
+[04:41:01] FLAG d5=1
+[04:41:02] FLAG d5=1
+[04:41:02] FLAG d5=1
+[04:41:14] g3 sweep med=0.342 min=0.317@10 max=0.408@136 pick=max@136
+[04:41:34] FLAG d5=1
+[04:41:34] g3 sweep med=0.386 min=0.345@354 max=0.414@61 pick=min@354
+[04:41:39] FLAG d5=1
+[04:41:39] FLAG d5=1
+[04:41:39] FLAG d5=1
+[04:41:51] FLAG d5=1
+[04:41:52] FLAG d5=1
+[04:41:52] g3 sweep med=0.362 min=0.342@290 max=0.394@112 pick=max@112
+[04:42:14] g3 sweep med=0.367 min=0.346@292 max=0.391@71 pick=max@71
+[04:42:34] g3 sweep med=0.368 min=0.341@283 max=0.402@86 pick=max@86
+[04:42:55] g3 sweep med=0.349 min=0.325@219 max=0.374@65 pick=max@65
+[04:42:58] SIGTERM
+[04:43:18] g3 sweep med=0.349 min=0.325@221 max=0.390@93 pick=max@93
+[04:43:36] g3 sweep med=0.367 min=0.336@296 max=0.397@88 pick=min@296
+[04:43:56] g3 sweep med=0.364 min=0.317@328 max=0.397@95 pick=min@328
+[04:44:16] g3 sweep med=0.343 min=0.320@323 max=0.380@220 pick=max@220
+[04:44:35] g3 sweep med=0.280 min=0.236@308 max=0.328@311 pick=max@311
+[04:44:56] g3 sweep med=0.284 min=0.222@179 max=0.318@66 pick=min@179
+[04:45:17] g3 sweep med=0.339 min=0.318@308 max=0.365@119 pick=max@119
+[04:45:20] CMD {"op":"g3","sec":300} -> {"sweeps": 15, "last": {"med": 0.339, "min": 0.318, "max": 0.365, "pick_h": 119.4, "mode": "max"}}
+[04:45:20] pilot8 exited
+[04:46:46] pilot8 started pid 1675
+[04:47:42] g3 start exclusive
+[04:47:56] g3 sweep med=0.396 min=0.369@296 max=0.439@53 pick=max@53
+[04:48:00] FLAG d5=1
+[04:48:01] FLAG d5=1
+[04:48:01] FLAG d5=1
+[04:48:02] FLAG d5=1
+[04:48:02] FLAG d5=1
+[04:48:03] FLAG d5=1
+[04:48:03] FLAG d5=1
+[04:48:04] FLAG d5=1
+[04:48:05] FLAG d5=1
+[04:48:06] FLAG d5=1
+[04:48:16] g3 sweep med=0.431 min=0.410@313 max=0.467@114 pick=max@114
+[04:48:37] g3 sweep med=0.429 min=0.399@262 max=0.467@33 pick=max@33
+[04:48:57] g3 sweep med=0.429 min=0.399@260 max=0.461@71 pick=max@71
+[04:49:05] FLAG d5=1
+[04:49:06] FLAG d5=1
+[04:49:06] FLAG d5=1
+[04:49:06] FLAG d5=1
+[04:49:07] FLAG d5=1
+[04:49:07] FLAG d5=1
+[04:49:08] FLAG d5=1
+[04:49:19] g3 sweep med=0.432 min=0.402@159 max=0.469@57 pick=max@57
+[04:49:41] g3 sweep med=0.429 min=0.398@183 max=0.462@83 pick=max@83
+[04:50:02] g3 sweep med=0.428 min=0.397@297 max=0.463@125 pick=max@125
+[04:50:21] g3 sweep med=0.341 min=0.297@1 max=0.379@316 pick=min@1
+[04:50:40] g3 sweep med=0.287 min=0.248@258 max=0.317@78 pick=min@258
+[04:50:43] FLAG d5=1
+[04:50:44] FLAG d5=1
+[04:50:45] FLAG d5=1
+[04:50:45] FLAG d5=1
+[04:50:46] FLAG d5=1
+[04:50:46] FLAG d5=1
+[04:50:47] FLAG d5=1
+[04:50:50] FLAG d5=1
+[04:50:59] g3 sweep med=0.272 min=0.250@227 max=0.301@132 pick=max@132
+[04:51:20] g3 sweep med=0.279 min=0.254@260 max=0.309@60 pick=max@60
+[04:51:41] g3 sweep med=0.281 min=0.258@271 max=0.306@84 pick=max@84
+[04:52:04] g3 sweep med=0.251 min=0.229@209 max=0.281@102 pick=max@102
+[04:52:25] g3 sweep med=0.239 min=0.214@305 max=0.257@99 pick=min@305
+[04:52:47] g3 sweep med=0.264 min=0.246@305 max=0.291@356 pick=max@356
+[04:53:10] g3 sweep med=0.256 min=0.239@287 max=0.277@69 pick=max@69
+[04:53:17] FLAG d5=1
+[04:53:17] FLAG d5=1
+[04:53:31] g3 sweep med=0.236 min=0.210@288 max=0.270@84 pick=max@84
+[04:53:53] g3 sweep med=0.236 min=0.215@283 max=0.258@94 pick=max@94
+[04:54:13] g3 sweep med=0.238 min=0.214@279 max=0.259@97 pick=min@279
+[04:54:34] g3 sweep med=0.238 min=0.211@317 max=0.264@112 pick=min@317
+[04:54:55] g3 sweep med=0.235 min=0.212@248 max=0.264@10 pick=max@10
+[04:55:00] CMD {"op":"g3","sec":420} -> {"sweeps": 21, "last": {"med": 0.235, "min": 0.212, "max": 0.264, "pick_h": 10.5, "mode": "max"}}
+[04:55:55] CMD {"op":"stop"} -> {"ok": 1}

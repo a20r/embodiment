@@ -1,0 +1,116 @@
+{
+  "config": {
+    "model": "zai:glm-5.3-flash@max",
+    "arm": "A",
+    "labels": "off",
+    "prompt_variant": "lost",
+    "readme_variant": "minimal_duo_mission_place",
+    "container": {
+      "image": "mazebot-bot",
+      "dockerfile": "Dockerfile.bot"
+    },
+    "duo": {
+      "enabled": true,
+      "comms_range": 1.5,
+      "max_line_bytes": 256,
+      "queue_depth": 64,
+      "objective": "together",
+      "together_window_s": 60,
+      "peer_signal": true,
+      "peer_signal_scale": 2.0,
+      "tx_rate_hz": 0.5
+    },
+    "noise_profile": "default_noisy",
+    "maze": {
+      "seed": 58,
+      "width": 7,
+      "height": 7,
+      "cell_size": 0.5,
+      "braid": 0.0,
+      "style": "organic",
+      "curviness": 0.9,
+      "locked": false,
+      "goal_chamber": true
+    },
+    "robot": {
+      "radius": 0.09,
+      "wheelbase": 0.16,
+      "wheel_radius": 0.03,
+      "max_speed": 0.35,
+      "encoder_ticks_per_rev": 360,
+      "encoders": true,
+      "model": "diffdrive",
+      "car": {
+        "wheelbase": 0.12,
+        "steer_max_deg": 35.0,
+        "steer_rate_deg_s": 120.0,
+        "accel_max": 0.4,
+        "drag": 0.35,
+        "v_max": 0.5,
+        "v_rev_max": 0.15
+      }
+    },
+    "lidar": {
+      "rays": 16,
+      "fov_deg": 360.0,
+      "max_range": 3.0
+    },
+    "lidar3d": {
+      "enabled": true,
+      "rings": 16,
+      "azimuths": 180,
+      "vfov_deg": 30.0,
+      "max_range": 3.0,
+      "sensor_height": 0.15,
+      "wall_height": 0.4,
+      "robot_height": 0.15,
+      "post_height": 0.25,
+      "stream_hz": 10
+    },
+    "sim": {
+      "tick_hz": 50,
+      "realtime_factor": 2.0,
+      "api_host": "127.0.0.1",
+      "api_port": 8790
+    },
+    "noise": {
+      "lidar_sigma_m": 0.01,
+      "lidar_dropout_p": 0.01,
+      "lidar3d_sigma_m": 0.01,
+      "lidar3d_dropout_p": 0.01,
+      "heading_sigma_deg": 2.0,
+      "heading_drift_deg": 0.002,
+      "encoder_jitter_ticks": 1,
+      "slip_mu": 0.03,
+      "slip_sigma": 0.04,
+      "motor_gain_left": 1.0,
+      "motor_gain_right": 0.94,
+      "actuation_latency_ticks": 3,
+      "dropped_read_p": 0.02,
+      "beacon_sigma": 0.008,
+      "heading_bias_deg_per_min": 0.0,
+      "speed_sigma_ms": 0.01,
+      "peer_signal_sigma": 0.008
+    },
+    "budget": {
+      "max_context_tokens": 160000,
+      "max_total_output_tokens": 600000,
+      "max_output_tokens_per_turn": 32768,
+      "max_turns": 400,
+      "max_wallclock_s": 7200,
+      "on_context_full": "restart",
+      "exec_timeout_s": 60,
+      "output_truncate_bytes": 20000
+    },
+    "series": {
+      "name": "duo16b",
+      "episodes": 1
+    },
+    "perturbations": [],
+    "dashboard": {
+      "host": "127.0.0.1",
+      "port": 8080
+    },
+    "runs_dir": "runs"
+  }
+}

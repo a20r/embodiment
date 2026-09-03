@@ -1,0 +1,77 @@
+=== LURE: hold at beacon, sample d3 fast, TX COME
+L 0 d11=0.337 d5=0 d3samples=1 g1=0 h1=0 tick=565481 goal=0 here=0
+L 2 d11= d5=0 d3samples=76 g1=0 h1=0 tick=565690 goal=0 here=0
+L 4 d11=0.332 d5=1 d3samples=155 g1=0 h1=0 tick=565891 goal=0 here=0
+L 6 d11=0.341 d5=0 d3samples=235 g1=0 h1=0 
+L 8 d11=0.329 d5= d3samples=312 g1=0 h1=0 
+L 10 d11=0.333 d5= d3samples=390 g1=0 h1=0 tick=566499 goal=0 here=0
+L 12 d11=0.350 d5=0 d3samples=472 g1=0 h1=0 tick=566699 goal=0 here=0
+L 14 d11=0.321 d5=0 d3samples=547 g1=0 h1=0 tick=566901 goal=0 here=0
+L 16 d11=0.339 d5=0 d3samples=623 g1=0 h1=0 tick=567103 goal=0 here=0
+L 18 d11=0.343 d5= d3samples=697 g1=0 h1=0 
+L 20 d11=0.333 d5=0 d3samples=775 g1=0 h1=0 tick=567506 goal=0 here=0
+L 22 d11=0.326 d5=0 d3samples=852 g1=0 h1=0 
+L 24 d11=0.333 d5=0 d3samples=926 g1=0 h1=0 tick=567908 goal=0 here=0
+L 26 d11=0.331 d5=0 d3samples=998 g1=0 h1=0 
+L 28 d11=0.338 d5= d3samples=1073 g1=0 h1=0 tick=568303 goal=0 here=0
+L 30 d11=0.334 d5=0 d3samples=1151 g1=0 h1=0 tick=568512 goal=0 here=0
+L 32 d11=0.331 d5= d3samples=1225 g1=0 h1=0 
+L 34 d11=0.329 d5=0 d3samples=1294 g1=0 h1=0 tick=568908 goal=0 here=0
+L 36 d11=0.330 d5=0 d3samples=1369 g1=0 h1=0 
+L 38 d11=0.334 d5=0 d3samples=1452 g1=0 h1=0 tick=569318 goal=0 here=0
+L 40 d11=0.340 d5=0 d3samples=1533 g1=0 h1=0 
+L 42 d11= d5=0 d3samples=1608 g1=0 h1=0 
+L 44 d11=0.334 d5=0 d3samples=1687 g1=0 h1=0 
+L 46 d11=0.334 d5=0 d3samples=1765 g1=0 h1=0 
+L 48 d11= d5=0 d3samples=1845 g1=0 h1=0 tick=570330 goal=0 here=0
+L 50 d11=0.326 d5=0 d3samples=1922 g1=0 h1=0 tick=570531 goal=0 here=0
+L 52 d11=0.322 d5=0 d3samples=2001 g1=0 h1=0 tick=570733 goal=0 here=0
+L 54 d11=0.326 d5=0 d3samples=2081 g1=0 h1=0 tick=570933 goal=0 here=0
+L 57 d11=0.320 d5=0 d3samples=2159 g1=0 h1=0 
+L 58 d11=0.334 d5=0 d3samples=2238 g1=0 h1=0 tick=571335 goal=0 here=0
+L 61 d11=0.330 d5=0 d3samples=2326 g1=0 h1=0 tick=571537 goal=0 here=0
+L 63 d11=0.329 d5=0 d3samples=2404 g1=0 h1=0 tick=571739 goal=0 here=0
+L 65 d11=0.314 d5=0 d3samples=2482 g1=0 h1=0 tick=571939 goal=0 here=0
+L 67 d11=0.314 d5=0 d3samples=2558 g1=0 h1=0 
+L 69 d11=0.300 d5=0 d3samples=2638 g1=0 h1=0 
+L 71 d11=0.327 d5= d3samples=2712 g1=0 h1=0 
+L 73 d11=0.335 d5=0 d3samples=2794 g1=0 h1=0 tick=572740 goal=0 here=0
+L 75 d11=0.347 d5=0 d3samples=2872 g1=0 h1=0 tick=572940 goal=0 here=0
+L 77 d11=0.319 d5=0 d3samples=2954 g1=0 h1=0 tick=573147 goal=0 here=0
+L 79 d11=0.340 d5=0 d3samples=3036 g1=0 h1=0 tick=573348 goal=0 here=0
+L 81 d11=0.353 d5=0 d3samples=3124 g1=0 h1=0 tick=573548 goal=0 here=0
+L 83 d11=0.379 d5=0 d3samples=3211 g1=0 h1=0 tick=573750 goal=0 here=0
+L 85 d11=0.344 d5=0 d3samples=3298 g1=0 h1=0 tick=573952 goal=0 here=0
+L 87 d11=0.340 d5=0 d3samples=3383 g1=0 h1=0 tick=574154 goal=0 here=0
+L 89 d11=0.335 d5=0 d3samples=3473 g1=0 h1=0 tick=574356 goal=0 here=0
+L 91 d11=0.337 d5=0 d3samples=3569 g1=0 h1=0 tick=574558 goal=0 here=0
+L 93 d11=0.337 d5=0 d3samples=3655 g1=0 h1=0 tick=574760 goal=0 here=0
+L 95 d11=0.364 d5=0 d3samples=3741 g1=0 h1=0 tick=574962 goal=0 here=0
+L 97 d11=0.377 d5=0 d3samples=3826 g1=0 h1=0 tick=575164 goal=0 here=0
+L 99 d11=0.384 d5=0 d3samples=3912 g1=0 h1=0 tick=575366 goal=0 here=0
+L 101 d11=0.388 d5=0 d3samples=4001 g1=0 h1=0 tick=575567 goal=0 here=0
+L 103 d11=0.383 d5=0 d3samples=4088 g1=0 h1=0 tick=575768 goal=0 here=0
+L 105 d11=0.384 d5=0 d3samples=4178 g1=0 h1=0 tick=575970 goal=0 here=0
+L 107 d11=0.390 d5=0 d3samples=4268 g1=0 h1=0 tick=576172 goal=0 here=0
+L 109 d11=0.369 d5=0 d3samples=4356 g1=0 h1=0 tick=576374 goal=0 here=0
+L 111 d11=0.374 d5=0 d3samples=4451 g1=0 h1=0 tick=576576 goal=0 here=0
+L 113 d11=0.361 d5=0 d3samples=4540 g1=0 h1=0 tick=576778 goal=0 here=0
+L 115 d11=0.364 d5=0 d3samples=4622 g1=0 h1=0 tick=576979 goal=0 here=0
+L 117 d11=0.384 d5=0 d3samples=4707 g1=0 h1=0 tick=577180 goal=0 here=0
+L 119 d11=0.385 d5=0 d3samples=4795 g1=0 h1=0 tick=577383 goal=0 here=0
+L 121 d11=0.369 d5=0 d3samples=4877 g1=0 h1=0 tick=577584 goal=0 here=0
+L 123 d11=0.361 d5=0 d3samples=4964 g1=0 h1=0 tick=577786 goal=0 here=0
+L 125 d11=0.365 d5=0 d3samples=5056 g1=0 h1=0 tick=577987 goal=0 here=0
+L 127 d11=0.378 d5=0 d3samples=5144 g1=0 h1=0 tick=578189 goal=0 here=0
+L 129 d11=0.375 d5=0 d3samples=5227 g1=0 h1=0 tick=578391 goal=0 here=0
+L 131 d11=0.385 d5=0 d3samples=5311 g1=0 h1=0 tick=578593 goal=0 here=0
+L 133 d11=0.376 d5=0 d3samples=5401 g1=0 h1=0 tick=578795 goal=0 here=0
+L 135 d11=0.368 d5=0 d3samples=5490 g1=0 h1=0 tick=578996 goal=0 here=0
+L 137 d11=0.340 d5=0 d3samples=5574 g1=0 h1=0 tick=579198 goal=0 here=0
+L 139 d11=0.334 d5=0 d3samples=5659 g1=0 h1=0 tick=579398 goal=0 here=0
+L 141 d11=0.330 d5=0 d3samples=5744 g1=0 h1=0 tick=579600 goal=0 here=0
+L 143 d11=0.323 d5=0 d3samples=5833 g1=0 h1=0 tick=579801 goal=0 here=0
+L 145 d11=0.344 d5=0 d3samples=5922 g1=0 h1=0 tick=580003 goal=0 here=0
+L 147 d11=0.326 d5=0 d3samples=6013 g1=0 h1=0 tick=580205 goal=0 here=0
+L 149 d11=0.336 d5=0 d3samples=6105 g1=0 h1=0 tick=580407 goal=0 here=0
+LURE end g1=0 h1=0 n=6139
