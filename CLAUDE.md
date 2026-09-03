@@ -19,7 +19,14 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   maze.style=organic`). Other subcommands: `reset`, `perturb`, `quiz`,
   `ablate`, `savings`, `report`, `shell`, `tail`, `dashboard`, `smoke`.
 - `python scripts/duo_check.py` — host-side validation of duo mode
-  (26 checks, no docker needed; boots a throwaway daemon on port 8798).
+  (50 checks, no docker needed; boots a throwaway daemon on port 8798).
+- `--set lidar3d.enabled=true` swaps the 16-beam `lidar` port for a
+  `lidar3d` point-cloud port (sensor-frame `x,y,z` triples, `;`-separated,
+  ~55 kB frames; walls have height, floor at z=0). Gate for lidar3d
+  changes: `python scripts/lidar3d_check.py` (23 checks, port 8796).
+  The dashboard's **3D** tab renders walls, robots and the true cloud
+  (three.js vendored; `/state?cloud=1`); headless render check:
+  `python scripts/dashboard_render_check.py <dashboard-url> <series>`.
 - `python scripts/make_replay.py <series> <ep_NNN> <out.html> [title]`
   — self-contained replay page for a solo episode;
   `scripts/make_duo_replay.py` likewise for duo episodes.
@@ -27,6 +34,16 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   (default 127.0.0.1:8080) against the running daemon.
 - No API key? `--set model=mock:wall-follower` drives the identical
   harness path with a scripted agent.
+- Other providers: `--set model=kimi:<id>[@effort]` / `zai:<id>[@effort]`
+  / `deepseek:<id>[@effort]` / `gemini:<id>` / `openai:<id>` /
+  `compat:<id>` (OpenAI-compatible adapter in `harness/llm.py`; keys
+  from `MOONSHOT_API_KEY` / `ZAI_API_KEY` / `DEEPSEEK_API_KEY` /
+  `GEMINI_API_KEY` / `OPENAI_API_KEY` / `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is `kimi:kimi-k3@max`;
+  "Ox Alpha" is `zai:glm-5.3-flash`; reasoning traces are stored as
+  thinking blocks and echoed back verbatim (Moonshot requires it, Z.ai
+  keeps it with clear_thinking=false). Token-free check and the gate
+  for any `harness/llm.py` change: `python scripts/llm_compat_check.py`
+  (72 checks).
 
 ## Architecture
 

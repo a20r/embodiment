@@ -1,0 +1,60 @@
+# start MOV_TICKS=441
+P,0,0.439,-1,True
+P,60,0.433,0,True
+P,-60,0.427,-0,True
+P,120,0.4535,442,False
+P,-120,0.413,0,True
+P,180,0.489,446,False
+# round1 base=0.433 best=(0.413,c=-120,tk=0,blk=True)
+# exit
+# start MOV_TICKS=441
+P,0,0.322,446,False
+P,60,0.2915,344,True
+P,-60,0.278,450,False
+P,120,0.295,1,True
+P,-120,0.308,104,True
+P,180,0.2925,445,False
+# round1 base=0.346 best=(0.278,c=-60,tk=450,blk=False)
+R,0.317,446,False,0.294
+P,0,0.3735,447,False
+P,60,0.357,156,True
+P,-60,0.361,446,False
+P,120,0.399,166,True
+P,-120,0.417,314,True
+P,180,0.5105,440,False
+# round2 base=0.31 best=(0.361,c=-60,tk=446,blk=False)
+P,0,0.5005,172,True
+P,60,0.476,5,True
+P,-60,0.451,2,True
+P,120,0.326,446,False
+P,-120,0.3055,0,True
+P,180,0.319,444,False
+# round3 base=0.512 best=(0.319,c=180,tk=444,blk=False)
+R,0.3355,438,True,0.326
+P,0,0.3375,2,True
+# exit
+# start MOV_TICKS=441
+P,0,0.302,444,False
+P,60,0.3235,0,True
+P,-60,0.377,450,False
+P,120,0.393,62,True
+P,-120,0.419,178,True
+P,180,0.3555,450,False
+# round1 base=0.274 best=(0.302,c=0,tk=444,blk=False)
+P,0,0.2905,346,True
+P,60,0.2795,226,True
+P,-60,0.27949999999999997,2,True
+P,120,0.3455,184,True
+P,-120,0.3805,191,True
+P,180,0.4925,444,False
+# round2 base=0.346 best=(0.492,c=180,tk=444,blk=False)
+P,0,0.48,445,False
+P,60,0.48,321,True
+P,-60,0.487,456,False
+P,120,0.4855,138,True
+P,-120,0.4215,447,False
+P,180,0.493,446,False
+# round3 base=0.484 best=(0.421,c=-120,tk=447,blk=False)
+R,0.5435000000000001,444,False,0.470
+P,0,0.5355000000000001,22,True
+P,60,0.5934999999999999,448,False

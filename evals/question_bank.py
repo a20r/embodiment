@@ -57,10 +57,13 @@ def build(device_map, maze, cfg):
             item["tol"] = tol
         q.append(item)
 
+    lidar3d = bool(cfg.get("lidar3d", {}).get("enabled"))
+    range_dev = ("lidar3d", "the 3D lidar / point-cloud sensor") if lidar3d \
+        else ("lidar", "the range/lidar sensor")
     for logical, label in [
             ("motor_left", "the LEFT motor"),
             ("motor_right", "the RIGHT motor"),
-            ("lidar", "the range/lidar sensor"),
+            range_dev,
             ("heading", "the heading/orientation sensor"),
             ("status", "the status readout that reports goal progress")]:
         add(f"dev_{logical}",
@@ -68,13 +71,29 @@ def build(device_map, maze, cfg):
             f"(give the file name)",
             "token", phys_to_file[logical])
 
-    add("lidar_beams",
-        "How many range beams does the lidar return per reading?",
-        "number", cfg["lidar"]["rays"], tol=0)
-    add("beam0_dir",
-        "Which direction does the first lidar beam point, relative to "
-        "the robot?",
-        "keyword", ["forward", "front", "ahead", "straight"])
+    if lidar3d:
+        l3 = cfg["lidar3d"]
+        add("lidar3d_rings",
+            "How many distinct elevation angles (rings) does the point "
+            "cloud contain per frame?",
+            "number", l3["rings"], tol=0)
+        add("lidar3d_height",
+            "How high above the floor is the point-cloud sensor mounted, "
+            "in meters?",
+            "number", l3["sensor_height"], tol=0.03)
+        # token, not keyword: a one-letter keyword would match "axis".
+        add("lidar3d_frame",
+            "In the point cloud's coordinate frame, which axis points "
+            "forward along the robot?",
+            "token", "x")
+    else:
+        add("lidar_beams",
+            "How many range beams does the lidar return per reading?",
+            "number", cfg["lidar"]["rays"], tol=0)
+        add("beam0_dir",
+            "Which direction does the first lidar beam point, relative to "
+            "the robot?",
+            "keyword", ["forward", "front", "ahead", "straight"])
     add("pwm_sign",
         "Does a positive motor PWM value drive a wheel forward or "
         "backward?",

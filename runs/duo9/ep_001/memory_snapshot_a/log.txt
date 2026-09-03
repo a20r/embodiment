@@ -1,0 +1,6 @@
+Episode start Sat Aug 29 20:50:29 UTC 2026
+listener pid 630
+1788041637 switched to homing2
+1788042004 switched to homing2
+Episode 1 end Sat Aug 29 22:44:57 UTC 2026
+1788043866 episode1 shutdown, procs left running: listen,gobear,brwatch,supervise

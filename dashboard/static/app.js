@@ -70,6 +70,7 @@ async function selectEpisode(ep, running) {
   S.ep = ep; S.running = !!running;
   S.liveTrail = []; S.transcriptCursor = 0; S.lastState = null;
   S.replay = { poses: [], events: [], idx: 0, playing: false };
+  if (window.view3dReset) window.view3dReset();
   $("#tab-transcript").innerHTML = "";
   $("#memory-view").innerHTML = '<div class="empty">select a file</div>';
   const q = `series=${encodeURIComponent(S.series)}&ep=${ep}`;
@@ -110,7 +111,9 @@ async function pollLive() {
   try {
     const since = S.liveTrail.length
       ? S.liveTrail[S.liveTrail.length - 1][0] : 0;
-    st = await api(`/api/live/state?since=${since}`);
+    // The point cloud is only cast when the 3D view is showing.
+    const cloud = window.view3dActive && window.view3dActive() ? 1 : 0;
+    st = await api(`/api/live/state?since=${since}&cloud=${cloud}`);
   } catch {
     $("#live-badge").textContent = "live (daemon unreachable)";
     return;
@@ -125,6 +128,7 @@ async function pollLive() {
     bump: st.bump, rays: st.lidar_true, rayAngles: st.ray_angles,
     keyTaken: st.key_carried, doorOpen: st.door_open,
   });
+  if (window.view3dUpdate) window.view3dUpdate(st);
   $("#statusline").textContent =
     `tick ${st.tick} · sim ${st.sim_time_s}s · rtf ${st.realtime_factor}` +
     ` · cmd [${st.cmd}] · enc [${st.enc}] · collisions ${st.collision_count}` +
@@ -162,6 +166,7 @@ function drawReplay() {
     keyTaken: pickupT !== null && t >= pickupT,
     doorOpen: unlockT !== null && t >= unlockT,
   });
+  if (window.view3dUpdate) window.view3dUpdate({ pose: [x, y, th] });
   const dt = t / 50.0;
   $("#replay-time").textContent = `tick ${t} · ${dt.toFixed(1)}s`;
   $("#statusline").textContent =
@@ -568,14 +573,17 @@ async function loadMetrics() {
 /* ---------------- tabs & controls ---------------- */
 
 function refreshActiveTab() {
-  const active = document.querySelector(".tabs button.active").dataset.tab;
+  const active =
+    document.querySelector(".tabs button[data-tab].active").dataset.tab;
   if (active === "memory") loadMemory();
   else if (active === "metrics") loadMetrics();
 }
 
-document.querySelectorAll(".tabs button").forEach((b) => {
+// Right-panel tabs only; the left panel's view tabs (data-view) are
+// wired in view3d.js.
+document.querySelectorAll(".tabs button[data-tab]").forEach((b) => {
   b.addEventListener("click", () => {
-    document.querySelectorAll(".tabs button")
+    document.querySelectorAll(".tabs button[data-tab]")
       .forEach((x) => x.classList.remove("active"));
     document.querySelectorAll(".tabview")
       .forEach((x) => x.classList.remove("active"));

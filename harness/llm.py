@@ -1,11 +1,13 @@
 """Model layer for the episode loop.
 
-Two implementations behind one tiny interface:
+Three implementations behind one tiny interface:
 
   AnthropicModel      real Messages API calls via the official SDK
+  OpenAICompatModel   chat-completions providers (kimi:, gemini:, openai:,
+                      compat:), translating at the boundary
   MockWallFollower    deterministic scripted agent (model: mock:wall-follower)
 
-Both return SDK-shaped objects (content blocks with .type/.text/.id/.name/
+All return SDK-shaped objects (content blocks with .type/.text/.id/.name/
 .input, .stop_reason, .usage) so `episode.py` has exactly one loop.
 
 Deliberate deviations, documented in DECISIONS.md:
@@ -20,6 +22,7 @@ import json
 import os
 import time
 from dataclasses import dataclass, field
+from types import SimpleNamespace as _NS
 
 BASH_TOOL = {
     "name": "bash",
@@ -45,6 +48,9 @@ class Usage:
     output_tokens: int = 0
     cache_creation_input_tokens: int = 0
     cache_read_input_tokens: int = 0
+    # OpenAI-style providers report cache hits as a subset of
+    # input_tokens; kept for billing, never added by context_tokens().
+    cached_input_tokens: int = 0
 
 
 @dataclass
@@ -55,6 +61,7 @@ class Block:
     name: str = ""
     input: dict = field(default_factory=dict)
     thinking: str = ""
+    raw: str = ""    # provider's arguments string, echoed back as-is
 
 
 @dataclass
@@ -230,7 +237,369 @@ class MockWallFollower:
         return out
 
 
+# OpenAI-compatible providers.  Model strings are
+# "<provider>:<model-id>[@<reasoning_effort>]"; the id is passed through
+# verbatim (check the provider's docs for the exact current names) and
+# the optional "@low|high|max" suffix becomes the request's
+# reasoning_effort (Kimi K3 always reasons; "max" is what the Kimi app
+# calls K3 Max).  Keys come from the environment on the host and, like
+# the Anthropic key, never enter the container or the repo.
+# tokens_param: the output-cap parameter the endpoint wants (Moonshot
+# and OpenAI deprecate max_tokens in favour of max_completion_tokens).
+PROVIDERS = {
+    "kimi": dict(base_url="https://api.moonshot.ai/v1",
+                 key_env="MOONSHOT_API_KEY",
+                 tokens_param="max_completion_tokens",
+                 # K3 has no "medium"; "max" is the server default but is
+                 # sent explicitly so run records state the effort used.
+                 efforts=("low", "high", "max"), default_effort="max",
+                 # Moonshot 400s on a tool-call turn lacking the
+                 # reasoning_content key, and its gateway kills
+                 # non-streaming requests at 900 s (a max-effort turn over
+                 # a long history can exceed that) - so stream.
+                 pad_reasoning=True, stream=True),
+    # Z.ai (GLM; "Ox Alpha" was glm-5.3-flash).  Thinking is always on
+    # for 5.3-flash; clear_thinking=false is the model card's
+    # recommendation and makes the server keep the reasoning_content we
+    # echo (default true would strip it).  Efforts per the API reference
+    # (none/minimal excluded: they cannot turn thinking off here).
+    "zai": dict(base_url="https://api.z.ai/api/paas/v4/",
+                key_env="ZAI_API_KEY",
+                efforts=("low", "medium", "high", "xhigh", "max"),
+                default_effort="max",
+                extra_body={"thinking": {"type": "enabled",
+                                         "clear_thinking": False}}),
+    # DeepSeek (deepseek-v4-flash / deepseek-v4-pro).  Thinking is on by
+    # default (effort high); with tools present, reasoning_content must be
+    # passed back on every prior assistant turn or the API 400s - the same
+    # contract as Moonshot, hence pad_reasoning.
+    "deepseek": dict(base_url="https://api.deepseek.com",
+                     key_env="DEEPSEEK_API_KEY",
+                     efforts=("low", "high", "max"), default_effort="high",
+                     pad_reasoning=True),
+    # Gemini's OpenAI layer maps reasoning_effort onto thinking_level
+    # (minimal|low|medium|high; thinking cannot be turned off on 3.x).
+    # "high" is the 3.x default, sent explicitly for the record.
+    # include_thoughts asks for thought summaries alongside the answer;
+    # they are billed as output either way.
+    "gemini": dict(base_url="https://generativelanguage.googleapis.com/"
+                            "v1beta/openai/",
+                   key_env="GEMINI_API_KEY",
+                   efforts=("minimal", "low", "medium", "high"),
+                   default_effort="high",
+                   extra_body={"google": {"thinking_config": {
+                       "include_thoughts": True}}}),
+    "openai": dict(base_url=None, key_env="OPENAI_API_KEY",
+                   tokens_param="max_completion_tokens"),
+    # Any OpenAI-compatible endpoint: LLM_BASE_URL + LLM_API_KEY.
+    "compat": dict(base_url=os.environ.get("LLM_BASE_URL"),
+                   key_env="LLM_API_KEY"),
+}
+
+# Reasoning models return their trace as reasoning_content and require
+# it echoed back verbatim on every historical assistant turn (Moonshot:
+# "return the complete assistant message unchanged in multi-turn
+# conversations and tool calls"); dropping it degrades the model.  The
+# trace is stored as a thinking block in the transcript (the dashboard
+# already renders those) and re-attached at the boundary.
+REASONING_FIELDS = ("reasoning_content", "reasoning")
+
+OPENAI_BASH_TOOL = {
+    "type": "function",
+    "function": {
+        "name": BASH_TOOL["name"],
+        "description": BASH_TOOL["description"],
+        "parameters": BASH_TOOL["input_schema"],
+    },
+}
+
+
+def to_openai_messages(system, messages, pad_reasoning=False):
+    """Anthropic-shaped history (as the harness stores it) -> OpenAI
+    chat format.  Assistant tool_use blocks become tool_calls (with the
+    provider's own arguments string when we have it); user tool_result
+    blocks become role=tool messages; thinking blocks go back as
+    reasoning_content, verbatim - an empty trace is still a trace.
+    pad_reasoning: providers that reject a tool-call turn without the
+    key get "" when none was stored.  Anthropic thinking blocks carry a
+    signature and are never replayed as another provider's trace."""
+    out = [{"role": "system", "content": system}]
+    for m in messages:
+        role, content = m["role"], m["content"]
+        if isinstance(content, str):
+            out.append({"role": role, "content": content})
+            continue
+        if role == "assistant":
+            texts, calls, thinks = [], [], []
+            for b in content:
+                b = b if isinstance(b, dict) else _block_dict(b)
+                if b.get("type") == "text" and "text" in b:
+                    texts.append(b["text"])
+                elif b.get("type") == "tool_use":
+                    calls.append({
+                        "id": b["id"], "type": "function",
+                        "function": {"name": b["name"],
+                                     "arguments": b.get("raw") or
+                                     json.dumps(b.get("input") or {})}})
+                elif (b.get("type") == "thinking" and "thinking" in b
+                      and "signature" not in b):
+                    thinks.append(b["thinking"] or "")
+            msg = {"role": "assistant"}
+            # An absent content key is always accepted alongside
+            # tool_calls; "" has been rejected by Moonshot.
+            if texts or not calls:
+                msg["content"] = "\n".join(texts)
+            if calls:
+                msg["tool_calls"] = calls
+            if thinks or (calls and pad_reasoning):
+                msg["reasoning_content"] = "\n".join(thinks)
+            out.append(msg)
+        else:
+            texts = []
+            for b in content:
+                if isinstance(b, dict) and b.get("type") == "tool_result":
+                    c = b.get("content", "")
+                    out.append({"role": "tool",
+                                "tool_call_id": b["tool_use_id"],
+                                "content": c if isinstance(c, str)
+                                else json.dumps(c)})
+                elif isinstance(b, dict) and b.get("type") == "text":
+                    texts.append(b.get("text", ""))
+            if texts:
+                out.append({"role": "user", "content": "\n".join(texts)})
+    return out
+
+
+def _block_dict(b):
+    d = {"type": b.type}
+    if b.type == "text":
+        d["text"] = b.text
+    elif b.type == "tool_use":
+        d.update(id=b.id, name=b.name, input=b.input)
+        if b.raw:
+            d["raw"] = b.raw
+    elif b.type == "thinking":
+        d["thinking"] = b.thinking
+    return d
+
+
+def _reasoning_of(msg):
+    """The provider's reasoning trace, whichever field carries it, or
+    None when the provider sent no such field.  "" is a real value: the
+    model reasoned and emitted nothing, and Moonshot still wants it
+    echoed.  The openai SDK keeps unknown fields in model_extra."""
+    extra = getattr(msg, "model_extra", None) or {}
+    for name in REASONING_FIELDS:
+        v = getattr(msg, name, None)
+        if v is None:
+            v = extra.get(name)
+        if isinstance(v, str):
+            return v
+    return None
+
+
+def _retry_after(e, attempts):
+    """Honour Retry-After when the provider sends one, else back off."""
+    resp = getattr(e, "response", None)
+    hdr = resp.headers.get("retry-after") if resp is not None else None
+    try:
+        return max(1, min(300, int(hdr)))
+    except (TypeError, ValueError):
+        return min(60, 2 ** attempts)
+
+
+def _collect(stream):
+    """Fold SSE chunks into the non-streaming shape _translate reads.
+    Usage rides on the final empty-choices chunk (stream_options) or,
+    older style, inside choices[0].usage."""
+    text, trace, calls, finish, usage, saw = [], [], {}, None, None, False
+    for ch in stream:
+        if getattr(ch, "usage", None) is not None:
+            usage = ch.usage
+        if not ch.choices:
+            continue
+        c = ch.choices[0]
+        cu = getattr(c, "usage", None)    # an extra field: arrives as dict
+        if cu:
+            usage = _NS(**cu) if isinstance(cu, dict) else cu
+        finish = c.finish_reason or finish
+        d = c.delta
+        if d is None:
+            continue
+        r = _reasoning_of(d)
+        if r is not None:
+            saw = True
+            trace.append(r)
+        if d.content:
+            text.append(d.content)
+        for tc in d.tool_calls or []:
+            s = calls.setdefault(tc.index, {"id": "", "name": "", "a": []})
+            s["id"] = tc.id or s["id"]
+            if tc.function:
+                s["name"] = tc.function.name or s["name"]
+                s["a"].append(tc.function.arguments or "")
+    msg = _NS(content="".join(text) or None,
+              reasoning_content="".join(trace) if saw else None,
+              model_extra={},
+              tool_calls=[_NS(id=s["id"], function=_NS(
+                  name=s["name"], arguments="".join(s["a"])))
+                  for _, s in sorted(calls.items())] or None)
+    return _NS(choices=[_NS(message=msg, finish_reason=finish or "stop")],
+               usage=usage or _NS(prompt_tokens=0, completion_tokens=0))
+
+
+class OpenAICompatModel:
+    """Chat-completions adapter presenting the same interface as
+    AnthropicModel (content blocks, stop_reason, usage)."""
+
+    # "sensitive" is Z.ai's moderation finish_reason; like content_filter
+    # it becomes the refusal the loop retries-then-ends on.
+    STOP_MAP = {"tool_calls": "tool_use", "stop": "end_turn",
+                "length": "max_tokens", "content_filter": "refusal",
+                "sensitive": "refusal"}
+
+    # A max-effort reasoning turn over a 100k-token history can run for
+    # minutes; the SDK's own retries are off because the loop below owns
+    # the retry policy (and a duplicate long request would double-bill).
+    # When streaming, the timeout is idle time between chunks.
+    TIMEOUT_S = 900
+    # A peer's long turn can hold the only low-tier concurrency slot for
+    # minutes, so 429 retries are bounded by wall time, not count.
+    RETRY_WINDOW_S = 1800
+
+    def __init__(self, provider, model, reasoning_effort=None):
+        import openai
+        spec = PROVIDERS[provider]
+        key = os.environ.get(spec["key_env"])
+        if not key:
+            raise RuntimeError(
+                f"{spec['key_env']} is not set (needed for {provider}:)")
+        self.provider = provider
+        self.model = model
+        self.reasoning_effort = reasoning_effort
+        self.tokens_param = spec.get("tokens_param", "max_tokens")
+        self.pad_reasoning = spec.get("pad_reasoning", False)
+        self.stream = spec.get("stream", False)
+        self.extra_body = spec.get("extra_body")
+        self._openai = openai
+        self.client = openai.OpenAI(api_key=key, base_url=spec["base_url"],
+                                    timeout=self.TIMEOUT_S, max_retries=0)
+
+    def create(self, system, messages, max_tokens=16000):
+        o = self._openai
+        kwargs = {self.tokens_param: max_tokens}
+        if self.reasoning_effort:
+            kwargs["reasoning_effort"] = self.reasoning_effort
+        if self.stream:
+            kwargs.update(stream=True,
+                          stream_options={"include_usage": True})
+        if self.extra_body:
+            kwargs["extra_body"] = self.extra_body
+        attempts, deadline = 0, time.time() + self.RETRY_WINDOW_S
+        while True:
+            attempts += 1
+            try:
+                r = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=to_openai_messages(system, messages,
+                                                self.pad_reasoning),
+                    tools=[OPENAI_BASH_TOOL],
+                    **kwargs,
+                )
+                return self._translate(_collect(r) if self.stream else r)
+            except o.RateLimitError as e:
+                # Moonshot 429 types: engine_overloaded_error and
+                # rate_limit_reached_error pass; an exhausted balance
+                # (exceeded_current_quota_error) will not.
+                if (getattr(e, "type", None) == "exceeded_current_quota_error"
+                        or time.time() > deadline):
+                    raise
+                time.sleep(_retry_after(e, attempts))
+            except (o.APIConnectionError, o.APITimeoutError):
+                if attempts >= 6:
+                    raise
+                time.sleep(min(60, 2 ** attempts))
+            except o.BadRequestError as e:
+                # Moonshot moderation (input or output side) is HTTP 400
+                # type=content_filter, never a finish_reason; surface it
+                # as the refusal the loop already retries-then-ends on.
+                if getattr(e, "type", None) == "content_filter":
+                    return Response(content=[], stop_reason="refusal",
+                                    usage=Usage())
+                raise
+            except o.APIStatusError as e:
+                if e.status_code >= 500 and attempts < 6:
+                    time.sleep(_retry_after(e, attempts))
+                    continue
+                raise
+
+    def _translate(self, r):
+        choice = r.choices[0]
+        msg = choice.message
+        blocks = []
+        trace = _reasoning_of(msg)
+        if trace is not None:
+            blocks.append(Block(type="thinking", thinking=trace))
+        if msg.content is not None:
+            blocks.append(Block(type="text", text=msg.content))
+        for tc in (msg.tool_calls or []):
+            try:
+                args = json.loads(tc.function.arguments or "{}")
+            except json.JSONDecodeError:
+                if choice.finish_reason == "length":
+                    continue    # half a command must never run
+                args = {"command": tc.function.arguments}
+            blocks.append(Block(type="tool_use", id=tc.id,
+                                name=tc.function.name, input=args,
+                                raw=tc.function.arguments or ""))
+        stop = self.STOP_MAP.get(choice.finish_reason, "end_turn")
+        if msg.tool_calls and stop == "end_turn":
+            stop = "tool_use"
+        u = r.usage
+        details = getattr(u, "prompt_tokens_details", None)
+        if isinstance(details, dict):
+            details = _NS(**details)
+        cached = (getattr(details, "cached_tokens", None)
+                  or getattr(u, "cached_tokens", None) or 0)
+        usage = Usage(input_tokens=getattr(u, "prompt_tokens", 0) or 0,
+                      output_tokens=getattr(u, "completion_tokens", 0) or 0,
+                      cached_input_tokens=cached)
+        return Response(content=blocks, stop_reason=stop, usage=usage)
+
+    @staticmethod
+    def serialize_content(content):
+        return [b if isinstance(b, dict) else _block_dict(b)
+                for b in content]
+
+
 def make_model(model_string, repo_root):
     if model_string.startswith("mock:"):
         return MockWallFollower(repo_root)
+    provider, sep, rest = model_string.partition(":")
+    if sep and provider in PROVIDERS:
+        spec = PROVIDERS[provider]
+        model_id, at, effort = rest.partition("@")
+        allowed = spec.get("efforts", ("low", "medium", "high", "max"))
+        if at and effort not in allowed:
+            raise ValueError(f"unknown reasoning effort {effort!r} in "
+                             f"{model_string!r} ({'|'.join(allowed)})")
+        return OpenAICompatModel(provider, model_id,
+                                 effort or spec.get("default_effort"))
     return AnthropicModel(model_string)
+
+
+def model_spec(model):
+    """Provider-neutral description of the model actually used, for run
+    records (the cfg string alone leaves a default effort implicit).
+    Never the base_url or the key."""
+    if isinstance(model, OpenAICompatModel):
+        d = dict(provider=model.provider, model_id=model.model,
+                 reasoning_effort=model.reasoning_effort,
+                 tokens_param=model.tokens_param, stream=model.stream)
+        if model.extra_body:
+            d["extra_body"] = model.extra_body
+        return d
+    if isinstance(model, AnthropicModel):
+        return dict(provider="anthropic", model_id=model.model,
+                    thinking=thinking_param(model.model))
+    return dict(provider="mock", model_id="wall-follower")

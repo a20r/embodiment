@@ -1,0 +1,145 @@
+05:30:55 step 1 ray 11 want 0.42 got 0.43 dist pose 0.30 -0.31 h 333.0 d5 0.158 d9 1 d2 0 tick=34050 goal=0 here=0 rx: 
+05:31:02 step 2 ray 8 want 0.36 got 0.36 dist pose 0.04 -0.56 h 312.8 d5 0.153 d9 0 d2 0 tick=34782 goal=0 here=0 rx: 
+05:31:07 step 3 ray 8 want 0.05 got 0.06 dist pose -0.00 -0.52 h 225.3 d5 0.162 d9 0 d2 0 tick=35286 goal=0 here=0 rx: 
+05:31:12 step 4 ray 13 want 0.28 got 0.29 dist pose -0.28 -0.43 h 142.1 d5 0.174 d9 0 d2 0 tick=35792 goal=0 here=0 rx: 
+05:31:15 step 5 ray 12 want 0.55 got 0.56 dist pose -0.80 -0.23 h 161.4 d5 0.170 d9 0 d2 0 tick=36100 goal=0 here=0 rx: 
+05:31:19 step 6 ray 11 want 0.31 got 0.33 dist pose -1.04 -0.01 h 158.1 d5 0.161 d9 0 d2 0 tick=36455 goal=0 here=0 rx: 
+05:31:21 step 7 ray 12 want 0.34 got 0.34 dist pose -1.28 0.23 h 139.0 d5 0.179 d9 1 d2 0 tick=36670 goal=0 here=0 rx: 
+05:31:27 step 8 ray 8 want 0.26 got 0.26 dist pose -1.12 0.43 h 136.1 d5 0.172 d9 0 d2 0 tick=37279 goal=0 here=0 rx: 
+05:31:34 step 9 ray 9 want 0.38 got 0.39 dist pose -0.75 0.31 h 49.8 d5 0.162 d9 0 d2 0 tick=37930 goal=0 here=0 rx: 
+05:31:37 step 10 ray 12 want 0.55 got 0.56 dist pose -0.21 0.14 h 342.5 d5 0.159 d9 0 d2 0 tick=38256 goal=0 here=0 rx: 
+05:31:41 step 11 ray 11 want 0.49 got 0.50 dist pose 0.20 -0.14 h 338.6 d5 0.144 d9 0 d2 0 tick=38654 goal=0 here=0 rx: 
+05:31:43 step 12 ray 12 want 0.43 got 0.44 dist pose 0.55 -0.42 h 321.2 d5 0.147 d9 0 d2 0 tick=38913 goal=0 here=0 rx: 
+05:31:46 step 13 ray 12 want 0.43 got 0.44 dist pose 0.90 -0.68 h 321.8 d5 0.142 d9 1 d2 0 tick=39188 goal=0 here=0 rx: 
+05:31:49 step 14 ray 12 want 0.44 got 0.45 dist pose 1.26 -0.96 h 325.5 d5 0.153 d9 0 d2 0 tick=39461 goal=0 here=0 rx: 
+05:31:52 step 15 ray 12 want 0.42 got 0.43 dist pose 1.58 -1.24 h 322.3 d5 0.156 d9 0 d2 0 tick=39731 goal=0 here=0 rx: 
+05:31:57 step 16 ray 8 want 0.22 got 0.22 dist pose 1.47 -1.44 h 318.0 d5 0.178 d9 0 d2 0 tick=40308 goal=0 here=0 rx: 
+05:32:04 step 17 ray 10 want 0.55 got 0.55 dist pose 0.93 -1.57 h 237.3 d5 0.190 d9 0 d2 0 tick=40929 goal=0 here=0 rx: 
+05:32:08 step 18 ray 10 want 0.41 got 0.43 dist pose 0.57 -1.35 h 192.6 d5 0.188 d9 0 d2 0 tick=41408 goal=0 here=0 rx: 
+05:32:11 step 19 ray 12 want 0.55 got 0.56 dist pose 0.09 -1.05 h 150.8 d5 0.173 d9 1 d2 0 tick=41718 goal=0 here=0 rx: 
+05:32:15 step 20 ray 12 want 0.55 got 0.56 dist pose -0.41 -0.79 h 148.1 d5 0.184 d9 0 d2 0 tick=42030 goal=0 here=0 rx: 
+05:32:18 step 21 ray 12 want 0.55 got 0.57 dist pose -0.88 -0.48 h 147.3 d5 0.179 d9 0 d2 0 tick=42345 goal=0 here=0 rx: 
+05:32:20 step 22 ray 12 want 0.38 got 0.39 dist pose -1.21 -0.26 h 148.3 d5 0.184 d9 1 d2 0 tick=42580 goal=0 here=0 rx: 
+05:32:22 step 23 ray 12 want 0.35 got 0.36 dist pose -1.49 -0.04 h 144.7 d5 0.181 d9 1 d2 0 tick=42804 goal=0 here=0 rx: 
+05:32:25 step 24 ray 12 want 0.38 got 0.39 dist pose -1.80 0.19 h 140.4 d5 0.179 d9 0 d2 0 tick=43044 goal=0 here=0 rx: 
+05:32:27 step 25 ray 12 want 0.33 got 0.34 dist pose -2.06 0.41 h 140.0 d5 0.188 d9 1 d2 0 tick=43258 goal=0 here=0 rx: 
+05:32:34 step 26 ray 8 want 0.37 got 0.37 dist pose -1.81 0.68 h 141.3 d5 0.173 d9 0 d2 0 tick=43980 goal=0 here=0 rx: 
+05:32:41 step 27 ray 9 want 0.39 got 0.42 dist pose -1.42 0.55 h 43.9 d5 0.166 d9 0 d2 0 tick=44657 goal=0 here=0 rx: 
+05:32:44 step 28 ray 12 want 0.55 got 0.56 dist pose -0.89 0.35 h 344.1 d5 0.161 d9 1 d2 0 tick=44967 goal=0 here=0 rx: 
+05:32:48 step 29 ray 11 want 0.43 got 0.44 dist pose -0.55 0.06 h 343.0 d5 0.169 d9 1 d2 0 tick=45346 goal=0 here=0 rx: 
+05:32:53 step 30 ray 8 want 0.25 got 0.25 dist pose -0.69 -0.14 h 318.9 d5 0.179 d9 0 d2 0 tick=45909 goal=0 here=0 rx: 
+05:33:00 step 31 ray 10 want 0.55 got 0.56 dist pose -1.24 -0.26 h 234.3 d5 0.240 d9 0 d2 0 tick=46557 goal=0 here=0 rx: 
+05:33:05 step 32 ray 10 want 0.41 got 0.42 dist pose -1.61 -0.05 h 191.9 d5 0.227 d9 0 d2 0 tick=47034 goal=0 here=0 rx: 
+05:33:07 step 33 ray 12 want 0.40 got 0.41 dist pose -1.96 0.16 h 149.1 d5 0.198 d9 1 d2 0 tick=47284 goal=0 here=0 rx: 
+05:33:10 step 34 ray 12 want 0.55 got 0.56 dist pose -2.44 0.44 h 150.7 d5 0.195 d9 1 d2 0 tick=47601 goal=0 here=0 rx: 
+05:33:13 step 35 ray 12 want 0.54 got 0.55 dist pose -2.89 0.75 h 146.7 d5 0.173 d9 1 d2 0 tick=47905 goal=0 here=0 rx: 
+05:33:16 step 36 ray 12 want 0.37 got 0.39 dist pose -3.21 0.98 h 140.0 d5 0.180 d9 0 d2 0 tick=48142 goal=0 here=0 rx: 
+05:33:18 step 37 ray 12 want 0.37 got 0.38 dist pose -3.51 1.21 h 140.4 d5 0.181 d9 0 d2 0 tick=48375 goal=0 here=0 rx: 
+05:33:38 step 1 ray 12 want 0.36 got 0.38 dist pose -0.29 0.25 h 141.3 d5 0.175 d9 1 d2 0 tick=50370 goal=0 here=0 rx: 
+05:33:45 step 2 ray 8 want 0.32 got 0.33 dist pose -0.09 0.50 h 140.1 d5 0.190 d9 0 d2 0 tick=51061 goal=0 here=0 rx: 
+05:33:51 step 3 ray 9 want 0.37 got 0.40 dist pose 0.30 0.41 h 50.6 d5 0.170 d9 0 d2 0 tick=51713 goal=0 here=0 rx: 
+05:33:56 step 4 ray 11 want 0.36 got 0.38 dist pose 0.60 0.18 h 345.4 d5 0.167 d9 0 d2 0 tick=52164 goal=0 here=0 rx: 
+05:33:58 step 5 ray 12 want 0.38 got 0.38 dist pose 0.89 -0.07 h 323.4 d5 0.163 d9 0 d2 0 tick=52407 goal=0 here=0 rx: 
+05:34:01 step 6 ray 12 want 0.40 got 0.42 dist pose 1.21 -0.33 h 318.3 d5 0.171 d9 1 d2 0 tick=52661 goal=0 here=0 rx: 
+05:34:03 step 7 ray 12 want 0.40 got 0.41 dist pose 1.51 -0.62 h 316.7 d5 0.168 d9 0 d2 0 tick=52915 goal=0 here=0 rx: 
+05:34:09 step 8 ray 8 want 0.25 got 0.26 dist pose 1.35 -0.81 h 313.8 d5 0.170 d9 0 d2 0 tick=53510 goal=0 here=0 rx: 
+05:34:16 step 9 ray 10 want 0.55 got 0.56 dist pose 0.80 -0.89 h 232.1 d5 0.194 d9 0 d2 0 tick=54158 goal=0 here=0 rx: 
+05:34:20 step 10 ray 10 want 0.41 got 0.42 dist pose 0.45 -0.65 h 185.1 d5 0.199 d9 1 d2 0 tick=54608 goal=0 here=0 rx: 
+05:34:23 step 11 ray 12 want 0.36 got 0.37 dist pose 0.15 -0.44 h 143.6 d5 0.188 d9 0 d2 0 tick=54844 goal=0 here=0 rx: 
+05:34:25 step 12 ray 12 want 0.35 got 0.37 dist pose -0.14 -0.21 h 144.1 d5 0.190 d9 0 d2 0 tick=55072 goal=0 here=0 rx: 
+05:34:27 step 13 ray 12 want 0.35 got 0.36 dist pose -0.42 0.02 h 139.3 d5 0.194 d9 1 d2 0 tick=55295 goal=0 here=0 rx: 
+05:34:30 step 14 ray 12 want 0.36 got 0.38 dist pose -0.70 0.27 h 138.9 d5 0.195 d9 1 d2 0 tick=55525 goal=0 here=0 rx: 
+05:34:36 step 15 ray 8 want 0.29 got 0.30 dist pose -0.49 0.49 h 138.2 d5 0.178 d9 0 d2 0 tick=56133 goal=0 here=0 rx: 
+05:34:42 step 16 ray 10 want 0.55 got 0.56 dist pose 0.06 0.58 h 46.0 d5 0.168 d9 0 d2 0 tick=56759 goal=0 here=0 rx: 
+05:34:47 step 17 ray 10 want 0.47 got 0.49 dist pose 0.48 0.33 h 2.7 d5 0.173 d9 0 d2 0 tick=57266 goal=0 here=0 rx: 
+05:34:50 step 18 ray 12 want 0.55 got 0.56 dist pose 0.95 0.04 h 326.4 d5 0.155 d9 1 d2 0 tick=57576 goal=0 here=0 rx: 
+05:34:53 step 19 ray 12 want 0.50 got 0.51 dist pose 1.34 -0.29 h 326.8 d5 0.157 d9 0 d2 0 tick=57870 goal=0 here=0 rx: 
+05:34:58 step 20 ray 8 want 0.24 got 0.25 dist pose 1.21 -0.50 h 328.8 d5 0.158 d9 0 d2 0 tick=58421 goal=0 here=0 rx: 
+05:35:05 step 21 ray 10 want 0.55 got 0.55 dist pose 0.66 -0.60 h 236.4 d5 0.195 d9 0 d2 0 tick=59075 goal=0 here=0 rx: 
+05:35:09 step 22 ray 10 want 0.35 got 0.37 dist pose 0.37 -0.38 h 188.6 d5 0.187 d9 0 d2 0 tick=59510 goal=0 here=0 rx: 
+05:35:13 step 23 ray 12 want 0.55 got 0.56 dist pose -0.07 -0.02 h 140.9 d5 0.189 d9 0 d2 0 tick=59824 goal=0 here=0 rx: 
+05:35:15 step 24 ray 12 want 0.36 got 0.37 dist pose -0.35 0.22 h 142.1 d5 0.192 d9 0 d2 0 tick=60070 goal=0 here=0 rx: 
+05:35:21 step 25 ray 8 want 0.23 got 0.24 dist pose -0.21 0.42 h 139.2 d5 0.174 d9 0 d2 0 tick=60657 goal=0 here=0 rx: 
+05:35:28 step 26 ray 9 want 0.29 got 0.30 dist pose 0.07 0.33 h 57.6 d5 0.180 d9 0 d2 0 tick=61393 goal=0 here=0 rx: 
+05:35:31 step 27 ray 12 want 0.55 got 0.56 dist pose 0.62 0.19 h 341.8 d5 0.164 d9 1 d2 0 tick=61716 goal=0 here=0 rx: 
+05:35:44 step 1 ray 8 want 0.38 got 0.39 dist pose -0.31 -0.23 h 304.2 d5 0.171 d9 0 d2 0 tick=62978 goal=0 here=0 rx: 
+05:35:57 step 2 ray 10 want 1.15 got 1.15 dist pose -1.47 -0.22 h 214.5 d5 0.177 d9 0 d2 0 tick=64247 goal=0 here=0 rx: 
+05:36:04 step 3 ray 11 want 1.13 got 1.15 dist pose -2.56 0.14 h 181.3 d5 0.183 d9 0 d2 0 tick=64925 goal=0 here=0 rx: 
+05:36:07 step 4 ray 11 want 0.37 got 0.38 dist pose -2.87 0.35 h 160.1 d5 0.193 d9 1 d2 0 tick=65300 goal=0 here=0 rx: 
+05:36:10 step 5 ray 12 want 0.37 got 0.38 dist pose -3.18 0.56 h 145.5 d5 0.196 d9 0 d2 0 tick=65530 goal=0 here=0 rx: 
+05:38:42 step 1 ray 6 got 1.21 dist pose 1.18 0.25 h 142.4 d5 0.154 d9 0 tick=80737 goal=0 here=0 rx: 
+05:38:57 step 2 ray 11 got 1.21 dist pose 2.36 0.00 h 6.8 d5 0.161 d9 1 tick=82264 goal=0 here=0 rx: 
+05:39:11 step 3 ray 12 got 1.20 dist pose 3.55 -0.21 h 349.7 d5 0.134 d9 0 tick=83669 goal=0 here=0 rx: 
+05:39:25 step 4 ray 5 got 0.97 dist pose 2.60 -0.43 h 347.5 d5 0.168 d9 0 tick=85100 goal=0 here=0 rx: 
+05:39:37 step 5 ray 11 got 0.88 wall pose 1.72 -0.37 h 193.2 d5 0.164 d9 1 tick=86243 goal=0 here=0 rx: 
+05:39:38 step 6 ray 12 got 0.03 wall pose 1.69 -0.37 h 181.9 d5 0.176 d9 0 tick=86330 goal=0 here=0 rx: 
+05:39:41 step 7 ray 12 got 0.22 wall pose 1.47 -0.37 h 179.3 d5 0.166 d9 0 tick=86648 goal=0 here=0 rx: 
+05:39:45 step 8 ray 12 got 0.33 wall pose 1.14 -0.35 h 182.3 d5 0.179 d9 0 tick=87089 goal=0 here=0 rx: 
+05:39:46 step 9 ray 12 got -0.00 wall pose 1.15 -0.35 h 174.3 d5 0.176 d9 0 tick=87157 goal=0 here=0 rx: 
+05:39:48 step 10 ray 12 got 0.10 wall pose 1.05 -0.34 h 176.5 d5 0.163 d9 1 tick=87361 goal=0 here=0 rx: 
+05:39:55 step 11 ray 12 got 1.02 dist pose 0.05 -0.14 h 181.2 d5 0.163 d9 1 tick=88034 goal=0 here=0 rx: 
+05:40:00 step 12 ray 12 got 1.02 dist pose -0.94 0.10 h 167.8 d5 0.178 d9 1 tick=88543 goal=0 here=0 rx: 
+05:40:17 step 13 ray 5 got 1.20 dist pose 0.24 0.37 h 165.3 d5 0.146 d9 0 tick=90266 goal=0 here=0 rx: 
+05:40:32 step 14 ray 11 got 1.20 dist pose 1.43 0.23 h 12.1 d5 0.144 d9 1 tick=91768 goal=0 here=0 rx: 
+05:40:41 step 15 ray 6 got 0.36 dist pose 1.14 0.00 h 351.2 d5 0.154 d9 0 tick=92627 goal=0 here=0 rx: 
+05:40:51 step 16 ray 11 got 0.93 wall pose 0.27 -0.30 h 215.8 d5 0.185 d9 1 tick=93721 goal=0 here=0 rx: 
+05:41:07 step 17 ray 11 got 1.20 dist pose -0.92 -0.12 h 194.3 d5 0.176 d9 1 tick=95258 goal=0 here=0 rx: 
+05:41:40 step 1 ray 7 got 0.60 dist pose 1.66 0.32 h 137.0 d5 0.174 d9 0 tick=98541 goal=0 here=0 rx: 
+05:41:45 step 2 ray 11 got 0.28 wall pose 1.93 0.39 h 29.0 d5 0.128 d9 0 tick=99042 goal=0 here=0 rx: 
+05:42:06 step 3 ray 11 got 2.03 dist pose 3.93 0.06 h 16.0 d5 0.168 d9 0 tick=101135 goal=0 here=0 rx: 
+05:42:14 step 4 ray 12 got 1.87 dist pose 5.75 -0.35 h 352.3 d5 0.153 d9 1 tick=102019 goal=0 here=0 rx: 
+05:42:21 step 5 ray 12 got 1.30 dist pose 7.01 -0.68 h 342.8 d5 0.166 d9 0 tick=102658 goal=0 here=0 rx: 
+05:42:26 step 6 ray 12 got 1.08 dist pose 8.05 -0.98 h 349.5 d5 0.165 d9 1 tick=103211 goal=0 here=0 rx: 
+05:42:32 step 7 ray 12 got 1.10 dist pose 9.07 -1.39 h 342.8 d5 0.142 d9 0 tick=103763 goal=0 here=0 rx: 
+05:42:56 step 8 ray 13 got 2.00 dist pose 11.06 -1.61 h 333.6 d5 0.159 d9 0 tick=106196 goal=0 here=0 rx: 
+05:43:19 step 9 ray 12 got 2.00 dist pose 13.05 -1.83 h 354.9 d5 0.149 d9 0 tick=108462 goal=0 here=0 rx: 
+05:43:42 step 10 ray 12 got 2.00 dist pose 15.03 -2.16 h 351.7 d5 0.175 d9 1 tick=110733 goal=0 here=0 rx: 
+05:44:04 step 11 ray 12 got 2.00 dist pose 17.03 -2.30 h 351.3 d5 0.179 d9 0 tick=113017 goal=0 here=0 rx: 
+05:44:27 step 12 ray 12 got 2.00 dist pose 19.01 -2.56 h 358.6 d5 0.166 d9 0 tick=115294 goal=0 here=0 rx: 
+05:44:45 step 13 ray 12 got 2.00 dist pose 20.99 -2.87 h 351.1 d5 0.173 d9 1 tick=117086 goal=0 here=0 rx: 
+05:44:55 step 14 ray 12 got 1.96 dist pose 22.91 -3.24 h 346.5 d5 0.184 d9 1 tick=118073 goal=0 here=0 rx: 
+05:45:04 step 15 ray 12 got 1.87 dist pose 24.72 -3.72 h 348.2 d5 0.191 d9 1 tick=118959 goal=0 here=0 rx: 
+05:45:16 step 1 ray 12 got 0.84 slip pose 25.47 -4.08 h 342.3 d5 0.180 d9 0 tick=120151 goal=0 here=0 rx: 
+05:45:24 step 2 ray 13 got 1.32 dist pose 26.73 -4.48 h 332.8 d5 0.176 d9 0 tick=120923 goal=0 here=0 rx: 
+05:45:35 step 3 ray 13 got 2.01 dist pose 28.70 -4.87 h 336.5 d5 0.183 d9 0 tick=122110 goal=0 here=0 rx: 
+05:45:59 step 4 ray 13 got 2.01 dist pose 26.69 -4.79 h 345.2 d5 0.176 d9 0 tick=124500 goal=0 here=0 rx: 
+05:46:16 step 5 ray 5 got 1.09 dist pose 25.64 -5.08 h 353.3 d5 0.182 d9 0 tick=126132 goal=0 here=0 rx: 
+05:46:23 step 6 ray 11 got 1.18 dist pose 24.48 -4.87 h 190.1 d5 0.185 d9 0 tick=126888 goal=0 here=0 rx: 
+05:46:29 step 7 ray 12 got 1.19 dist pose 23.33 -4.58 h 163.2 d5 0.197 d9 0 tick=127487 goal=0 here=0 rx: 
+05:46:35 step 8 ray 12 got 1.18 dist pose 22.21 -4.23 h 164.4 d5 0.192 d9 1 tick=128069 goal=0 here=0 rx: 
+05:47:37 step 1 ray 10 got 0.19 dist pose 25.46 -5.10 h 230.2 d5 0.207 d9 0 tick=134271 goal=0 here=0 rx: 
+05:47:42 step 2 ray 0 got 0.00 wall pose 25.46 -5.10 h 181.1 d5 0.211 d9 0 tick=134733 goal=0 here=0 rx: 
+05:47:51 step 3 ray 8 got 0.33 slip pose 25.12 -5.12 h 270.3 d5 0.195 d9 0 tick=135695 goal=0 here=0 rx: 
+05:47:57 step 4 ray 12 got 0.80 slip pose 24.32 -5.04 h 178.3 d5 0.197 d9 0 tick=136263 goal=0 here=0 rx: 
+05:48:04 step 5 ray 12 got 1.38 dist pose 22.98 -4.73 h 170.7 d5 0.217 d9 0 tick=136946 goal=0 here=0 rx: 
+05:48:08 step 6 ray 12 got 0.57 slip pose 22.45 -4.52 h 164.0 d5 0.222 d9 0 tick=137393 goal=0 here=0 rx: 
+05:48:15 step 7 ray 13 got 0.75 slip pose 21.70 -4.45 h 158.4 d5 0.201 d9 0 tick=138097 goal=0 here=0 rx: 
+05:48:21 step 8 ray 12 got 0.84 slip pose 20.90 -4.21 h 171.2 d5 0.206 d9 0 tick=138650 goal=0 here=0 rx: 
+05:48:29 step 9 ray 13 got 0.44 slip pose 20.46 -4.20 h 160.6 d5 0.215 d9 0 tick=139501 goal=0 here=0 rx: 
+05:48:35 step 10 ray 12 got 0.84 slip pose 19.63 -4.01 h 174.4 d5 0.222 d9 0 tick=140056 goal=0 here=0 rx: 
+05:48:44 step 11 ray 13 got 0.56 slip pose 19.07 -4.00 h 162.4 d5 0.223 d9 0 tick=141017 goal=0 here=0 rx: 
+05:48:51 step 12 ray 12 got 0.93 slip pose 18.16 -3.83 h 177.1 d5 0.197 d9 0 tick=141703 goal=0 here=0 rx: 
+05:48:55 step 13 ray 11 got 0.41 dist pose 17.83 -3.58 h 166.4 d5 0.208 d9 1 tick=142082 goal=0 here=0 rx: 
+05:49:01 step 14 ray 13 got 0.57 slip pose 17.32 -3.33 h 140.4 d5 0.179 d9 0 tick=142665 goal=0 here=0 rx: 
+05:49:09 step 15 ray 13 got 1.14 slip pose 16.26 -2.90 h 147.8 d5 0.182 d9 0 tick=143485 goal=0 here=0 rx: 
+05:49:18 step 16 ray 13 got 0.71 slip pose 15.57 -2.75 h 153.0 d5 0.165 d9 0 tick=144352 goal=0 here=0 rx: 
+05:49:22 step 17 ray 13 got 0.15 wall pose 15.42 -2.75 h 167.5 d5 0.195 d9 0 tick=144737 goal=0 here=0 rx: 
+05:49:22 step 18 ray 12 got 0.00 wall pose 15.42 -2.75 h 178.9 d5 0.194 d9 0 tick=144813 goal=0 here=0 rx: 
+05:49:23 step 19 ray 12 got 0.00 wall pose 15.42 -2.75 h 178.8 d5 0.213 d9 0 tick=144881 goal=0 here=0 rx: 
+05:49:24 step 20 ray 12 got 0.01 wall pose 15.42 -2.75 h 181.9 d5 0.201 d9 0 tick=144957 goal=0 here=0 rx: 
+05:49:25 step 21 ray 12 got -0.00 wall pose 15.42 -2.75 h 176.9 d5 0.204 d9 0 tick=145023 goal=0 here=0 rx: 
+05:49:25 step 22 ray 12 got 0.00 wall pose 15.41 -2.75 h 180.2 d5 0.191 d9 0 tick=145089 goal=0 here=0 rx: 
+05:49:26 step 23 ray 12 got -0.00 wall pose 15.42 -2.75 h 178.2 d5 0.215 d9 0 tick=145156 goal=0 here=0 rx: 
+05:49:27 step 24 ray 12 got 0.00 wall pose 15.41 -2.75 h 178.3 d5 0.205 d9 0 tick=145229 goal=0 here=0 rx: 
+05:49:27 step 25 ray 12 got -0.00 wall pose 15.41 -2.75 h 182.5 d5 0.216 d9 0 tick=145295 goal=0 here=0 rx: 
+05:49:28 step 26 ray 12 got -0.00 wall pose 15.41 -2.75 h 176.8 d5 0.233 d9 0 tick=145386 goal=0 here=0 rx: 
+05:49:29 step 27 ray 12 got 0.00 wall pose 15.41 -2.75 h 183.3 d5 0.227 d9 0 tick=145461 goal=0 here=0 rx: 
+05:49:47 step 1 ray 13 got 0.77 slip pose 14.68 -2.50 h 147.6 d5 0.210 d9 0 tick=147250 goal=0 here=0 rx: 
+05:49:57 step 2 ray 13 got 0.57 slip pose 14.12 -2.38 h 158.6 d5 0.219 d9 0 tick=148246 goal=0 here=0 rx: 
+05:50:05 step 3 ray 13 got 0.47 slip pose 13.66 -2.32 h 161.6 d5 0.213 d9 0 tick=149058 goal=0 here=0 rx: 
+05:50:12 step 4 ray 12 got 0.95 slip pose 12.75 -2.04 h 171.6 d5 0.216 d9 0 tick=149768 goal=0 here=0 rx: 
+05:50:22 step 5 ray 13 got 0.57 slip pose 12.19 -1.93 h 157.9 d5 0.215 d9 0 tick=150749 goal=0 here=0 rx: 
+05:50:26 step 6 ray 15 got 0.00 wall pose 12.19 -1.93 h 164.8 d5 0.210 d9 0 tick=151138 goal=0 here=0 rx: 
+05:50:30 step 7 ray 10 got 0.08 wall pose 12.12 -1.94 h 228.8 d5 0.219 d9 0 tick=151562 goal=0 here=0 rx: 
+05:50:47 step 8 ray 4 got 1.03 slip pose 13.13 -1.77 h 189.6 d5 0.186 d9 0 tick=153231 goal=0 here=0 rx: 
+05:50:54 step 9 ray 12 got 0.44 slip pose 13.57 -1.75 h 8.7 d5 0.197 d9 0 tick=153934 goal=0 here=0 rx: 

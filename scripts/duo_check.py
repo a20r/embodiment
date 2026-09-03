@@ -162,11 +162,20 @@ def mission_mode():
     wa.step()
     check("region entry tracked", wa.region_entry is not None)
     check("no solo completion", not wa.goal_reached)
+    check("status shows here=1 in the goal region",
+          "here=1" in wa.status_frame(), wa.status_frame())
     # Leaving the region clears the entry (a lapsed arrival must
     # re-cross).
     wa.x, wa.y = 1.0, 1.0
     wa.step()
     check("region exit clears entry", wa.region_entry is None)
+    check("here clears on exit", "here=0" in wa.status_frame())
+    solo_cfg = simconfig.resolve(None, overrides={
+        "maze": {"style": "organic", "seed": 41}})
+    solo_cfg["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    solo_w = World(solo_cfg, maze, bot_id="s")
+    check("solo status has no here field",
+          "here=" not in solo_w.status_frame())
 
     # The daemon's joint predicate: entries within the window fire the
     # latch on both; outside the window they do not.
@@ -198,6 +207,23 @@ def mission_mode():
     check("goal ticks recorded",
           wa.goal_tick is not None and wb.goal_tick is not None)
 
+    # TX duty cycle: excess lines vanish silently; the window re-arms.
+    cfg_r = duo_cfg(duo={"enabled": True, "tx_rate_hz": 1.0})
+    cfg_r["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    wr = World(cfg_r, maze, bot_id="a", spawn_cell=maze.start_cell)
+    ws = World(cfg_r, maze, bot_id="b", spawn_cell=maze.spawn_b_cell)
+    wr.set_peer(ws)
+    ws.set_peer(wr)
+    ws.x, ws.y = wr.x + 0.5, wr.y
+    for i in range(5):
+        wr.send_serial(f"burst{i}")
+    check("rate cap accepts first line only", wr.comms["tx"] == 1
+          and wr.comms["tx_rate_dropped"] == 4, str(wr.comms))
+    check("capped lines never reach the peer", len(ws.serial_rx) == 1)
+    wr.tick += 60   # past the 50-tick window at 1 Hz
+    wr.send_serial("after window")
+    check("window re-arms", wr.comms["tx"] == 2, str(wr.comms))
+
     # Goal chamber: the space beyond the exit is walled in.
     mc = Maze(m["seed"], m["width"], m["height"],
               cell_size=m["cell_size"], style="organic",
@@ -224,6 +250,32 @@ def mission_mode():
     check("back wall pens the robot in", near < 0.35,
           f"nearest={near:.3f}")
     check("chamber changes maze hash", mc.hash() != maze.hash())
+
+    # Corner exit (7x7 seed 58 puts the exit at cell (0,6)): the chamber
+    # must not overhang the maze corner, or its side wall meets nothing.
+    mk = Maze(58, 7, 7, cell_size=0.5, style="organic", curviness=0.9,
+              robot_radius=cfg["robot"]["radius"], duo=True,
+              goal_chamber=True)
+    # The chamber protrudes outward along the exit normal by design; the
+    # clamp applies along the exit wall's own axis.
+    span = 7 * 0.5
+    ex1, ey1, ex2, ey2 = mk.exit_wall
+    along = (1, 3) if abs(ex1 - ex2) < 1e-9 else (0, 2)
+    inside_span = all(
+        -1e-9 <= seg[i] <= span + 1e-9 for seg in mk._chamber_segments
+        for i in along)
+    check("corner-exit chamber stays within the maze span", inside_span,
+          str(mk._chamber_segments))
+    # The chamber's attach points must coincide with maze wall ends: the
+    # nearest maze segment to each attach point is (nearly) touching.
+    attach = [(mk._chamber_segments[0][0], mk._chamber_segments[0][1]),
+              (mk._chamber_segments[2][2], mk._chamber_segments[2][3])]
+    maze_segs = [s for s in mk.segments() if s not in mk._chamber_segments]
+    gaps = [min(_seg_dist(px, py, *s)[0] for s in maze_segs)
+            for px, py in attach]
+    check("corner-exit chamber is sealed (attach gaps < robot diameter)",
+          all(g < 2 * cfg["robot"]["radius"] for g in gaps),
+          f"gaps={[round(g, 3) for g in gaps]}")
 
 
 def end_to_end():

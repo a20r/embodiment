@@ -47,12 +47,14 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
     transcript.write(dict(type="meta", bot=bot_id,
                           arm=cfg["arm"], labels=cfg["labels"],
                           model=cfg["model"], maze_hash=maze_hash,
+                          model_spec=llm.model_spec(model),
                           noise_profile=cfg["noise_profile"]))
     transcript.write(dict(type="system_prompt", content=system))
 
     messages = []
     start_wall = time.time()
-    totals = dict(input=0, output=0, cache_read=0, cache_creation=0)
+    totals = dict(input=0, output=0, cache_read=0, cache_creation=0,
+                  cached=0)
     turns = execs = restarts = nudges = 0
     end_reason = None
     wrapup_rounds_left = None
@@ -142,7 +144,9 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 messages.append({"role": "user", "content": (
                     "You are now connected to the robot. Begin.")})
             turns += 1
-            response = model.create(system, messages)
+            response = model.create(
+                system, messages,
+                max_tokens=b["max_output_tokens_per_turn"])
             refusal_tries = 0
             while getattr(response, "stop_reason", None) == "refusal" \
                     and refusal_tries < 5:
@@ -150,7 +154,9 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 transcript.write(dict(type="note", kind="refusal_retry",
                                       attempt=refusal_tries))
                 time.sleep(15 * refusal_tries)
-                response = model.create(system, messages)
+                response = model.create(
+                    system, messages,
+                    max_tokens=b["max_output_tokens_per_turn"])
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens
@@ -158,13 +164,18 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 (getattr(u, "cache_read_input_tokens", 0) or 0)
             totals["cache_creation"] += \
                 (getattr(u, "cache_creation_input_tokens", 0) or 0)
+            totals["cached"] += (getattr(u, "cached_input_tokens", 0) or 0)
             content = model.serialize_content(response.content)
             transcript.write(dict(
                 type="assistant", content=content,
                 stop_reason=response.stop_reason,
-                usage=dict(input=u.input_tokens, output=u.output_tokens),
+                usage=dict(input=u.input_tokens, output=u.output_tokens,
+                           cached=getattr(u, "cached_input_tokens", 0)
+                           or 0),
                 context_tokens=llm.context_tokens(u)))
             messages.append({"role": "assistant", "content": content})
+            if response.stop_reason == "max_tokens":
+                transcript.write(dict(type="note", kind="output_truncated"))
 
             if response.stop_reason == "refusal" and end_reason is None:
                 end_reason = "refusal"
@@ -213,6 +224,7 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
         summary = dict(
             bot=bot_id,
             arm=cfg["arm"], labels=cfg["labels"], model=cfg["model"],
+            model_spec=llm.model_spec(model),
             noise_profile=cfg["noise_profile"], maze_hash=maze_hash,
             end_reason=end_reason or "unknown",
             solved=bool(state.get("goal_reached")),
@@ -273,7 +285,9 @@ def run_duo_episode(cfg, series_dir, episode_index):
                 f"-ep{episode_index}{bid}",
                 {os.path.abspath(os.path.join(devfs, bid)): "/dev/robot",
                  os.path.abspath(bot_dirs[bid]): "/bot",
-                 os.path.abspath(mem_dirs[bid]): "/memory"})
+                 os.path.abspath(mem_dirs[bid]): "/memory"},
+                image=(cfg.get("container") or {}).get("image",
+                                                        "mazebot-bot"))
             boxes[bid].start()
     except Exception:
         # A half-started episode must not leak its daemon (it would

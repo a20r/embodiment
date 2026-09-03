@@ -28,6 +28,9 @@ DEFAULTS = {
     # "minimal_duo_named" also names the TX/RX port files (the harness
     # substitutes the episode's real anonymous filenames).
     "readme_variant": None,
+    # Bot image; a README that demands a toolchain (e.g. Rust) pairs
+    # with an image that has it.  Built from `dockerfile` if missing.
+    "container": {"image": "mazebot-bot", "dockerfile": "Dockerfile.bot"},
     # Two robots in one world, each running its own agent, with a
     # proximity-gated serial link (TX/RX port pair per robot).
     "duo": {
@@ -45,6 +48,13 @@ DEFAULTS = {
         # (yelling in a maze: through walls, long tail).
         "peer_signal": False,
         "peer_signal_scale": 2.0,  # meters at which strength = 0.5
+        # Radio duty cycle: max accepted transmissions per second of
+        # sim time (0 = unlimited).  Excess lines are silently dropped
+        # before the range gate — the sender gets no error, so the cap
+        # itself must be discovered.  Scarcity is the point: with free
+        # bandwidth, blind repetition is optimal and no reliability
+        # protocol needs to emerge.
+        "tx_rate_hz": 0,
     },
     "noise_profile": "default_noisy",
     "maze": {
@@ -97,6 +107,26 @@ DEFAULTS = {
         "fov_deg": 360.0,
         "max_range": 3.0,    # m
     },
+    # 3D lidar: a spinning multi-ring unit (VLP-16-like) mounted on top
+    # of the disc.  The world stays 2D-kinematic; it gains a floor at
+    # z=0, walls of wall_height, a peer of robot_height and a key post
+    # of post_height, so rings paint floor near the robot, wall faces
+    # out to where the beam clears the wall top, and nothing beyond.
+    # Frames are sensor-frame x,y,z triples (x forward, y left, z up,
+    # origin at the sensor) - the mount height is discoverable from
+    # the floor plane.  Enabled: the 2D `lidar` port is replaced.
+    "lidar3d": {
+        "enabled": False,
+        "rings": 16,             # elevation channels
+        "azimuths": 180,         # points per ring per frame (2 deg)
+        "vfov_deg": 30.0,        # symmetric about horizontal
+        "max_range": 3.0,        # m
+        "sensor_height": 0.15,   # m above the floor: on top of the body
+        "wall_height": 0.40,     # m
+        "robot_height": 0.15,    # m (the peer, seen as a cylinder)
+        "post_height": 0.25,     # m (the key)
+        "stream_hz": 10,         # held-open reader rate (frames are big)
+    },
     "sim": {
         "tick_hz": 50,
         "realtime_factor": 1.0,   # sim-seconds per wall-second; 0 = unthrottled
@@ -108,6 +138,7 @@ DEFAULTS = {
     "budget": {
         "max_context_tokens": 160000,       # end/restart episode past this
         "max_total_output_tokens": 120000,  # cumulative model output per episode
+        "max_output_tokens_per_turn": 16000,  # reasoning counts (K3@max: 65536)
         "max_turns": 400,
         "max_wallclock_s": 1800,
         "on_context_full": "end",           # end | restart (bare restart)
@@ -132,6 +163,8 @@ NOISE_PROFILES = {
     "clean": {
         "lidar_sigma_m": 0.0,          # gaussian range noise
         "lidar_dropout_p": 0.0,        # per-ray invalid return (-1.0)
+        "lidar3d_sigma_m": 0.0,        # per-point range noise
+        "lidar3d_dropout_p": 0.0,      # per-point no-return (omitted)
         "heading_sigma_deg": 0.0,      # per-read gaussian
         "heading_drift_deg": 0.0,      # random-walk step std per tick
         "encoder_jitter_ticks": 0,     # +/- uniform jitter per read
@@ -151,6 +184,8 @@ NOISE_PROFILES = {
     "default_noisy": {
         "lidar_sigma_m": 0.01,
         "lidar_dropout_p": 0.01,
+        "lidar3d_sigma_m": 0.01,
+        "lidar3d_dropout_p": 0.01,
         "heading_sigma_deg": 2.0,
         "heading_drift_deg": 0.002,
         "encoder_jitter_ticks": 1,
@@ -226,6 +261,34 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("robot.model must be 'diffdrive' or 'car'")
     if cfg["duo"].get("objective", "solo") not in ("solo", "together"):
         raise ValueError("duo.objective must be 'solo' or 'together'")
+    l3 = cfg.get("lidar3d", {})
+    if l3.get("enabled"):
+        num = (int, float)
+        for k in ("rings", "azimuths"):
+            v = l3[k]
+            if not (isinstance(v, num) and v >= 1 and int(v) == v):
+                raise ValueError(f"lidar3d.{k} must be a positive integer")
+        if not 0 < l3["vfov_deg"] < 180:
+            raise ValueError("lidar3d.vfov_deg must be in (0, 180)")
+        if not (isinstance(l3["max_range"], num) and l3["max_range"] > 0):
+            raise ValueError("lidar3d.max_range must be > 0")
+        if not (isinstance(l3["stream_hz"], num) and l3["stream_hz"] > 0):
+            raise ValueError("lidar3d.stream_hz must be > 0")
+        heights = [l3[k] for k in ("wall_height", "robot_height",
+                                   "post_height")]
+        if min(heights) < 0:
+            raise ValueError("lidar3d heights must be >= 0")
+        hs = l3["sensor_height"]
+        # Solids have no modelled top face: a sensor above one would
+        # see through it, so it must sit no higher than the shortest.
+        if not (0 < hs <= min(l3["robot_height"], l3["post_height"])
+                and hs < l3["wall_height"]):
+            raise ValueError("lidar3d.sensor_height must be above the "
+                             "floor, no higher than robot_height and "
+                             "post_height, and below wall_height")
+        if str(cfg.get("model", "")).startswith("mock:"):
+            raise ValueError("model=mock:* drives the 2D lidar; it cannot "
+                             "run with lidar3d.enabled")
     return cfg
 
 
@@ -242,6 +305,10 @@ def device_sets(cfg):
             sensors = [s for s in sensors
                        if s not in ("encoder_left", "encoder_right")]
         actuators = list(ACTUATOR_DEVICES)
+    if cfg.get("lidar3d", {}).get("enabled"):
+        # The point cloud replaces the beam scan: one sensing modality
+        # per run keeps the discovery problem a one-variable delta.
+        sensors = ["lidar3d" if s == "lidar" else s for s in sensors]
     if cfg["maze"].get("locked"):
         sensors.append("beacon")
     if cfg.get("duo", {}).get("enabled"):

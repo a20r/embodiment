@@ -1,0 +1,143 @@
+rx botA PING x=-3.37 y=4.18 d11=0.790 here=1 seq=1398
+climb t=   2 v=0.691 pos=(26.89,-32.81) st={'tick': 701668, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.714 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+unstick
+climb t=   8 v=0.812 pos=(27.02,-32.40) st={'tick': 701909, 'goal': 0, 'here': 0}
+-> wall
+rx botA COACH d11=0.768 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=  11 side=1 v=0.863 pos=(27.17,-32.25) fr=0.20 st={'tick': 702710, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.863 here=1 seq=1401
+wall t=  14 side=1 v=0.764 pos=(26.87,-32.59) fr=0.40 st={'tick': 703013, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.863 here=1 seq=1402
+wall t=  17 side=1 v=0.678 pos=(27.04,-32.93) fr=0.20 st={'tick': 703312, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.679 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+rx botA PING x=-3.37 y=4.18 d11=0.767 here=1 seq=1403
+wall t=  20 side=1 v=0.781 pos=(27.08,-32.51) fr=0.39 st={'tick': 703611, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.827 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=  23 side=1 v=0.808 pos=(27.56,-32.48) fr=0.24 st={'tick': 703911, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.811 here=1 seq=1404
+wall t=  26 side=1 v=0.845 pos=(27.59,-32.32) fr=0.26 st={'tick': 704214, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.845 COLDER (turn around). Goal=my position. Stop when your here=1.
+rx botA PING x=-3.37 y=4.18 d11=0.843 here=1 seq=1405
+wall t=  29 side=1 v=0.786 pos=(27.03,-32.50) fr=0.31 st={'tick': 704514, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.691 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t=  32 side=1 v=0.661 pos=(26.99,-32.97) fr=0.32 st={'tick': 704814, 'goal': 0, 'here': 0}
+wall t=  35 side=1 v=0.669 pos=(27.09,-32.93) fr=0.60 st={'tick': 705114, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.679 here=1 seq=1407
+wall t=  38 side=1 v=0.784 pos=(27.03,-32.47) fr=0.38 st={'tick': 705415, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.770 here=1 seq=1408
+wall t=  41 side=1 v=0.825 pos=(27.53,-32.37) fr=0.33 st={'tick': 705717, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.833 COLDER (turn around). Goal=my position. Stop when your here=1.
+rx botA PING x=-3.37 y=4.18 d11=0.828 here=1 seq=1409
+wall t=  44 side=1 v=0.837 pos=(27.65,-32.31) fr=0.25 st={'tick': 706016, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.829 flat. Goal=my position. Stop when your here=1.
+wall t=  47 side=1 v=0.784 pos=(27.12,-32.50) fr=0.35 st={'tick': 706316, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.817 here=1 seq=1410
+wall t=  50 side=1 v=0.657 pos=(26.97,-32.94) fr=0.40 st={'tick': 706618, 'goal': 0, 'here': 0}
+wall t=  53 side=1 v=0.645 pos=(27.11,-33.00) fr=0.81 st={'tick': 706917, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.730 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=  56 side=1 v=0.774 pos=(27.04,-32.50) fr=0.35 st={'tick': 707218, 'goal': 0, 'here': 0}
+wall t=  59 side=1 v=0.832 pos=(27.48,-32.37) fr=0.34 st={'tick': 707517, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.827 here=1 seq=1413
+wall t=  62 side=1 v=0.839 pos=(27.63,-32.31) fr=0.22 st={'tick': 707820, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.827 here=1 seq=1414
+rx botA COACH d11=0.808 flat. Goal=my position. Stop when your here=1.
+wall t=  65 side=1 v=0.784 pos=(27.09,-32.48) fr=0.32 st={'tick': 708120, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.760 here=1 seq=1415
+wall t=  68 side=1 v=0.659 pos=(26.95,-32.96) fr=0.43 st={'tick': 708419, 'goal': 0, 'here': 0}
+wall t=  71 side=1 v=0.663 pos=(27.11,-32.98) fr=0.78 st={'tick': 708722, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.760 here=1 seq=1416
+wall t=  74 side=1 v=0.788 pos=(27.09,-32.48) fr=0.35 st={'tick': 709023, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.791 COLDER (turn around). Goal=my position. Stop when your here=1.
+rx botA PING x=-3.37 y=4.18 d11=0.814 here=1 seq=1417
+wall t=  77 side=1 v=0.811 pos=(27.56,-32.41) fr=0.29 st={'tick': 709322, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.812 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=  80 side=1 v=0.818 pos=(27.63,-32.33) fr=0.38 st={'tick': 709620, 'goal': 0, 'here': 0}
+wall t=  83 side=1 v=0.768 pos=(27.06,-32.49) fr=0.28 st={'tick': 709925, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.779 here=1 seq=1419
+wall t=  86 side=1 v=0.630 pos=(26.98,-32.98) fr=0.37 st={'tick': 710223, 'goal': 0, 'here': 0}
+wall t=  89 side=1 v=0.655 pos=(27.13,-32.95) fr=0.76 st={'tick': 710523, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.743 here=1 seq=1421
+wall t=  92 side=1 v=0.780 pos=(27.13,-32.47) fr=0.37 st={'tick': 710827, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.808 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=  95 side=1 v=0.800 pos=(27.62,-32.47) fr=0.24 st={'tick': 711125, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.791 here=1 seq=1422
+rx botA COACH d11=0.826 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=  98 side=1 v=0.827 pos=(27.66,-32.33) fr=0.35 st={'tick': 711426, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.821 here=1 seq=1423
+wall t= 101 side=1 v=0.780 pos=(27.11,-32.52) fr=0.31 st={'tick': 711726, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.736 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 104 side=1 v=0.647 pos=(27.03,-32.98) fr=0.34 st={'tick': 712024, 'goal': 0, 'here': 0}
+wall t= 107 side=1 v=0.661 pos=(27.13,-32.95) fr=0.59 st={'tick': 712328, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.665 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 110 side=1 v=0.784 pos=(27.10,-32.47) fr=0.33 st={'tick': 712628, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.803 here=1 seq=1426
+wall t= 113 side=1 v=0.817 pos=(27.60,-32.40) fr=0.29 st={'tick': 712930, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.814 here=1 seq=1427
+wall t= 116 side=1 v=0.834 pos=(27.65,-32.33) fr=0.22 st={'tick': 713230, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.837 flat. Goal=my position. Stop when your here=1.
+wall t= 119 side=1 v=0.770 pos=(27.12,-32.51) fr=0.32 st={'tick': 713530, 'goal': 0, 'here': 0}
+rx botA PING x=-3.37 y=4.18 d11=0.814 here=1 seq=1428
+rx botA COACH d11=0.671 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 122 side=1 v=0.646 pos=(26.99,-32.98) fr=0.40 st={'tick': 713828, 'goal': 0, 'here': 0}
+wall t= 125 side=1 v=0.648 pos=(27.15,-33.01) fr=0.78 st={'tick': 714131, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.705 COLDER (turn around). Goal=my position. Stop when your here=1.
+rx botA PING x=-3.37 y=4.18 d11=0.728 here=1 seq=1430
+wall t= 128 side=1 v=0.738 pos=(27.11,-32.53) fr=0.38 st={'tick': 714431, 'goal': 0, 'here': 0}
+wall t= 131 side=1 v=0.722 pos=(27.58,-32.44) fr=0.32 st={'tick': 714731, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.733 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t= 134 side=1 v=0.730 pos=(27.72,-32.36) fr=0.26 st={'tick': 715034, 'goal': 0, 'here': 0}
+rx botA PING x=-3.865 y=4.384 d11=0.754 here=1 seq=1432
+wall t= 137 side=1 v=0.805 pos=(27.21,-32.54) fr=0.38 st={'tick': 715334, 'goal': 0, 'here': 0}
+rx botA PING x=-4.057 y=3.863 d11=0.822 here=0 seq=1433
+wall t= 140 side=1 v=0.751 pos=(27.00,-32.94) fr=0.46 st={'tick': 715633, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.738 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 143 side=1 v=0.714 pos=(27.16,-33.05) fr=0.27 st={'tick': 715933, 'goal': 0, 'here': 0}
+rx botA PING x=-4.057 y=3.863 d11=0.822 here=0 seq=1434
+rx botA COACH d11=0.807 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t= 146 side=1 v=0.849 pos=(27.10,-32.55) fr=0.38 st={'tick': 716236, 'goal': 0, 'here': 0}
+rx botA PING x=-4.057 y=3.863 d11=0.822 here=0 seq=1435
+wall t= 149 side=1 v=0.760 pos=(27.54,-32.43) fr=0.37 st={'tick': 716534, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.717 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+rx botA PING x=-3.882 y=4.387 d11=0.714 here=1 seq=1436
+wall t= 152 side=1 v=0.726 pos=(27.74,-32.38) fr=0.25 st={'tick': 716834, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.704 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 155 side=1 v=0.685 pos=(27.24,-32.51) fr=0.42 st={'tick': 717135, 'goal': 0, 'here': 0}
+-> climb
+climb t= 162 v=0.720 pos=(27.33,-32.55) st={'tick': 717421, 'goal': 0, 'here': 0}
+-> wall
+rx botA PING x=-3.484 y=4.435 d11=0.699 here=1 seq=1439
+wall t= 166 side=1 v=0.808 pos=(27.56,-32.27) fr=0.19 st={'tick': 718208, 'goal': 0, 'here': 0}
+rx botA PING x=-3.484 y=4.435 d11=0.699 here=1 seq=1440
+wall t= 169 side=1 v=0.782 pos=(27.12,-32.59) fr=0.34 st={'tick': 718511, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.779 flat. Goal=my position. Stop when your here=1.
+rx botA PING x=-3.814 y=3.995 d11=0.762 here=1 seq=1441
+wall t= 172 side=1 v=0.704 pos=(27.01,-33.04) fr=0.34 st={'tick': 718810, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.670 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 175 side=1 v=0.688 pos=(27.15,-33.07) fr=0.68 st={'tick': 719109, 'goal': 0, 'here': 0}
+rx botA PING x=-3.814 y=3.995 d11=0.762 here=1 seq=1442
+wall t= 178 side=1 v=0.804 pos=(27.00,-32.59) fr=0.37 st={'tick': 719410, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.810 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t= 181 side=1 v=0.760 pos=(27.40,-32.35) fr=0.48 st={'tick': 719712, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.728 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t= 184 side=1 v=0.727 pos=(27.71,-32.40) fr=0.22 st={'tick': 720013, 'goal': 0, 'here': 0}
+wall t= 187 side=1 v=0.749 pos=(27.30,-32.41) fr=0.52 st={'tick': 720312, 'goal': 0, 'here': 0}
+rx botA PING x=-3.715 y=4.468 d11=0.758 here=1 seq=1445
+climb t=   2 v=0.786 pos=(27.20,-32.47) st={'tick': 720598, 'goal': 0, 'here': 0}
+-> wall
+rx botA PING x=-3.715 y=4.468 d11=0.758 here=1 seq=1446
+rx botA COACH d11=0.739 COLDER (turn around). Goal=my position. Stop when your here=1.
+wall t=   5 side=1 v=0.710 pos=(27.39,-32.77) fr=0.26 st={'tick': 721089, 'goal': 0, 'here': 0}
+rx botA PING x=-4.014 y=4.002 d11=0.771 here=1 seq=1447
+wall t=   8 side=1 v=0.819 pos=(27.47,-32.33) fr=0.39 st={'tick': 721388, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.822 COLDER (turn around). Goal=my position. Stop when your here=1.
+rx botA PING x=-4.014 y=4.002 d11=0.771 here=1 seq=1448
+wall t=  11 side=1 v=0.796 pos=(27.90,-32.24) fr=0.29 st={'tick': 721689, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.778 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+wall t=  14 side=1 v=0.792 pos=(28.06,-32.13) fr=0.25 st={'tick': 721991, 'goal': 0, 'here': 0}
+wall t=  17 side=1 v=0.774 pos=(27.55,-32.26) fr=0.40 st={'tick': 722289, 'goal': 0, 'here': 0}
+rx botA COACH d11=0.765 HOTTER (keep direction). Goal=my position. Stop when your here=1.
+rx botA: episode ending. AGREED PLAN for next time: I park ON goal (here=1) and stay. YOU enter via the DOOR at the WEST END of the long EAST-WEST corridor - door is on the corridor's NORTH wall. Approach the goal chamber from the SOUTH-EAST. If lost, minimiz
+wall t=  20 side=1 v=0.656 pos=(27.33,-32.67) fr=0.50 st={'tick': 722591, 'goal': 0, 'here': 0}
+-> climb
+climb t=  25 v=0.576 pos=(27.47,-33.42) st={'tick': 722740, 'goal': 0, 'here': 0}

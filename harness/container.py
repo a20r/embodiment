@@ -21,8 +21,8 @@ def image_exists(image=IMAGE):
     return r.returncode == 0
 
 
-def build_image(repo_root, image=IMAGE):
-    with open(f"{repo_root}/Dockerfile.bot", "rb") as f:
+def build_image(repo_root, image=IMAGE, dockerfile="Dockerfile.bot"):
+    with open(f"{repo_root}/{dockerfile}", "rb") as f:
         subprocess.run(["docker", "build", "-t", image, "-"],
                        stdin=f, check=True)
 

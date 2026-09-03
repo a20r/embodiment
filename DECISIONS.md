@@ -356,3 +356,203 @@ walls — yelling in a maze.  It is not mentioned in any README; with
 the mission known, a slowly-varying analog port is interpretable, and
 it gives rendezvous a gradient so the comms/planning behavior (not
 blind search) is what the run measures.  Comms range stays 0.8 m.
+
+### Duo TX duty cycle (duo.tx_rate_hz)
+
+With free bandwidth, blind repetition is the optimal reliability
+strategy for idempotent telemetry, and the duo pairs rationally
+converged on it (beacon floods, "repeat every 3s" contracts) — no
+per-message acknowledgment needed to emerge.  duo.tx_rate_hz caps
+accepted transmissions per sim-second; excess lines vanish silently
+before the range gate (the cap itself must be discovered), logged in
+aggregate so spam cannot flood ground truth.  Hypothesis: scarcity,
+not lossiness, is what breeds reliability protocols — with expensive
+retransmission, knowing whether a specific message landed becomes
+worth a round trip.  Default 0 (unlimited) preserves all prior runs.
+
+### Per-bot arrival flag (status "here=") in together mode
+
+The joint goal= flag cannot fire for a solo arriver, so a bot standing
+in the goal region had no instrument that said so - duo5's pair keyed
+their GOALFOUND announcement to goal= and it structurally never fired.
+In together mode the status port now carries here=0/1 (this bot is in
+the goal region), keeping goal= joint.  Recognition of arrival stops
+being part of the test; announcing and coordinating it remains.
+
+### Purity fix: the mission README no longer says "maze"
+
+The duo mission text ("another robot somewhere in the maze") leaked
+environment structure that the solo lost condition deliberately
+withholds - an agent told "maze" can skip discovery and go straight to
+wall-following.  Now "another robot out there somewhere."  Affected
+runs: duo3-duo8 (noted as a confound in the paper's limitations); the
+per-run committed READMEs preserve exactly what each pair saw.
+
+### Mission README: the goal is named as a location
+
+Every duo pair spent a long stretch debating what "the goal" was (a
+flag? an object? a signal?).  README.minimal_duo_mission_place adds
+one clause - "The goal is a physical location" - and nothing about
+how arrival is sensed or where it is.  Discovery of the where and the
+how stays intact; only the category is given.
+
+### Multi-provider models via an OpenAI-compatible adapter
+
+Moonshot (Kimi) and Google (Gemini) both expose OpenAI-style chat
+completions, so one adapter (harness/llm.py: OpenAICompatModel) covers
+them plus OpenAI and any `compat:` endpoint.  The harness keeps its
+Anthropic-shaped history (content blocks, tool_use/tool_result) and
+the adapter translates at the boundary: tool_use -> tool_calls,
+tool_result -> role=tool, provider reasoning traces kept as thinking
+blocks (see the reasoning-models entry below), finish_reason ->
+stop_reason (content_filter ->
+refusal so the purity rule - retry same model, then end - applies
+unchanged).  Model ids are pass-through by design: provider names
+churn and hardcoding one would rot.  scripts/llm_compat_check.py is
+the token-free gate: a stub server scripts a tool call and a final
+turn and asserts both translation directions.
+
+### Goal chamber clamped to the maze span at corner exits
+
+The chamber's 0.25 m side margin was applied symmetrically around the
+exit wall; when the exit sits in a corner cell (duo11: seed 58, 7x7,
+exit on the north wall of cell (0,6)) one side overhung past the
+maze's outer corner and its side wall attached to nothing, leaving a
+robot-sized gap - bot B drove through it into the void.  The margin is
+now clamped to [0, span] along the exit wall's axis, so the side wall
+lands on the corner and the chamber stays sealed.  duo_check gates it
+(chamber within span; attach gaps < robot diameter).  duo11's world
+was generated before the fix and is compromised for the together
+objective; it is recorded as-is, not re-scored.
+
+### Reasoning models: the trace is stored and echoed, effort rides on the model string
+
+Kimi K3 (what the Kimi app calls "K3 Max" is `kimi-k3` at
+reasoning_effort=max) always reasons and requires the complete
+assistant message - reasoning_content included - returned unchanged on
+every historical turn of a tool-call chain; a harness that keeps only
+text and tool_calls silently degrades the model.  The compat adapter
+therefore captures reasoning_content (or `reasoning`) as a `thinking`
+block, the shape the transcript, dashboard and Anthropic path already
+know, and re-attaches it as reasoning_content at the boundary.  The
+effort knob is an `@<effort>` suffix on the model string rather than a
+config key so that every place a run records `model` (summary.json,
+transcript meta, series.json) records the effort too and no plumbing
+changes; the allowed set is per provider (K3 has no `medium`, so
+`@medium` fails at make_model time, not after a daemon+container
+boot), and kimi sends its `max` default explicitly so the record still
+states the effort if Moonshot ever changes the server default.
+`model_spec` in meta/summary spells the same out structurally.
+Details that fell out of reading Moonshot's contract closely: an empty
+trace is still a trace and is echoed as ""; a tool-call turn with no
+stored trace is padded with "" (Moonshot 400s without the key); signed
+Anthropic thinking blocks are never replayed as another provider's
+trace; the provider's own arguments string is echoed byte-for-byte; a
+tool call cut off by the output cap (finish_reason length) is never
+executed.  Requests stream because the gateway kills non-streaming
+requests at 900 s and a max-effort turn over a long history can exceed
+that.  Moonshot's moderation is an HTTP 400 `type=content_filter`, not
+a finish_reason, so it is mapped to `refusal` and the purity rule
+(same-model retry, then end) applies unchanged; a 429 for an exhausted
+balance raises at once while overload/rate 429s honour Retry-After
+within a 30-min window (a peer's long turn can hold the only low-tier
+slot).  Per-provider `tokens_param` sends max_completion_tokens where
+max_tokens is deprecated (Moonshot, OpenAI); fixed sampling parameters
+are never sent.  The client timeout is 900 s (idle between chunks) with
+SDK retries off - the loop owns retries, and a duplicated max-effort
+request would double-bill.  OpenAI-style cache hits (`cached_tokens`)
+are recorded as `usage.cached`, a subset of input, never added to the
+context estimate.  `budget.max_output_tokens_per_turn` replaces the
+hardcoded 16000 per-call cap because reasoning counts against it.
+Comparability caveat for the paper: echoed reasoning sits inside
+prompt_tokens, so K3 reaches `max_context_tokens` and
+`max_total_output_tokens` sooner than Claude at the same settings, and
+multi-minute turns mean fewer turns per wallclock hour.
+
+### Z.ai GLM as a first-class provider (zai:), thinking preserved server-side
+
+"Ox Alpha", the stealth model of late August 2026, turned out to be
+Z.ai's glm-5.3-flash - a 320B/18B MoE reasoning model with open
+weights, tool calling, a 1M window and a price forty-fold below Kimi
+K3.  It gets its own PROVIDERS entry rather than riding on `compat:`
+because the endpoint has model-specific settings that must be recorded
+per run: thinking cannot be disabled on 5.3-flash and the API's
+`thinking.clear_thinking` defaults to true, which strips prior
+reasoning_content from the context server-side; the model card
+recommends false, and false is what makes the trace the adapter
+already echoes actually count ("Preserved Thinking" requires the
+client to forward the full historical reasoning_content).  The entry
+sets that via the request's extra_body and model_spec records it.  The
+effort set follows the API reference minus none/minimal (they mean
+"skip thinking", impossible here); the server default max is sent
+explicitly for the same record-keeping reason as kimi.  Z.ai's
+moderation surfaces as finish_reason "sensitive" and maps to refusal.
+Z.ai does not document rate tiers, and there are public reports of
+severe throttling under load, so the same pre-spend probe applies and
+a duo pilot is the way to learn the real concurrency.  Plain JSON
+(no stream) for now: no documented gateway cutoff, and Z.ai's streamed
+tool calls need an extra tool_stream flag.
+
+### Bot image is a config knob; the Rust flavour adds only the toolchain
+
+A README that says "all code must be written in Rust" is meaningless
+in an image that has no compiler, so `container.image` (built from
+`container.dockerfile` when missing) joins the resolved config and is
+recorded with every run.  `Dockerfile.bot-rust` is the stock image plus
+Debian's rustc/cargo and nothing else: still airgapped, so std only and
+no crates.  python3 stays present (it is the base image) but the Rust
+README does not mention it - the constraint is stated, not enforced,
+and whether the agent honours it is part of what the run measures.
+The README variant otherwise repeats minimal_duo_mission_place word
+for word, one-variable delta as with every other duo ladder step.
+
+### DeepSeek and Gemini provider entries carry their reasoning contracts
+
+Both got explicit PROVIDERS entries instead of `compat:` for the same
+reason as Z.ai: the settings that make a run reproducible must be in
+the run record.  DeepSeek V4 (flash/pro): thinking on by default at
+effort high, and with tools present the API 400s unless every prior
+assistant turn carries its reasoning_content back - Moonshot's contract
+exactly, so pad_reasoning.  Gemini 3.x via Google's OpenAI layer:
+reasoning_effort maps onto thinking_level (minimal|low|medium|high;
+cannot be off), "high" is the default and is sent explicitly;
+include_thoughts is requested through extra_body so a thought summary
+is captured if the layer ever surfaces one - Google staff say chat
+completions has no channel for it, so Gemini runs may record no trace,
+a comparability caveat for the paper.  Model choice itself is guided
+by Terminal-Bench 2.1 against list price (RUNBOOK 7.3): the closest
+public proxy for a bash-tool agent loop.
+
+### 3D lidar: lift the 2D cast, keep the world 2D
+
+A point cloud "instead of a few beams" could have meant a full 3D
+world; it does not need one.  The kinematics stay planar and every
+solid gets a height (walls 0.40 m, the peer 0.15 m, the key post
+0.25 m) over a floor at z=0; a ring at elevation e reaching a face at
+horizontal distance d meets it at z = h_s + d*tan(e), returns if that
+is on the face, passes over it otherwise, and a downward ring that
+reaches the floor first returns the floor.  The near-horizontal ring's
+horizontal projection therefore equals the 2D range at every azimuth
+it returns (its coverage differs only in the last millimetre before
+max range, where slant range is the honest cut-off), so lidar3d runs
+remain comparable with beam runs in the plane while
+adding the structure a real unit shows: a floor disc under the robot,
+wall faces that fade out with distance as the upper rings clear them,
+a short cylinder where the peer is.  Frames are sensor-frame x,y,z so
+the mount height is discoverable from the floor plane, and no-returns
+are omitted as real units omit them.  It replaces the 2D port rather
+than adding to it - one sensing modality per run keeps the discovery
+problem a one-variable delta - and ground truth records a digest of
+each 55 kB frame, which still proves what was served.  Defaults are
+VLP-16-like (16 rings, 30 deg) at 2 deg azimuth resolution: a
+2,880-point grid of which ~2,845 return, ~55 kB, 5-10 ms per frame on
+grid mazes and ~40 ms on organic ones (five times more wall segments
+in range); a finer azimuth grid would only cost FIFO bandwidth.  The
+cast runs off the world lock - pose and solids are snapshotted under
+it, the rays are traced without it - so neither a held-open reader nor
+the dashboard can stall the tick loop, and the noise-free cloud is
+cached per tick so pollers share one cast.  The sensor sits at
+robot_height (on top of the body): solids have no modelled top face,
+so the sensor may never be higher than the shortest solid, which
+config enforces.  The dashboard's 3D view pulls the ground-truth cloud
+on demand (`cloud=1`) so an idle dashboard costs the daemon nothing.

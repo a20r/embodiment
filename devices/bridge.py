@@ -199,7 +199,28 @@ class DeviceBridge:
             return w.serial_rx_frame()
         if logical == "peer_signal":
             return w.peer_signal_frame()
+        if logical == "lidar3d":
+            return w.lidar3d_frame()
         raise ValueError(logical)
+
+    # Ground truth records the exact frame served; the point cloud is
+    # the one device whose frames are tens of kB, so it alone is logged
+    # as a digest (count + hash), which still proves what was served.
+    DIGEST_OVER = 512
+
+    def _frame_record(self, frame, logical):
+        if logical != "lidar3d" or len(frame) <= self.DIGEST_OVER:
+            return frame
+        import hashlib
+        return (f"<{len(frame)}B {frame.count(';') + 1}pts "
+                f"sha1={hashlib.sha1(frame.encode()).hexdigest()[:12]}>")
+
+    def _interval(self, logical):
+        """Seconds between frames for a held-open reader."""
+        if logical == "lidar3d":
+            # stream_hz is validated > 0 in sim/config.py.
+            return 1.0 / float(self.world.lidar3d_cfg.get("stream_hz", 10))
+        return FRAME_INTERVAL
 
     def _sensor_loop(self, path, filename, logical):
         import time
@@ -231,7 +252,9 @@ class DeviceBridge:
                     self.read_counts[filename] = \
                         self.read_counts.get(filename, 0) + 1
                     self.log(dict(event="read", dev=filename,
-                                  physical=logical, value=frame,
+                                  physical=logical,
+                                  value=self._frame_record(frame,
+                                                           logical),
                                   t=tick))
             except (BrokenPipeError, OSError):
                 pass
@@ -241,8 +264,9 @@ class DeviceBridge:
                 except OSError:
                     pass
             # Give one-shot readers (cat) time to see EOF before the next
-            # frame; a held-open reader gets a ~40 Hz stream.
-            time.sleep(FRAME_INTERVAL)
+            # frame; a held-open reader gets a ~40 Hz stream (slower for
+            # the big point-cloud frames).
+            time.sleep(self._interval(logical))
 
     def _actuator_loop(self, path, filename, logical):
         while self.running:

@@ -1,0 +1,132 @@
+warmer game start
+no oracle reply
+moved 0.41 blk=False dir_h=35
+no oracle reply
+moved 0.41 blk=False dir_h=70
+no oracle reply
+moved 0.13 blk=True dir_h=105
+no oracle reply
+moved 0.03 blk=True dir_h=140
+no oracle reply
+moved 0.00 blk=True dir_h=175
+no oracle reply
+moved 0.41 blk=False dir_h=210
+no oracle reply
+moved 0.04 blk=True dir_h=245
+no oracle reply
+moved 0.00 blk=True dir_h=280
+no oracle reply
+moved 0.10 blk=True dir_h=315
+no oracle reply
+moved 0.08 blk=True dir_h=350
+no oracle reply
+moved 0.00 blk=True dir_h=385
+no oracle reply
+moved 0.41 blk=False dir_h=420
+no oracle reply
+moved -0.00 blk=True dir_h=455
+no oracle reply
+moved 0.06 blk=True dir_h=490
+no oracle reply
+moved 0.19 blk=True dir_h=525
+no oracle reply
+moved 0.41 blk=False dir_h=560
+no oracle reply
+moved 0.40 blk=False dir_h=595
+no oracle reply
+moved 0.41 blk=False dir_h=630
+no oracle reply
+moved 0.36 blk=True dir_h=665
+no oracle reply
+moved -0.00 blk=True dir_h=700
+no oracle reply
+moved 0.29 blk=True dir_h=735
+no oracle reply
+moved 0.41 blk=False dir_h=770
+no oracle reply
+moved 0.00 blk=True dir_h=805
+no oracle reply
+moved 0.40 blk=True dir_h=840
+no oracle reply
+moved 0.18 blk=True dir_h=875
+no oracle reply
+moved 0.13 blk=True dir_h=910
+no oracle reply
+moved 0.17 blk=True dir_h=945
+RX: B2 SAME d11=0.894
+RX: B2 SAME d11=0.890
+no oracle reply
+RX: B2 SAME d11=0.896
+moved 0.00 blk=True dir_h=980
+RX: B2 SAME d11=0.895
+no oracle reply
+moved 0.43 blk=False dir_h=1015
+RX: B2 SAME d11=0.883
+no oracle reply
+RX: B2 COLDER d11=0.851
+moved 0.43 blk=False dir_h=1050
+ORACLE: B2 COLDER d11=0.851 val=0.851
+RX: B2 COLDER d11=0.776
+moved 0.01 blk=True dir_h=1115
+ORACLE: B2 COLDER d11=0.776 val=0.776
+RX: B2 WARMER d11=0.804
+moved 0.43 blk=False dir_h=1180
+ORACLE: B2 WARMER d11=0.804 val=0.804
+moved 0.41 blk=False dir_h=1180
+no oracle reply
+moved 0.00 blk=True dir_h=1215
+RX: B2 PING t=1788378347 d11=0.894
+RX: B2 PING t=1788378348 d11=0.893
+RX: B2 PING t=1788378349 d11=0.891
+RX: B2 PING t=1788378351 d11=0.884
+RX: B2 PING t=1788378352 d11=0.895
+no oracle reply
+RX: B2 PING t=1788378353 d11=0.890
+RX: B2 PING t=1788378355 d11=0.903
+moved 0.42 blk=False dir_h=1250
+RX: B2 PING t=1788378358 d11=0.894
+RX: B2 PING t=1788378359 d11=0.894
+RX: B2 PING t=1788378361 d11=0.873
+no oracle reply
+RX: B2 PING t=1788378362 d11=0.863
+RX: B2 PING t=1788378363 d11=0.853
+RX: B2 PING t=1788378365 d11=0.837
+moved 0.43 blk=False dir_h=1285
+RX: B2 COLDER d11=0.813
+ORACLE: B2 COLDER d11=0.813 val=0.813
+RX: B2 SAME d11=0.805
+RX: B2 PING t=1788378369 d11=0.812
+moved 0.44 blk=False dir_h=1350
+RX: B2 PING t=1788378372 d11=0.799
+RX: B2 PING t=1788378373 d11=0.807
+no oracle reply
+RX: B2 PING t=1788378377 d11=0.817
+moved 0.41 blk=False dir_h=1385
+RX: B2 PING t=1788378379 d11=0.807
+RX: B2 PING t=1788378380 d11=0.815
+RX: B2 PING t=1788378381 d11=0.821
+RX: B2 PING t=1788378382 d11=0.854
+RX: B2 PING t=1788378383 d11=0.872
+no oracle reply
+RX: B2 PING t=1788378384 d11=0.865
+moved 0.34 blk=True dir_h=1420
+RX: B2 PING t=1788378387 d11=0.874
+RX: B2 PING t=1788378388 d11=0.889
+RX: B2 PING t=1788378391 d11=0.883
+RX: B2 PING t=1788378392 d11=0.906
+no oracle reply
+moved 0.29 blk=False dir_h=1455
+RX: B2 PING t=1788378400 d11=0.919
+RX: B2 PING t=1788378402 d11=0.923
+no oracle reply
+RX: B2 PING t=1788378403 d11=0.929
+moved 0.45 blk=False dir_h=1490
+RX: B2 PING t=1788378408 d11=0.862
+RX: B2 PING t=1788378409 d11=0.845
+no oracle reply
+moved 0.00 blk=True dir_h=1525
+Traceback (most recent call last):
+  File "/bot/src/warmer.py", line 123, in <module>
+    h=fnum('d4'); rot_to((h+80)%360)
+                          ~^~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'

@@ -50,9 +50,13 @@ class SimDaemonProc:
                "--port", str(self.port)]
         if self.start_paused:
             cmd.append("--start-paused")
+        # The daemon never talks to a model; keep provider keys out of
+        # its environment so a crash dump or /proc peek cannot expose them.
+        env = {k: v for k, v in os.environ.items()
+               if not k.endswith(("_API_KEY", "_AUTH_TOKEN"))}
         with open(os.path.join(self.run_dir, "daemon.log"), "ab") as log:
             self.proc = subprocess.Popen(cmd, cwd=self.repo_root,
-                                         stdout=log, stderr=log)
+                                         stdout=log, stderr=log, env=env)
         deadline = time.time() + timeout_s
         while time.time() < deadline:
             if self.proc.poll() is not None:

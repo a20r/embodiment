@@ -1,0 +1,101 @@
+import sys,time,random
+sys.path.insert(0,'/bot/src')
+from robot import Robot
+from drive import Drive, angdiff
+r=Robot(); d=Drive(r)
+log=open('/memory/run2.log','a')
+def L(*a):
+    log.write('%.1f %s\n'%(time.time(),' '.join(str(x) for x in a))); log.flush()
+L('=== pn north-bias LRV ===')
+AXES=[5,95,185,275]
+DIRV={5:(1,0),95:(0,1),185:(-1,0),275:(0,-1)}
+PRIO={95:0,5:1,185:1,275:2}
+goal_seen=False; last_tx=0
+MSG=('B: keep hunting side openings along your corridor cells; I probe my side too. FREEZE and say STOP when your d5>1.05.')
+def poll():
+    global goal_seen,last_tx
+    r.update()
+    for m in r.msgs: L('RX:',m)
+    r.msgs[:]=[]
+    for e in r.events:
+        if 'goal=1' in e: goal_seen=True; L('EV:',e)
+    r.events[:]=[]
+    if time.time()-last_tx>3:
+        r.tx.write(MSG); last_tx=time.time()
+def d5s(t=0.6):
+    vals=[]; end=time.time()+t
+    while time.time()<end:
+        poll()
+        if r.d5.last:
+            try: vals.append(float(r.d5.last))
+            except: pass
+        time.sleep(0.03)
+    return sum(vals)/max(1,len(vals)) if vals else 0.0
+def clr():
+    best={ax:0.0 for ax in AXES}
+    for s in range(3):
+        r.update()
+        for ax in AXES:
+            rel=((ax-r.h)%360)/22.5
+            k0=int(rel)%16; k1=(k0+1)%16
+            vals=[v for v in (r.ray(k0),r.ray(k1)) if v is not None and v>=0]
+            if vals: best[ax]=max(best[ax],min(vals))
+        time.sleep(0.05)
+    return best
+def hold_goal():
+    global last_tx
+    L('GOAL HOLD')
+    while True:
+        r.wheels(0,0); poll()
+        if time.time()-last_tx>1: r.tx.write('A at_goal 1 GOAL STAY PUT'); last_tx=time.time()
+        time.sleep(0.1)
+def chk(v):
+    global last_tx
+    if goal_seen: hold_goal()
+    if v>1.05:
+        r.wheels(0,0); L('TRIPWIRE %.2f'%v)
+        t0=time.time()
+        while time.time()-t0<70:
+            poll()
+            if goal_seen: hold_goal()
+            if time.time()-last_tx>1.5:
+                r.tx.write('A STOP TEST freeze d5 %.2f'%v); last_tx=time.time()
+            time.sleep(0.05)
+        L('trip no goal, continue')
+while r.h is None or r.rays is None: r.update(); time.sleep(0.05)
+cx,cy=0,0; step=0; vis={(0,0):0}
+best=0.0; bestpos=(0,0)
+phase=1
+while True:
+    poll()
+    if goal_seen: hold_goal()
+    v=d5s(0.6); chk(v)
+    if v>best: best=v; bestpos=(cx,cy)
+    c=clr()
+    opens=[ax for ax in AXES if c[ax]>=0.40]
+    if not opens:
+        opens=[ax for ax in AXES if c[ax]>=0.34]
+    if not opens:
+        time.sleep(0.3); continue
+    if phase==1:
+        if c[185]>=0.45:
+            L('pn west opening found at %d,%d'%(cx,cy)); phase=2; ax=185
+        elif c[95]>=0.34:
+            ax=95
+        else:
+            L('pn north dead end at %d,%d; switching phase2'%(cx,cy)); phase=2; continue
+    else:
+        PR={275:0,185:1,5:2,95:3}
+        def key(ax):
+            n=(cx+DIRV[ax][0],cy+DIRV[ax][1])
+            return (vis.get(n,-1), PR[ax], random.random())
+        ax=min(opens,key=key)
+    if abs(angdiff(ax,r.h))>8: d.turn_to(ax)
+    tr,_=d.forward(0.5,target_h=ax,front_stop=0.17,speed=26)
+    step+=1
+    if tr>0.2:
+        cx+=DIRV[ax][0]; cy+=DIRV[ax][1]; vis[(cx,cy)]=step
+        L('pn%d %s %d,%d d5=%.2f c=%s'%(step,ax,cx,cy,v,{a:round(x,2) for a,x in c.items()}))
+    else:
+        vis[(cx+DIRV[ax][0],cy+DIRV[ax][1])]=step+200
+        L('pn%d %s BLOCK tr=%.2f'%(step,ax,tr))

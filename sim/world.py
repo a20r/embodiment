@@ -107,11 +107,17 @@ class World:
         # region with entries inside the together window.
         self.joint_goal = duo.get("objective", "solo") == "together"
         self.peer_signal_scale = float(duo.get("peer_signal_scale", 2.0))
+        rate = float(duo.get("tx_rate_hz", 0) or 0)
+        self.tx_min_ticks = (cfg["sim"]["tick_hz"] / rate) if rate > 0 \
+            else 0
         self.model = cfg["robot"].get("model", "diffdrive")
         self.car_cfg = cfg["robot"].get("car", {})
         self.actuators = ["accel", "steer"] if self.model == "car" \
             else ["motor_left", "motor_right"]
         self.lidar_cfg = cfg["lidar"]
+        self.lidar3d_cfg = cfg.get("lidar3d") or {}
+        self.lidar3d_on = bool(self.lidar3d_cfg.get("enabled"))
+        self._cloud_cache = None      # (tick, world-frame cloud)
         self.dt = 1.0 / cfg["sim"]["tick_hz"]
         self.log = log_fn or (lambda rec: None)
         self.episode_index = episode_index
@@ -169,7 +175,9 @@ class World:
                 self.spawn_cell or self.maze.start_cell)
             self.x, self.y, self.theta = sx, sy, self.spawn_theta % TWO_PI
             self.serial_rx = deque(maxlen=self.duo_queue)
-            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0}
+            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0,
+                          "tx_rate_dropped": 0}
+            self._last_tx_tick = None
             self.v = 0.0
             self.w = 0.0
             self.phi = 0.0             # car: current steering angle, rad
@@ -487,6 +495,133 @@ class World:
                 vals.append(max(0.0, min(self.lidar_cfg["max_range"], r)))
             return ",".join(f"{v:.3f}" for v in vals)
 
+    # -- 3D lidar -----------------------------------------------------------
+    # The world is still 2D-kinematic; the point cloud comes from lifting
+    # the 2D cast: every solid gets a height (walls, the peer, the key
+    # post) and the floor is z=0.  A ring at elevation e reaching a face
+    # at horizontal distance d meets it at z = h_s + d*tan(e); it returns
+    # if 0 <= z <= face height, passes over it otherwise, and a downward
+    # ring that reaches z=0 first returns the floor.
+
+    def _ring_elevations(self):
+        c = self.lidar3d_cfg
+        n = int(c["rings"])
+        vfov = math.radians(c["vfov_deg"])
+        if n == 1:
+            return [0.0]
+        return [-vfov / 2 + k * vfov / (n - 1) for k in range(n)]
+
+    def _azimuths3d(self):
+        n = int(self.lidar3d_cfg["azimuths"])
+        return [k * TWO_PI / n for k in range(n)]
+
+    def _height_groups(self, px, py):
+        """[(segments, height)] per solid class for one frame.  Solids
+        have no modelled top: config keeps the sensor no higher than the
+        peer and the post, so no ring can pass over a near face and
+        then land inside a body."""
+        c = self.lidar3d_cfg
+        walls = list(self._index.near(px, py, c["max_range"] + 0.1))
+        walls.extend(self._solid_extra())
+        groups = [(walls, c["wall_height"])]
+        if self._key_segments and not self.key_carried:
+            groups.append((self._key_segments, c["post_height"]))
+        if self.peer is not None:
+            qx, qy = self.peer.x, self.peer.y
+            pr = self.peer.robot_cfg["radius"]
+            pts = [(qx + pr * math.cos(a), qy + pr * math.sin(a))
+                   for a in [k * TWO_PI / 8 for k in range(9)]]
+            groups.append(([(p[0], p[1], q[0], q[1])
+                            for p, q in zip(pts, pts[1:])],
+                           c["robot_height"]))
+        return groups
+
+    @staticmethod
+    def _ring_hits(px, py, angle, groups, rings, mr, hs):
+        """Range per ring along one azimuth; None = no return.  rings is
+        [(cos e, sin e, tan e)], precomputed once per frame."""
+        dx, dy = math.cos(angle), math.sin(angle)
+        faces = []
+        for segs, h in groups:
+            best = None
+            for seg in segs:
+                t = _ray_seg(px, py, dx, dy, *seg)
+                if t is not None and t < mr and (best is None or t < best):
+                    best = t
+            if best is not None:
+                faces.append((best, h))
+        faces.sort()
+        out = []
+        for ce, se, tan_e in rings:
+            d_floor = -hs / tan_e if se < -1e-9 else None
+            r = None
+            for d, h in faces:
+                if d_floor is not None and d_floor < d:
+                    break               # the floor comes first
+                if 0.0 <= hs + d * tan_e <= h:
+                    r = d / ce
+                    break               # else: passes over this face
+            if r is None and d_floor is not None:
+                r = d_floor / ce
+            out.append(r if r is not None and r <= mr else None)
+        return out
+
+    def _cast_cloud(self, noisy):
+        """One frame of sensor-frame points (x forward, y left, z up;
+        origin at the sensor).  The pose and the solids are snapshotted
+        under the lock; the cast itself (tens of ms on organic mazes)
+        runs without it, so a held-open reader or the dashboard can
+        never stall the tick loop.  Dropped or out-of-range points are
+        omitted, as a real unit omits no-returns."""
+        c = self.lidar3d_cfg
+        with self.lock:
+            px, py, theta, tick = self.x, self.y, self.theta, self.tick
+            groups = self._height_groups(px, py)
+        n = self.noise
+        sigma = n.get("lidar3d_sigma_m", 0.0) if noisy else 0.0
+        drop = n.get("lidar3d_dropout_p", 0.0) if noisy else 0.0
+        mr, hs = c["max_range"], c["sensor_height"]
+        rings = [(math.cos(e), math.sin(e), math.tan(e))
+                 for e in self._ring_elevations()]
+        pts = []
+        for a_rel in self._azimuths3d():
+            hits = self._ring_hits(px, py, theta + a_rel, groups, rings,
+                                   mr, hs)
+            ca, sa = math.cos(a_rel), math.sin(a_rel)
+            for (ce, se, _), r in zip(rings, hits):
+                if r is None:
+                    continue
+                if drop > 0 and self.rng_lidar.random() < drop:
+                    continue
+                if sigma > 0:
+                    r += self.rng_lidar.gauss(0.0, sigma)
+                    if r < 0.0 or r > mr:
+                        continue
+                pts.append((r * ce * ca, r * ce * sa, r * se))
+        return tick, (px, py, theta), pts
+
+    def lidar3d_points(self, noisy):
+        return self._cast_cloud(noisy)[2]
+
+    def lidar3d_frame(self):
+        return ";".join(f"{x:.3f},{y:.3f},{z:.3f}"
+                        for x, y, z in self.lidar3d_points(noisy=True))
+
+    def lidar3d_true(self):
+        """Noise-free cloud in world coordinates (dashboard use only),
+        cached per tick so concurrent pollers share one cast."""
+        cached = self._cloud_cache
+        if cached is not None and cached[0] == self.tick:
+            return cached[1]
+        tick, (px, py, theta), pts = self._cast_cloud(noisy=False)
+        ct, st = math.cos(theta), math.sin(theta)
+        hs = self.lidar3d_cfg["sensor_height"]
+        cloud = [[round(px + x * ct - y * st, 3),
+                  round(py + x * st + y * ct, 3), round(hs + z, 3)]
+                 for x, y, z in pts]
+        self._cloud_cache = (tick, cloud)
+        return cloud
+
     def heading_frame(self):
         n = self.noise
         with self.lock:
@@ -546,6 +681,20 @@ class World:
         buffering).  Lock-free toward the peer — deque.append is atomic
         and we never take the peer's lock (see set_peer)."""
         line = raw[:self.duo_max_bytes]
+        # Duty cycle: excess lines vanish before the range gate, with
+        # no error back to the writer.  Logged in aggregate — a spam
+        # loop must not flood the ground-truth record.
+        if self.tx_min_ticks:
+            now = self.tick
+            if self._last_tx_tick is not None and \
+                    now - self._last_tx_tick < self.tx_min_ticks:
+                self.comms["tx_rate_dropped"] += 1
+                if self.comms["tx_rate_dropped"] % 500 == 1:
+                    self._event(dict(
+                        event="comms_rate_drop",
+                        total=self.comms["tx_rate_dropped"]))
+                return
+            self._last_tx_tick = now
         peer = self.peer
         delivered = False
         dist = None
@@ -604,6 +753,12 @@ class World:
     def status_frame(self):
         with self.lock:
             line = f"tick={self.tick} goal={int(self.goal_reached)}"
+            if self.joint_goal:
+                # Per-bot arrival flag: the joint goal= cannot fire for
+                # a solo arriver, so without this a bot standing in the
+                # goal region has no instrument that says so (the duo5
+                # GOALFOUND pathology).
+                line += f" here={int(self.region_entry is not None)}"
             if self.maze.locked and self._door_segments:
                 dcx, dcy = self._door_center
                 if math.hypot(self.x - dcx, self.y - dcy) < 0.5:

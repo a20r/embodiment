@@ -1,0 +1,10 @@
+CLIMB start d11=0.735
+commit ang=225 d11 0.729->0.767 res=ok pose=(-15.91,-4.04)
+commit ang=180 d11 0.776->0.795 res=ok pose=(-15.99,-4.09)
+commit ang=135 d11 0.794->0.852 res=ok pose=(-16.09,-4.03)
+no improvement any dir
+commit ang=90 d11 0.516->0.569 res=wall pose=(-16.13,-4.03)
+commit ang=180 d11 0.573->0.602 res=ok pose=(-16.15,-4.02)
+commit ang=180 d11 0.630->0.631 res=ok pose=(-16.18,-4.00)
+commit ang=135 d11 0.507->0.565 res=ok pose=(-16.25,-3.93)
+commit ang=45 d11 0.563->0.679 res=wall pose=(-16.32,-3.92)

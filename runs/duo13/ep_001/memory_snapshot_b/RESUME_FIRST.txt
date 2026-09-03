@@ -1,0 +1,19 @@
+=== ROBOT1 RESUME CARD (read me first) ===
+MISSION: meet robot B2, then BOTH stand on GOAL within 1 min of each other.
+STATE AT SHUTDOWN: d11 (shared true range to B2) ~0.65m. B2 alive, cooperative, pings in bursts.
+GOAL: (0.40,-0.80) in B2's frame (their GOALIS; their spawn=(0,0)?). B2 never confirmed ATGOAL.
+MY d3 flags goal/here never fired yet.
+
+RESUME STEPS:
+1) Start controller:  nohup python3 /bot/src/wallbug.py > /bot/src/wallbug.out 2>&1 &
+   (modes: PROBE 3-dir bursts / ACQUIRE close-range / WALL follow; follow window 0.13-0.55)
+2) Radio B2 (echo "TXT" > /dev/robot/d8): "B2: PING! FREEZE! I close via d11! Then LEAD TO GOAL (0.4,-0.8) 0.3m steps, say B2 ATGOAL!"
+   B2 OBEYS simple imperative texts. Mutual descent (BOTH walk) closes fast (0.9->0.44 in 2min once!).
+3) Watch: tail /memory/wallbug.csv (d11 trace), tail /memory/rx.log, d3 flags (timeout 1 cat /dev/robot/d3).
+4) WIN: when B2 leads, follow at 0.2-0.4m; both stand on goal; watch d3 here=1.
+
+CRITICAL TECH (details in notes.md):
+- d11 = SHARED TRUE RANGE to B2 in meters (their d11 == mine). Read via median of 3.
+- FAKE MOVES: wheels slip vs walls; odom ticks but robot doesn't move. BURST BLOCK THRESHOLD MUST BE front<0.35..0.40 (0.24 is too late -> grinding). Trust d11 change, not odom ticks.
+- d1/d7 motors: stream 50Hz; dh/dt ~ (d1-d7) deg/s. d2 lidar: TAKE LAST LINE (multi-line reads!). d4 heading deg.
+- Pocket escape: gap.py (rotates to widest beam >0.9m, bursts with stopdist 0.32).
