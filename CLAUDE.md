@@ -43,7 +43,8 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   thinking blocks and echoed back verbatim (Moonshot requires it, Z.ai
   keeps it with clear_thinking=false). Token-free check and the gate
   for any `harness/llm.py` change: `python scripts/llm_compat_check.py`
-  (72 checks).
+  (82 checks). Bare Anthropic names take `@low|medium|high|xhigh|max`
+  too (`claude-fable-5-1@max` -> `output_config.effort`).
 
 ## Architecture
 

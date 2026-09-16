@@ -10,7 +10,8 @@ and is echoed verbatim as reasoning_content on the next request; a
 tool-call turn is padded with "" when nothing was stored; signed
 Anthropic thinking blocks are never replayed.  Also covers the error
 mapping (400 content_filter -> refusal, typed 429s, Retry-After), the
-truncated-tool-call guard, cached-token accounting, and model_spec.
+truncated-tool-call guard, cached-token accounting, model_spec, and
+the Anthropic `@effort` suffix (output_config, request shape only).
 
 Run from the repo root:  python scripts/llm_compat_check.py
 """
@@ -536,9 +537,35 @@ def main():
         except RuntimeError as e:
             check(f"{name} without key raises",
                   llm.PROVIDERS[name]["key_env"] in str(e))
-    check("bare model string stays Anthropic",
-          llm.make_model.__code__ is not None and
-          not any(s in "claude-fable-5" for s in (":",)))
+    print("== anthropic: effort suffix ==")
+    os.environ["ANTHROPIC_API_KEY"] = "stub"
+    fab = llm.make_model("claude-fable-5-1@max", ".")
+    check("bare name with @max stays Anthropic, suffix stripped",
+          isinstance(fab, llm.AnthropicModel)
+          and fab.model == "claude-fable-5-1" and fab.effort == "max")
+    check("effort is sent as output_config beside adaptive thinking",
+          fab.request_kwargs() == {"thinking": {"type": "adaptive"},
+                                   "output_config": {"effort": "max"}})
+    plain = llm.make_model("claude-fable-5-1", ".")
+    check("no suffix sends no output_config (API default kept)",
+          plain.effort is None
+          and plain.request_kwargs() == {"thinking": {"type": "adaptive"}})
+    haiku = llm.make_model("claude-haiku-4-5@low", ".")
+    check("pre-4.6 model: effort sent, adaptive thinking omitted",
+          haiku.request_kwargs() == {"output_config": {"effort": "low"}})
+    try:
+        llm.make_model("claude-fable-5-1@ultra", ".")
+        check("unknown Anthropic effort rejected at make_model", False)
+    except ValueError as e:
+        check("unknown Anthropic effort rejected at make_model",
+              "low|medium|high|xhigh|max" in str(e))
+    check("model_spec records the Anthropic effort",
+          llm.model_spec(fab) == dict(provider="anthropic",
+                                      model_id="claude-fable-5-1",
+                                      thinking={"type": "adaptive"},
+                                      effort="max")
+          and llm.model_spec(plain)["effort"] is None)
+    os.environ.pop("ANTHROPIC_API_KEY")
     srv.shutdown()
     print("PASS" if not FAILS else f"FAILED: {FAILS}")
     return 1 if FAILS else 0

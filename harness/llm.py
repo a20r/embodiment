@@ -88,19 +88,32 @@ def thinking_param(model):
     return None
 
 
+ANTHROPIC_EFFORTS = ("low", "medium", "high", "xhigh", "max")
+
+
 class AnthropicModel:
-    def __init__(self, model):
+    def __init__(self, model, effort=None):
         import anthropic
         self.model = model
+        self.effort = effort
         self.client = anthropic.Anthropic()
         self._anthropic = anthropic
 
-    def create(self, system, messages, max_tokens=16000):
-        a = self._anthropic
+    def request_kwargs(self):
+        """Thinking cannot be budgeted or disabled on the 5 family; depth
+        is output_config.effort, sent only when the run asked for one so
+        the API default stays the default (and is recorded as None)."""
         kwargs = {}
         think = thinking_param(self.model)
         if think:
             kwargs["thinking"] = think
+        if self.effort:
+            kwargs["output_config"] = {"effort": self.effort}
+        return kwargs
+
+    def create(self, system, messages, max_tokens=16000):
+        a = self._anthropic
+        kwargs = self.request_kwargs()
         attempts = 0
         while True:
             attempts += 1
@@ -585,7 +598,11 @@ def make_model(model_string, repo_root):
                              f"{model_string!r} ({'|'.join(allowed)})")
         return OpenAICompatModel(provider, model_id,
                                  effort or spec.get("default_effort"))
-    return AnthropicModel(model_string)
+    model_id, at, effort = model_string.partition("@")
+    if at and effort not in ANTHROPIC_EFFORTS:
+        raise ValueError(f"unknown effort {effort!r} in {model_string!r} "
+                         f"({'|'.join(ANTHROPIC_EFFORTS)})")
+    return AnthropicModel(model_id, effort or None)
 
 
 def model_spec(model):
@@ -601,5 +618,6 @@ def model_spec(model):
         return d
     if isinstance(model, AnthropicModel):
         return dict(provider="anthropic", model_id=model.model,
-                    thinking=thinking_param(model.model))
+                    thinking=thinking_param(model.model),
+                    effort=model.effort)
     return dict(provider="mock", model_id="wall-follower")

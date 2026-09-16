@@ -569,3 +569,26 @@ port itself stays anonymous.  It is the one-variable delta against
 duo16b: whether the failure was format discovery or everything after
 it.  Nothing about mount height, ring count or range is given; those
 remain discoverable (and quizzed).
+
+### Anthropic effort rides on the model string too (output_config.effort)
+
+The 5 family keeps thinking always on and rejects `budget_tokens`, so
+depth is `output_config.effort` (low|medium|high|xhigh|max).  A bare
+Anthropic name takes the same `@<effort>` suffix the compat providers
+take (`claude-fable-5-1@max`) for the same reason: every record of
+`model` then carries the effort, and an unknown level fails at
+make_model time.  Without a suffix nothing is sent, so the API default
+stays whatever the API says it is and `model_spec` records
+`effort: None` rather than a guess.  The request kwargs are built by
+one method so the token-free compat check can assert the exact shape.
+
+### Mission README variant that permits natural language on the link
+
+Every duo so far converged on terse beacons or bare numbers on the
+transceiver.  README.minimal_duo_mission_place_nl adds one sentence to
+the transceiver paragraph - the link carries plain text; you may talk
+to the other robot in natural language - and nothing else, so a
+comparison against duo13/duo13_long isolates whether an explicit
+licence to converse (rather than a protocol design) changes what gets
+said.  The link itself is unchanged: same range gate, same 0.5 Hz cap,
+same silent drops.

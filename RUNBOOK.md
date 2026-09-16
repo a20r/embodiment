@@ -151,7 +151,10 @@ The `<model-id>` is passed through verbatim — take it from the
 provider's model list (names change; nothing here hardcodes one).
 An optional `@<effort>` suffix on the id becomes the request's
 `reasoning_effort` (`@low|high|max` for kimi, `@low|medium|high|max`
-elsewhere; only for models that take one).
+elsewhere; only for models that take one).  Bare Anthropic names take
+the same suffix: `claude-fable-5-1@max` sends
+`output_config.effort=max` (`@low|medium|high|xhigh|max`; no suffix
+sends nothing, leaving the API default).
 Keys live in the host environment only; they never enter the
 container, the daemon's environment, or the repo.  Validate the
 adapter without spending tokens: `python scripts/llm_compat_check.py`
