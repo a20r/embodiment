@@ -1,0 +1,18 @@
+[20:22:16] === explore9 (lawnmower) start ===
+[20:23:27] 5: strip=180 adv=-1 d=0.41 wall pkt=0 pose 0.4,0.3 rx=0
+[20:23:58] short strips x2; escape
+[20:24:15] short strips x2; escape
+[20:24:20] 10: strip=0 adv=-1 d=0.05 wall pkt=0 pose -4.4,-1.7 rx=0
+[20:24:32] short strips x2; escape
+[20:24:53] short strips x2; escape
+[20:25:07] 15: strip=180 adv=-1 d=-0.00 wall pkt=0 pose -5.2,-1.8 rx=0
+[20:25:13] short strips x2; escape
+[20:25:36] short strips x2; escape
+[20:25:56] short strips x2; escape
+[20:26:04] 20: strip=0 adv=-1 d=-0.00 wall pkt=0 pose -5.1,-1.8 rx=0
+[20:26:17] short strips x2; escape
+[20:26:37] short strips x2; escape
+[20:26:52] 25: strip=180 adv=-1 d=0.00 wall pkt=0 pose -5.9,-1.7 rx=0
+[20:26:58] short strips x2; escape
+[20:27:15] SIGNAL EXIT
+[20:27:15] === end === -8.05,-1.68

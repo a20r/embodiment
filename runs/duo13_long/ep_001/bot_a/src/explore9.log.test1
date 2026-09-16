@@ -1,0 +1,6 @@
+[20:18:22] === explore9 (lawnmower) start ===
+[20:19:28] 5: strip=180 adv=-1 d=0.47 wall netE=-1.4 pose -1.4,1.4 rx=0
+[20:20:12] 10: strip=0 adv=-1 d=0.00 wall netE=-3.3 pose -3.3,2.7 rx=0
+[20:21:15] 15: strip=180 adv=+1 d=0.00 wall netE=-2.2 pose -2.2,2.7 rx=0
+[20:22:02] SIGNAL EXIT
+[20:22:02] === end === -0.33,0.74

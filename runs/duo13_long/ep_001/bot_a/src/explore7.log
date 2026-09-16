@@ -1,0 +1,40 @@
+[17:12:23] === explore7 start ===
+[17:12:29] 0: pose -0.13,-0.42 h=202 d=0.46 probe=0.69 batt=0.38 recent=1
+[17:14:22] 25: pose -0.71,-1.09 h=148 d=0.47 probe=0.60 batt=0.379 recent=14
+[17:15:42] === explore7 start ===
+[17:15:50] 0: pose -0.49,0.44 h=312 d=0.64 probe=0.66 batt=0.436 recent=1
+[17:17:27] 25: pose 0.92,-2.91 h=134 d=0.64 probe=0.69 batt=0.602 recent=14
+[17:18:37] 50: pose 7.10,-9.46 h=178 d=0.07 probe=0.56 batt=0.607 recent=14
+[17:20:04] 75: pose 13.79,-14.89 h=326 d=0.63 probe=0.61 batt=0.56 recent=14
+[17:21:13] 100: pose 18.96,-21.55 h=134 d=0.08 probe=0.55 batt=0.603 recent=14
+[17:22:32] 125: pose 25.74,-28.90 h=135 d=0.63 probe=0.56 batt=0.603 recent=14
+[17:23:44] 150: pose 33.33,-36.61 h=169 d=-0.00 probe=0.59 batt=0.592 recent=14
+[17:26:02] === explore7 start ===
+[17:26:02] RADIO RX: PING 1789579544
+[17:26:02] RADIO RX: PING 1789579545
+[17:26:02] RADIO RX: PING 1789579546
+[17:26:02] RADIO RX: PING 1789579547
+[17:26:02] RADIO RX: PING 1789579548
+[17:26:03] RADIO RX: HELLO 24
+[17:26:03] RADIO RX: HELLO 46
+[17:26:03] RADIO RX: PING 1789579551
+[17:26:03] RADIO RX: PING 1789579552
+[17:26:03] RADIO RX: PING 1789579553
+[17:26:04] RADIO RX: HELLO 108
+[17:26:04] RADIO RX: PING 1789579555
+[17:26:04] RADIO RX: HELLO 147
+[17:26:04] RADIO RX: PING 1789579557
+[17:26:04] RADIO RX: PING 1789579558
+[17:26:05] RADIO RX: PING 1789579559
+[17:26:05] RADIO RX: HELLO 197
+[17:26:05] RADIO RX: PING 1789579561
+[17:26:05] RADIO RX: PING 1789579562
+[17:26:05] RADIO RX: PING 1789579563
+[17:26:06] RADIO RX: PING 1789579564
+[17:26:06] RADIO RX: HELLO 267
+[17:26:08] 0: pose 0.60,0.08 h=75 d=0.63 probe=0.72 batt=0.62 recent=1
+[17:29:34] === explore7 start ===
+[17:29:39] 0: pose 0.55,-0.30 h=114 d=0.62 probe=0.55 batt=0.395 recent=1
+[17:31:49] 25: pose 1.78,-1.48 h=293 d=0.63 probe=0.69 batt=0.328 recent=14
+[17:34:15] 50: pose 2.09,-2.02 h=140 d=0.63 probe=0.71 batt=0.29 recent=14
+[17:36:36] 75: pose 1.64,-1.48 h=297 d=0.63 probe=0.66 batt=0.314 recent=14
