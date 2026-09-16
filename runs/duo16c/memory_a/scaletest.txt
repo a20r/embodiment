@@ -1,0 +1,4 @@
+d9 65753->65901 delta=148
+best alignment: medianNN=0.051 at dx=-0.3 dy=-0.2 (B shifted by -dx,-dy; robot moved +dx fwd,+dy left)
+no-shift medianNN=0.066
+SCALE: 148 d9-units = -0.30 m  -> -493.3 units/m

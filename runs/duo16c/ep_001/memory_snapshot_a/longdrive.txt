@@ -1,0 +1,50 @@
+[1789535104] LONGDRIVE START
+[1789535104] d4=2.8 d9=76999 d11=0.302 d0=0  chg=False
+[1789535109] d4=5.8 d9= d11=0.304 d0=0  chg=False
+[1789535114] d4=2.0 d9=77297 d11=0.306 d0=0 tick=711149 goal=0 here=0 chg=False
+[1789535120] d4=2.7 d9=77444 d11=0.300 d0=0  chg=False
+[1789535125] d4=4.1 d9=77595 d11=0.306 d0=0 tick=712159 goal=0 here=0 chg=False
+[1789535130] d4=6.1 d9=77744 d11=0.309 d0=0  chg=False
+[1789535135] d4=1.2 d9=77893 d11=0.318 d0=0  chg=False
+[1789535140] d4=4.9 d9=78041 d11=0.297 d0=0  chg=False
+[1789535145] d4=3.1 d9=78192 d11=0.299 d0=0 tick=714176 goal=0 here=0 chg=False
+[1789535150] d4=5.4 d9=78343 d11=0.301 d0=0  chg=False
+[1789535155] d4=2.5 d9=78494 d11=0.315 d0=0 tick=715193 goal=0 here=0 chg=False
+[1789535160] d4=2.7 d9=78642 d11=0.304 d0=0  chg=False
+[1789535165] d4=5.7 d9=78793 d11=0.300 d0=0 tick=716206 goal=0 here=0 chg=False
+[1789535170] d4= d9=78941 d11=0.308 d0=0  chg=False
+[1789535175] d4=5.8 d9=79093 d11=0.292 d0=0 tick=717220 goal=0 here=0 chg=False
+[1789535180] d4=0.9 d9=79240 d11=0.292 d0=0 tick=717724 goal=0 here=0 chg=False
+[1789535185] d4=3.3 d9=79390 d11=0.300 d0=0 tick=718232 goal=0 here=0 chg=False
+[1789535190] d4=1.6 d9=79540 d11=0.302 d0=0  chg=False
+[1789535195] d4=4.8 d9=79690 d11=0.306 d0=0 tick=719247 goal=0 here=0 chg=False
+[1789535200] d4=4.6 d9=79839 d11=0.312 d0=0 tick=719749 goal=0 here=0 chg=False
+[1789535206] d4=5.4 d9=79988 d11=0.313 d0=0 tick=720251 goal=0 here=0 chg=False
+[1789535211] d4=2.6 d9= d11=0.316 d0=0  chg=False
+[1789535216] d4=5.2 d9=80287 d11=0.300 d0=0 tick=721257 goal=0 here=0 chg=False
+[1789535221] d4=3.4 d9=80436 d11=0.295 d0=0 tick=721763 goal=0 here=0 chg=False
+[1789535226] d4=4.3 d9=80585 d11=0.298 d0=0 tick=722265 goal=0 here=0 chg=False
+[1789535231] d4=3.3 d9=80735 d11=0.298 d0=0 tick=722774 goal=0 here=0 chg=False
+[1789535236] d4=5.3 d9=80882 d11=0.300 d0=0 tick=723277 goal=0 here=0 chg=False
+[1789535241] d4=3.8 d9=81030 d11=0.297 d0=0 tick=723779 goal=0 here=0 chg=False
+[1789535246] d4=4.7 d9=81179 d11=0.307 d0=0 tick=724280 goal=0 here=0 chg=False
+[1789535251] d4=2.9 d9=81331 d11=0.295 d0=0  chg=False
+[1789535256] d4=4.1 d9=81478 d11=0.312 d0=0 tick=725293 goal=0 here=0 chg=False
+[1789535261] d4=7.8 d9=81631 d11=0.297 d0=0 tick=725803 goal=0 here=0 chg=False
+[1789535266] d4=2.1 d9=81778 d11=0.295 d0=0 tick=726308 goal=0 here=0 chg=False
+[1789535271] d4=0.6 d9=81930 d11=0.318 d0=0 tick=726813 goal=0 here=0 chg=False
+[1789535276] d4=3.0 d9=82076 d11=0.296 d0=0 tick=727314 goal=0 here=0 chg=False
+[1789535281] d4=3.5 d9=82225 d11=0.309 d0=0  chg=False
+[1789535286] d4=2.3 d9=82375 d11=0.304 d0=0  chg=False
+[1789535291] d4=5.4 d9=82526 d11=0.296 d0=0 tick=728829 goal=0 here=0 chg=False
+[1789535296] d4=6.6 d9=82676 d11=0.305 d0=0 tick=729337 goal=0 here=0 chg=False
+[1789535301] d4=359.5 d9=82825 d11=0.310 d0=0  chg=False
+[1789535306] d4=2.8 d9=82973 d11=0.297 d0=0  chg=False
+[1789535312] d4=5.2 d9=83123 d11=0.311 d0=0 tick=730852 goal=0 here=0 chg=False
+[1789535317] d4=359.3 d9=83271 d11=0.312 d0=0  chg=False
+[1789535322] d4=4.3 d9=83421 d11=0.307 d0=0 tick=731862 goal=0 here=0 chg=False
+[1789535327] d4=5.8 d9= d11=0.293 d0=0  chg=False
+[1789535332] d4=2.1 d9=83722 d11=0.303 d0=0  chg=False
+[1789535337] d4=3.6 d9=83872 d11=0.290 d0=0  chg=False
+[1789535342] d4=359.9 d9=84021 d11=0.298 d0=0  chg=False
+[1789535347] d4=1.9 d9=84174 d11=0.311 d0=0 tick=734402 goal=0 here=0 chg=False
