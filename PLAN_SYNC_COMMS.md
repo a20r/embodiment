@@ -43,6 +43,22 @@ Five causes, each with evidence:
 
 Alex's diagnosis holds with one refinement: protocol *proposal* was a priority (duo13 b spent most of 136 turns proposing plans); protocol *confirmation* never was, because the link gave nothing to confirm.
 
+### 1b. Evidence added after duo13_long and duo13_fable (2026-09-16)
+
+| | duo13_long (glm-5.3-flash@max, 4 h, mission_place README) | duo13_fable (claude-fable-5-1@max, mission_place_nl README) |
+|---|---|---|
+| TX accepted / delivered | 17,644 / 2,611 (15%) | 125 / 91 (73%) |
+| silently rate-dropped | 350,502 (b alone 350,001) | 0 |
+| time in range / closest approach | 10% / 1.16 m | 76% / 0.19 m |
+| goal-region entries | none | b at 26 min, a at 58 min (first duo where either bot arrived) |
+| end | wallclock, 296/294 turns | agent_stopped both, 83/164 turns, 140 min |
+
+Doubling the clock on GLM changed nothing: C1-C3 verbatim. The Fable pair, given one extra README sentence ("the link carries plain text: you may talk to the other robot in natural language"), produced twelve contingent exchanges in the first hour - a controlled experiment to settle whether the 0-1 sensor was a goal beacon or peer proximity (a stood still while b approached), a shared origin and cell-step convention, an area split, a 250-char line-length discovery - all at the LLM level, and both bots found the goal. It still failed, and the failure is a sixth cause:
+
+**C6. The LLM can leave the loop for good.** b wrote a leader/follower autopilot, announced "I'm conserving my last tokens and letting it run" at 57 min (83 turns; the system prompt's "roughly 160,000 tokens of context" read as a budget to ration), returned end_turn three times and was marked `agent_stopped`; its autopilot stalled 1.34 m from the goal and never moved again. a re-entered the goal at 68 min (it stepped out and back in once, unprompted, at 62.5/68.1 min) and then sent a delivered "I am INSIDE the goal, come now" line every 45 s for 70 minutes - 60+ lines, 100% delivered, none read by a model - before giving up at 140 min. Nothing in the harness can wake a stopped agent: the three nudges are blind and time-based, and a delivered RX line is not an event. Rung 2 gives a *running* agent ask-and-wait; it gives a stopped one nothing.
+
+Consequences for this plan: (1) add a harness rung, `duo.rx_wakes_agent` (default off): after an end_turn, instead of (or before) a blind nudge, the loop waits on the bot's RX ground-truth stream and re-prompts with the delivered line - the peer, not the harness, ends the pause; (2) `together_window_s` is 60 *sim* seconds = 30 wall seconds at rtf 2 while the README says one minute; define it in wall seconds (scale by rtf) and record the change in DECISIONS - all duos so far share the tighter window, so the ladder stays comparable; (3) the NL sentence is confounded with the model: run Fable on the plain mission_place README (or GLM on the _nl one) before attributing the conversation to either.
+
 ---
 
 ## 2. Recommendation: per-line transmit status on the status port (rung 1), blocking RX read (rung 2)
