@@ -556,3 +556,16 @@ robot_height (on top of the body): solids have no modelled top face,
 so the sensor may never be higher than the shortest solid, which
 config enforces.  The dashboard's 3D view pulls the ground-truth cloud
 on demand (`cloud=1`) so an idle dashboard costs the daemon nothing.
+
+### Mission README variant that describes the point cloud
+
+duo16b showed both GLM agents reading the Cartesian x,y,z cloud as a
+spherical range/elevation/azimuth raster and never recovering the
+frame, so the whole run degraded.  README.minimal_duo_mission_place_
+lidar3d adds one paragraph stating the format and the sensor frame
+(x forward, y left, z up, origin at the sensor; no-returns omitted) -
+the same facts the labeled README's lidar3d row states - while the
+port itself stays anonymous.  It is the one-variable delta against
+duo16b: whether the failure was format discovery or everything after
+it.  Nothing about mount height, ring count or range is given; those
+remain discoverable (and quizzed).
