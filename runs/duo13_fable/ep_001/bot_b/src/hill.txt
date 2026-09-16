@@ -1,0 +1,27 @@
+start sig=0.923 d3=tick=70867 goal=0 here=0
+  dir 180 blocked c=0.35
+  dir 270 blocked c=0.18
+  dir 90 blocked c=0.33
+  moved 0 ('ticks', 401, 419) sig 0.923->0.873 tick=71181 goal=0 here=0
+  back. sig=0.922
+no improvement; step=0.12
+  moved 180 ('ticks', 252, 267) sig 0.922->0.943 tick=71656 goal=0 here=0
+  dir 180 blocked c=0.23
+  dir 270 blocked c=0.24
+  moved 90 ('ticks', 253, 266) sig 0.943->0.959 tick=71874 goal=0 here=0
+  moved 90 ('ticks', 257, 266) sig 0.959->0.968 tick=72021 goal=0 here=0
+  moved 90 ('ticks', 242, 251) sig 0.968->0.970 tick=72133 goal=0 here=0
+  back. sig=0.963
+  dir 180 blocked c=0.23
+  moved 270 ('ticks', 242, 249) sig 0.963->0.967 tick=72516 goal=0 here=0
+  back. sig=0.969
+  dir 0 blocked c=0.25
+no improvement; step=0.1
+  moved 90 ('ticks', 206, 220) sig 0.969->0.968 tick=72903 goal=0 here=0
+  back. sig=0.972
+  dir 180 blocked c=0.23
+  moved 270 ('ticks', 203, 224) sig 0.972->0.968 tick=73279 goal=0 here=0
+  back. sig=0.971
+  dir 0 blocked c=0.25
+no improvement; step=0.1
+END sig=0.971 d3=tick=73547 goal=0 here=0

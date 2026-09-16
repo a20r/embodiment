@@ -1,0 +1,163 @@
+[0] cur=90 sig=0.974 open N0.24 E0.64 S0.23 W0.49 tick=82254 goal=0 here=0
+    -> 90 ('front_range', 11, 14)
+[1] cur=90 sig=0.971 open N0.33 E1.03 S0.22 W0.51 tick=82281 goal=0 here=0
+    -> 90 ('front_range', 13, 12)
+[2] cur=90 sig=0.977 open N0.35 E1.04 S0.23 W0.50 tick=82308 goal=0 here=0
+    -> 90 ('front_range', 2, -1)
+[3] cur=90 sig=0.979 open N0.36 E1.04 S0.20 W0.50 tick=82331 goal=0 here=0
+    -> 90 ('front_range', 1, 1)
+[4] cur=90 sig=0.966 open N0.28 E0.62 S0.20 W0.49 tick=82354 goal=0 here=0
+    -> 90 ('front_range', 1, 2)
+[5] cur=90 sig=0.982 open N0.36 E1.04 S0.20 W0.50 tick=82380 goal=0 here=0
+    -> 90 ('front_range', 1, 1)
+[6] cur=90 sig=0.974 open N0.34 E1.03 S0.20 W0.50 tick=82403 goal=0 here=0
+    -> 90 ('front_range', 18, 20)
+[7] cur=90 sig=0.974 open N0.28 E0.61 S0.20 W0.50 tick=82430 goal=0 here=0
+    -> 90 ('front_range', 0, 1)
+[8] cur=90 sig=0.984 open N0.36 E1.04 S0.19 W0.50 tick=82453 goal=0 here=0
+    -> 90 ('front_range', 0, 1)
+[9] cur=90 sig=0.976 open N0.36 E1.02 S0.20 W0.51 tick=82479 goal=0 here=0
+    -> 90 ('front_range', -1, -1)
+[10] cur=90 sig=0.978 open N0.39 E1.04 S0.20 W0.51 tick=82505 goal=0 here=0
+    -> 90 ('front_range', 0, 0)
+[11] cur=90 sig=0.981 open N0.29 E0.62 S0.20 W0.49 tick=82528 goal=0 here=0
+    -> 90 ('front_range', -1, -1)
+[12] cur=90 sig=0.978 open N0.29 E0.61 S0.19 W0.49 tick=82551 goal=0 here=0
+    -> 90 ('front_range', 0, 1)
+[13] cur=90 sig=0.969 open N0.27 E0.62 S0.20 W0.50 tick=82575 goal=0 here=0
+    -> 90 ('front_range', -1, 0)
+[14] cur=90 sig=0.974 open N0.38 E1.04 S0.16 W0.52 tick=82598 goal=0 here=0
+    -> 90 ('front_range', 0, -1)
+[15] cur=90 sig=0.975 open N0.29 E0.61 S0.20 W0.49 tick=82621 goal=0 here=0
+    -> 90 ('front_range', 0, 0)
+[16] cur=90 sig=0.973 open N0.39 E1.03 S0.18 W0.48 tick=82644 goal=0 here=0
+    -> 90 ('front_range', 0, 0)
+[17] cur=90 sig=0.973 open N0.37 E1.03 S0.18 W0.49 tick=82667 goal=0 here=0
+    -> 90 ('front_range', 7, 8)
+[18] cur=90 sig=0.984 open N0.32 E0.52 S0.16 W0.49 tick=82691 goal=0 here=0
+    -> 90 ('front_range', -1, -1)
+[19] cur=90 sig=0.988 open N0.32 E0.51 S0.16 W0.50 tick=82714 goal=0 here=0
+    -> 90 ('front_range', 2, -2)
+[20] cur=90 sig=0.976 open N0.31 E0.52 S0.20 W0.49 tick=82740 goal=0 here=0
+    -> 90 ('front_range', 1, 0)
+[21] cur=90 sig=0.982 open N0.39 E1.04 S0.18 W0.49 tick=82763 goal=0 here=0
+    -> 90 ('front_range', 2, 1)
+[22] cur=90 sig=0.981 open N0.38 E1.04 S0.18 W0.46 tick=82786 goal=0 here=0
+    -> 90 ('front_range', 1, -2)
+[23] cur=90 sig=0.976 open N0.39 E1.04 S0.17 W0.49 tick=82815 goal=0 here=0
+    -> 90 ('front_range', -1, 0)
+[24] cur=90 sig=0.976 open N0.38 E1.05 S0.18 W0.48 tick=82838 goal=0 here=0
+    -> 90 ('front_range', -1, 1)
+[25] cur=90 sig=0.979 open N0.40 E1.04 S0.18 W0.36 tick=82863 goal=0 here=0
+    -> 90 ('front_range', 0, 0)
+[26] cur=90 sig=0.981 open N0.38 E1.02 S0.17 W0.36 tick=82887 goal=0 here=0
+    -> 90 ('front_range', 2, 0)
+[27] cur=90 sig=0.979 open N0.31 E0.49 S0.17 W0.49 tick=82912 goal=0 here=0
+    -> 90 ('front_range', 0, 0)
+[28] cur=90 sig=0.986 open N0.40 E1.05 S0.17 W0.36 tick=82936 goal=0 here=0
+    -> 90 ('front_range', -1, 2)
+[29] cur=90 sig=0.982 open N0.38 E1.03 S0.16 W0.37 tick=82959 goal=0 here=0
+    -> 90 ('front_range', -2, 2)
+[30] cur=90 sig=0.984 open N0.41 E1.03 S0.17 W0.35 tick=82982 goal=0 here=0
+    -> 90 ('front_range', 1, 0)
+[31] cur=90 sig=0.987 open N0.39 E1.03 S0.16 W0.36 tick=83005 goal=0 here=0
+    -> 90 ('front_range', 2, 1)
+[32] cur=90 sig=0.979 open N0.33 E0.49 S0.16 W0.49 tick=83031 goal=0 here=0
+    -> 90 ('front_range', -2, -2)
+[33] cur=90 sig=0.984 open N0.33 E0.49 S0.15 W0.51 tick=83054 goal=0 here=0
+    -> 90 ('front_range', 0, -1)
+[34] cur=90 sig=0.979 open N0.41 E1.07 S0.15 W0.36 tick=83077 goal=0 here=0
+    -> 90 ('front_range', 0, 0)
+[35] cur=90 sig=0.979 open N0.35 E0.47 S0.16 W0.49 tick=83100 goal=0 here=0
+    -> 90 ('front_range', 1, -2)
+[36] cur=90 sig=0.983 open N0.32 E0.48 S0.15 W0.50 tick=83123 goal=0 here=0
+    -> 90 ('front_range', -2, -2)
+[37] cur=90 sig=0.984 open N0.33 E0.48 S0.16 W0.50 tick=83147 goal=0 here=0
+    -> 90 ('front_range', -1, -1)
+[38] cur=90 sig=0.978 open N0.41 E1.04 S0.14 W0.34 tick=83170 goal=0 here=0
+    -> 90 ('front_range', 0, 2)
+[39] cur=90 sig=0.984 open N0.34 E0.47 S0.14 W0.49 tick=83193 goal=0 here=0
+    -> 90 ('front_range', 2, 0)
+END
+=== RUN2 ===
+[0] cur=90 sig=0.987 open N0.36 E0.20 S0.08 W0.47 tick=90241 goal=0 here=0
+    -> 270 ('ticks', 890, 919)
+[1] cur=270 sig=0.984 open N0.39 E0.25 S0.07 W0.47 tick=90536 goal=0 here=0
+    -> 270 ('ticks', 506, 515)
+[2] cur=270 sig=0.988 open N0.37 E0.21 S0.10 W0.47 tick=90701 goal=0 here=0
+    -> 270 ('ticks', 497, 513)
+[3] cur=270 sig=0.990 open N0.39 E0.24 S0.08 W0.47 tick=90882 goal=0 here=0
+    -> 270 ('ticks', 523, 535)
+[4] cur=270 sig=0.988 open N0.38 E0.23 S0.09 W0.44 tick=91061 goal=0 here=0
+    -> 90 ('ticks', 910, 921)
+[5] cur=90 sig=0.986 open N0.37 E0.34 S0.10 W0.58 tick=91425 goal=0 here=0
+    -> 270 ('front_bump', 277, 297)
+[6] cur=270 sig=0.982 open N1.01 E1.14 S0.08 W0.25 tick=91699 goal=0 here=0
+    -> 0 ('front_bump', 640, 658)
+[7] cur=0 sig=0.896 open N0.17 E1.28 S0.38 W0.40 tick=91975 goal=0 here=0
+    -> 90 ('front_bump', 35, 37)
+[8] cur=90 sig=0.890 open N0.13 E1.25 S0.41 W0.42 tick=92135 goal=0 here=0
+    -> 90 ('front_bump', 12, 12)
+[9] cur=90 sig=0.870 open N0.15 E1.27 S0.41 W0.39 tick=92197 goal=0 here=0
+    -> 90 ('front_bump', 31, 32)
+[10] cur=90 sig=0.879 open N0.15 E1.28 S0.40 W0.41 tick=92259 goal=0 here=0
+    -> 90 ('front_bump', 7, 7)
+[11] cur=90 sig=0.876 open N0.17 E1.28 S0.42 W0.39 tick=92319 goal=0 here=0
+    -> 90 ('front_bump', 24, 22)
+[12] cur=90 sig=0.873 open N0.15 E1.26 S0.42 W0.41 tick=92395 goal=0 here=0
+    -> 90 ('front_bump', 12, 13)
+[13] cur=90 sig=0.863 open N0.15 E1.23 S0.40 W0.40 tick=92464 goal=0 here=0
+    -> 90 ('front_bump', 5, 7)
+[14] cur=90 sig=0.861 open N0.15 E1.25 S0.40 W0.40 tick=92530 goal=0 here=0
+    -> 90 ('front_bump', 12, 12)
+[15] cur=90 sig=0.866 open N0.15 E1.27 S0.41 W0.39 tick=92592 goal=0 here=0
+    -> 90 ('front_bump', 25, 26)
+[16] cur=90 sig=0.871 open N0.14 E1.29 S0.42 W0.41 tick=92652 goal=0 here=0
+    -> 90 ('front_bump', 8, 8)
+[17] cur=90 sig=0.870 open N0.14 E1.27 S0.43 W0.42 tick=92713 goal=0 here=0
+    -> 90 ('front_bump', 7, 8)
+[18] cur=90 sig=0.873 open N0.15 E1.29 S0.42 W0.41 tick=92773 goal=0 here=0
+    -> 90 ('front_bump', 7, 7)
+[19] cur=90 sig=0.870 open N0.15 E1.29 S0.41 W0.41 tick=92834 goal=0 here=0
+    -> 90 ('front_bump', 5, 5)
+[20] cur=90 sig=0.872 open N0.14 E1.29 S0.42 W0.41 tick=92897 goal=0 here=0
+    -> 90 ('front_bump', 9, 14)
+[21] cur=90 sig=0.875 open N0.16 E1.31 S0.41 W0.41 tick=92959 goal=0 here=0
+    -> 90 ('front_bump', 5, 4)
+[22] cur=90 sig=0.873 open N1.11 E0.15 S0.43 W0.40 tick=93029 goal=0 here=0
+    -> 0 ('front_bump', 6, 9)
+[23] cur=0 sig=0.867 open N0.23 E0.15 S0.44 W0.40 tick=93187 goal=0 here=0
+    -> 180 ('front_range', 423, 438)
+[24] cur=180 sig=0.911 open N0.30 E0.69 S0.20 W0.47 tick=93472 goal=0 here=0
+    -> 90 ('ticks', 899, 924)
+[25] cur=90 sig=0.968 open N0.28 E0.48 S0.21 W0.94 tick=93768 goal=0 here=0
+    -> 90 ('ticks', 498, 513)
+[26] cur=90 sig=0.960 open N1.29 E0.56 S0.19 W1.19 tick=93911 goal=0 here=0
+    -> 90 ('ticks', 495, 514)
+[27] cur=90 sig=0.919 open N0.32 E0.50 S0.23 W1.42 tick=94050 goal=0 here=0
+    -> 90 ('ticks', 510, 521)
+[28] cur=90 sig=0.860 open N0.24 E0.25 S0.25 W0.75 tick=94211 goal=0 here=0
+    -> 270 ('ticks', 896, 915)
+[29] cur=270 sig=0.951 open N0.65 E0.59 S0.23 W0.56 tick=94570 goal=0 here=0
+    -> 0 ('ticks', 900, 921)
+[30] cur=0 sig=0.835 open N0.77 E0.26 S0.77 W0.17 tick=94878 goal=0 here=0
+    -> 0 ('ticks', 497, 511)
+[31] cur=0 sig=0.757 open N0.52 E0.27 S1.00 W0.19 tick=95049 goal=0 here=0
+    -> 0 ('ticks', 497, 510)
+[32] cur=0 sig=0.681 open N0.28 E0.77 S0.45 W0.18 tick=95231 goal=0 here=0
+    -> 90 ('ticks', 901, 909)
+[33] cur=90 sig=0.640 open N0.27 E0.35 S0.43 W0.66 tick=95542 goal=0 here=0
+    -> 270 ('front_range', 877, 895)
+[34] cur=270 sig=0.674 open N0.26 E0.79 S0.43 W0.19 tick=95912 goal=0 here=0
+    -> 90 ('ticks', 901, 907)
+[35] cur=90 sig=0.635 open N0.30 E0.34 S0.42 W0.67 tick=96311 goal=0 here=0
+    -> 270 ('ticks', 888, 910)
+[36] cur=270 sig=0.684 open N0.24 E0.80 S0.43 W0.18 tick=96668 goal=0 here=0
+    -> 90 ('ticks', 885, 914)
+[37] cur=90 sig=0.640 open N0.27 E0.34 S0.42 W0.68 tick=97029 goal=0 here=0
+    -> 270 ('front_range', 880, 905)
+[38] cur=270 sig=0.691 open N0.26 E0.80 S0.42 W0.20 tick=97389 goal=0 here=0
+    -> 90 ('ticks', 902, 933)
+[39] cur=90 sig=0.608 open N0.29 E0.32 S0.45 W0.67 tick=97764 goal=0 here=0
+    -> 270 ('front_range', 863, 884)
+END

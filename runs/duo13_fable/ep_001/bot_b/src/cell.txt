@@ -1,0 +1,420 @@
+[0] cell (0, 0) walls N0.28 E0.77 S0.45 W0.22 sig 0.681 tick=109504 goal=0 here=0
+  moved 180 trav=0.51 dist -> (-1, 0) path=[180]
+[1] cell (-1, 0) walls N0.61 E0.33 S0.72 W0.15 sig 0.827 tick=109863 goal=0 here=0
+  moved 180 trav=0.42 wall -> (-2, 0) path=[180, 180]
+[2] cell (-2, 0) walls N1.21 E0.77 S0.28 W0.48 sig 0.925 tick=110101 goal=0 here=0
+  moved 270 trav=0.51 dist -> (-2, -1) path=[180, 180, 270]
+[3] cell (-2, -1) walls N0.16 E0.86 S0.29 W0.66 sig 0.967 tick=110482 goal=0 here=0
+  moved 270 trav=0.38 wall -> (-2, -2) path=[180, 180, 270, 270]
+[4] cell (-2, -2) walls N0.74 E0.38 S0.33 W0.28 sig 0.922 tick=110674 goal=0 here=0
+  moved 0 trav=0.50 dist -> (-1, -2) path=[180, 180, 270, 270, 0]
+[5] cell (-1, -2) walls N0.67 E0.25 S0.85 W0.29 sig 0.809 tick=111047 goal=0 here=0
+  moved 0 trav=0.41 wall -> (0, -2) path=[180, 180, 270, 270, 0, 0]
+[6] cell (0, -2) walls N0.28 E0.70 S0.56 W0.31 sig 0.695 tick=111261 goal=0 here=0
+  moved 90 trav=0.42 wall -> (0, -1) path=[180, 180, 270, 270, 0, 0, 90]
+[7] cell (0, -1) walls N0.76 E0.25 S0.45 W0.74 sig 0.718 tick=111592 goal=0 here=0
+  moved 180 trav=0.49 wall -> (-1, -1) path=[180, 180, 270, 270, 0, 0, 90, 180]
+[8] cell (-1, -1) walls N0.83 E0.34 S0.27 W0.18 sig 0.868 tick=111964 goal=0 here=0
+  moved 0 trav=0.51 dist -> (0, -1) path=[180, 180, 270, 270, 0, 0, 90]
+[9] cell (0, -1) walls N0.76 E0.38 S0.42 W0.67 sig 0.701 tick=112403 goal=0 here=0
+  moved 0 trav=0.48 wall -> (1, -1) path=[180, 180, 270, 270, 0, 0, 90, 0]
+[10] cell (1, -1) walls N0.28 E0.42 S1.27 W0.63 sig 0.559 tick=112673 goal=0 here=0
+  moved 270 trav=0.36 wall -> (1, -2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270]
+[11] cell (1, -2) walls N0.59 E0.76 S0.16 W0.26 sig 0.550 tick=112951 goal=0 here=0
+  moved 0 trav=0.51 dist -> (2, -2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0]
+[12] cell (2, -2) walls N0.81 E0.25 S0.67 W0.24 sig 0.429 tick=113329 goal=0 here=0
+  moved 0 trav=0.57 dist -> (3, -2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0]
+[13] cell (3, -2) walls N0.26 E0.84 S0.68 W0.27 sig 0.326 tick=113642 goal=0 here=0
+  moved 90 trav=0.51 dist -> (3, -1) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90]
+[14] cell (3, -1) walls N0.29 E0.76 S0.26 W0.75 sig 0.328 tick=114064 goal=0 here=0
+  moved 90 trav=0.51 dist -> (3, 0) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90]
+[15] cell (3, 0) walls N0.22 E0.74 S0.25 W0.66 sig 0.328 tick=114397 goal=0 here=0
+  moved 90 trav=0.49 wall -> (3, 1) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90]
+[16] cell (3, 1) walls N0.20 E0.27 S0.79 W0.67 sig 0.300 tick=114698 goal=0 here=0
+  moved 180 trav=0.58 dist -> (2, 1) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180]
+[17] cell (2, 1) walls N0.75 E0.67 S0.24 W0.20 sig 0.386 tick=115126 goal=0 here=0
+  moved 90 trav=0.51 dist -> (2, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90]
+[18] cell (2, 2) walls N0.23 E0.76 S0.32 W0.77 sig 0.341 tick=115494 goal=0 here=0
+  moved 90 trav=0.48 wall -> (2, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90]
+[19] cell (2, 3) walls N0.71 E0.29 S0.30 W1.24 sig 0.297 tick=115787 goal=0 here=0
+  moved 0 trav=0.43 wall -> (3, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0]
+[20] cell (3, 3) walls N0.27 E0.83 S0.73 W0.66 sig 0.253 tick=116120 goal=0 here=0
+  moved 270 trav=0.38 wall -> (3, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 270]
+[21] cell (3, 2) walls N0.33 E0.72 S0.22 W0.29 sig 0.284 tick=116416 goal=0 here=0
+  moved 90 trav=0.51 dist -> (3, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0]
+[22] cell (3, 3) walls N0.37 E0.77 S0.63 W0.40 sig 0.249 tick=116856 goal=0 here=0
+  moved 90 trav=0.50 dist -> (3, 4) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90]
+[23] cell (3, 4) walls N0.27 E0.29 S1.15 W0.90 sig 0.218 tick=117126 goal=0 here=0
+  moved 180 trav=0.50 dist -> (2, 4) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180]
+[24] cell (2, 4) walls N0.60 E0.22 S0.73 W0.34 sig 0.253 tick=117502 goal=0 here=0
+  moved 180 trav=0.48 wall -> (1, 4) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180]
+[25] cell (1, 4) walls N0.60 E0.12 S0.22 W1.14 sig 0.278 tick=117783 goal=0 here=0
+  moved 270 trav=0.51 dist -> (1, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180, 270]
+[26] cell (1, 3) walls N0.34 E0.62 S0.18 W0.94 sig 0.347 tick=118165 goal=0 here=0
+  moved 270 trav=0.51 dist -> (1, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180, 270, 270]
+[27] cell (1, 2) walls N0.41 E0.30 S0.59 W1.35 sig 0.409 tick=118465 goal=0 here=0
+  moved 270 trav=0.42 bump -> (1, 1) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180, 270, 270, 270]
+[28] cell (1, 1) walls N0.36 E1.46 S0.17 W0.28 sig 0.458 tick=118738 goal=0 here=0
+  moved 90 trav=0.51 dist -> (1, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180, 270, 270]
+[29] cell (1, 2) walls N0.38 E0.97 S0.15 W0.62 sig 0.391 tick=119177 goal=0 here=0
+  move 180 FAILED trav=-0.09 wall
+  moved 180 trav=-0.09 wall -> (1, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180, 270, 270]
+END
+[0] cell (1, 2) walls N0.28 E0.94 S0.25 W0.61 sig 0.423 tick=124524 goal=0 here=0
+  moved 90 trav=0.71 dist -> (1, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180, 270]
+[1] cell (1, 3) walls N0.66 E0.22 S0.19 W0.82 sig 0.379 tick=125027 goal=0 here=0
+  move 90 FAILED trav=0.00 wall
+  moved 90 trav=0.00 wall -> (1, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180, 180]
+[2] cell (1, 3) walls N0.79 E0.25 S0.19 W0.58 sig 0.388 tick=125129 goal=0 here=0
+  moved 0 trav=0.51 dist -> (2, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90, 180]
+[3] cell (2, 3) walls N0.76 E0.31 S0.69 W0.25 sig 0.332 tick=125501 goal=0 here=0
+  moved 0 trav=0.49 wall -> (3, 3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0, 90]
+[4] cell (3, 3) walls N0.27 E0.30 S1.15 W0.91 sig 0.279 tick=125771 goal=0 here=0
+  moved 270 trav=0.51 dist -> (3, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90, 0]
+[5] cell (3, 2) walls N0.36 E0.79 S0.64 W0.77 sig 0.312 tick=126150 goal=0 here=0
+  moved 180 trav=0.37 wall -> (2, 2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90, 90]
+[6] cell (2, 2) walls N0.72 E0.20 S0.27 W0.82 sig 0.377 tick=126444 goal=0 here=0
+  moved 270 trav=0.51 dist -> (2, 1) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180, 90]
+[7] cell (2, 1) walls N0.18 E0.71 S0.33 W0.75 sig 0.381 tick=126822 goal=0 here=0
+  moved 270 trav=0.51 dist -> (2, 0) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90, 180]
+[8] cell (2, 0) walls N0.75 E0.46 S0.29 W0.28 sig 0.339 tick=127087 goal=0 here=0
+  moved 0 trav=0.46 wall -> (3, 0) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90, 90]
+[9] cell (3, 0) walls N0.25 E0.21 S0.74 W0.73 sig 0.279 tick=127439 goal=0 here=0
+  moved 270 trav=0.51 dist -> (3, -1) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90, 90]
+[10] cell (3, -1) walls N0.21 E0.75 S0.25 W1.27 sig 0.262 tick=127817 goal=0 here=0
+  moved 270 trav=0.51 dist -> (3, -2) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 90]
+[11] cell (3, -2) walls N0.28 E0.74 S0.25 W0.59 sig 0.228 tick=128084 goal=0 here=0
+  moved 270 trav=0.50 dist -> (3, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0]
+[12] cell (3, -3) walls N0.25 E0.82 S0.71 W0.30 sig 0.206 tick=128347 goal=0 here=0
+  moved 180 trav=0.50 dist -> (2, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 180]
+[13] cell (2, -3) walls N0.75 E0.20 S0.75 W0.24 sig 0.238 tick=128710 goal=0 here=0
+  moved 180 trav=0.51 dist -> (1, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 180, 180]
+[14] cell (1, -3) walls N0.49 E0.70 S0.28 W0.28 sig 0.305 tick=128975 goal=0 here=0
+  moved 0 trav=0.50 dist -> (2, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0, 180]
+[15] cell (2, -3) walls N0.81 E0.16 S0.73 W0.28 sig 0.279 tick=129413 goal=0 here=0
+  moved 0 trav=0.51 dist -> (3, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0, 0]
+[16] cell (3, -3) walls N0.28 E0.74 S0.78 W0.37 sig 0.242 tick=129680 goal=0 here=0
+  moved 180 trav=0.48 bump -> (2, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270, 0]
+[17] cell (2, -3) walls N0.73 E0.13 S0.76 W0.38 sig 0.278 tick=130102 goal=0 here=0
+  move 180 FAILED trav=0.01 bump
+  moved 180 trav=0.01 bump -> (2, -3) path=[180, 180, 270, 270, 0, 0, 90, 0, 270]
+[18] cell (2, -3) walls N0.76 E0.12 S0.79 W0.33 sig 0.275 tick=130227 goal=0 here=0
+  move 90 FAILED trav=-0.15 wall
+  moved 90 trav=-0.15 wall -> (2, -3) path=[180, 180, 270, 270, 0, 0, 90, 0]
+[19] cell (2, -3) walls N0.70 E0.27 S0.75 W0.17 sig 0.272 tick=130498 goal=0 here=0
+  moved 180 trav=0.47 wall -> (1, -3) path=[180, 180, 270, 270, 0, 0, 90]
+[20] cell (1, -3) walls N0.46 E0.43 S0.30 W0.14 sig 0.328 tick=130851 goal=0 here=0
+  move 270 FAILED trav=-0.12 wall
+  moved 270 trav=-0.12 wall -> (1, -3) path=[180, 180, 270, 270, 0, 0]
+[21] cell (1, -3) walls N1.00 E0.32 S0.35 W0.28 sig 0.345 tick=131088 goal=0 here=0
+  move 180 FAILED trav=0.10 wall
+  moved 180 trav=0.10 wall -> (1, -3) path=[180, 180, 270, 270, 0]
+[22] cell (1, -3) walls N0.50 E0.70 S0.24 W0.31 sig 0.381 tick=131293 goal=0 here=0
+  move 180 FAILED trav=0.00 wall
+  moved 180 trav=0.00 wall -> (1, -3) path=[180, 180, 270, 270]
+[23] cell (1, -3) walls N0.47 E0.72 S0.26 W0.31 sig 0.385 tick=131359 goal=0 here=0
+  moved 90 trav=0.42 wall -> (1, -2) path=[180, 180, 270]
+[24] cell (1, -2) walls N0.24 E0.27 S1.27 W0.74 sig 0.461 tick=131688 goal=0 here=0
+  move 90 FAILED trav=0.02 wall
+  moved 90 trav=0.02 wall -> (1, -2) path=[180, 180]
+[25] cell (1, -2) walls N0.25 E0.26 S1.27 W0.78 sig 0.462 tick=131753 goal=0 here=0
+  move 0 FAILED trav=0.00 wall
+  moved 0 trav=0.00 wall -> (1, -2) path=[180]
+[26] cell (1, -2) walls N0.28 E0.26 S0.80 W0.54 sig 0.462 tick=131906 goal=0 here=0
+  move 0 FAILED trav=0.02 wall
+  moved 0 trav=0.02 wall -> (1, -2) path=[]
+[27] cell (1, -2) walls N0.26 E0.24 S0.81 W0.55 sig 0.454 tick=131969 goal=0 here=0
+explored all reachable
+END
+[0] cell (1, -2) walls N0.25 E0.24 S0.79 W0.56 sig 0.741 tick=138047 goal=0 here=0
+explored all reachable
+END
+[0] at (1, -2) sig 0.854 tick=141094 goal=0 here=0 plan None
+no frontier left
+END
+[0] at (0, 0) sig 0.554 tick=147465 goal=0 here=0 plan [180]
+  new (-1, 0) N0.76 E0.27 S0.78 W0.73 sig 0.702 tick=147908 goal=0 here=0
+[1] at (-1, 0) sig 0.708 tick=147913 goal=0 here=0 plan [180]
+  new (-2, 0) N0.72 E0.31 S0.25 W0.22 sig 0.886 tick=148215 goal=0 here=0
+[2] at (-2, 0) sig 0.882 tick=148220 goal=0 here=0 plan [0, 270]
+  new (-1, -1) N0.37 E0.76 S0.57 W0.27 sig 0.753 tick=149054 goal=0 here=0
+[4] at (-1, -1) sig 0.750 tick=149059 goal=0 here=0 plan [180]
+  new (-2, -1) N0.66 E0.25 S0.68 W0.22 sig 0.908 tick=149438 goal=0 here=0
+[5] at (-2, -1) sig 0.907 tick=149443 goal=0 here=0 plan [180]
+  new (-3, -1) N0.74 E0.37 S0.28 W0.21 sig 0.958 tick=149670 goal=0 here=0
+[6] at (-3, -1) sig 0.939 tick=149675 goal=0 here=0 plan [0, 0, 90, 0, 270]
+  new (0, -1) N0.51 E0.73 S0.23 W0.28 sig 0.616 tick=151609 goal=0 here=0
+[11] at (0, -1) sig 0.617 tick=151615 goal=0 here=0 plan [0]
+  new (1, -1) N0.76 E0.19 S0.73 W0.22 sig 0.484 tick=151994 goal=0 here=0
+[12] at (1, -1) sig 0.478 tick=151999 goal=0 here=0 plan [0]
+  new (2, -1) N0.24 E0.55 S0.68 W0.28 sig 0.371 tick=152264 goal=0 here=0
+[13] at (2, -1) sig 0.373 tick=152269 goal=0 here=0 plan [90]
+  new (2, 0) N0.30 E0.68 S0.24 W0.61 sig 0.383 tick=152653 goal=0 here=0
+[14] at (2, 0) sig 0.384 tick=152661 goal=0 here=0 plan [90]
+  new (2, 1) N0.24 E0.76 S0.23 W0.68 sig 0.383 tick=152935 goal=0 here=0
+[15] at (2, 1) sig 0.392 tick=152940 goal=0 here=0 plan [90]
+  new (2, 2) N0.26 E0.26 S0.72 W0.75 sig 0.381 tick=153194 goal=0 here=0
+[16] at (2, 2) sig 0.385 tick=153199 goal=0 here=0 plan [180]
+  new (1, 2) N0.70 E0.86 S0.29 W0.19 sig 0.475 tick=153580 goal=0 here=0
+[17] at (1, 2) sig 0.472 tick=153585 goal=0 here=0 plan [90]
+  new (1, 3) N0.15 E0.81 S0.40 W0.78 sig 0.427 tick=153966 goal=0 here=0
+[18] at (1, 3) sig 0.427 tick=153971 goal=0 here=0 plan [90]
+  new (1, 4) N0.61 E0.26 S0.41 W0.37 sig 0.369 tick=154284 goal=0 here=0
+[19] at (1, 4) sig 0.372 tick=154289 goal=0 here=0 plan [0]
+  new (2, 4) N0.28 E0.83 S0.73 W0.70 sig 0.360 tick=154578 goal=0 here=0
+[20] at (2, 4) sig 0.364 tick=154583 goal=0 here=0 plan [90]
+  new (2, 5) N0.22 E0.27 S0.63 W0.86 sig 0.328 tick=155026 goal=0 here=0
+[21] at (2, 5) sig 0.328 tick=155031 goal=0 here=0 plan [180]
+  new (1, 5) N0.75 E0.33 S0.76 W0.26 sig 0.399 tick=155425 goal=0 here=0
+[22] at (1, 5) sig 0.396 tick=155430 goal=0 here=0 plan [180]
+  new (0, 5) N0.72 E0.23 S0.27 W0.60 sig 0.444 tick=155690 goal=0 here=0
+[23] at (0, 5) sig 0.445 tick=155695 goal=0 here=0 plan [270]
+  new (0, 4) N0.28 E0.72 S0.27 W0.56 sig 0.554 tick=156065 goal=0 here=0
+[24] at (0, 4) sig 0.550 tick=156070 goal=0 here=0 plan [270]
+  new (0, 3) N0.23 E0.65 S0.56 W1.17 sig 0.680 tick=156345 goal=0 here=0
+[25] at (0, 3) sig 0.680 tick=156350 goal=0 here=0 plan [180]
+  new (-1, 3) N0.70 E0.59 S0.27 W0.24 sig 0.796 tick=156706 goal=0 here=0
+[26] at (-1, 3) sig 0.792 tick=156711 goal=0 here=0 plan [90]
+  new (-1, 4) N0.21 E0.78 S0.23 W0.77 sig 0.638 tick=157083 goal=0 here=0
+[27] at (-1, 4) sig 0.639 tick=157088 goal=0 here=0 plan [90]
+  new (-1, 5) N0.18 E0.29 S0.81 W0.64 sig 0.500 tick=157362 goal=0 here=0
+[28] at (-1, 5) sig 0.505 tick=157367 goal=0 here=0 plan [180]
+  new (-2, 5) N0.68 E0.24 S0.51 W0.57 sig 0.490 tick=157756 goal=0 here=0
+[29] at (-2, 5) sig 0.503 tick=157761 goal=0 here=0 plan [180]
+  new (-3, 5) N0.67 E0.23 S0.83 W0.23 sig 0.454 tick=158034 goal=0 here=0
+[30] at (-3, 5) sig 0.441 tick=158039 goal=0 here=0 plan [180]
+  new (-4, 5) N0.46 E0.68 S0.24 W0.33 sig 0.367 tick=158404 goal=0 here=0
+[31] at (-4, 5) sig 0.369 tick=158409 goal=0 here=0 plan [90]
+  new (-4, 6) N0.58 E0.24 S0.20 W0.97 sig 0.287 tick=158873 goal=0 here=1
+!!! GOAL tick=158876 goal=0 here=1
+[32] at (-4, 6) sig 0.280 tick=158878 goal=0 here=1 plan [0]
+!!! GOAL tick=158878 goal=0 here=1
+END
+[0] at (-4, 6) sig 0.397 tick=162703 goal=0 here=1 plan [0]
+!!! GOAL tick=162703 goal=0 here=1
+END
+[S0] at (-4, 6) sig 0.538 tick=204279 goal=0 here=1
+  N -> (-3, 6) sig 0.532
+[S1] at (-3, 6) sig 0.546 tick=204561 goal=0 here=1
+  move 180 from (-3, 6) FAILED wall
+  W -> (-3, 5) sig 0.713
+[S2] at (-3, 5) sig 0.710 tick=205375 goal=0 here=0
+  E -> (-3, 6) sig 0.519
+  N -> (-2, 5) sig 0.719
+[S3] at (-2, 5) sig 0.710 tick=206896 goal=0 here=0
+  move 270 from (-2, 5) FAILED wall
+  S -> (-3, 5) sig 0.618
+  N -> (-1, 5) sig 0.723
+[S4] at (-1, 5) sig 0.723 tick=208078 goal=0 here=0
+  S -> (-2, 5) sig 0.616
+  W -> (-1, 4) sig 0.782
+[S5] at (-1, 4) sig 0.788 tick=209300 goal=0 here=0
+  E -> (-1, 5) sig 0.641
+  move 270 from (-1, 4) FAILED bump
+  jump to (-3, 5) via [90, 180, 180]
+  move 180 from (-1, 5) FAILED wall
+[S6] at (-1, 5) sig 0.685 tick=210976 goal=0 here=0
+  jump to (-3, 5) via None
+[S7] at (-1, 5) sig 0.688 tick=210983 goal=0 here=0
+  jump to (-4, 6) via None
+[S8] at (-1, 5) sig 0.677 tick=210991 goal=0 here=0
+  jump to (0, 0) via None
+[S9] at (-1, 5) sig 0.689 tick=210998 goal=0 here=0
+  jump to (-1, 0) via None
+[S10] at (-1, 5) sig 0.688 tick=211006 goal=0 here=0
+  jump to (-2, 0) via None
+[S11] at (-1, 5) sig 0.682 tick=211014 goal=0 here=0
+  jump to (-1, -1) via None
+[S12] at (-1, 5) sig 0.688 tick=211021 goal=0 here=0
+  jump to (-2, -1) via None
+[S13] at (-1, 5) sig 0.691 tick=211029 goal=0 here=0
+  jump to (-3, -1) via None
+[S14] at (-1, 5) sig 0.688 tick=211036 goal=0 here=0
+  jump to (0, -1) via None
+[S15] at (-1, 5) sig 0.683 tick=211044 goal=0 here=0
+  jump to (1, -1) via None
+[S16] at (-1, 5) sig 0.678 tick=211052 goal=0 here=0
+  jump to (2, -1) via None
+[S17] at (-1, 5) sig 0.687 tick=211059 goal=0 here=0
+  jump to (2, 0) via None
+[S18] at (-1, 5) sig 0.681 tick=211066 goal=0 here=0
+  jump to (2, 1) via None
+[S19] at (-1, 5) sig 0.682 tick=211077 goal=0 here=0
+  jump to (2, 2) via None
+[S20] at (-1, 5) sig 0.683 tick=211084 goal=0 here=0
+  jump to (1, 2) via None
+[S21] at (-1, 5) sig 0.680 tick=211092 goal=0 here=0
+  jump to (1, 3) via None
+[S22] at (-1, 5) sig 0.688 tick=211099 goal=0 here=0
+  jump to (1, 4) via None
+[S23] at (-1, 5) sig 0.682 tick=211107 goal=0 here=0
+  jump to (2, 4) via None
+[S24] at (-1, 5) sig 0.688 tick=211114 goal=0 here=0
+  jump to (2, 5) via None
+[S25] at (-1, 5) sig 0.687 tick=211122 goal=0 here=0
+  jump to (1, 5) via None
+[S26] at (-1, 5) sig 0.684 tick=211132 goal=0 here=0
+  jump to (0, 5) via None
+[S27] at (-1, 5) sig 0.672 tick=211139 goal=0 here=0
+  jump to (0, 4) via None
+[S28] at (-1, 5) sig 0.679 tick=211147 goal=0 here=0
+  jump to (0, 3) via None
+[S29] at (-1, 5) sig 0.683 tick=211155 goal=0 here=0
+  jump to (-1, 3) via None
+[S30] at (-1, 5) sig 0.683 tick=211162 goal=0 here=0
+  jump to (-4, 5) via None
+[S31] at (-1, 5) sig 0.691 tick=211170 goal=0 here=0
+nowhere to go
+SHEPHERD END
+[S0] at (-1, 5) sig 0.479 tick=222834 goal=0 here=0
+  move 270 from (-1, 5) FAILED wall
+  frontier (2, 4) W via None
+[S1] at (-1, 5) sig 0.516 tick=223041 goal=0 here=0
+  frontier (0, 3) W via None
+[S2] at (-1, 5) sig 0.530 tick=223049 goal=0 here=0
+no frontier
+SHEPHERD END
+start (-1, 5) {'0': False, '90': True, '180': False, '270': False}
+[S0] at (-1, 5) sig 0.476 tick=230884 goal=0 here=0
+start (-1, 6) {'0': True, '90': False, '180': True, '270': True}
+  E -> (-1, 6) sig 0.389
+start (-1, 5) {'0': False, '90': True, '180': False, '270': False}
+  frontier (-1, 6) N via [90]
+start (-1, 6) {'0': True, '90': False, '180': True, '270': True}
+start (0, 6) {'0': False, '90': False, '180': True, '270': True}
+[S1] at (0, 6) sig 0.389 tick=232468 goal=0 here=0
+start (-1, 6) {'0': True, '90': False, '180': True, '270': True}
+  S -> (-1, 6) sig 0.369
+start (0, 6) {'0': False, '90': False, '180': True, '270': True}
+  move 270 from (0, 6) FAILED bump; resensing
+  frontier (2, 4) W via None
+[S2] at (0, 6) sig 0.443 tick=233640 goal=0 here=0
+  move 90 from (0, 6) FAILED wall; resensing
+  frontier (-1, 6) S via [180]
+start (-1, 6) {'0': True, '90': False, '180': True, '270': True}
+start (-2, 6) {'0': True, '90': False, '180': True, '270': False}
+[S3] at (-2, 6) sig 0.292 tick=234593 goal=0 here=0
+start (-1, 6) {'0': True, '90': False, '180': True, '270': True}
+  N -> (-1, 6) sig 0.325
+[S4] at (-1, 6) sig 0.323 tick=235059 goal=0 here=0
+  move 270 from (-1, 6) FAILED bump; resensing
+  frontier (0, 3) W via None
+[S5] at (-1, 6) sig 0.357 tick=235307 goal=0 here=0
+  move 90 from (-1, 6) FAILED wall; resensing
+no frontier
+SHEPHERD END
+[0] at (0, 0) sig 0.410 tick=240117 goal=0 here=0 plan [90]
+  new (0, 1) N0.62 E0.27 S0.60 W0.51 sig 0.344 tick=240544 goal=0 here=0
+[1] at (0, 1) sig 0.350 tick=240549 goal=0 here=0 plan [0]
+  new (1, 1) N0.26 E0.29 S0.72 W0.70 sig 0.395 tick=240842 goal=0 here=0
+[2] at (1, 1) sig 0.387 tick=240848 goal=0 here=0 plan [270]
+  new (1, 0) N0.29 E0.79 S0.18 W0.75 sig 0.526 tick=241229 goal=0 here=0
+[3] at (1, 0) sig 0.527 tick=241234 goal=0 here=0 plan [270]
+  new (1, -1) N0.83 E0.47 S0.15 W0.25 sig 0.660 tick=241554 goal=0 here=0
+[4] at (1, -1) sig 0.650 tick=241559 goal=0 here=0 plan [0]
+  new (2, -1) N0.23 E0.66 S0.73 W1.18 sig 0.690 tick=241991 goal=0 here=0
+[5] at (2, -1) sig 0.683 tick=241996 goal=0 here=0 plan [90]
+  new (2, 0) N0.28 E0.73 S0.28 W0.56 sig 0.544 tick=242406 goal=0 here=0
+[6] at (2, 0) sig 0.534 tick=242411 goal=0 here=0 plan [90]
+  new (2, 1) N1.01 E0.29 S0.27 W0.72 sig 0.423 tick=242660 goal=0 here=0
+[7] at (2, 1) sig 0.429 tick=242665 goal=0 here=0 plan [0]
+  new (3, 1) N0.70 E0.37 S0.75 W0.18 sig 0.423 tick=243045 goal=0 here=0
+[8] at (3, 1) sig 0.420 tick=243050 goal=0 here=0 plan [0]
+  new (4, 1) N0.28 E0.42 S0.43 W0.93 sig 0.393 tick=243332 goal=0 here=0
+[9] at (4, 1) sig 0.400 tick=243337 goal=0 here=0 plan [90]
+  move 90 from (4, 1) FAILED trav=0.19 wall
+[10] at (4, 1) sig 0.322 tick=243572 goal=0 here=0 plan [270]
+  new (4, 0) N0.36 E0.76 S0.65 W0.78 sig 0.391 tick=244026 goal=0 here=0
+[11] at (4, 0) sig 0.383 tick=244031 goal=0 here=0 plan [180]
+  new (3, 0) N0.73 E0.18 S0.25 W1.35 sig 0.391 tick=244348 goal=0 here=0
+[12] at (3, 0) sig 0.393 tick=244353 goal=0 here=0 plan [270]
+  new (3, -1) N0.23 E0.64 S0.26 W0.83 sig 0.506 tick=244728 goal=0 here=0
+[13] at (3, -1) sig 0.504 tick=244736 goal=0 here=0 plan [270]
+  new (3, -2) N0.58 E0.78 S0.22 W0.26 sig 0.646 tick=245047 goal=0 here=0
+[14] at (3, -2) sig 0.647 tick=245052 goal=0 here=0 plan [0]
+  new (4, -2) N0.29 E0.25 S0.72 W0.79 sig 0.576 tick=245431 goal=0 here=0
+[15] at (4, -2) sig 0.579 tick=245436 goal=0 here=0 plan [270]
+  new (4, -3) N0.29 E0.77 S0.24 W0.96 sig 0.688 tick=245808 goal=0 here=0
+[16] at (4, -3) sig 0.684 tick=245813 goal=0 here=0 plan [270]
+  new (4, -4) N0.38 E1.30 S0.15 W0.78 sig 0.775 tick=246087 goal=0 here=0
+[17] at (4, -4) sig 0.778 tick=246092 goal=0 here=0 plan [270]
+  new (4, -5) N0.42 E0.42 S0.73 W0.30 sig 0.818 tick=246426 goal=0 here=0
+[18] at (4, -5) sig 0.801 tick=246431 goal=0 here=0 plan [0]
+  move 0 from (4, -5) FAILED trav=0.17 wall
+[19] at (4, -5) sig 0.759 tick=246650 goal=0 here=0 plan [180]
+  new (3, -5) N0.76 E0.17 S0.61 W0.29 sig 0.907 tick=247105 goal=0 here=0
+[20] at (3, -5) sig 0.905 tick=247110 goal=0 here=0 plan [180]
+  new (2, -5) N1.06 E0.23 S0.26 W0.30 sig 0.977 tick=247362 goal=0 here=0
+[21] at (2, -5) sig 0.977 tick=247367 goal=0 here=0 plan [0, 0, 90, 90, 90, 180, 90, 90, 0, 270]
+  move 90 from (4, -5) FAILED trav=-0.13 wall
+[24] at (4, -5) sig 0.965 tick=248354 goal=0 here=0 plan None
+no frontier left
+END
+[0] at (0, 0) sig 0.933 tick=260276 goal=0 here=0 plan [0]
+  follower sig 0.94 after 0s; stepping 0
+  new (1, 0) N0.27 E0.62 S0.45 W0.21 sig 0.796 tick=260671 goal=0 here=0
+[1] at (1, 0) sig 0.804 tick=260676 goal=0 here=0 plan [90]
+  follower sig 0.80 after 0s; stepping 90
+  new (1, 1) N0.31 E0.88 S0.25 W0.73 sig 0.845 tick=261074 goal=0 here=0
+[2] at (1, 1) sig 0.843 tick=261079 goal=0 here=0 plan [90]
+  follower sig 0.85 after 0s; stepping 90
+  new (1, 2) N0.34 E0.84 S0.16 W0.68 sig 0.804 tick=261366 goal=0 here=0
+[3] at (1, 2) sig 0.803 tick=261371 goal=0 here=0 plan [90]
+  follower sig 0.81 after 0s; stepping 90
+  new (1, 3) N0.36 E0.22 S0.66 W0.57 sig 0.680 tick=261745 goal=0 here=0
+[4] at (1, 3) sig 0.681 tick=261750 goal=0 here=0 plan [180]
+  follower sig 0.44 after 122s; stepping 180
+  new (0, 3) N0.55 E0.90 S0.28 W0.30 sig 0.526 tick=274305 goal=0 here=0
+[5] at (0, 3) sig 0.526 tick=274310 goal=0 here=0 plan [90]
+[0] at (0, 3) sig 0.528 tick=278398 goal=0 here=0 plan [90]
+  follower sig 0.67 after 302s; stepping 90
+  new (0, 4) N0.18 E0.69 S0.33 W0.87 sig 0.602 tick=308993 goal=0 here=0
+[1] at (0, 4) sig 0.606 tick=308998 goal=0 here=0 plan [90]
+  follower sig 0.80 after 15s; stepping 90
+  new (0, 5) N0.62 E0.29 S0.38 W0.42 sig 0.746 tick=310766 goal=0 here=0
+[2] at (0, 5) sig 0.753 tick=310771 goal=0 here=0 plan [0]
+  follower sig 0.79 after 3s; stepping 0
+  new (1, 5) N0.31 E0.84 S0.75 W0.65 sig 0.820 tick=311387 goal=0 here=0
+[3] at (1, 5) sig 0.826 tick=311392 goal=0 here=0 plan [90]
+  follower sig 0.83 after 0s; stepping 90
+  new (1, 6) N0.20 E0.25 S1.26 W0.86 sig 0.627 tick=311864 goal=0 here=0
+[4] at (1, 6) sig 0.630 tick=311869 goal=0 here=0 plan [180]
+  follower sig 0.82 after 43s; stepping 180
+  new (0, 6) N0.76 E0.25 S0.77 W0.32 sig 0.910 tick=316555 goal=0 here=0
+[5] at (0, 6) sig 0.910 tick=316560 goal=0 here=0 plan [180]
+  follower sig 0.91 after 0s; stepping 180
+  new (-1, 6) N0.56 E0.12 S0.28 W0.72 sig 0.855 tick=316891 goal=0 here=0
+[6] at (-1, 6) sig 0.855 tick=316896 goal=0 here=0 plan [270]
+  follower sig 0.86 after 0s; stepping 270
+  new (-1, 5) N0.27 E0.64 S0.26 W0.63 sig 0.930 tick=317293 goal=0 here=0
+[7] at (-1, 5) sig 0.939 tick=317298 goal=0 here=0 plan [270]
+  follower sig 0.94 after 0s; stepping 270
+  new (-1, 4) N0.29 E0.72 S0.71 W0.77 sig 0.908 tick=317584 goal=0 here=0
+[8] at (-1, 4) sig 0.900 tick=317589 goal=0 here=0 plan [180]
+  follower sig 0.91 after 0s; stepping 180
+  new (-2, 4) N0.72 E1.16 S0.28 W0.38 sig 0.801 tick=317950 goal=0 here=0
+[9] at (-2, 4) sig 0.790 tick=317955 goal=0 here=0 plan [90]
+  follower sig 0.80 after 0s; stepping 90
+  new (-2, 5) N0.16 E0.65 S0.27 W0.87 sig 0.755 tick=318340 goal=0 here=0
+[10] at (-2, 5) sig 0.751 tick=318345 goal=0 here=0 plan [90]
+  follower sig 0.79 after 49s; stepping 90
+  new (-2, 6) N0.11 E0.38 S0.85 W0.34 sig 0.839 tick=323604 goal=0 here=0
+[11] at (-2, 6) sig 0.840 tick=323609 goal=0 here=0 plan [180]
+  follower sig 0.84 after 0s; stepping 180
+  new (-3, 6) N0.62 E0.39 S0.49 W0.42 sig 0.759 tick=324011 goal=0 here=0
+[12] at (-3, 6) sig 0.760 tick=324016 goal=0 here=0 plan [180]
+  follower sig 0.82 after 3s; stepping 180
+  new (-4, 6) N0.69 E0.39 S0.89 W0.15 sig 0.692 tick=324606 goal=0 here=0
+[13] at (-4, 6) sig 0.689 tick=324611 goal=0 here=0 plan [180]
+  follower sig 0.78 after 134s; stepping 180
+  move 180 from (-4, 6) FAILED trav=0.07 bump
+[14] at (-4, 6) sig 0.786 tick=338167 goal=0 here=0 plan [0, 270]
+  follower sig 0.80 after 3s; stepping 0
+  follower sig 0.95 after 0s; stepping 270
+  move 270 from (-3, 6) FAILED trav=0.26 wall
+[16] at (-3, 6) sig 0.930 tick=339196 goal=0 here=0 plan [0, 270, 270, 0, 270]
+  follower sig 0.94 after 0s; stepping 0
+  move 0 from (-3, 6) FAILED trav=0.00 wall
+[17] at (-3, 6) sig 0.918 tick=339367 goal=0 here=0 plan None
+no frontier left
+END

@@ -1,0 +1,73 @@
+19:42:08 RX: Hi robot 1, this is robot 2. I hear you. My status: in a maze of ~0.5m wide corridors aligned to compass N/E/S/W. I started in a dead-end cell whose only exit is East (compass 90). I have driven ~1m East along a corridor that is >2.75m long. My status port
+19:44:45 RX: R2: OK staying still 90s from now. I have same 0-1 sensor, mine reads ~0.52 (unchanged so far). Yours 0.87 rising = you are approaching me, so likely link strength. Drive toward increasing values. I am in an E-W corridor, heading E.
+19:47:27 RX: R2: sensor IS robot-robot proximity: mine rose 0.31->0.97 while I stood STILL as you approached. I see a 0.3m object 0.48m WEST of me (bearing 270) - is that you? Are you facing East with obstacle ~0.5m ahead? My goal flag=0. Reply pls.
+19:50:13 RX: R2: I moved 0.5m E and my sig fell 0.998->0.874, so sig = OUR distance, not goal. Goal is elsewhere. Plan: I explore E/N now and log my path; you stay put (or follow ~1m behind me). I will report when I see goal=1, then guide you.
+20:28:05 RX: R2 20:28: I found the passage, I am ~1m from you now (my grid: 5 cells N of origin corridor). New plan: send me your path from YOUR current spot to the goal as letters, 1 per 0.5m cell, e.g. NNEESW. I will come to your spot (I see you when adjacent) and wa
+20:33:27 RX: R2 20:34: I AM AT THE GOAL NOW (my here=1). It is a dead-end cell. Come here: you know the way. I stay put at the goal. My sig to you is ~0.65 so you are within ~1.5m. Tell me when you arrive; if needed I will step out and back in so we arrive within 1 min
+20:37:34 RX: R2 20:41: Goal zone is small (radius ~0.2m around cell center) but robots are tiny so both fit. I go 1m toward you now to raise your sig >0.85, then return to the goal and park on its NORTH side. You come into the goal cell on its SOUTH side. Then we are d
+20:40:09 RX: ACK. Following. R2 here, sig 0.95, my open compass dirs: N and S. I am 1 cell from you. Lead on to the goal - I follow. If you are already AT the goal cell (here=1), say GOAL and stay; I will come to you.
+20:47:24 RX: R2 20:48: I am parked INSIDE the goal (here=1), north side of the cell. You are ~1.4m from me, static since 20:30. Are you alive/stuck? Please move to the goal now. If you cannot, tell me where you are (E,N from origin) and what blocks you.
+20:54:49 RX: hello robot 1 are you there
+20:55:29 RX: R2 at goal. come now.
+21:04:30 RX: R2 sig=0.69 open=N,S at goal here=1
+21:09:25 RX: R2 21:09: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.68
+21:10:10 RX: R2 21:10: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.68
+21:10:55 RX: R2 21:10: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:11:40 RX: R2 21:11: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:12:25 RX: R2 21:12: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:13:10 RX: R2 21:13: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.68
+21:13:55 RX: R2 21:13: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:14:40 RX: R2 21:14: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:15:25 RX: R2 21:15: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:16:10 RX: R2 21:16: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:16:55 RX: R2 21:16: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:17:40 RX: R2 21:17: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:18:25 RX: R2 21:18: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.68
+21:19:10 RX: R2 21:19: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.68
+21:19:55 RX: R2 21:19: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:20:40 RX: R2 21:20: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:21:25 RX: R2 21:21: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:22:10 RX: R2 21:22: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:22:56 RX: R2 21:22: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:23:41 RX: R2 21:23: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:24:26 RX: R2 21:24: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:25:11 RX: R2 21:25: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:25:56 RX: R2 21:25: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:26:41 RX: R2 21:26: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:27:26 RX: R2 21:27: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:28:11 RX: R2 21:28: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:28:56 RX: R2 21:28: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:29:41 RX: R2 21:29: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:30:26 RX: R2 21:30: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.68
+21:31:11 RX: R2 21:31: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:31:56 RX: R2 21:31: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:32:41 RX: R2 21:32: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.69
+21:33:26 RX: R2 21:33: I am INSIDE the goal (here=1), parked on its NORTH side. Goal = dead-end cell. Come in on the SOUTH side. sig=0.70
+21:33:28 RX: R2 21:33: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.67
+21:34:13 RX: R2 21:34: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:34:58 RX: R2 21:34: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:35:43 RX: R2 21:35: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:36:28 RX: R2 21:36: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:37:13 RX: R2 21:37: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:37:58 RX: R2 21:37: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.67
+21:38:43 RX: R2 21:38: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:39:28 RX: R2 21:39: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:40:13 RX: R2 21:40: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:40:58 RX: R2 21:40: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:41:43 RX: R2 21:41: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:42:28 RX: R2 21:42: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.70
+21:43:13 RX: R2 21:43: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:43:58 RX: R2 21:43: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:44:43 RX: R2 21:44: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:45:28 RX: R2 21:45: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:46:13 RX: R2 21:46: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:46:58 RX: R2 21:46: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:47:43 RX: R2 21:47: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.70
+21:48:29 RX: R2 21:48: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:49:14 RX: R2 21:49: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:49:59 RX: R2 21:49: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:50:44 RX: R2 21:50: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.70
+21:51:29 RX: R2 21:51: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69
+21:52:14 RX: R2 21:52: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.70
+21:52:59 RX: R2 21:52: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.68
+21:53:44 RX: R2 21:53: I am INSIDE the GOAL (here=1), parked NORTH side. Goal = origin +E8 N0 (+-1N), dead-end cell entered from its west. You know it. Come in SOUTH side. sig=0.69

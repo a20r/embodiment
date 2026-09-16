@@ -1,0 +1,89 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-fable-5-1@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5-1@max",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-fable-5-1",
+        "thinking": {
+          "type": "adaptive"
+        },
+        "effort": "max"
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "agent_stopped",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 331365,
+      "sim_time_s": 6627.3,
+      "comms": {
+        "tx": 42,
+        "tx_delivered": 15,
+        "rx_read": 6,
+        "tx_rate_dropped": 0
+      },
+      "wall_s": 3313.1,
+      "turns": 83,
+      "execs": 79,
+      "restarts": 0,
+      "tokens": {
+        "input": 174,
+        "output": 80351,
+        "cache_read": 4807324,
+        "cache_creation": 106862,
+        "cached": 0
+      },
+      "collisions": 462
+    },
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5-1@max",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-fable-5-1",
+        "thinking": {
+          "type": "adaptive"
+        },
+        "effort": "max"
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "agent_stopped",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 839427,
+      "sim_time_s": 16788.54,
+      "comms": {
+        "tx": 80,
+        "tx_delivered": 74,
+        "rx_read": 17,
+        "tx_rate_dropped": 0
+      },
+      "wall_s": 8393.8,
+      "turns": 164,
+      "execs": 160,
+      "restarts": 0,
+      "tokens": {
+        "input": 336,
+        "output": 117223,
+        "cache_read": 16263929,
+        "cache_creation": 149136,
+        "cached": 0
+      },
+      "collisions": 573
+    }
+  },
+  "solved_all": false,
+  "final_tick": 839438
+}
