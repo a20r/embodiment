@@ -1,0 +1,99 @@
+[ 75485.3] v6 start
+[ 75485.6] *** lap: None -> 0 (d8=tick=317554 goal=0 lap=0 last=0.0 best=0.0)
+[ 75485.6] *** goal: None -> 0 (d8=tick=317554 goal=0 lap=0 last=0.0 best=0.0)
+[ 75485.6] *** best: None -> 0.0 (d8=tick=317554 goal=0 lap=0 last=0.0 best=0.0)
+[ 75485.6] *** last: None -> 0.0 (d8=tick=317554 goal=0 lap=0 last=0.0 best=0.0)
+[ 75489.1] c60 hd=49 v=0.31 front=0.85 aL=0.52 aR=0.40 BEND tick=317901 goal=0 lap=0 last=0.0 best=0.0
+[ 75491.9] c120 hd=26 v=0.40 front=1.00 aL=0.39 aR=0.53 FWD tick=318181 goal=0 lap=0 last=0.0 best=0.0
+[ 75493.5] !!! CORRIDOR-SIGNATURE hd=37 aL=0.51 aR=0.41 front=0.94 v=0.46 tick=318340 goal=0 lap=0 last=0.0 best=0.0
+[ 75494.8] c180 hd=26 v=0.39 front=0.90 aL=0.39 aR=0.53 FWD tick=318477 goal=0 lap=0 last=0.0 best=0.0
+[ 75497.7] c240 hd=8 v=0.43 front=0.75 aL=0.35 aR=0.47 BEND tick=318767 goal=0 lap=0 last=0.0 best=0.0
+[ 75500.6] c300 hd=337 v=0.46 front=0.96 aL=0.47 aR=0.44 FWD tick=319053 goal=0 lap=0 last=0.0 best=0.0
+[ 75501.5] !!! CORRIDOR-SIGNATURE hd=339 aL=0.47 aR=0.44 front=0.92 v=0.54 tick=319138 goal=0 lap=0 last=0.0 best=0.0
+[ 75503.5] c360 hd=325 v=0.46 front=0.96 aL=0.35 aR=0.54 FWD tick=319323 goal=0 lap=0 last=0.0 best=0.0
+[ 75506.4] c420 hd=343 v=0.40 front=0.75 aL=0.36 aR=0.54 BEND tick=319619 goal=0 lap=0 last=0.0 best=0.0
+[ 75509.2] c480 hd=350 v=0.34 front=0.81 aL=0.44 aR=0.41 BEND tick=319916 goal=0 lap=0 last=0.0 best=0.0
+[ 75512.1] c540 hd=33 v=0.40 front=1.01 aL=0.55 aR=0.36 FWD tick=320204 goal=0 lap=0 last=0.0 best=0.0
+[ 75515.0] c600 hd=50 v=0.48 front=0.86 aL=0.49 aR=0.44 BEND tick=320461 goal=0 lap=0 last=0.0 best=0.0
+[ 75515.6] !!! CORRIDOR-SIGNATURE hd=54 aL=0.38 aR=0.55 front=0.62 v=0.44 tick=320514 goal=0 lap=0 last=0.0 best=0.0
+[ 75517.9] c660 hd=52 v=0.40 front=0.73 aL=0.58 aR=0.31 BEND tick=320780 goal=0 lap=0 last=0.0 best=0.0
+[ 75520.8] c720 hd=46 v=0.47 front=1.08 aL=0.45 aR=0.44 FWD tick=321058 goal=0 lap=0 last=0.0 best=0.0
+[ 75523.6] c780 hd=1 v=0.44 front=1.00 aL=0.41 aR=0.50 FWD tick=321359 goal=0 lap=0 last=0.0 best=0.0
+[ 75524.3] !!! CORRIDOR-SIGNATURE hd=9 aL=0.47 aR=0.41 front=0.87 v=0.50 tick=321425 goal=0 lap=0 last=0.0 best=0.0
+[ 75526.5] c840 hd=340 v=0.34 front=0.76 aL=0.35 aR=0.53 BEND tick=321634 goal=0 lap=0 last=0.0 best=0.0
+[ 75529.4] c900 hd=314 v=0.34 front=0.70 aL=0.34 aR=0.53 BEND tick=321919 goal=0 lap=0 last=0.0 best=0.0
+[ 75532.3] c960 hd=318 v=0.36 front=0.65 aL=0.48 aR=0.36 BEND tick=322219 goal=0 lap=0 last=0.0 best=0.0
+[ 75535.1] c1020 hd=10 v=0.32 front=0.90 aL=0.50 aR=0.39 BEND tick=322504 goal=0 lap=0 last=0.0 best=0.0
+[ 75537.5] !!! CORRIDOR-SIGNATURE hd=16 aL=0.47 aR=0.43 front=1.18 v=0.55 tick=322734 goal=0 lap=0 last=0.0 best=0.0
+[ 75538.0] c1080 hd=14 v=0.56 front=1.06 aL=0.46 aR=0.44 FWD tick=322792 goal=0 lap=0 last=0.0 best=0.0
+[ 75540.9] c1140 hd=17 v=0.55 front=1.07 aL=0.48 aR=0.42 FWD tick=323082 goal=0 lap=0 last=0.0 best=0.0
+[ 75543.8] c1200 hd=9 v=0.54 front=0.87 aL=0.48 aR=0.42 BEND tick=323367 goal=0 lap=0 last=0.0 best=0.0
+[ 75546.6] c1260 hd=5 v=0.48 front=0.76 aL=0.37 aR=0.51 BEND tick=323659 goal=0 lap=0 last=0.0 best=0.0
+[ 75549.5] !!! CORRIDOR-SIGNATURE hd=68 aL=0.38 aR=0.53 front=0.64 v=0.39 tick=323949 goal=0 lap=0 last=0.0 best=0.0
+[ 75549.5] c1320 hd=68 v=0.39 front=0.64 aL=0.38 aR=0.53 BEND tick=323949 goal=0 lap=0 last=0.0 best=0.0
+[ 75552.4] c1380 hd=57 v=0.45 front=0.95 aL=0.52 aR=0.41 FWD tick=324194 goal=0 lap=0 last=0.0 best=0.0
+[ 75555.3] c1440 hd=51 v=0.45 front=1.06 aL=0.53 aR=0.43 FWD tick=324517 goal=0 lap=0 last=0.0 best=0.0
+[ 75557.7] !!! CORRIDOR-SIGNATURE hd=58 aL=0.49 aR=0.52 front=0.92 v=0.51 tick=324757 goal=0 lap=0 last=0.0 best=0.0
+[ 75558.2] c1500 hd=53 v=0.54 front=0.99 aL=0.46 aR=0.57 FWD tick=324808 goal=0 lap=0 last=0.0 best=0.0
+[ 75561.0] c1560 hd=46 v=0.60 front=1.21 aL=0.53 aR=0.53 FWD tick=325084 goal=0 lap=0 last=0.0 best=0.0
+[ 75563.9] c1620 hd=56 v=0.58 front=1.38 aL=0.61 aR=0.50 FWD tick=325384 goal=0 lap=0 last=0.0 best=0.0
+[ 75566.4] !!! CORRIDOR-SIGNATURE hd=54 aL=0.56 aR=0.61 front=1.12 v=0.64 tick=325633 goal=0 lap=0 last=0.0 best=0.0
+[ 75566.8] c1680 hd=50 v=0.66 front=1.36 aL=0.53 aR=0.63 FWD tick=325675 goal=0 lap=0 last=0.0 best=0.0
+[ 75569.6] c1740 hd=50 v=0.82 front=1.78 aL=0.68 aR=0.81 FAST tick=325958 goal=0 lap=0 last=0.0 best=0.0
+[ 75572.5] c1800 hd=193 v=0.59 front=0.66 aL=1.94 aR=0.82 BEND tick=326226 goal=0 lap=0 last=0.0 best=0.0
+[ 75578.1] c1860 hd=165 v=0.36 front=0.76 aL=0.64 aR=0.69 BEND tick=326772 goal=0 lap=0 last=0.0 best=0.0
+[ 75580.0] !!! CORRIDOR-SIGNATURE hd=216 aL=0.68 aR=0.51 front=0.92 v=0.45 tick=326974 goal=0 lap=0 last=0.0 best=0.0
+[ 75581.0] c1920 hd=199 v=0.39 front=0.82 aL=0.41 aR=0.68 BEND tick=327086 goal=0 lap=0 last=0.0 best=0.0
+[ 75594.4] v6 start
+[ 75594.4] *** lap: None -> 0 (d8=tick=328435 goal=0 lap=0 last=0.0 best=0.0)
+[ 75594.4] *** goal: None -> 0 (d8=tick=328435 goal=0 lap=0 last=0.0 best=0.0)
+[ 75594.4] *** best: None -> 0.0 (d8=tick=328435 goal=0 lap=0 last=0.0 best=0.0)
+[ 75594.4] *** last: None -> 0.0 (d8=tick=328435 goal=0 lap=0 last=0.0 best=0.0)
+[ 75599.0] c60 hd=194 v=0.25 front=0.66 aL=0.69 aR=0.31 BEND tick=328873 goal=0 lap=0 last=0.0 best=0.0
+[ 75601.8] c120 hd=177 v=0.42 front=0.69 aL=0.50 aR=0.55 BEND tick=329171 goal=0 lap=0 last=0.0 best=0.0
+[ 75604.7] c180 hd=191 v=0.43 front=1.06 aL=0.40 aR=0.57 FWD tick=329445 goal=0 lap=0 last=0.0 best=0.0
+[ 75607.5] c240 hd=197 v=0.57 front=1.10 aL=0.50 aR=0.47 FWD tick=329741 goal=0 lap=0 last=0.0 best=0.0
+[ 75610.4] c300 hd=188 v=0.54 front=0.83 aL=0.53 aR=0.47 BEND tick=330036 goal=0 lap=0 last=0.0 best=0.0
+[ 75613.3] c360 hd=194 v=0.48 front=0.96 aL=0.55 aR=0.42 FWD tick=330286 goal=0 lap=0 last=0.0 best=0.0
+[ 75616.2] c420 hd=185 v=0.48 front=0.77 aL=0.54 aR=0.43 BEND tick=330600 goal=0 lap=0 last=0.0 best=0.0
+[ 75619.1] c480 hd=202 v=0.58 front=1.08 aL=0.46 aR=0.48 FWD tick=330895 goal=0 lap=0 last=0.0 best=0.0
+[ 75621.9] c540 hd=201 v=0.56 front=1.12 aL=0.56 aR=0.39 FWD tick=331181 goal=0 lap=0 last=0.0 best=0.0
+[ 75624.8] c600 hd=196 v=0.58 front=1.15 aL=0.51 aR=0.45 FWD tick=331476 goal=0 lap=0 last=0.0 best=0.0
+[ 75627.7] c660 hd=201 v=0.54 front=0.77 aL=0.41 aR=0.56 BEND tick=331739 goal=0 lap=0 last=0.0 best=0.0
+[ 75630.6] c720 hd=196 v=0.45 front=0.92 aL=0.46 aR=0.50 FWD tick=332022 goal=0 lap=0 last=0.0 best=0.0
+[ 75633.4] c780 hd=192 v=0.47 front=0.96 aL=0.40 aR=0.55 BEND tick=332328 goal=0 lap=0 last=0.0 best=0.0
+[ 75636.3] c840 hd=191 v=0.60 front=1.05 aL=0.44 aR=0.51 FWD tick=332625 goal=0 lap=0 last=0.0 best=0.0
+[ 75639.2] c900 hd=190 v=0.45 front=0.89 aL=0.37 aR=0.60 BEND tick=332920 goal=0 lap=0 last=0.0 best=0.0
+[ 75642.1] c960 hd=190 v=0.58 front=1.09 aL=0.47 aR=0.50 FWD tick=333205 goal=0 lap=0 last=0.0 best=0.0
+[ 75645.0] c1020 hd=191 v=0.60 front=1.09 aL=0.54 aR=0.46 FWD tick=333490 goal=0 lap=0 last=0.0 best=0.0
+[ 75647.8] c1080 hd=198 v=0.54 front=0.89 aL=0.52 aR=0.53 BEND tick=333773 goal=0 lap=0 last=0.0 best=0.0
+[ 75650.7] c1140 hd=205 v=0.51 front=0.83 aL=0.52 aR=0.55 BEND tick=334061 goal=0 lap=0 last=0.0 best=0.0
+[ 75653.5] c1200 hd=187 v=0.56 front=1.23 aL=0.54 aR=0.55 FWD tick=334317 goal=0 lap=0 last=0.0 best=0.0
+[ 75656.4] c1260 hd=174 v=0.60 front=0.84 aL=0.63 aR=0.54 BEND tick=334636 goal=0 lap=0 last=0.0 best=0.0
+[ 75659.3] c1320 hd=180 v=0.59 front=0.94 aL=0.60 aR=0.52 FWD tick=334914 goal=0 lap=0 last=0.0 best=0.0
+[ 75662.3] c1380 hd=181 v=0.45 front=1.02 aL=0.67 aR=0.44 FWD tick=335212 goal=0 lap=0 last=0.0 best=0.0
+[ 75665.1] c1440 hd=180 v=0.60 front=1.09 aL=0.66 aR=0.53 BEND tick=335476 goal=0 lap=0 last=0.0 best=0.0
+[ 75668.0] c1500 hd=177 v=0.62 front=1.07 aL=0.69 aR=0.60 BEND tick=335786 goal=0 lap=0 last=0.0 best=0.0
+[ 75670.9] c1560 hd=198 v=0.55 front=1.22 aL=0.73 aR=0.65 FWD tick=336074 goal=0 lap=0 last=0.0 best=0.0
+[ 75673.9] c1620 hd=307 v=0.42 front=1.06 aL=0.41 aR=4.24 FWD tick=336361 goal=0 lap=0 last=0.0 best=0.0
+[ 75676.8] c1680 hd=311 v=0.45 front=0.97 aL=0.47 aR=0.65 FWD tick=336672 goal=0 lap=0 last=0.0 best=0.0
+[ 75679.7] c1740 hd=316 v=0.56 front=0.94 aL=0.55 aR=0.59 FWD tick=336946 goal=0 lap=0 last=0.0 best=0.0
+[ 75682.6] c1800 hd=302 v=0.61 front=1.35 aL=0.50 aR=0.62 FWD tick=337253 goal=0 lap=0 last=0.0 best=0.0
+[ 75685.5] c1860 hd=291 v=0.58 front=0.92 aL=0.49 aR=0.57 FWD tick=337510 goal=0 lap=0 last=0.0 best=0.0
+[ 75688.4] c1920 hd=201 v=0.43 front=0.76 aL=0.50 aR=0.59 BEND tick=337830 goal=0 lap=0 last=0.0 best=0.0
+[ 75691.3] c1980 hd=185 v=0.53 front=1.13 aL=0.61 aR=0.51 FWD tick=338116 goal=0 lap=0 last=0.0 best=0.0
+[ 75694.2] c2040 hd=155 v=0.43 front=0.68 aL=0.46 aR=0.61 BEND tick=338402 goal=0 lap=0 last=0.0 best=0.0
+[ 75697.0] c2100 hd=103 v=0.39 front=0.73 aL=0.59 aR=0.41 BEND tick=338681 goal=0 lap=0 last=0.0 best=0.0
+[ 75699.9] c2160 hd=120 v=0.48 front=0.69 aL=0.51 aR=0.44 BEND tick=338982 goal=0 lap=0 last=0.0 best=0.0
+[ 75702.7] c2220 hd=129 v=0.36 front=1.07 aL=0.38 aR=0.52 FWD tick=339269 goal=0 lap=0 last=0.0 best=0.0
+[ 75705.6] c2280 hd=160 v=0.40 front=1.14 aL=0.53 aR=0.44 FWD tick=339548 goal=0 lap=0 last=0.0 best=0.0
+[ 75708.5] c2340 hd=196 v=0.63 front=0.79 aL=0.61 aR=0.52 BEND tick=339798 goal=0 lap=0 last=0.0 best=0.0
+[ 75711.3] c2400 hd=288 v=0.45 front=0.83 aL=0.42 aR=0.47 BEND tick=340009 goal=0 lap=0 last=0.0 best=0.0
+[ 75714.2] c2460 hd=298 v=0.40 front=0.95 aL=0.38 aR=0.53 FWD tick=340401 goal=0 lap=0 last=0.0 best=0.0
+[ 75717.1] c2520 hd=311 v=0.53 front=0.81 aL=0.46 aR=0.44 BEND tick=340704 goal=0 lap=0 last=0.0 best=0.0
+[ 75719.9] c2580 hd=315 v=0.47 front=0.76 aL=0.48 aR=0.44 BEND tick=340977 goal=0 lap=0 last=0.0 best=0.0
+[ 75722.8] c2640 hd=309 v=0.55 front=0.94 aL=0.47 aR=0.44 FWD tick=341275 goal=0 lap=0 last=0.0 best=0.0
+[ 75725.7] c2700 hd=289 v=0.53 front=0.96 aL=0.56 aR=0.56 FWD tick=341548 goal=0 lap=0 last=0.0 best=0.0
+[ 75728.6] c2760 hd=253 v=0.49 front=1.09 aL=0.50 aR=0.41 FWD tick=341841 goal=0 lap=0 last=0.0 best=0.0
+[ 75731.5] c2820 hd=259 v=0.49 front=0.73 aL=0.46 aR=0.43 BEND tick=342131 goal=0 lap=0 last=0.0 best=0.0
+[ 75734.3] c2880 hd=209 v=0.43 front=0.97 aL=0.44 aR=0.46 FWD tick=342428 goal=0 lap=0 last=0.0 best=0.0

@@ -1,0 +1,9 @@
+[ 76656.7] CHANGE lap 1->2 goal 0->0 last=1649.9 best=1649.9 tick=434665 pose=(41.45,107.65) th=161.4 hd=322 v=0.55
+[ 77035.3] CHANGE lap 2->3 goal 0->0 last=757.4 best=757.4 tick=472527 pose=(-17.23,1.06) th=346.6 hd=336 v=0.56
+[ 78946.7] CHANGE lap 3->4 goal 0->0 last=3822.9 best=757.4 tick=663669 pose=(-131.52,-57.77) th=334.9 v=1.08
+[ 78946.7] CHANGE lap 3->4 goal 0->0 last=3822.9 best=757.4 tick=663671 pose=(-136.53,-57.83) th=315.6 v=1.06
+[ 79187.8] CHANGE lap 4->5 goal 0->0 last=482.2 best=482.2 tick=687778 pose=(77.06,40.92) th=60.1 v=0.68
+[ 79187.9] CHANGE lap 4->5 goal 0->0 last=482.2 best=482.2 tick=687785 pose=(-79.91,52.99) th=317.2 v=0.69
+[ 84702.8] CHANGE lap 5->6 goal 0->0 last=11029.9 best=482.2 tick=1239276 pose=(123.40,-332.20) th=320.6 v=0.77
+[ 85005.9] CHANGE lap 6->7 goal 0->0 last=606.2 best=482.2 tick=1269582 pose=(123.88,-333.17) th=322.1 v=0.79
+[ 85306.0] CHANGE lap 7->8 goal 0->0 last=600.3 best=482.2 tick=1299598 pose=(122.84,-332.91) th=321.7 v=0.78

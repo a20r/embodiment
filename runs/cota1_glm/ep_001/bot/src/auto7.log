@@ -1,0 +1,16 @@
+[ 75766.0] v7 start
+[ 75771.6] c80 hd=204 v=0.34 pose=(0.4,-0.2) th=346 front=0.82 BEND tick=346137 goal=0 lap=0 last=0.0 best=0.0
+[ 75775.5] c160 hd=182 v=0.42 pose=(1.7,-0.9) th=334 front=0.92 FWD tick=346534 goal=0 lap=0 last=0.0 best=0.0
+[ 75779.3] c240 hd=172 v=0.40 pose=(2.9,-1.7) th=329 front=0.79 BEND tick=346918 goal=0 lap=0 last=0.0 best=0.0
+[ 75783.2] c320 hd=141 v=0.46 pose=(4.1,-2.7) th=312 front=0.85 BEND tick=347314 goal=0 lap=0 last=0.0 best=0.0
+[ 75787.0] c400 hd=138 v=0.46 pose=(5.1,-4.2) th=310 front=0.92 FWD tick=347694 goal=0 lap=0 last=0.0 best=0.0
+[ 75790.8] c480 hd=124 v=0.47 pose=(6.1,-5.6) th=304 front=0.91 FWD tick=348075 goal=0 lap=0 last=0.0 best=0.0
+[ 75794.6] c560 hd=119 v=0.48 pose=(7.2,-7.1) th=304 front=0.83 BEND tick=348418 goal=0 lap=0 last=0.0 best=0.0
+[ 75798.5] c640 hd=137 v=0.48 pose=(8.4,-8.6) th=312 front=0.69 BEND tick=348777 goal=0 lap=0 last=0.0 best=0.0
+[ 75802.3] c720 hd=194 v=0.38 pose=(9.7,-9.4) th=339 front=0.89 BEND tick=349210 goal=0 lap=0 last=0.0 best=0.0
+[ 75806.1] c800 hd=216 v=0.53 pose=(11.5,-9.8) th=351 front=0.96 FWD tick=349606 goal=0 lap=0 last=0.0 best=0.0
+[ 75810.0] c880 hd=208 v=0.60 pose=(13.6,-10.4) th=345 front=1.23 FWD tick=349992 goal=0 lap=0 last=0.0 best=0.0
+[ 75813.8] c960 hd=194 v=0.50 pose=(15.6,-10.9) th=343 front=0.91 FWD tick=350371 goal=0 lap=0 last=0.0 best=0.0
+[ 75817.6] c1040 hd=196 v=0.54 pose=(17.7,-11.5) th=343 front=0.85 BEND tick=350744 goal=0 lap=0 last=0.0 best=0.0
+[ 75821.5] c1120 hd=291 v=0.46 pose=(19.5,-11.4) th=29 front=0.60 BEND tick=351139 goal=0 lap=0 last=0.0 best=0.0
+[ 75825.3] c1200 hd=312 v=0.44 pose=(20.6,-10.2) th=39 front=0.75 BEND tick=351503 goal=0 lap=0 last=0.0 best=0.0

@@ -1,0 +1,25 @@
+[ 73801.8] v2 start
+[ 73802.1] *** lap: None -> 0  (d8=tick=149201 goal=0 lap=0 last=0.0 best=0.0)
+[ 73802.1] *** goal: None -> 0  (d8=tick=149201 goal=0 lap=0 last=0.0 best=0.0)
+[ 73802.1] *** best: None -> 0.0  (d8=tick=149201 goal=0 lap=0 last=0.0 best=0.0)
+[ 73802.1] *** last: None -> 0.0  (d8=tick=149201 goal=0 lap=0 last=0.0 best=0.0)
+[ 73813.0] c40 hd=183 v=0.30 front=0.48 dL=0.56 dR=0.35 FL=0.82 FR=0.35 d4=16 d7=72 BEND tick=150296 goal=0 lap=0 last=0.0 best=0.0
+[ 73824.2] c80 hd=15 v=-0.13 front=0.14 dL=0.16 dR=1.01 FL=0.14 FR=0.95 d4=-45 d7=70 REV tick=151418 goal=0 lap=0 last=0.0 best=0.0
+[ 73835.5] c120 hd=340 v=0.31 front=0.57 dL=0.33 dR=0.69 FL=0.34 FR=0.84 d4=16 d7=-83 BEND tick=152541 goal=0 lap=0 last=0.0 best=0.0
+[ 73846.7] c160 hd=349 v=0.32 front=0.57 dL=0.40 dR=0.65 FL=0.40 FR=0.95 d4=16 d7=-75 BEND tick=153664 goal=0 lap=0 last=0.0 best=0.0
+[ 73857.9] c200 hd=308 v=0.33 front=1.12 dL=0.44 dR=0.68 FL=0.56 FR=0.68 d4=30 d7=-22 FWD tick=154786 goal=0 lap=0 last=0.0 best=0.0
+[ 73869.1] c240 hd=332 v=0.34 front=1.48 dL=0.76 dR=0.42 FL=0.80 FR=0.49 d4=30 d7=23 FWD tick=155909 goal=0 lap=0 last=0.0 best=0.0
+[ 73880.4] c280 hd=343 v=0.20 front=1.42 dL=0.97 dR=0.24 FL=0.97 FR=0.34 d4=30 d7=70 FWD tick=157032 goal=0 lap=0 last=0.0 best=0.0
+[ 73891.6] c320 hd=274 v=0.35 front=1.03 dL=0.55 dR=0.82 FL=1.45 FR=0.73 d4=30 d7=-23 FWD tick=158151 goal=0 lap=0 last=0.0 best=0.0
+[ 73902.8] c360 hd=322 v=-0.12 front=0.41 dL=1.09 dR=0.19 FL=1.24 FR=0.19 d4=16 d7=85 BEND tick=159277 goal=0 lap=0 last=0.0 best=0.0
+[ 73914.0] c400 hd=306 v=-0.16 front=0.32 dL=1.11 dR=0.19 FL=1.35 FR=0.19 d4=16 d7=85 BEND tick=160399 goal=0 lap=0 last=0.0 best=0.0
+[ 73925.3] c440 hd=290 v=-0.15 front=0.26 dL=1.10 dR=0.22 FL=1.91 FR=0.21 d4=-45 d7=-70 REV tick=161521 goal=0 lap=0 last=0.0 best=0.0
+[ 73936.5] c480 hd=346 v=-0.12 front=0.39 dL=0.27 dR=1.06 FL=0.27 FR=1.47 d4=16 d7=-85 BEND tick=162645 goal=0 lap=0 last=0.0 best=0.0
+[ 73947.7] c520 hd=286 v=0.30 front=1.17 dL=0.33 dR=1.04 FL=0.67 FR=1.04 d4=30 d7=-68 FWD tick=163767 goal=0 lap=0 last=0.0 best=0.0
+[ 73958.9] c560 hd=319 v=0.16 front=0.71 dL=0.21 dR=1.13 FL=0.25 FR=1.20 d4=16 d7=-85 BEND tick=164889 goal=0 lap=0 last=0.0 best=0.0
+[ 73970.2] c600 hd=297 v=-0.09 front=0.11 dL=1.65 dR=0.10 FL=3.50 FR=0.10 d4=-45 d7=-70 REV tick=166012 goal=0 lap=0 last=0.0 best=0.0
+[ 73981.4] c640 hd=269 v=0.41 front=0.44 dL=2.08 dR=0.56 FL=1.26 FR=0.46 d4=16 d7=85 BEND tick=167135 goal=0 lap=0 last=0.0 best=0.0
+[ 73992.6] c680 hd=54 v=0.47 front=1.07 dL=1.77 dR=1.70 FL=1.25 FR=2.34 d4=30 d7=-9 FWD tick=168258 goal=0 lap=0 last=0.0 best=0.0
+[ 74003.9] c720 hd=55 v=-0.04 front=0.13 dL=0.23 dR=0.93 FL=0.14 FR=0.23 d4=-45 d7=0 REV tick=169381 goal=0 lap=0 last=0.0 best=0.0
+[ 74015.1] c760 hd=67 v=0.52 front=0.96 dL=1.97 dR=1.63 FL=1.22 FR=1.57 d4=20 d7=55 FWD tick=170504 goal=0 lap=0 last=0.0 best=0.0
+[ 74019.4] STOP

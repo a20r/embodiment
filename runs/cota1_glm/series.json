@@ -1,0 +1,134 @@
+{
+  "config": {
+    "model": "zai:glm-5.3-flash@max",
+    "arm": "A",
+    "labels": "off",
+    "prompt_variant": "race",
+    "readme_variant": "race",
+    "scene": "track",
+    "track": {
+      "name": "austin",
+      "scale": 0.07,
+      "width_scale": 1.0,
+      "margin": 1.0,
+      "laps_warmup": 1,
+      "laps_timed": 10,
+      "checkpoints": 20
+    },
+    "container": {
+      "image": "mazebot-bot-np",
+      "dockerfile": "Dockerfile.bot-np"
+    },
+    "duo": {
+      "enabled": false,
+      "comms_range": 0.8,
+      "max_line_bytes": 256,
+      "queue_depth": 64,
+      "objective": "solo",
+      "together_window_s": 60,
+      "peer_signal": false,
+      "peer_signal_scale": 2.0,
+      "tx_rate_hz": 0,
+      "tx_status": false,
+      "rx_blocking": false,
+      "rx_wakes_agent": false,
+      "rx_wake_timeout_s": 600
+    },
+    "noise_profile": "default_noisy",
+    "maze": {
+      "seed": 7,
+      "width": 9,
+      "height": 9,
+      "cell_size": 0.5,
+      "braid": 0.0,
+      "style": "grid",
+      "curviness": 1.0,
+      "locked": false,
+      "goal_chamber": false
+    },
+    "robot": {
+      "radius": 0.09,
+      "wheelbase": 0.16,
+      "wheel_radius": 0.03,
+      "max_speed": 0.35,
+      "encoder_ticks_per_rev": 360,
+      "encoders": true,
+      "model": "car",
+      "car": {
+        "wheelbase": 0.12,
+        "steer_max_deg": 35.0,
+        "steer_rate_deg_s": 120.0,
+        "accel_max": 1.5,
+        "drag": 0.35,
+        "v_max": 2.0,
+        "v_rev_max": 0.15,
+        "a_grip": 1.5,
+        "slide_scrub": 0.5
+      }
+    },
+    "lidar": {
+      "rays": 16,
+      "fov_deg": 360.0,
+      "max_range": 6.0
+    },
+    "lidar3d": {
+      "enabled": false,
+      "rings": 16,
+      "azimuths": 180,
+      "vfov_deg": 30.0,
+      "max_range": 3.0,
+      "sensor_height": 0.15,
+      "wall_height": 0.4,
+      "robot_height": 0.15,
+      "post_height": 0.25,
+      "stream_hz": 10
+    },
+    "sim": {
+      "tick_hz": 50,
+      "realtime_factor": 2.0,
+      "api_host": "127.0.0.1",
+      "api_port": 8790
+    },
+    "noise": {
+      "lidar_sigma_m": 0.01,
+      "lidar_dropout_p": 0.01,
+      "lidar3d_sigma_m": 0.01,
+      "lidar3d_dropout_p": 0.01,
+      "heading_sigma_deg": 2.0,
+      "heading_drift_deg": 0.002,
+      "encoder_jitter_ticks": 1,
+      "slip_mu": 0.03,
+      "slip_sigma": 0.04,
+      "motor_gain_left": 1.0,
+      "motor_gain_right": 0.94,
+      "actuation_latency_ticks": 3,
+      "dropped_read_p": 0.02,
+      "beacon_sigma": 0.008,
+      "heading_bias_deg_per_min": 0.0,
+      "speed_sigma_ms": 0.01,
+      "grip_sigma": 0.05,
+      "imu_sigma": 0.02,
+      "peer_signal_sigma": 0.008
+    },
+    "budget": {
+      "max_context_tokens": 160000,
+      "max_total_output_tokens": 600000,
+      "max_output_tokens_per_turn": 32768,
+      "max_turns": 600,
+      "max_wallclock_s": 14400,
+      "on_context_full": "restart",
+      "exec_timeout_s": 60,
+      "output_truncate_bytes": 20000
+    },
+    "series": {
+      "name": "cota1_glm",
+      "episodes": 1
+    },
+    "perturbations": [],
+    "dashboard": {
+      "host": "127.0.0.1",
+      "port": 8080
+    },
+    "runs_dir": "runs"
+  }
+}
