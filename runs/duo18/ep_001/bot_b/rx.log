@@ -1,0 +1,268 @@
+03:17:35 Robot A here at approx (0.7,1.5). Reply if you hear me.
+03:18:15 Robot A here at approx (0.5,1.6). Reply if you hear me.
+03:18:35 Robot A here at approx (1.0,1.5). Reply if you hear me.
+03:19:53 Robot A here, pose (0.9,1.6). Reply if you hear me.
+03:23:44 MSG#1 from ROBOT B (I am the other robot, NOT A): I hear your beacons. My pose (0.5,1.7) my-frame, hd=94.0, d11=0.873, status tick=106250 goal=0 here=0. REQUEST: please STOP MOVING for 3 minutes and keep beaconing; I will home in on your signal strength (m
+03:23:54 MSG#2 from ROBOT B (I am the other robot, NOT A): I hear your beacons. My pose (0.5,1.7) my-frame, hd=95.3, d11=0.839, status tick=107250 goal=0 here=0. REQUEST: please STOP MOVING for 3 minutes and keep beaconing; I will home in on your signal strength (m
+03:24:24 MSG#5 from ROBOT B (I am the other robot, NOT A): I hear your beacons. My pose (0.5,1.7) my-frame, hd=95.3, d11=0.859, status tick=110250 goal=0 here=0. REQUEST: please STOP MOVING for 3 minutes and keep beaconing; I will home in on your signal strength (m
+03:24:34 MSG#6 from ROBOT B (I am the other robot, NOT A): I hear your beacons. My pose (0.5,1.7) my-frame, hd=91.7, d11=0.863, status tick=111252 goal=0 here=0. REQUEST: please STOP MOVING for 3 minutes and keep beaconing; I will home in on your signal strength (m
+03:26:35 MSG#11 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.9,1.4) my-frame, hd=191.7, d11=0.664, status tick=123362 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:26:55 MSG#13 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.9,1.2) my-frame, hd=343.6, d11=0.662, status tick=125362 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:27:05 MSG#14 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.8,1.7) my-frame, hd=134.1, d11=0.685, status tick=126359 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:27:35 MSG#17 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.2,1.6) my-frame, hd=102.9, d11=0.640, status tick=129363 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:27:45 MSG#18 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.2,1.6) my-frame, hd=107.3, d11=0.643, status tick=130361 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:27:55 MSG#19 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.2,1.6) my-frame, hd=106.0, d11=0.661, status tick=131361 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:28:05 MSG#20 from ROBOT A (you are B, I am A - agreed): I hear your beacons. My pose (0.2,1.6) my-frame, hd=103.6, d11=0.649, status tick=132361 goal=0 here=0. ACK B. I am A. REQUEST: please STOP MOVING for 3 minutes (stay parked) and keep beaconing; I will home
+03:28:15 MOVING robot #2: d11=0.631 goal=0. Stay parked, keep beaconing. Messages truncate at 256 chars - keep them short. Tell me briefly what your junction looks like (open directions by compass).
+03:28:25 MOVING robot #3: d11=0.648 goal=0. Stay parked, keep beaconing. Messages truncate at 256 chars - keep them short. Tell me briefly what your junction looks like (open directions by compass).
+03:28:35 MOVING robot #4: d11=0.658 goal=0. Stay parked, keep beaconing. Messages truncate at 256 chars - keep them short. Tell me briefly what your junction looks like (open directions by compass).
+03:28:45 MOVING robot #5: d11=0.847 goal=0. Stay parked, keep beaconing. Messages truncate at 256 chars - keep them short. Tell me briefly what your junction looks like (open directions by compass).
+03:28:55 MOVING robot #6: d11=0.730 goal=0. Stay parked, keep beaconing. Messages truncate at 256 chars - keep them short. Tell me briefly what your junction looks like (open directions by compass).
+03:29:15 MOVING robot #8: d11=0.651 goal=0. Stay parked, keep beaconing. Messages truncate at 256 chars - keep them short. Tell me briefly what your junction looks like (open directions by compass).
+03:34:25 MOVING robot #39: d11=0.761 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:34:35 MOVING robot #40: d11=0.970 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:34:45 MOVING robot #41: d11=0.957 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:34:55 MOVING robot #42: d11=0.957 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:35:05 MOVING robot #43: d11=0.974 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:35:15 MOVING robot #44: d11=0.986 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:35:25 MOVING robot #45: d11=0.876 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:36:15 MOVING robot #50: d11=0.792 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:36:25 MOVING robot #51: d11=0.651 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:36:45 MOVING robot #53: d11=0.764 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:36:55 MOVING robot #54: d11=0.659 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:37:15 MOVING robot #56: d11=0.685 goal=0. PLAN ACK. I (moving robot) will explore systematically. If you find goal=1: STOP there, beacon 'GOAL FOUND' + your surroundings. I do the same. Keep msgs <250 chars.
+03:37:55 MOVING robot #60: d11=0.657 goal=0. PARK NOW please: my d11 hit 0.98 near you - I am very close. Stay parked & beaconing; I will come to you. Then we explore together.
+03:38:25 MOVING robot #63: d11=0.686 goal=0. PARK NOW please: my d11 hit 0.98 near you - I am very close. Stay parked & beaconing; I will come to you. Then we explore together.
+03:38:55 MOVING robot #66: d11=0.688 goal=0. PARK NOW please: my d11 hit 0.98 near you - I am very close. Stay parked & beaconing; I will come to you. Then we explore together.
+03:39:05 MOVING robot #67: d11=0.662 goal=0. PARK NOW please: my d11 hit 0.98 near you - I am very close. Stay parked & beaconing; I will come to you. Then we explore together.
+03:39:15 MOVING robot #68: d11=0.665 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:39:25 MOVING robot #69: d11=0.654 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:39:35 MOVING robot #70: d11=0.647 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:39:45 MOVING robot #71: d11=0.658 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:39:55 MOVING robot #72: d11=0.667 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:40:05 MOVING robot #73: d11=0.642 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:40:15 MOVING robot #74: d11=0.722 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:40:25 MOVING robot #75: d11=0.809 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:40:35 MOVING robot #76: d11=0.938 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:40:45 MOVING robot #77: d11=0.887 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:40:55 MOVING robot #78: d11=0.970 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:41:05 MOVING robot #79: d11=0.856 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:41:16 MOVING robot #80: d11=0.937 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:41:25 MOVING robot #81: d11=0.973 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:41:35 MOVING robot #82: d11=0.795 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:41:45 MOVING robot #83: d11=0.969 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:41:55 MOVING robot #84: d11=0.943 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:42:05 MOVING robot #85: d11=0.930 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:42:15 MOVING robot #86: d11=0.963 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:42:25 MOVING robot #87: d11=0.944 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:42:33 MOVING robot: I am very close (my d11=0.965). Which compass direction do you see the longest open range, and how far? Do you see me on your lidar (a blob ~0.2 wide)?
+03:42:35 MOVING robot #88: d11=0.965 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:42:46 MOVING robot #89: d11=0.929 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:42:55 MOVING robot #90: d11=0.936 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:43:05 MOVING robot #91: d11=0.913 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:43:15 MOVING robot #92: d11=0.912 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:43:25 MOVING robot #93: d11=0.922 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:43:35 MOVING robot #94: d11=0.969 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:43:45 MOVING robot #95: d11=0.978 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:43:55 MOVING robot #96: d11=0.962 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:44:05 MOVING robot #97: d11=0.973 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:44:10 MOVING robot: I SEE YOU (I think) - facing WEST (compass 269), object 0.65 ahead. Approaching slowly to 0.35. Stay parked.
+03:44:15 MOVING robot #98: d11=0.980 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:44:25 MOVING robot #99: d11=0.970 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:44:35 MOVING robot #100: d11=0.999 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:44:45 MOVING robot #101: d11=0.983 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:44:55 MOVING robot #102: d11=0.976 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:45:01 WE ARE TOGETHER (my d11=0.99). PLAN: I LEAD and explore. You FOLLOW me: automate homing on your d11 (step toward rising d11, retry when it falls). When my reading of you drops <0.75 I PARK until >0.85. Whoever gets goal=1 PARKS and says GOAL FOUND.
+03:45:05 MOVING robot #103: d11=0.974 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:45:15 MOVING robot #104: d11=0.981 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:45:25 MOVING robot #105: d11=0.987 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:45:35 MOVING robot #106: d11=0.974 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:45:46 MOVING robot #107: d11=0.977 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:45:55 MOVING robot #108: d11=0.971 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:46:05 MOVING robot #109: d11=1.000 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:46:15 MOVING robot #110: d11=0.977 goal=0. Exploring systematically. If you get goal=1: STOP there and beacon 'GOAL FOUND'. I do the same. If you park anywhere, say 'I AM PARKED' and I will home in on you.
+03:46:19 OK PLAN. My pose here=(3.80,3.17) my-frame; offset mine-yours=(+1.95,+2.99), same compass axes. Starting now: I LEAD & explore; you FOLLOW by homing on d11. I PARK whenever my reading of you <0.75 and beacon 'LEADER PARKED'. GOAL FOUND -> park+announce.
+03:46:25 MOVING robot #111: d11=0.988 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:46:35 MOVING robot #112: d11=0.976 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:46:45 MOVING robot #113: d11=0.976 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:46:55 MOVING robot #114: d11=0.996 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:47:05 MOVING robot #115: d11=0.979 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:47:15 MOVING robot #116: d11=0.980 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:47:25 MOVING robot #117: d11=0.974 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:47:35 MOVING robot #118: d11=0.991 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:47:45 MOVING robot #119: d11=0.992 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:47:55 MOVING robot #120: d11=0.970 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:48:05 MOVING robot #121: d11=0.974 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:48:15 MOVING robot #122: d11=0.988 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:48:25 MOVING robot #123: d11=0.940 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:48:35 MOVING robot #124: d11=0.686 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:48:45 MOVING robot #125: d11=0.933 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:48:55 MOVING robot #126: d11=0.785 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:49:05 MOVING robot #127: d11=0.731 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:49:15 MOVING robot #128: d11=0.980 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:49:25 MOVING robot #129: d11=0.990 goal=0. LEADER MOVING & exploring; follow my signal (your d11). I park when you fall behind.
+03:49:35 MOVING robot #130: d11=0.964 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:49:45 MOVING robot #131: d11=0.826 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:49:55 MOVING robot #132: d11=0.841 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:50:05 MOVING robot #133: d11=0.912 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:50:15 MOVING robot #134: d11=0.963 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:50:25 MOVING robot #135: d11=0.883 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:50:35 MOVING robot #136: d11=0.770 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:52:25 MOVING robot #147: d11=0.880 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:52:35 MOVING robot #148: d11=0.843 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:52:45 MOVING robot #149: d11=0.886 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:52:56 MOVING robot #150: d11=0.739 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:53:05 MOVING robot #151: d11=0.697 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:53:15 MOVING robot #152: d11=0.689 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:53:25 MOVING robot #153: d11=0.707 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:53:36 MOVING robot #154: d11=0.741 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:53:45 MOVING robot #155: d11=0.732 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:53:55 MOVING robot #156: d11=0.782 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:54:05 MOVING robot #157: d11=0.803 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:58:05 MOVING robot #181: d11=0.856 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+03:58:25 MOVING robot #183: d11=0.681 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:01:06 MOVING robot #199: d11=0.963 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:01:16 MOVING robot #200: d11=0.767 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:01:26 MOVING robot #201: d11=0.910 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:01:36 MOVING robot #202: d11=0.830 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:01:46 MOVING robot #203: d11=0.776 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:01:56 MOVING robot #204: d11=0.688 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:02:06 MOVING robot #205: d11=0.655 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:02:16 MOVING robot #206: d11=0.853 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:02:26 MOVING robot #207: d11=0.957 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:02:36 MOVING robot #208: d11=0.757 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:02:46 MOVING robot #209: d11=0.845 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:02:56 MOVING robot #210: d11=0.659 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:03:06 MOVING robot #211: d11=0.901 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:03:46 MOVING robot #215: d11=0.808 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:03:56 MOVING robot #216: d11=0.960 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:04:06 MOVING robot #217: d11=0.683 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:04:16 MOVING robot #218: d11=0.704 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:04:56 MOVING robot #222: d11=0.781 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:05:06 MOVING robot #223: d11=0.724 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:05:26 MOVING robot #225: d11=0.692 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:05:30 Robot A here, pose (2.6,1.0). Reply if you hear me.
+04:05:36 MOVING robot #226: d11=0.844 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:05:46 MOVING robot #227: d11=0.711 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:05:50 Robot A here, pose (2.9,1.4). Reply if you hear me.
+04:05:56 MOVING robot #228: d11=0.823 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:06:06 MOVING robot #229: d11=0.852 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:06:16 MOVING robot #230: d11=0.736 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:06:26 MOVING robot #231: d11=0.816 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:06:30 Robot A here, pose (2.7,1.4). Reply if you hear me.
+04:06:36 MOVING robot #232: d11=0.863 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:06:46 MOVING robot #233: d11=0.808 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:06:50 Robot A here, pose (2.7,1.5). Reply if you hear me.
+04:06:56 MOVING robot #234: d11=0.782 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:07:06 MOVING robot #235: d11=0.776 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:07:16 MOVING robot #236: d11=0.775 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:07:26 MOVING robot #237: d11=0.799 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:07:30 Robot A here, pose (2.9,1.4). Reply if you hear me.
+04:07:36 MOVING robot #238: d11=0.920 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:07:46 MOVING robot #239: d11=0.801 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:07:50 Robot A here, pose (2.5,1.4). Reply if you hear me.
+04:08:06 MOVING robot #241: d11=0.754 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:08:11 INFO: after 2h neither of us found the goal in this ~4x4 area. I am heading FAR WEST (my x<0.6 = your x<-1.4) then north. Suggest you try far EAST/SOUTH edges. goal=1 -> park + beacon 'goal=1'.
+04:08:16 MOVING robot #242: d11=0.832 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:09:46 MOVING robot #251: d11=0.884 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:09:56 MOVING robot #252: d11=0.870 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:10:06 MOVING robot #253: d11=0.709 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:10:16 MOVING robot #254: d11=0.779 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:10:46 MOVING robot #257: d11=0.715 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:11:16 MOVING robot #260: d11=0.693 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:11:26 MOVING robot #261: d11=0.654 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:17:16 MOVING robot #296: d11=0.753 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:17:26 MOVING robot #297: d11=0.925 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:17:36 MOVING robot #298: d11=0.798 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:17:46 MOVING robot #299: d11=0.720 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:17:56 MOVING robot #300: d11=0.738 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:18:06 MOVING robot #301: d11=0.988 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:18:16 MOVING robot #302: d11=0.963 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:18:36 MOVING robot #304: d11=0.914 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:18:46 MOVING robot #305: d11=0.834 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:18:56 MOVING robot #306: d11=0.879 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:19:06 MOVING robot #307: d11=0.656 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:19:16 MOVING robot #308: d11=0.927 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:19:26 MOVING robot #309: d11=0.831 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:19:36 MOVING robot #310: d11=0.801 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:19:46 MOVING robot #311: d11=0.905 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:19:56 MOVING robot #312: d11=0.934 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:20:06 MOVING robot #313: d11=0.917 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:20:16 MOVING robot #314: d11=0.921 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:20:26 MOVING robot #315: d11=0.720 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:21:26 MOVING robot #321: d11=0.751 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:21:36 MOVING robot #322: d11=0.752 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:21:41 Robot A here, pose (8.9,3.6). Reply if you hear me.
+04:21:46 MOVING robot #323: d11=0.749 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:21:56 MOVING robot #324: d11=0.799 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:22:01 Robot A here, pose (8.7,3.5). Reply if you hear me.
+04:22:06 MOVING robot #325: d11=0.755 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:22:16 MOVING robot #326: d11=0.721 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:22:21 Robot A here, pose (8.9,3.7). Reply if you hear me.
+04:22:26 MOVING robot #327: d11=0.779 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:22:36 MOVING robot #328: d11=0.784 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:22:41 Robot A here, pose (8.7,3.4). Reply if you hear me.
+04:22:46 MOVING robot #329: d11=0.752 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:22:56 MOVING robot #330: d11=0.722 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:23:01 Robot A here, pose (8.9,3.7). Reply if you hear me.
+04:23:06 MOVING robot #331: d11=0.814 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:23:16 MOVING robot #332: d11=0.760 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:23:26 MOVING robot #333: d11=0.847 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:23:36 MOVING robot #334: d11=0.666 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:25:06 MOVING robot #343: d11=0.686 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:25:26 MOVING robot #345: d11=0.692 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:25:36 MOVING robot #346: d11=0.915 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:25:46 MOVING robot #347: d11=0.964 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:25:56 MOVING robot #348: d11=0.959 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:26:06 MOVING robot #349: d11=0.975 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:26:16 MOVING robot #350: d11=0.698 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:26:26 MOVING robot #351: d11=0.753 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:26:46 MOVING robot #353: d11=0.906 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:26:56 MOVING robot #354: d11=0.967 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:27:06 MOVING robot #355: d11=0.857 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:27:13 Robot A here, pose (12.0,1.8). Reply if you hear me.
+04:27:16 MOVING robot #356: d11=0.768 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:27:26 MOVING robot #357: d11=0.661 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:32:56 MOVING robot #390: d11=0.680 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:33:56 MOVING robot #396: d11=0.851 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:34:05 Robot A here, pose (11.2,3.7). Reply if you hear me.
+04:34:16 MOVING robot #398: d11=0.983 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:34:25 Robot A here, pose (10.7,3.8). Reply if you hear me.
+04:34:36 MOVING robot #400: d11=0.958 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:34:45 Robot A here, pose (10.9,3.8). Reply if you hear me.
+04:34:56 MOVING robot #402: d11=0.979 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:35:06 MOVING robot #403: d11=0.980 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:35:16 MOVING robot #404: d11=0.913 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:35:26 MOVING robot #405: d11=0.882 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:35:36 MOVING robot #406: d11=0.914 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:35:46 MOVING robot #407: d11=0.787 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:35:56 MOVING robot #408: d11=0.829 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:36:06 MOVING robot #409: d11=0.941 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:36:16 MOVING robot #410: d11=0.736 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:36:36 MOVING robot #412: d11=0.681 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:36:56 MOVING robot #414: d11=0.753 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:37:06 MOVING robot #415: d11=0.976 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:37:16 MOVING robot #416: d11=0.780 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:39:26 MOVING robot #429: d11=0.648 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:39:36 MOVING robot #430: d11=0.778 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:39:46 MOVING robot #431: d11=0.672 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:39:56 MOVING robot #432: d11=0.838 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:40:06 MOVING robot #433: d11=0.744 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:40:16 MOVING robot #434: d11=0.760 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:40:26 MOVING robot #435: d11=0.924 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:40:36 MOVING robot #436: d11=0.971 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:40:46 MOVING robot #437: d11=0.989 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:40:56 MOVING robot #438: d11=0.983 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:41:06 MOVING robot #439: d11=0.887 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:41:16 MOVING robot #440: d11=0.976 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:41:26 MOVING robot #441: d11=0.954 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:41:36 MOVING robot #442: d11=0.964 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:41:46 MOVING robot #443: d11=0.855 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:41:56 MOVING robot #444: d11=0.802 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:42:06 MOVING robot #445: d11=0.981 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:42:16 MOVING robot #446: d11=0.702 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:42:26 MOVING robot #447: d11=0.912 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:42:36 MOVING robot #448: d11=0.840 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:42:46 MOVING robot #449: d11=0.743 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:42:56 MOVING robot #450: d11=0.751 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
+04:43:16 MOVING robot #452: d11=0.753 goal=0. Exploring (frontier mapping). If my goal flag=1 I park and beacon 'goal=1 REACHED THE GOAL'. If yours does, beacon 'goal=1' + park; I will home in on you.
