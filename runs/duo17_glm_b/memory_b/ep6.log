@@ -1,0 +1,67 @@
+32296.2 loaded pose 0.0,0.0 cells=0
+32296.4 EP6 start pos=0.0,0.0 d11=0.502 tx=lost
+32296.6 SUM pos=0.0,0.0 dist=0.0 cells=0 d11=0.496 tx=lost
+32300.9 WAN pos=0.0,0.0 k=3 ok=True d11=0.526 tx=lost cells=1
+32300.9 *** BLOB at [(15, 0.17)] pos=-0.0,-0.2 h=257 ***
+32303.5 *** BLOB at [(0, 0.24), (15, 0.8)] pos=-0.0,-0.2 h=245 ***
+32305.6 *** BLOB at [(0, 0.22), (15, 0.8)] pos=-0.0,-0.2 h=244 ***
+32307.7 *** BLOB at [(0, 0.23), (15, 0.81)] pos=-0.0,-0.2 h=242 ***
+32309.8 *** BLOB at [(0, 0.24), (15, 0.8)] pos=-0.0,-0.2 h=247 ***
+32312.0 *** BLOB at [(15, 0.81)] pos=-0.0,-0.2 h=242 ***
+32314.6 *** BLOB at [(0, 0.82), (1, 0.25)] pos=-0.0,-0.2 h=222 ***
+32316.7 *** BLOB at [(0, 0.81), (1, 0.26)] pos=-0.0,-0.2 h=219 ***
+32318.8 *** BLOB at [(0, 0.83), (1, 0.24)] pos=-0.0,-0.2 h=220 ***
+32320.9 *** BLOB at [(1, 0.23)] pos=-0.0,-0.2 h=217 ***
+32323.5 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=235 ***
+32325.6 *** BLOB at [(0, 0.17)] pos=-0.0,-0.2 h=239 ***
+32327.7 *** BLOB at [(0, 0.19)] pos=-0.0,-0.2 h=241 ***
+32329.9 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=238 ***
+32332.0 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=238 ***
+32334.1 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=238 ***
+32336.2 *** BLOB at [(0, 0.19)] pos=-0.0,-0.2 h=242 ***
+32338.3 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=238 ***
+32340.5 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=239 ***
+32342.6 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=236 ***
+32344.7 *** BLOB at [(0, 0.17)] pos=-0.0,-0.2 h=240 ***
+32346.8 *** BLOB at [(0, 0.19)] pos=-0.0,-0.2 h=240 ***
+32348.9 *** BLOB at [(0, 0.19)] pos=-0.0,-0.2 h=240 ***
+32351.1 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=241 ***
+32353.2 *** BLOB at [(0, 0.19)] pos=-0.0,-0.2 h=241 ***
+32355.3 *** BLOB at [(0, 0.2)] pos=-0.0,-0.2 h=240 ***
+32357.4 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=239 ***
+32359.6 *** BLOB at [(0, 0.18)] pos=-0.0,-0.2 h=243 ***
+32361.3 loaded pose 0.0,0.0 cells=1
+32361.5 EP6 start pos=0.0,0.0 d11=0.529 tx=busy
+32361.6 SUM pos=0.0,0.0 dist=0.0 cells=1 d11=0.539 tx=busy
+32365.9 WAN pos=0.0,0.0 k=14 ok=True d11=0.571 tx=lost cells=1
+32387.9 WAN pos=-0.9,0.1 k=0 ok=True d11=0.657 tx=lost cells=2
+32408.1 WAN pos=-0.9,0.1 k=0 ok=True d11=0.559 tx=lost cells=2
+32429.7 WAN pos=-0.9,0.1 k=0 ok=True d11=0.489 tx=lost cells=2
+32450.9 WAN pos=-0.9,0.1 k=15 ok=True d11=0.307 tx=lost cells=2
+32457.0 *** BLOB at [(10, 0.4)] pos=-0.9,0.1 h=349 ***
+32474.7 WAN pos=-1.0,-0.0 k=3 ok=True d11=0.307 tx=busy cells=3
+32497.7 WAN pos=-1.3,-0.6 k=0 ok=True d11=0.321 tx=busy cells=4
+32518.4 WAN pos=-1.3,-0.6 k=0 ok=True d11=0.291 tx=busy cells=4
+32535.0 loaded pose -1.3,-0.6 cells=4
+32535.2 EP6 start pos=-1.3,-0.6 d11=0.414 tx=busy
+32535.3 SUM pos=-1.3,-0.6 dist=7.8 cells=4 d11=0.412 tx=busy
+32538.4 WAN pos=-1.3,-0.6 k=0 ok=True d11=0.435 tx=lost cells=4
+32558.6 WAN pos=-1.9,-1.2 k=0 ok=True d11=0.571 tx=lost cells=6
+32581.1 WAN pos=-2.6,-0.4 k=0 ok=True d11=0.619 tx=lost cells=10
+32603.2 WAN pos=-3.9,0.0 k=0 ok=True d11=0.603 tx=lost cells=12
+32625.2 WAN pos=-3.8,0.7 k=2 ok=True d11=0.611 tx=lost cells=13
+32643.3 *** BLOB at [(14, 0.42)] pos=-3.6,0.6 h=84 ***
+32646.5 BLOBVERIFY after-approach hits=[]
+32646.5 UNJAM
+32653.6 WAN pos=-3.6,0.6 k=1 ok=True d11=0.610 tx=busy cells=13
+32675.2 WAN pos=-3.8,1.2 k=1 ok=True d11=0.629 tx=busy cells=14
+32849.1 loaded pose -3.8,1.2 cells=14
+32849.3 EP6 start pos=-3.8,1.2 d11=0.693 tx=busy
+32849.3 RX READY
+32849.4 SUM pos=-3.8,1.2 dist=14.9 cells=14 d11=0.687 tx=busy
+32852.1 WAN pos=-3.8,1.2 k=1 ok=True d11=0.687 tx=ok cells=14
+32872.2 WAN pos=-2.7,0.6 k=0 ok=False d11=0.677 tx=ok cells=17
+32892.6 WAN pos=-2.7,0.6 k=1 ok=False d11=0.548 tx=ok cells=17
+32914.7 WAN pos=-2.7,0.6 k=10 ok=False d11=0.635 tx=ok cells=17
+32935.4 WAN pos=-2.3,0.5 k=0 ok=True d11=0.538 tx=ok cells=18
+32956.0 WAN pos=-1.8,-0.4 k=0 ok=True d11=0.524 tx=ok cells=19

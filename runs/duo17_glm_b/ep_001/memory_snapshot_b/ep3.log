@@ -1,0 +1,177 @@
+30145.2 EP3 start d11=0.261 tx=lost
+30145.4 SUM pos=0.0,0.0 dist=0.0 cells=0 d11=0.266 tx=lost
+30146.3 FLW pos=-0.0,0.0 f=0.46 lw=0.33 steer=+0.85 d11=0.262 tx=lost cells=1
+30147.2 FLW pos=-0.1,-0.0 f=0.60 lw=0.33 steer=+0.10 d11=0.267 tx=lost cells=1
+30148.1 FLW pos=-0.1,-0.0 f=0.55 lw=0.32 steer=+0.08 d11=0.277 tx=lost cells=1
+30148.9 FLW pos=-0.2,-0.0 f=0.53 lw=0.32 steer=+0.08 d11=0.288 tx=lost cells=1
+30149.8 FLW pos=-0.2,-0.0 f=0.53 lw=0.29 steer=+0.01 d11=0.278 tx=lost cells=1
+30150.7 FLW pos=-0.3,-0.0 f=0.67 lw=0.26 steer=-0.05 d11=0.278 tx=lost cells=1
+30151.6 FLW pos=-0.4,-0.0 f=0.73 lw=0.24 steer=-0.08 d11=0.283 tx=lost cells=1
+30152.5 FLW pos=-0.4,-0.0 f=0.72 lw=0.27 steer=-0.02 d11=0.282 tx=lost cells=1
+30153.4 FLW pos=-0.5,-0.0 f=0.68 lw=0.28 steer=+0.01 d11=0.301 tx=lost cells=1
+30154.3 FLW pos=-0.5,-0.0 f=0.63 lw=0.28 steer=-0.00 d11=0.311 tx=lost cells=2
+30155.2 FLW pos=-0.6,-0.0 f=0.58 lw=0.27 steer=-0.01 d11=0.304 tx=lost cells=2
+30156.1 FLW pos=-0.6,-0.0 f=0.29 lw=0.28 steer=-0.85 d11=0.320 tx=lost cells=2
+30157.0 FLW pos=-0.7,-0.0 f=0.48 lw=0.28 steer=-0.85 d11=0.314 tx=lost cells=2
+30157.9 FLW pos=-0.7,0.0 f=0.45 lw=0.36 steer=-0.85 d11=0.331 tx=lost cells=2
+30158.7 FLW pos=-0.7,0.0 f=0.79 lw=0.46 steer=+0.40 d11=0.330 tx=lost cells=2
+30159.6 FLW pos=-0.8,0.1 f=0.75 lw=0.49 steer=+0.45 d11=0.342 tx=lost cells=2
+30160.5 FLW pos=-0.8,0.1 f=0.39 lw=0.49 steer=-0.85 d11=0.344 tx=lost cells=2
+30161.4 FLW pos=-0.9,0.1 f=0.34 lw=0.51 steer=-0.85 d11=0.342 tx=lost cells=2
+30162.3 FLW pos=-0.9,0.2 f=0.32 lw=0.52 steer=-0.85 d11=0.354 tx=lost cells=2
+30163.2 FLW pos=-0.9,0.2 f=0.28 lw=0.50 steer=-0.85 d11=0.353 tx=lost cells=2
+30164.1 FLW pos=-1.0,0.2 f=0.73 lw=0.50 steer=+0.49 d11=0.377 tx=lost cells=2
+30165.0 FLW pos=-1.0,0.2 f=0.68 lw=0.49 steer=+0.45 d11=0.367 tx=lost cells=3
+30165.9 FLW pos=-1.1,0.3 f=0.67 lw=0.32 steer=+0.08 d11=0.384 tx=lost cells=3
+30166.8 FLW pos=-1.1,0.3 f=0.62 lw=0.31 steer=+0.35 d11=0.381 tx=lost cells=3
+30167.7 FLW pos=-1.2,0.3 f=0.89 lw=0.32 steer=+0.35 d11=0.399 tx=lost cells=3
+30168.6 FLW pos=-1.2,0.3 f=1.10 lw=0.48 steer=+0.45 d11=0.395 tx=lost cells=3
+30169.5 FLW pos=-1.3,0.3 f=0.09 lw=0.58 steer=+1.00 d11=0.392 tx=lost cells=3
+30170.3 FLW pos=-1.3,0.3 f=0.10 lw=0.55 steer=-1.00 d11=0.392 tx=lost cells=3
+30171.2 FLW pos=-1.3,0.3 f=0.09 lw=0.54 steer=+1.00 d11=0.386 tx=lost cells=3
+30172.1 FLW pos=-1.4,0.3 f=0.10 lw=0.54 steer=-1.00 d11=0.399 tx=lost cells=3
+30173.0 FLW pos=-1.4,0.3 f=0.09 lw=0.55 steer=-1.00 d11=0.400 tx=lost cells=3
+30173.9 FLW pos=-1.4,0.3 f=0.10 lw=0.54 steer=-1.00 d11=0.389 tx=lost cells=3
+30174.8 FLW pos=-1.5,0.2 f=0.10 lw=0.55 steer=+1.00 d11=0.396 tx=lost cells=3
+30175.7 FLW pos=-1.5,0.2 f=0.11 lw=0.55 steer=-1.00 d11=0.406 tx=lost cells=3
+30176.6 FLW pos=-1.5,0.2 f=0.09 lw=0.56 steer=+1.00 d11=0.392 tx=lost cells=4
+30177.5 FLW pos=-1.5,0.2 f=0.10 lw=0.55 steer=+1.00 d11=0.396 tx=lost cells=4
+30178.4 FLW pos=-1.6,0.2 f=0.10 lw=0.54 steer=+1.00 d11=0.394 tx=lost cells=4
+30179.3 FLW pos=-1.6,0.2 f=0.10 lw=0.55 steer=+1.00 d11=0.389 tx=lost cells=4
+30180.2 FLW pos=-1.6,0.2 f=0.10 lw=0.56 steer=-1.00 d11=0.388 tx=lost cells=4
+30181.0 FLW pos=-1.7,0.2 f=0.11 lw=0.56 steer=+1.00 d11=0.394 tx=lost cells=4
+30181.9 FLW pos=-1.7,0.2 f=0.10 lw=0.56 steer=-1.00 d11=0.389 tx=lost cells=4
+30182.8 FLW pos=-1.7,0.1 f=0.10 lw=0.56 steer=+1.00 d11=0.390 tx=lost cells=4
+30183.7 FLW pos=-1.8,0.1 f=0.11 lw=0.55 steer=+1.00 d11=0.398 tx=lost cells=4
+30184.6 FLW pos=-1.8,0.1 f=0.11 lw=0.56 steer=+1.00 d11=0.385 tx=lost cells=4
+30185.5 FLW pos=-1.8,0.1 f=0.10 lw=0.56 steer=-1.00 d11=0.404 tx=lost cells=4
+30186.4 FLW pos=-1.8,0.1 f=0.10 lw=0.55 steer=+1.00 d11=0.403 tx=lost cells=4
+30187.3 FLW pos=-1.9,0.1 f=0.09 lw=0.55 steer=+1.00 d11=0.401 tx=lost cells=4
+30188.2 FLW pos=-1.9,0.1 f=0.09 lw=0.56 steer=+1.00 d11=0.402 tx=lost cells=4
+30189.1 FLW pos=-1.9,0.1 f=0.09 lw=0.54 steer=+1.00 d11=0.388 tx=lost cells=4
+30190.0 FLW pos=-2.0,0.1 f=0.10 lw=0.56 steer=+1.00 d11=0.394 tx=lost cells=4
+30190.8 FLW pos=-2.0,0.0 f=0.09 lw=0.56 steer=-1.00 d11=0.397 tx=lost cells=4
+30191.7 FLW pos=-2.0,0.0 f=0.10 lw=0.56 steer=+1.00 d11=0.400 tx=lost cells=5
+30192.6 FLW pos=-2.1,0.0 f=0.09 lw=0.56 steer=-1.00 d11=0.394 tx=lost cells=5
+30193.5 FLW pos=-2.1,0.0 f=0.10 lw=0.55 steer=+1.00 d11=0.385 tx=lost cells=5
+30194.4 FLW pos=-2.1,0.0 f=1.14 lw=0.55 steer=+0.59 d11=0.409 tx=lost cells=5
+30195.3 FLW pos=-2.1,-0.0 f=0.10 lw=0.55 steer=-1.00 d11=0.403 tx=lost cells=5
+30196.2 FLW pos=-2.2,-0.0 f=0.09 lw=0.55 steer=+1.00 d11=0.388 tx=lost cells=5
+30197.1 FLW pos=-2.2,-0.0 f=0.09 lw=0.54 steer=-1.00 d11=0.391 tx=lost cells=5
+30198.0 FLW pos=-2.2,-0.0 f=0.09 lw=0.54 steer=+1.00 d11=0.400 tx=lost cells=5
+30198.9 FLW pos=-2.3,-0.1 f=0.10 lw=0.55 steer=-1.00 d11=0.392 tx=lost cells=5
+30199.8 FLW pos=-2.3,-0.1 f=0.10 lw=0.55 steer=+1.00 d11=0.390 tx=lost cells=5
+30200.6 FLW pos=-2.3,-0.1 f=0.09 lw=0.55 steer=-1.00 d11=0.399 tx=lost cells=5
+30201.5 FLW pos=-2.4,-0.1 f=0.10 lw=0.54 steer=-1.00 d11=0.391 tx=lost cells=5
+30202.4 FLW pos=-2.4,-0.1 f=0.10 lw=0.56 steer=-1.00 d11=0.386 tx=lost cells=5
+30203.3 FLW pos=-2.4,-0.1 f=0.11 lw=0.55 steer=+1.00 d11=0.396 tx=lost cells=5
+30204.2 FLW pos=-2.4,-0.1 f=0.07 lw=0.55 steer=-1.00 d11=0.398 tx=lost cells=5
+30205.1 FLW pos=-2.5,-0.1 f=0.10 lw=0.54 steer=+1.00 d11=0.401 tx=lost cells=5
+30206.0 FLW pos=-2.5,-0.1 f=0.10 lw=0.57 steer=-1.00 d11=0.398 tx=lost cells=6
+30206.9 FLW pos=-2.5,-0.2 f=0.08 lw=0.56 steer=-1.00 d11=0.397 tx=lost cells=6
+30207.8 FLW pos=-2.6,-0.2 f=0.10 lw=0.56 steer=+1.00 d11=0.403 tx=lost cells=6
+30226.9 EP3 start d11=0.363 tx=lost
+30227.1 SUM pos=0.0,0.0 dist=0.0 cells=0 d11=0.367 tx=lost
+30228.0 FLW pos=-0.0,0.0 f=0.34 lw=1.86 steer=-0.85 d11=0.380 tx=lost cells=1
+30228.9 FLW pos=-0.0,0.1 f=0.31 lw=1.33 steer=-0.85 d11=0.379 tx=lost cells=1
+30229.8 FLW pos=-0.0,0.1 f=0.28 lw=1.20 steer=-0.85 d11=0.383 tx=lost cells=1
+30230.5 ESCAPE dir=-1 f=0.24 L=0.40 R=0.17
+30232.6 FLW pos=0.0,0.1 f=0.18 lw=0.41 steer=+0.85 d11=0.381 tx=lost cells=1
+30233.5 FLW pos=0.0,0.2 f=0.22 lw=0.39 steer=-0.85 d11=0.385 tx=lost cells=1
+30234.4 FLW pos=0.1,0.2 f=0.20 lw=0.36 steer=-0.85 d11=0.374 tx=lost cells=1
+30234.4 ESCAPE dir=-1 f=0.17 L=0.20 R=0.13
+30237.2 FLW pos=0.1,0.2 f=0.11 lw=0.22 steer=+0.85 d11=0.361 tx=lost cells=1
+30238.1 FLW pos=0.1,0.2 f=0.10 lw=0.20 steer=+0.85 d11=0.393 tx=lost cells=1
+30238.3 ESCAPE dir=-1 f=0.12 L=0.20 R=0.08
+30240.8 FLW pos=0.2,0.2 f=0.10 lw=0.23 steer=+0.85 d11=0.370 tx=lost cells=1
+30241.7 FLW pos=0.2,0.2 f=0.12 lw=0.21 steer=+0.85 d11=0.366 tx=lost cells=1
+30242.2 ESCAPE dir=-1 f=0.10 L=0.21 R=0.09
+30244.5 FLW pos=0.3,0.2 f=0.09 lw=0.19 steer=+0.85 d11=0.369 tx=lost cells=1
+30245.4 FLW pos=0.3,0.2 f=0.09 lw=0.22 steer=+0.85 d11=0.371 tx=lost cells=1
+30246.1 ESCAPE dir=-1 f=0.12 L=0.19 R=0.11
+30248.2 FLW pos=0.3,0.2 f=0.09 lw=0.21 steer=+0.85 d11=0.360 tx=lost cells=1
+30249.1 FLW pos=0.4,0.2 f=0.10 lw=0.22 steer=+0.85 d11=0.364 tx=lost cells=1
+30250.0 FLW pos=0.4,0.2 f=0.10 lw=0.22 steer=+0.85 d11=0.378 tx=lost cells=1
+30250.0 ESCAPE dir=-1 f=0.11 L=0.22 R=0.10
+30252.8 FLW pos=0.4,0.2 f=0.09 lw=0.24 steer=+0.85 d11=0.385 tx=lost cells=1
+30253.7 FLW pos=0.5,0.2 f=0.10 lw=0.22 steer=+0.85 d11=0.374 tx=lost cells=1
+30253.9 ESCAPE dir=-1 f=0.11 L=0.22 R=0.12
+30256.5 FLW pos=0.5,0.2 f=0.08 lw=0.26 steer=+0.85 d11=0.372 tx=lost cells=2
+30257.4 FLW pos=0.6,0.2 f=0.10 lw=0.20 steer=+0.85 d11=0.371 tx=lost cells=2
+30257.8 ESCAPE dir=1 f=0.10 L=0.21 R=0.25
+30260.2 FLW pos=0.6,0.2 f=0.15 lw=0.39 steer=-0.85 d11=0.371 tx=lost cells=2
+30261.0 FLW pos=0.6,0.2 f=0.13 lw=0.21 steer=-0.85 d11=0.367 tx=lost cells=2
+30261.8 ESCAPE dir=-1 f=0.11 L=0.19 R=0.09
+30263.8 FLW pos=0.7,0.2 f=0.08 lw=0.17 steer=+0.85 d11=0.368 tx=lost cells=2
+30264.7 FLW pos=0.7,0.2 f=0.08 lw=0.21 steer=+0.85 d11=0.364 tx=lost cells=2
+30265.6 FLW pos=0.7,0.2 f=0.11 lw=0.21 steer=+0.85 d11=0.376 tx=lost cells=2
+30265.7 ESCAPE dir=-1 f=0.11 L=0.19 R=0.11
+30268.4 FLW pos=0.8,0.2 f=0.10 lw=0.22 steer=+0.85 d11=0.385 tx=lost cells=2
+30269.3 FLW pos=0.8,0.2 f=0.10 lw=0.20 steer=+0.85 d11=0.368 tx=lost cells=2
+30269.6 ESCAPE dir=-1 f=0.09 L=0.20 R=0.10
+30272.1 FLW pos=0.8,0.2 f=0.09 lw=0.18 steer=+0.85 d11=0.376 tx=lost cells=2
+30273.0 FLW pos=0.9,0.2 f=0.10 lw=0.22 steer=+0.85 d11=0.364 tx=lost cells=2
+30273.5 ESCAPE dir=-1 f=0.10 L=0.19 R=0.10
+30275.8 FLW pos=0.9,0.2 f=0.09 lw=0.18 steer=+0.85 d11=0.375 tx=lost cells=2
+30276.7 FLW pos=0.9,0.1 f=0.10 lw=0.23 steer=+0.85 d11=0.374 tx=lost cells=2
+30277.4 ESCAPE dir=-1 f=0.10 L=0.20 R=0.12
+30279.5 FLW pos=1.0,0.1 f=0.08 lw=0.17 steer=+0.85 d11=0.368 tx=lost cells=2
+30280.4 FLW pos=1.0,0.1 f=0.09 lw=0.23 steer=+0.85 d11=0.382 tx=lost cells=3
+30281.2 FLW pos=1.1,0.1 f=0.09 lw=0.23 steer=+0.85 d11=0.375 tx=lost cells=3
+30281.3 ESCAPE dir=1 f=0.11 L=0.19 R=0.48
+30284.0 FLW pos=1.1,0.1 f=0.13 lw=0.21 steer=-0.85 d11=0.366 tx=lost cells=3
+30284.9 FLW pos=1.1,0.1 f=0.10 lw=0.19 steer=+0.85 d11=0.367 tx=lost cells=3
+30285.2 ESCAPE dir=-1 f=0.11 L=0.20 R=0.10
+30287.7 FLW pos=1.2,0.1 f=0.08 lw=0.18 steer=+0.85 d11=0.355 tx=lost cells=3
+30288.6 FLW pos=1.2,0.1 f=0.09 lw=0.21 steer=+0.85 d11=0.365 tx=lost cells=3
+30289.1 ESCAPE dir=-1 f=0.11 L=0.17 R=0.09
+30291.4 FLW pos=1.2,0.1 f=0.09 lw=0.17 steer=+0.85 d11=0.381 tx=lost cells=3
+30292.3 FLW pos=1.3,0.1 f=0.09 lw=0.22 steer=+0.85 d11=0.366 tx=lost cells=3
+30293.0 ESCAPE dir=-1 f=0.12 L=0.17 R=0.10
+30295.1 FLW pos=1.3,0.1 f=0.08 lw=0.15 steer=+0.85 d11=0.362 tx=lost cells=3
+30296.0 FLW pos=1.3,0.1 f=0.09 lw=0.21 steer=+0.85 d11=0.366 tx=lost cells=3
+30296.9 FLW pos=1.4,0.1 f=0.09 lw=0.21 steer=+0.85 d11=0.362 tx=lost cells=3
+30296.9 ESCAPE dir=-1 f=0.10 L=0.17 R=0.13
+30299.7 FLW pos=1.4,0.1 f=0.08 lw=0.17 steer=+0.85 d11=0.363 tx=lost cells=3
+30300.6 FLW pos=1.5,0.1 f=0.10 lw=0.23 steer=+0.85 d11=0.361 tx=lost cells=3
+30300.8 ESCAPE dir=-1 f=0.10 L=0.17 R=0.12
+30303.3 FLW pos=1.5,0.0 f=0.09 lw=0.18 steer=+0.85 d11=0.378 tx=lost cells=3
+30304.2 FLW pos=1.5,0.0 f=0.09 lw=0.23 steer=+0.85 d11=0.382 tx=lost cells=4
+30304.7 ESCAPE dir=1 f=0.09 L=0.17 R=0.46
+30307.0 FLW pos=1.6,0.0 f=0.13 lw=0.23 steer=-0.85 d11=0.360 tx=lost cells=4
+30307.9 FLW pos=1.6,0.0 f=0.12 lw=0.20 steer=+0.85 d11=0.381 tx=lost cells=4
+30308.6 ESCAPE dir=-1 f=0.12 L=0.19 R=0.08
+30310.7 FLW pos=1.6,0.0 f=0.09 lw=0.16 steer=+0.85 d11=0.381 tx=lost cells=4
+30311.6 FLW pos=1.7,0.0 f=0.09 lw=0.22 steer=+0.85 d11=0.361 tx=lost cells=4
+30312.5 FLW pos=1.7,0.0 f=0.08 lw=0.20 steer=+0.85 d11=0.375 tx=lost cells=4
+30312.5 ESCAPE dir=-1 f=0.10 L=0.21 R=0.09
+30315.3 FLW pos=1.7,0.0 f=0.09 lw=0.22 steer=+0.85 d11=0.381 tx=lost cells=4
+30316.2 FLW pos=1.8,0.0 f=0.10 lw=0.20 steer=+0.85 d11=0.368 tx=lost cells=4
+30316.4 ESCAPE dir=-1 f=0.10 L=0.17 R=0.07
+30347.0 EP3 start d11=0.359 tx=lost
+30347.1 SUM pos=0.0,0.0 dist=0.0 cells=0 d11=0.368 tx=lost
+30356.9 ESC dir=-1 f=0.20 L=0.40 R=0.17 n=1
+30358.7 ESC dir=1 f=0.11 L=0.43 R=0.54 n=2
+30360.6 UNJAM n=3 f=0.19
+30367.6 ESC dir=1 f=0.18 L=0.21 R=0.36 n=1
+30369.4 ESC dir=-1 f=0.19 L=0.51 R=0.42 n=2
+30371.2 UNJAM n=3 f=0.16
+30378.7 FLW pos=-0.3,-0.5 f=0.48 lw=0.25 d11=0.381 tx=lost cells=1
+30384.3 ESC dir=1 f=0.19 L=0.27 R=0.31 n=1
+30386.2 ESC dir=-1 f=0.19 L=0.49 R=0.30 n=2
+30388.0 UNJAM n=3 f=0.19
+30398.9 FLW pos=-0.5,-0.6 f=0.60 lw=1.45 d11=0.440 tx=lost cells=3
+30401.8 ESC dir=1 f=0.19 L=0.15 R=0.88 n=1
+30403.6 ESC dir=1 f=0.14 L=0.53 R=0.57 n=2
+30405.5 UNJAM n=3 f=0.13
+30419.8 ESC dir=1 f=0.19 L=0.13 R=0.39 n=1
+30421.7 ESC dir=-1 f=0.12 L=0.58 R=0.45 n=2
+30423.5 UNJAM n=3 f=0.18
+30436.7 FLW pos=-0.1,-0.8 f=0.50 lw=0.40 d11=0.445 tx=lost cells=3
+30444.0 ESC dir=1 f=0.18 L=0.27 R=0.32 n=1
+30446.4 ESC dir=1 f=0.19 L=0.10 R=0.28 n=2
+30448.7 UNJAM n=3 f=0.19
+30457.8 ESC dir=1 f=0.17 L=0.32 R=0.47 n=1
+30460.6 FLW pos=0.2,-0.5 f=0.62 lw=0.44 d11=0.394 tx=lost cells=3
+30469.6 ESC dir=1 f=0.10 L=0.22 R=0.36 n=2
+30471.5 UNJAM n=3 f=0.10

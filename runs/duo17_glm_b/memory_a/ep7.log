@@ -1,0 +1,265 @@
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #73
+start-hold {"d4": "183.0", "d11": 0.733, "d0": "0", "d5": "1", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #75
+hold {"d4": "185.7", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #77
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #79
+hold {"d4": "184.2", "d11": 0.73, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #81
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #83
+hold {"d4": "182.4", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #85
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #87
+hold {"d4": "180.4", "d11": 0.73, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #89
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #91
+hold {"d4": "182.3", "d11": 0.729, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #93
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #95
+hold {"d4": "182.1", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #97
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #99
+hold {"d4": "183.0", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #101
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #103
+hold {"d4": "182.5", "d11": 0.729, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #105
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #107
+hold {"d4": "184.5", "d11": 0.732, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #109
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #111
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #113
+hold {"d4": "182.8", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #115
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #117
+hold {"d4": "178.6", "d11": 0.732, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #119
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #121
+hold {"d4": "184.0", "d11": 0.728, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #123
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #125
+hold {"d4": "183.0", "d11": 0.729, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #127
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #129
+hold {"d4": "182.7", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20254", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #131
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #133
+hold {"d4": "180.8", "d11": 0.739, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #135
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #137
+hold {"d4": "179.8", "d11": 0.736, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #139
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #141
+hold {"d4": "183.2", "d11": 0.726, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #143
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #145
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #147
+hold {"d4": "181.4", "d11": 0.735, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #149
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #151
+hold {"d4": "182.1", "d11": 0.733, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #153
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #155
+hold {"d4": "184.3", "d11": 0.736, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #157
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #159
+hold {"d4": "182.9", "d11": 0.732, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #161
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #163
+hold {"d4": "182.8", "d11": 0.733, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #165
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #167
+hold {"d4": "183.2", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #169
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #171
+hold {"d4": "184.3", "d11": 0.733, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #173
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #175
+hold {"d4": "180.2", "d11": 0.728, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #177
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #179
+hold {"d4": "182.2", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #181
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #183
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #185
+hold {"d4": "183.5", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #187
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #189
+hold {"d4": "183.3", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #191
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #193
+hold {"d4": "185.9", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #195
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #197
+hold {"d4": "181.3", "d11": 0.733, "d0": "0", "d5": "0", "eL": "20254", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #1
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #3
+hold {"d4": "183.7", "d11": 0.728, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #5
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #7
+hold {"d4": "181.8", "d11": 0.72, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #9
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #11
+hold {"d4": "181.6", "d11": 0.737, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #13
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #15
+hold {"d4": "182.0", "d11": 0.728, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #17
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #19
+hold {"d4": "184.4", "d11": 0.736, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #21
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #23
+hold {"d4": "181.5", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "180.7", "d11": 0.732, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+hold {"d4": "183.7", "d11": 0.728, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+hold {"d4": "180.5", "d11": 0.728, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #25
+hold {"d4": "184.2", "d11": 0.733, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #27
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #29
+hold {"d4": "182.3", "d11": 0.73, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #31
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #33
+hold {"d4": "182.3", "d11": 0.73, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #35
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #37
+hold {"d4": "183.2", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #39
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #41
+hold {"d4": "184.7", "d11": 0.731, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #43
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #45
+hold {"d4": "182.8", "d11": 0.739, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #47
+hold {"d4": "184.6", "d11": 0.734, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+hold {"d4": "183.5", "d11": 0.732, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+hold {"d4": "181.5", "d11": 0.729, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+hold {"d4": "181.6", "d11": 0.735, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+hold {"d4": "183.9", "d11": 0.715, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #49
+hold {"d4": "184.4", "d11": 0.687, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #51
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #53
+hold {"d4": "180.6", "d11": 0.684, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #55
+hold {"d4": "181.3", "d11": 0.691, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+hold {"d4": "181.9", "d11": 0.686, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "184.7", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+hold {"d4": "179.7", "d11": 0.687, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #56
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #58
+hold {"d4": "184.7", "d11": 0.691, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #60
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #62
+hold {"d4": "183.1", "d11": 0.689, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+hold {"d4": "179.9", "d11": 0.694, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+hold {"d4": "178.5", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+hold {"d4": "184.1", "d11": 0.685, "d0": "0", "d5": "0", "eL": "20254", "eR": "19245"}
+hold {"d4": "180.5", "d11": 0.69, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #63
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #65
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #67
+hold {"d4": "181.2", "d11": 0.69, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #69
+hold {"d4": "178.9", "d11": 0.691, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "184.5", "d11": 0.686, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+hold {"d4": "183.9", "d11": 0.689, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+hold {"d4": "181.6", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #70
+hold {"d4": "181.0", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #72
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #74
+hold {"d4": "181.2", "d11": 0.682, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #76
+hold {"d4": "182.1", "d11": 0.689, "d0": "0", "d5": "0", "eL": "20254", "eR": "19245"}
+hold {"d4": "181.1", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+hold {"d4": "181.2", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+hold {"d4": "181.5", "d11": 0.689, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #77
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #79
+hold {"d4": "180.4", "d11": 0.687, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #81
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #83
+hold {"d4": "180.3", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "181.5", "d11": 0.69, "d0": "0", "d5": "0", "eL": "20254", "eR": "19246"}
+hold {"d4": "179.7", "d11": 0.684, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+hold {"d4": "181.7", "d11": 0.68, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "183.7", "d11": 0.686, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #84
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #86
+hold {"d4": "180.6", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #88
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #90
+hold {"d4": "184.4", "d11": 0.693, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+hold {"d4": "181.4", "d11": 0.694, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+hold {"d4": "181.9", "d11": 0.679, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+hold {"d4": "181.5", "d11": 0.686, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+hold {"d4": "180.5", "d11": 0.688, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #91
+hold {"d4": "182.4", "d11": 0.676, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #93
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #95
+hold {"d4": "181.9", "d11": 0.685, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #97
+hold {"d4": "182.4", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "181.9", "d11": 0.68, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+hold {"d4": "181.3", "d11": 0.684, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "182.4", "d11": 0.674, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "182.8", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "181.3", "d11": 0.678, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.4", "d11": 0.682, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.0", "d11": 0.679, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "179.9", "d11": 0.682, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.7", "d11": 0.685, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "185.1", "d11": 0.678, "d0": "0", "d5": "0", "eL": "20255", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.6", "d11": 0.678, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.8", "d11": 0.679, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.2", "d11": 0.68, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "185.7", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "181.1", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "180.3", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20254", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "184.9", "d11": 0.678, "d0": "0", "d5": "0", "eL": "20255", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "179.0", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20256", "eR": "19246"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "181.7", "d11": 0.681, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "181.7", "d11": 0.683, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "183.3", "d11": 0.679, "d0": "0", "d5": "0", "eL": "20256", "eR": "19244"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "181.9", "d11": 0.682, "d0": "0", "d5": "0", "eL": "20256", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "185.0", "d11": 0.682, "d0": "0", "d5": "0", "eL": "20254", "eR": "19245"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "182.4", "d11": 0.684, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+RX B HOLDING STILL. A: YOU SEE ME ON LIDAR? DRIVE TO ME ALONG THAT BEAM. OR REPLY BEAM<k> + YOUR HDG. KEEP TXING.
+hold {"d4": "180.3", "d11": 0.676, "d0": "0", "d5": "0", "eL": "20255", "eR": "19246"}

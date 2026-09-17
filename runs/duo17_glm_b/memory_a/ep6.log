@@ -1,0 +1,517 @@
+TX 'READY' -> tick=781480 goal=0 here=0 tx=1204:lost
+start {"d4": 227.8, "d11": 0.367, "eL": 15454, "eR": 14226, "d0": "0", "d5": "0"}
+leg1-a {"d4": 222.8, "d11": 0.376, "eL": 15455, "eR": 14227, "d0": "0", "d5": "0"}
+TX 'SEE' -> tick=781980 goal=0 here=0 tx=1205:lost
+TX 'A ALIVE' -> tick=782481 goal=0 here=0 tx=1206:lost
+TX 'GOAL NO' -> tick=782981 goal=0 here=0 tx=1207:lost
+TX 'STUCK NO' -> tick=783481 goal=0 here=0 tx=1208:lost
+TX 'READY A MOVING TO YOU' -> tick=783981 goal=0 here=0 tx=1209:lost
+TX 'NOTSEE' -> tick=784481 goal=0 here=0 tx=1210:lost
+TX 'GOAL YES' -> tick=784981 goal=0 here=0 tx=1211:lost
+TX 'READY' -> tick=785481 goal=0 here=0 tx=1212:lost
+leg1-b {"d4": 212.6, "d11": 0.357, "eL": 15601, "eR": 14440, "d0": "0", "d5": "0"}
+LEG1 dd=-0.019 ema=-0.019 lastturn=0 bad=0 best=0.376
+TX 'SEE' -> tick=785981 goal=0 here=0 tx=1213:lost
+TX 'A ALIVE' -> tick=786481 goal=0 here=0 tx=1214:lost
+turn90 {"d4": 216.7, "d11": 0.361, "eL": 15629, "eR": 14411, "d0": "0", "d5": "0"}
+leg2-a {"d4": 221.4, "d11": 0.362, "eL": 15627, "eR": 14411, "d0": "0", "d5": "0"}
+TX 'GOAL NO' -> tick=786981 goal=0 here=0 tx=1215:lost
+TX 'STUCK NO' -> tick=787481 goal=0 here=0 tx=1215:lost
+TX 'READY A MOVING TO YOU' -> tick=787982 goal=0 here=0 tx=1217:lost
+TX 'NOTSEE' -> tick=788482 goal=0 here=0 tx=1218:lost
+TX 'GOAL YES' -> tick=788982 goal=0 here=0 tx=1219:lost
+TX 'READY' -> tick=789482 goal=0 here=0 tx=1220:lost
+TX 'SEE' -> tick=789982 goal=0 here=0 tx=1221:lost
+TX 'A ALIVE' -> tick=790482 goal=0 here=0 tx=1221:lost
+leg2-b {"d4": 212.0, "d11": 0.501, "eL": 15771, "eR": 14623, "d0": "0", "d5": "0"}
+LEG2 dd=+0.139 ema=+0.139 lastturn=90 bad=1 best=0.376
+TX 'GOAL NO' -> tick=790985 goal=0 here=0 tx=1223:lost
+leg3-a {"d4": 208.2, "d11": 0.509, "eL": 15771, "eR": 14625, "d0": "0", "d5": "0"}
+TX 'STUCK NO' -> tick=791485 goal=0 here=0 tx=1224:lost
+TX 'READY A MOVING TO YOU' -> tick=791985 goal=0 here=0 tx=1225:lost
+TX 'NOTSEE' -> tick=792485 goal=0 here=0 tx=1226:lost
+TX 'GOAL YES' -> tick=792985 goal=0 here=0 tx=1227:lost
+TX 'READY' -> tick=793486 goal=0 here=0 tx=1227:lost
+TX 'SEE' -> tick=793986 goal=0 here=0 tx=1229:lost
+TX 'A ALIVE' -> tick=794486 goal=0 here=0 tx=1230:lost
+TX 'GOAL NO' -> tick=794986 goal=0 here=0 tx=1231:lost
+leg3-b {"d4": 193.5, "d11": 0.393, "eL": 15918, "eR": 14836, "d0": "0", "d5": "0"}
+LEG3 dd=-0.116 ema=+0.037 lastturn=90 bad=0 best=0.509
+leg4-a {"d4": 194.4, "d11": 0.385, "eL": 15918, "eR": 14837, "d0": "0", "d5": "0"}
+TX 'STUCK NO' -> tick=795486 goal=0 here=0 tx=1232:lost
+TX 'READY A MOVING TO YOU' -> tick=795986 goal=0 here=0 tx=1233:lost
+TX 'NOTSEE' -> tick=796486 goal=0 here=0 tx=1234:lost
+TX 'GOAL YES' -> tick=796986 goal=0 here=0 tx=1235:lost
+TX 'READY' -> tick=797486 goal=0 here=0 tx=1236:lost
+TX 'SEE' -> tick=797986 goal=0 here=0 tx=1237:lost
+TX 'A ALIVE' -> tick=798486 goal=0 here=0 tx=1238:lost
+TX 'GOAL NO' -> tick=798986 goal=0 here=0 tx=1239:lost
+TX 'STUCK NO' -> tick=799487 goal=0 here=0 tx=1240:lost
+leg4-b {"d4": 184.9, "d11": 0.333, "eL": 16062, "eR": 15049, "d0": "0", "d5": "0"}
+LEG4 dd=-0.052 ema=+0.001 lastturn=90 bad=0 best=0.509
+TX 'READY A MOVING TO YOU' -> tick=799987 goal=0 here=0 tx=1241:lost
+turn45 {"d4": 190.3, "d11": 0.336, "eL": 16076, "eR": 15037, "d0": "0", "d5": "0"}
+leg5-a {"d4": 187.9, "d11": 0.329, "eL": 16075, "eR": 15035, "d0": "0", "d5": "0"}
+TX 'NOTSEE' -> tick=800487 goal=0 here=0 tx=1242:lost
+TX 'GOAL YES' -> tick=800987 goal=0 here=0 tx=1243:lost
+TX 'READY' -> tick=801490 goal=0 here=0 tx=1244:lost
+TX 'SEE' -> tick=801990 goal=0 here=0 tx=1245:lost
+TX 'A ALIVE' -> tick=802490 goal=0 here=0 tx=1246:lost
+TX 'GOAL NO' -> tick=802990 goal=0 here=0 tx=1247:lost
+TX 'STUCK NO' -> tick=803490 goal=0 here=0 tx=1248:lost
+TX 'READY A MOVING TO YOU' -> tick=803990 goal=0 here=0 tx=1249:lost
+leg5-b {"d4": 177.4, "d11": 0.338, "eL": 16222, "eR": 15249, "d0": "0", "d5": "0"}
+LEG5 dd=+0.009 ema=+0.009 lastturn=90 bad=0 best=0.509
+leg6-a {"d4": 176.3, "d11": 0.342, "eL": 16221, "eR": 15250, "d0": "0", "d5": "0"}
+TX 'NOTSEE' -> tick=804490 goal=0 here=0 tx=1249:lost
+TX 'GOAL YES' -> tick=804990 goal=0 here=0 tx=1251:lost
+TX 'READY' -> tick=805490 goal=0 here=0 tx=1252:lost
+TX 'SEE' -> tick=805991 goal=0 here=0 tx=1253:lost
+TX 'A ALIVE' -> tick=806491 goal=0 here=0 tx=1254:lost
+TX 'GOAL NO' -> tick=806991 goal=0 here=0 tx=1255:lost
+TX 'STUCK NO' -> tick=807491 goal=0 here=0 tx=1256:lost
+TX 'READY A MOVING TO YOU' -> tick=807991 goal=0 here=0 tx=1257:lost
+TX 'NOTSEE' -> tick=808494 goal=0 here=0 tx=1258:lost
+leg6-b {"d4": 163.7, "d11": 0.337, "eL": 16366, "eR": 15462, "d0": "0", "d5": "0"}
+LEG6 dd=-0.005 ema=+0.003 lastturn=90 bad=0 best=0.509
+TX 'GOAL YES' -> tick=808994 goal=0 here=0 tx=1259:lost
+turn45 {"d4": 167.7, "d11": 0.341, "eL": 16381, "eR": 15448, "d0": "0", "d5": "0"}
+leg7-a {"d4": 171.8, "d11": 0.336, "eL": 16379, "eR": 15447, "d0": "0", "d5": "0"}
+TX 'READY' -> tick=809494 goal=0 here=0 tx=1260:lost
+TX 'SEE' -> tick=809994 goal=0 here=0 tx=1261:lost
+TX 'A ALIVE' -> tick=810494 goal=0 here=0 tx=1262:lost
+TX 'GOAL NO' -> tick=810999 goal=0 here=0 tx=1263:lost
+TX 'STUCK NO' -> tick=811499 goal=0 here=0 tx=1264:lost
+TX 'READY A MOVING TO YOU' -> tick=811999 goal=0 here=0 tx=1265:lost
+TX 'NOTSEE' -> tick=812500 goal=0 here=0 tx=1266:lost
+TX 'GOAL YES' -> tick=813000 goal=0 here=0 tx=1267:lost
+leg7-b {"d4": 175.1, "d11": 0.403, "eL": 16581, "eR": 15602, "d0": "0", "d5": "0"}
+LEG7 dd=+0.067 ema=+0.067 lastturn=90 bad=0 best=0.509
+TX 'READY' -> tick=813500 goal=0 here=0 tx=1268:lost
+leg8-a {"d4": 178.6, "d11": 0.398, "eL": 16579, "eR": 15600, "d0": "0", "d5": "0"}
+TX 'SEE' -> tick=814000 goal=0 here=0 tx=1269:lost
+TX 'A ALIVE' -> tick=814500 goal=0 here=0 tx=1270:lost
+TX 'GOAL NO' -> tick=815000 goal=0 here=0 tx=1271:lost
+TX 'STUCK NO' -> tick=815501 goal=0 here=0 tx=1272:lost
+TX 'READY A MOVING TO YOU' -> tick=816001 goal=0 here=0 tx=1273:lost
+TX 'NOTSEE' -> tick=816503 goal=0 here=0 tx=1274:lost
+TX 'GOAL YES' -> tick=817003 goal=0 here=0 tx=1275:lost
+TX 'READY' -> tick=817504 goal=0 here=0 tx=1276:lost
+leg8-b {"d4": 185.3, "d11": 0.406, "eL": 16781, "eR": 15755, "d0": "0", "d5": "0"}
+LEG8 dd=+0.008 ema=+0.043 lastturn=90 bad=0 best=0.509
+leg9-a {"d4": 185.1, "d11": 0.413, "eL": 16781, "eR": 15756, "d0": "0", "d5": "0"}
+TX 'SEE' -> tick=818004 goal=0 here=0 tx=1277:lost
+TX 'A ALIVE' -> tick=818504 goal=0 here=0 tx=1278:lost
+TX 'GOAL NO' -> tick=819004 goal=0 here=0 tx=1279:lost
+TX 'STUCK NO' -> tick=819504 goal=0 here=0 tx=1280:lost
+TX 'READY A MOVING TO YOU' -> tick=820004 goal=0 here=0 tx=1281:lost
+TX 'NOTSEE' -> tick=820504 goal=0 here=0 tx=1281:lost
+TX 'GOAL YES' -> tick=821005 goal=0 here=0 tx=1283:lost
+TX 'READY' -> tick=821505 goal=0 here=0 tx=1284:lost
+TX 'SEE' -> tick=822005 goal=0 here=0 tx=1285:lost
+leg9-b {"d4": 171.3, "d11": 0.356, "eL": 16925, "eR": 15968, "d0": "0", "d5": "0"}
+LEG9 dd=-0.057 ema=+0.003 lastturn=90 bad=0 best=0.509
+turn45 {"d4": 179.4, "d11": 0.361, "eL": 16939, "eR": 15954, "d0": "0", "d5": "0"}
+TX 'A ALIVE' -> tick=822505 goal=0 here=0 tx=1286:lost
+leg10-a {"d4": 177.4, "d11": 0.366, "eL": 16938, "eR": 15952, "d0": "0", "d5": "0"}
+TX 'GOAL NO' -> tick=823005 goal=0 here=0 tx=1286:lost
+TX 'STUCK NO' -> tick=823506 goal=0 here=0 tx=1288:lost
+TX 'READY A MOVING TO YOU' -> tick=824006 goal=0 here=0 tx=1289:lost
+TX 'NOTSEE' -> tick=824506 goal=0 here=0 tx=1289:lost
+TX 'GOAL YES' -> tick=825006 goal=0 here=0 tx=1291:lost
+TX 'READY' -> tick=825506 goal=0 here=0 tx=1292:lost
+TX 'SEE' -> tick=826007 goal=0 here=0 tx=1293:lost
+TX 'A ALIVE' -> tick=826507 goal=0 here=0 tx=1294:lost
+leg10-b {"d4": 166.2, "d11": 0.503, "eL": 17083, "eR": 16166, "d0": "0", "d5": "0"}
+LEG10 dd=+0.137 ema=+0.137 lastturn=90 bad=0 best=0.509
+leg11-a {"d4": 167.2, "d11": 0.495, "eL": 17084, "eR": 16166, "d0": "0", "d5": "0"}
+TX 'GOAL NO' -> tick=827007 goal=0 here=0 tx=1295:lost
+TX 'STUCK NO' -> tick=827507 goal=0 here=0 tx=1296:lost
+TX 'READY A MOVING TO YOU' -> tick=828007 goal=0 here=0 tx=1297:lost
+TX 'NOTSEE' -> tick=828507 goal=0 here=0 tx=1298:lost
+TX 'GOAL YES' -> tick=829008 goal=0 here=0 tx=1299:lost
+TX 'READY' -> tick=829508 goal=0 here=0 tx=1300:lost
+TX 'SEE' -> tick=830008 goal=0 here=0 tx=1301:lost
+TX 'A ALIVE' -> tick=830508 goal=0 here=0 tx=1302:lost
+TX 'GOAL NO' -> tick=831011 goal=0 here=0 tx=1303:lost
+leg11-b {"d4": 153.5, "d11": 0.49, "eL": 17227, "eR": 16380, "d0": "0", "d5": "0"}
+LEG11 dd=-0.005 ema=+0.080 lastturn=90 bad=0 best=0.509
+leg12-a {"d4": 150.3, "d11": 0.479, "eL": 17227, "eR": 16380, "d0": "0", "d5": "0"}
+TX 'STUCK NO' -> tick=831511 goal=0 here=0 tx=1304:lost
+TX 'READY A MOVING TO YOU' -> tick=832011 goal=0 here=0 tx=1305:lost
+TX 'NOTSEE' -> tick=832511 goal=0 here=0 tx=1306:lost
+TX 'GOAL YES' -> tick=833012 goal=0 here=0 tx=1307:lost
+TX 'READY' -> tick=833512 goal=0 here=0 tx=1308:lost
+TX 'SEE' -> tick=834012 goal=0 here=0 tx=1309:lost
+TX 'A ALIVE' -> tick=834512 goal=0 here=0 tx=1310:lost
+TX 'GOAL NO' -> tick=835012 goal=0 here=0 tx=1311:lost
+leg12-b {"d4": 165.1, "d11": 0.531, "eL": 17427, "eR": 16533, "d0": "0", "d5": "0"}
+LEG12 dd=+0.052 ema=+0.069 lastturn=90 bad=0 best=0.509
+TX 'STUCK NO' -> tick=835512 goal=0 here=0 tx=1312:lost
+leg13-a {"d4": 158.1, "d11": 0.542, "eL": 17429, "eR": 16533, "d0": "0", "d5": "0"}
+TX 'READY A MOVING TO YOU' -> tick=836012 goal=0 here=0 tx=1313:lost
+TX 'NOTSEE' -> tick=836512 goal=0 here=0 tx=1314:lost
+TX 'GOAL YES' -> tick=837013 goal=0 here=0 tx=1315:lost
+TX 'READY' -> tick=837513 goal=0 here=0 tx=1315:lost
+TX 'SEE' -> tick=838013 goal=0 here=0 tx=1317:lost
+TX 'A ALIVE' -> tick=838513 goal=0 here=0 tx=1318:lost
+TX 'GOAL NO' -> tick=839013 goal=0 here=0 tx=1319:lost
+TX 'STUCK NO' -> tick=839514 goal=0 here=0 tx=1320:lost
+leg13-b {"d4": 171.3, "d11": 0.46, "eL": 17629, "eR": 16688, "d0": "0", "d5": "0"}
+LEG13 dd=-0.082 ema=+0.009 lastturn=90 bad=0 best=0.542
+leg14-a {"d4": 169.2, "d11": 0.457, "eL": 17628, "eR": 16688, "d0": "0", "d5": "0"}
+TX 'READY A MOVING TO YOU' -> tick=840013 goal=0 here=0 tx=1321:lost
+TX 'NOTSEE' -> tick=840514 goal=0 here=0 tx=1322:lost
+TX 'GOAL YES' -> tick=841014 goal=0 here=0 tx=1323:lost
+TX 'READY' -> tick=841514 goal=0 here=0 tx=1324:lost
+TX 'SEE' -> tick=842014 goal=0 here=0 tx=1325:lost
+TX 'A ALIVE' -> tick=842515 goal=0 here=0 tx=1326:lost
+TX 'GOAL NO' -> tick=843015 goal=0 here=0 tx=1327:lost
+TX 'STUCK NO' -> tick=843515 goal=0 here=0 tx=1328:lost
+TX 'READY A MOVING TO YOU' -> tick=844015 goal=0 here=0 tx=1328:lost
+leg14-b {"d4": 177.7, "d11": 0.429, "eL": 17830, "eR": 16840, "d0": "0", "d5": "0"}
+LEG14 dd=-0.028 ema=-0.006 lastturn=90 bad=0 best=0.542
+TX 'NOTSEE' -> tick=844515 goal=0 here=0 tx=1330:lost
+turn45 {"d4": 185.2, "d11": 0.436, "eL": 17843, "eR": 16827, "d0": "0", "d5": "0"}
+leg15-a {"d4": 185.8, "d11": 0.438, "eL": 17844, "eR": 16825, "d0": "0", "d5": "0"}
+TX 'GOAL YES' -> tick=845015 goal=0 here=0 tx=1331:lost
+TX 'READY' -> tick=845516 goal=0 here=0 tx=1332:lost
+TX 'SEE' -> tick=846016 goal=0 here=0 tx=1333:lost
+TX 'A ALIVE' -> tick=846516 goal=0 here=0 tx=1334:lost
+TX 'GOAL NO' -> tick=847016 goal=0 here=0 tx=1335:lost
+TX 'STUCK NO' -> tick=847516 goal=0 here=0 tx=1336:lost
+TX 'READY A MOVING TO YOU' -> tick=848017 goal=0 here=0 tx=1337:lost
+TX 'NOTSEE' -> tick=848516 goal=0 here=0 tx=1337:lost
+leg15-b {"d4": 170.4, "d11": 0.391, "eL": 17988, "eR": 17038, "d0": "0", "d5": "0"}
+LEG15 dd=-0.047 ema=-0.047 lastturn=90 bad=0 best=0.542
+TX 'GOAL YES' -> tick=849017 goal=0 here=0 tx=1339:lost
+TX 'READY' -> tick=849517 goal=0 here=0 tx=1340:lost
+turn90 {"d4": 184.3, "d11": 0.423, "eL": 18015, "eR": 17010, "d0": "0", "d5": "0"}
+leg16-a {"d4": 185.8, "d11": 0.424, "eL": 18016, "eR": 17008, "d0": "0", "d5": "0"}
+TX 'SEE' -> tick=850017 goal=0 here=0 tx=1341:lost
+TX 'A ALIVE' -> tick=850517 goal=0 here=0 tx=1342:lost
+TX 'GOAL NO' -> tick=851018 goal=0 here=0 tx=1343:lost
+TX 'STUCK NO' -> tick=851518 goal=0 here=0 tx=1344:lost
+TX 'READY A MOVING TO YOU' -> tick=852020 goal=0 here=0 tx=1345:lost
+TX 'NOTSEE' -> tick=852521 goal=0 here=0 tx=1346:lost
+TX 'GOAL YES' -> tick=853021 goal=0 here=0 tx=1347:lost
+TX 'READY' -> tick=853522 goal=0 here=0 tx=1348:lost
+leg16-b {"d4": 172.1, "d11": 0.301, "eL": 18161, "eR": 17221, "d0": "0", "d5": "0"}
+LEG16 dd=-0.123 ema=-0.123 lastturn=90 bad=1 best=0.542
+TX 'SEE' -> tick=854025 goal=0 here=0 tx=1349:lost
+TX 'A ALIVE' -> tick=854525 goal=0 here=0 tx=1350:lost
+turn90 {"d4": 177.5, "d11": 0.265, "eL": 18188, "eR": 17192, "d0": "0", "d5": "0"}
+leg17-a {"d4": 180.1, "d11": 0.258, "eL": 18187, "eR": 17194, "d0": "0", "d5": "0"}
+TX 'GOAL NO' -> tick=855025 goal=0 here=0 tx=1350:lost
+TX 'STUCK NO' -> tick=855525 goal=0 here=0 tx=1352:lost
+TX 'READY A MOVING TO YOU' -> tick=856026 goal=0 here=0 tx=1353:lost
+TX 'NOTSEE' -> tick=856526 goal=0 here=0 tx=1354:lost
+TX 'GOAL YES' -> tick=857026 goal=0 here=0 tx=1355:lost
+TX 'READY' -> tick=857526 goal=0 here=0 tx=1355:lost
+TX 'SEE' -> tick=858027 goal=0 here=0 tx=1357:lost
+TX 'A ALIVE' -> tick=858527 goal=0 here=0 tx=1358:lost
+leg17-b {"d4": 165.6, "d11": 0.357, "eL": 18334, "eR": 17407, "d0": "0", "d5": "0"}
+LEG17 dd=+0.099 ema=+0.099 lastturn=90 bad=2 best=0.542
+TX 'GOAL NO' -> tick=859027 goal=0 here=0 tx=1359:lost
+leg18-a {"d4": 165.4, "d11": 0.358, "eL": 18334, "eR": 17405, "d0": "0", "d5": "0"}
+TX 'STUCK NO' -> tick=859527 goal=0 here=0 tx=1359:lost
+TX 'READY A MOVING TO YOU' -> tick=860028 goal=0 here=0 tx=1361:lost
+TX 'NOTSEE' -> tick=860528 goal=0 here=0 tx=1362:lost
+TX 'GOAL YES' -> tick=861028 goal=0 here=0 tx=1363:lost
+TX 'READY' -> tick=861528 goal=0 here=0 tx=1363:lost
+TX 'SEE' -> tick=862028 goal=0 here=0 tx=1365:lost
+TX 'A ALIVE' -> tick=862528 goal=0 here=0 tx=1366:lost
+TX 'GOAL NO' -> tick=863029 goal=0 here=0 tx=1367:lost
+leg18-b {"d4": 175.6, "d11": 0.376, "eL": 18532, "eR": 17559, "d0": "0", "d5": "0"}
+LEG18 dd=+0.018 ema=+0.067 lastturn=90 bad=0 best=0.542
+leg19-a {"d4": 174.7, "d11": 0.393, "eL": 18532, "eR": 17561, "d0": "0", "d5": "0"}
+TX 'STUCK NO' -> tick=863529 goal=0 here=0 tx=1368:lost
+TX 'READY A MOVING TO YOU' -> tick=864029 goal=0 here=0 tx=1369:lost
+TX 'NOTSEE' -> tick=864529 goal=0 here=0 tx=1370:lost
+TX 'GOAL YES' -> tick=865029 goal=0 here=0 tx=1370:lost
+TX 'READY' -> tick=865530 goal=0 here=0 tx=1372:lost
+TX 'SEE' -> tick=866030 goal=0 here=0 tx=1373:lost
+TX 'A ALIVE' -> tick=866530 goal=0 here=0 tx=1374:lost
+TX 'GOAL NO' -> tick=867030 goal=0 here=0 tx=1375:lost
+TX 'STUCK NO' -> tick=867530 goal=0 here=0 tx=1376:lost
+leg19-b {"d4": 164.5, "d11": 0.536, "eL": 18676, "eR": 17774, "d0": "0", "d5": "0"}
+LEG19 dd=+0.143 ema=+0.097 lastturn=90 bad=0 best=0.542
+leg20-a {"d4": 163.4, "d11": 0.543, "eL": 18678, "eR": 17772, "d0": "0", "d5": "0"}
+TX 'READY A MOVING TO YOU' -> tick=868031 goal=0 here=0 tx=1377:lost
+TX 'NOTSEE' -> tick=868531 goal=0 here=0 tx=1378:lost
+TX 'GOAL YES' -> tick=869032 goal=0 here=0 tx=1379:lost
+TX 'READY' -> tick=869532 goal=0 here=0 tx=1380:ok
+TX 'SEE' -> tick=870032 goal=0 here=0 tx=1380:ok
+TX 'A ALIVE' -> tick=870532 goal=0 here=0 tx=1382:lost
+TX 'GOAL NO' -> tick=871032 goal=0 here=0 tx=1383:lost
+TX 'STUCK NO' -> tick=871533 goal=0 here=0 tx=1384:lost
+leg20-b {"d4": 172.7, "d11": 0.518, "eL": 18878, "eR": 17926, "d0": "0", "d5": "0"}
+LEG20 dd=-0.025 ema=+0.048 lastturn=90 bad=0 best=0.543
+TX 'READY A MOVING TO YOU' -> tick=872033 goal=0 here=0 tx=1385:lost
+leg21-a {"d4": 174.2, "d11": 0.523, "eL": 18878, "eR": 17928, "d0": "0", "d5": "0"}
+TX 'NOTSEE' -> tick=872533 goal=0 here=0 tx=1386:lost
+TX 'GOAL YES' -> tick=873034 goal=0 here=0 tx=1387:lost
+TX 'READY' -> tick=873534 goal=0 here=0 tx=1388:lost
+TX 'SEE' -> tick=874034 goal=0 here=0 tx=1389:lost
+TX 'A ALIVE' -> tick=874534 goal=0 here=0 tx=1390:lost
+TX 'GOAL NO' -> tick=875034 goal=0 here=0 tx=1391:lost
+TX 'STUCK NO' -> tick=875534 goal=0 here=0 tx=1392:lost
+TX 'READY A MOVING TO YOU' -> tick=876035 goal=0 here=0 tx=1393:ok
+leg21-b {"d4": 178.5, "d11": 0.74, "eL": 19077, "eR": 18080, "d0": "0", "d5": "0"}
+LEG21 dd=+0.217 ema=+0.116 lastturn=90 bad=0 best=0.543
+leg22-a {"d4": 183.0, "d11": 0.746, "eL": 19079, "eR": 18082, "d0": "0", "d5": "0"}
+TX 'NOTSEE' -> tick=876535 goal=0 here=0 tx=1394:ok
+TX 'GOAL YES' -> tick=877035 goal=0 here=0 tx=1395:ok
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #1
+TX 'READY' -> tick=877535 goal=0 here=0 tx=1396:ok
+TX 'SEE' -> tick=878038 goal=0 here=0 tx=1397:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #2
+TX 'A ALIVE' -> tick=878539 goal=0 here=0 tx=1398:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #4
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #6
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #8
+TX 'GOAL NO' -> tick=879039 goal=0 here=0 tx=1399:ok
+TX 'STUCK NO' -> tick=879539 goal=0 here=0 tx=1400:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #9
+TX 'READY A MOVING TO YOU' -> tick=880040 goal=0 here=0 tx=1401:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #11
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #13
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #15
+TX 'NOTSEE' -> tick=880540 goal=0 here=0 tx=1402:ok
+leg22-b {"d4": 168.9, "d11": 0.741, "eL": 19223, "eR": 18295, "d0": "0", "d5": "0"}
+LEG22 dd=-0.005 ema=+0.067 lastturn=90 bad=0 best=0.746
+leg23-a {"d4": 168.9, "d11": 0.74, "eL": 19221, "eR": 18293, "d0": "0", "d5": "0"}
+TX 'GOAL YES' -> tick=881041 goal=0 here=0 tx=1403:ok
+TX 'READY' -> tick=881541 goal=0 here=0 tx=1404:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #16
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #18
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #20
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #22
+TX 'SEE' -> tick=882041 goal=0 here=0 tx=1405:ok
+TX 'A ALIVE' -> tick=882541 goal=0 here=0 tx=1406:ok
+TX 'GOAL NO' -> tick=883041 goal=0 here=0 tx=1407:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #23
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #25
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #27
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #29
+TX 'STUCK NO' -> tick=883542 goal=0 here=0 tx=1408:ok
+TX 'READY A MOVING TO YOU' -> tick=884042 goal=0 here=0 tx=1409:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #30
+TX 'NOTSEE' -> tick=884542 goal=0 here=0 tx=1410:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #32
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #34
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #36
+leg23-b {"d4": 177.4, "d11": 0.732, "eL": 19422, "eR": 18447, "d0": "0", "d5": "0"}
+LEG23 dd=-0.008 ema=+0.037 lastturn=90 bad=0 best=0.746
+TX 'GOAL YES' -> tick=885043 goal=0 here=0 tx=1411:ok
+leg24-a {"d4": 172.7, "d11": 0.733, "eL": 19423, "eR": 18449, "d0": "0", "d5": "0"}
+TX 'READY' -> tick=885545 goal=0 here=0 tx=1412:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #37
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #39
+TX 'SEE' -> tick=886045 goal=0 here=0 tx=1413:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #41
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #43
+TX 'A ALIVE' -> tick=886546 goal=0 here=0 tx=1414:ok
+TX 'GOAL NO' -> tick=887046 goal=0 here=0 tx=1415:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #44
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #1
+TX 'STUCK NO' -> tick=887547 goal=0 here=0 tx=1416:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #3
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #5
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #7
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #9
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #11
+TX 'READY A MOVING TO YOU' -> tick=888047 goal=0 here=0 tx=1417:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #13
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #15
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #17
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #19
+TX 'NOTSEE' -> tick=888547 goal=0 here=0 tx=1418:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #21
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #23
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #25
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #27
+TX 'GOAL YES' -> tick=889047 goal=0 here=0 tx=1418:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #29
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #31
+leg24-b {"d4": 185.6, "d11": 0.733, "eL": 19623, "eR": 18602, "d0": "0", "d5": "0"}
+LEG24 dd=+0.000 ema=+0.022 lastturn=90 bad=0 best=0.746
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #33
+leg25-a {"d4": 184.1, "d11": 0.735, "eL": 19622, "eR": 18602, "d0": "0", "d5": "0"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #35
+TX 'READY' -> tick=889548 goal=0 here=0 tx=1420:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #37
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #39
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #41
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #43
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #45
+TX 'SEE' -> tick=890048 goal=0 here=0 tx=1421:ok
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #47
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #49
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #51
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #53
+TX 'A ALIVE' -> tick=890548 goal=0 here=0 tx=1421:ok
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #55
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #57
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #59
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #61
+TX 'GOAL NO' -> tick=891049 goal=0 here=0 tx=1423:ok
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #63
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #65
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #67
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #69
+TX 'STUCK NO' -> tick=891549 goal=0 here=0 tx=1424:ok
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #71
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #73
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #75
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #77
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #79
+TX 'READY A MOVING TO YOU' -> tick=892050 goal=0 here=0 tx=1425:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #81
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #83
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #85
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #87
+TX 'NOTSEE' -> tick=892550 goal=0 here=0 tx=1426:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #89
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #91
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #93
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #95
+TX 'GOAL YES' -> tick=893050 goal=0 here=0 tx=1427:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #97
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #99
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #101
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #103
+TX 'READY' -> tick=893551 goal=0 here=0 tx=1428:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #105
+leg25-b {"d4": 171.5, "d11": 0.733, "eL": 19768, "eR": 18814, "d0": "0", "d5": "0"}
+LEG25 dd=-0.002 ema=+0.013 lastturn=90 bad=0 best=0.746
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #107
+leg26-a {"d4": 172.8, "d11": 0.728, "eL": 19767, "eR": 18815, "d0": "0", "d5": "0"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #109
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #111
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #113
+TX 'SEE' -> tick=894051 goal=0 here=0 tx=1429:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #115
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #117
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #119
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #121
+TX 'A ALIVE' -> tick=894551 goal=0 here=0 tx=1430:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #123
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #125
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #127
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #129
+TX 'GOAL NO' -> tick=895052 goal=0 here=0 tx=1430:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #131
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #133
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #135
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #137
+TX 'STUCK NO' -> tick=895552 goal=0 here=0 tx=1432:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #139
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #141
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #143
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #145
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #147
+TX 'READY A MOVING TO YOU' -> tick=896052 goal=0 here=0 tx=1433:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #149
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #151
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #153
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #155
+TX 'NOTSEE' -> tick=896553 goal=0 here=0 tx=1434:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #157
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #159
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #161
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #163
+TX 'GOAL YES' -> tick=897053 goal=0 here=0 tx=1435:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #165
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #167
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #169
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #171
+TX 'READY' -> tick=897553 goal=0 here=0 tx=1435:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #173
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #175
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #177
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #179
+leg26-b {"d4": 178.2, "d11": 0.736, "eL": 19967, "eR": 18969, "d0": "0", "d5": "0"}
+LEG26 dd=+0.008 ema=+0.011 lastturn=90 bad=0 best=0.746
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #181
+TX 'SEE' -> tick=898054 goal=0 here=0 tx=1437:ok
+leg27-a {"d4": 178.4, "d11": 0.734, "eL": 19968, "eR": 18970, "d0": "0", "d5": "0"}
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #183
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #185
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #187
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #189
+TX 'A ALIVE' -> tick=898554 goal=0 here=0 tx=1438:ok
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #191
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #193
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #195
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #197
+TX 'GOAL NO' -> tick=899054 goal=0 here=0 tx=1439:ok
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #199
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #201
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #203
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #205
+TX 'STUCK NO' -> tick=899555 goal=0 here=0 tx=1440:ok
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #207
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #209
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #211
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #213
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #215
+TX 'READY A MOVING TO YOU' -> tick=900055 goal=0 here=0 tx=1441:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #217
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #219
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #221
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #223
+TX 'NOTSEE' -> tick=900555 goal=0 here=0 tx=1442:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #225
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #227
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #229
+RX B-TO-A: B alive pos=0.0,-0.0 seek A+GOAL #231
+TX 'GOAL YES' -> tick=901055 goal=0 here=0 tx=1443:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #1
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #3
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #5
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #7
+TX 'READY' -> tick=901556 goal=0 here=0 tx=1444:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #9
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #11
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #13
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #15
+TX 'SEE' -> tick=902055 goal=0 here=0 tx=1445:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #17
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #19
+leg27-b {"d4": 172.4, "d11": 0.734, "eL": 20112, "eR": 19180, "d0": "0", "d5": "0"}
+LEG27 dd=+0.000 ema=+0.006 lastturn=90 bad=0 best=0.746
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #21
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #23
+TX 'A ALIVE' -> tick=902556 goal=0 here=0 tx=1446:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #25
+turn45 {"d4": 176.0, "d11": 0.734, "eL": 20126, "eR": 19166, "d0": "0", "d5": "0"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #27
+leg28-a {"d4": 175.0, "d11": 0.728, "eL": 20126, "eR": 19167, "d0": "0", "d5": "0"}
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #29
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #31
+TX 'GOAL NO' -> tick=903056 goal=0 here=0 tx=1446:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #33
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #35
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #37
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #39
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #41
+TX 'STUCK NO' -> tick=903556 goal=0 here=0 tx=1448:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #43
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #45
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #47
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #49
+TX 'READY A MOVING TO YOU' -> tick=904057 goal=0 here=0 tx=1449:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #51
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #53
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #55
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #57
+TX 'NOTSEE' -> tick=904558 goal=0 here=0 tx=1450:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #59
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #61
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #63
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #65
+TX 'GOAL YES' -> tick=905058 goal=0 here=0 tx=1451:ok
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #67
+RX B-TO-A: HEAR YOU. STOPPED. SEND POS/HDG #69
+RX B-TO-A: B alive pos=0.0,0.0 seek A+GOAL #71

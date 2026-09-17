@@ -1,0 +1,24 @@
+25673.8 HUNT2 start d11=0.722 h=138.2
+25676.9 SCAN tgt=134 s=0.719
+25679.1 SCAN tgt=179 s=0.718
+25681.4 SCAN tgt=224 s=0.721
+25683.8 SCAN tgt=269 s=0.723
+25686.1 SCAN tgt=314 s=0.721
+25688.3 SCAN tgt=359 s=0.721
+25690.8 SCAN tgt=44 s=0.721
+25693.1 SCAN tgt=89 s=0.721
+25693.1 BEST heading 269 s=0.723
+25700.1 IT1 drive h=268 s=0.705 best=0.723
+25701.1 worse, new heading 329
+25705.4 IT2 drive h=324 s=0.697 best=0.723
+25706.4 worse, new heading 269
+25710.8 IT3 drive h=271 s=0.690 best=0.723
+25711.8 worse, new heading 329
+25716.0 IT4 drive h=317 s=0.682 best=0.723
+25717.0 worse, new heading 269
+25721.2 IT5 drive h=268 s=0.677 best=0.723
+25722.3 worse, new heading 329
+25726.6 IT6 drive h=327 s=0.669 best=0.723
+25727.6 worse, new heading 269
+25732.0 IT7 drive h=267 s=0.661 best=0.723
+25733.0 worse, new heading 329

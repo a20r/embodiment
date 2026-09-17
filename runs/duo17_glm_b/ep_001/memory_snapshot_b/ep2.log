@@ -1,0 +1,26 @@
+29819.0 EP2 start d11=0.284 tx=lost
+29907.5 EP2 start d11=0.241 tx=lost
+29907.7 TURN front=0.21 L=0.44 R=0.38 -> tgt=79
+29912.2 SEG tgt=79 front=[0.29, 0.73, 1.53]
+29912.2 SUM pos=0.0,0.0 h=-1 dist=0.0 cells=1 d11=0.242 tx=lost
+29912.4 TURN front=0.29 L=0.41 R=0.16 -> tgt=159
+29915.8 SEG tgt=159 front=[0.37, 0.34, 0.3]
+29916.0 TURN front=0.30 L=0.57 R=0.34 -> tgt=243
+29923.6 SEG tgt=243 front=[0.41, 0.36, 0.3]
+29923.9 TURN front=0.28 L=0.34 R=0.30 -> tgt=334
+29926.4 SEG tgt=334 front=[0.29, 0.39, 0.33]
+29926.6 TURN front=0.29 L=0.43 R=0.30 -> tgt=54
+29931.4 SEG tgt=54 front=[0.3, 0.46, 0.88]
+29931.6 TURN front=0.30 L=0.40 R=0.29 -> tgt=140
+29934.6 SEG tgt=140 front=[0.61, 0.36, 0.29]
+29934.8 TURN front=0.28 L=0.44 R=0.33 -> tgt=227
+29941.8 SEG tgt=227 front=[0.64, 0.33, 0.3]
+29942.0 TURN front=0.31 L=0.26 R=0.28 -> tgt=134
+29944.2 SEG tgt=134 front=[0.29, 0.35, 2.05]
+29944.2 SUM pos=-0.1,0.2 h=136 dist=0.5 cells=1 d11=0.245 tx=lost
+29944.4 TURN front=0.29 L=0.32 R=0.55 -> tgt=50
+29952.5 SEG tgt=50 front=[0.31, 0.43, 0.82]
+29955.3 WANDER turn -> 170
+29955.5 TURN front=0.26 L=0.48 R=0.48 -> tgt=260
+29961.7 SEG tgt=260 front=[0.34, 0.28, 0.3]
+29961.9 TURN front=0.28 L=0.28 R=0.44 -> tgt=169

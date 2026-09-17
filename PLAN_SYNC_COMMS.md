@@ -61,6 +61,27 @@ Doubling the clock on GLM changed nothing: C1-C3 verbatim. The Fable pair, given
 
 Consequences for this plan: (1) add a harness rung, `duo.rx_wakes_agent` (default off): after an end_turn, instead of (or before) a blind nudge, the loop waits until a line is delivered to the bot (the receiver-side `rx_received` counter on /state) and re-prompts with the same neutral words as the nudge - never with the line itself, which would be the inbox leak section 3 rejects; the peer, not the harness, ends the pause; (2) `together_window_s` is 60 *sim* seconds = 30 wall seconds at rtf 2 while the README says one minute; define it in wall seconds (scale by rtf) and record the change in DECISIONS - all duos so far share the tighter window, so the ladder stays comparable; (3) the NL sentence is confounded with the model: run Fable on the plain mission_place README (or GLM on the _nl one) before attributing the conversation to either.
 
+### 1c. Pilot results (2026-09-17; all off the duo13_fable configuration, one flag each, 4 h clock)
+
+| run | model | flag | outcome | delivered | worded share | reply lines | exchanges >= 3 (longest) | cost |
+|---|---|---|---|---|---|---|---|---|
+| duo13_fable | Fable 5.1 max | none | agents stopped, 140 min | 91 | 0.22 | 4 | 0 (2) | $18 |
+| duo17 | Fable 5.1 max | tx_status | **solved 79.8 min** | 581 | 0.15 | 33 | 7 (4) | $22 |
+| duo18 | Fable 5.1 max | rx_blocking | agents stopped, 98 min | 695 | 0.21 | 36 | 5 (4) | $20 |
+| duo19 | Fable 5.1 max | rx_wakes_agent | cut by sandbox restart, 134 min (2 wakes; b held the goal, a had the route) | 268 | 0.32 | 19 | 2 (4) | - |
+| duo19b | Fable 5.1 max | rx_wakes_agent | **solved 63.7 min** (0 wakes: never exercised) | 105 | 0.55 | 23 | 7 (4) | $17 |
+| duo13_long | GLM-5.3-Flash max | none | wallclock, never met | 2611 | 0.00 | 19 | 0 (2) | ~$1 |
+| duo17_glm_b | GLM-5.3-Flash max | tx_status | wallclock; b on the goal from 169 min, a never arrived | 3845 | 0.07 | 59 | 9 (7) | ~$3 |
+
+What the pilots settle and what they do not:
+
+- **Two joint arrivals, the first in the ladder.** Both required an explicit re-arrival protocol negotiated over the radio after the pair stood on the goal with `goal=0` ("arrivals must be within 1 min ... step OUT and back IN"; "RE-ARRIVAL PROTOCOL: both step OFF, reply OFF, you step ON and send ON, I step on within 15 s"). The together window is now a coordination problem the agents solve, not a hidden rule they trip over.
+- **tx_status was used as designed.** duo17's b calibrated the proximity threshold from the ACK ("two transmissions succeeded (tx=ok) when d11 >= 0.647"), 19 retry-until-ok runs; duo17_glm_b's b referred to `tx=` in 15 turns and ran the first GLM conversation in the ladder (59 reply lines, an exchange of 7, against 19 lines and no exchange in duo13_long).  The link metrics move with the flag on both models.
+- **The solve cannot yet be credited to any flag.** duo19b solved without its flag ever firing, i.e. the baseline configuration (natural-language licence, wall-second window) can succeed on its own.  duo13_fable vs duo19b is one variable apart only in the window semantics.  Replication on fresh seeds is the next spend.
+- **rx_blocking was not used.** Both duo18 agents wrote hold-open listener scripts within their first turns, before contact, so the blocking read competed with a habit already formed; 4-6 execs ever touched the port directly.  The primitive is inert unless something makes ask-and-wait the cheap path at the moment of first contact.
+- **C6 persists on Fable** (duo18 both bots, duo13_fable b): agents hand control to an autopilot and stop on a self-imposed token budget read off the system prompt's context statement.  rx_wakes_agent is the right repair when a line arrives (duo19: two wakes, both re-engaged), but the statement itself is the cause and is a harness change of its own.
+- **GLM's remaining failure is locomotion, not comms**: duo17_glm_b's a logged 18,730 collisions, wedged in a pocket for long stretches while b waited on the goal for 70 min.
+
 ---
 
 ## 2. Recommendation: per-line transmit status on the status port (rung 1), blocking RX read (rung 2)

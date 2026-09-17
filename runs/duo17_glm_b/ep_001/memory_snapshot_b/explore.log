@@ -1,0 +1,476 @@
+23153.6 ST {"tick": "64538", "goal": "0", "here": "0", "tx": "261:lost"} b=0.59 d0=0
+0 d5=0
+0
+23183.7 ST {"tick": "67544", "goal": "0", "here": "0", "tx": "271:ok"} b=0.93 d0=0 d5=0
+0
+23188.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23188.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23188.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23188.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23188.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23188.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23189.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23190.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23191.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23192.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23193.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23194.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23195.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23196.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23197.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23198.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23199.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23200.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23201.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23202.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23203.9 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.0 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.1 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.2 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.3 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.4 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.5 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.6 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.7 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.8 RX HELLO other robot, this is robot A. Do you copy? Reply on radio.
+23204.9 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.0 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.1 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.2 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.3 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.4 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.5 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.6 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.7 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.8 RX Who are you? What does 12 mean? Do you know where the goal is? I am robot at unknown position, wedged in tight pocket.
+23205.9 RX ack: A 15 pos -30.2,21.0
+23206.0 RX ack: A 15 pos -30.2,21.0
+23206.1 RX ack: A 15 pos -30.2,21.0
+23206.2 RX ack: A 15 pos -30.2,21.0
+23206.3 RX ack: A 15 pos -30.2,21.0
+23206.4 RX ack: A 15 pos -30.2,21.0
+23206.5 RX ack: A 15 pos -30.2,21.0
+23206.6 RX ack: A 15 pos -30.2,21.0
+23206.7 RX ack: A 15 pos -30.2,21.0
+23206.8 RX ack: A 15 pos -30.2,21.0
+23206.9 RX ack: A 15 pos -30.2,21.0
+23207.0 RX ack: A 15 pos -30.2,21.0
+23207.1 RX ack: A 15 pos -30.2,21.0
+23207.2 RX ack: A 15 pos -30.2,21.0
+23207.3 RX ack: A 15 pos -30.2,21.0
+23207.4 RX ack: A 15 pos -30.2,21.0
+23207.5 RX ack: A 15 pos -30.2,21.0
+23207.6 RX ack: A 15 pos -30.2,21.0
+23207.7 RX ack: A 15 pos -30.2,21.0
+23207.8 RX ack: A 15 pos -30.2,21.0
+23207.9 RX ack: A 15 pos -30.2,21.0
+23208.0 RX ack: A 15 pos -30.2,21.0
+23208.1 RX ack: A 15 pos -30.2,21.0
+23208.2 RX ack: A 15 pos -30.2,21.0
+23208.3 RX ack: A 15 pos -30.2,21.0
+23208.4 RX ack: A 15 pos -30.2,21.0
+23208.5 RX ack: A 15 pos -30.2,21.0
+23208.6 RX ack: A 15 pos -30.2,21.0
+23208.7 RX ack: A 15 pos -30.2,21.0
+23208.8 RX ack: A 15 pos -30.2,21.0
+23208.9 RX ack: A 15 pos -30.2,21.0
+23209.0 RX ack: A 15 pos -30.2,21.0
+23209.1 RX ack: A 15 pos -30.2,21.0
+23209.2 RX ack: A 15 pos -30.2,21.0
+23209.3 RX ack: A 15 pos -30.2,21.0
+23209.4 RX ack: A 15 pos -30.2,21.0
+23209.5 RX ack: A 15 pos -30.2,21.0
+23209.6 RX ack: A 15 pos -30.2,21.0
+23209.7 RX ack: A 15 pos -30.2,21.0
+23209.8 RX ack: A 15 pos -30.2,21.0
+23209.9 RX ack: A 15 pos -30.2,21.0
+23210.0 RX ack: A 15 pos -30.2,21.0
+23210.1 RX ack: A 15 pos -30.2,21.0
+23210.2 RX ack: A 15 pos -30.2,21.0
+23210.3 RX ack: A 15 pos -30.2,21.0
+23210.4 RX ack: A 15 pos -30.2,21.0
+23210.5 RX ack: A 15 pos -30.2,21.0
+23210.6 RX ack: A 15 pos -30.2,21.0
+23210.7 RX ack: A 15 pos -30.2,21.0
+23210.8 RX ack: A 15 pos -30.2,21.0
+23210.9 RX ack: A 15 pos -30.2,21.0
+23211.0 RX ack: A 15 pos -30.2,21.0
+23211.1 RX ack: A 15 pos -30.2,21.0
+23211.2 RX ack: A 15 pos -30.2,21.0
+23211.3 RX ack: A 15 pos -30.2,21.0
+23211.4 RX ack: A 15 pos -30.2,21.0
+23211.5 RX ack: A 15 pos -30.2,21.0
+23211.6 RX ack: A 15 pos -30.2,21.0
+23211.7 RX ack: A 15 pos -30.2,21.0
+23211.8 RX ack: A 15 pos -30.2,21.0
+23211.9 RX ack: A 15 pos -30.2,21.0
+23212.0 RX ack: A 15 pos -30.2,21.0
+23212.1 RX ack: A 15 pos -30.2,21.0
+23212.2 RX ack: A 15 pos -30.2,21.0
+23212.3 RX ack: A 15 pos -30.2,21.0
+23212.4 RX ack: A 15 pos -30.2,21.0
+23212.5 RX ack: A 15 pos -30.2,21.0
+23212.6 RX ack: A 15 pos -30.2,21.0
+23212.7 RX ack: A 15 pos -30.2,21.0
+23212.8 RX ack: A 15 pos -30.2,21.0
+23212.9 RX ack: A 15 pos -30.2,21.0
+23213.0 RX ack: A 15 pos -30.2,21.0
+23213.1 RX ack: A 15 pos -30.2,21.0
+23213.2 RX ack: A 15 pos -30.2,21.0
+23213.3 RX ack: A 15 pos -30.2,21.0
+23213.4 RX ack: A 15 pos -30.2,21.0
+23213.5 RX ack: A 15 pos -30.2,21.0
+23213.6 RX ack: A 15 pos -30.2,21.0
+23213.7 RX ack: A 15 pos -30.2,21.0
+23213.8 RX ack: A 15 pos -30.2,21.0
+23213.8 ST {"tick": "70559", "goal": "0", "here": "0", "tx": "534:busy"} b=0.76 d0=0 d5=0
+23213.9 RX ack: A 15 pos -30.2,21.0
+23214.0 RX ack: A 15 pos -30.2,21.0
+23214.1 RX ack: A 15 pos -30.2,21.0
+23214.2 RX ack: A 15 pos -30.2,21.0
+23214.3 RX ack: A 15 pos -30.2,21.0
+23214.4 RX ack: A 15 pos -30.2,21.0
+23214.5 RX ack: A 15 pos -30.2,21.0
+23214.6 RX ack: A 15 pos -30.2,21.0
+23214.7 RX ack: A 15 pos -30.2,21.0
+23214.8 RX ack: A 15 pos -30.2,21.0
+23214.9 RX ack: A 15 pos -30.2,21.0
+23215.0 RX ack: A 15 pos -30.2,21.0
+23215.1 RX ack: A 15 pos -30.2,21.0
+23215.2 RX ack: A 15 pos -30.2,21.0
+23215.3 RX ack: A 15 pos -30.2,21.0
+23215.4 RX ack: A 15 pos -30.2,21.0
+23215.5 RX ack: A 15 pos -30.2,21.0
+23215.6 RX ack: A 15 pos -30.2,21.0
+23215.7 RX ack: A 15 pos -30.2,21.0
+23215.8 RX ack: A 15 pos -30.2,21.0
+23215.9 RX ack: A 15 pos -30.2,21.0
+23216.0 RX ack: A 15 pos -30.2,21.0
+23216.1 RX ack: A 15 pos -30.2,21.0
+23216.2 RX ack: A 15 pos -30.2,21.0
+23216.3 RX ack: A 15 pos -30.2,21.0
+23216.4 RX ack: A 15 pos -30.2,21.0
+23216.5 RX ack: A 15 pos -30.2,21.0
+23216.6 RX ack: A 15 pos -30.2,21.0
+23216.7 RX ack: A 15 pos -30.2,21.0
+23216.8 RX ack: A 15 pos -30.2,21.0
+23216.9 RX ack: A 15 pos -30.2,21.0
+23217.0 RX ack: A 15 pos -30.2,21.0
+23217.1 RX ack: A 15 pos -30.2,21.0
+23217.2 RX ack: A 15 pos -30.2,21.0
+23217.3 RX ack: A 15 pos -30.2,21.0
+23217.4 RX ack: A 15 pos -30.2,21.0
+23217.5 RX ack: A 15 pos -30.2,21.0
+23217.6 RX ack: A 15 pos -30.2,21.0
+23217.7 RX ack: A 15 pos -30.2,21.0
+23217.8 RX ack: A 15 pos -30.2,21.0
+23217.9 RX ack: A 15 pos -30.2,21.0
+23218.0 RX ack: A 15 pos -30.2,21.0
+23218.1 RX ack: A 15 pos -30.2,21.0
+23218.2 RX ack: A 15 pos -30.2,21.0
+23218.3 RX ack: A 15 pos -30.2,21.0
+23218.4 RX ack: A 15 pos -30.2,21.0
+23218.5 RX ack: A 15 pos -30.2,21.0
+23218.6 RX ack: A 15 pos -30.2,21.0
+23218.7 RX ack: A 15 pos -30.2,21.0
+23218.8 RX ack: A 15 pos -30.2,21.0
+23218.9 RX ack: A 15 pos -30.2,21.0
+23219.0 RX ack: A 15 pos -30.2,21.0
+23219.1 RX ack: A 15 pos -30.2,21.0
+23219.2 RX ack: A 15 pos -30.2,21.0
+23219.3 RX ack: A 15 pos -30.2,21.0
+23219.4 RX ack: A 15 pos -30.2,21.0
+23219.5 RX ack: A 15 pos -30.2,21.0
+23219.6 RX ack: A 15 pos -30.2,21.0
+23219.7 RX ack: A 15 pos -30.2,21.0
+23219.8 RX ack: A 15 pos -30.2,21.0
+23219.9 RX ack: A 15 pos -30.2,21.0
+23220.0 RX ack: A 15 pos -30.2,21.0
+23220.1 RX ack: A 15 pos -30.2,21.0
+23220.2 RX ack: A 15 pos -30.2,21.0
+23220.3 RX ack: A 15 pos -30.2,21.0
+23220.4 RX ack: A 15 pos -30.2,21.0
+23220.5 RX ack: A 15 pos -30.2,21.0
+23220.6 RX ack: A 15 pos -30.2,21.0
+23220.7 RX ack: A 15 pos -30.2,21.0
+23220.8 RX ack: A 15 pos -30.2,21.0
+23220.9 RX ack: A 15 pos -30.2,21.0
+23221.0 RX ack: A 15 pos -30.2,21.0
+23221.1 RX ack: A 15 pos -30.2,21.0
+23221.2 RX ack: A 15 pos -30.2,21.0
+23221.3 RX ack: A 15 pos -30.2,21.0
+23221.4 RX ack: A 15 pos -30.2,21.0
+23221.5 RX ack: A 15 pos -30.2,21.0
+23221.6 RX ack: A 15 pos -30.2,21.0
+23221.7 RX ack: A 15 pos -30.2,21.0
+23221.8 RX ack: A 15 pos -30.2,21.0
+23221.9 RX ack: A 15 pos -30.2,21.0
+23222.0 RX ack: A 15 pos -30.2,21.0
+23222.1 RX ack: A 15 pos -30.2,21.0
+23222.2 RX ack: A 15 pos -30.2,21.0
+23222.3 RX ack: A 15 pos -30.2,21.0
+23222.4 RX ack: A 15 pos -30.2,21.0
+23222.5 RX ack: A 15 pos -30.2,21.0
+23222.6 RX ack: A 15 pos -30.2,21.0
+23222.7 RX ack: A 15 pos -30.2,21.0
+23222.8 RX ack: A 15 pos -30.2,21.0
+23222.9 RX ack: A 15 pos -30.2,21.0
+23223.0 RX ack: A 15 pos -30.2,21.0
+23223.1 RX ack: A 15 pos -30.2,21.0
+23223.2 RX ack: A 15 pos -30.2,21.0
+23223.3 RX ack: A 15 pos -30.2,21.0
+23223.4 RX ack: A 15 pos -30.2,21.0
+23223.5 RX ack: A 15 pos -30.2,21.0
+23223.6 RX ack: A 15 pos -30.2,21.0
+23223.7 RX ack: A 15 pos -30.2,21.0
+23223.8 RX ack: A 15 pos -30.2,21.0
+23223.9 RX ack: A 15 pos -30.2,21.0
+23224.0 RX ack: A 15 pos -30.2,21.0
+23224.1 RX ack: A 15 pos -30.2,21.0
+23224.2 RX ack: A 15 pos -30.2,21.0
+23224.3 RX ack: A 15 pos -30.2,21.0
+23224.4 RX ack: A 15 pos -30.2,21.0
+23224.5 RX ack: A 15 pos -30.2,21.0
+23224.6 RX ack: A 15 pos -30.2,21.0
+23224.7 RX ack: A 15 pos -30.2,21.0
+23224.8 RX ack: A 15 pos -30.2,21.0
+23224.9 RX ack: A 15 pos -30.2,21.0
+23225.0 RX ack: A 15 pos -30.2,21.0
+23225.1 RX ack: A 15 pos -30.2,21.0
+23225.2 RX ack: A 15 pos -30.2,21.0
+23225.3 RX ack: A 15 pos -30.2,21.0
+23225.4 RX ack: A 15 pos -30.2,21.0
+23225.5 RX ack: A 15 pos -30.2,21.0
+23225.6 RX ack: A 15 pos -30.2,21.0
+23225.7 RX ack: A 15 pos -30.2,21.0
+23225.8 RX ack: A 15 pos -30.2,21.0
+23225.9 RX ack: A 15 pos -30.2,21.0
+23226.0 RX ack: A 15 pos -30.2,21.0
+23226.1 RX ack: A 15 pos -30.2,21.0
+23226.3 RX ack: A 15 pos -30.2,21.0
+23226.4 RX ack: A 15 pos -30.2,21.0
+23226.5 RX ack: A 15 pos -30.2,21.0
+23226.6 RX ack: A 15 pos -30.2,21.0
+23226.7 RX ack: A 15 pos -30.2,21.0
+23226.8 RX ack: A 15 pos -30.2,21.0
+23226.9 RX ack: A 15 pos -30.2,21.0
+23227.0 RX ack: A 15 pos -30.2,21.0
+23227.1 RX ack: A 15 pos -30.2,21.0
+23227.2 RX ack: A 15 pos -30.2,21.0
+23227.3 RX ack: A 15 pos -30.2,21.0
+23227.4 RX ack: A 15 pos -30.2,21.0
+23227.5 RX ack: A 15 pos -30.2,21.0
+23227.6 RX ack: A 15 pos -30.2,21.0
+23227.7 RX ack: A 15 pos -30.2,21.0
+23227.8 RX ack: A 15 pos -30.2,21.0
+23227.9 RX ack: A 15 pos -30.2,21.0
+23228.0 RX ack: A 15 pos -30.2,21.0
+23228.1 RX ack: A 15 pos -30.2,21.0
+23228.2 RX ack: A 15 pos -30.2,21.0
+23228.3 RX ack: A 15 pos -30.2,21.0
+23228.4 RX ack: A 15 pos -30.2,21.0
+23228.5 RX ack: A 15 pos -30.2,21.0
+23228.6 RX ack: A 15 pos -30.2,21.0
+23228.7 RX ack: A 15 pos -30.2,21.0
+23228.8 RX ack: A 15 pos -30.2,21.0
+23228.9 RX ack: A 15 pos -30.2,21.0
+23229.0 RX ack: A 15 pos -30.2,21.0
+23229.1 RX ack: A 15 pos -30.2,21.0
+23229.2 RX ack: A 15 pos -30.2,21.0
+23229.3 RX ack: A 15 pos -30.2,21.0
+23229.4 RX ack: A 15 pos -30.2,21.0
+23229.5 RX ack: A 15 pos -30.2,21.0
+23229.6 RX ack: A 15 pos -30.2,21.0
+23229.7 RX ack: A 15 pos -30.2,21.0
+23229.8 RX ack: A 15 pos -30.2,21.0
+23229.9 RX ack: A 15 pos -30.2,21.0
+23230.0 RX ack: A 15 pos -30.2,21.0
+23230.1 RX ack: A 15 pos -30.2,21.0
+23230.2 RX ack: A 15 pos -30.2,21.0
+23230.3 RX ack: A 15 pos -30.2,21.0
+23230.4 RX ack: A 15 pos -30.2,21.0
+23230.5 RX ack: A 15 pos -30.2,21.0
+23230.6 RX ack: A 15 pos -30.2,21.0
+23230.7 RX ack: A 15 pos -30.2,21.0
+23230.8 RX ack: A 15 pos -30.2,21.0
+23230.9 RX ack: A 15 pos -30.2,21.0
+23231.0 RX ack: A 15 pos -30.2,21.0
+23231.1 RX ack: A 15 pos -30.2,21.0
+23231.2 RX ack: A 15 pos -30.2,21.0
+23231.3 RX ack: A 15 pos -30.2,21.0
+23231.4 RX ack: A 15 pos -30.2,21.0
+23231.5 RX ack: A 15 pos -30.2,21.0
+23231.6 RX ack: A 15 pos -30.2,21.0
+23231.7 RX ack: A 15 pos -30.2,21.0
+23231.8 RX ack: A 15 pos -30.2,21.0
+23231.9 RX ack: A 15 pos -30.2,21.0
+23232.0 RX ack: A 15 pos -30.2,21.0
+23232.1 RX ack: A 15 pos -30.2,21.0
+23232.2 RX ack: A 15 pos -30.2,21.0
+23232.3 RX ack: A 15 pos -30.2,21.0
+23232.4 RX ack: A 15 pos -30.2,21.0
+23232.5 RX ack: A 15 pos -30.2,21.0
+23232.6 RX ack: A 15 pos -30.2,21.0
+23232.7 RX ack: A 15 pos -30.2,21.0
+23232.8 RX ack: A 15 pos -30.2,21.0
+23232.9 RX ack: A 15 pos -30.2,21.0
+23233.0 RX ack: A 15 pos -30.2,21.0
+23233.1 RX ack: A 15 pos -30.2,21.0
+23233.2 RX ack: A 15 pos -30.2,21.0
+23233.3 RX ack: A 15 pos -30.2,21.0
+23233.4 RX ack: A 15 pos -30.2,21.0
+23233.5 RX ack: A 15 pos -30.2,21.0
+23233.6 RX ack: A 15 pos -30.2,21.0
+23233.7 RX ack: A 15 pos -30.2,21.0
+23233.8 RX ack: A 15 pos -30.2,21.0
+23233.9 RX ack: A 15 pos -30.2,21.0
+23234.0 RX ack: A 15 pos -30.2,21.0
+23234.1 RX ack: A 15 pos -30.2,21.0
+23234.2 RX ack: A 15 pos -30.2,21.0
+23234.3 RX ack: A 15 pos -30.2,21.0
+23234.4 RX ack: A 15 pos -30.2,21.0
+23234.5 RX ack: A 15 pos -30.2,21.0
+23234.6 RX ack: A 15 pos -30.2,21.0
+23234.7 RX ack: A 15 pos -30.2,21.0
+23234.8 RX ack: A 15 pos -30.2,21.0
+23234.9 RX ack: A 15 pos -30.2,21.0
+23235.0 RX ack: A 15 pos -30.2,21.0
+23235.1 RX ack: A 15 pos -30.2,21.0
+23235.2 RX ack: A 15 pos -30.2,21.0
+23235.3 RX ack: A 15 pos -30.2,21.0
+23235.4 RX ack: A 15 pos -30.2,21.0
+23235.5 RX ack: A 15 pos -30.2,21.0

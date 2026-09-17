@@ -1,0 +1,69 @@
+def choose_dir(l):
+    def b(i):
+        v=l[i%16]; return v if v>0 else 2.5
+    right=min(b(10),b(11),b(12),b(13)); left=min(b(3),b(4),b(5),b(6))
+    return (1 if right>left else -1),left,right
+
+ESC_N={'n':0,'t':0.0}
+def follow(dt=0.12):
+    lwf=0.3
+    omark=None
+    seg=0
+    while True:
+        seg+=1
+        l=med_lidar()
+        if l is None: R.stop(); time.sleep(0.05); continue
+        upd()
+        GRID.add((int(pose['x']*2),int(pose['y']*2)))
+        def b(i):
+            v=l[i%16]; return v if v>0 else 2.5
+        f=min(b(15),b(0),b(1))
+        lw_use=b(4) if b(4)<2.4 else min(b(3),b(5))
+        lwf=0.7*lwf+0.3*lw_use
+        now=time.time()
+        if now-ESC_N['t']>20: ESC_N['n']=0
+        if f<=0.20:
+            d,left,right=choose_dir(l)
+            ESC_N['n']+=1; ESC_N['t']=now
+            if ESC_N['n']>=3:
+                L('UNJAM n=%d f=%.2f'%(ESC_N['n'],f))
+                R.motors(-16,-16); time.sleep(1.3)
+                R.motors(26,-26); time.sleep(2.8)
+                R.motors(-13,-13); time.sleep(0.4)
+                R.motors(20,20); time.sleep(2.0)
+                R.stop(); ESC_N['n']=0
+                continue
+            L('ESC dir=%d f=%.2f L=%.2f R=%.2f n=%d'%(d,f,left,right,ESC_N['n']))
+            R.motors(-13,-13); time.sleep(0.55)
+            if d>0: R.motors(22,-11)
+            else: R.motors(-11,22)
+            time.sleep(1.25)
+            R.stop()
+            continue
+        if f<=0.38:
+            d,left,right=choose_dir(l)
+            base=15
+            if d>0: R.motors(base+10,base-8)
+            else: R.motors(base-8,base+10)
+            time.sleep(0.5)
+            continue
+        steer=max(-0.6,min(0.6,(lwf-0.30)*2.0))
+        if b(3)<0.45 and b(5)>b(3)+0.2: steer=max(steer,0.3)
+        if b(5)<0.45 and b(3)>b(5)+0.2: steer=min(steer,-0.3)
+        base=20
+        ml=int(base+steer*14); mr=int(base-steer*14)
+        R.motors(max(-25,min(28,ml)),max(-25,min(28,mr)))
+        time.sleep(dt)
+        if seg%50==0:
+            s=sig(2,0.04)
+            L('FLW pos=%.1f,%.1f f=%.2f lw=%.2f d11=%.3f tx=%s cells=%d'%(pose['x'],pose['y'],f,lwf,s,txstate(),len(GRID)))
+            SCAN.write('%.2f %.2f %s\n'%(pose['x'],pose['y'],','.join('%.2f'%v for v in l))); SCAN.flush()
+        if omark is None: omark=(R.odom(),time.time())
+        else:
+            (o,t)=omark; o2=R.odom()
+            if time.time()-t>12:
+                if abs(o2[0]-o[0])+abs(o2[1]-o[1])<10:
+                    L('NOMOVE - unjam')
+                    ESC_N['n']=5; ESC_N['t']=0
+                omark=(o2,time.time())
+

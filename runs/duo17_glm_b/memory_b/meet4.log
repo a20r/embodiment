@@ -1,0 +1,58 @@
+31996.2 MEET4 start. PHASE=ASK (hold 60s, A asked to approach)
+32056.9 PHASE=PROBE18 d11=0.601 hdg=36
+32059.7 probe18 leg0 ok=True d11=0.581
+32062.0 probe18 leg1 ok=True d11=0.557
+32064.3 probe18 leg2 ok=True d11=0.536
+32066.7 probe18 leg3 ok=True d11=0.520
+32068.0 probe18 leg4 ok=False d11=0.510
+32068.0 blocked - arc right retry
+32070.7 probe18 leg5 ok=False d11=0.493
+32070.7 blocked - arc right retry
+32072.8 probe18 leg6 ok=False d11=0.486
+32072.8 blocked - arc right retry
+32075.1 probe18 leg7 ok=False d11=0.489
+32075.1 blocked - arc right retry
+32077.2 probe18 leg8 ok=False d11=0.485
+32077.2 blocked - arc right retry
+32079.2 probe18 leg9 ok=False d11=0.481
+32079.2 blocked - arc right retry
+32081.3 probe18 leg10 ok=False d11=0.481
+32081.3 blocked - arc right retry
+32083.4 probe18 leg11 ok=False d11=0.471
+32083.4 blocked - arc right retry
+32085.5 probe18 leg12 ok=False d11=0.480
+32085.5 blocked - arc right retry
+32087.7 probe18 leg13 ok=False d11=0.474
+32087.7 blocked - arc right retry
+32089.8 probe18 leg14 ok=False d11=0.469
+32089.8 blocked - arc right retry
+32092.0 probe18 leg15 ok=False d11=0.471
+32092.0 blocked - arc right retry
+32094.1 probe18 leg16 ok=False d11=0.464
+32094.1 blocked - arc right retry
+32096.3 probe18 leg17 ok=False d11=0.463
+32096.3 blocked - arc right retry
+32098.3 probe18 leg18 ok=False d11=0.461
+32098.3 blocked - arc right retry
+32100.5 probe18 leg19 ok=False d11=0.456
+32100.5 blocked - arc right retry
+32102.5 probe18 leg20 ok=False d11=0.457
+32102.5 blocked - arc right retry
+32104.6 probe18 leg21 ok=False d11=0.460
+32104.6 blocked - arc right retry
+32106.8 probe18 leg22 ok=False d11=0.449
+32106.8 blocked - arc right retry
+32108.9 probe18 leg23 ok=False d11=0.448
+32108.9 blocked - arc right retry
+32111.0 probe18 leg24 ok=False d11=0.450
+32111.0 blocked - arc right retry
+32113.1 probe18 leg25 ok=False d11=0.451
+32113.1 blocked - arc right retry
+32115.2 probe18 leg26 ok=False d11=0.448
+32115.2 blocked - arc right retry
+32117.3 probe18 leg27 ok=False d11=0.448
+32117.3 blocked - arc right retry
+32119.5 probe18 leg28 ok=False d11=0.457
+32119.5 blocked - arc right retry
+32121.5 probe18 leg29 ok=False d11=0.448
+32121.5 blocked - arc right retry
