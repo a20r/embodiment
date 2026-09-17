@@ -19,7 +19,8 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   maze.style=organic`). Other subcommands: `reset`, `perturb`, `quiz`,
   `ablate`, `savings`, `report`, `shell`, `tail`, `dashboard`, `smoke`.
 - `python scripts/duo_check.py` — host-side validation of duo mode
-  (50 checks, no docker needed; boots a throwaway daemon on port 8798).
+  (92 checks, no docker needed; boots throwaway daemons on ports
+  8798 and 8799).
 - `--set lidar3d.enabled=true` swaps the 16-beam `lidar` port for a
   `lidar3d` point-cloud port (sensor-frame `x,y,z` triples, `;`-separated,
   ~55 kB frames; walls have height, floor at z=0). Gate for lidar3d
@@ -72,6 +73,12 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   peer is lidar-visible and collidable; one TX/RX port pair per bot
   delivers raw lines only within `duo.comms_range`, silently dropping
   the rest; every TX is ground-truth logged with delivered/dist.
+  Link-layer rungs, default off: `duo.tx_status` (status port reports
+  `tx=<n>:<ok|lost|busy>`), `duo.rx_blocking` (RX read waits for a
+  line; README must name `{rx}`), `duo.rx_wakes_agent` (harness
+  re-prompts a stopped bot when a line is delivered).
+  `duo.together_window_s` is wall seconds. `evals/comms.py` scores
+  contingent replies from ground truth.
 - Determinism: all randomness flows from named seeded streams via
   `stable_seed()` (crc32, never `hash()`); the seed tuple includes
   maze seed, episode index, and (duo) bot id.
@@ -91,7 +98,8 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   '*/devfs/*' -exec git add -f {} +` (`runs/` is gitignored; exclude
   `__pycache__` too). Replay pages live at `runs/<series>/replay.html`.
 - Ports: 8787 default daemon, 8790+ for concurrent runs, 8791 smoke,
-  8798 duo_check, 8080 dashboard. A stale daemon on a port is detected
+  8796 lidar3d_check, 8797 llm_compat_check, 8798/8799 duo_check,
+  8080 dashboard. A stale daemon on a port is detected
   by the /health pid check — kill it, don't reuse blindly.
 - This box's dockerd dies periodically: kill stale containerd pids,
   `rm /var/run/docker.pid`, restart dockerd, `until docker info`.

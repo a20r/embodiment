@@ -67,6 +67,7 @@ def make_handler(daemon):
                         b["device_stats"] = bridge.stats()
                         bots.append(b)
                     snap["bots"] = bots
+                    snap["joint_window_ticks"] = daemon.joint_window_ticks
                 self._json(snap)
             elif u.path == "/maze":
                 self._json(daemon.maze.to_dict())

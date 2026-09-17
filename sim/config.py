@@ -43,6 +43,8 @@ DEFAULTS = {
         # fires for both only when both are in the goal region with
         # entries within together_window_s of each other.
         "objective": "solo",
+        # Wall-clock seconds (the README's "within one minute" is what
+        # the agents experience); the daemon scales by realtime_factor.
         "together_window_s": 60,
         # Anonymous signal-strength port that rises as the peer nears
         # (yelling in a maze: through walls, long tail).
@@ -55,6 +57,18 @@ DEFAULTS = {
         # bandwidth, blind repetition is optimal and no reliability
         # protocol needs to emerge.
         "tx_rate_hz": 0,
+        # Link-layer feedback (radio auto-ACK): the status port reports
+        # the fate of the most recent TX write as tx=<n>:<ok|lost|busy>.
+        "tx_status": False,
+        # Reading the RX port blocks until a line has arrived (UART
+        # semantics); a reader that gives up consumes nothing.  Only
+        # for README variants that name {rx}.
+        "rx_blocking": False,
+        # Harness: a bot that ends its turn is re-prompted when a line
+        # is delivered to it (receive interrupt), instead of a blind
+        # nudge; falls back to the nudge after rx_wake_timeout_s (wall).
+        "rx_wakes_agent": False,
+        "rx_wake_timeout_s": 600,
     },
     "noise_profile": "default_noisy",
     "maze": {
@@ -261,6 +275,15 @@ def resolve(config_path=None, overrides=None):
         raise ValueError("robot.model must be 'diffdrive' or 'car'")
     if cfg["duo"].get("objective", "solo") not in ("solo", "together"):
         raise ValueError("duo.objective must be 'solo' or 'together'")
+    duo = cfg["duo"]
+    for k in ("tx_status", "rx_blocking", "rx_wakes_agent"):
+        if duo.get(k) and not duo.get("enabled"):
+            raise ValueError(f"duo.{k} requires duo.enabled: true")
+    for k in ("together_window_s", "rx_wake_timeout_s"):
+        v = duo.get(k, 0)
+        if isinstance(v, bool) or not (isinstance(v, (int, float))
+                                       and v > 0):
+            raise ValueError(f"duo.{k} must be a number > 0")
     l3 = cfg.get("lidar3d", {})
     if l3.get("enabled"):
         num = (int, float)

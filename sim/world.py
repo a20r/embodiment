@@ -110,6 +110,11 @@ class World:
         rate = float(duo.get("tx_rate_hz", 0) or 0)
         self.tx_min_ticks = (cfg["sim"]["tick_hz"] / rate) if rate > 0 \
             else 0
+        self.tx_status = bool(duo.get("tx_status"))
+        self.rx_blocking = bool(duo.get("rx_blocking"))
+        # Set by the peer on delivery; the blocking RX bridge loop
+        # sleeps on it instead of polling the queue.
+        self.rx_event = threading.Event()
         self.model = cfg["robot"].get("model", "diffdrive")
         self.car_cfg = cfg["robot"].get("car", {})
         self.actuators = ["accel", "steer"] if self.model == "car" \
@@ -176,8 +181,11 @@ class World:
             self.x, self.y, self.theta = sx, sy, self.spawn_theta % TWO_PI
             self.serial_rx = deque(maxlen=self.duo_queue)
             self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0,
-                          "tx_rate_dropped": 0}
+                          "tx_rate_dropped": 0, "rx_received": 0}
             self._last_tx_tick = None
+            # (write counter, outcome of the latest write); one tuple
+            # assignment so the status reader never sees a torn pair.
+            self.tx_last = (0, "idle")
             self.v = 0.0
             self.w = 0.0
             self.phi = 0.0             # car: current steering angle, rad
@@ -681,14 +689,19 @@ class World:
         buffering).  Lock-free toward the peer — deque.append is atomic
         and we never take the peer's lock (see set_peer)."""
         line = raw[:self.duo_max_bytes]
+        # Every write advances the counter, dropped ones included, so
+        # a status reader can tell each write's fate apart.
+        seq = self.tx_last[0] + 1
         # Duty cycle: excess lines vanish before the range gate, with
-        # no error back to the writer.  Logged in aggregate — a spam
-        # loop must not flood the ground-truth record.
+        # no error back to the writer (unless tx_status reports busy).
+        # Logged in aggregate — a spam loop must not flood the
+        # ground-truth record.
         if self.tx_min_ticks:
             now = self.tick
             if self._last_tx_tick is not None and \
                     now - self._last_tx_tick < self.tx_min_ticks:
                 self.comms["tx_rate_dropped"] += 1
+                self.tx_last = (seq, "busy")
                 if self.comms["tx_rate_dropped"] % 500 == 1:
                     self._event(dict(
                         event="comms_rate_drop",
@@ -702,15 +715,25 @@ class World:
             dist = math.hypot(self.x - peer.x, self.y - peer.y)
             if dist <= self.duo_range:
                 peer.serial_rx.append(line)
+                # Receiver-side count and wake-up; the peer's own thread
+                # never touches this key, so the increment cannot race.
+                peer.comms["rx_received"] += 1
+                peer.rx_event.set()
                 peer._event(dict(event="comms_rx", frm=self.bot_id,
                                  line=line))
                 delivered = True
         self.comms["tx"] += 1
         if delivered:
             self.comms["tx_delivered"] += 1
-        self._event(dict(event="comms_tx", line=line,
-                         delivered=delivered,
-                         dist=None if dist is None else round(dist, 3)))
+        self.tx_last = (seq, "ok" if delivered else "lost")
+        rec = dict(event="comms_tx", line=line, delivered=delivered,
+                   dist=None if dist is None else round(dist, 3))
+        if self.tx_status:
+            # Only with the flag: records of earlier runs stay
+            # byte-identical in shape.
+            rec["seq"] = seq
+            rec["outcome"] = self.tx_last[1]
+        self._event(rec)
 
     def set_joint_goal(self):
         """Both bots arrived together — latch the goal on this world.
@@ -750,6 +773,26 @@ class World:
         self.comms["rx_read"] += 1
         return line
 
+    def serial_rx_peek(self):
+        """Oldest pending line without consuming it (None if empty);
+        the blocking RX path commits only after the write succeeded."""
+        try:
+            return self.serial_rx[0]
+        except IndexError:
+            return None
+
+    def serial_rx_commit(self, line=None):
+        """Consume the line just served.  If a burst evicted it from
+        the bounded deque meanwhile, the head is a newer line that was
+        never served, so nothing is popped."""
+        try:
+            if line is not None and self.serial_rx[0] is not line:
+                return
+            self.serial_rx.popleft()
+        except IndexError:
+            return
+        self.comms["rx_read"] += 1
+
     def status_frame(self):
         with self.lock:
             line = f"tick={self.tick} goal={int(self.goal_reached)}"
@@ -759,6 +802,9 @@ class World:
                 # goal region has no instrument that says so (the duo5
                 # GOALFOUND pathology).
                 line += f" here={int(self.region_entry is not None)}"
+            if self.peer is not None and self.tx_status:
+                # Radio auto-ACK: fate of the most recent TX write.
+                line += f" tx={self.tx_last[0]}:{self.tx_last[1]}"
             if self.maze.locked and self._door_segments:
                 dcx, dcy = self._door_center
                 if math.hypot(self.x - dcx, self.y - dcy) < 0.5:
@@ -775,6 +821,7 @@ class World:
                 "bot_id": self.bot_id,
                 "comms": dict(self.comms),
                 "rx_pending": len(self.serial_rx),
+                "tx_last": list(self.tx_last),
                 "pose": [self.x, self.y, self.theta],
                 "cmd": list(self.cmd.values()),
                 "cmd_eff": list(self.cmd_eff.values()),

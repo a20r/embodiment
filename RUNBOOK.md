@@ -127,6 +127,22 @@ python scripts/make_duo_replay.py duo1 ep_001 duo1_replay.html "Duo"
 Validate the machinery without spending tokens:
 `python scripts/duo_check.py` (host-side, no docker needed).
 
+Link-layer rungs (all default off; each is a one-variable delta):
+
+```bash
+--set duo.tx_status=true      # status port adds tx=<n>:<ok|lost|busy>
+--set duo.rx_blocking=true    # RX read blocks until a line arrives;
+                              #   only for READMEs that name {rx}
+--set duo.rx_wakes_agent=true # a bot that ends its turn is re-prompted
+                              #   when a line is delivered to it
+                              #   (duo.rx_wake_timeout_s, default 600)
+```
+
+`duo.together_window_s` is wall-clock seconds (scaled by
+`sim.realtime_factor` inside the daemon), matching the README's "within
+one minute of each other".  Contingent-reply metrics for a finished
+duo: `python -m evals.comms <series>`.
+
 ## 7. Other model providers
 
 The agent model is selected by `model:` (config.yaml or `--set model=`).

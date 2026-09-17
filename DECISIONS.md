@@ -306,9 +306,11 @@ knowledge about ports transfers between them.  Design choices:
   port per bot.  A line written to TX (raw text, capped at
   `max_line_bytes`) is delivered into the peer's RX queue only if the
   peer is within `comms_range` (default 0.8 m) at that instant;
-  otherwise it vanishes silently — no carrier detect, no ACK.  RX reads
+  otherwise it vanishes silently — no carrier detect, no ACK (the
+  default; `duo.tx_status` adds a radio auto-ACK, see below).  RX reads
   drain one line per open (empty line = nothing pending, queue keeps
-  the newest `queue_depth` lines).  Every TX is ground-truth logged
+  the newest `queue_depth` lines; `duo.rx_blocking` makes the read
+  wait instead, see below).  Every TX is ground-truth logged
   with delivered/dist, so "shouting into the void" is measurable.
 - **Prompting stays minimal.**  README.minimal_duo adds exactly one
   sentence: a pair of ports is a short-range transceiver.  Not that a
@@ -323,10 +325,11 @@ knowledge about ports transfers between them.  Design choices:
   under the GIL; one tick of staleness is harmless), and RX queues are
   lock-free deques.
 
-Verified by `scripts/duo_check.py` (26 checks: spawn clearance, peer
-blip, disc-disc collision + bump, range gating, byte cap, queue cap,
-FIFO end-to-end a->b with comms accounting) plus a full mock duo
-episode through two containers; the solo smoke suite is unchanged.
+Verified by `scripts/duo_check.py` (26 checks at the time: spawn
+clearance, peer blip, disc-disc collision + bump, range gating, byte
+cap, queue cap, FIFO end-to-end a->b with comms accounting; 86 with
+the later duo mechanisms) plus a full mock duo episode through two
+containers; the solo smoke suite is unchanged.
 
 ### Duo variant: named transceiver ports (readme_variant minimal_duo_named)
 
@@ -344,7 +347,8 @@ daemon instead of leaking it onto the port.
 The cooperative objective: neither bot completes alone.  Each world
 tracks goal-region occupancy (region_enter/region_exit events, no solo
 latch); the daemon fires the goal on BOTH worlds only when both are in
-the region with entry times within duo.together_window_s (60 s) of
+the region with entry times within duo.together_window_s (60 s; sim
+seconds then, wall seconds since the entry below) of
 each other.  A bot that waits in the region while its window lapses
 must leave and re-enter — so a coordinated crossing is genuinely the
 easiest path, which is the point.  README.minimal_duo_mission states
@@ -592,3 +596,53 @@ comparison against duo13/duo13_long isolates whether an explicit
 licence to converse (rather than a protocol design) changes what gets
 said.  The link itself is unchanged: same range gate, same 0.5 Hz cap,
 same silent drops.
+
+### Link-layer rungs: TX status, blocking RX, receive-wake (all default off)
+
+PLAN_SYNC_COMMS.md diagnoses why the duos beacon instead of converse:
+the cap eats exactly the worded lines with no signal (duo12 b lost
+330k writes and never learned the cap existed), silence is attributed
+to the peer, ask-and-wait is not a single action, and - after
+duo13_fable - a bot that leaves the loop cannot be brought back by a
+delivered line.  Three mechanisms, each its own config key so every
+pilot differs from its baseline in one flag:
+
+- **`duo.tx_status`** - a MAC-layer auto-ACK, the thing every
+  802.15.4/LoRa confirmed radio reports.  Every TX write advances a
+  per-bot counter and the status frame gains ` tx=<n>:<outcome>`,
+  outcome `ok` (delivered), `lost` (out of range), `busy` (duty-cycle
+  drop; the counter still advances so a status reader sees the write).
+  This supersedes "no carrier detect, no ACK" above; the hypothesis
+  that an invisible cap would breed ACK protocols was falsified by
+  duo12/13 (0 discoveries).  Information-set change: `ok` reveals
+  in-range at that instant, which peer_signal already exposes noisily.
+  The counter/outcome pair is one tuple assignment so the status
+  reader never sees a torn pair; `comms_tx` events gain `seq` and
+  `outcome` only with the flag on, so older records keep their shape.
+- **`duo.rx_blocking`** - UART semantics: the bridge opens the FIFO's
+  write end only when a line is pending, so a reader's open() blocks
+  on an empty queue and `timeout 50 cat <rx>` is "wait up to 50 s for
+  the next line".  The line is committed only after the write
+  succeeded, so a reader that gave up consumed nothing.  An idle
+  blocking port looks like an actuator to a probing agent, so the
+  harness refuses the flag unless the README names {rx}.  Dropped-read
+  noise applies as on every sensor (EOF with nothing; the line stays).
+- **`duo.rx_wakes_agent`** - a receive interrupt for the controller:
+  when the agent ends its turn without a command, the harness holds
+  the turn until a line is delivered to that bot (`rx_received` on
+  /state), then re-prompts with the same words as the blind nudge -
+  only the timing differs.  After `rx_wake_timeout_s` (wall) the old
+  three-nudge policy applies unchanged.  Host-side only: the counter
+  never reaches the container; the agent learns that a line arrived
+  the way it always did, by reading the port.  duo13_fable's b would
+  have been woken 60 times.
+
+### together_window_s is wall-clock seconds
+
+The README promises "within one minute of each other" and the agents
+live in wall time, but the daemon compared entry ticks against 60
+*sim* seconds - 30 wall seconds at realtime_factor 2.  The window is
+now scaled by the configured rtf (a runtime /rtf change does not
+retune it).  Every duo through duo13_fable ran with the tighter
+window, so the ladder is comparable among itself; the change is the
+one honest delta carried into duo17+.

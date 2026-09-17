@@ -129,10 +129,17 @@ class Daemon:
         self.tick_hz = cfg["sim"]["tick_hz"]
         # together objective: both bots must be in the goal region with
         # entries within the window; then the goal latches on both.
+        # The window is wall-clock seconds (what the agents experience
+        # and what the README promises), so it scales with the rtf the
+        # episode was configured with; a runtime /rtf change does not
+        # retune it.  Unthrottled (rtf 0) has no wall clock: sim
+        # seconds then.
         self.joint_window_ticks = None
         if duo and cfg["duo"].get("objective") == "together":
+            scale = self.rtf if self.rtf > 0 else 1.0
             self.joint_window_ticks = int(
-                cfg["duo"].get("together_window_s", 60) * self.tick_hz)
+                cfg["duo"].get("together_window_s", 60) * self.tick_hz
+                * scale)
         self.running = True
         self._server = None
 
