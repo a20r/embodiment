@@ -1,0 +1,32 @@
+32957.9 MEET5 gradient ascent start d11=0.528
+32961.9 probe +0 ok=True d11=0.506
+32969.9 probe -90 ok=True d11=0.480
+32975.9 probe +180 ok=True d11=0.504
+32975.9 no improve; rotate base -> 92 (stuck 1)
+32983.7 probe +90 ok=True d11=0.531
+32989.7 probe -90 ok=True d11=0.500
+32995.5 probe +180 ok=True d11=0.507
+32995.5 no improve; rotate base -> 137 (stuck 2)
+33001.5 probe +0 ok=True d11=0.526
+33006.4 probe +90 ok=True d11=0.548
+33006.4 NEW BEST 0.548 dir +90
+33011.3 probe +0 ok=True d11=0.572
+33011.3 NEW BEST 0.572 dir +0
+33012.0 probe +0 ok=False d11=0.574
+33016.1 probe +90 ok=False d11=0.592
+33022.1 probe -90 ok=True d11=0.586
+33022.1 NEW BEST 0.586 dir -90
+33031.4 probe -90 ok=True d11=0.572
+33037.1 probe +180 ok=True d11=0.555
+33037.1 no improve; rotate base -> 182 (stuck 3)
+33041.5 probe +0 ok=False d11=0.561
+33046.2 probe +90 ok=True d11=0.576
+33050.0 probe -90 ok=False d11=0.581
+33055.7 probe +180 ok=True d11=0.544
+33055.7 no improve; rotate base -> 227 (stuck 4)
+33061.7 probe +0 ok=True d11=0.571
+33064.4 probe +90 ok=False d11=0.569
+33068.9 probe -90 ok=False d11=0.585
+33074.9 probe +180 ok=True d11=0.558
+33074.9 no improve; rotate base -> 272 (stuck 5)
+33080.0 probe +0 ok=False d11=0.555

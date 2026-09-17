@@ -140,6 +140,9 @@ def cmd_report(args):
               f"{c.get('noise_profile')} · model {c.get('model')} · "
               f"maze {m.get('width')}x{m.get('height')} "
               f"seed {m.get('seed')} braid {m.get('braid')}")
+        if c.get("duo", {}).get("enabled"):
+            from evals import comms
+            comms.run(name)
     lc = learning_curve.run(name)
     if not lc:
         return 1
@@ -155,7 +158,8 @@ def cmd_report(args):
     for fname in sorted(os.listdir(edir)):
         if fname.endswith(".json") and (
                 fname.startswith("quiz") or fname.startswith("ablation")
-                or fname.startswith("savings")):
+                or fname.startswith("savings")
+                or fname.startswith("comms")):
             with open(os.path.join(edir, fname)) as f:
                 s = json.load(f).get("summary", {})
             print(f"{fname[:-5]}: " + " · ".join(

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/bot/src/shuttle.py", line 35, in <module>
+    write_line(8, MSG % ('waiting for you at goal room entrance, my d11=%.2f' % d11())); time.sleep(6)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/rob.py", line 35, in write_line
+    fd = os.open(DEV % port, os.O_WRONLY | os.O_NONBLOCK)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 6] No such device or address: '/dev/robot/d8'

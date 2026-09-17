@@ -1,0 +1,10 @@
+# The bot container plus NumPy, for runs whose README demands a
+# learned/neural controller and for their controls, so tooling is not
+# the variable.  Built once with network; run with --network=none.
+FROM debian:bookworm-slim
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3 python3-numpy \
+       procps \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /bot
+CMD ["sleep", "infinity"]

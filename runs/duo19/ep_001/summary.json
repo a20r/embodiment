@@ -1,0 +1,173 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-fable-5-1@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5-1@max",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-fable-5-1",
+        "thinking": {
+          "type": "adaptive"
+        },
+        "effort": "max"
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "cut_by_infra",
+      "cut_note": "sandbox restart killed dockerd, daemon and containers at 133.7 wall min of 240",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 801939,
+      "sim_time_s": 16038.8,
+      "comms": {
+        "tx": 1005,
+        "tx_delivered": 202,
+        "rx_read": 88,
+        "tx_rate_dropped": 1,
+        "rx_received": 88
+      },
+      "wall_s": 7604.6,
+      "turns": 134,
+      "execs": 130,
+      "restarts": 0,
+      "nudges": null,
+      "wakes": 2,
+      "tokens": {
+        "input": 276,
+        "output": 110026,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 0
+      },
+      "collisions": 431,
+      "final_pose": [
+        0.94848,
+        1.27805,
+        0.00504
+      ]
+    },
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5-1@max",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-fable-5-1",
+        "thinking": {
+          "type": "adaptive"
+        },
+        "effort": "max"
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "cut_by_infra",
+      "cut_note": "sandbox restart killed dockerd, daemon and containers at 133.7 wall min of 240",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 801939,
+      "sim_time_s": 16038.8,
+      "comms": {
+        "tx": 950,
+        "tx_delivered": 88,
+        "rx_read": 202,
+        "tx_rate_dropped": 1,
+        "rx_received": 202
+      },
+      "wall_s": 7707.4,
+      "turns": 142,
+      "execs": 139,
+      "restarts": 0,
+      "nudges": null,
+      "wakes": 0,
+      "tokens": {
+        "input": 290,
+        "output": 122102,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 0
+      },
+      "collisions": 1408,
+      "final_pose": [
+        0.7241,
+        3.16836,
+        6.12371
+      ]
+    }
+  },
+  "solved_all": false,
+  "final_tick": 801939,
+  "cut": true,
+  "comms_eval": {
+    "window_s": 120.0,
+    "memory_s": 300.0,
+    "tick_hz": 50,
+    "rtf": 2.0,
+    "tx": 1955,
+    "delivered": 290,
+    "stimuli": 290,
+    "cr_count": 79,
+    "cr_rate": 0.272,
+    "cr_plus_count": 46,
+    "cr_plus_rate": 0.159,
+    "cr_lines": 19,
+    "cr_line_rate": 0.066,
+    "cr_latency_median_s": 53.8,
+    "cr_latency_p90_s": 109.4,
+    "exchanges_ge3": 2,
+    "longest_exchange": 4,
+    "worded_share_delivered": 0.317,
+    "longest_run": 16,
+    "runs_ge5": 17,
+    "rate_dropped": 2,
+    "rate_dropped_share": 0.001,
+    "in_range_tx_share": 0.149,
+    "surfacing_share": 0.517,
+    "wide": {
+      "cr_count": 149,
+      "cr_rate": 0.514,
+      "cr_plus_count": 84,
+      "cr_plus_rate": 0.29,
+      "cr_lines": 26,
+      "cr_line_rate": 0.09,
+      "cr_latency_median_s": 113.5,
+      "cr_latency_p90_s": 245.5,
+      "exchanges_ge3": 4,
+      "longest_exchange": 5,
+      "window_s": 300.0
+    },
+    "bots": {
+      "a": {
+        "tx": 1005,
+        "delivered": 202,
+        "beacon_templates": 7,
+        "worded_delivered": 81,
+        "stimuli": 202,
+        "stimuli_answered": 60,
+        "replies": 6,
+        "rate_dropped": 1,
+        "rate_dropped_share": 0.001,
+        "surfacing_share": 0.716
+      },
+      "b": {
+        "tx": 950,
+        "delivered": 88,
+        "beacon_templates": 10,
+        "worded_delivered": 11,
+        "stimuli": 88,
+        "stimuli_answered": 19,
+        "replies": 13,
+        "rate_dropped": 1,
+        "rate_dropped_share": 0.001,
+        "surfacing_share": 0.431
+      }
+    }
+  }
+}

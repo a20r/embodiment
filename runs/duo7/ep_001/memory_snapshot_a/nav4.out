@@ -1,0 +1,119 @@
+RX: PING from=beta wf
+no frontier! wandering
+RX: PING from=beta wf
+no frontier! wandering
+RX: PING from=beta wf
+RX: PING from=beta wf
+no frontier! wandering
+no frontier! wandering
+no frontier! wandering
+no frontier! wandering
+no frontier! wandering
+no frontier! wandering
+RX: PING from=beta wf
+RX: PING from=beta wf
+plan len 9 from (17, 4) to (11, 6) pos=2.12,0.44
+RX: PING from=beta wf
+RX: PING from=beta wf
+follow: blocked
+plan len 7 from (15, 4) to (11, 6) pos=1.89,0.48
+follow: blocked
+plan len 7 from (15, 4) to (11, 6) pos=1.93,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.97,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.96,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=2.00,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.99,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=2.00,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.97,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.99,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.98,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.98,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.98,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.99,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.99,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=2.01,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.97,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.97,0.46
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=2.00,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=2.00,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=2.00,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.98,0.45
+follow: blocked
+plan len 8 from (16, 4) to (11, 6) pos=1.98,0.45
+follow: blocked
+plan len 10 from (16, 4) to (11, 6) pos=1.99,0.45
+follow: blocked
+plan len 9 from (15, 4) to (11, 6) pos=1.81,0.44
+follow: blocked
+plan len 8 from (15, 3) to (11, 6) pos=1.85,0.42
+follow: blocked
+plan len 8 from (15, 3) to (11, 6) pos=1.88,0.39
+plan len 8 from (15, 3) to (11, 6) pos=1.89,0.39
+follow: blocked
+plan len 8 from (14, 2) to (11, 6) pos=1.74,0.30
+follow: blocked
+blacklist (11, 6)
+plan len 5 from (13, 3) to (11, 3) pos=1.67,0.37
+follow: blocked
+plan len 7 from (14, 0) to (11, 3) pos=1.74,0.04
+follow: blocked
+blacklist (11, 3)
+plan len 13 from (14, 0) to (11, 9) pos=1.72,0.02
+follow: blocked
+plan len 13 from (15, 1) to (11, 9) pos=1.82,0.16
+follow: blocked
+blacklist (11, 9)
+plan len 34 from (13, 0) to (26, 20) pos=1.66,0.03
+follow: blocked
+plan len 35 from (13, -1) to (26, 20) pos=1.66,-0.14
+follow: blocked
+blacklist (26, 20)
+plan len 9 from (13, 1) to (10, -4) pos=1.67,0.15
+follow: blocked
+plan len 10 from (14, 1) to (10, -4) pos=1.71,0.16
+follow: blocked
+blacklist (10, -4)
+plan len 14 from (13, 2) to (7, -5) pos=1.67,0.24
+follow: blocked
+plan len 15 from (14, 2) to (7, -5) pos=1.70,0.26
+follow: blocked
+blacklist (7, -5)
+plan len 14 from (13, 0) to (8, -8) pos=1.63,-0.03
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=1.00,-0.87
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.98,-0.91
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done
+plan len 3 from (8, -7) to (7, -8) pos=0.97,-0.92
+follow: done

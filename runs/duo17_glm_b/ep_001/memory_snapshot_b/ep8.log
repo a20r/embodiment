@@ -1,0 +1,8 @@
+ 636139.4 === ep8 start here=True goal=False odom=0.0,0.0 d11=0.000
+ 636139.4 HOLD 1320s here=True goal=False
+ 636473.2 === ep8 start here=False goal=False odom=0.0,0.0 d11=0.000
+ 636473.2 HOLD 1320s here=False goal=False
+ 636709.8 === ep8 start here=True goal=False odom=0.0,0.0 d11=0.483
+ 636709.8 HOLD 1320s here=True goal=False
+ 636789.1 === ep8 start here=False goal=False odom=306128.0,0.0 d11=0.000
+ 636789.1 HOLD 360s here=False goal=False

@@ -1,0 +1,14 @@
+ret pose=(17.23,11.16) rssi=0.541 res=done
+RX: PING B x=23.80 y=15.90
+RX: PING B x=23.80 y=15.90
+ret pose=(16.61,10.79) rssi=0.714 res=wall
+RX: PING B x=23.80 y=15.90
+RX: PING B x=23.80 y=15.90
+ret pose=(16.67,9.45) rssi=0.538 res=wall
+ret pose=(14.38,7.27) rssi=0.278 res=done
+ret pose=(11.58,6.22) rssi=0.130 res=done
+ret pose=(8.80,5.08) rssi=0.064 res=done
+ret pose=(6.06,3.86) rssi=0.037 res=done
+ret pose=(3.38,2.52) rssi=0.023 res=done
+ret pose=(0.80,0.99) rssi=0.016 res=done
+near goal area; scanning for pocket

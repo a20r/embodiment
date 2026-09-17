@@ -1,0 +1,1 @@
+A LIVE: odo (-2.2,2.0) h=1 d11= 5 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.

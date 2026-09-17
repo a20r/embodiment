@@ -25,13 +25,23 @@
 <main>
   <section class="panel">
     <div class="panel-head">
-      <span>top-down view (ground truth)</span>
+      <nav class="tabs" id="view-tabs">
+        <button data-view="2d" class="active">top-down</button>
+        <button data-view="3d">3D</button>
+      </nav>
+      <span>(ground truth)</span>
       <span style="flex:1"></span>
       <label><input type="checkbox" id="chk-rays" checked> lidar</label>
       <label><input type="checkbox" id="chk-trail" checked> trail</label>
+      <label id="follow-wrap" style="display:none"><input type="checkbox"
+        id="chk-follow"> follow</label>
     </div>
     <div id="maze-wrap" class="panel-body">
       <canvas id="maze" width="900" height="900"></canvas>
+    </div>
+    <div id="view3d" class="panel-body" style="display:none">
+      <div id="view3d-note" class="empty">3D view needs a live daemon with
+        <code>lidar3d.enabled</code>; walls and robots render regardless.</div>
     </div>
     <div id="replay-controls">
       <button id="btn-play">play</button>
@@ -64,6 +74,11 @@
     </div>
   </section>
 </main>
+<!-- three.js r128 (UMD) + OrbitControls, vendored so the 3D view works
+     offline and on the read-only/live-dash copies. -->
+<script src="vendor/three.min.js"></script>
+<script src="vendor/OrbitControls.js"></script>
 <script src="app.js"></script>
+<script src="view3d.js"></script>
 </body>
 </html>

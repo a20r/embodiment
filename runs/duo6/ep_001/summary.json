@@ -1,0 +1,21 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-fable-5",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "b": {
+      "bot": "b",
+      "end_reason": "harness_error",
+      "error": "Traceback (most recent call last):\n  File \"/home/user/embodiment/harness/duo.py\", line 291, in bot_thread\n    results[bid] = _run_bot(cfg, daemon, boxes[bid], ep_dir,\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/embodiment/harness/duo.py\", line 145, in _run_bot\n    response = model.create(system, messages)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/embodiment/harness/llm.py\", line 101, in create\n    with self.client.messages.stream(\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/lib/streaming/_messages.py\", line 171, in __enter__\n    raw_stream = self.__api_request()\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_base_client.py\", line 1490, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_base_client.py\", line 1174, in request\n    raise self._make_status_error_from_response(response) from None\nanthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeWWvcyaSyYfSvJRJLXnk'}\n"
+    },
+    "a": {
+      "bot": "a",
+      "end_reason": "harness_error",
+      "error": "Traceback (most recent call last):\n  File \"/home/user/embodiment/harness/duo.py\", line 291, in bot_thread\n    results[bid] = _run_bot(cfg, daemon, boxes[bid], ep_dir,\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/embodiment/harness/duo.py\", line 145, in _run_bot\n    response = model.create(system, messages)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/embodiment/harness/llm.py\", line 101, in create\n    with self.client.messages.stream(\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/lib/streaming/_messages.py\", line 171, in __enter__\n    raw_stream = self.__api_request()\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_base_client.py\", line 1490, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_base_client.py\", line 1174, in request\n    raise self._make_status_error_from_response(response) from None\nanthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeWWxFW3tz8X3GXe2uyFe'}\n"
+    }
+  },
+  "solved_all": false,
+  "final_tick": 533079
+}

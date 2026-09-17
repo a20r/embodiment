@@ -1,0 +1,5 @@
+28294.7 target dist 1.65 bearing 100
+28294.8 rotated to 95
+28295.2 stopped at pose -4.23,28.21 traveled 30.18
+28295.3 scan: [0.88, 1.0, 0.34, 0.29, 0.26, 0.34, 0.25, 0.18, 0.14, 0.18, 0.28, 0.95, 1.26, 0.5, 0.35, 0.73]
+28370.3 observed 75s. d11=0.263 status=tick=586212 goal=0 here=0 tx=43955:lost

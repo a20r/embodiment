@@ -1,0 +1,8 @@
+start v=0.907 pos=(0.69,3.33)
+it0 beam11 v 0.907->0.915 pos=(0.70,3.16) st={'tick': 115076, 'goal': 0, 'here': 0}
+it1 beam1 v 0.915->0.886 pos=(0.76,3.00) st={'tick': 115560, 'goal': 0, 'here': 0}
+it1 beam6 v 0.915->0.678 pos=(0.83,3.20) st={'tick': 116573, 'goal': 0, 'here': 0}
+it1 beam0 v 0.915->0.885 pos=(0.76,2.97) st={'tick': 117553, 'goal': 0, 'here': 0}
+it1 beam5 v 0.915->0.808 pos=(0.91,3.20) st={'tick': 118622, 'goal': 0, 'here': 0}
+it2 beam4 v 0.834->0.865 pos=(0.81,3.05) st={'tick': 119988, 'goal': 0, 'here': 0}
+it3 beam0 v 0.865->0.863 pos=(0.82,3.04) st={'tick': 120271, 'goal': 0, 'here': 0}

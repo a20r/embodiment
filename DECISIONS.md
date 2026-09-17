@@ -306,9 +306,11 @@ knowledge about ports transfers between them.  Design choices:
   port per bot.  A line written to TX (raw text, capped at
   `max_line_bytes`) is delivered into the peer's RX queue only if the
   peer is within `comms_range` (default 0.8 m) at that instant;
-  otherwise it vanishes silently — no carrier detect, no ACK.  RX reads
+  otherwise it vanishes silently — no carrier detect, no ACK (the
+  default; `duo.tx_status` adds a radio auto-ACK, see below).  RX reads
   drain one line per open (empty line = nothing pending, queue keeps
-  the newest `queue_depth` lines).  Every TX is ground-truth logged
+  the newest `queue_depth` lines; `duo.rx_blocking` makes the read
+  wait instead, see below).  Every TX is ground-truth logged
   with delivered/dist, so "shouting into the void" is measurable.
 - **Prompting stays minimal.**  README.minimal_duo adds exactly one
   sentence: a pair of ports is a short-range transceiver.  Not that a
@@ -323,10 +325,11 @@ knowledge about ports transfers between them.  Design choices:
   under the GIL; one tick of staleness is harmless), and RX queues are
   lock-free deques.
 
-Verified by `scripts/duo_check.py` (26 checks: spawn clearance, peer
-blip, disc-disc collision + bump, range gating, byte cap, queue cap,
-FIFO end-to-end a->b with comms accounting) plus a full mock duo
-episode through two containers; the solo smoke suite is unchanged.
+Verified by `scripts/duo_check.py` (26 checks at the time: spawn
+clearance, peer blip, disc-disc collision + bump, range gating, byte
+cap, queue cap, FIFO end-to-end a->b with comms accounting; 94 with
+the later duo mechanisms) plus a full mock duo episode through two
+containers; the solo smoke suite is unchanged.
 
 ### Duo variant: named transceiver ports (readme_variant minimal_duo_named)
 
@@ -344,7 +347,8 @@ daemon instead of leaking it onto the port.
 The cooperative objective: neither bot completes alone.  Each world
 tracks goal-region occupancy (region_enter/region_exit events, no solo
 latch); the daemon fires the goal on BOTH worlds only when both are in
-the region with entry times within duo.together_window_s (60 s) of
+the region with entry times within duo.together_window_s (60 s; sim
+seconds then, wall seconds since the entry below) of
 each other.  A bot that waits in the region while its window lapses
 must leave and re-enter — so a coordinated crossing is genuinely the
 easiest path, which is the point.  README.minimal_duo_mission states
@@ -356,3 +360,341 @@ walls — yelling in a maze.  It is not mentioned in any README; with
 the mission known, a slowly-varying analog port is interpretable, and
 it gives rendezvous a gradient so the comms/planning behavior (not
 blind search) is what the run measures.  Comms range stays 0.8 m.
+
+### Duo TX duty cycle (duo.tx_rate_hz)
+
+With free bandwidth, blind repetition is the optimal reliability
+strategy for idempotent telemetry, and the duo pairs rationally
+converged on it (beacon floods, "repeat every 3s" contracts) — no
+per-message acknowledgment needed to emerge.  duo.tx_rate_hz caps
+accepted transmissions per sim-second; excess lines vanish silently
+before the range gate (the cap itself must be discovered), logged in
+aggregate so spam cannot flood ground truth.  Hypothesis: scarcity,
+not lossiness, is what breeds reliability protocols — with expensive
+retransmission, knowing whether a specific message landed becomes
+worth a round trip.  Default 0 (unlimited) preserves all prior runs.
+
+### Per-bot arrival flag (status "here=") in together mode
+
+The joint goal= flag cannot fire for a solo arriver, so a bot standing
+in the goal region had no instrument that said so - duo5's pair keyed
+their GOALFOUND announcement to goal= and it structurally never fired.
+In together mode the status port now carries here=0/1 (this bot is in
+the goal region), keeping goal= joint.  Recognition of arrival stops
+being part of the test; announcing and coordinating it remains.
+
+### Purity fix: the mission README no longer says "maze"
+
+The duo mission text ("another robot somewhere in the maze") leaked
+environment structure that the solo lost condition deliberately
+withholds - an agent told "maze" can skip discovery and go straight to
+wall-following.  Now "another robot out there somewhere."  Affected
+runs: duo3-duo8 (noted as a confound in the paper's limitations); the
+per-run committed READMEs preserve exactly what each pair saw.
+
+### Mission README: the goal is named as a location
+
+Every duo pair spent a long stretch debating what "the goal" was (a
+flag? an object? a signal?).  README.minimal_duo_mission_place adds
+one clause - "The goal is a physical location" - and nothing about
+how arrival is sensed or where it is.  Discovery of the where and the
+how stays intact; only the category is given.
+
+### Multi-provider models via an OpenAI-compatible adapter
+
+Moonshot (Kimi) and Google (Gemini) both expose OpenAI-style chat
+completions, so one adapter (harness/llm.py: OpenAICompatModel) covers
+them plus OpenAI and any `compat:` endpoint.  The harness keeps its
+Anthropic-shaped history (content blocks, tool_use/tool_result) and
+the adapter translates at the boundary: tool_use -> tool_calls,
+tool_result -> role=tool, provider reasoning traces kept as thinking
+blocks (see the reasoning-models entry below), finish_reason ->
+stop_reason (content_filter ->
+refusal so the purity rule - retry same model, then end - applies
+unchanged).  Model ids are pass-through by design: provider names
+churn and hardcoding one would rot.  scripts/llm_compat_check.py is
+the token-free gate: a stub server scripts a tool call and a final
+turn and asserts both translation directions.
+
+### Goal chamber clamped to the maze span at corner exits
+
+The chamber's 0.25 m side margin was applied symmetrically around the
+exit wall; when the exit sits in a corner cell (duo11: seed 58, 7x7,
+exit on the north wall of cell (0,6)) one side overhung past the
+maze's outer corner and its side wall attached to nothing, leaving a
+robot-sized gap - bot B drove through it into the void.  The margin is
+now clamped to [0, span] along the exit wall's axis, so the side wall
+lands on the corner and the chamber stays sealed.  duo_check gates it
+(chamber within span; attach gaps < robot diameter).  duo11's world
+was generated before the fix and is compromised for the together
+objective; it is recorded as-is, not re-scored.
+
+### Reasoning models: the trace is stored and echoed, effort rides on the model string
+
+Kimi K3 (what the Kimi app calls "K3 Max" is `kimi-k3` at
+reasoning_effort=max) always reasons and requires the complete
+assistant message - reasoning_content included - returned unchanged on
+every historical turn of a tool-call chain; a harness that keeps only
+text and tool_calls silently degrades the model.  The compat adapter
+therefore captures reasoning_content (or `reasoning`) as a `thinking`
+block, the shape the transcript, dashboard and Anthropic path already
+know, and re-attaches it as reasoning_content at the boundary.  The
+effort knob is an `@<effort>` suffix on the model string rather than a
+config key so that every place a run records `model` (summary.json,
+transcript meta, series.json) records the effort too and no plumbing
+changes; the allowed set is per provider (K3 has no `medium`, so
+`@medium` fails at make_model time, not after a daemon+container
+boot), and kimi sends its `max` default explicitly so the record still
+states the effort if Moonshot ever changes the server default.
+`model_spec` in meta/summary spells the same out structurally.
+Details that fell out of reading Moonshot's contract closely: an empty
+trace is still a trace and is echoed as ""; a tool-call turn with no
+stored trace is padded with "" (Moonshot 400s without the key); signed
+Anthropic thinking blocks are never replayed as another provider's
+trace; the provider's own arguments string is echoed byte-for-byte; a
+tool call cut off by the output cap (finish_reason length) is never
+executed.  Requests stream because the gateway kills non-streaming
+requests at 900 s and a max-effort turn over a long history can exceed
+that.  Moonshot's moderation is an HTTP 400 `type=content_filter`, not
+a finish_reason, so it is mapped to `refusal` and the purity rule
+(same-model retry, then end) applies unchanged; a 429 for an exhausted
+balance raises at once while overload/rate 429s honour Retry-After
+within a 30-min window (a peer's long turn can hold the only low-tier
+slot).  Per-provider `tokens_param` sends max_completion_tokens where
+max_tokens is deprecated (Moonshot, OpenAI); fixed sampling parameters
+are never sent.  The client timeout is 900 s (idle between chunks) with
+SDK retries off - the loop owns retries, and a duplicated max-effort
+request would double-bill.  OpenAI-style cache hits (`cached_tokens`)
+are recorded as `usage.cached`, a subset of input, never added to the
+context estimate.  `budget.max_output_tokens_per_turn` replaces the
+hardcoded 16000 per-call cap because reasoning counts against it.
+Comparability caveat for the paper: echoed reasoning sits inside
+prompt_tokens, so K3 reaches `max_context_tokens` and
+`max_total_output_tokens` sooner than Claude at the same settings, and
+multi-minute turns mean fewer turns per wallclock hour.
+
+### Z.ai GLM as a first-class provider (zai:), thinking preserved server-side
+
+"Ox Alpha", the stealth model of late August 2026, turned out to be
+Z.ai's glm-5.3-flash - a 320B/18B MoE reasoning model with open
+weights, tool calling, a 1M window and a price forty-fold below Kimi
+K3.  It gets its own PROVIDERS entry rather than riding on `compat:`
+because the endpoint has model-specific settings that must be recorded
+per run: thinking cannot be disabled on 5.3-flash and the API's
+`thinking.clear_thinking` defaults to true, which strips prior
+reasoning_content from the context server-side; the model card
+recommends false, and false is what makes the trace the adapter
+already echoes actually count ("Preserved Thinking" requires the
+client to forward the full historical reasoning_content).  The entry
+sets that via the request's extra_body and model_spec records it.  The
+effort set follows the API reference minus none/minimal (they mean
+"skip thinking", impossible here); the server default max is sent
+explicitly for the same record-keeping reason as kimi.  Z.ai's
+moderation surfaces as finish_reason "sensitive" and maps to refusal.
+Z.ai does not document rate tiers, and there are public reports of
+severe throttling under load, so the same pre-spend probe applies and
+a duo pilot is the way to learn the real concurrency.  Plain JSON
+(no stream) for now: no documented gateway cutoff, and Z.ai's streamed
+tool calls need an extra tool_stream flag.
+
+### Bot image is a config knob; the Rust flavour adds only the toolchain
+
+A README that says "all code must be written in Rust" is meaningless
+in an image that has no compiler, so `container.image` (built from
+`container.dockerfile` when missing) joins the resolved config and is
+recorded with every run.  `Dockerfile.bot-rust` is the stock image plus
+Debian's rustc/cargo and nothing else: still airgapped, so std only and
+no crates.  python3 stays present (it is the base image) but the Rust
+README does not mention it - the constraint is stated, not enforced,
+and whether the agent honours it is part of what the run measures.
+The README variant otherwise repeats minimal_duo_mission_place word
+for word, one-variable delta as with every other duo ladder step.
+
+### DeepSeek and Gemini provider entries carry their reasoning contracts
+
+Both got explicit PROVIDERS entries instead of `compat:` for the same
+reason as Z.ai: the settings that make a run reproducible must be in
+the run record.  DeepSeek V4 (flash/pro): thinking on by default at
+effort high, and with tools present the API 400s unless every prior
+assistant turn carries its reasoning_content back - Moonshot's contract
+exactly, so pad_reasoning.  Gemini 3.x via Google's OpenAI layer:
+reasoning_effort maps onto thinking_level (minimal|low|medium|high;
+cannot be off), "high" is the default and is sent explicitly;
+include_thoughts is requested through extra_body so a thought summary
+is captured if the layer ever surfaces one - Google staff say chat
+completions has no channel for it, so Gemini runs may record no trace,
+a comparability caveat for the paper.  Model choice itself is guided
+by Terminal-Bench 2.1 against list price (RUNBOOK 7.3): the closest
+public proxy for a bash-tool agent loop.
+
+### 3D lidar: lift the 2D cast, keep the world 2D
+
+A point cloud "instead of a few beams" could have meant a full 3D
+world; it does not need one.  The kinematics stay planar and every
+solid gets a height (walls 0.40 m, the peer 0.15 m, the key post
+0.25 m) over a floor at z=0; a ring at elevation e reaching a face at
+horizontal distance d meets it at z = h_s + d*tan(e), returns if that
+is on the face, passes over it otherwise, and a downward ring that
+reaches the floor first returns the floor.  The near-horizontal ring's
+horizontal projection therefore equals the 2D range at every azimuth
+it returns (its coverage differs only in the last millimetre before
+max range, where slant range is the honest cut-off), so lidar3d runs
+remain comparable with beam runs in the plane while
+adding the structure a real unit shows: a floor disc under the robot,
+wall faces that fade out with distance as the upper rings clear them,
+a short cylinder where the peer is.  Frames are sensor-frame x,y,z so
+the mount height is discoverable from the floor plane, and no-returns
+are omitted as real units omit them.  It replaces the 2D port rather
+than adding to it - one sensing modality per run keeps the discovery
+problem a one-variable delta - and ground truth records a digest of
+each 55 kB frame, which still proves what was served.  Defaults are
+VLP-16-like (16 rings, 30 deg) at 2 deg azimuth resolution: a
+2,880-point grid of which ~2,845 return, ~55 kB, 5-10 ms per frame on
+grid mazes and ~40 ms on organic ones (five times more wall segments
+in range); a finer azimuth grid would only cost FIFO bandwidth.  The
+cast runs off the world lock - pose and solids are snapshotted under
+it, the rays are traced without it - so neither a held-open reader nor
+the dashboard can stall the tick loop, and the noise-free cloud is
+cached per tick so pollers share one cast.  The sensor sits at
+robot_height (on top of the body): solids have no modelled top face,
+so the sensor may never be higher than the shortest solid, which
+config enforces.  The dashboard's 3D view pulls the ground-truth cloud
+on demand (`cloud=1`) so an idle dashboard costs the daemon nothing.
+
+### Mission README variant that describes the point cloud
+
+duo16b showed both GLM agents reading the Cartesian x,y,z cloud as a
+spherical range/elevation/azimuth raster and never recovering the
+frame, so the whole run degraded.  README.minimal_duo_mission_place_
+lidar3d adds one paragraph stating the format and the sensor frame
+(x forward, y left, z up, origin at the sensor; no-returns omitted) -
+the same facts the labeled README's lidar3d row states - while the
+port itself stays anonymous.  It is the one-variable delta against
+duo16b: whether the failure was format discovery or everything after
+it.  Nothing about mount height, ring count or range is given; those
+remain discoverable (and quizzed).
+
+### Anthropic effort rides on the model string too (output_config.effort)
+
+The 5 family keeps thinking always on and rejects `budget_tokens`, so
+depth is `output_config.effort` (low|medium|high|xhigh|max).  A bare
+Anthropic name takes the same `@<effort>` suffix the compat providers
+take (`claude-fable-5-1@max`) for the same reason: every record of
+`model` then carries the effort, and an unknown level fails at
+make_model time.  Without a suffix nothing is sent, so the API default
+stays whatever the API says it is and `model_spec` records
+`effort: None` rather than a guess.  The request kwargs are built by
+one method so the token-free compat check can assert the exact shape.
+
+### Mission README variant that permits natural language on the link
+
+Every duo so far converged on terse beacons or bare numbers on the
+transceiver.  README.minimal_duo_mission_place_nl adds one sentence to
+the transceiver paragraph - the link carries plain text; you may talk
+to the other robot in natural language - and nothing else, so a
+comparison against duo13/duo13_long isolates whether an explicit
+licence to converse (rather than a protocol design) changes what gets
+said.  The link itself is unchanged: same range gate, same 0.5 Hz cap,
+same silent drops.
+
+### Link-layer rungs: TX status, blocking RX, receive-wake (all default off)
+
+PLAN_SYNC_COMMS.md diagnoses why the duos beacon instead of converse:
+the cap eats exactly the worded lines with no signal (duo12 b lost
+330k writes and never learned the cap existed), silence is attributed
+to the peer, ask-and-wait is not a single action, and - after
+duo13_fable - a bot that leaves the loop cannot be brought back by a
+delivered line.  Three mechanisms, each its own config key so every
+pilot differs from its baseline in one flag:
+
+- **`duo.tx_status`** - a MAC-layer auto-ACK, the thing every
+  802.15.4/LoRa confirmed radio reports.  Every TX write advances a
+  per-bot counter and the status frame gains ` tx=<n>:<outcome>`,
+  outcome `ok` (delivered), `lost` (out of range), `busy` (duty-cycle
+  drop; the counter still advances so a status reader sees the write).
+  This supersedes "no carrier detect, no ACK" above; the hypothesis
+  that an invisible cap would breed ACK protocols was falsified by
+  duo12/13 (0 discoveries).  Information-set change: `ok` reveals
+  in-range at that instant, which peer_signal already exposes noisily.
+  The counter/outcome pair is one tuple assignment so the status
+  reader never sees a torn pair; `comms_tx` events gain `seq` and
+  `outcome` only with the flag on, so older records keep their shape.
+- **`duo.rx_blocking`** - UART semantics: the bridge opens the FIFO's
+  write end only when a line is pending, so a reader's open() blocks
+  on an empty queue and `timeout 50 cat <rx>` is "wait up to 50 s for
+  the next line".  The line is committed only after the write
+  succeeded, so a reader that gave up consumed nothing.  An idle
+  blocking port looks like an actuator to a probing agent, so the
+  harness refuses the flag unless the README names {rx}.  Dropped-read
+  noise applies as on every sensor (EOF with nothing; the line stays).
+- **`duo.rx_wakes_agent`** - a receive interrupt for the controller:
+  when the agent ends its turn without a command, the harness holds
+  the turn until a line is delivered to that bot (`rx_received` on
+  /state), then re-prompts with the same words as the blind nudge -
+  only the timing differs.  After `rx_wake_timeout_s` (wall) the old
+  three-nudge policy applies unchanged.  Host-side only: the counter
+  never reaches the container; the agent learns that a line arrived
+  the way it always did, by reading the port.  The baseline is the
+  count at the agent's last tool round, so a line that landed while
+  the model was generating wakes it at once.  duo13_fable's b would
+  have been woken up to 68 times (68 lines were delivered to it after
+  it stopped, one every 45 s).
+- Information-set notes for tx_status: on a README variant that does
+  not name {tx}, writing to a port and watching `tx=` advance
+  identifies the TX port (the mission_place ladder names it, so no
+  change there); and with peer_signal off, ok/lost is an exact
+  in-range boolean at the instant of each write.
+
+### A terminal API error ends the episode, recorded
+
+The model layer retries what is retryable (rate limits, 5xx,
+connection loss) and the purity rule forbids a fallback model, so an
+error that still raises - an exhausted credit balance killed two race
+runs 18 minutes in - used to unwind the harness with a traceback and
+no summary.json.  Both loops now catch it, write an `api_error` note
+with the exception text and end the episode with `end_reason:
+api_error`, so the record is complete and the operator relaunches.
+
+### Race scene: a real circuit, a lap clock, tyres with a limit
+
+`scene: track` swaps the maze for the Circuit of the Americas
+centerline (TUM racetrack-database CSV, per-side widths; source and
+licence in sim/tracks/README.md), scaled to robot size (0.07: 386 m,
+~1 m wide, so the car is about a fifth of the track width, a little
+more than an F1 car on the real one) and offered to the
+same World as a duck-typed Maze: edges are wall segments, so lidar,
+collision and the spatial index are untouched, and only lap timing
+branches on `kind == "track"`.  The objective changes from a place to
+a clock: the README states one warm-up lap then ten timed laps; the
+status port carries `lap=`, `last=`, `best=`; a lap counts only on a
+forward start-line crossing after 90% of the arc-length sectors were
+visited (no shortcuts, no line-dancing), and completing the timed laps
+is `goal_reached`, reusing every downstream path (power-down, summary,
+end_reason solved).  The car keeps the bicycle kinematics but gains a
+friction circle (`a_grip`): the commanded lateral and longitudinal
+tyre acceleration is scaled onto the circle (understeer plus reduced
+drive/brake), the excess scrubs speed opposing motion (never through
+zero), with per-tick grip noise; drag stays aerodynamic, outside the
+circle, so braking decelerates a little faster than a_grip.  0 leaves
+the pre-grip car byte-identical (the yaw rate is still computed from
+the post-integration speed).  Grip is an observable, not a rule: the
+race car gets an `imu` port (achieved ax including scrub and wall
+stops, ay, yaw rate), so the limit can be measured by driving into it.
+Speeds are raised for racing (v_max 2.0, accel 1.5, a_grip 1.5) per
+run, not by default; a pure-pursuit driver laps in ~230 sim s.  Lap
+progress is directional (a sector counts only when reached by
+advancing; backing over the line voids the tour), so a wrong-way tour
+plus a turnaround is not a lap.  The bot image for race runs adds NumPy
+(`Dockerfile.bot-np`) so that a README demanding a neural controller
+and its control differ only in the sentence.  Solo only for now: the
+peer octagon and the window logic would need a second start box.
+
+### together_window_s is wall-clock seconds
+
+The README promises "within one minute of each other" and the agents
+live in wall time, but the daemon compared entry ticks against 60
+*sim* seconds - 30 wall seconds at realtime_factor 2.  The window is
+now scaled by the configured rtf (a runtime /rtf change does not
+retune it).  Every duo through duo13_fable ran with the tighter
+window, so the ladder is comparable among itself; the change is the
+one honest delta carried into duo17+.

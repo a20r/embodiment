@@ -1,0 +1,6 @@
+DRIVE0: BOX az~90 r=[1.70,2.34] n=43 d4=10.6 d9=66003 
+DRIVE1: BOX az~71 r=[1.71,2.34] n=37 d4=25.3 d9=66107 tick=648875 goal=0 here=0
+DRIVE2: BOX az~52 r=[1.71,2.35] n=43 d4=45.4 d9=66212 tick=649293 goal=0 here=0
+DRIVE3: BOX az~34 r=[1.70,2.34] n=42 d4=65.9 d9=66313 tick=649710 goal=0 here=0
+DRIVE4: BOX az~15 r=[1.70,2.34] n=37 d4=83.6 d9=66420 
+DRIVE5: BOX az~247 r=[1.69,2.33] n=43 d4=102.9 d9=66524 

@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/bot/src/final.py", line 10, in <module>
+    E.main()   # returns on here=1 (writes ALERT) or plan-sent
+    ^^^^^^^^
+  File "/bot/src/explore2.py", line 137, in main
+    if ax not in tried: tried[ax]=trial(ax,axis) or 0
+                                  ^^^^^^^^^^^^^^
+  File "/bot/src/explore2.py", line 102, in trial
+    turn(axis_branch); r=go(0.45,axis_branch,spd=60)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore2.py", line 93, in go
+    ok,stt,rx=radio()
+              ^^^^^^^
+  File "/bot/src/final.py", line 7, in rad
+    return E.radio('A: homing on you by RSSI, stay still. my d11=%.2f'%(E.d11() or -1))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/final.py", line 7, in rad
+    return E.radio('A: homing on you by RSSI, stay still. my d11=%.2f'%(E.d11() or -1))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/final.py", line 7, in rad
+    return E.radio('A: homing on you by RSSI, stay still. my d11=%.2f'%(E.d11() or -1))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 990 more times]
+  File "/bot/src/explore2.py", line 39, in d11
+    v=[fl(m.rd('d11')) for _ in range(3)]; v=[x for x in v if x is not None]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore2.py", line 39, in <listcomp>
+    v=[fl(m.rd('d11')) for _ in range(3)]; v=[x for x in v if x is not None]
+          ^^^^^^^^^^^
+  File "/bot/src/rio.py", line 9, in rd
+    buf=b''; t0=time.time()
+                ^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while calling a Python object

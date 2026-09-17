@@ -1,0 +1,11 @@
+# The bot container, Rust flavour: Debian + Python + the Debian Rust
+# toolchain (rustc/cargo, std only - no network, so no crates.io).
+# Used by README variants that require all code to be written in Rust.
+# Built once with network; always run with --network=none (airgapped).
+FROM debian:bookworm-slim
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3 procps \
+        rustc cargo \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /bot
+CMD ["sleep", "infinity"]

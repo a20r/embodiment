@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/bot/src/comm4.py", line 30, in <module>
+    msg="B PING %.2f %.2f %.0f n=%d goal=%d here=%d"%(x,y,((havg()-th0+540)%360-180),n,g,hr)
+                                                            ^^^^^^
+  File "/bot/src/comm4.py", line 13, in havg
+    s=sum(math.sin(math.radians(v)) for v in vals)/n
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/comm4.py", line 13, in <genexpr>
+    s=sum(math.sin(math.radians(v)) for v in vals)/n
+                   ^^^^^^^^^^^^^^^
+TypeError: must be real number, not NoneType

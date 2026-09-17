@@ -1,0 +1,20 @@
+23699.9 HOME start sig=0.670 h=348.7
+23702.4 trial 0 straight: 0.672 -> 0.647 (best 0.671) h=343
+23705.5   probe +50: sig 0.651 after drive 0.645 (s0 0.672)
+23709.5   probe -50: sig 0.646 after drive 0.636 (s0 0.672)
+23715.6   probe +100: sig 0.617 after drive 0.617 (s0 0.672)
+23721.6   probe -100: sig 0.625 after drive 0.631 (s0 0.672)
+23725.6   probe +160: sig 0.636 after drive 0.645 (s0 0.672)
+23728.7   probe -160: sig 0.642 after drive 0.647 (s0 0.672)
+23728.7   no improvement; backup and re-try
+23731.6 trial 1 straight: 0.656 -> 0.647 (best 0.671) h=197
+23736.9   probe +50: sig 0.675 after drive 0.665 (s0 0.656)
+23739.1 trial 2 straight: 0.665 -> 0.669 (best 0.671) h=247
+23741.1 trial 3 straight: 0.663 -> 0.668 (best 0.671) h=248
+23743.2 trial 4 straight: 0.669 -> 0.671 (best 0.671) h=251
+23743.2 NEW BEST 0.671
+23745.3 trial 5 straight: 0.669 -> 0.665 (best 0.671) h=245
+23747.3 trial 6 straight: 0.661 -> 0.663 (best 0.671) h=244
+23749.4 trial 7 straight: 0.666 -> 0.666 (best 0.671) h=240
+23751.4 trial 8 straight: 0.668 -> 0.670 (best 0.671) h=240
+23753.5 trial 9 straight: 0.681 -> 0.664 (best 0.671) h=239

@@ -1,0 +1,23 @@
+Robot Control Protocol:
+- d0: Unknown (reads 0)
+- d1: Steering angle (controls heading direction)
+- d2: Sensor array (16 floats, likely IR/obstacle sensors)
+- d3: Status - "tick=X goal=Y here=Z" where here=1 means at goal
+- d4: Heading (degrees, 0-360)
+- d5, d6: d5=status?, d6=distance odometer
+- d7: Forward throttle (1=forward, 0=stop)
+- d8: Transceiver TX (write)
+- d9, d10, d11: Unknown
+- d10: Transceiver RX (read)
+
+Control:
+- Write to d7 to control forward movement
+- Write to d1 to control steering
+- Monitor d3 for status (here=1 = goal reached)
+- Monitor d4 for heading
+- Monitor d6 for distance
+
+Strategy:
+1. Communicate with other robot
+2. Search for goal location
+3. Coordinate arrival times (within 1 minute)

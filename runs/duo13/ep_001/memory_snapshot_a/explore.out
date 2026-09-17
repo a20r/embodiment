@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/bot/src/explore.py", line 191, in <module>
+    try: b.run()
+         ^^^^^^^
+  File "/bot/src/explore.py", line 183, in run
+    cal=self.drive_until_wall(ang)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore.py", line 116, in drive_until_wall
+    f=[rg[i] for i in (0,15,1) if rg[i] is not None and rg[i]>=0]
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore.py", line 116, in <listcomp>
+    f=[rg[i] for i in (0,15,1) if rg[i] is not None and rg[i]>=0]
+                                  ~~^^^
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/bot/src/explore.py", line 192, in <module>
+    try: b.run()
+         ^^^^^^^
+  File "/bot/src/explore.py", line 168, in run
+    nx,ny=self.match(x,y,th,rg or [])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore.py", line 72, in match
+    a=math.radians(th+k*22.5)
+                   ~~^~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "/bot/src/explore.py", line 208, in <module>
+    try: b.run()
+         ^^^^^^^
+  File "/bot/src/explore.py", line 171, in run
+    nx,ny=self.match(x,y,th,rg or [])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bot/src/explore.py", line 64, in match
+    a=math.radians(th+k*22.5)
+                   ~~^~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'

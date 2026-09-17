@@ -1,0 +1,177 @@
+03:13:04 brain start; pose reset to 0,0 h= 139.57970109241958
+03:13:10 explore seg obstacle pathlen 8 pose -0.2 0.28 324 extra {'d0': '0', 'd5': '0', 'd11': '0.425', 'tick': '42884', 'goal': '0', 'here': '0'}
+03:13:10 start in inflation; using raw obstacles
+03:13:11 explore seg obstacle pathlen 6 pose -0.2 0.28 315 extra {'d0': '0', 'd5': '0', 'd11': '0.411', 'tick': '42959', 'goal': '0', 'here': '0'}
+03:13:11 start in inflation; using raw obstacles
+03:13:11 explore seg obstacle pathlen 6 pose -0.21 0.29 314 extra {'d0': '0', 'd5': '0', 'd11': '0.412', 'tick': '43005', 'goal': '0', 'here': '0'}
+03:13:12 start in inflation; using raw obstacles
+03:13:12 explore seg obstacle pathlen 6 pose -0.21 0.29 314 extra {'d0': '0', 'd5': '0', 'd11': '0.396', 'tick': '43051', 'goal': '0', 'here': '0'}
+03:13:12 start in inflation; using raw obstacles
+03:13:13 explore seg obstacle pathlen 6 pose -0.22 0.3 310 extra {'d0': '0', 'd5': '0', 'd11': '0.401', 'tick': '43109', 'goal': '0', 'here': '0'}
+03:13:13 start in inflation; using raw obstacles
+03:13:13 explore seg obstacle pathlen 6 pose -0.22 0.3 311 extra {'d0': '0', 'd5': '0', 'd11': '0.415', 'tick': '43159', 'goal': '0', 'here': '0'}
+03:13:13 start in inflation; using raw obstacles
+03:13:13 explore seg obstacle pathlen 6 pose -0.23 0.31 314 extra {'d0': '0', 'd5': '0', 'd11': '0.411', 'tick': '43205', 'goal': '0', 'here': '0'}
+03:13:14 start in inflation; using raw obstacles
+03:13:15 explore seg obstacle pathlen 4 pose -0.24 0.31 301 extra {'d0': '0', 'd5': '0', 'd11': '0.400', 'tick': '43328', 'goal': '0', 'here': '0'}
+03:13:15 start in inflation; using raw obstacles
+03:13:15 explore seg obstacle pathlen 4 pose -0.24 0.32 303 extra {'d0': '0', 'd5': '0', 'd11': '0.403', 'tick': '43375', 'goal': '0', 'here': '0'}
+03:13:15 start in inflation; using raw obstacles
+03:13:16 explore seg obstacle pathlen 4 pose -0.25 0.32 299 extra {'d0': '0', 'd5': '0', 'd11': '0.396', 'tick': '43424', 'goal': '0', 'here': '0'}
+03:13:16 start in inflation; using raw obstacles
+03:13:16 explore seg obstacle pathlen 4 pose -0.26 0.33 301 extra {'d0': '0', 'd5': '0', 'd11': '0.394', 'tick': '43467', 'goal': '0', 'here': '0'}
+03:13:16 start in inflation; using raw obstacles
+03:13:17 explore seg obstacle pathlen 4 pose -0.26 0.33 306 extra {'d0': '0', 'd5': '0', 'd11': '0.416', 'tick': '43545', 'goal': '0', 'here': '0'}
+03:13:17 start in inflation; using raw obstacles
+03:13:18 explore seg obstacle pathlen 9 pose -0.26 0.33 336 extra {'d0': '0', 'd5': '0', 'd11': '0.397', 'tick': '43672', 'goal': '0', 'here': '0'}
+03:13:18 start in inflation; using raw obstacles
+03:13:19 explore seg obstacle pathlen 9 pose -0.27 0.34 336 extra {'d0': '0', 'd5': '0', 'd11': '0.395', 'tick': '43715', 'goal': '0', 'here': '0'}
+03:13:19 start in inflation; using raw obstacles
+03:13:19 explore seg obstacle pathlen 9 pose -0.27 0.35 335 extra {'d0': '0', 'd5': '0', 'd11': '0.394', 'tick': '43767', 'goal': '0', 'here': '0'}
+03:13:19 start in inflation; using raw obstacles
+03:13:20 explore seg obstacle pathlen 10 pose -0.27 0.35 335 extra {'d0': '0', 'd5': '0', 'd11': '0.402', 'tick': '43810', 'goal': '0', 'here': '0'}
+03:13:20 start in inflation; using raw obstacles
+03:13:20 explore seg obstacle pathlen 10 pose -0.28 0.36 339 extra {'d0': '0', 'd5': '0', 'd11': '0.397', 'tick': '43856', 'goal': '0', 'here': '0'}
+03:13:20 start in inflation; using raw obstacles
+03:13:21 explore seg obstacle pathlen 3 pose -0.28 0.36 296 extra {'d0': '0', 'd5': '0', 'd11': '0.409', 'tick': '43990', 'goal': '0', 'here': '0'}
+03:13:21 start in inflation; using raw obstacles
+03:13:22 explore seg obstacle pathlen 3 pose -0.29 0.37 290 extra {'d0': '0', 'd5': '0', 'd11': '0.401', 'tick': '44045', 'goal': '0', 'here': '0'}
+03:13:22 start in inflation; using raw obstacles
+03:13:23 explore seg obstacle pathlen 10 pose -0.29 0.37 333 extra {'d0': '0', 'd5': '0', 'd11': '0.388', 'tick': '44184', 'goal': '0', 'here': '0'}
+03:13:23 start in inflation; using raw obstacles
+03:13:24 explore seg obstacle pathlen 10 pose -0.29 0.38 333 extra {'d0': '0', 'd5': '0', 'd11': '0.422', 'tick': '44227', 'goal': '0', 'here': '0'}
+03:13:24 start in inflation; using raw obstacles
+03:13:25 explore seg obstacle pathlen 4 pose -0.3 0.38 300 extra {'d0': '0', 'd5': '0', 'd11': '0.407', 'tick': '44405', 'goal': '0', 'here': '0'}
+03:13:26 start in inflation; using raw obstacles
+03:13:26 explore seg obstacle pathlen 4 pose -0.31 0.38 300 extra {'d0': '0', 'd5': '0', 'd11': '0.402', 'tick': '44453', 'goal': '0', 'here': '0'}
+03:13:26 start in inflation; using raw obstacles
+03:13:32 explore seg obstacle pathlen 13 pose 0.01 0.61 58 extra {'d0': '0', 'd5': '0', 'd11': '0.377', 'tick': '45013', 'goal': '0', 'here': '0'}
+03:13:32 start in inflation; using raw obstacles
+03:13:33 explore seg obstacle pathlen 9 pose 0.02 0.61 83 extra {'d0': '0', 'd5': '0', 'd11': '0.378', 'tick': '45130', 'goal': '0', 'here': '0'}
+03:13:33 start in inflation; using raw obstacles
+03:13:33 explore seg obstacle pathlen 9 pose 0.03 0.61 86 extra {'d0': '0', 'd5': '0', 'd11': '0.384', 'tick': '45191', 'goal': '0', 'here': '0'}
+03:13:33 start in inflation; using raw obstacles
+03:13:34 explore seg obstacle pathlen 9 pose 0.04 0.61 89 extra {'d0': '0', 'd5': '0', 'd11': '0.368', 'tick': '45259', 'goal': '0', 'here': '0'}
+03:13:34 start in inflation; using raw obstacles
+03:13:34 explore seg obstacle pathlen 9 pose 0.04 0.61 89 extra {'d0': '0', 'd5': '0', 'd11': '0.368', 'tick': '45299', 'goal': '0', 'here': '0'}
+03:13:35 start in inflation; using raw obstacles
+03:13:35 explore seg obstacle pathlen 9 pose 0.05 0.61 92 extra {'d0': '0', 'd5': '0', 'd11': '0.365', 'tick': '45347', 'goal': '0', 'here': '0'}
+03:13:35 start in inflation; using raw obstacles
+03:13:35 explore seg obstacle pathlen 9 pose 0.06 0.61 88 extra {'d0': '0', 'd5': '0', 'd11': '0.376', 'tick': '45395', 'goal': '0', 'here': '0'}
+03:13:35 start in inflation; using raw obstacles
+03:13:36 explore seg obstacle pathlen 9 pose 0.07 0.61 88 extra {'d0': '0', 'd5': '0', 'd11': '0.366', 'tick': '45438', 'goal': '0', 'here': '0'}
+03:13:36 start in inflation; using raw obstacles
+03:13:36 explore seg obstacle pathlen 9 pose 0.08 0.61 88 extra {'d0': '0', 'd5': '0', 'd11': '0.385', 'tick': '45480', 'goal': '0', 'here': '0'}
+03:13:36 start in inflation; using raw obstacles
+03:13:37 explore seg obstacle pathlen 5 pose 0.08 0.61 104 extra {'d0': '0', 'd5': '0', 'd11': '0.366', 'tick': '45574', 'goal': '0', 'here': '0'}
+03:13:37 start in inflation; using raw obstacles
+03:13:38 explore seg obstacle pathlen 5 pose 0.09 0.61 103 extra {'d0': '0', 'd5': '0', 'd11': '0.383', 'tick': '45617', 'goal': '0', 'here': '0'}
+03:13:38 start in inflation; using raw obstacles
+03:13:38 explore seg obstacle pathlen 5 pose 0.09 0.61 100 extra {'d0': '0', 'd5': '0', 'd11': '0.369', 'tick': '45662', 'goal': '0', 'here': '0'}
+03:13:38 start in inflation; using raw obstacles
+03:13:39 explore seg obstacle pathlen 6 pose 0.1 0.6 96 extra {'d0': '0', 'd5': '0', 'd11': '0.376', 'tick': '45738', 'goal': '0', 'here': '0'}
+03:13:39 start in inflation; using raw obstacles
+03:13:40 explore seg obstacle pathlen 6 pose 0.11 0.6 95 extra {'d0': '0', 'd5': '0', 'd11': '0.360', 'tick': '45813', 'goal': '0', 'here': '0'}
+03:13:40 start in inflation; using raw obstacles
+03:13:40 explore seg obstacle pathlen 9 pose 0.12 0.6 94 extra {'d0': '0', 'd5': '0', 'd11': '0.390', 'tick': '45856', 'goal': '0', 'here': '0'}
+03:13:40 start in inflation; using raw obstacles
+03:13:41 explore seg obstacle pathlen 9 pose 0.12 0.6 94 extra {'d0': '0', 'd5': '0', 'd11': '0.363', 'tick': '45959', 'goal': '0', 'here': '0'}
+03:13:41 start in inflation; using raw obstacles
+03:13:42 explore seg obstacle pathlen 9 pose 0.13 0.6 94 extra {'d0': '0', 'd5': '0', 'd11': '0.377', 'tick': '46007', 'goal': '0', 'here': '0'}
+03:13:42 start in inflation; using raw obstacles
+03:13:42 explore seg obstacle pathlen 4 pose 0.14 0.6 104 extra {'d0': '0', 'd5': '0', 'd11': '0.368', 'tick': '46101', 'goal': '0', 'here': '0'}
+03:13:42 start in inflation; using raw obstacles
+03:13:43 explore seg obstacle pathlen 4 pose 0.15 0.6 104 extra {'d0': '0', 'd5': '0', 'd11': '0.375', 'tick': '46143', 'goal': '0', 'here': '0'}
+03:13:43 start in inflation; using raw obstacles
+03:13:44 explore seg obstacle pathlen 4 pose 0.15 0.6 120 extra {'d0': '0', 'd5': '0', 'd11': '0.386', 'tick': '46249', 'goal': '0', 'here': '0'}
+03:13:44 start in inflation; using raw obstacles
+03:13:44 explore seg obstacle pathlen 4 pose 0.16 0.59 118 extra {'d0': '0', 'd5': '0', 'd11': '0.379', 'tick': '46307', 'goal': '0', 'here': '0'}
+03:13:45 start in inflation; using raw obstacles
+03:13:45 explore seg obstacle pathlen 4 pose 0.16 0.59 122 extra {'d0': '0', 'd5': '0', 'd11': '0.381', 'tick': '46350', 'goal': '0', 'here': '0'}
+03:13:45 start in inflation; using raw obstacles
+03:13:45 explore seg obstacle pathlen 4 pose 0.17 0.59 118 extra {'d0': '0', 'd5': '0', 'd11': '0.385', 'tick': '46393', 'goal': '0', 'here': '0'}
+03:13:45 start in inflation; using raw obstacles
+03:13:47 explore seg obstacle pathlen 5 pose 0.18 0.59 89 extra {'d0': '0', 'd5': '0', 'd11': '0.372', 'tick': '46511', 'goal': '0', 'here': '0'}
+03:13:47 start in inflation; using raw obstacles
+03:13:48 explore seg obstacle pathlen 3 pose 0.18 0.58 120 extra {'d0': '0', 'd5': '0', 'd11': '0.371', 'tick': '46655', 'goal': '0', 'here': '0'}
+03:13:48 start in inflation; using raw obstacles
+03:13:48 explore seg obstacle pathlen 3 pose 0.19 0.58 124 extra {'d0': '0', 'd5': '0', 'd11': '0.379', 'tick': '46698', 'goal': '0', 'here': '0'}
+03:13:48 start in inflation; using raw obstacles
+03:13:50 explore seg obstacle pathlen 4 pose 0.2 0.58 88 extra {'d0': '0', 'd5': '0', 'd11': '0.365', 'tick': '46817', 'goal': '0', 'here': '0'}
+03:13:50 start in inflation; using raw obstacles
+03:13:51 explore seg obstacle pathlen 5 pose 0.2 0.58 75 extra {'d0': '0', 'd5': '0', 'd11': '0.383', 'tick': '46943', 'goal': '0', 'here': '0'}
+03:13:51 start in inflation; using raw obstacles
+03:13:51 explore seg obstacle pathlen 5 pose 0.21 0.58 72 extra {'d0': '0', 'd5': '0', 'd11': '0.388', 'tick': '46988', 'goal': '0', 'here': '0'}
+03:13:51 start in inflation; using raw obstacles
+03:13:52 explore seg obstacle pathlen 5 pose 0.22 0.59 73 extra {'d0': '0', 'd5': '0', 'd11': '0.369', 'tick': '47035', 'goal': '0', 'here': '0'}
+03:13:52 start in inflation; using raw obstacles
+03:13:52 explore seg obstacle pathlen 5 pose 0.23 0.59 74 extra {'d0': '0', 'd5': '0', 'd11': '0.394', 'tick': '47083', 'goal': '0', 'here': '0'}
+03:13:52 start in inflation; using raw obstacles
+03:13:53 explore seg obstacle pathlen 4 pose 0.24 0.59 72 extra {'d0': '0', 'd5': '0', 'd11': '0.361', 'tick': '47129', 'goal': '0', 'here': '0'}
+03:13:53 start in inflation; using raw obstacles
+03:13:53 explore seg obstacle pathlen 4 pose 0.25 0.59 73 extra {'d0': '0', 'd5': '0', 'd11': '0.367', 'tick': '47177', 'goal': '0', 'here': '0'}
+03:13:53 start in inflation; using raw obstacles
+03:13:54 explore seg obstacle pathlen 4 pose 0.25 0.6 73 extra {'d0': '0', 'd5': '0', 'd11': '0.390', 'tick': '47233', 'goal': '0', 'here': '0'}
+03:13:54 start in inflation; using raw obstacles
+03:13:54 explore seg obstacle pathlen 4 pose 0.26 0.6 71 extra {'d0': '0', 'd5': '0', 'd11': '0.374', 'tick': '47278', 'goal': '0', 'here': '0'}
+03:13:54 start in inflation; using raw obstacles
+03:13:55 explore seg obstacle pathlen 4 pose 0.26 0.6 72 extra {'d0': '0', 'd5': '0', 'd11': '0.390', 'tick': '47324', 'goal': '0', 'here': '0'}
+03:13:55 start in inflation; using raw obstacles
+03:13:55 explore seg obstacle pathlen 4 pose 0.27 0.6 69 extra {'d0': '0', 'd5': '0', 'd11': '0.377', 'tick': '47369', 'goal': '0', 'here': '0'}
+03:13:55 start in inflation; using raw obstacles
+03:13:56 explore seg obstacle pathlen 4 pose 0.28 0.6 69 extra {'d0': '0', 'd5': '0', 'd11': '0.388', 'tick': '47412', 'goal': '0', 'here': '0'}
+03:13:56 start in inflation; using raw obstacles
+03:13:56 explore seg obstacle pathlen 3 pose 0.28 0.61 70 extra {'d0': '0', 'd5': '0', 'd11': '0.370', 'tick': '47457', 'goal': '0', 'here': '0'}
+03:13:56 start in inflation; using raw obstacles
+03:13:56 explore seg obstacle pathlen 3 pose 0.29 0.61 71 extra {'d0': '0', 'd5': '0', 'd11': '0.378', 'tick': '47500', 'goal': '0', 'here': '0'}
+03:13:57 start in inflation; using raw obstacles
+03:13:58 explore seg obstacle pathlen 4 pose 0.3 0.61 62 extra {'d0': '0', 'd5': '0', 'd11': '0.380', 'tick': '47608', 'goal': '0', 'here': '0'}
+03:13:58 start in inflation; using raw obstacles
+03:13:59 explore seg obstacle pathlen 4 pose 0.3 0.61 105 extra {'d0': '0', 'd5': '0', 'd11': '0.376', 'tick': '47751', 'goal': '0', 'here': '0'}
+03:13:59 start in inflation; using raw obstacles
+03:13:59 explore seg obstacle pathlen 4 pose 0.31 0.61 106 extra {'d0': '0', 'd5': '0', 'd11': '0.363', 'tick': '47794', 'goal': '0', 'here': '0'}
+03:13:59 start in inflation; using raw obstacles
+03:14:01 explore seg obstacle pathlen 5 pose 0.31 0.61 96 extra {'d0': '0', 'd5': '0', 'd11': '0.390', 'tick': '47929', 'goal': '0', 'here': '0'}
+03:14:01 start in inflation; using raw obstacles
+03:14:01 explore seg obstacle pathlen 5 pose 0.32 0.61 94 extra {'d0': '0', 'd5': '0', 'd11': '0.378', 'tick': '47977', 'goal': '0', 'here': '0'}
+03:14:01 start in inflation; using raw obstacles
+03:14:02 explore seg obstacle pathlen 5 pose 0.33 0.61 94 extra {'d0': '0', 'd5': '0', 'd11': '0.378', 'tick': '48019', 'goal': '0', 'here': '0'}
+03:14:02 start in inflation; using raw obstacles
+03:14:03 explore seg obstacle pathlen 3 pose 0.33 0.61 71 extra {'d0': '0', 'd5': '0', 'd11': '0.390', 'tick': '48165', 'goal': '0', 'here': '0'}
+03:14:03 start in inflation; using raw obstacles
+03:14:04 explore seg obstacle pathlen 3 pose 0.34 0.61 75 extra {'d0': '0', 'd5': '0', 'd11': '0.378', 'tick': '48210', 'goal': '0', 'here': '0'}
+03:14:04 start in inflation; using raw obstacles
+03:14:04 explore seg obstacle pathlen 4 pose 0.35 0.61 67 extra {'d0': '0', 'd5': '0', 'd11': '0.378', 'tick': '48296', 'goal': '0', 'here': '0'}
+03:14:04 start in inflation; using raw obstacles
+03:14:05 explore seg obstacle pathlen 4 pose 0.35 0.62 65 extra {'d0': '0', 'd5': '0', 'd11': '0.373', 'tick': '48341', 'goal': '0', 'here': '0'}
+03:14:05 start in inflation; using raw obstacles
+03:14:06 explore seg obstacle pathlen 5 pose 0.36 0.62 91 extra {'d0': '0', 'd5': '0', 'd11': '0.376', 'tick': '48468', 'goal': '0', 'here': '0'}
+03:14:06 start in inflation; using raw obstacles
+03:14:08 explore seg obstacle pathlen 5 pose 0.37 0.61 138 extra {'d0': '0', 'd5': '0', 'd11': '0.400', 'tick': '48616', 'goal': '0', 'here': '0'}
+03:14:08 start in inflation; using raw obstacles
+03:14:08 explore seg obstacle pathlen 5 pose 0.37 0.61 138 extra {'d0': '0', 'd5': '0', 'd11': '0.371', 'tick': '48664', 'goal': '0', 'here': '0'}
+03:14:08 start in inflation; using raw obstacles
+03:14:09 explore seg obstacle pathlen 5 pose 0.38 0.6 136 extra {'d0': '0', 'd5': '0', 'd11': '0.388', 'tick': '48710', 'goal': '0', 'here': '0'}
+03:14:09 start in inflation; using raw obstacles
+03:14:10 explore seg obstacle pathlen 3 pose 0.38 0.61 57 extra {'d0': '0', 'd5': '0', 'd11': '0.380', 'tick': '48906', 'goal': '0', 'here': '0'}
+03:15:28 CRASH Traceback (most recent call last):
+  File "/bot/src/brain.py", line 216, in <module>
+    try: main()
+         ^^^^^^
+  File "/bot/src/brain.py", line 183, in main
+    ctl.stop(); sense(); time.sleep(0.5)
+                ^^^^^^^
+  File "/bot/src/brain.py", line 76, in sense
+    odo.update(); s = ctl.scan(nscan); integrate_scan(s)
+    ^^^^^^^^^^^^
+  File "/bot/src/brain.py", line 30, in update
+    l, r = ctl.enc(); h = ctl.heading(1)
+                          ^^^^^^^^^^^^^^
+  File "/bot/src/ctl.py", line 15, in heading
+    h = rio.read_port(4)
+        ^^^^^^^^^^^^^^^^
+  File "/bot/src/rio.py", line 21, in read_port
+    chunk = os.read(fd, 4096)
+            ^^^^^^^^^^^^^^^^^
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+

@@ -1,0 +1,114 @@
+1789581040.4 RUN h=281 b8=0.87 dl=1.01 dr=0.44 ticks=43 d11=0.376 d3=tick=498353 goal=0 here=0
+1789581048.6 RUN h=274 b8=0.47 dl=0.99 dr=0.49 ticks=418 d11=0.356 d3=tick=499170 goal=0 here=0
+1789581056.8 RUN h=274 b8=0.49 dl=0.97 dr=0.48 ticks=795 d11=0.335 d3=tick=499992 goal=0 here=0
+1789581065.3 RUN h=272 b8=0.48 dl=1.00 dr=0.48 ticks=1181 d11=0.381 d3=tick=500841 goal=0 here=0
+1789581072.0 TURN best=10 err=2 pref=1 ticks=1489
+1789581081.6 RUN h=316 b8=1.31 dl=0.44 dr=0.11 ticks=1517 d11=0.409 d3=tick=502471 goal=0 here=0
+1789581090.7 RUN h=303 b8=1.10 dl=0.43 dr=0.14 ticks=1933 d11=0.361 d3=tick=503375 goal=0 here=0
+1789581098.6 RUN h=294 b8=1.01 dl=0.56 dr=0.15 ticks=2298 d11=0.331 d3=tick=504172 goal=0 here=0
+1789581107.0 RUN h=288 b8=0.92 dl=1.10 dr=0.40 ticks=2681 d11=0.384 d3=tick=505010 goal=0 here=0
+1789581115.2 RUN h=283 b8=0.88 dl=1.07 dr=0.43 ticks=3055 d11=0.410 d3=tick=505827 goal=0 here=0
+1789581123.7 RUN h=285 b8=0.85 dl=1.07 dr=0.41 ticks=3445 d11=0.392 d3=tick=506680 goal=0 here=0
+1789581131.8 RUN h=282 b8=0.86 dl=1.09 dr=0.40 ticks=3813 d11=0.359 d3=tick=507484 goal=0 here=0
+1789581139.8 RUN h=283 b8=0.86 dl=1.05 dr=0.40 ticks=4182 d11=0.342 d3=tick=508293 goal=0 here=0
+1789581142.7 ORBIT detected - cutting across
+1789581147.5 ORBIT detected - cutting across
+1789581151.8 ORBIT detected - cutting across
+1789581156.1 TURN best=6 err=-2 pref=1 ticks=4912
+1789581165.9 RUN h=311 b8=1.60 dl=0.43 dr=0.09 ticks=4955 d11=0.331 d3=tick=510901 goal=0 here=0
+1789581174.2 RUN h=298 b8=1.03 dl=0.45 dr=0.10 ticks=5335 d11=0.304 d3=tick=511731 goal=0 here=0
+1789581182.2 RUN h=290 b8=0.97 dl=0.62 dr=0.37 ticks=5699 d11=0.283 d3=tick=512528 goal=0 here=0
+1789581190.5 RUN h=286 b8=0.90 dl=1.10 dr=0.43 ticks=6082 d11=0.253 d3=tick=513362 goal=0 here=0
+1789581198.7 RUN h=284 b8=0.86 dl=1.07 dr=0.43 ticks=6454 d11=0.268 d3=tick=514178 goal=0 here=0
+1789581207.0 RUN h=283 b8=0.86 dl=1.06 dr=0.41 ticks=6837 d11=0.276 d3=tick=515013 goal=0 here=0
+1789581212.3 CROSS left dl=1.08 h=284
+1789581221.0 TURN best=7 err=-1 pref=1 ticks=7113
+1789581225.7 RUN h=221 b8=1.29 dl=0.12 dr=0.94 ticks=7120 d11=0.265 d3=tick=516882 goal=0 here=0
+1789581234.4 RUN h=228 b8=0.60 dl=0.14 dr=1.02 ticks=7513 d11=0.285 d3=tick=517746 goal=0 here=0
+1789581237.8 TURN best=7 err=-1 pref=1 ticks=7673
+1789581243.0 RUN h=216 b8=1.25 dl=0.09 dr=0.90 ticks=7702 d11=0.268 d3=tick=518613 goal=0 here=0
+1789581252.3 RUN h=226 b8=0.58 dl=0.14 dr=0.98 ticks=8124 d11=0.278 d3=tick=519535 goal=0 here=0
+1789581260.7 RUN h=234 b8=0.45 dl=0.18 dr=0.59 ticks=8507 d11=0.275 d3=tick=520375 goal=0 here=0
+1789581261.0 TURN best=7 err=-1 pref=1 ticks=8524
+1789581268.8 RUN h=221 b8=1.28 dl=0.12 dr=0.90 ticks=8682 d11=0.297 d3=tick=521188 goal=0 here=0
+1789581277.0 RUN h=229 b8=0.58 dl=0.13 dr=1.02 ticks=9056 d11=0.256 d3=tick=522012 goal=0 here=0
+1789581280.3 LOOP! switch side -> -1
+1789581280.3 TURN best=7 err=-1 pref=-1 ticks=9209
+1789581285.2 RUN h=218 b8=1.25 dl=0.09 dr=0.88 ticks=9251 d11=0.287 d3=tick=522831 goal=0 here=0
+1789581294.0 RUN h=224 b8=0.60 dl=0.12 dr=1.00 ticks=9652 d11=0.266 d3=tick=523708 goal=0 here=0
+1789581302.3 RUN h=235 b8=0.45 dl=0.18 dr=0.59 ticks=10031 d11=0.268 d3=tick=524540 goal=0 here=0
+1789581302.6 TURN best=7 err=-1 pref=-1 ticks=10048
+1789581311.0 RUN h=221 b8=1.29 dl=0.10 dr=0.96 ticks=10246 d11=0.264 d3=tick=525406 goal=0 here=0
+1789581320.0 RUN h=235 b8=0.48 dl=0.17 dr=0.60 ticks=10658 d11=0.277 d3=tick=526310 goal=0 here=0
+1789581320.4 TURN best=7 err=-1 pref=-1 ticks=10677
+1789581328.8 RUN h=221 b8=1.26 dl=0.11 dr=0.92 ticks=10850 d11=0.276 d3=tick=527192 goal=0 here=0
+1789581337.2 RUN h=226 b8=0.60 dl=0.11 dr=1.02 ticks=11232 d11=0.269 d3=tick=528029 goal=0 here=0
+1789581344.6 TURN best=5 err=-3 pref=-1 ticks=11569
+1789581357.1 RUN h=173 b8=0.82 dl=0.09 dr=0.37 ticks=11601 d11=0.262 d3=tick=530016 goal=0 here=0
+1789581365.4 RUN h=180 b8=1.08 dl=0.09 dr=0.41 ticks=11982 d11=0.262 d3=tick=530847 goal=0 here=0
+1789581373.5 RUN h=190 b8=1.10 dl=0.09 dr=0.37 ticks=12355 d11=0.267 d3=tick=531662 goal=0 here=0
+1789581381.8 RUN h=198 b8=1.17 dl=0.10 dr=0.44 ticks=12734 d11=0.285 d3=tick=532493 goal=0 here=0
+1789581390.5 RUN h=210 b8=1.21 dl=0.11 dr=0.82 ticks=13126 d11=0.288 d3=tick=533355 goal=0 here=0
+1789581399.4 RUN h=217 b8=1.31 dl=0.14 dr=0.88 ticks=13533 d11=0.281 d3=tick=534247 goal=0 here=0
+1789581408.2 RUN h=223 b8=0.61 dl=0.14 dr=0.98 ticks=13936 d11=0.273 d3=tick=535130 goal=0 here=0
+1789581409.6 TURN best=7 err=-1 pref=-1 ticks=14000
+1789581416.2 RUN h=212 b8=1.27 dl=0.13 dr=0.83 ticks=14108 d11=0.281 d3=tick=535927 goal=0 here=0
+1789581424.3 RUN h=219 b8=0.62 dl=0.14 dr=0.95 ticks=14478 d11=0.304 d3=tick=536735 goal=0 here=0
+1789581430.0 TURN best=7 err=-1 pref=-1 ticks=14745
+1789581435.0 RUN h=209 b8=1.25 dl=0.15 dr=0.83 ticks=14776 d11=0.278 d3=tick=537808 goal=0 here=0
+1789581443.5 RUN h=214 b8=1.30 dl=0.14 dr=0.89 ticks=15167 d11=0.270 d3=tick=538663 goal=0 here=0
+1789581451.6 RUN h=221 b8=0.64 dl=0.16 dr=0.98 ticks=15534 d11=0.295 d3=tick=539470 goal=0 here=0
+1789581452.8 TURN best=7 err=-1 pref=-1 ticks=15593
+1789581459.8 RUN h=210 b8=1.27 dl=0.13 dr=0.83 ticks=15728 d11=0.283 d3=tick=540287 goal=0 here=0
+1789581468.7 RUN h=221 b8=0.63 dl=0.14 dr=0.93 ticks=16129 d11=0.275 d3=tick=541175 goal=0 here=0
+1789581474.5 TURN best=7 err=-1 pref=-1 ticks=16402
+1789581480.6 RUN h=204 b8=1.15 dl=0.13 dr=0.85 ticks=16428 d11=0.293 d3=tick=542370 goal=0 here=0
+1789581489.1 RUN h=211 b8=1.30 dl=0.13 dr=0.84 ticks=16817 d11=0.273 d3=tick=543219 goal=0 here=0
+1789581497.3 RUN h=221 b8=0.62 dl=0.15 dr=0.95 ticks=17189 d11=0.274 d3=tick=544037 goal=0 here=0
+1789581502.1 TURN best=7 err=-1 pref=-1 ticks=17413
+1789581507.4 RUN h=209 b8=1.26 dl=0.14 dr=0.83 ticks=17450 d11=0.323 d3=tick=545047 goal=0 here=0
+1789581515.7 RUN h=218 b8=0.66 dl=0.13 dr=0.92 ticks=17829 d11=0.367 d3=tick=545876 goal=0 here=0
+1789581522.4 TURN best=7 err=-1 pref=-1 ticks=18137
+1789581527.8 RUN h=210 b8=1.27 dl=0.14 dr=0.83 ticks=18176 d11=0.358 d3=tick=547087 goal=0 here=0
+1789581536.5 RUN h=219 b8=0.64 dl=0.15 dr=0.94 ticks=18575 d11=0.382 d3=tick=547955 goal=0 here=0
+1789581544.7 RUN h=224 b8=0.47 dl=0.16 dr=0.96 ticks=18948 d11=0.391 d3=tick=548775 goal=0 here=0
+1789581546.5 TURN best=7 err=-1 pref=-1 ticks=19037
+1789581553.9 RUN h=212 b8=1.28 dl=0.14 dr=0.83 ticks=19193 d11=0.346 d3=tick=549701 goal=0 here=0
+1789581562.2 RUN h=220 b8=0.64 dl=0.15 dr=0.95 ticks=19571 d11=0.301 d3=tick=550525 goal=0 here=0
+1789581568.3 LOOP! switch side -> 1
+1789581568.3 TURN best=7 err=-1 pref=1 ticks=19853
+1789581572.8 RUN h=209 b8=1.25 dl=0.15 dr=0.81 ticks=19878 d11=0.274 d3=tick=551589 goal=0 here=0
+1789581581.1 RUN h=215 b8=0.66 dl=0.12 dr=0.90 ticks=20256 d11=0.293 d3=tick=552419 goal=0 here=0
+1789581589.6 RUN h=224 b8=0.63 dl=0.13 dr=0.94 ticks=20647 d11=0.347 d3=tick=553273 goal=0 here=0
+1789581591.0 TURN best=7 err=-1 pref=1 ticks=20711
+1789581597.7 RUN h=212 b8=1.30 dl=0.15 dr=0.85 ticks=20825 d11=0.373 d3=tick=554075 goal=0 here=0
+1789581606.0 RUN h=221 b8=0.63 dl=0.15 dr=0.95 ticks=21206 d11=0.404 d3=tick=554914 goal=0 here=0
+1789581611.4 TURN best=7 err=-1 pref=1 ticks=21451
+1789581616.4 RUN h=211 b8=1.28 dl=0.14 dr=0.82 ticks=21484 d11=0.398 d3=tick=555949 goal=0 here=0
+1789581624.5 RUN h=219 b8=0.63 dl=0.16 dr=0.94 ticks=21854 d11=0.395 d3=tick=556758 goal=0 here=0
+1789581632.2 TURN best=7 err=-1 pref=1 ticks=22208
+1789581637.3 RUN h=208 b8=1.27 dl=0.13 dr=0.82 ticks=22234 d11=0.342 d3=tick=558035 goal=0 here=0
+1789581645.3 RUN h=220 b8=0.64 dl=0.13 dr=0.93 ticks=22602 d11=0.392 d3=tick=558840 goal=0 here=0
+1789581649.2 TURN best=7 err=-1 pref=1 ticks=22780
+1789581653.8 RUN h=209 b8=1.26 dl=0.14 dr=0.84 ticks=22803 d11=0.412 d3=tick=559688 goal=0 here=0
+1789581662.4 RUN h=218 b8=0.65 dl=0.15 dr=0.90 ticks=23196 d11=0.374 d3=tick=560549 goal=0 here=0
+1789581670.5 RUN h=228 b8=0.46 dl=0.16 dr=0.98 ticks=23564 d11=0.357 d3=tick=561358 goal=0 here=0
+1789581670.8 TURN best=7 err=-1 pref=1 ticks=23583
+1789581679.0 RUN h=216 b8=1.28 dl=0.14 dr=0.89 ticks=23786 d11=0.347 d3=tick=562204 goal=0 here=0
+1789581685.9 LOOP! switch side -> -1
+1789581685.9 TURN best=7 err=-1 pref=-1 ticks=24105
+1789581690.1 RUN h=209 b8=1.27 dl=0.14 dr=0.83 ticks=24128 d11=0.348 d3=tick=563319 goal=0 here=0
+1789581698.5 RUN h=217 b8=0.66 dl=0.14 dr=0.90 ticks=24511 d11=0.307 d3=tick=564160 goal=0 here=0
+1789581705.6 TURN best=7 err=-1 pref=-1 ticks=24836
+1789581709.7 RUN h=209 b8=1.28 dl=0.13 dr=0.81 ticks=24858 d11=0.295 d3=tick=565283 goal=0 here=0
+1789581718.2 RUN h=222 b8=0.64 dl=0.14 dr=0.98 ticks=25244 d11=0.272 d3=tick=566125 goal=0 here=0
+1789581722.0 TURN best=7 err=-1 pref=-1 ticks=25418
+1789581726.8 RUN h=210 b8=1.26 dl=0.14 dr=1.00 ticks=25471 d11=0.294 d3=tick=566989 goal=0 here=0
+1789581735.1 RUN h=219 b8=0.64 dl=0.15 dr=0.95 ticks=25851 d11=0.305 d3=tick=567823 goal=0 here=0
+1789581739.5 TURN best=7 err=-1 pref=-1 ticks=26052
+1789581743.7 RUN h=209 b8=1.26 dl=0.12 dr=0.84 ticks=26077 d11=0.319 d3=tick=568679 goal=0 here=0
+1789581751.8 RUN h=219 b8=0.65 dl=0.14 dr=0.92 ticks=26444 d11=0.314 d3=tick=569485 goal=0 here=0
+1789581757.5 LOOP! switch side -> 1
+1789581757.5 TURN best=7 err=-1 pref=1 ticks=26705
+1789581761.6 RUN h=207 b8=1.27 dl=0.14 dr=0.84 ticks=26726 d11=0.323 d3=tick=570472 goal=0 here=0
+1789581769.9 RUN h=218 b8=0.67 dl=0.14 dr=0.90 ticks=27105 d11=0.322 d3=tick=571301 goal=0 here=0

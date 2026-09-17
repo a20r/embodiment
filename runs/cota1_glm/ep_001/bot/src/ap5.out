@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/bot/src/ap5.py", line 100, in <module>
+    ST.write(f'{time.time()-t0:.2f},{cyc},{hd:.1f},{sp:.2f},{wz:.2f},{d4},{d7c},{mode},{";".join(f"{x:.2f}" for x in b)},{d8}\n')
+                                                                      ^^
+NameError: name 'd4' is not defined. Did you mean: 'd8'?

@@ -162,16 +162,25 @@ def mission_mode():
     wa.step()
     check("region entry tracked", wa.region_entry is not None)
     check("no solo completion", not wa.goal_reached)
+    check("status shows here=1 in the goal region",
+          "here=1" in wa.status_frame(), wa.status_frame())
     # Leaving the region clears the entry (a lapsed arrival must
     # re-cross).
     wa.x, wa.y = 1.0, 1.0
     wa.step()
     check("region exit clears entry", wa.region_entry is None)
+    check("here clears on exit", "here=0" in wa.status_frame())
+    solo_cfg = simconfig.resolve(None, overrides={
+        "maze": {"style": "organic", "seed": 41}})
+    solo_cfg["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    solo_w = World(solo_cfg, maze, bot_id="s")
+    check("solo status has no here field",
+          "here=" not in solo_w.status_frame())
 
     # The daemon's joint predicate: entries within the window fire the
     # latch on both; outside the window they do not.
-    window = int(cfg["duo"]["together_window_s"]
-                 * cfg["sim"]["tick_hz"])
+    window = int(cfg["duo"]["together_window_s"] * cfg["sim"]["tick_hz"]
+                 * (cfg["sim"]["realtime_factor"] or 1.0))
     wa.x, wa.y = out_x, 1.0
     wa.step()
     for _ in range(window + 100):
@@ -197,6 +206,116 @@ def mission_mode():
           and all(v == 0 for v in wb.cmd_eff.values()))
     check("goal ticks recorded",
           wa.goal_tick is not None and wb.goal_tick is not None)
+
+    # TX duty cycle: excess lines vanish silently; the window re-arms.
+    cfg_r = duo_cfg(duo={"enabled": True, "tx_rate_hz": 1.0})
+    cfg_r["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    wr = World(cfg_r, maze, bot_id="a", spawn_cell=maze.start_cell)
+    ws = World(cfg_r, maze, bot_id="b", spawn_cell=maze.spawn_b_cell)
+    wr.set_peer(ws)
+    ws.set_peer(wr)
+    ws.x, ws.y = wr.x + 0.5, wr.y
+    for i in range(5):
+        wr.send_serial(f"burst{i}")
+    check("rate cap accepts first line only", wr.comms["tx"] == 1
+          and wr.comms["tx_rate_dropped"] == 4, str(wr.comms))
+    check("capped lines never reach the peer", len(ws.serial_rx) == 1)
+    wr.tick += 60   # past the 50-tick window at 1 Hz
+    wr.send_serial("after window")
+    check("window re-arms", wr.comms["tx"] == 2, str(wr.comms))
+
+    # TX status (duo.tx_status): the status port reports each write's
+    # fate; the counter advances on busy writes too.
+    cfg_t = duo_cfg(duo={"enabled": True, "tx_rate_hz": 1.0,
+                         "tx_status": True})
+    cfg_t["noise"] = dict(simconfig.NOISE_PROFILES["clean"])
+    ta = World(cfg_t, maze, bot_id="a", spawn_cell=maze.start_cell)
+    tb = World(cfg_t, maze, bot_id="b", spawn_cell=maze.spawn_b_cell)
+    ta.set_peer(tb)
+    tb.set_peer(ta)
+    events = []
+    ta.log = events.append
+    check("tx=0:idle before any write", "tx=0:idle" in ta.status_frame(),
+          ta.status_frame())
+    tb.x, tb.y = ta.x + 0.5, ta.y
+    ta.send_serial("hi")
+    check("in range -> tx=1:ok", "tx=1:ok" in ta.status_frame())
+    check("ok line reaches the peer", tb.serial_rx_frame() == "hi")
+    check("receiver counts rx_received", tb.comms["rx_received"] == 1,
+          str(tb.comms))
+    ta.tick += 60
+    tb.x, tb.y = ta.x + 5.0, ta.y
+    ta.send_serial("far")
+    check("out of range -> tx=2:lost", "tx=2:lost" in ta.status_frame())
+    check("lost line is not queued", len(tb.serial_rx) == 0)
+    ta.send_serial("too soon")          # inside the 50-tick window
+    check("rate-capped -> tx=3:busy", "tx=3:busy" in ta.status_frame())
+    check("busy counts as a rate drop, not a tx",
+          ta.comms["tx_rate_dropped"] == 1 and ta.comms["tx"] == 2,
+          str(ta.comms))
+    ta.tick += 60
+    tb.x, tb.y = ta.x + 0.5, ta.y
+    ta.send_serial("again")
+    check("re-armed write -> tx=4:ok", "tx=4:ok" in ta.status_frame())
+    check("re-armed line delivered", tb.serial_rx_frame() == "again")
+    tx_ev = [e for e in events if e.get("event") == "comms_tx"]
+    check("comms_tx carries seq and outcome",
+          [(e.get("seq"), e.get("outcome")) for e in tx_ev]
+          == [(1, "ok"), (2, "lost"), (4, "ok")], str(tx_ev))
+    check("busy writes are not comms_tx events", len(tx_ev) == 3)
+    check("snapshot exposes tx_last", ta.snapshot()["tx_last"] == [4, "ok"])
+    plain = []
+    wr.log = plain.append
+    wr.tick += 60
+    wr.send_serial("plain")
+    check("flag off: status has no tx field",
+          "tx=" not in wr.status_frame(), wr.status_frame())
+    check("flag off: comms_tx has no seq/outcome",
+          plain and plain[-1]["event"] == "comms_tx"
+          and "seq" not in plain[-1] and "outcome" not in plain[-1],
+          str(plain[-1:]))
+    check("solo status has no tx field", "tx=" not in solo_w.status_frame())
+
+    # Blocking-RX primitives: delivery raises the event, peek does not
+    # consume, commit does.
+    tb.rx_event.clear()
+    ta.tick += 60
+    ta.send_serial("peekme")
+    check("delivery sets the receiver's rx_event", tb.rx_event.is_set())
+    check("peek returns the line without consuming it",
+          tb.serial_rx_peek() == "peekme"
+          and tb.serial_rx_peek() == "peekme" and len(tb.serial_rx) == 1)
+    tb.serial_rx_commit()
+    check("commit consumes and counts the read",
+          tb.serial_rx_peek() is None and tb.comms["rx_read"] == 3,
+          str(tb.comms))
+    tb.serial_rx_commit()
+    check("commit on an empty queue is a no-op",
+          tb.comms["rx_read"] == 3)
+    tb.serial_rx.append("served")
+    tb.serial_rx.append("newer")
+    tb.serial_rx_commit("evicted")     # not the head: burst evicted it
+    check("commit of an evicted line pops nothing",
+          list(tb.serial_rx) == ["served", "newer"]
+          and tb.comms["rx_read"] == 3)
+    tb.serial_rx_commit(tb.serial_rx_peek())
+    check("commit of the served head pops exactly it",
+          list(tb.serial_rx) == ["newer"] and tb.comms["rx_read"] == 4)
+    tb.serial_rx.clear()
+
+    # Config guards for the link-layer knobs.
+    for k in ("tx_status", "rx_blocking", "rx_wakes_agent"):
+        try:
+            simconfig.resolve(None, overrides={"duo": {k: True}})
+            check(f"duo.{k} without duo.enabled is rejected", False)
+        except ValueError:
+            check(f"duo.{k} without duo.enabled is rejected", True)
+    try:
+        simconfig.resolve(None, overrides={
+            "duo": {"enabled": True, "together_window_s": 0}})
+        check("together_window_s must be positive", False)
+    except ValueError:
+        check("together_window_s must be positive", True)
 
     # Goal chamber: the space beyond the exit is walled in.
     mc = Maze(m["seed"], m["width"], m["height"],
@@ -224,6 +343,32 @@ def mission_mode():
     check("back wall pens the robot in", near < 0.35,
           f"nearest={near:.3f}")
     check("chamber changes maze hash", mc.hash() != maze.hash())
+
+    # Corner exit (7x7 seed 58 puts the exit at cell (0,6)): the chamber
+    # must not overhang the maze corner, or its side wall meets nothing.
+    mk = Maze(58, 7, 7, cell_size=0.5, style="organic", curviness=0.9,
+              robot_radius=cfg["robot"]["radius"], duo=True,
+              goal_chamber=True)
+    # The chamber protrudes outward along the exit normal by design; the
+    # clamp applies along the exit wall's own axis.
+    span = 7 * 0.5
+    ex1, ey1, ex2, ey2 = mk.exit_wall
+    along = (1, 3) if abs(ex1 - ex2) < 1e-9 else (0, 2)
+    inside_span = all(
+        -1e-9 <= seg[i] <= span + 1e-9 for seg in mk._chamber_segments
+        for i in along)
+    check("corner-exit chamber stays within the maze span", inside_span,
+          str(mk._chamber_segments))
+    # The chamber's attach points must coincide with maze wall ends: the
+    # nearest maze segment to each attach point is (nearly) touching.
+    attach = [(mk._chamber_segments[0][0], mk._chamber_segments[0][1]),
+              (mk._chamber_segments[2][2], mk._chamber_segments[2][3])]
+    maze_segs = [s for s in mk.segments() if s not in mk._chamber_segments]
+    gaps = [min(_seg_dist(px, py, *s)[0] for s in maze_segs)
+            for px, py in attach]
+    check("corner-exit chamber is sealed (attach gaps < robot diameter)",
+          all(g < 2 * cfg["robot"]["radius"] for g in gaps),
+          f"gaps={[round(g, 3) for g in gaps]}")
 
 
 def end_to_end():
@@ -302,9 +447,257 @@ def end_to_end():
         proc.wait(timeout=10)
 
 
+def _cat(path, timeout_s=1):
+    """One read of a FIFO by an external reader, like the agent's
+    `timeout N cat`; returns (exit code, stripped stdout)."""
+    r = subprocess.run(["timeout", str(timeout_s), "cat", path],
+                       capture_output=True)
+    return r.returncode, r.stdout.decode().strip()
+
+
+def _cat_until(path, pred, deadline_s=6):
+    """Re-read (dropped-read noise is on) until pred(text) or timeout."""
+    got = ""
+    deadline = time.time() + deadline_s
+    while time.time() < deadline:
+        _, got = _cat(path, 1)
+        if pred(got):
+            return got
+        time.sleep(0.1)
+    return got
+
+
+def end_to_end_flags():
+    port = PORT + 1
+    print("== end-to-end daemon, tx_status + rx_blocking (port %d) =="
+          % port)
+    import shutil
+    import urllib.request
+    scratch = os.environ.get("DUO_CHECK_DIR", "/tmp/duo_check") + "_flags"
+    shutil.rmtree(scratch, ignore_errors=True)
+    run_dir = os.path.join(scratch, "run")
+    devfs = os.path.join(scratch, "devfs")
+    os.makedirs(run_dir)
+    rtf = 2.0
+    cfg = duo_cfg(duo={"enabled": True, "comms_range": 100.0,
+                       "objective": "together", "tx_status": True,
+                       "rx_blocking": True},
+                  sim={"api_port": port, "realtime_factor": rtf})
+    cfg_path = os.path.join(run_dir, "daemon_config.json")
+    simconfig.dump_resolved(cfg, cfg_path)
+    proc = subprocess.Popen(
+        [sys.executable, "-m", "sim.daemon", "--config", cfg_path,
+         "--run-dir", run_dir, "--devfs", devfs, "--port", str(port)],
+        cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+    def state():
+        with urllib.request.urlopen(
+                f"http://127.0.0.1:{port}/state", timeout=2) as r:
+            return json.loads(r.read())
+
+    try:
+        st = None
+        for _ in range(100):
+            try:
+                st = state()
+                break
+            except OSError:
+                time.sleep(0.1)
+        check("flags daemon up", st is not None)
+        want = int(cfg["duo"]["together_window_s"] * cfg["sim"]["tick_hz"]
+                   * rtf)
+        check("together window is wall seconds (scaled by rtf)",
+              st.get("joint_window_ticks") == want,
+              f"{st.get('joint_window_ticks')} vs {want}")
+        with open(os.path.join(run_dir, "device_map.json")) as f:
+            m = json.load(f)["file_to_physical"]
+        tx = next(k for k, v in m.items() if v == "serial_tx")
+        rx = next(k for k, v in m.items() if v == "serial_rx")
+        status = next(k for k, v in m.items() if v == "status")
+        a_tx = os.path.join(devfs, "a", tx)
+        a_st = os.path.join(devfs, "a", status)
+        b_rx = os.path.join(devfs, "b", rx)
+
+        got = _cat_until(a_st, lambda s: "tx=" in s)
+        check("status shows tx=0:idle before any write", "tx=0:idle" in got,
+              repr(got))
+        code, out = _cat(b_rx, 1)
+        check("blocking RX: empty queue blocks the reader (timeout, "
+              "no output)", code == 124 and out == "", f"{code} {out!r}")
+
+        with open(a_tx, "w") as f:
+            f.write("ping over fifo\n")
+        got = _cat_until(a_st, lambda s: "tx=1:" in s)
+        check("status reports tx=1:ok after the write", "tx=1:ok" in got,
+              repr(got))
+        got = _cat_until(b_rx, lambda s: "ping" in s)
+        check("blocking RX yields the line once it arrives",
+              got == "ping over fifo", repr(got))
+        code, out = _cat(b_rx, 1)
+        check("blocking RX: drained queue blocks again",
+              code == 124 and out == "", f"{code} {out!r}")
+
+        # A reader that gave up consumed nothing: the next line waits
+        # for the next reader.
+        with open(a_tx, "w") as f:
+            f.write("second\n")
+        time.sleep(0.5)
+        got = _cat_until(b_rx, lambda s: s == "second")
+        check("line written with no reader waits for the next reader",
+              got == "second", repr(got))
+        st = state()
+        ca = st["bots"][0]
+        cb = st["bots"][1]["comms"]
+        check("blocking RX accounting: rx_read == lines returned",
+              cb["rx_read"] == 2 and cb["rx_received"] == 2, str(cb))
+        check("snapshot tx_last follows the writes",
+              ca["tx_last"] == [2, "ok"] and ca["comms"]["tx"] == 2,
+              str(ca["tx_last"]))
+        # The blocking thread may be parked in open(); teardown must
+        # not hang on it, and the GT log is complete only after stop.
+        t0 = time.time()
+        proc.terminate()
+        proc.wait(timeout=10)
+        check("teardown with a blocking RX thread is prompt",
+              time.time() - t0 < 5, f"{time.time() - t0:.1f}s")
+        gt_b = os.path.join(run_dir, "ground_truth_b.jsonl")
+        with open(gt_b) as f:
+            reads = [json.loads(l) for l in f if '"event":"read"' in l
+                     and '"physical":"serial_rx"' in l]
+        check("blocking RX reads are ground-truth logged",
+              [r["value"] for r in reads] == ["ping over fifo", "second"],
+              str([r.get("value") for r in reads]))
+    finally:
+        if proc.poll() is None:
+            proc.terminate()
+            proc.wait(timeout=10)
+
+
+def wake_loop():
+    """duo.rx_wakes_agent in harness/duo.py's per-bot loop, driven by a
+    stub model that always ends its turn and a stub daemon whose
+    rx_received counter can be advanced; no docker, no tokens."""
+    print("== harness: rx_wakes_agent loop (stub model/daemon) ==")
+    import shutil
+    import tempfile
+    from harness import duo as hd
+    from harness import llm
+
+    shared = {"rx": 0, "per_call": 0}
+
+    class StubModel:
+        def create(self, system, messages, max_tokens=16000):
+            # A line landing while the model generates: the case the
+            # baseline exists for.
+            shared["rx"] += shared["per_call"]
+            return llm.Response(
+                content=[llm.Block(type="text", text="done")],
+                stop_reason="end_turn",
+                usage=llm.Usage(input_tokens=10, output_tokens=5))
+
+        @staticmethod
+        def serialize_content(content):
+            return [{"type": "text", "text": b.text} for b in content]
+
+    class StubDaemon:
+        def __init__(self, rx_after_s=None):
+            self.t0 = time.time()
+            self.rx_after = rx_after_s
+
+        def get(self, path):
+            if path == "/maze":
+                return {"hash": "stub"}
+            rx = shared["rx"] + int(self.rx_after is not None
+                                    and time.time() - self.t0 > self.rx_after)
+            bot = {"goal_reached": False, "goal_tick": None, "tick": 1,
+                   "sim_time_s": 0.0, "collision_count": 0,
+                   "comms": {"tx": 0, "tx_delivered": 0, "rx_read": 0,
+                             "tx_rate_dropped": 0, "rx_received": rx}}
+            return {"tick": 1, "bots": [bot, dict(bot)]}
+
+    class StubBox:
+        def exec(self, command, timeout_s=60):
+            return 0, ""
+
+    real_make = hd.llm.make_model
+    hd.llm.make_model = lambda m, r: StubModel()
+    try:
+        def run(duo_over, budget_over, rx_after, per_call=0):
+            shared["rx"], shared["per_call"] = 0, per_call
+            cfg = duo_cfg(duo={"enabled": True, **duo_over},
+                          budget=budget_over)
+            ep = tempfile.mkdtemp(prefix="wake_check_")
+            try:
+                return hd._run_bot(cfg, StubDaemon(rx_after), StubBox(),
+                                   ep, "a", 0)
+            finally:
+                shutil.rmtree(ep, ignore_errors=True)
+
+        # Flag off: three blind nudges, then agent_stopped (unchanged).
+        s = run({}, {"max_wallclock_s": 60}, None)
+        check("flag off: 3 nudges then agent_stopped",
+              s["end_reason"] == "agent_stopped" and s["nudges"] == 4
+              and s["wakes"] == 0 and s["turns"] == 4,
+              f"{s['end_reason']} nudges={s['nudges']} turns={s['turns']}")
+        # Flag on: the first pause ends when a line is delivered (wake,
+        # no nudge counted); later pauses time out into the nudge path.
+        t0 = time.time()
+        s = run({"rx_wakes_agent": True, "rx_wake_timeout_s": 2},
+                {"max_wallclock_s": 60}, 1.0)
+        check("flag on: delivered line wakes the agent without a nudge",
+              s["wakes"] == 1 and s["nudges"] == 4
+              and s["end_reason"] == "agent_stopped" and s["turns"] == 5,
+              f"wakes={s['wakes']} nudges={s['nudges']} "
+              f"turns={s['turns']} {s['end_reason']}")
+        check("wake waits for the line, timeouts bound the rest",
+              8.0 < time.time() - t0 < 20.0, f"{time.time() - t0:.1f}s")
+        # Wallclock inside a pause ends the episode as wallclock, not
+        # as a stop, and costs no nudge.
+        s = run({"rx_wakes_agent": True, "rx_wake_timeout_s": 60},
+                {"max_wallclock_s": 3}, None)
+        check("wallclock during a pause ends as wallclock",
+              s["end_reason"] == "wallclock" and s["nudges"] == 0
+              and s["wakes"] == 0, f"{s['end_reason']} {s['nudges']}")
+        # A line delivered while the model was generating wakes the
+        # agent at once (baseline = count at its last tool round), and
+        # max_turns is honoured inside the pause.
+        t0 = time.time()
+        s = run({"rx_wakes_agent": True, "rx_wake_timeout_s": 30},
+                {"max_wallclock_s": 60, "max_turns": 5}, None, per_call=1)
+        # 5 turns then one wrap-up turn after max_turns fires.
+        check("line delivered during generation wakes immediately",
+              s["wakes"] == 4 and s["nudges"] == 0
+              and s["end_reason"] == "max_turns" and s["turns"] == 6,
+              f"wakes={s['wakes']} nudges={s['nudges']} "
+              f"turns={s['turns']} {s['end_reason']}")
+        check("no pause ran to its timeout", time.time() - t0 < 15,
+              f"{time.time() - t0:.1f}s")
+
+        # A terminal API failure (e.g. credits exhausted) ends the
+        # episode as api_error with a summary, not a traceback.
+        class FailingModel(StubModel):
+            calls = 0
+
+            def create(self, system, messages, max_tokens=16000):
+                FailingModel.calls += 1
+                if FailingModel.calls >= 2:
+                    raise RuntimeError("credit balance is too low")
+                return super().create(system, messages, max_tokens)
+
+        hd.llm.make_model = lambda m, r: FailingModel()
+        s = run({}, {"max_wallclock_s": 60}, None)
+        check("terminal API error ends the episode as api_error",
+              s["end_reason"] == "api_error" and s["turns"] == 2,
+              f"{s['end_reason']} turns={s['turns']}")
+    finally:
+        hd.llm.make_model = real_make
+
+
 if __name__ == "__main__":
     in_process()
     mission_mode()
+    wake_loop()
     end_to_end()
+    end_to_end_flags()
     print("PASS" if not FAILS else f"FAILED: {FAILS}")
     sys.exit(1 if FAILS else 0)

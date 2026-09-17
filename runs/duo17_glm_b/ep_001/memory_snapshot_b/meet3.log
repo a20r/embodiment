@@ -1,0 +1,20 @@
+31887.5 MEET3 hillclimb start d11=0.678
+31892.0 probe dir=-45 ok=False d11=0.679 (best 0.677)
+31903.2 probe dir=+135 ok=False d11=0.662 (best 0.677)
+31908.6 probe dir=+180 ok=True d11=0.647 (best 0.677)
+31914.9 probe dir=+0 ok=True d11=0.671 (best 0.677)
+31922.7 probe dir=+90 ok=False d11=0.667 (best 0.677)
+31931.4 probe dir=+135 ok=False d11=0.657 (best 0.677)
+31931.4 all dirs fail - reverse course
+31935.2 probe dir=+0 ok=True d11=0.631 (best 0.677)
+31939.1 probe dir=+45 ok=True d11=0.637 (best 0.677)
+31943.8 probe dir=-45 ok=True d11=0.607 (best 0.677)
+31949.6 probe dir=+90 ok=True d11=0.626 (best 0.677)
+31955.9 probe dir=-90 ok=True d11=0.605 (best 0.677)
+31962.0 probe dir=+135 ok=False d11=0.626 (best 0.677)
+31962.0 all dirs fail - reverse course
+31965.8 probe dir=+0 ok=True d11=0.643 (best 0.677)
+31969.8 probe dir=+45 ok=True d11=0.647 (best 0.677)
+31984.6 probe dir=+135 ok=True d11=0.621 (best 0.677)
+31989.5 probe dir=-135 ok=True d11=0.623 (best 0.677)
+31993.0 probe dir=+180 ok=False d11=0.603 (best 0.677)

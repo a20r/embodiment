@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+import subprocess
+import time
+
+def safe_read(port_num):
+    try:
+        result = subprocess.run(
+            f"timeout 0.2 cat /dev/robot/d{port_num}",
+            shell=True,
+            capture_output=True,
+            text=True,
+            timeout=0.5
+        )
+        if result.stdout:
+            return result.stdout.strip()
+    except:
+        pass
+    return None
+
+def safe_write(port_num, message):
+    try:
+        subprocess.run(
+            f"echo '{message}' > /dev/robot/d{port_num}",
+            shell=True,
+            timeout=0.5,
+            capture_output=True
+        )
+    except:
+        pass
+
+def get_pos():
+    d9 = safe_read(9)
+    d11 = safe_read(11)
+    try:
+        return (float(d9) if d9 else 0, float(d11) if d11 else 0)
+    except:
+        return (0, 0)
+
+print("Trying to change Y coordinate significantly...")
+print()
+
+# Turn 45 degrees and move
+for direction in [45, 90, 135, 180]:
+    print(f"\nDirection: {direction}°")
+    
+    safe_write(6, str(direction))
+    time.sleep(0.3)
+    safe_write(1, "1")
+    
+    for step in range(8):
+        time.sleep(0.5)
+        x, y = get_pos()
+        status = safe_read(3)
+        goal = status.split('goal=')[1][0] if 'goal=' in (status or '') else '?'
+        
+        if step % 2 == 0:
+            print(f"  ({x:.1f}, {y:.3f}) goal={goal}")
+        
+        if status and 'goal=1' in status:
+            print(f"*** GOAL at ({x:.1f}, {y:.3f})! ***")
+            break
+
+safe_write(1, "0")
+print("\nDone")
+

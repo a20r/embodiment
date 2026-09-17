@@ -6,8 +6,12 @@ import json
 import os
 import re
 import sys
+from collections import defaultdict, deque
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, REPO)
+from evals import comms as comms_eval  # noqa: E402
+
 ep_dir = os.path.join(REPO, "runs", sys.argv[1], sys.argv[2])
 out_path = sys.argv[3]
 title = sys.argv[4] if len(sys.argv) > 4 else "Mazebot Duo"
@@ -40,7 +44,9 @@ for bid in BOTS:
                 comms.append({"t": r.get("t") or 0, "from": bid,
                               "line": (r.get("line") or "")[:200],
                               "ok": bool(r.get("delivered")),
-                              "dist": r.get("dist")})
+                              "dist": r.get("dist"),
+                              "seq": r.get("seq"),
+                              "outcome": r.get("outcome")})
         elif "pose" in r:
             poses[r["t"]] = [round(r["pose"][0], 3),
                              round(r["pose"][1], 3),
@@ -54,6 +60,23 @@ frames = [[t] + bots["a"]["poses"][t] + bots["b"]["poses"][t]
           for t in ticks[::step]]
 comms.sort(key=lambda c: c["t"])
 
+# Contingent-reply tags (evals/comms.py): `stim` marks a delivered line
+# that got a reply, `cr` holds the tick of the stimulus a reply answers.
+# Entries match the GT records one-to-one in (bot, tick) file order.
+tagged, ce = comms_eval.analyse(ep_dir)
+by_key = defaultdict(deque)
+for e in tagged:
+    by_key[(e["bot"], e["t"])].append(e)
+for c in comms:
+    q = by_key.get((c["from"], c["t"]))
+    e = q.popleft() if q else {}
+    c["stim"] = bool(e.get("stim"))
+    c["cr"] = e.get("cr_of")
+    c["crp"] = bool(e.get("cr_plus"))
+comms_chips = {k: ce.get(k) for k in
+               ("cr_count", "cr_lines", "stimuli", "cr_rate",
+                "exchanges_ge3", "longest_exchange", "window_s")}
+
 # A chatty controller can radiate tens of thousands of lines; the page
 # collapses consecutive repeats and keeps every worded line, then
 # downsamples the numeric chatter to keep the DOM sane.  Totals are
@@ -66,10 +89,14 @@ for c in comms:
     if prev and prev["from"] == c["from"] and prev["line"] == c["line"] \
             and prev["ok"] == c["ok"]:
         prev["n"] += 1
+        prev["stim"] = prev["stim"] or c["stim"]
+        if prev["cr"] is None:
+            prev["cr"], prev["crp"] = c["cr"], c["crp"]
     else:
         runs.append(dict(c, n=1))
 for r in runs:
-    r["w"] = bool(re.search(r"[A-Za-z]{2,}", r["line"]))
+    r["w"] = bool(re.search(r"[A-Za-z]{2,}", r["line"])) \
+        or r["cr"] is not None
 CAP = 1400
 worded = [r for r in runs if r["w"]]
 numeric = [r for r in runs if not r["w"]]
@@ -157,15 +184,35 @@ for bid in BOTS:
     }
 
 first_contact = next((c["t"] for c in comms if c["ok"]), None)
+
+# Agents choose their own callsigns, which need not match the
+# physical a/b labels (in one series physical A named itself "B").
+# Infer each bot's dominant self-signature: the most common leading
+# token WITHOUT a trailing colon (a colon marks an addressee).
+signs = {}
+for bid in BOTS:
+    counts = {}
+    for r in runs:
+        if r["from"] != bid or not re.search(r"[A-Za-z]{2,}", r["line"]):
+            continue
+        tok = r["line"].split()[0] if r["line"].split() else ""
+        if tok and not tok.endswith(":") and len(tok) <= 6:
+            counts[tok] = counts.get(tok, 0) + r["n"]
+    if counts:
+        top, n = max(counts.items(), key=lambda kv: kv[1])
+        if n >= 10 and top.lower() != bid:
+            signs[bid] = top
 data = {
     "tx_total": tx_total,
     "tx_delivered": tx_delivered,
+    "signs": signs,
     "maze": {k: maze.get(k) for k in
              ("width", "height", "cell_size", "segments", "start_cell",
               "spawn_b_cell", "goal_cell", "hash")},
     "frames": frames,
     "bots": data_bots,
     "comms": comms,
+    "comms_eval": comms_chips,
     "range": comms_range,
     "first_contact": first_contact,
     "meta": {"model": meta.get("model"), "arm": meta.get("arm"),
@@ -183,4 +230,6 @@ html = tpl.replace("__DATA__", json.dumps(data, separators=(",", ":"))
 open(out_path, "w").write(html)
 n_deliv = sum(1 for c in comms if c["ok"])
 print(f"wrote {out_path} ({len(html)//1024} KB, {len(frames)} frames, "
-      f"{len(comms)} tx / {n_deliv} delivered)")
+      f"{len(comms)} tx / {n_deliv} delivered, "
+      f"{comms_chips['cr_count']}/{comms_chips['stimuli']} contingent "
+      f"replies, longest exchange {comms_chips['longest_exchange']})")

@@ -1,0 +1,12 @@
+t=24 fit=(-3580,-857) k=3383 dist=4123 sm=0.806 state=GO
+t=36 fit=(-3278,-1477) k=3301 dist=4308 sm=0.775 state=FOLLOW
+t=49 fit=(-3642,-1370) k=3483 dist=4176 sm=0.850 state=FOLLOW
+t=61 fit=(-4478,-1140) k=4050 dist=4122 sm=0.917 state=FOLLOW
+t=73 fit=(-3676,-1659) k=3573 dist=4387 sm=0.839 state=FOLLOW
+t=85 fit=(-3335,-2023) k=3466 dist=4565 sm=0.775 state=FOLLOW
+t=97 fit=(-3625,-817) k=3356 dist=4123 sm=0.741 state=FOLLOW
+t=110 fit=(-4447,-1926) k=4213 dist=5000 sm=0.750 state=FOLLOW
+t=122 fit=(-2308,-3145) k=3320 dist=4281 sm=0.451 state=FOLLOW
+t=134 fit=(-2594,-3646) k=3500 dist=4952 sm=0.383 state=FOLLOW
+t=146 fit=(-3116,-2199) k=2902 dist=4565 sm=0.485 state=FOLLOW
+t=159 fit=(-4181,-1503) k=3180 dist=4237 sm=0.721 state=FOLLOW

@@ -1,0 +1,99 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "zai:glm-5.3-flash@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "model_spec": {
+        "provider": "zai",
+        "model_id": "glm-5.3-flash",
+        "reasoning_effort": "max",
+        "tokens_param": "max_tokens",
+        "stream": false,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled",
+            "clear_thinking": false
+          }
+        }
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "wallclock",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 729649,
+      "sim_time_s": 14592.98,
+      "comms": {
+        "tx": 310,
+        "tx_delivered": 0,
+        "rx_read": 0,
+        "tx_rate_dropped": 47
+      },
+      "wall_s": 7294.3,
+      "turns": 169,
+      "execs": 182,
+      "restarts": 1,
+      "tokens": {
+        "input": 12057181,
+        "output": 168707,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 11825856
+      },
+      "collisions": 6364
+    },
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "model_spec": {
+        "provider": "zai",
+        "model_id": "glm-5.3-flash",
+        "reasoning_effort": "max",
+        "tokens_param": "max_tokens",
+        "stream": false,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled",
+            "clear_thinking": false
+          }
+        }
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "wallclock",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 734785,
+      "sim_time_s": 14695.7,
+      "comms": {
+        "tx": 947,
+        "tx_delivered": 0,
+        "rx_read": 0,
+        "tx_rate_dropped": 260
+      },
+      "wall_s": 7345.7,
+      "turns": 135,
+      "execs": 140,
+      "restarts": 1,
+      "tokens": {
+        "input": 9782676,
+        "output": 181260,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 9213504
+      },
+      "collisions": 3115
+    }
+  },
+  "solved_all": false,
+  "final_tick": 734797
+}

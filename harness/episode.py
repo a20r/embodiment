@@ -33,8 +33,9 @@ class Transcript:
 
 
 def build_system_prompt(cfg):
-    fname = "robot_agent_lost.md" \
-        if cfg.get("prompt_variant") == "lost" else "robot_agent.md"
+    fname = {"lost": "robot_agent_lost.md",
+             "race": "robot_agent_race.md"}.get(
+                 cfg.get("prompt_variant"), "robot_agent.md")
     with open(os.path.join(REPO, "harness", "prompts", fname)) as f:
         text = f.read()
     b = cfg["budget"]
@@ -58,8 +59,30 @@ def prepare_bot_dir(cfg, bot_dir):
     os.makedirs(os.path.join(bot_dir, "src"))
     variant = cfg.get("readme_variant") or \
         ("labeled" if cfg["labels"] == "on" else "unlabeled")
-    shutil.copy(os.path.join(REPO, "botfs", f"README.{variant}.md"),
-                os.path.join(bot_dir, "README.md"))
+    # The labeled README documents value formats; with the point cloud
+    # in place of the beam scan it must describe that port instead.
+    if variant == "labeled" and cfg.get("lidar3d", {}).get("enabled"):
+        variant = "labeled_lidar3d"
+    with open(os.path.join(REPO, "botfs", f"README.{variant}.md")) as f:
+        text = f.read()
+    if "{laps_warmup}" in text or "{laps_timed}" in text:
+        # Race READMEs state the lap counts the config actually runs.
+        tr = cfg.get("track", {})
+        text = text.replace("{laps_warmup}",
+                            _lap_words(tr.get("laps_warmup", 1), "lap"))
+        text = text.replace("{laps_timed}",
+                            _lap_words(tr.get("laps_timed", 10), "lap"))
+    with open(os.path.join(bot_dir, "README.md"), "w") as f:
+        f.write(text)
+
+
+_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+          "eight", "nine", "ten", "eleven", "twelve"]
+
+
+def _lap_words(n, noun):
+    word = _WORDS[n] if 0 <= n < len(_WORDS) else str(n)
+    return f"{word} {noun}" + ("" if n == 1 else "s")
 
 
 def seed_memory_if_needed(cfg, memory_dir):
@@ -96,7 +119,8 @@ def run_episode(cfg, series_dir, episode_index):
         f"mazebot-{cfg['series']['name']}-ep{episode_index}",
         {os.path.abspath(devfs): "/dev/robot",
          os.path.abspath(bot_dir): "/bot",
-         os.path.abspath(memory_dir): "/memory"})
+         os.path.abspath(memory_dir): "/memory"},
+        image=(cfg.get("container") or {}).get("image", "mazebot-bot"))
     box.start()
     daemon.resume()
 
@@ -107,13 +131,15 @@ def run_episode(cfg, series_dir, episode_index):
     transcript.write(dict(type="meta", episode=episode_index,
                           arm=cfg["arm"], labels=cfg["labels"],
                           model=cfg["model"], maze_hash=maze_hash,
+                          model_spec=llm.model_spec(model),
                           noise_profile=cfg["noise_profile"],
                           perturb_state=cfg.get("perturb_state", {})))
     transcript.write(dict(type="system_prompt", content=system))
 
     messages = []
     start_wall = time.time()
-    totals = dict(input=0, output=0, cache_read=0, cache_creation=0)
+    totals = dict(input=0, output=0, cache_read=0, cache_creation=0,
+                  cached=0)
     turns = 0
     execs = 0
     restarts = 0
@@ -209,19 +235,40 @@ def run_episode(cfg, series_dir, episode_index):
                 messages.append({"role": "user", "content": (
                     "You are now connected to the robot. Begin.")})
             turns += 1
-            response = model.create(system, messages)
-            # Safety-classifier false positives are stochastic; retry
-            # the same model (never a fallback) before giving up the
-            # episode.  Five tries with growing backoff: a long-haul
-            # run dying at turn 2 costs far more than 3 idle minutes.
-            refusal_tries = 0
-            while getattr(response, "stop_reason", None) == "refusal" \
-                    and refusal_tries < 5:
-                refusal_tries += 1
-                transcript.write(dict(type="note", kind="refusal_retry",
-                                      attempt=refusal_tries))
-                time.sleep(15 * refusal_tries)
-                response = model.create(system, messages)
+            try:
+                response = model.create(
+                    system, messages,
+                    max_tokens=b["max_output_tokens_per_turn"])
+                # Safety-classifier false positives are stochastic;
+                # retry the same model (never a fallback) before giving
+                # up the episode.  Five tries with growing backoff: a
+                # long-haul run dying at turn 2 costs far more than 3
+                # idle minutes.
+                refusal_tries = 0
+                while getattr(response, "stop_reason", None) == "refusal" \
+                        and refusal_tries < 5:
+                    refusal_tries += 1
+                    transcript.write(dict(type="note",
+                                          kind="refusal_retry",
+                                          attempt=refusal_tries))
+                    time.sleep(15 * refusal_tries)
+                    response = model.create(
+                        system, messages,
+                        max_tokens=b["max_output_tokens_per_turn"])
+            except Exception as e:
+                # The model layer already retried what is retryable
+                # (rate limits, 5xx, connection loss).  Anything that
+                # still raises - an exhausted credit balance, a
+                # rejected request - ends the episode as a recorded
+                # api_error with its summary, never a traceback and
+                # never a fallback model.
+                transcript.write(dict(type="note", kind="api_error",
+                                      error=f"{type(e).__name__}: "
+                                            f"{str(e)[:400]}"))
+                end_reason = "api_error"
+                transcript.write(dict(type="note", kind="episode_end",
+                                      reason=end_reason))
+                break
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens
@@ -229,13 +276,18 @@ def run_episode(cfg, series_dir, episode_index):
                 (getattr(u, "cache_read_input_tokens", 0) or 0)
             totals["cache_creation"] += \
                 (getattr(u, "cache_creation_input_tokens", 0) or 0)
+            totals["cached"] += (getattr(u, "cached_input_tokens", 0) or 0)
             content = model.serialize_content(response.content)
             transcript.write(dict(
                 type="assistant", content=content,
                 stop_reason=response.stop_reason,
-                usage=dict(input=u.input_tokens, output=u.output_tokens),
+                usage=dict(input=u.input_tokens, output=u.output_tokens,
+                           cached=getattr(u, "cached_input_tokens", 0)
+                           or 0),
                 context_tokens=llm.context_tokens(u)))
             messages.append({"role": "assistant", "content": content})
+            if response.stop_reason == "max_tokens":
+                transcript.write(dict(type="note", kind="output_truncated"))
 
             if response.stop_reason == "refusal" and end_reason is None:
                 end_reason = "refusal"
@@ -295,6 +347,7 @@ def run_episode(cfg, series_dir, episode_index):
         summary = dict(
             episode=episode_index,
             arm=cfg["arm"], labels=cfg["labels"], model=cfg["model"],
+            model_spec=llm.model_spec(model),
             noise_profile=cfg["noise_profile"],
             maze_hash=maze_hash,
             perturb_state=cfg.get("perturb_state", {}),
@@ -307,6 +360,10 @@ def run_episode(cfg, series_dir, episode_index):
             turns=turns, execs=execs, restarts=restarts,
             tokens=totals,
             collisions=state.get("collision_count"),
+            **({"lap": state.get("lap"), "laps": state.get("laps"),
+                "best_lap_s": state.get("best_lap_s"),
+                "slide_ticks": state.get("slide_ticks")}
+               if "laps" in state else {}),
         )
         with open(os.path.join(ep_dir, "summary.json"), "w") as f:
             json.dump(summary, f, indent=2)

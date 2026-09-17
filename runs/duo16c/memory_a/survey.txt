@@ -1,0 +1,91 @@
+  0.1 d4=31.2 d9=65707 d11=0.369 d5=0 d0=0 tick=570131 goal=0 here=0 BIG:n=109 r=1.56 az=73 rmin=0.95 rmax=2.27 H:n=164 az=152
+  1.1 d4=32.1 d9=65707 d11=0.367 d5=0 d0=0 tick=570236 goal=0 here=0 BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=171 az=151
+  2.2 d4=25.9 d9=65709 d11=0.372 d5=0 d0=0 tick=570348 goal=0 here=0 BIG:n=115 r=1.52 az=73 rmin=0.95 rmax=2.27 H:n=166 az=150
+  3.3 d4=26.7 d9=65708 d11=0.359 d5=0 d0=0 tick=570453 goal=0 here=0 BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=176 az=151
+  4.4 d4=30.7 d9=65707 d11=0.376 d5=0 d0=0 tick=570559 goal=0 here=0 BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=168 az=152
+  5.4 d4=28.0 d9=65707 d11=0.366 d5=0 d0=0 tick=570664 goal=0 here=0 BIG:n=109 r=1.56 az=73 rmin=0.95 rmax=2.27 H:n=170 az=151
+  6.7 d4=27.6 d9=65708 d11= d5=0 d0=0 tick=570769 goal=0 here=0 BIG:n=112 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=159 az=153
+  7.7 d4=29.7 d9=65707 d11=0.351 d5=0 d0=0 tick=570895 goal=0 here=0 BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=160 az=154
+  8.8 d4=25.8 d9=65709 d11=0.375 d5=0 d0=0 tick=571000 goal=0 here=0 BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=163 az=152
+  9.8 d4=26.4 d9=65707 d11=0.354 d5=0 d0=0 tick=571106 goal=0 here=0 BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=169 az=152
+ 10.9 d4=29.8 d9=65707 d11=0.348 d5=0 d0=0 tick=571212 goal=0 here=0 BIG:n=108 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=167 az=150
+ 12.0 d4=29.7 d9=65708 d11=0.363 d5=0 d0=0 tick=571319 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=165 az=151
+ 13.0 d4=27.3 d9=65708 d11=0.361 d5=0 d0=0 tick=571424 goal=0 here=0 BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=169 az=155
+ 14.1 d4=25.6 d9=65708 d11=0.381 d5=0 d0=0  BIG:n=112 r=1.53 az=73 rmin=0.95 rmax=2.28 H:n=155 az=155
+ 15.1 d4=31.1 d9=65707 d11=0.367 d5=0 d0=0  BIG:n=114 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=162 az=154
+ 16.2 d4=29.4 d9=65709 d11=0.366 d5=0 d0=0  BIG:n=108 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=163 az=151
+ 17.2 d4=29.8 d9=65707 d11=0.378 d5=0 d0=0 tick=571846 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=170 az=152
+ 18.3 d4=27.2 d9=65708 d11=0.353 d5=0 d0=0 tick=571951 goal=0 here=0 BIG:n=109 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=171 az=151
+ 19.3 d4=29.4 d9=65708 d11=0.360 d5=0 d0=0 tick=572057 goal=0 here=0 BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=155 az=156
+ 20.4 d4=28.4 d9=65709 d11=0.365 d5=0 d0=0 tick=572162 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=160 az=156
+ 21.4 d4=31.1 d9=65707 d11=0.371 d5=0 d0=0 tick=572267 goal=0 here=0 BIG:n=108 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=169 az=150
+ 22.5 d4=30.4 d9=65709 d11=0.361 d5=0 d0=0 tick=572373 goal=0 here=0 BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=157 az=151
+ 23.5 d4=27.0 d9=65709 d11=0.363 d5=0 d0=0  BIG:n=107 r=1.56 az=73 rmin=0.95 rmax=2.27 H:n=164 az=156
+ 24.6 d4=29.9 d9=65708 d11=0.357 d5=0 d0=0 tick=572584 goal=0 here=0 BIG:n=119 r=1.51 az=73 rmin=0.95 rmax=2.27 H:n=159 az=154
+ 25.7 d4=30.3 d9=65708 d11=0.368 d5=0 d0=0 tick=572689 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=161 az=153
+ 26.7 d4=31.2 d9=65709 d11=0.362 d5=0 d0=0  BIG:n=115 r=1.52 az=73 rmin=0.95 rmax=2.27 H:n=162 az=153
+ 27.8 d4=26.5 d9=65708 d11=0.363 d5=0 d0=0  BIG:n=113 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=168 az=152
+ 28.8 d4=28.7 d9=65708 d11=0.362 d5=0 d0=0 tick=573005 goal=0 here=0 BIG:n=109 r=1.55 az=73 rmin=0.95 rmax=2.28 H:n=164 az=153
+ 29.9 d4=30.3 d9=65709 d11=0.377 d5=0 d0=0 tick=573111 goal=0 here=0 BIG:n=111 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=157 az=156
+ 30.9 d4=30.5 d9=65707 d11=0.347 d5=0 d0=0 tick=573216 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=165 az=153
+ 32.0 d4=28.0 d9=65709 d11=0.361 d5=0 d0=0 tick=573322 goal=0 here=0 BIG:n=113 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=162 az=153
+ 33.0 d4=33.6 d9=65709 d11=0.361 d5=0 d0=0 tick=573427 goal=0 here=0 BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.26 H:n=157 az=152
+ 34.1 d4=33.3 d9=65709 d11=0.361 d5=0 d0=0 tick=573532 goal=0 here=0 BIG:n=108 r=1.55 az=73 rmin=0.95 rmax=2.28 H:n=159 az=151
+ 35.1 d4=28.4 d9=65709 d11=0.374 d5=0 d0=0  BIG:n=109 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=164 az=150
+ 36.2 d4=26.1 d9=65709 d11=0.367 d5=0 d0=0  BIG:n=107 r=1.54 az=73 rmin=0.95 rmax=2.26 H:n=177 az=151
+ 37.2 d4=27.0 d9=65707 d11=0.369 d5=0 d0=0 tick=573848 goal=0 here=0 BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=165 az=153
+ 38.3 d4=31.4 d9=65707 d11=0.371 d5=0 d0=0  BIG:n=108 r=1.56 az=73 rmin=0.95 rmax=2.27 H:n=162 az=155
+ 39.4 d4=34.9 d9=65708 d11=0.379 d5=0 d0=0 tick=574059 goal=0 here=0 BIG:n=112 r=1.51 az=73 rmin=0.95 rmax=2.27 H:n=165 az=154
+ 40.4 d4=31.1 d9=65708 d11=0.361 d5=0 d0=0 tick=574165 goal=0 here=0 BIG:n=108 r=1.56 az=73 rmin=0.95 rmax=2.27 H:n=151 az=154
+ 41.5 d4=31.3 d9=65707 d11=0.347 d5=0 d0=0  BIG:n=115 r=1.52 az=73 rmin=0.95 rmax=2.27 H:n=167 az=153
+ 42.5 d4=30.0 d9=65708 d11=0.376 d5=0 d0=0 tick=574376 goal=0 here=0 BIG:n=111 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=164 az=153
+ 43.6 d4=29.1 d9=65708 d11=0.347 d5=0 d0=0 tick=574481 goal=0 here=0 BIG:n=114 r=1.52 az=73 rmin=0.95 rmax=2.27 H:n=171 az=148
+ 44.6 d4=27.0 d9=65709 d11=0.362 d5=0 d0=0  BIG:n=112 r=1.53 az=73 rmin=0.95 rmax=2.28 H:n=168 az=151
+ 45.7 d4=29.2 d9=65709 d11=0.358 d5=0 d0=0  BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.26 H:n=163 az=152
+ 46.7 d4=24.8 d9=65707 d11=0.375 d5=0 d0=0  BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=159 az=156
+ 47.8 d4=31.6 d9=65709 d11=0.369 d5=0 d0=0 tick=574903 goal=0 here=0 BIG:n=112 r=1.53 az=73 rmin=0.95 rmax=2.26 H:n=158 az=155
+ 48.8 d4=29.0 d9=65708 d11=0.359 d5=0 d0=0 tick=575008 goal=0 here=0 BIG:n=108 r=1.56 az=73 rmin=0.95 rmax=2.26 H:n=166 az=153
+ 49.9 d4=31.0 d9=65707 d11=0.363 d5=0 d0=0 tick=575113 goal=0 here=0 BIG:n=111 r=1.53 az=73 rmin=0.95 rmax=2.28 H:n=168 az=153
+ 51.0 d4=29.7 d9=65707 d11=0.358 d5=0 d0=0  BIG:n=111 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=170 az=150
+ 52.0 d4=29.6 d9=65708 d11=0.355 d5=0 d0=  BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.28 H:n=163 az=152
+ 53.1 d4=26.4 d9=65709 d11=0.356 d5=0 d0=0 tick=575429 goal=0 here=0 BIG:n=114 r=1.52 az=73 rmin=0.95 rmax=2.27 H:n=166 az=156
+ 54.1 d4=29.5 d9=65707 d11=0.371 d5=0 d0=0 tick=575534 goal=0 here=0 BIG:n=113 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=170 az=152
+ 55.2 d4=31.9 d9=65708 d11= d5=0 d0=0 tick=575640 goal=0 here=0 BIG:n=110 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=173 az=154
+ 56.2 d4=28.2 d9=65707 d11=0.364 d5= d0=0  BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.26 H:n=166 az=152
+ 57.3 d4=28.7 d9=65709 d11=0.365 d5=0 d0=0 tick=575851 goal=0 here=0 BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=155 az=154
+ 58.3 d4=30.2 d9=65709 d11=0.368 d5= d0=0  BIG:n=109 r=1.54 az=73 rmin=0.95 rmax=2.28 H:n=162 az=152
+ 59.4 d4=27.6 d9=65707 d11=0.370 d5=0 d0=0  BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=166 az=152
+ 60.4 d4=26.6 d9=65709 d11=0.359 d5=0 d0=0 tick=576167 goal=0 here=0 BIG:n=108 r=1.56 az=73 rmin=0.95 rmax=2.28 H:n=171 az=155
+ 61.5 d4=28.8 d9=65708 d11=0.363 d5=0 d0=0  BIG:n=105 r=1.56 az=73 rmin=0.95 rmax=2.27 H:n=158 az=150
+ 62.5 d4=27.7 d9=65709 d11=0.363 d5=0 d0=0  BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.29 H:n=163 az=154
+ 63.6 d4=30.6 d9=65708 d11=0.366 d5=0 d0=0 tick=576483 goal=0 here=0 BIG:n=109 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=171 az=151
+ 64.7 d4=27.5 d9=65708 d11=0.367 d5=0 d0=0  BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.26 H:n=160 az=153
+ 65.7 d4=25.5 d9=65707 d11=0.356 d5=0 d0=0 tick=576694 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.26 H:n=153 az=154
+ 66.8 d4=30.3 d9=65707 d11=0.374 d5=0 d0=0 tick=576799 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=171 az=153
+ 67.8 d4=31.2 d9=65708 d11=0.357 d5=0 d0=0 tick=576907 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=165 az=153
+ 68.9 d4=28.9 d9=65709 d11=0.379 d5=0 d0=0 tick=577012 goal=0 here=0 BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.28 H:n=165 az=152
+ 69.9 d4=31.1 d9=65709 d11=0.362 d5=0 d0=0 tick=577117 goal=0 here=0 BIG:n=110 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=161 az=152
+ 71.0 d4=27.3 d9=65709 d11=0.366 d5=0 d0=0  BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=173 az=152
+ 72.0 d4=31.9 d9=65707 d11=0.368 d5=0 d0=0 tick=577328 goal=0 here=0 BIG:n=113 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=156 az=151
+ 73.1 d4=29.6 d9=65707 d11=0.366 d5=0 d0=0  BIG:n=111 r=1.52 az=73 rmin=0.95 rmax=2.27 H:n=155 az=154
+ 74.2 d4=29.3 d9=65708 d11=0.345 d5=0 d0=0 tick=577539 goal=0 here=0 BIG:n=106 r=1.57 az=73 rmin=0.95 rmax=2.29 H:n=167 az=151
+ 75.2 d4=30.3 d9=65707 d11=0.367 d5=0 d0=0 tick=577645 goal=0 here=0 BIG:n=112 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=168 az=151
+ 76.3 d4=29.6 d9=65707 d11=0.367 d5=0 d0=0 tick=577751 goal=0 here=0 BIG:n=113 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=162 az=156
+ 77.3 d4=31.7 d9=65709 d11=0.375 d5=0 d0=0 tick=577857 goal=0 here=0 BIG:n=113 r=1.53 az=73 rmin=0.95 rmax=2.28 H:n=167 az=153
+ 78.4 d4=30.8 d9=65707 d11=0.377 d5=0 d0=0 tick=577962 goal=0 here=0 BIG:n=110 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=170 az=153
+ 79.4 d4=29.9 d9=65707 d11=0.376 d5=0 d0=0 tick=578068 goal=0 here=0 BIG:n=106 r=1.54 az=73 rmin=0.96 rmax=2.27 H:n=164 az=152
+ 80.5 d4=30.5 d9=65709 d11=0.368 d5=0 d0=0  BIG:n=109 r=1.56 az=73 rmin=0.95 rmax=2.26 H:n=157 az=154
+ 81.6 d4=29.4 d9=65707 d11=0.371 d5=0 d0=0  BIG:n=114 r=1.53 az=73 rmin=0.95 rmax=2.27 H:n=174 az=151
+ 82.6 d4=30.6 d9=65708 d11=0.383 d5=0 d0=0  BIG:n=109 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=165 az=151
+ 83.7 d4=31.8 d9=65708 d11=0.354 d5=0 d0=0  BIG:n=109 r=1.53 az=73 rmin=0.95 rmax=2.26 H:n=162 az=153
+ 84.7 d4=33.9 d9=65709 d11=0.371 d5=0 d0=0 tick=578595 goal=0 here=0 BIG:n=107 r=1.55 az=73 rmin=0.95 rmax=2.27 H:n=168 az=153
+ 85.8 d4=30.9 d9=65709 d11=0.371 d5=0 d0=0  BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.26 H:n=164 az=151
+ 86.8 d4=32.3 d9=65709 d11=0.370 d5=0 d0=0 tick=578806 goal=0 here=0 BIG:n=113 r=1.53 az=73 rmin=0.95 rmax=2.26 H:n=163 az=152
+ 87.9 d4=28.7 d9=65708 d11=0.357 d5=0 d0=0 tick=578911 goal=0 here=0 BIG:n=111 r=1.54 az=73 rmin=0.95 rmax=2.28 H:n=172 az=151
+ 88.9 d4= d9=65707 d11=0.352 d5=0 d0=0 tick=579016 goal=0 here=0 BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=172 az=153
+ 90.0 d4=30.3 d9=65708 d11=0.377 d5=0 d0=0 tick=579122 goal=0 here=0 BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.28 H:n=163 az=155
+ 91.0 d4=29.1 d9=65708 d11=0.370 d5=0 d0=0  BIG:n=110 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=163 az=152
+ 92.1 d4=29.9 d9=65709 d11=0.367 d5=0 d0=0  BIG:n=109 r=1.55 az=73 rmin=0.95 rmax=2.28 H:n=166 az=151
+ 93.1 d4=28.8 d9=65707 d11=0.372 d5=0 d0=0  BIG:n=112 r=1.54 az=73 rmin=0.95 rmax=2.27 H:n=165 az=153
+ 94.2 d4=28.9 d9=65707 d11=0.361 d5=0 d0=0 tick=579543 goal=0 here=0 BIG:n=109 r=1.56 az=73 rmin=0.95 rmax=2.28 H:n=167 az=152
+SURVEY DONE

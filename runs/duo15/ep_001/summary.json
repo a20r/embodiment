@@ -1,0 +1,83 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-haiku-4-5-20251001",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-haiku-4-5-20251001",
+        "thinking": null
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "agent_stopped",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 370599,
+      "sim_time_s": 7411.98,
+      "comms": {
+        "tx": 742,
+        "tx_delivered": 0,
+        "rx_read": 0,
+        "tx_rate_dropped": 2363
+      },
+      "wall_s": 3704.8,
+      "turns": 154,
+      "execs": 150,
+      "restarts": 0,
+      "tokens": {
+        "input": 19471,
+        "output": 68832,
+        "cache_read": 8690108,
+        "cache_creation": 110534,
+        "cached": 0
+      },
+      "collisions": 2390
+    },
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-haiku-4-5-20251001",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-haiku-4-5-20251001",
+        "thinking": null
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "agent_stopped",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 372963,
+      "sim_time_s": 7459.26,
+      "comms": {
+        "tx": 424,
+        "tx_delivered": 0,
+        "rx_read": 0,
+        "tx_rate_dropped": 2275
+      },
+      "wall_s": 3728.4,
+      "turns": 197,
+      "execs": 193,
+      "restarts": 0,
+      "tokens": {
+        "input": 22668,
+        "output": 72494,
+        "cache_read": 10524303,
+        "cache_creation": 106958,
+        "cached": 0
+      },
+      "collisions": 651
+    }
+  },
+  "solved_all": false,
+  "final_tick": 372976
+}

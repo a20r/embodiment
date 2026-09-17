@@ -1,0 +1,28 @@
+Robot Exploration Progress:
+
+Port Findings:
+- d9: Rapidly increasing counter (122K+), purpose unknown
+- d3 goal field: Always 0, even after traveling
+- d3 here field: Still 0 (not at goal)
+
+Movement Control:
+- d1: Steering (signed values control turning angle)
+- d7: Throttle (1=forward, 0=stop)
+- d4: Reports heading (0-360°)
+- d6: Odometer distance
+
+Communication:
+- d8: TX - can broadcast messages
+- d10: RX - no messages from other robot yet
+- Have broadcast "HELLO" and position updates
+
+Status:
+- Successfully moving and measuring distance
+- No goal found in basic searches
+- Distance traveled: ~1350 units
+- No response from other robot yet
+
+Next Steps:
+1. Wait longer for other robot response
+2. Try specific coordinate-based search
+3. Maybe "here" gets set when both robots are at right location?

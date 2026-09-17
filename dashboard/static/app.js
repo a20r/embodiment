@@ -14,9 +14,13 @@ const S = {
   series: null, ep: null, running: false,
   maze: null, timers: [], transcriptCursor: 0,
   liveTrail: [], lastState: null,
+  skids: [],   // live car: [x, y, theta] at every polled sliding pose
   replay: { poses: [], events: [], idx: 0, playing: false },
   memorySel: null,
 };
+
+const fmtLap = (s) => s == null ? "—"
+  : `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, "0")}`;
 
 function clearTimers() {
   S.timers.forEach(clearInterval);
@@ -68,8 +72,9 @@ async function selectSeries(name) {
 async function selectEpisode(ep, running) {
   clearTimers();
   S.ep = ep; S.running = !!running;
-  S.liveTrail = []; S.transcriptCursor = 0; S.lastState = null;
+  S.liveTrail = []; S.skids = []; S.transcriptCursor = 0; S.lastState = null;
   S.replay = { poses: [], events: [], idx: 0, playing: false };
+  if (window.view3dReset) window.view3dReset();
   $("#tab-transcript").innerHTML = "";
   $("#memory-view").innerHTML = '<div class="empty">select a file</div>';
   const q = `series=${encodeURIComponent(S.series)}&ep=${ep}`;
@@ -82,7 +87,10 @@ async function selectEpisode(ep, running) {
   const mine = eps.find((e) => e.episode === Number(ep)) || {};
   $("#ep-summary").textContent = mine.running ? "in progress"
     : `${mine.solved ? "solved" : "unsolved"} · ${mine.end_reason ?? ""}`
-      + (mine.goal_tick ? ` · tick ${mine.goal_tick}` : "");
+      + (mine.goal_tick ? ` · tick ${mine.goal_tick}` : "")
+      + (mine.best_lap_s != null
+          ? ` · ${(mine.laps || []).length} timed laps · best ` +
+            fmtLap(mine.best_lap_s) : "");
 
   if (S.running) {
     $("#live-badge").textContent = "live";
@@ -110,7 +118,9 @@ async function pollLive() {
   try {
     const since = S.liveTrail.length
       ? S.liveTrail[S.liveTrail.length - 1][0] : 0;
-    st = await api(`/api/live/state?since=${since}`);
+    // The point cloud is only cast when the 3D view is showing.
+    const cloud = window.view3dActive && window.view3dActive() ? 1 : 0;
+    st = await api(`/api/live/state?since=${since}&cloud=${cloud}`);
   } catch {
     $("#live-badge").textContent = "live (daemon unreachable)";
     return;
@@ -120,15 +130,27 @@ async function pollLive() {
   if (S.liveTrail.length > 30000) S.liveTrail.splice(0, 10000);
   S.lastState = st;
   if (!$("#rtf-input").value) $("#rtf-input").value = st.realtime_factor;
+  // Only the car model reports `slipping`; phi_deg is always present.
+  const car = st.slipping !== undefined;
+  if (car && st.slipping && st.pose) {
+    S.skids.push([st.pose[0], st.pose[1], st.pose[2]]);
+    if (S.skids.length > 8000) S.skids.splice(0, 2000);
+  }
   drawState({
     pose: st.pose, trail: S.liveTrail, colliding: st.colliding,
     bump: st.bump, rays: st.lidar_true, rayAngles: st.ray_angles,
     keyTaken: st.key_carried, doorOpen: st.door_open,
+    car, phi: st.phi_deg, slipping: st.slipping, skids: S.skids,
   });
+  if (window.view3dUpdate) window.view3dUpdate(st);
+  const lapTxt = st.lap === undefined ? "" :
+    ` · lap ${st.lap} · last ${fmtLap(st.last_lap_s)}` +
+    ` · best ${fmtLap(st.best_lap_s)}` +
+    (st.slipping ? " · SLIDING" : "");
   $("#statusline").textContent =
     `tick ${st.tick} · sim ${st.sim_time_s}s · rtf ${st.realtime_factor}` +
     ` · cmd [${st.cmd}] · enc [${st.enc}] · collisions ${st.collision_count}` +
-    ` · goal ${st.goal_reached ? "REACHED" : "—"}`;
+    lapTxt + ` · goal ${st.goal_reached ? "REACHED" : "—"}`;
 }
 
 /* ---------------- replay ---------------- */
@@ -150,23 +172,35 @@ function drawReplay() {
   const R = S.replay;
   if (!R.poses.length) { drawState({}); return; }
   const i = Math.min(R.idx, R.poses.length - 1);
-  const [t, x, y, th, col] = R.poses[i];
+  const p = R.poses[i];
+  const [t, x, y, th, col] = p;
   const evTick = (kind) => {
     const e = R.events.find((ev) => ev.event === kind);
     return e ? e.t : null;
   };
   const pickupT = evTick("key_pickup"), unlockT = evTick("door_unlocked");
+  // gt_trail poses of a car carry [phi_deg, slip] at indices 5, 6.
+  const car = p.length > 5;
+  const upto = R.poses.slice(0, i + 1);
   drawState({
     pose: [x, y, th], colliding: !!col,
-    trail: R.poses.slice(0, i + 1).map((p) => [p[0], p[1], p[2]]),
+    trail: upto.map((q) => [q[0], q[1], q[2]]),
     keyTaken: pickupT !== null && t >= pickupT,
     doorOpen: unlockT !== null && t >= unlockT,
+    car, phi: p[5], slipping: !!p[6],
+    skids: car ? upto.filter((q) => q[6]).map((q) => [q[1], q[2], q[3]])
+               : null,
   });
+  if (window.view3dUpdate) window.view3dUpdate({ pose: [x, y, th] });
   const dt = t / 50.0;
-  $("#replay-time").textContent = `tick ${t} · ${dt.toFixed(1)}s`;
+  const laps = R.events.filter((e) => e.event === "lap" && e.t <= t);
+  $("#replay-time").textContent = `tick ${t} · ${dt.toFixed(1)}s` +
+    (laps.length ? ` · lap ${laps.length}` : "");
   $("#statusline").textContent =
     `replay · ${R.poses.length} samples · events: ` +
-    R.events.map((e) => `${e.event}@${e.t}`).slice(0, 8).join(", ");
+    R.events.map((e) => e.event === "lap"
+      ? `lap${e.lap}${e.timed ? "" : "(warm)"}=${fmtLap(e.time_s)}@${e.t}`
+      : `${e.event}@${e.t}`).slice(0, 12).join(", ");
 }
 
 $("#scrub").addEventListener("input", (e) => {
@@ -197,20 +231,120 @@ $("#btn-play").addEventListener("click", () => {
 
 /* ---------------- canvas ---------------- */
 
+// Asphalt has no token in style.css; pick a grey that reads against
+// either surface.
+const asphalt = () =>
+  matchMedia("(prefers-color-scheme: dark)").matches ? "#3a3a37" : "#bdbbb3";
+
+function loopPath(ctx, X, Y, pts) {
+  ctx.moveTo(X(pts[0][0]), Y(pts[0][1]));
+  for (let i = 1; i < pts.length; i++) ctx.lineTo(X(pts[i][0]), Y(pts[i][1]));
+  ctx.closePath();
+}
+
+// Circuit: asphalt between the edge loops, both edges (the barriers),
+// a checkered start/finish bar between the two edge points.
+function drawTrackScene(ctx, m, X, Y, scale) {
+  ctx.beginPath();
+  loopPath(ctx, X, Y, m.left); loopPath(ctx, X, Y, m.right);
+  ctx.fillStyle = asphalt();
+  ctx.fill("evenodd");
+  ctx.strokeStyle = css("--text-primary");
+  ctx.lineWidth = Math.max(1.2, 0.03 * scale); ctx.lineJoin = "round";
+  ctx.beginPath(); loopPath(ctx, X, Y, m.left); ctx.stroke();
+  ctx.beginPath(); loopPath(ctx, X, Y, m.right); ctx.stroke();
+  const [[lx, ly], [rx, ry]] = m.start_line;
+  const len = Math.hypot(rx - lx, ry - ly);
+  const n = Math.max(2, Math.min(8, Math.floor(len * scale / 3)));
+  const cw = len * scale / n, rh = Math.max(3, cw);
+  ctx.save();
+  ctx.translate(X((lx + rx) / 2), Y((ly + ry) / 2));
+  ctx.rotate(-Math.atan2(ry - ly, rx - lx));
+  for (let r = 0; r < 2; r++) for (let i = 0; i < n; i++) {
+    ctx.fillStyle = (i + r) % 2 ? css("--text-primary") : css("--surface-1");
+    ctx.fillRect(-len * scale / 2 + i * cw, -rh + r * rh, cw + 0.5, rh);
+  }
+  ctx.restore();
+}
+
+// Race car: 0.40 x 0.18 m body with a pointed nose, four wheels (front
+// pair steered by phi), cockpit dot.  The sprite scale floors at
+// 40 px/m so the car stays a legible marker on a 130 m circuit.
+function drawCarSprite(ctx, X, Y, scale, px, py, th, phiDeg, slip, col) {
+  const s = Math.max(scale, 40), phi = (phiDeg || 0) * Math.PI / 180;
+  ctx.save();
+  ctx.translate(X(px), Y(py));
+  ctx.rotate(-th);
+  const ax = 0.12 * s, ay = 0.10 * s, wl = 0.085 * s, ww = 0.05 * s;
+  ctx.fillStyle = css("--text-primary");
+  for (const [x, y, rot] of [[-ax, -ay, 0], [-ax, ay, 0],
+                             [ax, -ay, -phi], [ax, ay, -phi]]) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rot);
+    ctx.fillRect(-wl / 2, -ww / 2, wl, ww);
+    ctx.restore();
+  }
+  const body = [[-0.20, -0.09], [0.06, -0.09], [0.17, -0.035], [0.22, 0],
+                [0.17, 0.035], [0.06, 0.09], [-0.20, 0.09]];
+  ctx.beginPath();
+  body.forEach(([x, y], i) =>
+    i ? ctx.lineTo(x * s, y * s) : ctx.moveTo(x * s, y * s));
+  ctx.closePath();
+  ctx.fillStyle = css("--series-1"); ctx.fill();
+  ctx.lineWidth = Math.max(1, 0.02 * s);
+  ctx.strokeStyle = slip ? css("--series-2") : css("--surface-1");
+  ctx.stroke();
+  ctx.fillStyle = css("--surface-1");
+  ctx.beginPath(); ctx.arc(0, 0, 0.032 * s, 0, 7); ctx.fill();
+  ctx.restore();
+  if (col) {
+    ctx.strokeStyle = css("--serious"); ctx.lineWidth = 4;
+    ctx.globalAlpha = 0.9;
+    ctx.beginPath(); ctx.arc(X(px), Y(py), 0.24 * s + 4, 0, 7); ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+}
+
+// Skid marks: a short dash behind each rear wheel per sliding pose.
+function drawSkidMarks(ctx, X, Y, scale, skids) {
+  ctx.strokeStyle = css("--text-secondary"); ctx.globalAlpha = 0.55;
+  ctx.lineWidth = Math.max(1, 0.045 * scale); ctx.lineCap = "butt";
+  ctx.beginPath();
+  for (const [x, y, th] of skids) {
+    const ct = Math.cos(th), st = Math.sin(th);
+    for (const side of [-0.10, 0.10]) {
+      const wx = x - 0.12 * ct - side * st, wy = y - 0.12 * st + side * ct;
+      ctx.moveTo(X(wx - 0.05 * ct), Y(wy - 0.05 * st));
+      ctx.lineTo(X(wx + 0.05 * ct), Y(wy + 0.05 * st));
+    }
+  }
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+}
+
 function drawState({ pose, trail, colliding, bump, rays, rayAngles,
-  keyTaken, doorOpen }) {
+  keyTaken, doorOpen, car, phi, slipping, skids }) {
   const cv = $("#maze"), ctx = cv.getContext("2d");
+  const m = S.maze, isTrack = !!m && m.kind === "track";
+  // A circuit's bbox is wide; a maze keeps the square canvas.
+  const wantH = isTrack ? Math.round(cv.width * Math.min(1.2, Math.max(
+    0.45, m.height / m.width))) : 900;
+  if (cv.height !== wantH) cv.height = wantH;
   ctx.fillStyle = css("--surface-1");
   ctx.fillRect(0, 0, cv.width, cv.height);
-  if (!S.maze) return;
-  const m = S.maze;
-  const worldW = m.width * m.cell_size, worldH = m.height * m.cell_size;
+  if (!m) return;
+  const worldW = isTrack ? m.width : m.width * m.cell_size;
+  const worldH = isTrack ? m.height : m.height * m.cell_size;
   const pad = 24;
   const scale = Math.min((cv.width - 2 * pad) / worldW,
                          (cv.height - 2 * pad) / worldH);
-  const X = (x) => pad + x * scale;
-  const Y = (y) => cv.height - pad - y * scale;
+  const ox = (cv.width - worldW * scale) / 2;
+  const oy = (cv.height - worldH * scale) / 2;
+  const X = (x) => ox + x * scale;
+  const Y = (y) => cv.height - oy - y * scale;
 
+  if (isTrack) {
+    drawTrackScene(ctx, m, X, Y, scale);
+  } else {
   // goal + start cells
   const cs = m.cell_size;
   const cell = (c, fill, label) => {
@@ -236,6 +370,7 @@ function drawState({ pose, trail, colliding, bump, rays, rayAngles,
     ctx.moveTo(X(x1), Y(y1)); ctx.lineTo(X(x2), Y(y2));
   }
   ctx.stroke();
+  }
 
   // locked-exit scenario: door (until opened) and key (until taken)
   if (m.locked && m.door_segments && !doorOpen) {
@@ -257,10 +392,14 @@ function drawState({ pose, trail, colliding, bump, rays, rayAngles,
     ctx.restore();
   }
 
-  // trail
+  // trail (a car's trail is its racing line: thin, in the robot color)
+  if (car && skids && skids.length && $("#chk-trail").checked) {
+    drawSkidMarks(ctx, X, Y, scale, skids);
+  }
   if (trail && trail.length > 1 && $("#chk-trail").checked) {
-    ctx.strokeStyle = css("--series-2");
-    ctx.lineWidth = 1.6; ctx.globalAlpha = 0.8;
+    ctx.strokeStyle = css(car ? "--series-1" : "--series-2");
+    ctx.lineWidth = car ? 1.3 : 1.6; ctx.globalAlpha = car ? 0.7 : 0.8;
+    ctx.lineJoin = "round";
     ctx.beginPath();
     ctx.moveTo(X(trail[0][1]), Y(trail[0][2]));
     for (const p of trail) ctx.lineTo(X(p[1]), Y(p[2]));
@@ -286,6 +425,10 @@ function drawState({ pose, trail, colliding, bump, rays, rayAngles,
   }
 
   // robot
+  if (car) {
+    drawCarSprite(ctx, X, Y, scale, px, py, th, phi, slipping, colliding);
+    return;
+  }
   const rr = 0.09 * scale;
   if (colliding) {
     ctx.strokeStyle = css("--serious");
@@ -568,14 +711,17 @@ async function loadMetrics() {
 /* ---------------- tabs & controls ---------------- */
 
 function refreshActiveTab() {
-  const active = document.querySelector(".tabs button.active").dataset.tab;
+  const active =
+    document.querySelector(".tabs button[data-tab].active").dataset.tab;
   if (active === "memory") loadMemory();
   else if (active === "metrics") loadMetrics();
 }
 
-document.querySelectorAll(".tabs button").forEach((b) => {
+// Right-panel tabs only; the left panel's view tabs (data-view) are
+// wired in view3d.js.
+document.querySelectorAll(".tabs button[data-tab]").forEach((b) => {
   b.addEventListener("click", () => {
-    document.querySelectorAll(".tabs button")
+    document.querySelectorAll(".tabs button[data-tab]")
       .forEach((x) => x.classList.remove("active"));
     document.querySelectorAll(".tabview")
       .forEach((x) => x.classList.remove("active"));

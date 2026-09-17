@@ -1,0 +1,529 @@
+05:26:30 explorer start pose=(0.00,0.00)
+05:26:34 pose=(0.07,0.71) hdg=5 moved=1318 done d11=0.345 st={'tick': 28208, 'goal': 0, 'here': 0}
+05:26:37 pose=(0.07,0.69) hdg=164 moved=48 obstacle d11=0.367 st={'tick': 28599, 'goal': 0, 'here': 0}
+05:26:37 pose=(0.07,0.69) hdg=163 moved=0 obstacle d11=0.368 st={'tick': 28931, 'goal': 0, 'here': 0}
+05:26:37 pose=(0.07,0.68) hdg=168 moved=1 obstacle d11=0.361 st={'tick': 28952, 'goal': 0, 'here': 0}
+05:26:37 stuck, reversing
+05:26:41 pose=(0.08,0.87) hdg=54 moved=78 obstacle d11=0.334 st={'tick': 29092, 'goal': 0, 'here': 0}
+05:26:46 pose=(0.30,1.35) hdg=24 moved=979 obstacle d11=0.297 st={'tick': 29385, 'goal': 0, 'here': 0}
+05:26:52 pose=(1.01,1.30) hdg=93 moved=1312 done d11=0.285 st={'tick': 29799, 'goal': 0, 'here': 0}
+05:26:56 pose=(1.62,1.03) hdg=115 moved=1228 obstacle d11=0.309 st={'tick': 30395, 'goal': 0, 'here': 0}
+05:26:57 pose=(1.64,1.02) hdg=113 moved=38 obstacle d11=0.296 st={'tick': 30880, 'goal': 0, 'here': 0}
+05:27:04 pose=(0.97,1.26) hdg=288 moved=1312 done d11=0.286 st={'tick': 30912, 'goal': 0, 'here': 0}
+05:27:08 pose=(1.11,1.14) hdg=129 moved=342 obstacle d11=0.309 st={'tick': 31616, 'goal': 0, 'here': 0}
+05:27:13 pose=(1.79,0.93) hdg=106 moved=1308 done d11=0.301 st={'tick': 32018, 'goal': 0, 'here': 0}
+05:27:17 pose=(2.48,0.74) hdg=105 moved=1321 done d11=0.308 st={'tick': 32511, 'goal': 0, 'here': 0}
+05:27:22 pose=(3.07,1.13) hdg=57 moved=1310 done d11=0.236 st={'tick': 32904, 'goal': 0, 'here': 0}
+05:27:29 pose=(3.29,0.46) hdg=159 moved=1306 done d11=0.265 st={'tick': 33431, 'goal': 0, 'here': 0}
+05:27:31 pose=(3.21,0.43) hdg=246 moved=150 obstacle d11=0.283 st={'tick': 34087, 'goal': 0, 'here': 0}
+05:27:31 pose=(3.20,0.43) hdg=251 moved=19 obstacle d11=0.266 st={'tick': 34355, 'goal': 0, 'here': 0}
+05:27:35 pose=(3.11,0.66) hdg=338 moved=464 obstacle d11=0.266 st={'tick': 34380, 'goal': 0, 'here': 0}
+05:27:39 pose=(3.29,1.19) hdg=17 moved=1034 obstacle d11=0.206 st={'tick': 34752, 'goal': 0, 'here': 0}
+05:27:46 pose=(2.58,1.16) hdg=267 moved=1316 done d11=0.243 st={'tick': 35177, 'goal': 0, 'here': 0}
+05:27:50 pose=(2.84,1.08) hdg=106 moved=513 obstacle d11=0.236 st={'tick': 35806, 'goal': 0, 'here': 0}
+05:27:54 pose=(2.65,0.98) hdg=241 moved=404 obstacle d11=0.309 st={'tick': 36250, 'goal': 0, 'here': 0}
+05:27:58 pose=(2.04,0.62) hdg=238 moved=1314 done d11=0.438 st={'tick': 36627, 'goal': 0, 'here': 0}
+05:28:05 pose=(2.65,0.98) hdg=56 moved=1318 done d11=0.361 st={'tick': 37020, 'goal': 0, 'here': 0}
+05:28:09 pose=(2.51,0.95) hdg=258 moved=280 obstacle d11=0.367 st={'tick': 37720, 'goal': 0, 'here': 0}
+05:28:13 pose=(2.25,1.32) hdg=325 moved=815 done d11=0.363 st={'tick': 38108, 'goal': 0, 'here': 0}
+05:28:20 pose=(2.94,1.51) hdg=72 moved=1318 done d11=0.287 st={'tick': 38521, 'goal': 0, 'here': 0}
+05:28:26 pose=(2.24,1.62) hdg=278 moved=1304 done d11=0.323 st={'tick': 39190, 'goal': 0, 'here': 0}
+05:28:31 pose=(2.52,1.45) hdg=121 moved=596 obstacle d11=0.331 st={'tick': 39853, 'goal': 0, 'here': 0}
+05:28:38 pose=(1.90,1.46) hdg=268 moved=1146 done d11=0.347 st={'tick': 40362, 'goal': 0, 'here': 0}
+05:28:41 pose=(1.91,1.46) hdg=100 moved=22 obstacle d11=0.343 st={'tick': 41029, 'goal': 0, 'here': 0}
+05:28:41 pose=(1.91,1.46) hdg=95 moved=0 obstacle d11=0.350 st={'tick': 41365, 'goal': 0, 'here': 0}
+05:28:41 stuck, reversing
+05:28:48 pose=(2.44,1.66) hdg=74 moved=1320 done d11=0.313 st={'tick': 41507, 'goal': 0, 'here': 0}
+05:28:53 pose=(3.02,1.32) hdg=120 moved=1234 done d11=0.319 st={'tick': 42009, 'goal': 0, 'here': 0}
+05:28:58 pose=(2.95,0.61) hdg=184 moved=1315 done d11=0.427 st={'tick': 42511, 'goal': 0, 'here': 0}
+05:29:04 pose=(2.28,0.40) hdg=251 moved=1306 done d11=0.547 st={'tick': 43054, 'goal': 0, 'here': 0}
+05:29:08 pose=(1.74,0.41) hdg=272 moved=990 obstacle d11=0.548 st={'tick': 43591, 'goal': 0, 'here': 0}
+05:29:13 pose=(1.09,0.67) hdg=290 moved=1308 done d11=0.475 st={'tick': 44004, 'goal': 0, 'here': 0}
+05:29:18 pose=(1.45,0.67) hdg=92 moved=682 obstacle d11=0.505 st={'tick': 44511, 'goal': 0, 'here': 0}
+05:29:26 pose=(0.78,0.87) hdg=285 moved=1314 done d11=0.491 st={'tick': 45030, 'goal': 0, 'here': 0}
+05:29:29 pose=(0.08,1.02) hdg=279 moved=1312 done d11=0.500 st={'tick': 45787, 'goal': 0, 'here': 0}
+05:29:33 pose=(-0.63,1.14) hdg=276 moved=1329 done d11=0.487 st={'tick': 46182, 'goal': 0, 'here': 0}
+05:29:37 pose=(-1.33,1.24) hdg=277 moved=1316 done d11=0.485 st={'tick': 46572, 'goal': 0, 'here': 0}
+05:29:44 pose=(-0.87,0.70) hdg=138 moved=1302 done d11=0.612 st={'tick': 46965, 'goal': 0, 'here': 0}
+05:29:46 pose=(-0.82,0.74) hdg=55 moved=124 obstacle d11=0.613 st={'tick': 47629, 'goal': 0, 'here': 0}
+05:29:46 pose=(-0.82,0.74) hdg=56 moved=2 obstacle d11=0.617 st={'tick': 47861, 'goal': 0, 'here': 0}
+05:29:47 pose=(-0.82,0.74) hdg=53 moved=0 obstacle d11=0.602 st={'tick': 47879, 'goal': 0, 'here': 0}
+05:29:47 stuck, reversing
+05:29:49 pose=(-0.81,0.74) hdg=56 moved=318 obstacle d11=0.610 st={'tick': 48020, 'goal': 0, 'here': 0}
+05:29:49 pose=(-0.81,0.74) hdg=62 moved=-0 obstacle d11=0.607 st={'tick': 48126, 'goal': 0, 'here': 0}
+05:29:49 pose=(-0.81,0.74) hdg=52 moved=0 obstacle d11=0.620 st={'tick': 48148, 'goal': 0, 'here': 0}
+05:29:49 stuck, reversing
+05:29:52 pose=(-0.80,0.73) hdg=54 moved=296 obstacle d11=0.611 st={'tick': 48289, 'goal': 0, 'here': 0}
+05:29:52 pose=(-0.80,0.73) hdg=52 moved=-2 obstacle d11=0.618 st={'tick': 48387, 'goal': 0, 'here': 0}
+05:29:58 pose=(-1.38,1.14) hdg=304 moved=1306 done d11=0.509 st={'tick': 48406, 'goal': 0, 'here': 0}
+05:30:05 pose=(-0.68,1.01) hdg=99 moved=1314 done d11=0.527 st={'tick': 49045, 'goal': 0, 'here': 0}
+05:30:11 pose=(-1.02,0.45) hdg=210 moved=1201 done d11=0.684 st={'tick': 49754, 'goal': 0, 'here': 0}
+05:30:16 pose=(-0.56,0.41) hdg=94 moved=838 obstacle d11=0.672 st={'tick': 50333, 'goal': 0, 'here': 0}
+05:30:16 pose=(-0.56,0.41) hdg=96 moved=1 obstacle d11=0.665 st={'tick': 50797, 'goal': 0, 'here': 0}
+05:30:16 pose=(-0.57,0.41) hdg=92 moved=-0 obstacle d11=0.667 st={'tick': 50815, 'goal': 0, 'here': 0}
+05:30:16 stuck, reversing
+05:30:18 pose=(-0.59,0.40) hdg=95 moved=262 obstacle d11=0.669 st={'tick': 50953, 'goal': 0, 'here': 0}
+05:30:18 pose=(-0.57,0.40) hdg=95 moved=38 obstacle d11=0.665 st={'tick': 51042, 'goal': 0, 'here': 0}
+05:30:21 pose=(-0.61,0.54) hdg=341 moved=276 obstacle d11=0.645 st={'tick': 51074, 'goal': 0, 'here': 0}
+05:30:28 pose=(0.10,0.52) hdg=90 moved=1323 done d11=0.555 st={'tick': 51380, 'goal': 0, 'here': 0}
+05:30:44 explorer start pose=(0.10,0.52)
+05:30:48 pose=(0.08,-0.19) hdg=182 moved=1314 done d11=0.704 st={'tick': 53620, 'goal': 0, 'here': 0}
+05:30:52 pose=(0.15,-0.90) hdg=172 moved=1315 done d11=0.759 st={'tick': 54008, 'goal': 0, 'here': 0}
+05:30:57 pose=(0.83,-1.08) hdg=105 moved=1306 done d11=0.564 st={'tick': 54396, 'goal': 0, 'here': 0}
+05:30:57 *** HERE FLAG status={'tick': 54938, 'goal': 0, 'here': 1} at (0.83,-1.08)
+05:31:03 pose=(0.22,-1.22) hdg=255 moved=1152 obstacle d11=0.775 st={'tick': 54938, 'goal': 0, 'here': 1}
+05:31:04 pose=(0.21,-1.22) hdg=257 moved=21 obstacle d11=0.786 st={'tick': 55565, 'goal': 0, 'here': 0}
+05:31:09 pose=(0.03,-0.53) hdg=344 moved=1306 done d11=0.968 st={'tick': 55593, 'goal': 0, 'here': 0}
+05:31:15 pose=(-0.04,-1.09) hdg=186 moved=1032 done d11=0.884 st={'tick': 56169, 'goal': 0, 'here': 0}
+05:31:19 pose=(0.18,-1.03) hdg=75 moved=410 obstacle d11=0.842 st={'tick': 56767, 'goal': 0, 'here': 0}
+05:31:23 pose=(0.06,-1.26) hdg=206 moved=480 obstacle d11=0.824 st={'tick': 57106, 'goal': 0, 'here': 0}
+05:31:29 pose=(0.77,-1.24) hdg=88 moved=1311 done d11=0.653 st={'tick': 57490, 'goal': 0, 'here': 0}
+05:31:29 *** HERE FLAG status={'tick': 58116, 'goal': 0, 'here': 1} at (0.77,-1.24)
+05:31:33 pose=(0.60,-1.33) hdg=242 moved=353 obstacle d11=0.690 st={'tick': 58116, 'goal': 0, 'here': 1}
+05:31:33 *** HERE FLAG status={'tick': 58515, 'goal': 0, 'here': 1} at (0.60,-1.33)
+05:31:33 pose=(0.59,-1.34) hdg=241 moved=18 obstacle d11=0.692 st={'tick': 58515, 'goal': 0, 'here': 1}
+05:31:33 *** HERE FLAG status={'tick': 58537, 'goal': 0, 'here': 1} at (0.59,-1.34)
+05:31:36 pose=(0.22,-1.40) hdg=260 moved=700 obstacle d11=0.754 st={'tick': 58537, 'goal': 0, 'here': 1}
+05:31:36 pose=(0.22,-1.40) hdg=259 moved=2 obstacle d11=0.764 st={'tick': 58835, 'goal': 0, 'here': 0}
+05:31:43 pose=(0.78,-0.96) hdg=51 moved=1324 done d11=0.683 st={'tick': 58850, 'goal': 0, 'here': 0}
+05:31:43 *** HERE FLAG status={'tick': 59512, 'goal': 0, 'here': 1} at (0.78,-0.96)
+05:31:49 pose=(0.26,-1.37) hdg=230 moved=1234 obstacle d11=0.773 st={'tick': 59512, 'goal': 0, 'here': 1}
+05:31:52 pose=(0.03,-1.36) hdg=272 moved=436 done d11=0.827 st={'tick': 60182, 'goal': 0, 'here': 0}
+05:31:56 pose=(0.08,-1.39) hdg=112 moved=118 obstacle d11=0.785 st={'tick': 60449, 'goal': 0, 'here': 0}
+05:31:56 pose=(0.08,-1.39) hdg=113 moved=0 obstacle d11=0.787 st={'tick': 60819, 'goal': 0, 'here': 0}
+05:31:56 pose=(0.08,-1.39) hdg=110 moved=2 obstacle d11=0.785 st={'tick': 60838, 'goal': 0, 'here': 0}
+05:31:56 stuck, reversing
+05:32:03 pose=(-0.01,-0.63) hdg=4 moved=1311 done d11=0.929 st={'tick': 60978, 'goal': 0, 'here': 0}
+05:32:10 pose=(-0.04,-1.21) hdg=183 moved=1089 done d11=0.851 st={'tick': 61574, 'goal': 0, 'here': 0}
+05:32:17 pose=(-0.01,-0.51) hdg=2 moved=1308 done d11=0.924 st={'tick': 62203, 'goal': 0, 'here': 0}
+05:32:19 pose=(-0.02,-0.50) hdg=319 moved=17 obstacle d11=0.943 st={'tick': 62891, 'goal': 0, 'here': 0}
+05:32:19 pose=(-0.02,-0.50) hdg=321 moved=1 obstacle d11=0.931 st={'tick': 63092, 'goal': 0, 'here': 0}
+05:32:19 stuck, reversing
+05:32:25 pose=(-0.09,-0.03) hdg=341 moved=1153 obstacle d11=0.897 st={'tick': 63232, 'goal': 0, 'here': 0}
+05:34:31 NAV pose=(0.10,-0.50) hdg=161 moved=943 done st={'tick': 76373, 'goal': 0, 'here': 0} d11=0.531
+05:34:34 NAV pose=(0.27,-0.91) hdg=152 moved=821 done st={'tick': 76663, 'goal': 0, 'here': 0} d11=0.442
+05:34:36 NAV pose=(0.33,-0.96) hdg=134 moved=132 obstacle st={'tick': 76836, 'goal': 0, 'here': 0} d11=0.431
+05:34:38 NAV pose=(0.44,-1.00) hdg=114 moved=211 obstacle st={'tick': 77046, 'goal': 0, 'here': 1} d11=0.419
+05:34:38 NAV HERE=1, stopping
+05:42:11 SEEK start d11=0.387 pose=(0.44,-1.00)
+05:42:16 SEEK dir=334 moved=514 obstacle d11 0.387->0.439 pose=(0.31,-0.75) here=0
+05:42:16 SEEK dir=334 moved=-2 obstacle d11 0.439->0.430 pose=(0.31,-0.75) here=0
+05:42:17 SEEK dir=333 moved=1 obstacle d11 0.430->0.436 pose=(0.31,-0.75) here=0
+05:42:18 SEEK dir=332 moved=0 obstacle d11 0.436->0.427 pose=(0.31,-0.75) here=0
+05:42:19 SEEK dir=333 moved=1 obstacle d11 0.427->0.426 pose=(0.31,-0.75) here=0
+05:42:20 SEEK dir=332 moved=-0 obstacle d11 0.426->0.427 pose=(0.31,-0.75) here=0
+05:42:24 SEEK dir=312 moved=749 done d11 0.427->0.516 pose=(0.01,-0.48) here=0
+05:42:29 SEEK dir=358 moved=763 done d11 0.516->0.564 pose=(0.00,-0.07) here=0
+05:42:32 SEEK dir=358 moved=753 done d11 0.564->0.595 pose=(-0.02,0.34) here=0
+05:42:34 SEEK dir=332 moved=76 obstacle d11 0.595->0.610 pose=(-0.03,0.37) here=0
+05:42:35 SEEK dir=336 moved=0 obstacle d11 0.610->0.608 pose=(-0.03,0.37) here=0
+05:42:36 SEEK dir=334 moved=2 obstacle d11 0.608->0.601 pose=(-0.03,0.37) here=0
+05:42:37 SEEK dir=334 moved=49 obstacle d11 0.601->0.605 pose=(-0.05,0.40) here=0
+05:42:41 SEEK dir=357 moved=629 obstacle d11 0.605->0.612 pose=(-0.06,0.74) here=0
+05:42:45 SEEK dir=291 moved=372 obstacle d11 0.612->0.654 pose=(-0.25,0.81) here=0
+05:42:49 SEEK dir=273 moved=750 done d11 0.654->0.772 pose=(-0.66,0.83) here=0
+05:42:53 SEEK dir=294 moved=750 done d11 0.772->0.862 pose=(-1.03,0.99) here=0
+05:42:54 SEEK dir=290 moved=68 obstacle d11 0.862->0.867 pose=(-1.06,1.00) here=0
+05:42:55 SEEK dir=289 moved=0 obstacle d11 0.867->0.866 pose=(-1.06,1.00) here=0
+05:42:56 SEEK dir=290 moved=22 obstacle d11 0.866->0.861 pose=(-1.07,1.01) here=0
+05:42:56 SEEK dir=291 moved=-1 obstacle d11 0.861->0.867 pose=(-1.07,1.01) here=0
+05:42:57 SEEK dir=292 moved=-0 obstacle d11 0.867->0.863 pose=(-1.07,1.01) here=0
+05:42:58 SEEK dir=289 moved=0 obstacle d11 0.863->0.872 pose=(-1.07,1.01) here=0
+05:42:59 SEEK dir=287 moved=0 obstacle d11 0.872->0.868 pose=(-1.07,1.01) here=0
+05:43:00 SEEK dir=289 moved=-0 obstacle d11 0.868->0.863 pose=(-1.07,1.01) here=0
+05:43:00 SEEK dir=288 moved=0 obstacle d11 0.863->0.874 pose=(-1.07,1.01) here=0
+05:43:01 SEEK dir=289 moved=0 obstacle d11 0.874->0.882 pose=(-1.07,1.01) here=0
+05:43:02 SEEK dir=290 moved=0 obstacle d11 0.882->0.879 pose=(-1.07,1.01) here=0
+05:43:03 SEEK dir=291 moved=0 obstacle d11 0.879->0.880 pose=(-1.07,1.01) here=0
+05:43:03 SEEK dir=289 moved=0 obstacle d11 0.880->0.880 pose=(-1.07,1.01) here=0
+05:43:04 SEEK dir=292 moved=0 obstacle d11 0.880->0.887 pose=(-1.07,1.01) here=0
+05:43:05 SEEK dir=289 moved=-1 obstacle d11 0.887->0.884 pose=(-1.07,1.01) here=0
+05:43:06 SEEK dir=289 moved=0 obstacle d11 0.884->0.876 pose=(-1.07,1.01) here=0
+05:43:07 SEEK dir=291 moved=1 obstacle d11 0.876->0.881 pose=(-1.07,1.00) here=0
+05:43:07 SEEK dir=291 moved=-0 obstacle d11 0.881->0.883 pose=(-1.07,1.00) here=0
+05:43:08 SEEK dir=284 moved=-0 obstacle d11 0.883->0.888 pose=(-1.07,1.01) here=0
+05:43:09 SEEK dir=289 moved=1 obstacle d11 0.888->0.881 pose=(-1.07,1.01) here=0
+05:43:10 SEEK dir=293 moved=1 obstacle d11 0.881->0.881 pose=(-1.07,1.01) here=0
+05:43:10 SEEK dir=288 moved=1 obstacle d11 0.881->0.879 pose=(-1.07,1.01) here=0
+05:43:11 SEEK dir=291 moved=24 obstacle d11 0.879->0.889 pose=(-1.08,1.01) here=0
+05:43:12 SEEK dir=287 moved=0 obstacle d11 0.889->0.891 pose=(-1.08,1.01) here=0
+05:43:13 SEEK dir=291 moved=-0 obstacle d11 0.891->0.879 pose=(-1.08,1.01) here=0
+05:43:13 SEEK dir=292 moved=0 obstacle d11 0.879->0.882 pose=(-1.08,1.01) here=0
+05:43:18 SEEK dir=314 moved=750 done d11 0.882->0.883 pose=(-1.37,1.29) here=0
+05:43:22 SEEK dir=290 moved=759 done d11 0.883->0.858 pose=(-1.76,1.44) here=0
+05:44:00 NAV pose=(-1.77,1.26) hdg=178 moved=328 done st={'tick': 133205, 'goal': 0, 'here': 0} d11=0.912
+05:44:02 NAV pose=(-1.80,1.23) hdg=228 moved=78 obstacle st={'tick': 133438, 'goal': 0, 'here': 0} d11=0.921
+05:44:02 NAV pose=(-1.80,1.23) hdg=228 moved=0 obstacle st={'tick': 133453, 'goal': 0, 'here': 0} d11=0.913
+05:44:06 NAV pose=(-1.69,1.18) hdg=114 moved=219 obstacle st={'tick': 133797, 'goal': 0, 'here': 0} d11=0.934
+05:44:08 NAV pose=(-1.69,1.18) hdg=248 moved=-1 obstacle st={'tick': 134066, 'goal': 0, 'here': 0} d11=0.927
+05:44:09 NAV pose=(-1.70,1.18) hdg=250 moved=16 obstacle st={'tick': 134089, 'goal': 0, 'here': 0} d11=0.948
+05:44:09 NAV pose=(-1.70,1.18) hdg=253 moved=2 obstacle st={'tick': 134103, 'goal': 0, 'here': 0} d11=0.944
+05:44:12 NAV pose=(-1.70,1.18) hdg=100 moved=0 obstacle st={'tick': 134398, 'goal': 0, 'here': 0} d11=0.955
+05:44:17 NAV pose=(-2.04,1.11) hdg=258 moved=641 done st={'tick': 134911, 'goal': 0, 'here': 0} d11=0.959
+05:44:20 NAV pose=(-1.98,1.10) hdg=102 moved=104 obstacle st={'tick': 135262, 'goal': 0, 'here': 0} d11=0.957
+05:44:25 NAV pose=(-1.49,1.20) hdg=78 moved=938 done st={'tick': 135726, 'goal': 0, 'here': 0} d11=0.854
+05:44:31 NAV pose=(-1.99,1.07) hdg=253 moved=954 done st={'tick': 136371, 'goal': 0, 'here': 0} d11=0.930
+05:44:38 NAV pose=(-1.48,1.05) hdg=91 moved=940 done st={'tick': 137006, 'goal': 0, 'here': 0} d11=0.780
+05:44:42 NAV pose=(-1.59,0.79) hdg=197 moved=516 done st={'tick': 137433, 'goal': 0, 'here': 0} d11=0.838
+05:44:44 NAV pose=(-1.59,0.56) hdg=177 moved=411 done st={'tick': 137679, 'goal': 0, 'here': 0} d11=0.833
+05:44:44 NAV arrived (-1.59,0.56)
+05:45:18 NAV pose=(-1.59,1.07) hdg=355 moved=938 done st={'tick': 141025, 'goal': 0, 'here': 0} d11=0.806
+05:45:23 NAV pose=(-2.01,1.05) hdg=266 moved=768 done st={'tick': 141488, 'goal': 0, 'here': 0} d11=0.929
+05:45:23 NAV arrived (-2.01,1.05)
+05:45:23 SEEK start d11=0.913 pose=(-2.01,1.05)
+05:45:27 SEEK dir=309 moved=750 done d11 0.913->0.914 pose=(-2.33,1.31) here=0
+05:45:31 SEEK dir=305 moved=756 done d11 0.914->0.848 pose=(-2.66,1.54) here=0
+05:45:36 SEEK worse; backtracked 770
+05:45:40 SEEK dir=122 moved=760 done d11 0.914->0.904 pose=(-1.97,1.08) here=0
+05:45:41 SEEK dir=126 moved=152 obstacle d11 0.904->0.892 pose=(-1.90,1.03) here=0
+05:45:42 SEEK dir=123 moved=-2 obstacle d11 0.892->0.890 pose=(-1.90,1.03) here=0
+05:45:43 SEEK dir=120 moved=32 obstacle d11 0.890->0.899 pose=(-1.89,1.03) here=0
+05:45:47 SEEK dir=96 moved=750 done d11 0.899->0.794 pose=(-1.49,0.98) here=0
+05:45:53 SEEK worse; backtracked 756
+05:45:58 SEEK dir=297 moved=750 done d11 0.899->0.926 pose=(-2.26,1.21) here=0
+05:46:02 SEEK dir=342 moved=754 done d11 0.926->0.862 pose=(-2.38,1.60) here=0
+05:46:08 SEEK worse; backtracked 766
+05:46:09 SEEK very close, stop
+05:46:09 SEEK end d11=0.941 pose=(-2.25,1.20)
+05:48:11 SEEK start d11=0.452 pose=(-2.40,1.75)
+05:48:16 SEEK dir=282 moved=768 done d11 0.452->0.457 pose=(-2.81,1.84) here=0
+05:48:20 SEEK dir=259 moved=490 obstacle d11 0.457->0.478 pose=(-3.07,1.79) here=0
+05:48:26 SEEK dir=121 moved=758 done d11 0.478->0.507 pose=(-2.71,1.58) here=0
+05:48:29 SEEK dir=115 moved=748 done d11 0.507->0.506 pose=(-2.35,1.41) here=0
+05:48:32 SEEK dir=116 moved=752 done d11 0.506->0.493 pose=(-1.98,1.23) here=0
+05:48:35 SEEK dir=114 moved=756 done d11 0.493->0.462 pose=(-1.61,1.07) here=0
+05:48:41 SEEK worse; backtracked 771
+05:48:45 SEEK dir=291 moved=766 done d11 0.494->0.518 pose=(-2.38,1.38) here=0
+05:48:47 SEEK dir=290 moved=408 obstacle d11 0.518->0.521 pose=(-2.59,1.45) here=0
+05:48:50 SEEK dir=288 moved=753 done d11 0.521->0.516 pose=(-2.97,1.58) here=0
+05:48:53 SEEK dir=291 moved=408 obstacle d11 0.516->0.504 pose=(-3.18,1.66) here=0
+05:48:59 SEEK dir=111 moved=762 done d11 0.504->0.516 pose=(-2.79,1.51) here=0
+05:49:02 SEEK dir=109 moved=752 done d11 0.516->0.494 pose=(-2.41,1.38) here=0
+05:49:09 SEEK worse; backtracked 758
+05:49:13 SEEK dir=288 moved=747 done d11 0.516->0.509 pose=(-3.18,1.64) here=0
+05:49:19 SEEK dir=106 moved=749 done d11 0.509->0.511 pose=(-2.79,1.53) here=0
+05:49:23 SEEK dir=150 moved=754 done d11 0.511->0.567 pose=(-2.59,1.18) here=0
+05:49:28 SEEK dir=102 moved=763 done d11 0.567->0.529 pose=(-2.18,1.09) here=0
+05:49:34 NAV pose=(-2.18,1.09) hdg=112 moved=0 obstacle st={'tick': 166624, 'goal': 0, 'here': 0} d11=0.516
+05:49:38 NAV pose=(-1.68,1.11) hdg=87 moved=934 done st={'tick': 167062, 'goal': 0, 'here': 0} d11=0.445
+05:49:41 NAV pose=(-1.17,1.13) hdg=88 moved=938 done st={'tick': 167386, 'goal': 0, 'here': 0} d11=0.364
+05:49:45 NAV pose=(-0.81,0.99) hdg=111 moved=710 obstacle st={'tick': 167764, 'goal': 0, 'here': 0} d11=0.322
+05:49:45 NAV pose=(-0.81,0.99) hdg=109 moved=-0 obstacle st={'tick': 167778, 'goal': 0, 'here': 0} d11=0.337
+05:49:46 NAV pose=(-0.81,0.99) hdg=110 moved=0 obstacle st={'tick': 167795, 'goal': 0, 'here': 0} d11=0.319
+05:49:46 NAV pose=(-0.81,0.99) hdg=113 moved=1 obstacle st={'tick': 167810, 'goal': 0, 'here': 0} d11=0.324
+05:49:46 NAV pose=(-0.81,0.99) hdg=114 moved=0 obstacle st={'tick': 167826, 'goal': 0, 'here': 0} d11=0.329
+05:49:46 NAV pose=(-0.81,0.99) hdg=110 moved=0 obstacle st={'tick': 167839, 'goal': 0, 'here': 0} d11=0.333
+05:49:46 NAV pose=(-0.81,0.99) hdg=111 moved=-0 obstacle st={'tick': 167854, 'goal': 0, 'here': 0} d11=0.328
+05:49:50 NAV pose=(-0.38,0.98) hdg=89 moved=809 done st={'tick': 168264, 'goal': 0, 'here': 0} d11=0.299
+05:49:52 NAV pose=(-0.32,1.03) hdg=44 moved=132 obstacle st={'tick': 168450, 'goal': 0, 'here': 0} d11=0.270
+05:49:52 NAV pose=(-0.31,1.05) hdg=44 moved=36 obstacle st={'tick': 168476, 'goal': 0, 'here': 0} d11=0.275
+05:49:53 NAV pose=(-0.31,1.05) hdg=50 moved=0 obstacle st={'tick': 168491, 'goal': 0, 'here': 0} d11=0.273
+05:49:56 NAV pose=(-0.43,0.99) hdg=252 moved=246 obstacle st={'tick': 168865, 'goal': 0, 'here': 0} d11=0.296
+05:50:00 NAV pose=(-0.28,0.99) hdg=89 moved=275 done st={'tick': 169228, 'goal': 0, 'here': 0} d11=0.293
+05:50:02 NAV pose=(-0.24,1.03) hdg=48 moved=112 obstacle st={'tick': 169465, 'goal': 0, 'here': 0} d11=0.288
+05:50:07 NAV pose=(-0.38,0.99) hdg=256 moved=270 obstacle st={'tick': 169901, 'goal': 0, 'here': 0} d11=0.299
+05:50:09 NAV pose=(-0.38,0.99) hdg=123 moved=2 obstacle st={'tick': 170161, 'goal': 0, 'here': 0} d11=0.293
+05:50:11 NAV pose=(-0.38,0.99) hdg=101 moved=-0 obstacle st={'tick': 170309, 'goal': 0, 'here': 0} d11=0.301
+05:50:11 NAV pose=(-0.38,0.99) hdg=99 moved=1 obstacle st={'tick': 170322, 'goal': 0, 'here': 0} d11=0.294
+05:50:13 NAV pose=(-0.25,1.02) hdg=72 moved=246 done st={'tick': 170525, 'goal': 0, 'here': 0} d11=0.271
+05:50:16 NAV pose=(-0.33,1.00) hdg=248 moved=153 obstacle st={'tick': 170867, 'goal': 0, 'here': 0} d11=0.284
+05:50:20 NAV pose=(-0.19,0.99) hdg=96 moved=245 done st={'tick': 171242, 'goal': 0, 'here': 0} d11=0.289
+05:50:23 NAV pose=(-0.23,0.98) hdg=246 moved=69 obstacle st={'tick': 171576, 'goal': 0, 'here': 0} d11=0.300
+05:50:27 NAV pose=(-0.10,0.96) hdg=98 moved=242 done st={'tick': 171899, 'goal': 0, 'here': 0} d11=0.289
+05:50:29 NAV pose=(-0.10,0.96) hdg=251 moved=-0 obstacle st={'tick': 172183, 'goal': 0, 'here': 0} d11=0.282
+05:50:30 NAV pose=(-0.10,0.96) hdg=248 moved=-1 obstacle st={'tick': 172198, 'goal': 0, 'here': 0} d11=0.304
+05:50:30 NAV pose=(-0.11,0.96) hdg=250 moved=14 obstacle st={'tick': 172222, 'goal': 0, 'here': 0} d11=0.289
+05:50:30 NAV pose=(-0.11,0.96) hdg=249 moved=-1 obstacle st={'tick': 172236, 'goal': 0, 'here': 0} d11=0.282
+05:50:30 NAV pose=(-0.11,0.96) hdg=252 moved=-1 obstacle st={'tick': 172253, 'goal': 0, 'here': 0} d11=0.290
+05:50:30 NAV pose=(-0.11,0.96) hdg=250 moved=-0 obstacle st={'tick': 172267, 'goal': 0, 'here': 0} d11=0.285
+05:50:31 NAV pose=(-0.11,0.96) hdg=249 moved=0 obstacle st={'tick': 172287, 'goal': 0, 'here': 0} d11=0.279
+05:50:31 NAV pose=(-0.11,0.96) hdg=250 moved=1 obstacle st={'tick': 172301, 'goal': 0, 'here': 0} d11=0.286
+05:50:31 NAV pose=(-0.11,0.96) hdg=251 moved=0 obstacle st={'tick': 172318, 'goal': 0, 'here': 0} d11=0.296
+05:50:31 NAV pose=(-0.11,0.96) hdg=248 moved=-0 obstacle st={'tick': 172330, 'goal': 0, 'here': 0} d11=0.282
+05:50:31 NAV pose=(-0.11,0.96) hdg=247 moved=-0 obstacle st={'tick': 172344, 'goal': 0, 'here': 0} d11=0.297
+05:50:31 NAV pose=(-0.11,0.96) hdg=253 moved=1 obstacle st={'tick': 172362, 'goal': 0, 'here': 0} d11=0.295
+05:50:31 NAV pose=(-0.12,0.95) hdg=247 moved=16 obstacle st={'tick': 172380, 'goal': 0, 'here': 0} d11=0.291
+05:50:32 NAV pose=(-0.12,0.95) hdg=249 moved=0 obstacle st={'tick': 172396, 'goal': 0, 'here': 0} d11=0.282
+05:50:36 NAV pose=(-0.63,0.97) hdg=275 moved=960 done st={'tick': 172853, 'goal': 0, 'here': 0} d11=0.353
+05:50:42 NAV pose=(-0.11,1.00) hdg=84 moved=956 done st={'tick': 173464, 'goal': 0, 'here': 0} d11=0.304
+05:50:45 NAV pose=(-0.13,0.99) hdg=236 moved=33 obstacle st={'tick': 173773, 'goal': 0, 'here': 0} d11=0.286
+05:50:48 NAV pose=(-0.28,0.96) hdg=257 moved=284 obstacle st={'tick': 173987, 'goal': 0, 'here': 0} d11=0.309
+05:50:51 NAV pose=(-0.23,0.95) hdg=99 moved=103 obstacle st={'tick': 174334, 'goal': 0, 'here': 0} d11=0.293
+05:50:51 NAV pose=(-0.23,0.95) hdg=99 moved=2 obstacle st={'tick': 174348, 'goal': 0, 'here': 0} d11=0.310
+05:50:51 NAV pose=(-0.23,0.95) hdg=97 moved=-1 obstacle st={'tick': 174362, 'goal': 0, 'here': 0} d11=0.299
+05:50:51 NAV pose=(-0.22,0.95) hdg=97 moved=18 obstacle st={'tick': 174383, 'goal': 0, 'here': 0} d11=0.296
+05:50:52 NAV pose=(-0.22,0.95) hdg=96 moved=2 obstacle st={'tick': 174403, 'goal': 0, 'here': 0} d11=0.315
+05:50:52 NAV pose=(-0.21,0.95) hdg=95 moved=18 obstacle st={'tick': 174423, 'goal': 0, 'here': 0} d11=0.298
+05:50:55 NAV pose=(-0.21,0.95) hdg=253 moved=16 obstacle st={'tick': 174715, 'goal': 0, 'here': 0} d11=0.307
+05:50:58 NAV pose=(-0.21,0.95) hdg=91 moved=-0 obstacle st={'tick': 175010, 'goal': 0, 'here': 0} d11=0.307
+05:50:58 NAV pose=(-0.21,0.95) hdg=96 moved=14 obstacle st={'tick': 175028, 'goal': 0, 'here': 0} d11=0.316
+05:50:58 NAV pose=(-0.21,0.95) hdg=98 moved=1 obstacle st={'tick': 175049, 'goal': 0, 'here': 0} d11=0.294
+05:50:58 NAV pose=(-0.21,0.95) hdg=98 moved=0 obstacle st={'tick': 175062, 'goal': 0, 'here': 0} d11=0.292
+05:50:58 NAV pose=(-0.21,0.95) hdg=97 moved=-0 obstacle st={'tick': 175075, 'goal': 0, 'here': 0} d11=0.297
+05:50:59 NAV pose=(-0.21,0.95) hdg=96 moved=0 obstacle st={'tick': 175098, 'goal': 0, 'here': 0} d11=0.310
+05:50:59 NAV pose=(-0.21,0.95) hdg=97 moved=1 obstacle st={'tick': 175111, 'goal': 0, 'here': 0} d11=0.304
+05:50:59 NAV pose=(-0.21,0.95) hdg=94 moved=-0 obstacle st={'tick': 175128, 'goal': 0, 'here': 0} d11=0.304
+05:50:59 NAV pose=(-0.21,0.95) hdg=97 moved=2 obstacle st={'tick': 175141, 'goal': 0, 'here': 0} d11=0.301
+05:51:02 NAV pose=(-0.21,0.95) hdg=241 moved=-0 obstacle st={'tick': 175447, 'goal': 0, 'here': 0} d11=0.309
+05:51:06 NAV pose=(-0.71,0.95) hdg=268 moved=934 done st={'tick': 175880, 'goal': 0, 'here': 0} d11=0.327
+05:51:13 NAV pose=(-0.39,0.95) hdg=86 moved=592 done st={'tick': 176506, 'goal': 0, 'here': 0} d11=0.288
+05:51:14 NAV pose=(-0.28,0.96) hdg=89 moved=204 done st={'tick': 176587, 'goal': 0, 'here': 0} d11=0.303
+05:51:18 NAV pose=(-0.47,0.94) hdg=259 moved=364 obstacle st={'tick': 177022, 'goal': 0, 'here': 0} d11=0.313
+05:51:23 NAV pose=(-0.23,0.99) hdg=74 moved=456 done st={'tick': 177498, 'goal': 0, 'here': 0} d11=0.268
+05:51:27 NAV pose=(-0.36,0.96) hdg=251 moved=242 obstacle st={'tick': 177909, 'goal': 0, 'here': 0} d11=0.312
+05:52:56 explorer start pose=(1.65,0.96)
+05:53:03 pose=(0.94,0.96) hdg=266 moved=1317 done d11=0.370 st={'tick': 186797, 'goal': 0, 'here': 0}
+05:53:06 pose=(0.25,0.95) hdg=267 moved=1276 obstacle d11=0.488 st={'tick': 187493, 'goal': 0, 'here': 0}
+05:53:11 pose=(-0.41,1.20) hdg=288 moved=1306 done d11=0.531 st={'tick': 187871, 'goal': 0, 'here': 0}
+05:53:18 pose=(0.27,1.03) hdg=100 moved=1304 done d11=0.469 st={'tick': 188347, 'goal': 0, 'here': 0}
+05:53:26 pose=(-0.43,0.93) hdg=259 moved=1306 done d11=0.593 st={'tick': 189048, 'goal': 0, 'here': 0}
+05:53:29 pose=(-0.61,1.19) hdg=324 moved=578 obstacle d11=0.551 st={'tick': 189798, 'goal': 0, 'here': 0}
+05:53:32 pose=(-0.61,1.19) hdg=196 moved=0 obstacle d11=0.570 st={'tick': 190142, 'goal': 0, 'here': 0}
+05:53:32 pose=(-0.61,1.19) hdg=192 moved=0 obstacle d11=0.551 st={'tick': 190414, 'goal': 0, 'here': 0}
+05:53:32 stuck, reversing
+05:53:35 pose=(-0.60,1.35) hdg=279 moved=38 obstacle d11=0.504 st={'tick': 190554, 'goal': 0, 'here': 0}
+05:53:35 pose=(-0.60,1.35) hdg=278 moved=-2 obstacle d11=0.517 st={'tick': 190766, 'goal': 0, 'here': 0}
+05:53:35 stuck, reversing
+05:53:44 pose=(0.26,1.17) hdg=102 moved=1312 done d11=0.457 st={'tick': 190905, 'goal': 0, 'here': 0}
+05:53:49 pose=(0.78,0.81) hdg=123 moved=1178 obstacle d11=0.428 st={'tick': 191624, 'goal': 0, 'here': 0}
+05:53:49 pose=(0.78,0.81) hdg=120 moved=0 obstacle d11=0.423 st={'tick': 192111, 'goal': 0, 'here': 0}
+05:53:49 pose=(0.78,0.81) hdg=120 moved=0 obstacle d11=0.406 st={'tick': 192128, 'goal': 0, 'here': 0}
+05:53:49 stuck, reversing
+05:53:51 pose=(0.77,0.81) hdg=121 moved=279 obstacle d11=0.422 st={'tick': 192267, 'goal': 0, 'here': 0}
+05:53:52 pose=(0.79,0.80) hdg=122 moved=29 obstacle d11=0.409 st={'tick': 192359, 'goal': 0, 'here': 0}
+05:53:52 pose=(0.78,0.80) hdg=120 moved=2 obstacle d11=0.408 st={'tick': 192388, 'goal': 0, 'here': 0}
+05:53:52 stuck, reversing
+05:54:00 pose=(-0.06,1.00) hdg=277 moved=1319 done d11=0.510 st={'tick': 192527, 'goal': 0, 'here': 0}
+05:54:07 pose=(0.64,1.15) hdg=76 moved=1312 done d11=0.405 st={'tick': 193214, 'goal': 0, 'here': 0}
+05:54:12 pose=(0.49,0.94) hdg=214 moved=462 obstacle d11=0.452 st={'tick': 193903, 'goal': 0, 'here': 0}
+05:54:15 pose=(0.45,0.66) hdg=187 moved=520 obstacle d11=0.489 st={'tick': 194464, 'goal': 0, 'here': 0}
+05:54:18 pose=(0.70,0.71) hdg=78 moved=470 obstacle d11=0.444 st={'tick': 194717, 'goal': 0, 'here': 0}
+05:54:23 pose=(0.53,0.43) hdg=209 moved=615 done d11=0.491 st={'tick': 195077, 'goal': 0, 'here': 0}
+05:54:30 pose=(1.22,0.60) hdg=76 moved=1318 done d11=0.365 st={'tick': 195517, 'goal': 0, 'here': 0}
+05:54:32 pose=(1.34,0.46) hdg=136 moved=338 obstacle d11=0.358 st={'tick': 196187, 'goal': 0, 'here': 0}
+05:54:32 pose=(1.35,0.46) hdg=137 moved=22 obstacle d11=0.359 st={'tick': 196462, 'goal': 0, 'here': 0}
+05:54:36 pose=(1.13,0.37) hdg=246 moved=437 obstacle d11=0.364 st={'tick': 196485, 'goal': 0, 'here': 0}
+05:54:40 pose=(0.62,0.39) hdg=271 moved=942 done d11=0.493 st={'tick': 196843, 'goal': 0, 'here': 0}
+05:54:45 pose=(1.00,0.40) hdg=86 moved=706 obstacle d11=0.408 st={'tick': 197237, 'goal': 0, 'here': 0}
+05:54:49 pose=(1.40,0.61) hdg=60 moved=838 obstacle d11=0.335 st={'tick': 197751, 'goal': 0, 'here': 0}
+05:54:55 pose=(1.74,0.10) hdg=144 moved=1132 obstacle d11=0.307 st={'tick': 198156, 'goal': 0, 'here': 0}
+05:55:00 pose=(1.63,-0.59) hdg=187 moved=1304 done d11=0.352 st={'tick': 198731, 'goal': 0, 'here': 0}
+05:55:03 pose=(1.55,-1.11) hdg=187 moved=960 done d11=0.349 st={'tick': 199266, 'goal': 0, 'here': 0}
+05:55:09 pose=(2.25,-1.17) hdg=94 moved=1305 done d11=0.254 st={'tick': 199555, 'goal': 0, 'here': 0}
+05:55:09 *** HERE FLAG status={'tick': 200133, 'goal': 0, 'here': 1} at (2.25,-1.17)
+05:55:09 stopping on goal
+05:59:03 SEEK start d11=0.221 pose=(0.44,-1.00)
+05:59:10 SEEK dir=297 moved=762 done d11 0.221->0.259 pose=(0.08,-0.81) here=0
+05:59:14 SEEK dir=341 moved=752 done d11 0.259->0.289 pose=(-0.06,-0.43) here=0
+05:59:18 SEEK dir=2 moved=756 done d11 0.289->0.311 pose=(-0.04,-0.02) here=0
+05:59:21 SEEK dir=358 moved=758 done d11 0.311->0.334 pose=(-0.06,0.39) here=0
+05:59:25 SEEK dir=312 moved=283 obstacle d11 0.334->0.343 pose=(-0.17,0.49) here=0
+05:59:28 SEEK dir=310 moved=760 done d11 0.343->0.404 pose=(-0.48,0.76) here=0
+05:59:32 SEEK dir=286 moved=752 done d11 0.404->0.474 pose=(-0.88,0.87) here=0
+05:59:37 SEEK dir=306 moved=755 done d11 0.474->0.558 pose=(-1.21,1.11) here=0
+05:59:40 SEEK dir=282 moved=158 obstacle d11 0.558->0.578 pose=(-1.29,1.13) here=0
+05:59:40 SEEK dir=282 moved=28 obstacle d11 0.578->0.584 pose=(-1.30,1.13) here=0
+05:59:41 SEEK dir=279 moved=-0 obstacle d11 0.584->0.584 pose=(-1.30,1.13) here=0
+05:59:42 SEEK dir=284 moved=-1 obstacle d11 0.584->0.581 pose=(-1.30,1.13) here=0
+05:59:43 SEEK dir=279 moved=36 obstacle d11 0.581->0.593 pose=(-1.32,1.13) here=0
+05:59:44 SEEK dir=282 moved=20 obstacle d11 0.593->0.598 pose=(-1.33,1.14) here=0
+05:59:48 SEEK dir=301 moved=755 done d11 0.598->0.687 pose=(-1.68,1.35) here=0
+05:59:51 SEEK dir=299 moved=750 done d11 0.687->0.770 pose=(-2.04,1.54) here=0
+05:59:54 SEEK dir=298 moved=748 done d11 0.770->0.823 pose=(-2.39,1.73) here=0
+05:59:57 SEEK dir=298 moved=748 done d11 0.823->0.844 pose=(-2.75,1.92) here=0
+06:00:04 SEEK dir=117 moved=756 done d11 0.844->0.814 pose=(-2.39,1.74) here=0
+06:00:10 SEEK worse; backtracked 775
+06:00:15 SEEK dir=71 moved=704 obstacle d11 0.844->0.744 pose=(-2.40,2.05) here=0
+06:00:21 SEEK worse; backtracked 728
+06:00:21 SEEK no candidates; clearing bad + backing
+06:00:28 SEEK dir=117 moved=756 done d11 0.844->0.791 pose=(-2.33,1.77) here=0
+06:00:34 SEEK worse; backtracked 774
+06:00:41 SEEK dir=136 moved=758 done d11 0.844->0.884 pose=(-2.42,1.66) here=0
+06:00:45 SEEK dir=115 moved=771 done d11 0.884->0.816 pose=(-2.04,1.49) here=0
+06:00:51 SEEK worse; backtracked 648
+06:00:58 SEEK dir=111 moved=746 done d11 0.884->0.698 pose=(-1.98,1.49) here=0
+06:01:04 SEEK worse; backtracked 769
+06:01:07 SEEK dir=291 moved=760 done d11 0.884->0.855 pose=(-2.75,1.79) here=0
+06:01:13 SEEK worse; backtracked 770
+06:01:19 SEEK dir=333 moved=620 done d11 0.884->0.922 pose=(-2.52,1.93) here=0
+06:01:24 SEEK dir=283 moved=760 done d11 0.922->0.759 pose=(-2.92,2.02) here=0
+06:01:30 SEEK worse; backtracked 778
+06:01:35 SEEK dir=166 moved=750 done d11 0.922->0.801 pose=(-2.41,1.54) here=0
+06:01:41 SEEK worse; backtracked 757
+06:01:41 SEEK no candidates; clearing bad + backing
+06:01:47 SEEK dir=125 moved=472 obstacle d11 0.922->0.909 pose=(-2.28,1.71) here=0
+06:01:51 SEEK dir=148 moved=760 done d11 0.909->0.846 pose=(-2.07,1.36) here=0
+06:01:57 SEEK worse; backtracked 775
+06:02:03 SEEK dir=192 moved=749 done d11 0.909->0.583 pose=(-2.37,1.32) here=0
+06:02:09 SEEK worse; backtracked 759
+06:02:13 SEEK dir=324 moved=571 done d11 0.909->0.455 pose=(-2.47,1.97) here=0
+06:02:19 SEEK worse; backtracked 587
+06:02:23 SEEK dir=229 moved=496 done d11 0.909->0.431 pose=(-2.48,1.53) here=0
+06:02:28 SEEK worse; backtracked 416
+06:02:32 SEEK dir=3 moved=387 done d11 0.909->0.514 pose=(-2.30,1.89) here=0
+06:02:36 SEEK worse; backtracked 404
+06:02:37 SEEK no candidates; clearing bad + backing
+06:04:41 NAV pose=(-2.30,1.89) hdg=136 moved=1 obstacle st={'tick': 257371, 'goal': 0, 'here': 0} d11=0.990
+06:04:44 NAV pose=(-2.12,1.80) hdg=116 moved=370 obstacle st={'tick': 257635, 'goal': 0, 'here': 0} d11=0.995
+06:04:48 NAV pose=(-1.79,1.41) hdg=138 moved=936 done st={'tick': 258079, 'goal': 0, 'here': 0} d11=0.948
+06:04:48 NAV arrived (-1.79,1.41)
+06:04:49 LEAD hop 0 at (-1.79,1.41) here=0 d11=0.93
+06:04:49 LEAD hop 0 B caught up d11=0.93 waited 0s
+06:04:52 NAV pose=(-1.59,1.32) hdg=110 moved=421 obstacle st={'tick': 258416, 'goal': 0, 'here': 0} d11=0.870
+06:04:52 NAV pose=(-1.59,1.32) hdg=113 moved=-0 obstacle st={'tick': 258429, 'goal': 0, 'here': 0} d11=0.870
+06:04:52 NAV pose=(-1.59,1.32) hdg=114 moved=1 obstacle st={'tick': 258450, 'goal': 0, 'here': 0} d11=0.884
+06:04:52 NAV pose=(-1.58,1.31) hdg=111 moved=16 obstacle st={'tick': 258469, 'goal': 0, 'here': 0} d11=0.887
+06:04:52 NAV pose=(-1.58,1.31) hdg=111 moved=0 obstacle st={'tick': 258482, 'goal': 0, 'here': 0} d11=0.871
+06:04:53 NAV pose=(-1.58,1.31) hdg=114 moved=0 obstacle st={'tick': 258497, 'goal': 0, 'here': 0} d11=0.855
+06:04:53 NAV pose=(-1.58,1.31) hdg=115 moved=-2 obstacle st={'tick': 258513, 'goal': 0, 'here': 0} d11=0.876
+06:04:53 NAV pose=(-1.58,1.31) hdg=113 moved=-0 obstacle st={'tick': 258526, 'goal': 0, 'here': 0} d11=0.875
+06:04:53 NAV pose=(-1.58,1.31) hdg=115 moved=0 obstacle st={'tick': 258549, 'goal': 0, 'here': 0} d11=0.873
+06:04:53 NAV pose=(-1.58,1.31) hdg=114 moved=1 obstacle st={'tick': 258568, 'goal': 0, 'here': 0} d11=0.882
+06:04:53 NAV pose=(-1.58,1.31) hdg=113 moved=-1 obstacle st={'tick': 258584, 'goal': 0, 'here': 0} d11=0.874
+06:04:54 NAV pose=(-1.58,1.31) hdg=114 moved=-1 obstacle st={'tick': 258597, 'goal': 0, 'here': 0} d11=0.876
+06:04:54 NAV pose=(-1.58,1.31) hdg=111 moved=-1 obstacle st={'tick': 258613, 'goal': 0, 'here': 0} d11=0.883
+06:04:54 NAV pose=(-1.58,1.31) hdg=114 moved=0 obstacle st={'tick': 258627, 'goal': 0, 'here': 0} d11=0.880
+06:04:54 NAV pose=(-1.58,1.31) hdg=111 moved=-1 obstacle st={'tick': 258643, 'goal': 0, 'here': 0} d11=0.879
+06:04:54 NAV pose=(-1.58,1.31) hdg=108 moved=-0 obstacle st={'tick': 258656, 'goal': 0, 'here': 0} d11=0.871
+06:04:54 NAV pose=(-1.58,1.31) hdg=112 moved=-0 obstacle st={'tick': 258669, 'goal': 0, 'here': 0} d11=0.877
+06:04:54 NAV pose=(-1.58,1.31) hdg=114 moved=-0 obstacle st={'tick': 258682, 'goal': 0, 'here': 0} d11=0.894
+06:04:55 NAV pose=(-1.58,1.31) hdg=109 moved=1 obstacle st={'tick': 258695, 'goal': 0, 'here': 0} d11=0.884
+06:04:55 NAV pose=(-1.58,1.31) hdg=113 moved=0 obstacle st={'tick': 258708, 'goal': 0, 'here': 0} d11=0.887
+06:04:55 NAV pose=(-1.58,1.31) hdg=112 moved=0 obstacle st={'tick': 258723, 'goal': 0, 'here': 0} d11=0.879
+06:04:55 NAV pose=(-1.58,1.31) hdg=116 moved=1 obstacle st={'tick': 258741, 'goal': 0, 'here': 0} d11=0.867
+06:04:55 NAV pose=(-1.58,1.31) hdg=114 moved=0 obstacle st={'tick': 258755, 'goal': 0, 'here': 0} d11=0.874
+06:04:55 NAV pose=(-1.58,1.31) hdg=110 moved=-2 obstacle st={'tick': 258772, 'goal': 0, 'here': 0} d11=0.870
+06:04:56 NAV pose=(-1.58,1.31) hdg=116 moved=-1 obstacle st={'tick': 258788, 'goal': 0, 'here': 0} d11=0.869
+06:04:56 NAV pose=(-1.58,1.31) hdg=114 moved=0 obstacle st={'tick': 258802, 'goal': 0, 'here': 0} d11=0.872
+06:04:56 NAV pose=(-1.58,1.31) hdg=115 moved=0 obstacle st={'tick': 258818, 'goal': 0, 'here': 0} d11=0.879
+06:04:56 NAV pose=(-1.58,1.31) hdg=111 moved=-2 obstacle st={'tick': 258831, 'goal': 0, 'here': 0} d11=0.874
+06:04:56 NAV pose=(-1.58,1.31) hdg=113 moved=-2 obstacle st={'tick': 258844, 'goal': 0, 'here': 0} d11=0.865
+06:04:56 NAV pose=(-1.58,1.31) hdg=112 moved=-2 obstacle st={'tick': 258862, 'goal': 0, 'here': 0} d11=0.888
+06:04:56 NAV pose=(-1.58,1.31) hdg=114 moved=0 obstacle st={'tick': 258876, 'goal': 0, 'here': 0} d11=0.867
+06:04:57 NAV pose=(-1.57,1.31) hdg=111 moved=20 obstacle st={'tick': 258896, 'goal': 0, 'here': 0} d11=0.880
+06:04:57 NAV pose=(-1.57,1.31) hdg=110 moved=0 obstacle st={'tick': 258914, 'goal': 0, 'here': 0} d11=0.859
+06:04:57 NAV pose=(-1.57,1.31) hdg=114 moved=1 obstacle st={'tick': 258929, 'goal': 0, 'here': 0} d11=0.878
+06:05:01 NAV pose=(-1.15,1.29) hdg=91 moved=782 done st={'tick': 259287, 'goal': 0, 'here': 0} d11=0.756
+06:05:01 NAV arrived (-1.15,1.29)
+06:05:01 LEAD hop 1 at (-1.15,1.29) here=0 d11=0.76
+06:05:39 LEAD hop 1 B caught up d11=0.94 waited 39s
+06:05:44 NAV pose=(-0.79,0.92) hdg=132 moved=944 done st={'tick': 263607, 'goal': 0, 'here': 0} d11=0.958
+06:05:47 NAV pose=(-0.47,0.77) hdg=114 moved=659 done st={'tick': 263902, 'goal': 0, 'here': 0} d11=0.911
+06:05:47 NAV arrived (-0.47,0.77)
+06:05:47 LEAD hop 2 at (-0.47,0.77) here=0 d11=0.91
+06:05:47 LEAD hop 2 B caught up d11=0.92 waited 0s
+06:05:50 NAV pose=(-0.03,0.59) hdg=110 moved=869 obstacle st={'tick': 264253, 'goal': 0, 'here': 0} d11=0.917
+06:05:50 NAV arrived (-0.03,0.59)
+06:05:50 LEAD hop 3 at (-0.03,0.59) here=0 d11=0.92
+06:05:51 LEAD hop 3 B caught up d11=0.91 waited 0s
+06:05:54 NAV pose=(0.43,0.41) hdg=107 moved=925 done st={'tick': 264619, 'goal': 0, 'here': 0} d11=0.908
+06:05:58 NAV pose=(0.32,0.36) hdg=237 moved=233 done st={'tick': 264992, 'goal': 0, 'here': 0} d11=0.928
+06:06:00 NAV pose=(0.17,0.33) hdg=256 moved=282 obstacle st={'tick': 265272, 'goal': 0, 'here': 0} d11=0.956
+06:06:01 NAV pose=(0.15,0.33) hdg=257 moved=51 obstacle st={'tick': 265303, 'goal': 0, 'here': 0} d11=0.940
+06:06:01 NAV pose=(0.15,0.33) hdg=261 moved=0 obstacle st={'tick': 265317, 'goal': 0, 'here': 0} d11=0.938
+06:06:01 NAV pose=(0.14,0.33) hdg=257 moved=18 obstacle st={'tick': 265339, 'goal': 0, 'here': 0} d11=0.940
+06:06:01 NAV pose=(0.14,0.33) hdg=256 moved=-0 obstacle st={'tick': 265353, 'goal': 0, 'here': 0} d11=0.947
+06:06:01 NAV pose=(0.14,0.33) hdg=256 moved=1 obstacle st={'tick': 265366, 'goal': 0, 'here': 0} d11=0.947
+06:06:01 NAV pose=(0.14,0.33) hdg=258 moved=0 obstacle st={'tick': 265378, 'goal': 0, 'here': 0} d11=0.945
+06:06:02 NAV pose=(0.14,0.33) hdg=262 moved=0 obstacle st={'tick': 265399, 'goal': 0, 'here': 0} d11=0.954
+06:06:02 NAV pose=(0.14,0.33) hdg=261 moved=0 obstacle st={'tick': 265413, 'goal': 0, 'here': 0} d11=0.939
+06:06:02 NAV pose=(0.12,0.32) hdg=259 moved=34 obstacle st={'tick': 265440, 'goal': 0, 'here': 0} d11=0.938
+06:06:02 NAV pose=(0.12,0.32) hdg=262 moved=-0 obstacle st={'tick': 265454, 'goal': 0, 'here': 0} d11=0.960
+06:06:02 NAV pose=(0.12,0.32) hdg=257 moved=0 obstacle st={'tick': 265468, 'goal': 0, 'here': 0} d11=0.948
+06:06:02 NAV pose=(0.12,0.32) hdg=257 moved=-0 obstacle st={'tick': 265481, 'goal': 0, 'here': 0} d11=0.938
+06:06:03 NAV pose=(0.12,0.32) hdg=259 moved=0 obstacle st={'tick': 265496, 'goal': 0, 'here': 0} d11=0.948
+06:06:03 NAV pose=(0.12,0.32) hdg=255 moved=-1 obstacle st={'tick': 265509, 'goal': 0, 'here': 0} d11=0.942
+06:06:03 NAV pose=(0.12,0.32) hdg=260 moved=-1 obstacle st={'tick': 265525, 'goal': 0, 'here': 0} d11=0.945
+06:06:03 NAV pose=(0.12,0.32) hdg=256 moved=-0 obstacle st={'tick': 265539, 'goal': 0, 'here': 0} d11=0.936
+06:06:03 NAV pose=(0.12,0.32) hdg=256 moved=2 obstacle st={'tick': 265557, 'goal': 0, 'here': 0} d11=0.952
+06:06:03 NAV pose=(0.12,0.32) hdg=259 moved=0 obstacle st={'tick': 265571, 'goal': 0, 'here': 0} d11=0.954
+06:06:04 NAV pose=(0.12,0.32) hdg=258 moved=-1 obstacle st={'tick': 265592, 'goal': 0, 'here': 0} d11=0.946
+06:06:04 NAV pose=(0.12,0.32) hdg=258 moved=-0 obstacle st={'tick': 265605, 'goal': 0, 'here': 0} d11=0.946
+06:06:04 NAV pose=(0.12,0.32) hdg=259 moved=-0 obstacle st={'tick': 265618, 'goal': 0, 'here': 0} d11=0.930
+06:06:04 NAV pose=(0.12,0.32) hdg=257 moved=0 obstacle st={'tick': 265635, 'goal': 0, 'here': 0} d11=0.950
+06:06:04 NAV pose=(0.12,0.32) hdg=257 moved=-1 obstacle st={'tick': 265654, 'goal': 0, 'here': 0} d11=0.944
+06:06:04 NAV pose=(0.12,0.32) hdg=258 moved=0 obstacle st={'tick': 265668, 'goal': 0, 'here': 0} d11=0.937
+06:06:05 NAV pose=(0.12,0.32) hdg=259 moved=0 obstacle st={'tick': 265686, 'goal': 0, 'here': 0} d11=0.930
+06:06:05 NAV pose=(0.12,0.32) hdg=261 moved=1 obstacle st={'tick': 265700, 'goal': 0, 'here': 0} d11=0.948
+06:06:08 NAV pose=(-0.29,0.40) hdg=276 moved=770 done st={'tick': 266055, 'goal': 0, 'here': 0} d11=0.949
+06:06:14 NAV pose=(0.10,0.35) hdg=96 moved=726 done st={'tick': 266607, 'goal': 0, 'here': 0} d11=0.951
+06:06:17 NAV pose=(0.10,0.35) hdg=251 moved=0 obstacle st={'tick': 266942, 'goal': 0, 'here': 0} d11=0.972
+06:06:17 NAV pose=(0.10,0.35) hdg=249 moved=-2 obstacle st={'tick': 266959, 'goal': 0, 'here': 0} d11=0.956
+06:06:17 NAV pose=(0.10,0.35) hdg=252 moved=1 obstacle st={'tick': 266973, 'goal': 0, 'here': 0} d11=0.963
+06:06:17 NAV pose=(0.10,0.35) hdg=251 moved=1 obstacle st={'tick': 266986, 'goal': 0, 'here': 0} d11=0.940
+06:06:21 NAV pose=(-0.28,0.38) hdg=274 moved=698 done st={'tick': 267376, 'goal': 0, 'here': 0} d11=0.955
+06:06:24 NAV pose=(-0.28,0.38) hdg=119 moved=-0 obstacle st={'tick': 267674, 'goal': 0, 'here': 0} d11=0.957
+06:06:26 NAV pose=(-0.13,0.36) hdg=93 moved=266 obstacle st={'tick': 267883, 'goal': 0, 'here': 0} d11=0.944
+06:06:27 NAV pose=(-0.12,0.36) hdg=94 moved=34 obstacle st={'tick': 267911, 'goal': 0, 'here': 0} d11=0.949
+06:06:27 NAV pose=(-0.09,0.35) hdg=97 moved=48 obstacle st={'tick': 267944, 'goal': 0, 'here': 0} d11=0.956
+06:06:27 NAV pose=(-0.09,0.35) hdg=99 moved=0 obstacle st={'tick': 267963, 'goal': 0, 'here': 0} d11=0.969
+06:06:31 NAV pose=(-0.29,0.31) hdg=250 moved=374 obstacle st={'tick': 268379, 'goal': 0, 'here': 0} d11=0.923
+06:06:38 NAV pose=(0.19,0.46) hdg=64 moved=934 done st={'tick': 269001, 'goal': 0, 'here': 0} d11=0.964
+06:06:38 LEAD hop 4 at (0.19,0.46) here=0 d11=0.95
+06:06:38 LEAD hop 4 B caught up d11=0.95 waited 0s
+06:06:40 NAV pose=(0.29,0.42) hdg=109 moved=188 obstacle st={'tick': 269277, 'goal': 0, 'here': 0} d11=0.956
+06:06:41 NAV pose=(0.29,0.42) hdg=113 moved=1 obstacle st={'tick': 269290, 'goal': 0, 'here': 0} d11=0.919
+06:06:41 NAV pose=(0.30,0.41) hdg=109 moved=20 obstacle st={'tick': 269311, 'goal': 0, 'here': 0} d11=0.929
+06:06:41 NAV pose=(0.30,0.41) hdg=114 moved=0 obstacle st={'tick': 269324, 'goal': 0, 'here': 0} d11=0.926
+06:06:44 NAV pose=(0.78,0.24) hdg=109 moved=941 done st={'tick': 269651, 'goal': 0, 'here': 0} d11=0.923
+06:06:47 NAV pose=(0.69,0.19) hdg=241 moved=196 done st={'tick': 269968, 'goal': 0, 'here': 0} d11=0.921
+06:06:49 NAV pose=(0.66,0.19) hdg=258 moved=56 obstacle st={'tick': 270095, 'goal': 0, 'here': 0} d11=0.920
+06:06:49 NAV pose=(0.63,0.18) hdg=257 moved=54 obstacle st={'tick': 270128, 'goal': 0, 'here': 0} d11=0.947
+06:06:49 NAV pose=(0.63,0.18) hdg=258 moved=1 obstacle st={'tick': 270141, 'goal': 0, 'here': 0} d11=0.941
+06:06:54 NAV pose=(0.13,0.27) hdg=275 moved=938 done st={'tick': 270601, 'goal': 0, 'here': 0} d11=0.957
+06:06:57 NAV pose=(0.17,0.25) hdg=121 moved=87 obstacle st={'tick': 270922, 'goal': 0, 'here': 0} d11=0.962
+06:07:01 NAV pose=(0.10,0.19) hdg=228 moved=162 obstacle st={'tick': 271327, 'goal': 0, 'here': 0} d11=0.939
+06:07:04 NAV pose=(0.10,0.19) hdg=104 moved=-1 obstacle st={'tick': 271587, 'goal': 0, 'here': 0} d11=0.947
+06:07:04 NAV pose=(0.10,0.19) hdg=96 moved=0 obstacle st={'tick': 271605, 'goal': 0, 'here': 0} d11=0.941
+06:07:04 NAV pose=(0.10,0.19) hdg=95 moved=-1 obstacle st={'tick': 271618, 'goal': 0, 'here': 0} d11=0.941
+06:07:04 NAV pose=(0.10,0.19) hdg=98 moved=0 obstacle st={'tick': 271634, 'goal': 0, 'here': 0} d11=0.948
+06:07:04 NAV pose=(0.10,0.19) hdg=100 moved=2 obstacle st={'tick': 271648, 'goal': 0, 'here': 0} d11=0.952
+06:07:04 NAV pose=(0.10,0.19) hdg=100 moved=0 obstacle st={'tick': 271662, 'goal': 0, 'here': 0} d11=0.947
+06:07:04 NAV pose=(0.10,0.19) hdg=98 moved=0 obstacle st={'tick': 271680, 'goal': 0, 'here': 0} d11=0.951
+06:07:05 NAV pose=(0.11,0.19) hdg=95 moved=18 obstacle st={'tick': 271700, 'goal': 0, 'here': 0} d11=0.950
+06:07:05 NAV pose=(0.11,0.19) hdg=100 moved=1 obstacle st={'tick': 271720, 'goal': 0, 'here': 0} d11=0.958
+06:07:05 NAV pose=(0.11,0.19) hdg=100 moved=-2 obstacle st={'tick': 271733, 'goal': 0, 'here': 0} d11=0.943
+06:07:05 NAV pose=(0.11,0.19) hdg=98 moved=0 obstacle st={'tick': 271750, 'goal': 0, 'here': 0} d11=0.941
+06:07:05 NAV pose=(0.11,0.19) hdg=99 moved=0 obstacle st={'tick': 271766, 'goal': 0, 'here': 0} d11=0.941
+06:07:05 NAV pose=(0.11,0.19) hdg=98 moved=0 obstacle st={'tick': 271784, 'goal': 0, 'here': 0} d11=0.944
+06:07:06 NAV pose=(0.11,0.19) hdg=98 moved=-1 obstacle st={'tick': 271797, 'goal': 0, 'here': 0} d11=0.949
+06:07:06 NAV pose=(0.11,0.19) hdg=94 moved=1 obstacle st={'tick': 271810, 'goal': 0, 'here': 0} d11=0.941
+06:07:06 NAV pose=(0.11,0.19) hdg=98 moved=-0 obstacle st={'tick': 271826, 'goal': 0, 'here': 0} d11=0.945
+06:07:06 NAV pose=(0.11,0.19) hdg=97 moved=-0 obstacle st={'tick': 271840, 'goal': 0, 'here': 0} d11=0.957
+06:07:06 NAV pose=(0.11,0.19) hdg=99 moved=-0 obstacle st={'tick': 271855, 'goal': 0, 'here': 0} d11=0.944
+06:07:06 NAV pose=(0.11,0.19) hdg=98 moved=-1 obstacle st={'tick': 271872, 'goal': 0, 'here': 0} d11=0.943
+06:07:06 NAV pose=(0.11,0.19) hdg=95 moved=0 obstacle st={'tick': 271886, 'goal': 0, 'here': 0} d11=0.951
+06:07:07 NAV pose=(0.11,0.19) hdg=96 moved=0 obstacle st={'tick': 271906, 'goal': 0, 'here': 0} d11=0.945
+06:07:07 NAV pose=(0.11,0.19) hdg=98 moved=-1 obstacle st={'tick': 271920, 'goal': 0, 'here': 0} d11=0.937
+06:07:07 NAV pose=(0.11,0.19) hdg=101 moved=-0 obstacle st={'tick': 271936, 'goal': 0, 'here': 0} d11=0.956
+06:07:07 NAV pose=(0.11,0.19) hdg=100 moved=0 obstacle st={'tick': 271951, 'goal': 0, 'here': 0} d11=0.951
+06:07:07 NAV pose=(0.11,0.19) hdg=96 moved=0 obstacle st={'tick': 271969, 'goal': 0, 'here': 0} d11=0.943
+06:07:07 NAV pose=(0.11,0.19) hdg=99 moved=2 obstacle st={'tick': 271984, 'goal': 0, 'here': 0} d11=0.957
+06:07:08 NAV pose=(0.11,0.19) hdg=100 moved=-2 obstacle st={'tick': 271998, 'goal': 0, 'here': 0} d11=0.944
+06:07:08 NAV pose=(0.11,0.19) hdg=95 moved=2 obstacle st={'tick': 272015, 'goal': 0, 'here': 0} d11=0.951
+06:07:08 NAV pose=(0.11,0.19) hdg=98 moved=0 obstacle st={'tick': 272031, 'goal': 0, 'here': 0} d11=0.949
+06:07:08 NAV pose=(0.11,0.19) hdg=99 moved=-1 obstacle st={'tick': 272047, 'goal': 0, 'here': 0} d11=0.945
+06:07:08 NAV pose=(0.14,0.19) hdg=99 moved=44 obstacle st={'tick': 272076, 'goal': 0, 'here': 0} d11=0.938
+06:07:13 NAV pose=(0.63,0.33) hdg=71 moved=944 done st={'tick': 272505, 'goal': 0, 'here': 0} d11=0.973
+06:07:16 NAV pose=(0.55,0.27) hdg=230 moved=180 obstacle st={'tick': 272859, 'goal': 0, 'here': 0} d11=0.951
+06:07:18 NAV pose=(0.48,0.24) hdg=245 moved=144 obstacle st={'tick': 273004, 'goal': 0, 'here': 0} d11=0.960
+06:07:18 NAV pose=(0.48,0.24) hdg=243 moved=0 obstacle st={'tick': 273019, 'goal': 0, 'here': 0} d11=0.952
+06:07:24 NAV pose=(0.99,0.27) hdg=88 moved=943 done st={'tick': 273634, 'goal': 0, 'here': 0} d11=0.877
+06:07:24 LEAD hop 5 at (0.99,0.27) here=0 d11=0.88
+06:07:24 LEAD hop 5 B caught up d11=0.88 waited 0s
+06:07:24 LEAD not on goal after hops; exploring for goal
+06:07:24 explorer start pose=(0.99,0.27)
+06:07:29 pose=(1.28,-0.18) hdg=146 moved=986 obstacle d11=0.736 st={'tick': 273680, 'goal': 0, 'here': 0}
+06:07:32 pose=(1.34,-0.59) hdg=172 moved=767 obstacle d11=0.655 st={'tick': 274127, 'goal': 0, 'here': 0}
+06:07:32 pose=(1.34,-0.59) hdg=169 moved=0 obstacle d11=0.634 st={'tick': 274459, 'goal': 0, 'here': 0}
+06:07:33 pose=(1.34,-0.59) hdg=170 moved=0 obstacle d11=0.614 st={'tick': 274478, 'goal': 0, 'here': 0}
+06:07:33 stuck, reversing
+06:07:39 pose=(1.18,-1.13) hdg=188 moved=1314 done d11=0.531 st={'tick': 274617, 'goal': 0, 'here': 0}
+06:07:43 pose=(1.65,-1.40) hdg=118 moved=1002 obstacle d11=0.482 st={'tick': 275119, 'goal': 0, 'here': 0}
+06:07:43 *** HERE FLAG status={'tick': 275578, 'goal': 0, 'here': 1} at (1.65,-1.40)
+06:07:43 stopping on goal
+06:07:43 LEAD final status {'tick': 275584, 'goal': 0, 'here': 1}
+06:17:06 WATCH trigger: 06:17:05 RX: B: Agree. RE-ARRIVAL PROTOCOL: 1) Both step OFF the zone now (~0.3m
+06:17:30 WATCH rearrive done
+06:24:42 WATCH trigger: 06:24:42 RX: B: I am OFF now (here=0), NW of zone. Now YOU step ON, verify here=
+06:24:57 WATCH rearrive done

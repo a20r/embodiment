@@ -28,6 +28,22 @@ DEFAULTS = {
     # "minimal_duo_named" also names the TX/RX port files (the harness
     # substitutes the episode's real anonymous filenames).
     "readme_variant": None,
+    # Scene: "maze" (procedural, the goal is a cell or an exit) or
+    # "track" (a closed circuit; the objective is laps against the
+    # clock; requires robot.model: car, solo only).
+    "scene": "maze",
+    "track": {
+        "name": "austin",        # sim/tracks/<name>.csv centerline
+        "scale": 0.07,           # real meters -> sim meters (5.5 km -> 386 m)
+        "width_scale": 1.0,      # extra factor on the track width
+        "margin": 1.0,           # m of empty world around the circuit
+        "laps_warmup": 1,        # untimed laps before the clock counts
+        "laps_timed": 10,        # the run ends when these are complete
+        "checkpoints": 20,       # arc-length sectors a lap must visit
+    },
+    # Bot image; a README that demands a toolchain (e.g. Rust) pairs
+    # with an image that has it.  Built from `dockerfile` if missing.
+    "container": {"image": "mazebot-bot", "dockerfile": "Dockerfile.bot"},
     # Two robots in one world, each running its own agent, with a
     # proximity-gated serial link (TX/RX port pair per robot).
     "duo": {
@@ -40,11 +56,32 @@ DEFAULTS = {
         # fires for both only when both are in the goal region with
         # entries within together_window_s of each other.
         "objective": "solo",
+        # Wall-clock seconds (the README's "within one minute" is what
+        # the agents experience); the daemon scales by realtime_factor.
         "together_window_s": 60,
         # Anonymous signal-strength port that rises as the peer nears
         # (yelling in a maze: through walls, long tail).
         "peer_signal": False,
         "peer_signal_scale": 2.0,  # meters at which strength = 0.5
+        # Radio duty cycle: max accepted transmissions per second of
+        # sim time (0 = unlimited).  Excess lines are silently dropped
+        # before the range gate — the sender gets no error, so the cap
+        # itself must be discovered.  Scarcity is the point: with free
+        # bandwidth, blind repetition is optimal and no reliability
+        # protocol needs to emerge.
+        "tx_rate_hz": 0,
+        # Link-layer feedback (radio auto-ACK): the status port reports
+        # the fate of the most recent TX write as tx=<n>:<ok|lost|busy>.
+        "tx_status": False,
+        # Reading the RX port blocks until a line has arrived (UART
+        # semantics); a reader that gives up consumes nothing.  Only
+        # for README variants that name {rx}.
+        "rx_blocking": False,
+        # Harness: a bot that ends its turn is re-prompted when a line
+        # is delivered to it (receive interrupt), instead of a blind
+        # nudge; falls back to the nudge after rx_wake_timeout_s (wall).
+        "rx_wakes_agent": False,
+        "rx_wake_timeout_s": 600,
     },
     "noise_profile": "default_noisy",
     "maze": {
@@ -90,12 +127,38 @@ DEFAULTS = {
             "drag": 0.35,             # 1/s velocity decay (coasting)
             "v_max": 0.5,             # m/s forward
             "v_rev_max": 0.15,        # m/s reverse
+            # Tyre grip as a friction circle: the achieved (lateral,
+            # longitudinal) acceleration is capped at a_grip m/s^2, so
+            # a fast corner understeers and a hard launch spins.  0 =
+            # no limit (the pre-grip kinematic car, unchanged).
+            "a_grip": 0.0,
+            "slide_scrub": 0.5,       # extra decel per m/s^2 over the limit
         },
     },
     "lidar": {
         "rays": 16,
         "fov_deg": 360.0,
         "max_range": 3.0,    # m
+    },
+    # 3D lidar: a spinning multi-ring unit (VLP-16-like) mounted on top
+    # of the disc.  The world stays 2D-kinematic; it gains a floor at
+    # z=0, walls of wall_height, a peer of robot_height and a key post
+    # of post_height, so rings paint floor near the robot, wall faces
+    # out to where the beam clears the wall top, and nothing beyond.
+    # Frames are sensor-frame x,y,z triples (x forward, y left, z up,
+    # origin at the sensor) - the mount height is discoverable from
+    # the floor plane.  Enabled: the 2D `lidar` port is replaced.
+    "lidar3d": {
+        "enabled": False,
+        "rings": 16,             # elevation channels
+        "azimuths": 180,         # points per ring per frame (2 deg)
+        "vfov_deg": 30.0,        # symmetric about horizontal
+        "max_range": 3.0,        # m
+        "sensor_height": 0.15,   # m above the floor: on top of the body
+        "wall_height": 0.40,     # m
+        "robot_height": 0.15,    # m (the peer, seen as a cylinder)
+        "post_height": 0.25,     # m (the key)
+        "stream_hz": 10,         # held-open reader rate (frames are big)
     },
     "sim": {
         "tick_hz": 50,
@@ -108,6 +171,7 @@ DEFAULTS = {
     "budget": {
         "max_context_tokens": 160000,       # end/restart episode past this
         "max_total_output_tokens": 120000,  # cumulative model output per episode
+        "max_output_tokens_per_turn": 16000,  # reasoning counts (K3@max: 65536)
         "max_turns": 400,
         "max_wallclock_s": 1800,
         "on_context_full": "end",           # end | restart (bare restart)
@@ -132,6 +196,8 @@ NOISE_PROFILES = {
     "clean": {
         "lidar_sigma_m": 0.0,          # gaussian range noise
         "lidar_dropout_p": 0.0,        # per-ray invalid return (-1.0)
+        "lidar3d_sigma_m": 0.0,        # per-point range noise
+        "lidar3d_dropout_p": 0.0,      # per-point no-return (omitted)
         "heading_sigma_deg": 0.0,      # per-read gaussian
         "heading_drift_deg": 0.0,      # random-walk step std per tick
         "encoder_jitter_ticks": 0,     # +/- uniform jitter per read
@@ -146,11 +212,15 @@ NOISE_PROFILES = {
         # seeded per episode.  Integrated heading walks away over time.
         "heading_bias_deg_per_min": 0.0,
         "speed_sigma_ms": 0.0,         # speedometer noise (car model)
+        "grip_sigma": 0.0,             # per-tick relative noise on a_grip
+        "imu_sigma": 0.0,              # IMU channel noise (m/s^2, rad/s)
         "peer_signal_sigma": 0.0,      # duo peer-signal noise
     },
     "default_noisy": {
         "lidar_sigma_m": 0.01,
         "lidar_dropout_p": 0.01,
+        "lidar3d_sigma_m": 0.01,
+        "lidar3d_dropout_p": 0.01,
         "heading_sigma_deg": 2.0,
         "heading_drift_deg": 0.002,
         "encoder_jitter_ticks": 1,
@@ -163,6 +233,8 @@ NOISE_PROFILES = {
         "beacon_sigma": 0.008,
         "heading_bias_deg_per_min": 0.0,
         "speed_sigma_ms": 0.01,
+        "grip_sigma": 0.05,
+        "imu_sigma": 0.02,
         "peer_signal_sigma": 0.008,
     },
 }
@@ -220,12 +292,88 @@ def resolve(config_path=None, overrides=None):
     if cfg["maze"].get("locked") and \
             cfg["maze"].get("style") != "organic":
         raise ValueError("maze.locked requires maze.style: organic")
-    if cfg["prompt_variant"] not in ("standard", "lost"):
-        raise ValueError("prompt_variant must be 'standard' or 'lost'")
+    if cfg["prompt_variant"] not in ("standard", "lost", "race"):
+        raise ValueError("prompt_variant must be 'standard', 'lost' or "
+                         "'race'")
     if cfg["robot"].get("model", "diffdrive") not in ("diffdrive", "car"):
         raise ValueError("robot.model must be 'diffdrive' or 'car'")
+    if cfg.get("scene", "maze") not in ("maze", "track"):
+        raise ValueError("scene must be 'maze' or 'track'")
+    if cfg.get("scene") == "track":
+        if cfg["robot"].get("model") != "car":
+            raise ValueError("scene: track requires robot.model: car")
+        if cfg["duo"].get("enabled"):
+            raise ValueError("scene: track is solo only")
+        tr = cfg["track"]
+        for k in ("laps_warmup", "laps_timed", "checkpoints"):
+            v = tr.get(k)
+            if isinstance(v, bool) or not isinstance(v, int) or v < 0:
+                raise ValueError(f"track.{k} must be a non-negative int")
+        if tr["laps_timed"] < 1 or tr["checkpoints"] < 2:
+            raise ValueError("track.laps_timed >= 1 and "
+                             "track.checkpoints >= 2 required")
+        for k in ("scale", "width_scale"):
+            if isinstance(tr.get(k), bool) or not (
+                    isinstance(tr.get(k), (int, float)) and tr[k] > 0):
+                raise ValueError(f"track.{k} must be > 0")
+        if not (isinstance(tr.get("margin"), (int, float))
+                and tr["margin"] >= cfg["robot"]["radius"]):
+            raise ValueError("track.margin must be >= robot.radius")
+        if cfg["labels"] == "on" or cfg.get("readme_variant") is None:
+            # The labeled/unlabeled READMEs describe the maze robot.
+            raise ValueError("scene: track needs labels: off and an "
+                             "explicit readme_variant (race, race_nn)")
+        if any(p.get("name") == "maze_regen"
+               for p in cfg.get("perturbations", [])):
+            raise ValueError("maze_regen has no effect on a track")
+    cont = cfg.get("container", {})
+    if cont.get("image", "mazebot-bot") != "mazebot-bot" and \
+            cont.get("dockerfile", "Dockerfile.bot") == "Dockerfile.bot":
+        raise ValueError("container.image differs from the default: set "
+                         "container.dockerfile to the file that builds it")
+    car = cfg["robot"].get("car", {})
+    if car.get("a_grip", 0) < 0 or car.get("slide_scrub", 0) < 0:
+        raise ValueError("robot.car.a_grip and slide_scrub must be >= 0")
     if cfg["duo"].get("objective", "solo") not in ("solo", "together"):
         raise ValueError("duo.objective must be 'solo' or 'together'")
+    duo = cfg["duo"]
+    for k in ("tx_status", "rx_blocking", "rx_wakes_agent"):
+        if duo.get(k) and not duo.get("enabled"):
+            raise ValueError(f"duo.{k} requires duo.enabled: true")
+    if duo.get("enabled"):
+        for k in ("together_window_s", "rx_wake_timeout_s"):
+            v = duo.get(k, 0)
+            if isinstance(v, bool) or not (isinstance(v, (int, float))
+                                           and v > 0):
+                raise ValueError(f"duo.{k} must be a number > 0")
+    l3 = cfg.get("lidar3d", {})
+    if l3.get("enabled"):
+        num = (int, float)
+        for k in ("rings", "azimuths"):
+            v = l3[k]
+            if not (isinstance(v, num) and v >= 1 and int(v) == v):
+                raise ValueError(f"lidar3d.{k} must be a positive integer")
+        if not 0 < l3["vfov_deg"] < 180:
+            raise ValueError("lidar3d.vfov_deg must be in (0, 180)")
+        if not (isinstance(l3["max_range"], num) and l3["max_range"] > 0):
+            raise ValueError("lidar3d.max_range must be > 0")
+        if not (isinstance(l3["stream_hz"], num) and l3["stream_hz"] > 0):
+            raise ValueError("lidar3d.stream_hz must be > 0")
+        heights = [l3[k] for k in ("wall_height", "robot_height",
+                                   "post_height")]
+        if min(heights) < 0:
+            raise ValueError("lidar3d heights must be >= 0")
+        hs = l3["sensor_height"]
+        # Solids have no modelled top face: a sensor above one would
+        # see through it, so it must sit no higher than the shortest.
+        if not (0 < hs <= min(l3["robot_height"], l3["post_height"])
+                and hs < l3["wall_height"]):
+            raise ValueError("lidar3d.sensor_height must be above the "
+                             "floor, no higher than robot_height and "
+                             "post_height, and below wall_height")
+        if str(cfg.get("model", "")).startswith("mock:"):
+            raise ValueError("model=mock:* drives the 2D lidar; it cannot "
+                             "run with lidar3d.enabled")
     return cfg
 
 
@@ -235,6 +383,10 @@ def device_sets(cfg):
     if model == "car":
         sensors = ["lidar", "heading", "speed",
                    "bump_front", "bump_rear", "status"]
+        if cfg.get("scene") == "track":
+            # A race car carries an IMU: achieved accelerations and
+            # yaw rate, the instrument that shows the grip limit.
+            sensors.insert(3, "imu")
         actuators = ["accel", "steer"]
     else:
         sensors = list(SENSOR_DEVICES)
@@ -242,6 +394,10 @@ def device_sets(cfg):
             sensors = [s for s in sensors
                        if s not in ("encoder_left", "encoder_right")]
         actuators = list(ACTUATOR_DEVICES)
+    if cfg.get("lidar3d", {}).get("enabled"):
+        # The point cloud replaces the beam scan: one sensing modality
+        # per run keeps the discovery problem a one-variable delta.
+        sensors = ["lidar3d" if s == "lidar" else s for s in sensors]
     if cfg["maze"].get("locked"):
         sensors.append("beacon")
     if cfg.get("duo", {}).get("enabled"):

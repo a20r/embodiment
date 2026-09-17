@@ -1,0 +1,160 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-fable-5-1@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5-1@max",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-fable-5-1",
+        "thinking": {
+          "type": "adaptive"
+        },
+        "effort": "max"
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "solved",
+      "solved": true,
+      "goal_tick": 382498,
+      "final_tick": 389096,
+      "sim_time_s": 7781.92,
+      "comms": {
+        "tx": 23,
+        "tx_delivered": 17,
+        "rx_read": 87,
+        "tx_rate_dropped": 0,
+        "rx_received": 87
+      },
+      "wall_s": 3890.4,
+      "turns": 99,
+      "execs": 98,
+      "restarts": 0,
+      "nudges": 0,
+      "wakes": 0,
+      "tokens": {
+        "input": 202,
+        "output": 103866,
+        "cache_read": 8413585,
+        "cache_creation": 145090,
+        "cached": 0
+      },
+      "collisions": 216
+    },
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5-1@max",
+      "model_spec": {
+        "provider": "anthropic",
+        "model_id": "claude-fable-5-1",
+        "thinking": {
+          "type": "adaptive"
+        },
+        "effort": "max"
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "solved",
+      "solved": true,
+      "goal_tick": 382498,
+      "final_tick": 390681,
+      "sim_time_s": 7813.62,
+      "comms": {
+        "tx": 131,
+        "tx_delivered": 88,
+        "rx_read": 17,
+        "tx_rate_dropped": 12,
+        "rx_received": 17
+      },
+      "wall_s": 3906.3,
+      "turns": 94,
+      "execs": 93,
+      "restarts": 0,
+      "nudges": 0,
+      "wakes": 0,
+      "tokens": {
+        "input": 192,
+        "output": 90316,
+        "cache_read": 6261446,
+        "cache_creation": 123362,
+        "cached": 0
+      },
+      "collisions": 792
+    }
+  },
+  "solved_all": true,
+  "final_tick": 390692,
+  "comms_eval": {
+    "window_s": 120.0,
+    "memory_s": 300.0,
+    "tick_hz": 50,
+    "rtf": 2.0,
+    "tx": 154,
+    "delivered": 105,
+    "stimuli": 105,
+    "cr_count": 47,
+    "cr_rate": 0.448,
+    "cr_plus_count": 34,
+    "cr_plus_rate": 0.324,
+    "cr_lines": 23,
+    "cr_line_rate": 0.219,
+    "cr_latency_median_s": 56.8,
+    "cr_latency_p90_s": 107.5,
+    "exchanges_ge3": 7,
+    "longest_exchange": 4,
+    "worded_share_delivered": 0.552,
+    "longest_run": 17,
+    "runs_ge5": 8,
+    "rate_dropped": 12,
+    "rate_dropped_share": 0.072,
+    "in_range_tx_share": 0.682,
+    "surfacing_share": 0.381,
+    "wide": {
+      "cr_count": 74,
+      "cr_rate": 0.705,
+      "cr_plus_count": 53,
+      "cr_plus_rate": 0.505,
+      "cr_lines": 28,
+      "cr_line_rate": 0.267,
+      "cr_latency_median_s": 92.0,
+      "cr_latency_p90_s": 223.1,
+      "exchanges_ge3": 5,
+      "longest_exchange": 12,
+      "window_s": 300.0
+    },
+    "bots": {
+      "a": {
+        "tx": 23,
+        "delivered": 17,
+        "beacon_templates": 0,
+        "worded_delivered": 17,
+        "stimuli": 17,
+        "stimuli_answered": 9,
+        "replies": 15,
+        "rate_dropped": 0,
+        "rate_dropped_share": 0.0,
+        "surfacing_share": 0.33
+      },
+      "b": {
+        "tx": 131,
+        "delivered": 88,
+        "beacon_templates": 2,
+        "worded_delivered": 41,
+        "stimuli": 88,
+        "stimuli_answered": 38,
+        "replies": 8,
+        "rate_dropped": 12,
+        "rate_dropped_share": 0.084,
+        "surfacing_share": 0.647
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+A: I am ON the goal (here=1), still. Route: main corridor -> 0.7 W of its EAST dead-end take the passage SOUTH. Near bottom (S wall 0.5 ahead) turn EAST into alcove, go to its WEST end -> here=1. RSSI={d11} (0.95+=on me). Say 'here=1' when there.

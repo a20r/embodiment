@@ -1,0 +1,23 @@
+34354.8 LIGHTHOUSE start: still + TX flood. d11=0.706 tx=x=45896:ok
+34354.8 RX POS UNKNOWN
+34354.8 t=0 peak=0.706 tx=ok (A hears me)
+34355.9 RX GOAL NO STUCK NO
+34357.4 RX HDG=198
+34358.8 RX READY
+34375.6 t=21 peak=0.727 tx=ok (A hears me)
+34396.1 t=41 peak=0.729 tx=ok (A hears me)
+34416.6 t=62 peak=0.731 tx=ok (A hears me)
+34432.5 LIGHTHOUSE start: still + TX flood. d11=0.000 tx=
+34432.7 RX READY
+34432.7 t=0 peak=0.718 tx=ok (A hears me)
+34433.1 RX POS UNKNOWN
+34434.5 RX GOAL NO STUCK NO
+34435.9 RX HDG=198
+34453.2 t=21 peak=0.725 tx=ok (A hears me)
+34473.8 t=41 peak=0.732 tx=ok (A hears me)
+34482.1 RX GOAL YES A COMING
+34483.5 RX A DRIVE TO B d11 RISING
+34485.0 RX A COME ON WAY
+34486.4 RX GOAL YES A ON WAY
+34494.3 t=62 peak=0.736 tx=ok (A hears me)
+34514.9 t=82 peak=0.736 tx=ok (A hears me)

@@ -1,0 +1,388 @@
+RUSH4 start
+t=0 d=18.38 b=10 pose=(-16.13,-3.67) walls=13
+  DIRECT res=wall
+t=4 d=18.31 b=8 pose=(-16.11,-3.32) walls=22
+  DIRECT res=wall
+t=7 d=18.29 b=9 pose=(-16.07,-3.46) walls=28
+  DIRECT res=wall
+t=11 d=18.21 b=8 pose=(-16.05,-3.03) walls=35
+  DIRECT res=wall
+t=14 d=18.19 b=9 pose=(-15.98,-3.38) walls=43
+  DIRECT res=wall
+t=18 d=18.17 b=8 pose=(-15.98,-3.29) walls=52
+  DIRECT res=wall
+t=19 d=18.14 b=8 pose=(-15.96,-3.18) walls=58
+  DIRECT res=wall
+STUCK LONG - breakout
+t=25 d=18.43 b=9 pose=(-16.20,-3.57) walls=65
+  DIRECT res=wall
+t=30 d=18.23 b=8 pose=(-16.04,-3.21) walls=67
+  DIRECT res=wall
+t=34 d=18.19 b=9 pose=(-15.97,-3.39) walls=67
+  DIRECT res=wall
+t=37 d=18.16 b=9 pose=(-15.96,-3.35) walls=72
+  DIRECT res=wall
+t=39 d=18.14 b=8 pose=(-15.94,-3.28) walls=76
+  DIRECT res=wall
+t=41 d=18.14 b=9 pose=(-15.94,-3.32) walls=81
+  DIRECT res=wall
+t=43 d=18.14 b=8 pose=(-15.94,-3.30) walls=82
+  DIRECT res=wall
+t=45 d=18.14 b=9 pose=(-15.94,-3.30) walls=83
+  DIRECT res=wall
+t=47 d=18.13 b=9 pose=(-15.93,-3.32) walls=83
+  DIRECT res=wall
+t=49 d=18.14 b=9 pose=(-15.93,-3.32) walls=83
+  DIRECT res=wall
+t=51 d=18.13 b=9 pose=(-15.93,-3.33) walls=83
+  DIRECT res=wall
+t=53 d=18.14 b=9 pose=(-15.93,-3.33) walls=84
+  DIRECT res=wall
+STUCK LONG - breakout
+t=57 d=18.13 b=9 pose=(-15.93,-3.31) walls=84
+  DIRECT res=wall
+t=62 d=18.16 b=10 pose=(-15.89,-3.76) walls=95
+  DIRECT res=wall
+t=64 d=18.17 b=10 pose=(-15.89,-3.76) walls=104
+  DIRECT res=wall
+t=66 d=18.15 b=10 pose=(-15.89,-3.67) walls=110
+  DIRECT res=wall
+t=68 d=18.15 b=10 pose=(-15.89,-3.67) walls=113
+  DIRECT res=wall
+t=70 d=18.15 b=10 pose=(-15.89,-3.67) walls=114
+  DIRECT res=wall
+t=72 d=18.15 b=10 pose=(-15.89,-3.67) walls=115
+  DIRECT res=wall
+t=74 d=18.14 b=10 pose=(-15.88,-3.67) walls=118
+  DIRECT res=wall
+t=76 d=18.15 b=10 pose=(-15.89,-3.67) walls=118
+  DIRECT res=wall
+STUCK LONG - breakout
+t=79 d=18.15 b=10 pose=(-15.89,-3.67) walls=122
+  DIRECT res=wall
+t=84 d=18.16 b=11 pose=(-15.83,-4.11) walls=132
+  DIRECT res=wall
+t=87 d=18.16 b=11 pose=(-15.83,-4.03) walls=133
+RUSH4 start
+t=0 d=17.56 b=9 pose=(-16.40,-3.91) walls=14
+  DIRECT res=to
+t=5 d=16.79 b=9 pose=(-15.63,-3.88) walls=28
+  DIRECT res=wall
+t=7 d=16.62 b=9 pose=(-15.45,-3.89) walls=42
+  DIRECT res=wall
+t=11 d=16.55 b=11 pose=(-15.32,-4.24) walls=50
+  DIRECT res=wall
+t=14 d=16.53 b=10 pose=(-15.32,-4.09) walls=58
+  DIRECT res=wall
+t=18 d=16.50 b=11 pose=(-15.24,-4.39) walls=68
+  DIRECT res=wall
+t=23 d=16.34 b=10 pose=(-15.17,-3.89) walls=82
+  DIRECT res=wall
+STUCK LONG - breakout
+t=31 d=16.51 b=10 pose=(-15.30,-4.09) walls=89
+  DIRECT res=wall
+t=36 d=16.45 b=12 pose=(-15.17,-4.49) walls=97
+  DIRECT res=wall
+t=40 d=16.39 b=11 pose=(-15.17,-4.19) walls=106
+  DIRECT res=wall
+t=43 d=16.37 b=12 pose=(-15.07,-4.53) walls=113
+  DIRECT res=wall
+t=46 d=16.35 b=11 pose=(-15.08,-4.40) walls=118
+  DIRECT res=wall
+t=48 d=16.35 b=11 pose=(-15.08,-4.40) walls=119
+  DIRECT res=wall
+t=50 d=16.35 b=11 pose=(-15.08,-4.40) walls=125
+  DIRECT res=wall
+STUCK LONG - breakout
+t=54 d=16.38 b=11 pose=(-15.12,-4.37) walls=128
+  DIRECT res=wall
+t=59 d=16.39 b=13 pose=(-15.02,-4.89) walls=135
+  DIRECT res=wall
+t=62 d=16.38 b=13 pose=(-15.04,-4.76) walls=141
+  DIRECT res=wall
+t=64 d=16.36 b=12 pose=(-15.03,-4.68) walls=144
+  DIRECT res=wall
+t=66 d=16.36 b=13 pose=(-15.02,-4.73) walls=149
+  DIRECT res=wall
+t=68 d=16.33 b=13 pose=(-15.00,-4.69) walls=151
+  DIRECT res=wall
+t=70 d=16.33 b=13 pose=(-15.00,-4.69) walls=152
+  DIRECT res=wall
+t=72 d=16.33 b=13 pose=(-15.00,-4.69) walls=153
+  DIRECT res=wall
+STUCK LONG - breakout
+t=78 d=16.64 b=14 pose=(-15.22,-5.10) walls=160
+  DIRECT res=wall
+t=83 d=16.43 b=12 pose=(-15.11,-4.65) walls=162
+  DIRECT res=wall
+t=87 d=16.41 b=14 pose=(-15.01,-5.02) walls=164
+RUSH4 start
+t=0 d=16.41 b=14 pose=(-15.01,-5.02) walls=14
+  GREEDY beam14 d=75 v=0.73 res=ok
+t=3 d=16.31 b=13 pose=(-14.98,-4.69) walls=23
+  GREEDY beam1 d=91 v=0.67 res=ok
+t=5 d=16.30 b=12 pose=(-15.02,-4.46) walls=34
+  GREEDY beam0 d=85 v=0.50 res=wall
+t=6 d=16.29 b=11 pose=(-15.03,-4.34) walls=42
+  GREEDY beam8 d=-99 v=0.72 res=ok
+t=10 d=16.41 b=13 pose=(-15.07,-4.73) walls=48
+  GREEDY beam8 d=68 v=0.78 res=wall
+t=13 d=16.27 b=12 pose=(-14.99,-4.44) walls=53
+  GREEDY beam9 d=-99 v=0.51 res=ok
+t=16 d=16.30 b=12 pose=(-14.98,-4.65) walls=58
+  GREEDY beam10 d=123 v=1.24 res=ok
+t=19 d=16.43 b=12 pose=(-15.15,-4.47) walls=63
+  GREEDY beam8 d=-60 v=0.52 res=wall
+STUCK LONG - breakout
+t=24 d=16.45 b=11 pose=(-15.19,-4.39) walls=69
+  GREEDY beam8 d=-70 v=0.66 res=ok
+t=26 d=16.41 b=12 pose=(-15.11,-4.58) walls=72
+  GREEDY beam0 d=-81 v=0.61 res=ok
+t=28 d=16.38 b=13 pose=(-15.01,-4.89) walls=73
+  GREEDY beam7 d=67 v=0.57 res=ok
+t=32 d=16.19 b=12 pose=(-14.89,-4.56) walls=77
+  GREEDY beam1 d=81 v=0.60 res=ok
+t=33 d=16.15 b=11 pose=(-14.89,-4.35) walls=84
+  GREEDY beam0 d=77 v=0.59 res=ok
+t=35 d=16.05 b=10 pose=(-14.85,-4.03) walls=95
+  GREEDY beam1 d=91 v=0.64 res=ok
+t=37 d=16.04 b=10 pose=(-14.87,-3.83) walls=104
+  GREEDY beam8 d=-94 v=0.57 res=ok
+t=40 d=16.06 b=11 pose=(-14.84,-4.11) walls=110
+  GREEDY beam8 d=83 v=0.53 res=wall
+t=43 d=16.03 b=10 pose=(-14.84,-3.99) walls=117
+  GREEDY beam8 d=-107 v=0.75 res=ok
+STUCK LONG - breakout
+t=47 d=16.23 b=11 pose=(-14.97,-4.36) walls=124
+  GREEDY beam8 d=55 v=0.58 res=ok
+t=50 d=16.08 b=11 pose=(-14.85,-4.17) walls=128
+  GREEDY beam1 d=67 v=0.53 res=wall
+t=51 d=16.07 b=11 pose=(-14.85,-4.15) walls=129
+t=51 d=16.03 b=10 pose=(-14.82,-4.06) walls=131
+t=52 d=16.03 b=10 pose=(-14.82,-4.06) walls=133
+t=52 d=16.03 b=10 pose=(-14.82,-4.06) walls=134
+  GREEDY beam9 d=-95 v=0.55 res=ok
+t=55 d=16.06 b=12 pose=(-14.79,-4.36) walls=138
+t=55 d=16.06 b=12 pose=(-14.79,-4.36) walls=138
+  GREEDY beam0 d=-97 v=0.51 res=ok
+t=57 d=16.11 b=12 pose=(-14.80,-4.58) walls=143
+  GREEDY beam9 d=97 v=0.51 res=wall
+t=60 d=16.16 b=12 pose=(-14.88,-4.44) walls=148
+t=60 d=16.16 b=12 pose=(-14.88,-4.44) walls=149
+  GREEDY beam8 d=-82 v=0.59 res=ok
+t=63 d=16.16 b=13 pose=(-14.84,-4.67) walls=151
+t=63 d=16.16 b=13 pose=(-14.84,-4.67) walls=151
+  GREEDY beam8 d=82 v=0.65 res=ok
+t=66 d=16.12 b=12 pose=(-14.85,-4.38) walls=152
+t=67 d=16.12 b=12 pose=(-14.85,-4.38) walls=152
+t=67 d=16.12 b=12 pose=(-14.85,-4.38) walls=152
+  GREEDY beam8 d=-105 v=0.71 res=ok
+STUCK LONG - breakout
+t=74 d=16.46 b=11 pose=(-15.21,-4.36) walls=154
+  GREEDY beam10 d=-25 v=0.53 res=ok
+t=77 d=16.27 b=11 pose=(-15.00,-4.39) walls=155
+t=77 d=16.27 b=11 pose=(-15.00,-4.39) walls=155
+  GREEDY beam14 d=-66 v=0.54 res=wall
+t=79 d=16.18 b=12 pose=(-14.87,-4.57) walls=155
+  GREEDY beam7 d=83 v=0.58 res=wall
+t=82 d=16.13 b=11 pose=(-14.87,-4.34) walls=155
+  GREEDY beam8 d=-105 v=0.69 res=ok
+t=85 d=16.16 b=12 pose=(-14.86,-4.54) walls=155
+  GREEDY beam10 d=120 v=1.25 res=ok
+t=88 d=16.29 b=11 pose=(-15.02,-4.38) walls=155
+  GREEDY beam8 d=-60 v=0.52 res=wall
+t=91 d=16.23 b=12 pose=(-14.94,-4.47) walls=156
+  GREEDY beam7 d=92 v=0.51 res=wall
+t=93 d=16.19 b=12 pose=(-14.92,-4.38) walls=159
+  GREEDY beam8 d=-93 v=0.75 res=ok
+STUCK LONG - breakout
+t=100 d=16.33 b=13 pose=(-14.95,-4.90) walls=159
+  GREEDY beam8 d=54 v=0.55 res=wall
+t=102 d=16.35 b=13 pose=(-14.97,-4.93) walls=162
+  GREEDY beam1 d=72 v=0.60 res=ok
+t=104 d=16.16 b=12 pose=(-14.87,-4.53) walls=163
+  GREEDY beam1 d=91 v=0.62 res=ok
+t=106 d=16.13 b=11 pose=(-14.89,-4.27) walls=165
+  GREEDY beam8 d=-100 v=0.64 res=ok
+t=110 d=16.27 b=13 pose=(-14.94,-4.68) walls=165
+t=110 d=16.27 b=13 pose=(-14.94,-4.68) walls=166
+  GREEDY beam8 d=69 v=0.77 res=ok
+t=113 d=16.17 b=12 pose=(-14.89,-4.42) walls=166
+  GREEDY beam9 d=-92 v=0.57 res=ok
+t=117 d=16.18 b=13 pose=(-14.84,-4.72) walls=167
+  GREEDY beam8 d=82 v=0.50 res=wall
+STUCK LONG - breakout
+t=120 d=16.17 b=12 pose=(-14.88,-4.49) walls=170
+t=121 d=16.17 b=12 pose=(-14.88,-4.49) walls=170
+  GREEDY beam7 d=-86 v=0.59 res=ok
+t=124 d=16.19 b=13 pose=(-14.85,-4.72) walls=170
+t=124 d=16.19 b=13 pose=(-14.85,-4.72) walls=170
+  GREEDY beam8 d=83 v=0.55 res=wall
+t=127 d=16.18 b=12 pose=(-14.86,-4.64) walls=172
+  GREEDY beam8 d=-101 v=0.70 res=ok
+t=131 d=16.27 b=13 pose=(-14.90,-4.85) walls=172
+t=131 d=16.27 b=13 pose=(-14.90,-4.85) walls=172
+t=131 d=16.27 b=13 pose=(-14.90,-4.85) walls=172
+t=131 d=16.28 b=13 pose=(-14.91,-4.88) walls=172
+  GREEDY beam8 d=67 v=0.61 res=wall
+t=134 d=16.18 b=13 pose=(-14.86,-4.66) walls=173
+  GREEDY beam9 d=-97 v=0.57 res=ok
+t=138 d=16.25 b=14 pose=(-14.84,-5.02) walls=179
+  GREEDY beam8 d=75 v=0.52 res=wall
+STUCK LONG - breakout
+t=144 d=16.45 b=14 pose=(-15.01,-5.17) walls=181
+  GREEDY beam8 d=47 v=0.68 res=ok
+t=148 d=16.29 b=14 pose=(-14.89,-4.97) walls=185
+  GREEDY beam2 d=89 v=0.50 res=ok
+t=150 d=16.26 b=13 pose=(-14.91,-4.76) walls=186
+  GREEDY beam8 d=-96 v=0.70 res=ok
+t=153 d=16.30 b=14 pose=(-14.87,-5.13) walls=187
+t=154 d=16.30 b=14 pose=(-14.87,-5.13) walls=190
+  GREEDY beam8 d=78 v=0.66 res=ok
+t=157 d=16.26 b=13 pose=(-14.88,-4.89) walls=193
+t=157 d=16.26 b=13 pose=(-14.88,-4.89) walls=193
+  GREEDY beam8 d=-104 v=0.66 res=ok
+t=160 d=16.34 b=14 pose=(-14.90,-5.17) walls=193
+  GREEDY beam8 d=70 v=0.65 res=wall
+t=163 d=16.29 b=14 pose=(-14.87,-5.06) walls=196
+t=163 d=16.24 b=14 pose=(-14.84,-4.95) walls=199
+  GREEDY beam9 d=-97 v=0.57 res=ok
+STUCK LONG - breakout
+t=171 d=16.53 b=14 pose=(-15.12,-5.06) walls=206
+  GREEDY beam8 d=-71 v=0.77 res=ok
+t=174 d=16.49 b=14 pose=(-15.03,-5.24) walls=211
+  GREEDY beam0 d=-79 v=0.71 res=ok
+t=176 d=16.46 b=15 pose=(-14.93,-5.52) walls=216
+t=176 d=16.46 b=15 pose=(-14.93,-5.52) walls=217
+t=176 d=16.46 b=15 pose=(-14.93,-5.52) walls=219
+t=176 d=16.46 b=16 pose=(-14.92,-5.55) walls=219
+t=177 d=16.46 b=16 pose=(-14.92,-5.55) walls=221
+t=177 d=16.46 b=16 pose=(-14.92,-5.55) walls=221
+t=177 d=16.46 b=16 pose=(-14.92,-5.55) walls=221
+t=177 d=16.46 b=15 pose=(-14.92,-5.55) walls=221
+  GREEDY beam7 d=69 v=0.63 res=ok
+t=180 d=16.37 b=15 pose=(-14.88,-5.35) walls=222
+  GREEDY beam9 d=-91 v=0.56 res=ok
+t=183 d=16.38 b=16 pose=(-14.81,-5.64) walls=229
+t=184 d=16.38 b=16 pose=(-14.81,-5.64) walls=232
+  GREEDY beam8 d=83 v=0.57 res=ok
+t=187 d=16.34 b=15 pose=(-14.85,-5.36) walls=235
+t=187 d=16.34 b=15 pose=(-14.85,-5.36) walls=236
+t=188 d=16.34 b=15 pose=(-14.85,-5.36) walls=236
+  GREEDY beam8 d=-101 v=0.75 res=ok
+t=191 d=16.40 b=16 pose=(-14.83,-5.65) walls=239
+STUCK LONG - breakout
+t=192 d=16.43 b=16 pose=(-14.84,-5.73) walls=241
+  GREEDY beam8 d=61 v=0.60 res=ok
+t=196 d=16.34 b=16 pose=(-14.80,-5.54) walls=244
+  GREEDY beam1 d=80 v=0.51 res=wall
+t=197 d=16.28 b=15 pose=(-14.80,-5.31) walls=244
+t=197 d=16.28 b=15 pose=(-14.80,-5.31) walls=244
+  GREEDY beam8 d=-108 v=0.69 res=ok
+t=201 d=16.38 b=16 pose=(-14.82,-5.63) walls=245
+  GREEDY beam8 d=70 v=0.63 res=wall
+t=204 d=16.29 b=15 pose=(-14.81,-5.31) walls=245
+t=205 d=16.29 b=15 pose=(-14.81,-5.31) walls=245
+  GREEDY beam8 d=-111 v=0.74 res=ok
+t=208 d=16.39 b=16 pose=(-14.84,-5.57) walls=247
+  GREEDY beam8 d=63 v=0.64 res=wall
+t=211 d=16.33 b=15 pose=(-14.81,-5.46) walls=248
+  GREEDY beam9 d=-101 v=0.53 res=ok
+STUCK LONG - breakout
+t=218 d=16.56 b=15 pose=(-15.08,-5.35) walls=253
+  GREEDY beam9 d=-46 v=0.55 res=ok
+t=221 d=16.40 b=15 pose=(-14.88,-5.47) walls=261
+t=221 d=16.40 b=15 pose=(-14.88,-5.47) walls=263
+  GREEDY beam15 d=-71 v=0.57 res=ok
+t=224 d=16.30 b=16 pose=(-14.70,-5.73) walls=265
+  GREEDY beam7 d=81 v=0.52 res=wall
+t=226 d=16.24 b=16 pose=(-14.69,-5.59) walls=270
+  GREEDY beam8 d=-107 v=0.70 res=ok
+t=230 d=16.36 b=17 pose=(-14.72,-5.88) walls=274
+  GREEDY beam8 d=63 v=0.62 res=wall
+t=233 d=16.29 b=16 pose=(-14.69,-5.73) walls=278
+  GREEDY beam3 d=125 v=1.18 res=wall
+t=235 d=16.30 b=16 pose=(-14.76,-5.52) walls=283
+  GREEDY beam7 d=-84 v=0.67 res=ok
+STUCK LONG - breakout
+t=241 d=16.38 b=17 pose=(-14.70,-5.99) walls=286
+t=241 d=16.41 b=17 pose=(-14.72,-6.05) walls=288
+t=241 d=16.41 b=17 pose=(-14.72,-6.05) walls=288
+t=241 d=16.41 b=17 pose=(-14.72,-6.05) walls=288
+  GREEDY beam8 d=58 v=0.58 res=ok
+t=244 d=16.22 b=17 pose=(-14.61,-5.76) walls=290
+  GREEDY beam3 d=115 v=1.25 res=wall
+t=247 d=16.28 b=16 pose=(-14.71,-5.64) walls=296
+  GREEDY beam8 d=-75 v=0.61 res=wall
+t=250 d=16.29 b=16 pose=(-14.68,-5.77) walls=297
+  GREEDY beam7 d=69 v=0.59 res=ok
+t=253 d=16.15 b=16 pose=(-14.60,-5.56) walls=299
+t=254 d=16.15 b=16 pose=(-14.60,-5.56) walls=299
+  GREEDY beam1 d=83 v=0.60 res=wall
+t=256 d=16.12 b=15 pose=(-14.61,-5.41) walls=300
+  GREEDY beam8 d=-104 v=0.71 res=ok
+t=260 d=16.23 b=16 pose=(-14.64,-5.69) walls=301
+  GREEDY beam8 d=67 v=0.72 res=ok
+STUCK LONG - breakout
+t=264 d=16.15 b=15 pose=(-14.65,-5.37) walls=305
+t=265 d=16.21 b=15 pose=(-14.74,-5.26) walls=306
+t=265 d=16.21 b=15 pose=(-14.74,-5.26) walls=306
+t=265 d=16.21 b=15 pose=(-14.74,-5.26) walls=306
+t=265 d=16.21 b=15 pose=(-14.74,-5.26) walls=307
+  GREEDY beam7 d=-96 v=0.79 res=ok
+t=268 d=16.25 b=15 pose=(-14.72,-5.48) walls=309
+  GREEDY beam8 d=77 v=0.51 res=wall
+t=271 d=16.24 b=15 pose=(-14.73,-5.42) walls=310
+  GREEDY beam9 d=-83 v=0.62 res=ok
+t=274 d=16.18 b=16 pose=(-14.62,-5.59) walls=310
+  GREEDY beam7 d=71 v=0.52 res=ok
+t=277 d=16.09 b=15 pose=(-14.58,-5.40) walls=310
+  GREEDY beam9 d=-95 v=0.51 res=ok
+t=280 d=16.13 b=17 pose=(-14.52,-5.74) walls=313
+  GREEDY beam0 d=-101 v=0.63 res=ok
+t=282 d=16.24 b=18 pose=(-14.53,-6.09) walls=320
+  GREEDY beam0 d=-113 v=0.58 res=ok
+t=284 d=16.38 b=19 pose=(-14.58,-6.40) walls=327
+  GREEDY beam9 d=80 v=0.61 res=ok
+STUCK LONG - breakout
+t=290 d=16.44 b=18 pose=(-14.66,-6.35) walls=332
+  GREEDY beam8 d=49 v=0.76 res=wall
+t=293 d=16.34 b=18 pose=(-14.58,-6.26) walls=336
+  GREEDY beam3 d=107 v=0.55 res=wall
+t=295 d=16.30 b=18 pose=(-14.58,-6.13) walls=345
+  GREEDY beam8 d=-84 v=0.57 res=wall
+t=298 d=16.33 b=19 pose=(-14.52,-6.41) walls=348
+  GREEDY beam8 d=82 v=0.78 res=ok
+t=302 d=16.28 b=18 pose=(-14.58,-6.06) walls=351
+  GREEDY beam8 d=-102 v=0.64 res=ok
+t=306 d=16.38 b=19 pose=(-14.59,-6.37) walls=352
+  GREEDY beam8 d=64 v=0.74 res=wall
+t=309 d=16.31 b=18 pose=(-14.56,-6.24) walls=356
+  GREEDY beam3 d=118 v=1.22 res=ok
+STUCK LONG - breakout
+t=314 d=16.62 b=15 pose=(-15.14,-5.35) walls=357
+  GREEDY beam9 d=-51 v=0.53 res=wall
+t=317 d=16.50 b=15 pose=(-14.99,-5.47) walls=361
+  GREEDY beam15 d=-75 v=0.52 res=wall
+t=318 d=16.45 b=15 pose=(-14.91,-5.53) walls=362
+  GREEDY beam15 d=-100 v=0.64 res=ok
+t=320 d=16.47 b=16 pose=(-14.86,-5.81) walls=363
+  GREEDY beam8 d=75 v=0.59 res=ok
+t=324 d=16.42 b=16 pose=(-14.87,-5.61) walls=365
+t=324 d=16.42 b=16 pose=(-14.87,-5.61) walls=365
+t=324 d=16.42 b=16 pose=(-14.87,-5.61) walls=366
+  GREEDY beam9 d=-87 v=0.50 res=ok
+t=327 d=16.41 b=17 pose=(-14.79,-5.84) walls=367
+  GREEDY beam15 d=-114 v=0.61 res=ok
+t=329 d=16.50 b=17 pose=(-14.82,-6.05) walls=369
+  GREEDY beam9 d=84 v=0.62 res=ok
+t=333 d=16.48 b=16 pose=(-14.89,-5.73) walls=371
+  GREEDY beam8 d=-98 v=0.76 res=ok
+STUCK LONG - breakout
+t=338 d=16.62 b=18 pose=(-14.90,-6.20) walls=373
+  GREEDY beam8 d=54 v=0.60 res=ok
+t=340 d=16.47 b=17 pose=(-14.80,-5.98) walls=374
+  GREEDY beam1 d=67 v=0.53 res=wall
+t=343 d=16.39 b=16 pose=(-14.77,-5.80) walls=375
+  GREEDY beam8 d=-118 v=0.64 res=wall
+t=346 d=16.48 b=17 pose=(-14.82,-5.97) walls=375

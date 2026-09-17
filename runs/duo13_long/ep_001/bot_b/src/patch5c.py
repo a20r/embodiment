@@ -1,0 +1,6 @@
+src=open('/bot/src/explore5.py').read()
+src=src.replace("orbit_acc=0.0; orbit_mode=0; orbit_t=0","orbit_acc=0.0; orbit_mode=0; orbit_t=0; last_turn_wall=time.time()")
+src=src.replace('if orbit_acc>350 and orbit_mode==0:','if (orbit_acc>250 or time.time()-last_turn_wall>70) and orbit_mode==0:')
+src=src.replace('        log("TURN best=%d err=%d pref=%d ticks=%d"%(best,err,turnpref,tk))\n        orbit_acc=0','        log("TURN best=%d err=%d pref=%d ticks=%d"%(best,err,turnpref,tk))\n        orbit_acc=0; last_turn_wall=time.time()')
+open('/bot/src/explore5.py','w').write(src)
+import py_compile; py_compile.compile('/bot/src/explore5.py', doraise=True); print("ok")

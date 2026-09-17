@@ -1,0 +1,9 @@
+21:10:01 status {'tick': '574679', 'goal': '0', 'here': '1'} sig 0.695
+21:15:01 status {'tick': '604691', 'goal': '0', 'here': '1'} sig 0.69
+21:20:01 status {'tick': '634713', 'goal': '0', 'here': '1'} sig 0.69
+21:25:02 status {'tick': '664747', 'goal': '0', 'here': '1'} sig 0.686
+21:30:02 status {'tick': '694779', 'goal': '0', 'here': '1'} sig 0.677
+21:35:01 status {'tick': '724670', 'goal': '0', 'here': '1'} sig 0.696
+21:40:01 status {'tick': '754699', 'goal': '0', 'here': '1'} sig 0.696
+21:45:01 status {'tick': '784715', 'goal': '0', 'here': '1'} sig 0.699
+21:50:02 status {'tick': '814738', 'goal': '0', 'here': '1'} sig 0.701

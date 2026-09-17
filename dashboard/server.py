@@ -72,7 +72,9 @@ class Api:
             summary_path = os.path.join(sdir, name, "summary.json")
             if os.path.exists(summary_path):
                 with open(summary_path) as f:
-                    out.append(dict(json.load(f), running=False))
+                    s = json.load(f)
+                s.setdefault("episode", n)
+                out.append(dict(s, running=False))
             else:
                 out.append(dict(episode=n, running=True))
         return out
@@ -120,9 +122,21 @@ class Api:
                                           "door_unlocked"):
                             events.append({"event": r["event"],
                                            "t": r.get("t")})
+                        elif r["event"] == "lap":
+                            events.append({k: r.get(k) for k in
+                                           ("event", "t", "lap", "time_s",
+                                            "timed", "best_s")})
+                        elif r["event"] == "lap_rejected":
+                            events.append({"event": "lap_rejected",
+                                           "t": r.get("t"),
+                                           "sectors": r.get("sectors")})
                     elif "pose" in r:
-                        poses.append([r["t"]] + r["pose"] +
-                                     [r.get("col", 0)])
+                        p = [r["t"]] + r["pose"] + [r.get("col", 0)]
+                        # Car poses carry [phi_deg, slip] at indices 5, 6.
+                        if "phi" in r:
+                            p += [round(r["phi"], 1),
+                                  int(r.get("slip", 0))]
+                        poses.append(p)
         step = max(1, len(poses) // max_points)
         return {"poses": poses[::step], "events": events,
                 "total_ticks": poses[-1][0] if poses else 0}
@@ -237,7 +251,7 @@ class Api:
             return json.loads(r.read())
 
 
-def make_handler(api):
+def make_handler(api, read_only=False):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             pass
@@ -298,7 +312,9 @@ def make_handler(api):
                     self._json(api.metrics(q["series"]))
                 elif p == "/api/live/state":
                     since = q.get("since", "0")
-                    self._json(api.live(f"/state?since={since}"))
+                    cloud = "1" if q.get("cloud") == "1" else "0"
+                    self._json(api.live(f"/state?since={since}"
+                                        f"&cloud={cloud}"))
                 elif p == "/api/live/maze":
                     self._json(api.live("/maze"))
                 else:
@@ -312,6 +328,10 @@ def make_handler(api):
 
         def do_POST(self):
             u = urlparse(self.path)
+            if read_only:
+                # Public/tunneled exposure: viewing only, no sim control.
+                self._json({"error": "read-only dashboard"}, 403)
+                return
             if u.path in ("/api/live/pause", "/api/live/resume",
                           "/api/live/rtf", "/api/live/reset"):
                 n = int(self.headers.get("Content-Length") or 0)
@@ -332,6 +352,10 @@ def main(argv=None):
     ap.add_argument("--config", default=os.path.join(REPO, "config.yaml"))
     ap.add_argument("--port", type=int, default=None)
     ap.add_argument("--host", default="127.0.0.1")
+    ap.add_argument("--sim-port", type=int, default=None,
+                    help="daemon API port (default: config sim.api_port)")
+    ap.add_argument("--read-only", action="store_true",
+                    help="reject all POST controls (safe to tunnel)")
     args = ap.parse_args(argv)
 
     sys.path.insert(0, REPO)
@@ -340,8 +364,9 @@ def main(argv=None):
     port = args.port or cfg["dashboard"]["port"]
     runs_dir = os.path.join(REPO, cfg.get("runs_dir", "runs"))
 
-    api = Api(runs_dir, cfg["sim"]["api_port"])
-    server = ThreadingHTTPServer((args.host, port), make_handler(api))
+    api = Api(runs_dir, args.sim_port or cfg["sim"]["api_port"])
+    server = ThreadingHTTPServer((args.host, port),
+                             make_handler(api, args.read_only))
     server.daemon_threads = True
     print(f"dashboard: http://{args.host}:{port}/  "
           f"(runs: {runs_dir}, daemon proxy: {cfg['sim']['api_port']})")

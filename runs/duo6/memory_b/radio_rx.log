@@ -1,0 +1,533 @@
+1787978283.086908 PING bot x=2.19 y=1.00 h=93.7
+1787979067.292463 PING x=-0.83 y=-0.10 d5=0.98
+1787979207.969036 B: ping
+1787979369.065353 HELLO from bot B t=1787979102 x=-0.23 y=-0.21 h=130
+1787979369.065380 HELLO from bot B t=1787979104 x=-0.23 y=-0.21 h=215
+1787979369.164284 HELLO from bot B t=1787979108 x=-0.23 y=-0.44 h=296
+1787979369.164306 HELLO from bot B t=1787979110 x=-0.17 y=-0.53 h=330
+1787979369.252317 HELLO from bot B t=1787979112 x=-0.13 y=-0.52 h=37
+1787979369.252338 HELLO from bot B t=1787979114 x=-0.09 y=-0.42 h=80
+1787979369.252341 HELLO from bot B t=1787979116 x=-0.10 y=-0.20 h=94
+1787979369.338826 HELLO from bot B t=1787979118 x=-0.09 y=0.00 h=66
+1787979369.338849 HELLO from bot B t=1787979121 x=0.07 y=0.11 h=5
+1787979369.338852 HELLO from bot B t=1787979123 x=0.23 y=0.02 h=305
+1787979369.338855 HELLO from bot B t=1787979125 x=0.22 y=-0.18 h=241
+1787979369.425306 HELLO from bot B t=1787979127 x=0.11 y=-0.34 h=233
+1787979369.425332 HELLO from bot B t=1787979129 x=0.09 y=-0.36 h=308
+1787979369.425335 HELLO from bot B t=1787979131 x=0.19 y=-0.39 h=356
+1787979369.511687 HELLO from bot B t=1787979133 x=0.39 y=-0.35 h=16
+1787979369.511708 HELLO from bot B t=1787979135 x=0.62 y=-0.30 h=7
+1787979369.511711 HELLO from bot B t=1787979137 x=0.84 y=-0.34 h=340
+1787979369.597517 HELLO from bot B t=1787979139 x=1.02 y=-0.42 h=341
+1787979369.597539 HELLO from bot B t=1787979142 x=1.19 y=-0.41 h=8
+1787979369.597542 HELLO from bot B t=1787979160 x=1.55 y=0.42 h=219
+1787979369.683761 HELLO from bot B t=1787979162 x=1.52 y=0.32 h=264
+1787979369.683780 HELLO from bot B t=1787979165 x=1.53 y=0.09 h=277
+1787979369.683783 HELLO from bot B t=1787979167 x=1.46 y=-0.04 h=226
+1787979369.820643 HELLO from bot B t=1787979169 x=1.44 y=-0.05 h=293
+1787979369.820666 HELLO from bot B t=1787979188 x=1.64 y=0.29 h=75
+1787979369.820668 HELLO from bot B t=1787979190 x=1.68 y=0.40 h=110
+1787979369.820671 HELLO from bot B t=1787979192 x=1.62 y=0.45 h=164
+1787979369.820673 HELLO from bot B t=1787979194 x=1.57 y=0.45 h=231
+1787979369.820676 HELLO from bot B t=1787979196 x=1.49 y=0.34 h=263
+1787979369.907532 HELLO from bot B t=1787979198 x=1.54 y=0.15 h=285
+1787979369.907553 HELLO from bot B t=1787979221 x=1.60 y=0.25 h=80
+1787979369.907556 HELLO from bot B t=1787979223 x=1.65 y=0.42 h=91
+1787979369.993706 HELLO from bot B t=1787979225 x=1.62 y=0.46 h=154
+1787979369.993722 HELLO from bot B t=1787979227 x=1.54 y=0.47 h=204
+1787979369.993726 HELLO from bot B t=1787979229 x=1.48 y=0.37 h=254
+1787979369.993728 HELLO from bot B t=1787979279 x=-0.28 y=0.12 h=94
+1787979370.104873 HELLO from bot B t=1787979282 x=-0.23 y=0.34 h=73
+1787979370.104888 HELLO from bot B t=1787979284 x=-0.13 y=0.39 h=23
+1787979370.104891 HELLO from bot B t=1787979286 x=0.09 y=0.43 h=7
+1787979370.104894 HELLO from bot B t=1787979288 x=0.18 y=0.46 h=334
+1787979370.191442 HELLO from bot B t=1787979290 x=0.25 y=0.34 h=296
+1787979370.191460 HELLO from bot B t=1787979292 x=0.26 y=0.29 h=228
+1787979370.191463 HELLO from bot B t=1787979294 x=0.16 y=0.24 h=175
+1787979370.277542 HELLO from bot B t=1787979296 x=-0.05 y=0.29 h=164
+1787979370.277568 HELLO from bot B t=1787979298 x=-0.21 y=0.25 h=217
+1787979370.277572 HELLO from bot B t=1787979301 x=-0.25 y=0.22 h=168
+1787979370.277606 HELLO from bot B t=1787979303 x=-0.27 y=0.27 h=98
+1787979370.363100 HELLO from bot B t=1787979305 x=-0.27 y=0.37 h=38
+1787979370.363116 HELLO from bot B t=1787979307 x=-0.10 y=0.40 h=4
+1787979370.363119 HELLO from bot B t=1787979309 x=0.11 y=0.39 h=6
+1787979370.448891 HELLO from bot B t=1787979311 x=0.20 y=0.42 h=342
+1787979370.448909 HELLO from bot B t=1787979313 x=0.26 y=0.33 h=288
+1787979370.448912 HELLO from bot B t=1787979320 x=-0.08 y=0.31 h=167
+1787979370.534750 HELLO from bot B t=1787979322 x=-0.23 y=0.25 h=223
+1787979370.534768 HELLO from bot B t=1787979324 x=-0.25 y=0.24 h=155
+1787979370.534772 HELLO from bot B t=1787979326 x=-0.28 y=0.28 h=91
+1787979370.534774 HELLO from bot B t=1787979328 x=-0.27 y=0.37 h=30
+1787979370.620220 HELLO from bot B t=1787979330 x=-0.07 y=0.41 h=2
+1787979370.620270 HELLO from bot B t=1787979332 x=0.14 y=0.40 h=16
+1787979370.620286 HELLO from bot B t=1787979334 x=0.18 y=0.42 h=328
+1787979370.705038 HELLO from bot B t=1787979336 x=0.26 y=0.32 h=289
+1787979370.705061 HELLO from bot B t=1787979338 x=0.27 y=0.29 h=214
+1787979370.705064 HELLO from bot B t=1787979340 x=0.11 y=0.24 h=174
+1787979370.790976 HELLO from bot B t=1787979342 x=-0.09 y=0.28 h=179
+1787979380.610136 HELLO from bot B t=1787979380 x=-0.26 y=0.35 h=35
+1787979382.637046 HELLO from bot B t=1787979382 x=-0.08 y=0.42 h=10
+1787979384.751643 HELLO from bot B t=1787979384 x=0.15 y=0.43 h=14
+1787979386.783841 HELLO from bot B t=1787979386 x=0.22 y=0.46 h=335
+1787979388.895181 HELLO from bot B t=1787979388 x=0.26 y=0.36 h=287
+1787979390.940453 HELLO from bot B t=1787979390 x=0.27 y=0.30 h=218
+1787979393.055922 HELLO from bot B t=1787979392 x=0.15 y=0.26 h=174
+1787979395.095188 HELLO from bot B t=1787979395 x=-0.06 y=0.30 h=178
+1787979397.170669 HELLO from bot B t=1787979397 x=-0.21 y=0.25 h=207
+1787979617.599402 HELLO from bot B t=1787979474 x=-0.00 y=-0.00 h=48
+1787979617.599435 HELLO from bot B t=1787979476 x=0.00 y=-0.00 h=149
+1787979617.599439 HELLO from bot B t=1787979478 x=-0.06 y=-0.02 h=234
+1787979617.686468 HELLO from bot B t=1787979480 x=-0.12 y=-0.22 h=273
+1787979617.686486 HELLO from bot B t=1787979497 x=-0.03 y=-0.35 h=91
+1787979617.686490 HELLO from bot B t=1787979499 x=0.01 y=-0.06 h=84
+1787979617.771688 HELLO from bot B t=1787979501 x=-0.04 y=-0.03 h=162
+1787979617.771710 HELLO from bot B t=1787979503 x=-0.12 y=-0.08 h=232
+1787979617.771713 HELLO from bot B t=1787979505 x=-0.14 y=-0.29 h=274
+1787979617.858413 HELLO from bot B t=1787979522 x=-0.03 y=-0.22 h=81
+1787979617.858430 HELLO from bot B t=1787979524 x=-0.02 y=-0.06 h=125
+1787979617.858433 HELLO from bot B t=1787979526 x=-0.11 y=-0.06 h=202
+1787979617.858435 HELLO from bot B t=1787979528 x=-0.16 y=-0.14 h=272
+1787979617.944029 HELLO from bot B t=1787979531 x=-0.13 y=-0.44 h=263
+1787979617.944043 HELLO from bot B t=1787979547 x=-0.03 y=-0.07 h=79
+1787979617.944047 HELLO from bot B t=1787979550 x=-0.05 y=-0.02 h=166
+1787979618.029740 HELLO from bot B t=1787979552 x=-0.13 y=-0.04 h=241
+1787979618.029760 HELLO from bot B t=1787979554 x=-0.17 y=-0.25 h=272
+1787979618.029763 HELLO from bot B t=1787979570 x=-0.06 y=-0.21 h=89
+1787979618.115442 HELLO from bot B t=1787979573 x=-0.03 y=0.02 h=104
+1787979618.115460 HELLO from bot B t=1787979575 x=-0.09 y=0.07 h=184
+1787979618.115463 HELLO from bot B t=1787979577 x=-0.18 y=-0.01 h=249
+1787979618.115466 HELLO from bot B t=1787979579 x=-0.17 y=-0.26 h=276
+1787979618.201495 HELLO from bot B t=1787979595 x=-0.07 y=-0.00 h=80
+1787979618.201514 HELLO from bot B t=1787979598 x=-0.07 y=0.14 h=118
+1787979618.201517 HELLO from bot B t=1787979600 x=-0.14 y=0.15 h=196
+1787979618.290333 HELLO from bot B t=1787979602 x=-0.19 y=0.04 h=262
+1787979618.290352 HELLO from bot B t=1787979604 x=-0.16 y=-0.23 h=262
+1787979621.013522 HELLO from bot B t=1787979620 x=-0.07 y=0.02 h=80
+1787979623.109435 HELLO from bot B t=1787979623 x=-0.08 y=0.08 h=158
+1787979625.255386 HELLO from bot B t=1787979625 x=-0.16 y=0.07 h=236
+1787979627.288363 HELLO from bot B t=1787979627 x=-0.21 y=-0.02 h=180
+1787979646.187817 HELLO from bot B t=1787979646 x=-0.84 y=-0.62 h=161
+1787979648.288581 HELLO from bot B t=1787979648 x=-1.16 y=-0.66 h=203
+1787979650.432702 HELLO from bot B t=1787979650 x=-1.40 y=-0.76 h=178
+1787979652.575877 HELLO from bot B t=1787979652 x=-1.59 y=-0.66 h=127
+1787979654.653423 HELLO from bot B t=1787979654 x=-1.59 y=-0.43 h=80
+1787979656.763330 HELLO from bot B t=1787979656 x=-1.68 y=-0.25 h=141
+1787979658.918803 HELLO from bot B t=1787979658 x=-1.90 y=-0.24 h=205
+1787979660.923188 HELLO from bot B t=1787979660 x=-1.93 y=-0.24 h=126
+1787979663.013146 HELLO from bot B t=1787979662 x=-1.95 y=0.02 h=85
+1787979665.211671 HELLO from bot B t=1787979665 x=-1.88 y=0.11 h=11
+1787979667.323190 HELLO from bot B t=1787979667 x=-1.80 y=0.11 h=282
+1787979669.420497 HELLO from bot B t=1787979669 x=-1.89 y=0.03 h=222
+1787979671.527459 HELLO from bot B t=1787979671 x=-1.92 y=0.00 h=129
+1787979673.682435 HELLO from bot B t=1787979673 x=-1.93 y=0.07 h=36
+1787979675.834375 HELLO from bot B t=1787979675 x=-1.65 y=0.13 h=358
+1787979677.958244 HELLO from bot B t=1787979677 x=-1.47 y=0.14 h=337
+1787979680.062940 HELLO from bot B t=1787979679 x=-1.39 y=-0.00 h=273
+1787979682.129785 HELLO from bot B t=1787979682 x=-1.45 y=-0.06 h=191
+1787979684.298294 HELLO from bot B t=1787979684 x=-1.74 y=0.01 h=157
+1787979686.394469 HELLO from bot B t=1787979686 x=-1.94 y=0.12 h=133
+1787979688.581679 HELLO from bot B t=1787979688 x=-1.94 y=0.12 h=27
+1787979690.668431 HELLO from bot B t=1787979690 x=-1.68 y=0.08 h=336
+1787979692.784643 HELLO from bot B t=1787979692 x=-1.39 y=0.02 h=7
+1787979694.884775 HELLO from bot B t=1787979694 x=-1.28 y=0.00 h=318
+1787979696.959929 HELLO from bot B t=1787979696 x=-1.29 y=-0.04 h=221
+1787979699.053106 HELLO from bot B t=1787979699 x=-1.51 y=-0.04 h=168
+1787979701.217686 HELLO from bot B t=1787979701 x=-1.73 y=-0.04 h=211
+1787979703.381327 HELLO from bot B t=1787979703 x=-1.82 y=-0.18 h=224
+1787979705.500947 HELLO from bot B t=1787979705 x=-1.82 y=-0.18 h=119
+1787979707.541546 HELLO from bot B t=1787979707 x=-1.80 y=0.07 h=73
+1787979709.637614 HELLO from bot B t=1787979709 x=-1.67 y=0.09 h=358
+1787979711.725231 HELLO from bot B t=1787979711 x=-1.39 y=0.09 h=16
+1787979713.892322 HELLO from bot B t=1787979713 x=-1.31 y=0.10 h=322
+1787979716.028697 HELLO from bot B t=1787979715 x=-1.27 y=-0.03 h=242
+1787979718.184793 HELLO from bot B t=1787979718 x=-1.39 y=-0.06 h=169
+1787979720.346692 HELLO from bot B t=1787979720 x=-1.66 y=0.01 h=181
+1787979722.375252 HELLO from bot B t=1787979722 x=-1.80 y=-0.03 h=160
+1787979724.527004 HELLO from bot B t=1787979724 x=-1.83 y=0.10 h=86
+1787979726.582728 HELLO from bot B t=1787979726 x=-1.77 y=0.10 h=359
+1787979728.665153 HELLO from bot B t=1787979728 x=-1.46 y=0.02 h=341
+1787979730.782843 HELLO from bot B t=1787979730 x=-1.27 y=0.04 h=350
+1787979732.796721 HELLO from bot B t=1787979732 x=-1.23 y=-0.01 h=263
+1787979735.027813 HELLO from bot B t=1787979734 x=-1.31 y=-0.07 h=183
+1787979737.120071 HELLO from bot B t=1787979737 x=-1.41 y=-0.06 h=99
+1787979739.264901 HELLO from bot B t=1787979739 x=-1.28 y=0.05 h=34
+1787979741.332606 HELLO from bot B t=1787979741 x=-1.25 y=0.04 h=298
+1787979743.487783 HELLO from bot B t=1787979743 x=-1.26 y=-0.04 h=212
+1787979745.552775 HELLO from bot B t=1787979745 x=-1.44 y=-0.02 h=157
+1787979747.621828 HELLO from bot B t=1787979747 x=-1.66 y=0.00 h=199
+1787979749.762423 HELLO from bot B t=1787979749 x=-1.73 y=-0.05 h=170
+1787979751.883177 HELLO from bot B t=1787979751 x=-1.77 y=0.07 h=92
+1787979754.111702 HELLO from bot B t=1787979753 x=-1.66 y=0.10 h=15
+1787979758.380404 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979760.985390 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979763.173765 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979764.769201 PING x=-0.11 y=0.18 d5=0.932
+1787979767.443152 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979769.584848 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979771.014264 PING x=-0.15 y=0.51 d5=0.935
+1787979773.880118 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979776.074806 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979777.351371 PING x=-0.23 y=0.34 d5=0.994
+1787979780.420969 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979782.579458 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979783.640166 PING x=-0.06 y=-0.24 d5=0.933
+1787979784.695483 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979786.883950 PING x=-0.13 y=-0.29 d5=0.909
+1787979788.987631 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979791.135807 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979793.103195 PING x=-0.56 y=-0.30 d5=0.951
+1787979795.438214 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979797.624093 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979799.337883 PING x=-0.46 y=-0.14 d5=0.983
+1787979801.935661 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979804.053701 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979805.679111 PING x=-0.06 y=-0.17 d5=0.92
+1787979808.709807 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979811.796873 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979813.992932 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979815.249670 PING x=-0.14 y=-0.28 d5=0.969
+1787979818.314331 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979820.481352 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979821.505018 PING x=-0.13 y=0.06 d5=0.887
+1787979823.767464 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979826.864969 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979829.874514 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979830.914359 PING x=-0.24 y=0.07 d5=0.746
+1787979832.888664 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979834.031154 PING x=-0.25 y=-0.24 d5=0.9
+1787979835.020562 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979837.203987 PING x=-0.45 y=-0.34 d5=0.94
+1787979840.299328 PING x=-0.58 y=-0.63 d5=0.973
+1787979842.768638 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979844.856951 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979846.680365 PING x=-0.49 y=-0.99 d5=0.742
+1787979848.891865 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979849.877068 PING x=-0.58 y=-0.98 d5=0.717
+1787979850.951911 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979853.004259 PING x=-0.60 y=-0.68 d5=0.873
+1787979854.926821 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979856.140163 PING x=-0.39 y=-0.49 d5=0.955
+1787979859.167284 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979862.503651 PING x=-0.27 y=-0.92 d5=0.954
+1787979865.648949 PING x=-0.17 y=-1.05 d5=0.892
+1787979867.066975 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979868.817679 PING x=0.17 y=-1.04 d5=0.761
+1787979871.327301 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979903.521480 PING x=1.15 y=-0.61 d5=0.747
+1787979905.969217 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979909.767419 PING x=0.94 y=-0.79 d5=0.862
+1787979912.023163 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979914.264203 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979916.004904 PING x=0.63 y=-0.93 d5=0.913
+1787979918.134576 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979920.296685 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979922.323708 PING x=0.15 y=-0.67 d5=0.986
+1787979924.225301 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979925.389242 PING x=-0.05 y=-0.60 d5=0.969
+1787979928.475889 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979931.663760 PING x=-0.52 y=-0.82 d5=0.877
+1787979934.614681 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787979936.726363 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980010.027694 PING x=-1.30 y=0.30 d5=0.679
+1787980012.687173 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980014.808990 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980016.309911 PING x=-0.87 y=0.31 d5=0.673
+1787980055.827023 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980059.683029 PING x=-2.70 y=0.48 d5=0.667
+1787980067.858563 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980069.010984 PING x=-2.10 y=0.72 d5=0.734
+1787980069.967697 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980072.081141 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980074.295517 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980075.275092 PING x=-1.62 y=0.63 d5=0.795
+1787980078.186783 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980080.384816 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980081.507852 PING x=-0.96 y=0.56 d5=0.898
+1787980084.691491 PING x=-0.64 y=0.53 d5=0.834
+1787980086.450299 B: I hear you bot A. This is bot B. Do you know the goal location? Reply. I am chasing you via range sensor.
+1787980087.754473 PING x=-0.54 y=0.40 d5=0.813
+1787980090.925605 PING x=-0.47 y=0.49 d5=0.727
+1787980183.786699 HELLO from bot B t=1787980183 x=-1.62 y=-1.20 h=39
+1787980197.465884 HELLO from bot B t=1787980185 x=-1.37 y=-1.18 h=340
+1787980197.465914 HELLO from bot B t=1787980187 x=-1.32 y=-1.15 h=30
+1787980197.576003 HELLO from bot B t=1787980189 x=-1.22 y=-1.08 h=35
+1787980197.576032 HELLO from bot B t=1787980192 x=-1.07 y=-1.03 h=10
+1787980197.576039 HELLO from bot B t=1787980194 x=-0.91 y=-1.10 h=314
+1787980197.576045 HELLO from bot B t=1787980196 x=-0.89 y=-1.29 h=238
+1787980200.414858 HELLO from bot B t=1787980200 x=-1.23 y=-1.24 h=104
+1787980202.512900 HELLO from bot B t=1787980202 x=-1.27 y=-1.08 h=109
+1787980204.609546 HELLO from bot B t=1787980204 x=-1.36 y=-1.01 h=168
+1787980206.759656 HELLO from bot B t=1787980206 x=-1.57 y=-0.98 h=220
+1787980208.830259 HELLO from bot B t=1787980208 x=-1.59 y=-1.17 h=269
+1787980217.211411 HELLO from bot B t=1787980217 x=-1.19 y=-1.33 h=72
+1787980219.262061 HELLO from bot B t=1787980219 x=-1.14 y=-1.01 h=85
+1787980221.400030 HELLO from bot B t=1787980221 x=-1.09 y=-0.71 h=59
+1787980223.510971 HELLO from bot B t=1787980223 x=-0.84 y=-0.61 h=343
+1787980225.612251 HELLO from bot B t=1787980225 x=-0.73 y=-0.78 h=268
+1787980227.673203 HELLO from bot B t=1787980227 x=-0.73 y=-0.86 h=311
+1787980229.872132 HELLO from bot B t=1787980229 x=-0.54 y=-0.90 h=354
+1787980231.934726 HELLO from bot B t=1787980231 x=-0.31 y=-0.87 h=35
+1787980234.061314 HELLO from bot B t=1787980233 x=-0.27 y=-0.76 h=99
+1787980236.099765 HELLO from bot B t=1787980236 x=-0.31 y=-0.71 h=182
+1787980238.203117 HELLO from bot B t=1787980238 x=-0.57 y=-0.80 h=192
+1787980240.286914 HELLO from bot B t=1787980240 x=-0.77 y=-0.68 h=122
+1787980242.450713 HELLO from bot B t=1787980242 x=-0.75 y=-0.46 h=45
+1787980244.457551 HELLO from bot B t=1787980244 x=-0.54 y=-0.44 h=330
+1787980246.598265 HELLO from bot B t=1787980246 x=-0.47 y=-0.54 h=328
+1787980248.673904 HELLO from bot B t=1787980248 x=-0.25 y=-0.54 h=7
+1787980250.753437 HELLO from bot B t=1787980250 x=-0.22 y=-0.48 h=88
+1787980278.152123 B: d5=0.874 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980282.404930 B: d5=0.952 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980286.527913 B: d5=0.944 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980290.670138 B: d5=0.688 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980315.701726 B: d5=0.678 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980319.923901 B: d5=0.767 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980324.027394 B: d5=0.772 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980328.136859 B: d5=0.879 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980332.264725 B: d5=0.908 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980336.375295 B: d5=0.947 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980340.521860 B: d5=0.951 tailing you. ACK plan. If my goalflag=1 first, I say GOALFOUND and stop.
+1787980349.058304 B: HOLDING STILL, you home to me. my d5=0.821
+1787980352.120540 B: HOLDING STILL, you home to me. my d5=0.793
+1787980355.145424 B: HOLDING STILL, you home to me. my d5=0.756
+1787980358.131757 B: HOLDING STILL, you home to me. my d5=0.789
+1787980361.142051 B: HOLDING STILL, you home to me. my d5=0.863
+1787980364.154076 B: HOLDING STILL, you home to me. my d5=0.893
+1787980367.177970 B: HOLDING STILL, you home to me. my d5=0.912
+1787980370.160928 B: HOLDING STILL, you home to me. my d5=0.948
+1787980373.228827 B: HOLDING STILL, you home to me. my d5=0.952
+1787980376.294511 B: HOLDING STILL, you home to me. my d5=0.958
+1787980379.199307 B: HOLDING STILL, you home to me. my d5=0.972
+1787980382.236573 B: HOLDING STILL, you home to me. my d5=0.962
+1787980385.282308 B: HOLDING STILL, you home to me. my d5=0.923
+1787980388.248887 B: HOLDING STILL, you home to me. my d5=0.933
+1787980391.287204 B: HOLDING STILL, you home to me. my d5=0.921
+1787980394.289966 B: HOLDING STILL, you home to me. my d5=0.940
+1787980397.384008 B: HOLDING STILL, you home to me. my d5=0.958
+1787980400.344094 B: HOLDING STILL, you home to me. my d5=0.951
+1787980403.323732 B: HOLDING STILL, you home to me. my d5=0.965
+1787980406.359302 B: HOLDING STILL, you home to me. my d5=0.994
+1787980409.351952 B: HOLDING STILL, you home to me. my d5=
+1787980412.440326 B: HOLDING STILL, you home to me. my d5=0.954
+1787980421.300216 B: tailing you, my d5=0.924
+1787980425.528042 B: tailing you, my d5=0.941
+1787980429.747373 B: tailing you, my d5=0.829
+1787980433.984658 B: tailing you, my d5=0.712
+1787980492.147828 B: tailing you, my d5=0.682
+1787980496.236935 B: tailing you, my d5=0.714
+1787980504.645448 B: tailing you, my d5=0.701
+1787980508.744582 B: tailing you, my d5=0.793
+1787980512.877460 B: tailing you, my d5=0.996
+1787980517.015336 B: tailing you, my d5=1.0
+1787980521.159873 B: tailing you, my d5=0.899
+1787980525.257840 B: tailing you, my d5=0.844
+1787980529.441083 B: tailing you, my d5=0.761
+1787980533.706318 B: tailing you, my d5=0.762
+1787980537.870499 B: tailing you, my d5=0.737
+1787980591.697254 B: tailing you, my d5=0.637
+1787980787.133381 B: tailing you, my d5=0.733
+1787980791.326488 B: tailing you, my d5=0.843
+1787980795.491630 B: tailing you, my d5=0.748
+1787980812.073423 B: tailing you, my d5=0.713
+1787980816.330562 B: tailing you, my d5=0.911
+1787980820.394864 B: tailing you, my d5=0.811
+1787980824.495567 B: tailing you, my d5=0.655
+1787980878.685552 B: tailing you, my d5=0.712
+1787980882.900601 B: tailing you, my d5=0.831
+1787980887.092152 B: tailing you, my d5=0.674
+1787980891.270474 B: tailing you, my d5=0.674
+1787980999.434080 B: tailing you, my d5=0.642
+1787981003.588438 B: tailing you, my d5=0.828
+1787981007.734466 B: tailing you, my d5=0.921
+1787981011.939536 B: tailing you, my d5=0.879
+1787981016.021108 B: tailing you, my d5=0.752
+1787981020.154963 B: tailing you, my d5=0.798
+1787981024.415091 B: tailing you, my d5=0.769
+1787981028.560402 B: tailing you, my d5=0.746
+1787981053.636934 B: tailing you, my d5=0.655
+1787981057.808566 B: tailing you, my d5=0.877
+1787981061.961207 B: tailing you, my d5=0.894
+1787981066.120508 B: tailing you, my d5=0.924
+1787981070.201576 B: tailing you, my d5=0.933
+1787981074.431729 B: tailing you, my d5=0.976
+1787981078.536638 B: tailing you, my d5=0.972
+1787981082.628081 B: tailing you, my d5=0.973
+1787981086.750224 B: tailing you, my d5=0.973
+1787981090.924493 B: tailing you, my d5=0.977
+1787981095.058429 B: tailing you, my d5=0.962
+1787981099.186141 B: tailing you, my d5=0.975
+1787981103.288707 B: tailing you, my d5=0.872
+1787981128.167357 B: tailing you, my d5=0.876
+1787981132.282867 B: tailing you, my d5=0.977
+1787981136.507866 B: tailing you, my d5=0.846
+1787981140.651475 B: tailing you, my d5=0.744
+1787981144.844577 B: tailing you, my d5=0.734
+1787981148.986922 B: tailing you, my d5=0.743
+1787981190.440284 B: tailing you, my d5=0.658
+1787981194.560305 B: tailing you, my d5=0.678
+1787981198.713685 B: tailing you, my d5=0.704
+1787981202.810311 B: tailing you, my d5=0.906
+1787981206.968505 B: tailing you, my d5=0.976
+1787981211.259221 B: tailing you, my d5=0.979
+1787981215.302428 B: tailing you, my d5=0.91
+1787981219.407769 B: tailing you, my d5=0.965
+1787981223.535061 B: tailing you, my d5=0.881
+1787981227.778130 B: tailing you, my d5=0.93
+1787981232.033033 B: tailing you, my d5=1.0
+1787981236.268533 B: tailing you, my d5=0.941
+1787981240.462146 B: tailing you, my d5=0.922
+1787981244.626966 B: tailing you, my d5=0.903
+1787981248.872693 B: tailing you, my d5=0.921
+1787981260.565409 B: tailing you, my d5=0.961
+1787981264.668870 B: tailing you, my d5=0.945
+1787981268.921108 B: tailing you, my d5=0.92
+1787981273.216342 B: tailing you, my d5=0.85
+1787981277.362998 B: tailing you, my d5=0.904
+1787981281.599951 B: tailing you, my d5=0.916
+1787981285.622403 B: tailing you, my d5=0.94
+1787981289.798214 B: tailing you, my d5=0.919
+1787981293.913683 B: tailing you, my d5=0.946
+1787981298.125451 B: tailing you, my d5=0.96
+1787981302.220909 B: tailing you, my d5=0.913
+1787981306.439831 B: tailing you, my d5=0.944
+1787981376.458478 B: tailing you, my d5=0.916
+1787981376.458515 B: tailing you, my d5=0.979
+1787981376.545726 B: tailing you, my d5=0.854
+1787981376.545751 B: tailing you, my d5=0.938
+1787981376.545756 B: tailing you, my d5=0.938
+1787981376.658461 B: tailing you, my d5=0.888
+1787981376.658484 B: tailing you, my d5=0.864
+1787981376.658487 B: tailing you, my d5=0.805
+1787981376.658490 B: tailing you, my d5=0.886
+1787981376.747513 B: tailing you, my d5=0.885
+1787981376.747535 B: tailing you, my d5=0.694
+1787981393.764832 B: tailing you, my d5=0.699
+1787981397.908612 B: tailing you, my d5=0.702
+1787981427.064920 B: tailing you, my d5=0.715
+1787981431.161526 B: tailing you, my d5=0.813
+1787981435.364840 B: tailing you, my d5=0.899
+1787981439.306377 B: tailing you, my d5=0.721
+1787981476.705215 B: tailing you, my d5=0.648
+1787981480.860848 B: tailing you, my d5=0.793
+1787981484.994658 B: tailing you, my d5=0.908
+1787981489.134040 B: tailing you, my d5=0.845
+1787981493.355591 B: tailing you, my d5=0.653
+1787981513.975773 B: tailing you, my d5=0.665
+1787981559.517168 B: tailing you, my d5=0.712
+1787981563.742097 B: tailing you, my d5=0.929
+1787981567.890696 B: tailing you, my d5=0.836
+1787981571.992583 B: tailing you, my d5=0.709
+1787981592.803187 B: tailing you, my d5=0.646
+1787981596.966549 B: tailing you, my d5=0.821
+1787981601.166423 B: tailing you, my d5=0.968
+1787981605.338187 B: tailing you, my d5=0.832
+1787981609.482191 B: tailing you, my d5=0.784
+1787981613.746674 B: tailing you, my d5=0.761
+1787981617.896763 B: tailing you, my d5=0.793
+1787981684.479504 B: tailing you, my d5=0.78
+1787981688.602633 B: tailing you, my d5=0.961
+1787981692.773283 B: tailing you, my d5=0.973
+1787981696.946489 B: tailing you, my d5=0.99
+1787981701.161778 B: tailing you, my d5=0.955
+1787981705.247609 B: tailing you, my d5=0.918
+1787981709.474327 B: tailing you, my d5=0.979
+1787981713.651695 B: tailing you, my d5=0.985
+1787981717.815038 B: tailing you, my d5=0.967
+1787981722.009276 B: tailing you, my d5=0.916
+1787981726.114562 B: tailing you, my d5=0.893
+1787981730.339778 B: tailing you, my d5=0.864
+1787981734.443462 B: tailing you, my d5=0.821
+1787981738.643313 B: tailing you, my d5=0.711
+1787981822.343734 B: tailing you, my d5=0.695
+1787981826.613641 B: tailing you, my d5=0.672
+1787981847.316676 B: tailing you, my d5=0.653
+1787981851.482569 B: tailing you, my d5=0.783
+1787981855.698597 B: tailing you, my d5=0.802
+1787981859.912179 B: tailing you, my d5=0.931
+1787981864.132110 B: tailing you, my d5=0.911
+1787981868.333675 B: tailing you, my d5=0.745
+1787981872.545800 B: tailing you, my d5=0.777
+1787981876.780707 B: tailing you, my d5=0.959
+1787981880.958456 B: tailing you, my d5=0.995
+1787981885.139794 B: tailing you, my d5=0.975
+1787981889.347917 B: tailing you, my d5=0.923
+1787981893.652061 B: tailing you, my d5=0.904
+1787981897.894262 B: tailing you, my d5=0.956
+1787981902.006969 B: tailing you, my d5=0.975
+1787981906.035978 B: tailing you, my d5=0.991
+1787981910.250329 B: tailing you, my d5=1.0
+1787981914.448482 B: tailing you, my d5=0.918
+1787981918.594955 B: tailing you, my d5=0.845
+1787981922.805210 B: tailing you, my d5=0.668
+1787981931.187357 B: tailing you, my d5=0.789
+1787981935.431869 B: tailing you, my d5=0.907
+1787981939.580553 B: tailing you, my d5=0.988
+1787981943.746564 B: tailing you, my d5=0.89
+1787981947.881724 B: tailing you, my d5=0.814
+1787981952.120988 B: tailing you, my d5=0.998
+1787981956.336907 B: tailing you, my d5=0.982
+1787981960.484191 B: tailing you, my d5=0.903
+1787981964.774069 B: tailing you, my d5=0.891
+1787981968.966783 B: tailing you, my d5=0.876
+1787981973.105261 B: tailing you, my d5=0.825
+1787981977.238470 B: tailing you, my d5=0.767
+1787981981.437571 B: tailing you, my d5=0.658
+1787981985.451401 B: tailing you, my d5=0.703
+1787981989.596839 B: tailing you, my d5=0.762
+1787981993.848485 B: tailing you, my d5=0.95
+1787981997.981228 B: tailing you, my d5=0.891
+1787982002.200366 B: tailing you, my d5=0.936
+1787982006.319664 B: tailing you, my d5=0.976
+1787982010.487194 B: tailing you, my d5=1.0
+1787982014.652900 B: tailing you, my d5=0.967
+1787982018.830409 B: tailing you, my d5=0.816
+1787982023.017900 B: tailing you, my d5=0.714
+1787982027.270205 B: tailing you, my d5=0.646
+1787982068.890783 B: tailing you, my d5=0.787
+1787982072.931028 B: tailing you, my d5=0.903
+1787982077.147340 B: tailing you, my d5=0.902
+1787982081.263694 B: tailing you, my d5=0.995
+1787982085.555319 B: tailing you, my d5=0.976
+1787982089.721515 B: tailing you, my d5=0.967
+1787982093.939337 B: tailing you, my d5=0.955
+1787982098.027802 B: tailing you, my d5=0.942
+1787982102.174097 B: tailing you, my d5=0.845
+1787982106.353244 B: tailing you, my d5=0.943
+1787982110.605304 B: tailing you, my d5=0.992
+1787982114.724418 B: tailing you, my d5=0.917
+1787982118.996576 B: tailing you, my d5=0.703
+1787982123.189444 B: tailing you, my d5=0.72
+1787982127.290129 B: tailing you, my d5=0.679
+1787982172.958071 B: tailing you, my d5=0.813
+1787982177.199927 B: tailing you, my d5=0.934
+1787982181.344279 B: tailing you, my d5=0.997
+1787982185.587529 B: tailing you, my d5=0.987
+1787982189.722542 B: tailing you, my d5=0.981
+1787982193.711802 B: tailing you, my d5=0.952
+1787982197.917511 B: tailing you, my d5=0.795
+1787982202.038468 B: tailing you, my d5=0.74
+1787982206.309026 B: tailing you, my d5=0.662
+1787982222.784304 B: tailing you, my d5=0.672
+1787982226.916327 B: tailing you, my d5=0.854
+1787982231.000549 B: tailing you, my d5=0.893
+1787982235.151422 B: tailing you, my d5=0.861
+1787982239.326805 B: tailing you, my d5=0.871
+1787982243.511598 B: tailing you, my d5=0.906
+1787982247.669356 B: tailing you, my d5=0.969
+1787982251.826816 B: tailing you, my d5=1.0
+1787982255.947405 B: tailing you, my d5=0.947
+1787982260.070698 B: tailing you, my d5=0.941
+1787982264.131975 B: tailing you, my d5=0.852
+1787982268.362313 B: tailing you, my d5=0.82
+1787982272.497145 B: tailing you, my d5=0.939
+1787982276.624475 B: tailing you, my d5=0.907
+1787982280.718473 B: tailing you, my d5=0.687
+1787982318.091890 B: tailing you, my d5=0.673
+1787982322.219809 B: tailing you, my d5=0.676
+1787982326.452783 B: tailing you, my d5=0.72
+1787982330.527510 B: tailing you, my d5=0.815
+1787982334.657795 B: tailing you, my d5=0.794
+1787982338.950489 B: tailing you, my d5=0.769
+1787982343.132378 B: tailing you, my d5=0.762
+1787982347.334331 B: tailing you, my d5=0.843
+1787982351.503516 B: tailing you, my d5=0.663

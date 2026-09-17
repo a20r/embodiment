@@ -1,0 +1,80 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "claude-fable-5",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5",
+      "noise_profile": "default_noisy",
+      "maze_hash": "2d1eddddadde88cc",
+      "end_reason": "cut_by_operator",
+      "cut_note": "chamber corner gap: B left the arena; world regenerated sealed as duo12",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 394465,
+      "sim_time_s": 7889.3,
+      "comms": {
+        "tx": 994,
+        "tx_delivered": 37,
+        "rx_read": 38,
+        "tx_rate_dropped": 1652
+      },
+      "wall_s": 3945.1,
+      "turns": 132,
+      "execs": 133,
+      "restarts": 0,
+      "tokens": {
+        "input": 264,
+        "output": 73977
+      },
+      "collisions": 2769,
+      "final_pose": [
+        3.073,
+        2.601,
+        3.071
+      ]
+    },
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "claude-fable-5",
+      "noise_profile": "default_noisy",
+      "maze_hash": "2d1eddddadde88cc",
+      "end_reason": "cut_by_operator",
+      "cut_note": "chamber corner gap: B left the arena; world regenerated sealed as duo12",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 394465,
+      "sim_time_s": 7889.3,
+      "comms": {
+        "tx": 1273,
+        "tx_delivered": 38,
+        "rx_read": 37,
+        "tx_rate_dropped": 34
+      },
+      "wall_s": 3952.8,
+      "turns": 109,
+      "execs": 111,
+      "restarts": 0,
+      "tokens": {
+        "input": 218,
+        "output": 74743
+      },
+      "collisions": 21,
+      "final_pose": [
+        -8.156,
+        -4.823,
+        3.578
+      ]
+    }
+  },
+  "solved_all": false,
+  "final_tick": 394465,
+  "cut": true
+}

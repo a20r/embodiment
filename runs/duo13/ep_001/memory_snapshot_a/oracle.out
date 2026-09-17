@@ -1,0 +1,147 @@
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.895 (prev None)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.898 (prev 0.895)
+RX:B1->B2: UNFREEZE! LEAD ME: walk toward G -> SAME 0.895 (prev 0.898)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.894 (prev 0.895)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.897 (prev 0.894)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.899 (prev 0.897)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.896 (prev 0.899)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.890 (prev 0.896)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.893 (prev 0.89)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.900 (prev 0.893)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.900 (prev 0.9)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.896 (prev 0.9)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.900 (prev 0.896)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.894 (prev 0.9)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.895 (prev 0.894)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.897 (prev 0.895)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.897 (prev 0.897)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.883 (prev 0.897)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> COLDER 0.851 (prev 0.883)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> COLDER 0.776 (prev 0.851)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.778 (prev 0.776)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.778 (prev 0.778)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> WARMER 0.804 (prev 0.778)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> WARMER 0.854 (prev 0.804)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> WARMER 0.903 (prev 0.854)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.916 (prev 0.903)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.905 (prev 0.916)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> COLDER 0.888 (prev 0.905)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.890 (prev 0.888)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.893 (prev 0.89)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.906 (prev 0.893)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> COLDER 0.883 (prev 0.906)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> COLDER 0.856 (prev 0.883)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> COLDER 0.831 (prev 0.856)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> COLDER 0.813 (prev 0.831)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.805 (prev 0.813)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.811 (prev 0.805)
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.804 (prev 0.811)
+RX:B1 FOLLOWING. B2: PING x= y= every 1s +  -> SAME 0.809 (prev 0.804)
+RX: B1 FOLLOWING YOU NOW. Keep sending B2 SAME/WARMER/COLDER d11=!
+RX: B1 following! send d11!
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> SAME 0.812 (prev 0.809)
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> WARMER 0.934 (prev 0.812)
+RX: B1 following! send d11!
+RX:B1 MOVED & STOPPED. Send B2 WARMER/COLDE -> COLDER 0.880 (prev 0.934)
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX:B1: good! keep PING d11 every second NON -> COLDER 0.697 (prev 0.88)
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1 following! send d11!
+RX: B1->B2: FREEZE NOW 3 min. I close 0.9m using my range sensor. Then YOU LEAD to g
+RX: B1: FREEZE steady! closing via probes!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1->B2: STOP AND FREEZE 90 SECONDS where you are. I am 0.7m behind, catching up 
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!
+RX: B1 closing! FREEZE!

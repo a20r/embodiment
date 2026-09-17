@@ -1,0 +1,159 @@
+33092.0 loaded pose -1.8,-0.4 cells=19
+33092.2 EP7 start pos=-1.8,-0.4 d11=0.443 tx=lost
+33092.3 SUM pos=-1.8,-0.4 dist=19.5 cells=19 d11=0.437 tx=lost
+33092.3 *** BLOB [(7, 0.48)] pos=-1.8,-0.4
+33096.4 BLOB PERSISTS [(1, 0.5)]
+33099.5 *** BLOB [(1, 0.48)] pos=-1.8,-0.4
+33101.0 BLOB PERSISTS [(4, 0.43)]
+33104.2 *** BLOB [(0, 0.47), (4, 0.42)] pos=-1.8,-0.4
+33105.2 BLOB PERSISTS [(4, 0.44)]
+33125.5 UNJAM
+33153.9 SUM pos=-0.5,0.1 dist=21.7 cells=19 d11=0.529 tx=lost
+33174.4 loaded pose -0.5,0.1 cells=19
+33174.6 EP7 start pos=-0.5,0.1 d11=0.536 tx=lost
+33174.7 SUM pos=-0.5,0.1 dist=21.7 cells=19 d11=0.542 tx=lost
+33228.7 blob-note [(9, 0.86)] pos=-1.8,1.2
+33236.8 SUM pos=-1.9,1.2 dist=24.8 cells=23 d11=0.554 tx=lost
+33248.6 RX POS UNKNOWN d11 RISING
+33250.9 RX GOAL NO STUCK NO
+33251.2 RX GOAL NO STUCK NO
+33251.4 RX HDG=198
+33254.9 RX SEE
+33257.2 RX READY
+33260.9 RX GOAL NO STUCK NO
+33264.6 RX HDG=198
+33268.3 RX HDG=198
+33272.0 RX HDG=198
+33275.7 RX HDG=198
+33278.5 RX HDG=198
+33281.8 RX HDG=198
+33282.7 RX HDG=198
+33286.9 RX HDG=198
+33289.7 RX HDG=198
+33291.1 RX HDG=198
+33294.7 RX HDG=198
+33297.5 RX HDG=198
+33297.6 SUM pos=-3.4,1.4 dist=27.5 cells=24 d11=0.618 tx=lost
+33298.2 RX HDG=198
+33301.9 RX HDG=198
+33305.7 RX A COME TO ME
+33308.3 RX POS UNKNOWN d11 RISING
+33309.6 RX GOAL NO STUCK NO
+33313.3 RX SEE
+33316.0 RX READY
+33320.0 RX HDG=198
+33322.7 *** HERE=1 {'tick': '1081446', 'goal': '0', 'here': '1', 'tx': '45045:ok'}
+33329.7 *** HERE=1 {'tick': '1082142', 'goal': '0', 'here': '1', 'tx': '45055:busy'}
+33336.7 *** HERE=1 {'tick': '1082847', 'goal': '0', 'here': '1', 'tx': '45065:busy'}
+33343.7 *** HERE=1 {'tick': '1083543', 'goal': '0', 'here': '1', 'tx': '45075:busy'}
+33345.7 loaded pose -3.4,1.4 cells=24
+33346.2 EP7 start pos=-3.4,1.4 d11=0.641 tx=busy
+33346.2 *** HERE=1 {'tick': '1083801', 'goal': '0', 'here': '1', 'tx': '45077:busy'}
+33353.2 *** HERE=1 {'tick': '1084499', 'goal': '0', 'here': '1', 'tx': '45087:busy'}
+33360.2 *** HERE=1 {'tick': '1085196', 'goal': '0', 'here': '1', 'tx': '45097:busy'}
+33367.2 *** HERE=1 {'tick': '1085900', 'goal': '0', 'here': '1', 'tx': '45107:busy'}
+33374.2 *** HERE=1 {'tick': '1086596', 'goal': '0', 'here': '1', 'tx': '45117:busy'}
+33381.2 *** HERE=1 {'tick': '1087300', 'goal': '0', 'here': '1', 'tx': '45127:busy'}
+33388.2 *** HERE=1 {'tick': '1088002', 'goal': '0', 'here': '1', 'tx': '45137:busy'}
+33395.2 *** HERE=1 {'tick': '1088698', 'goal': '0', 'here': '1', 'tx': '45147:busy'}
+33402.2 *** HERE=1 {'tick': '1089402', 'goal': '0', 'here': '1', 'tx': '45157:lost'}
+33409.2 *** HERE=1 {'tick': '1090100', 'goal': '0', 'here': '1', 'tx': '45167:busy'}
+33416.2 *** HERE=1 {'tick': '1090804', 'goal': '0', 'here': '1', 'tx': '45177:busy'}
+33423.2 *** HERE=1 {'tick': '1091499', 'goal': '0', 'here': '1', 'tx': '45187:busy'}
+33430.2 *** HERE=1 {'tick': '1092204', 'goal': '0', 'here': '1', 'tx': '45197:busy'}
+33437.2 *** HERE=1 {'tick': '1092900', 'goal': '0', 'here': '1', 'tx': '45207:busy'}
+33444.2 *** HERE=1 {'tick': '1093599', 'goal': '0', 'here': '1', 'tx': '45217:busy'}
+33451.2 *** HERE=1 {'tick': '1094301', 'goal': '0', 'here': '1', 'tx': '45227:busy'}
+33458.2 *** HERE=1 {'tick': '1094999', 'goal': '0', 'here': '1', 'tx': '45237:busy'}
+33465.2 *** HERE=1 {'tick': '1095701', 'goal': '0', 'here': '1', 'tx': '45247:busy'}
+33472.2 *** HERE=1 {'tick': '1096400', 'goal': '0', 'here': '1', 'tx': '45257:busy'}
+33479.2 *** HERE=1 {'tick': '1097102', 'goal': '0', 'here': '1', 'tx': '45267:busy'}
+33486.3 *** HERE=1 {'tick': '1097800', 'goal': '0', 'here': '1', 'tx': '45277:busy'}
+33493.3 *** HERE=1 {'tick': '1098502', 'goal': '0', 'here': '1', 'tx': '45287:busy'}
+33500.3 *** HERE=1 {'tick': '1099198', 'goal': '0', 'here': '1', 'tx': '45297:busy'}
+33507.3 *** HERE=1 {'tick': '1099901', 'goal': '0', 'here': '1', 'tx': '45307:busy'}
+33514.3 *** HERE=1 {'tick': '1100604', 'goal': '0', 'here': '1', 'tx': '45317:lost'}
+33521.3 *** HERE=1 {'tick': '1101303', 'goal': '0', 'here': '1', 'tx': '45327:busy'}
+33528.3 *** HERE=1 {'tick': '1102005', 'goal': '0', 'here': '1', 'tx': '45337:busy'}
+33535.3 *** HERE=1 {'tick': '1102701', 'goal': '0', 'here': '1', 'tx': '45347:busy'}
+33542.3 *** HERE=1 {'tick': '1103406', 'goal': '0', 'here': '1', 'tx': '45357:busy'}
+33549.3 *** HERE=1 {'tick': '1104103', 'goal': '0', 'here': '1', 'tx': '45367:busy'}
+33556.3 *** HERE=1 {'tick': '1104804', 'goal': '0', 'here': '1', 'tx': '45377:busy'}
+33563.3 *** HERE=1 {'tick': '1105505', 'goal': '0', 'here': '1', 'tx': '45387:busy'}
+33570.3 *** HERE=1 {'tick': '1106206', 'goal': '0', 'here': '1', 'tx': '45397:busy'}
+33577.3 *** HERE=1 {'tick': '1106903', 'goal': '0', 'here': '1', 'tx': '45407:lost'}
+33584.3 *** HERE=1 {'tick': '1107607', 'goal': '0', 'here': '1', 'tx': '45417:busy'}
+33591.3 *** HERE=1 {'tick': '1108303', 'goal': '0', 'here': '1', 'tx': '45427:busy'}
+33598.3 *** HERE=1 {'tick': '1109007', 'goal': '0', 'here': '1', 'tx': '45437:busy'}
+33605.3 *** HERE=1 {'tick': '1109705', 'goal': '0', 'here': '1', 'tx': '45447:lost'}
+33612.3 *** HERE=1 {'tick': '1110407', 'goal': '0', 'here': '1', 'tx': '45457:busy'}
+33615.7 loaded pose -3.4,1.4 cells=24
+33616.2 EP7 start pos=-3.4,1.4 d11=0.641 tx=lost
+33616.2 *** HERE=1 {'tick': '1110796', 'goal': '0', 'here': '1', 'tx': '45462:lost'}
+33620.7 *** HERE=1 {'tick': '1111241', 'goal': '0', 'here': '1', 'tx': '45468:busy'}
+33625.2 *** HERE=1 {'tick': '1111693', 'goal': '0', 'here': '1', 'tx': '45474:busy'}
+33629.7 *** HERE=1 {'tick': '1112144', 'goal': '0', 'here': '1', 'tx': '45480:busy'}
+33634.2 *** HERE=1 {'tick': '1112592', 'goal': '0', 'here': '1', 'tx': '45486:busy'}
+33638.7 *** HERE=1 {'tick': '1113043', 'goal': '0', 'here': '1', 'tx': '45492:busy'}
+33643.2 *** HERE=1 {'tick': '1113495', 'goal': '0', 'here': '1', 'tx': '45498:busy'}
+33647.7 *** HERE=1 {'tick': '1113942', 'goal': '0', 'here': '1', 'tx': '45504:busy'}
+33652.2 *** HERE=1 {'tick': '1114394', 'goal': '0', 'here': '1', 'tx': '45510:busy'}
+33656.7 *** HERE=1 {'tick': '1114845', 'goal': '0', 'here': '1', 'tx': '45516:busy'}
+33661.2 *** HERE=1 {'tick': '1115293', 'goal': '0', 'here': '1', 'tx': '45522:busy'}
+33665.7 *** HERE=1 {'tick': '1115743', 'goal': '0', 'here': '1', 'tx': '45528:busy'}
+33670.2 *** HERE=1 {'tick': '1116191', 'goal': '0', 'here': '1', 'tx': '45534:busy'}
+33674.7 *** HERE=1 {'tick': '1116642', 'goal': '0', 'here': '1', 'tx': '45540:busy'}
+33679.2 *** HERE=1 {'tick': '1117095', 'goal': '0', 'here': '1', 'tx': '45546:busy'}
+33683.7 *** HERE=1 {'tick': '1117546', 'goal': '0', 'here': '1', 'tx': '45552:busy'}
+33688.2 *** HERE=1 {'tick': '1117991', 'goal': '0', 'here': '1', 'tx': '45558:busy'}
+33692.7 *** HERE=1 {'tick': '1118444', 'goal': '0', 'here': '1', 'tx': '45564:busy'}
+33697.2 *** HERE=1 {'tick': '1118897', 'goal': '0', 'here': '1', 'tx': '45570:busy'}
+33701.7 *** HERE=1 {'tick': '1119344', 'goal': '0', 'here': '1', 'tx': '45576:busy'}
+33706.2 *** HERE=1 {'tick': '1119796', 'goal': '0', 'here': '1', 'tx': '45582:busy'}
+33710.7 *** HERE=1 {'tick': '1120246', 'goal': '0', 'here': '1', 'tx': '45588:busy'}
+33715.2 *** HERE=1 {'tick': '1120694', 'goal': '0', 'here': '1', 'tx': '45594:busy'}
+33719.7 *** HERE=1 {'tick': '1121144', 'goal': '0', 'here': '1', 'tx': '45600:busy'}
+33724.2 *** HERE=1 {'tick': '1121596', 'goal': '0', 'here': '1', 'tx': '45606:busy'}
+33728.7 *** HERE=1 {'tick': '1122048', 'goal': '0', 'here': '1', 'tx': '45612:busy'}
+33733.2 *** HERE=1 {'tick': '1122496', 'goal': '0', 'here': '1', 'tx': '45618:busy'}
+33737.7 *** HERE=1 {'tick': '1122947', 'goal': '0', 'here': '1', 'tx': '45624:busy'}
+33742.2 *** HERE=1 {'tick': '1123399', 'goal': '0', 'here': '1', 'tx': '45630:busy'}
+33746.7 *** HERE=1 {'tick': '1123846', 'goal': '0', 'here': '1', 'tx': '45636:busy'}
+33751.2 *** HERE=1 {'tick': '1124297', 'goal': '0', 'here': '1', 'tx': '45642:busy'}
+33755.7 *** HERE=1 {'tick': '1124748', 'goal': '0', 'here': '1', 'tx': '45648:busy'}
+33760.2 *** HERE=1 {'tick': '1125195', 'goal': '0', 'here': '1', 'tx': '45654:busy'}
+33764.7 *** HERE=1 {'tick': '1125647', 'goal': '0', 'here': '1', 'tx': '45660:busy'}
+33769.2 *** HERE=1 {'tick': '1126097', 'goal': '0', 'here': '1', 'tx': '45666:busy'}
+33773.7 *** HERE=1 {'tick': '1126547', 'goal': '0', 'here': '1', 'tx': '45672:busy'}
+33778.2 *** HERE=1 {'tick': '1126998', 'goal': '0', 'here': '1', 'tx': '45678:busy'}
+33782.7 *** HERE=1 {'tick': '1127450', 'goal': '0', 'here': '1', 'tx': '45684:busy'}
+33787.2 *** HERE=1 {'tick': '1127900', 'goal': '0', 'here': '1', 'tx': '45690:busy'}
+33791.7 *** HERE=1 {'tick': '1128347', 'goal': '0', 'here': '1', 'tx': '45696:busy'}
+33796.2 *** HERE=1 {'tick': '1128799', 'goal': '0', 'here': '1', 'tx': '45702:busy'}
+33800.7 *** HERE=1 {'tick': '1129250', 'goal': '0', 'here': '1', 'tx': '45708:busy'}
+33805.2 *** HERE=1 {'tick': '1129698', 'goal': '0', 'here': '1', 'tx': '45714:busy'}
+33809.7 *** HERE=1 {'tick': '1130150', 'goal': '0', 'here': '1', 'tx': '45720:busy'}
+33814.2 *** HERE=1 {'tick': '1130601', 'goal': '0', 'here': '1', 'tx': '45726:busy'}
+33818.7 *** HERE=1 {'tick': '1131048', 'goal': '0', 'here': '1', 'tx': '45732:busy'}
+33823.2 *** HERE=1 {'tick': '1131498', 'goal': '0', 'here': '1', 'tx': '45738:busy'}
+33827.7 *** HERE=1 {'tick': '1131949', 'goal': '0', 'here': '1', 'tx': '45744:busy'}
+33832.2 *** HERE=1 {'tick': '1132398', 'goal': '0', 'here': '1', 'tx': '45750:busy'}
+33836.7 *** HERE=1 {'tick': '1132849', 'goal': '0', 'here': '1', 'tx': '45756:busy'}
+33841.2 *** HERE=1 {'tick': '1133299', 'goal': '0', 'here': '1', 'tx': '45762:busy'}
+33845.7 *** HERE=1 {'tick': '1133747', 'goal': '0', 'here': '1', 'tx': '45768:busy'}
+33850.2 *** HERE=1 {'tick': '1134199', 'goal': '0', 'here': '1', 'tx': '45774:busy'}
+33854.7 *** HERE=1 {'tick': '1134650', 'goal': '0', 'here': '1', 'tx': '45780:busy'}
+33859.2 *** HERE=1 {'tick': '1135097', 'goal': '0', 'here': '1', 'tx': '45786:busy'}
+33863.7 *** HERE=1 {'tick': '1135551', 'goal': '0', 'here': '1', 'tx': '45792:busy'}
+33868.2 *** HERE=1 {'tick': '1136001', 'goal': '0', 'here': '1', 'tx': '45798:busy'}
+33872.7 *** HERE=1 {'tick': '1136449', 'goal': '0', 'here': '1', 'tx': '45804:busy'}
+33877.2 *** HERE=1 {'tick': '1136900', 'goal': '0', 'here': '1', 'tx': '45810:busy'}
+33881.7 *** HERE=1 {'tick': '1137349', 'goal': '0', 'here': '1', 'tx': '45816:busy'}
+33886.2 *** HERE=1 {'tick': '1137802', 'goal': '0', 'here': '1', 'tx': '45822:busy'}
+33890.7 *** HERE=1 {'tick': '1138249', 'goal': '0', 'here': '1', 'tx': '45828:busy'}
+33895.2 *** HERE=1 {'tick': '1138702', 'goal': '0', 'here': '1', 'tx': '45834:busy'}
+33899.7 *** HERE=1 {'tick': '1139153', 'goal': '0', 'here': '1', 'tx': '45840:busy'}
+33904.2 *** HERE=1 {'tick': '1139598', 'goal': '0', 'here': '1', 'tx': '45846:busy'}
+33908.7 *** HERE=1 {'tick': '1140049', 'goal': '0', 'here': '1', 'tx': '45852:busy'}
+33913.2 *** HERE=1 {'tick': '1140502', 'goal': '0', 'here': '1', 'tx': '45858:busy'}
+33917.7 *** HERE=1 {'tick': '1140945', 'goal': '0', 'here': '1', 'tx': '45864:busy'}

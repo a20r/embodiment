@@ -1,0 +1,4 @@
+  File "/bot/src/explore5.py", line 105
+    global orbit_acc, orbit_mode, orbit_t, px, py, pth
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: name 'orbit_acc' is assigned to before global declaration

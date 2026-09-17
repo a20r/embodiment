@@ -104,6 +104,10 @@ class DeviceBridge:
         self.read_counts = {}   # filename -> served frames
         self.write_counts = {}
         self.drop_counts = {}
+        # filename -> the thread currently serving it; a thread that
+        # finds itself superseded (watchdog re-creation) exits instead
+        # of serving the new FIFO alongside its successor.
+        self._serving = {}
 
     def start(self):
         os.makedirs(self.dir, exist_ok=True)
@@ -122,6 +126,7 @@ class DeviceBridge:
             else self._sensor_loop
         t = threading.Thread(target=target,
                              args=(path, filename, logical), daemon=True)
+        self._serving[filename] = t
         t.start()
         self.threads.append(t)
 
@@ -195,14 +200,95 @@ class DeviceBridge:
             return w.beacon_frame()
         if logical == "speed":
             return w.speed_frame()
+        if logical == "imu":
+            return w.imu_frame()
         if logical == "serial_rx":
             return w.serial_rx_frame()
         if logical == "peer_signal":
             return w.peer_signal_frame()
+        if logical == "lidar3d":
+            return w.lidar3d_frame()
         raise ValueError(logical)
+
+    # Ground truth records the exact frame served; the point cloud is
+    # the one device whose frames are tens of kB, so it alone is logged
+    # as a digest (count + hash), which still proves what was served.
+    DIGEST_OVER = 512
+
+    def _frame_record(self, frame, logical):
+        if logical != "lidar3d" or len(frame) <= self.DIGEST_OVER:
+            return frame
+        import hashlib
+        return (f"<{len(frame)}B {frame.count(';') + 1}pts "
+                f"sha1={hashlib.sha1(frame.encode()).hexdigest()[:12]}>")
+
+    def _interval(self, logical):
+        """Seconds between frames for a held-open reader."""
+        if logical == "lidar3d":
+            # stream_hz is validated > 0 in sim/config.py.
+            return 1.0 / float(self.world.lidar3d_cfg.get("stream_hz", 10))
+        return FRAME_INTERVAL
+
+    def _blocking_rx_loop(self, path, filename, logical):
+        """duo.rx_blocking: the write end is opened only once a line is
+        pending, so a reader's open() blocks while the queue is empty
+        (UART semantics) and returns exactly one line then EOF.  The
+        line is consumed only after the write succeeded: a reader that
+        gave up (timeout) has not opened the FIFO, so its line waits
+        for the next one."""
+        import time
+        w = self.world
+        drop_p = w.noise["dropped_read_p"]
+        while self.running:
+            if self._serving.get(filename) is not threading.current_thread():
+                return  # superseded by the watchdog's fresh thread
+            if w.serial_rx_peek() is None:
+                # Woken by the peer's delivery; the timeout keeps
+                # stop() and the watchdog responsive.
+                w.rx_event.wait(0.25)
+                w.rx_event.clear()
+                continue
+            try:
+                fd = os.open(path, os.O_WRONLY)
+            except OSError:
+                if self._heal(path):
+                    continue
+                return
+            if not self.running:
+                os.close(fd)
+                return
+            try:
+                if drop_p > 0 and self.rng_drop.random() < drop_p:
+                    # Same dropped-read noise as every sensor: the
+                    # reader sees EOF with nothing; the line stays.
+                    self.drop_counts[filename] = \
+                        self.drop_counts.get(filename, 0) + 1
+                    self.log(dict(event="read_dropped", dev=filename,
+                                  physical=logical, t=w.tick))
+                else:
+                    line = w.serial_rx_peek()
+                    if line is not None:
+                        os.write(fd, (line + "\n").encode())
+                        w.serial_rx_commit(line)
+                        self.read_counts[filename] = \
+                            self.read_counts.get(filename, 0) + 1
+                        self.log(dict(event="read", dev=filename,
+                                      physical=logical, value=line,
+                                      t=w.tick))
+            except (BrokenPipeError, OSError):
+                pass
+            finally:
+                try:
+                    os.close(fd)
+                except OSError:
+                    pass
+            time.sleep(FRAME_INTERVAL)
 
     def _sensor_loop(self, path, filename, logical):
         import time
+        if logical == "serial_rx" and getattr(self.world, "rx_blocking",
+                                              False):
+            return self._blocking_rx_loop(path, filename, logical)
         drop_p = self.world.noise["dropped_read_p"]
         while self.running:
             try:
@@ -231,7 +317,9 @@ class DeviceBridge:
                     self.read_counts[filename] = \
                         self.read_counts.get(filename, 0) + 1
                     self.log(dict(event="read", dev=filename,
-                                  physical=logical, value=frame,
+                                  physical=logical,
+                                  value=self._frame_record(frame,
+                                                           logical),
                                   t=tick))
             except (BrokenPipeError, OSError):
                 pass
@@ -241,8 +329,9 @@ class DeviceBridge:
                 except OSError:
                     pass
             # Give one-shot readers (cat) time to see EOF before the next
-            # frame; a held-open reader gets a ~40 Hz stream.
-            time.sleep(FRAME_INTERVAL)
+            # frame; a held-open reader gets a ~40 Hz stream (slower for
+            # the big point-cloud frames).
+            time.sleep(self._interval(logical))
 
     def _actuator_loop(self, path, filename, logical):
         while self.running:

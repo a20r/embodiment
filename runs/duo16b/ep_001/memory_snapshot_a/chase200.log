@@ -1,0 +1,71 @@
+=== CHASE companion toward 200
+C 0.2 h=306 d11=0.248 deepmed=1.014 d5=1 tick=702533 goal=0 here=0
+CONTACT - stop
+C 2.4 h=300 d11=0.248 deepmed=1.932 d5=1 tick=702755 goal=0 here=0
+CONTACT - stop
+C 4.6 h=295 d11=0.259 deepmed=2.054 d5=0 tick=702976 goal=0 here=0
+C 4.9 h=291 d11=0.243 deepmed=2.159 d5=0 tick=702998 goal=0 here=0
+C 5.1 h=288 d11=0.257 deepmed=2.252 d5=0 tick=703020 goal=0 here=0
+C 5.3 h=280 d11=0.248 deepmed=-1 d5=0 tick=703042 goal=0 here=0
+C 5.5 h=282 d11=0.257 deepmed=-1 d5=0 tick=703063 goal=0 here=0
+C 5.7 h=272 d11=0.25 deepmed=-1 d5=0 tick=703085 goal=0 here=0
+C 5.9 h=269 d11=0.246 deepmed=-1 d5= tick=703106 goal=0 here=0
+C 6.2 h=261 d11=0.256 deepmed=-1 d5=0 tick=703127 goal=0 here=0
+C 6.4 h=256 d11=0.263 deepmed=-1 d5=0 tick=703150 goal=0 here=0
+C 6.6 h=252 d11=0.268 deepmed=-1 d5=0 tick=703171 goal=0 here=0
+C 6.8 h=246 d11=0.27 deepmed=-1 d5=0 tick=703193 goal=0 here=0
+C 7.0 h=242 d11=0.266 deepmed=-1 d5= tick=703214 goal=0 here=0
+C 7.2 h=237 d11=0.262 deepmed=-1 d5=0 tick=703236 goal=0 here=0
+C 7.5 h=233 d11=0.269 deepmed=-1 d5=0 tick=703258 goal=0 here=0
+C 7.7 h=224 d11=0.271 deepmed=-1 d5=0 tick=703280 goal=0 here=0
+C 7.9 h=217 d11=0.267 deepmed=-1 d5=0 tick=703301 goal=0 here=0
+C 8.1 h=216 d11=0.278 deepmed=-1 d5=0 tick=703323 goal=0 here=0
+C 8.3 h=210 d11=0.263 deepmed=-1 d5=0 tick=703345 goal=0 here=0
+C 8.5 h=205 d11=0.271 deepmed=-1 d5=0 tick=703366 goal=0 here=0
+C 8.8 h=201 d11=0.262 deepmed=-1 d5=0 tick=703387 goal=0 here=0
+C 9.0 h=200 d11=0.275 deepmed=-1 d5=0 tick=703409 goal=0 here=0
+C 9.2 h=203 d11=0.241 deepmed=-1 d5=0 tick=703430 goal=0 here=0
+C 9.4 h=196 d11=0.245 deepmed=-1 d5=0 tick=703452 goal=0 here=0
+C 9.6 h=199 d11=0.264 deepmed=-1 d5=0 tick=703474 goal=0 here=0
+C 9.8 h=200 d11=-1 deepmed=-1 d5=0 tick=703495 goal=0 here=0
+C 10.0 h=202 d11=0.263 deepmed=-1 d5=0 tick=703516 goal=0 here=0
+C 10.3 h=197 d11=0.251 deepmed=-1 d5=0 tick=703538 goal=0 here=0
+C 10.5 h=201 d11=0.227 deepmed=-1 d5=0 tick=703559 goal=0 here=0
+C 10.7 h=197 d11=0.243 deepmed=-1 d5=0 tick=703580 goal=0 here=0
+C 10.9 h=199 d11=0.23 deepmed=-1 d5=0 tick=703602 goal=0 here=0
+C 11.1 h=200 d11=0.262 deepmed=-1 d5=0 tick=703624 goal=0 here=0
+C 11.3 h=202 d11=0.251 deepmed=-1 d5=0 tick=703646 goal=0 here=0
+C 11.6 h=200 d11=0.251 deepmed=-1 d5=1 tick=703667 goal=0 here=0
+CONTACT - stop
+C 13.8 h=199 d11=0.229 deepmed=-1 d5=1 tick=703888 goal=0 here=0
+CONTACT - stop
+C 16.0 h=200 d11=0.243 deepmed=-1 d5=1 tick=704110 goal=0 here=0
+CONTACT - stop
+C 18.2 h=199 d11=0.238 deepmed=-1 d5=1 tick=704331 goal=0 here=0
+CONTACT - stop
+C 20.4 h=203 d11=0.256 deepmed=-1 d5=1 tick=704553 goal=0 here=0
+CONTACT - stop
+C 22.6 h=198 d11=0.25 deepmed=-1 d5=1 tick=704774 goal=0 here=0
+CONTACT - stop
+C 24.8 h=198 d11=0.228 deepmed=-1 d5=1 tick=704996 goal=0 here=0
+CONTACT - stop
+C 27.1 h=201 d11=0.247 deepmed=-1 d5= tick=705217 goal=0 here=0
+C 27.3 h=198 d11=0.227 deepmed=-1 d5=1 tick=705239 goal=0 here=0
+CONTACT - stop
+C 29.5 h=197 d11=0.224 deepmed=-1 d5=1 tick=705461 goal=0 here=0
+CONTACT - stop
+C 31.7 h=202 d11=0.259 deepmed=-1 d5=1 tick=705683 goal=0 here=0
+CONTACT - stop
+C 33.9 h=0 d11=0.245 deepmed=-1 d5=1 tick=705905 goal=0 here=0
+CONTACT - stop
+C 36.1 h=196 d11=0.266 deepmed=-1 d5=1 tick=706126 goal=0 here=0
+CONTACT - stop
+C 38.4 h=197 d11=0.275 deepmed=-1 d5=1 tick=706349 goal=0 here=0
+CONTACT - stop
+C 40.6 h=198 d11=0.27 deepmed=-1 d5=1 tick=706575 goal=0 here=0
+CONTACT - stop
+C 42.9 h=202 d11=0.273 deepmed=-1 d5=1 tick=706797 goal=0 here=0
+CONTACT - stop
+C 45.1 h=201 d11=0.28 deepmed=-1 d5=1 tick=707018 goal=0 here=0
+CONTACT - stop
+chase200 end

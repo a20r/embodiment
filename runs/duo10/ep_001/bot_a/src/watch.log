@@ -1,0 +1,285 @@
+00:22:56 ALERT 0  tick=162517 goal=0 here=0
+00:24:07 ALERT  0 tick=169645 goal=0 here=0
+00:24:42 ALERT  0 tick=173156 goal=0 here=0
+00:24:55 ALERT  0 tick=174457 goal=0 here=0
+00:26:50 ALERT 0 1 tick=185898 goal=0 here=0
+00:26:51 ALERT 0 1 tick=186000 goal=0 here=0
+00:26:52 ALERT 0 1 tick=186100 goal=0 here=0
+00:26:53 ALERT 0 1 tick=186200 goal=0 here=0
+00:26:54 ALERT 0 1 tick=186301 goal=0 here=0
+00:26:55 ALERT 0 1 tick=186401 goal=0 here=0
+00:26:56 ALERT 0 1 tick=186506 goal=0 here=0
+00:26:57 ALERT 0 1 tick=186606 goal=0 here=0
+00:26:58 ALERT 0 1 tick=186707 goal=0 here=0
+00:26:59 ALERT 0 1 tick=186808 goal=0 here=0
+00:27:00 ALERT 0 1 tick=186908 goal=0 here=0
+00:27:01 ALERT 0 1 tick=187009 goal=0 here=0
+00:27:18 ALERT 0  tick=188716 goal=0 here=0
+00:27:25 ALERT 0  tick=189420 goal=0 here=0
+00:28:05 ALERT  0 tick=193445 goal=0 here=0
+00:28:53 ALERT 0 1 tick=198257 goal=0 here=0
+00:28:56 ALERT 0 1 tick=198558 goal=0 here=0
+00:28:57 ALERT 0 1 tick=198660 goal=0 here=0
+00:29:17 ALERT 0  tick=200667 goal=0 here=0
+00:29:59 ALERT  0 tick=204883 goal=0 here=0
+00:30:08 ALERT 0  tick=205783 goal=0 here=0
+00:30:46 ALERT 0  tick=209597 goal=0 here=0
+00:30:53 ALERT  0 tick=210198 goal=0 here=0
+00:31:21 ALERT 0  tick=213010 goal=0 here=0
+00:31:23 ALERT 0 1 tick=213210 goal=0 here=0
+00:31:24 ALERT 0 1 tick=213310 goal=0 here=0
+00:31:25 ALERT 0 1 tick=213411 goal=0 here=0
+00:31:26 ALERT 0 1 tick=213513 goal=0 here=0
+00:31:27 ALERT 0 1 tick=213613 goal=0 here=0
+00:31:28 ALERT 0 1 tick=213714 goal=0 here=0
+00:31:29 ALERT 0 1 tick=213814 goal=0 here=0
+00:31:30 ALERT 0 1 tick=213914 goal=0 here=0
+00:31:31 ALERT 0 1 tick=214014 goal=0 here=0
+00:31:35 ALERT 0 1 tick=214415 goal=0 here=0
+00:32:10 ALERT  0 tick=217930 goal=0 here=0
+00:32:41 ALERT 0  tick=221041 goal=0 here=0
+00:32:45 ALERT 0  
+00:32:53 ALERT  0 tick=222243 goal=0 here=0
+00:34:09 ALERT  0 tick=229878 goal=0 here=0
+00:34:12 ALERT  0 tick=230178 goal=0 here=0
+00:34:25 ALERT 0  tick=231484 goal=0 here=0
+00:34:26 ALERT 0  tick=231584 goal=0 here=0
+00:35:18 ALERT  0 tick=236703 goal=0 here=0
+00:35:50 ALERT  0 tick=239925 goal=0 here=0
+00:36:46 ALERT 0  tick=245550 goal=0 here=0
+00:37:03 ALERT  0 tick=247254 goal=0 here=0
+00:38:15 ALERT  0 
+00:38:30 ALERT 0  
+00:39:11 ALERT  0 tick=260000 goal=0 here=0
+00:39:25 ALERT 0  tick=261401 goal=0 here=0
+00:39:45 ALERT  0 tick=263403 goal=0 here=0
+00:40:11 ALERT  0 tick=266006 goal=0 here=0
+00:40:42 ALERT  0 tick=269107 goal=0 here=0
+00:42:29 ALERT 0  tick=279813 goal=0 here=0
+00:42:36 ALERT 0  tick=280513 goal=0 here=0
+00:43:02 ALERT  0 tick=283119 goal=0 here=0
+00:43:07 ALERT 0  tick=283620 goal=0 here=0
+00:43:22 ALERT  0 tick=285120 goal=0 here=0
+00:45:01 ALERT  0 tick=295028 goal=0 here=0
+00:46:40 ALERT 0  tick=304938 goal=0 here=0
+00:46:52 ALERT 0  tick=306139 goal=0 here=0
+00:47:03 ALERT  0 tick=307240 goal=0 here=0
+00:47:08 ALERT 0  tick=307741 goal=0 here=0
+00:47:32 ALERT 0  
+00:47:47 ALERT 0  tick=311648 goal=0 here=0
+00:47:53 ALERT 0 1 tick=312249 goal=0 here=0
+00:47:54 ALERT 0 1 tick=312349 goal=0 here=0
+00:47:55 ALERT 0 1 tick=312449 goal=0 here=0
+00:47:56 ALERT 0 1 tick=312549 goal=0 here=0
+00:47:57 ALERT 0 1 tick=312649 goal=0 here=0
+00:47:58 ALERT 0 1 tick=312750 goal=0 here=0
+00:47:59 ALERT 0 1 tick=312850 goal=0 here=0
+00:48:22 ALERT  0 tick=315152 goal=0 here=0
+00:48:54 ALERT 0  tick=318354 goal=0 here=0
+00:49:09 ALERT 0  tick=319860 goal=0 here=0
+00:50:16 ALERT  0 tick=326573 goal=0 here=0
+00:50:33 ALERT  0 tick=328274 goal=0 here=0
+00:50:40 ALERT  0 tick=328981 goal=0 here=0
+00:50:41 ALERT  0 tick=329082 goal=0 here=0
+00:50:47 ALERT  0 tick=329683 goal=0 here=0
+00:50:56 ALERT  0 tick=330586 goal=0 here=0
+00:51:01 ALERT  0 
+00:51:20 ALERT 0  tick=332989 goal=0 here=0
+00:52:10 ALERT  0 tick=337898 goal=0 here=0
+00:52:38 ALERT  0 tick=340708 goal=0 here=0
+00:52:50 ALERT  0 tick=341908 goal=0 here=0
+00:52:52 ALERT  0 tick=342108 goal=0 here=0
+00:52:55 ALERT  0 
+00:53:02 ALERT  0 tick=343112 goal=0 here=0
+00:53:05 ALERT  0 tick=343412 goal=0 here=0
+00:55:04 ALERT  0 tick=355330 goal=0 here=0
+00:55:08 ALERT 0  tick=355730 goal=0 here=0
+00:55:14 ALERT 0  tick=356333 goal=0 here=0
+00:55:39 ALERT 0  tick=358838 goal=0 here=0
+00:56:16 ALERT  0 tick=362557 goal=0 here=0
+00:56:34 ALERT  0 
+00:57:02 ALERT  0 tick=367159 goal=0 here=0
+00:57:45 ALERT 0  
+00:58:36 ALERT 0  tick=376578 goal=0 here=0
+00:58:58 ALERT 0  tick=378779 goal=0 here=0
+00:59:39 ALERT 0  tick=382887 goal=0 here=0
+01:00:02 ALERT  0 tick=385189 goal=0 here=0
+01:00:05 ALERT  0 tick=385489 goal=0 here=0
+01:00:41 ALERT  0 tick=389094 goal=0 here=0
+01:00:56 ALERT  0 tick=390499 goal=0 here=0
+01:01:03 ALERT 0  tick=391204 goal=0 here=0
+01:01:05 ALERT 0  tick=391405 goal=0 here=0
+01:01:32 ALERT 0  tick=394106 goal=0 here=0
+01:01:42 ALERT 0  tick=395107 goal=0 here=0
+01:01:56 ALERT  0 tick=396512 goal=0 here=0
+01:02:18 ALERT  0 tick=398714 goal=0 here=0
+01:03:13 ALERT  0 tick=404231 goal=0 here=0
+01:03:57 ALERT   tick=408646 goal=0 here=0
+01:04:13 ALERT 0  tick=410249 goal=0 here=0
+01:04:37 ALERT 0  tick=412654 goal=0 here=0
+01:05:03 ALERT  0 tick=415256 goal=0 here=0
+01:05:14 ALERT  0 tick=416358 goal=0 here=0
+01:05:26 ALERT 0  tick=417559 goal=0 here=0
+01:05:35 ALERT 0  tick=418459 goal=0 here=0
+01:06:41 ALERT  0 tick=425063 goal=0 here=0
+01:07:01 ALERT  1 tick=427064 goal=0 here=0
+01:07:02 ALERT 0 1 tick=427164 goal=0 here=0
+01:07:03 ALERT 0 1 tick=427264 goal=0 here=0
+01:07:04 ALERT 0 1 tick=427365 goal=0 here=0
+01:07:05 ALERT 0 1 tick=427465 goal=0 here=0
+01:07:06 ALERT 0 1 tick=427565 goal=0 here=0
+01:07:07 ALERT 0 1 tick=427665 goal=0 here=0
+01:07:08 ALERT 0 1 tick=427765 goal=0 here=0
+01:07:09 ALERT 0 1 tick=427865 goal=0 here=0
+01:07:10 ALERT 0 1 tick=427965 goal=0 here=0
+01:07:38 ALERT  0 tick=430775 goal=0 here=0
+01:07:52 ALERT  0 tick=432176 goal=0 here=0
+01:07:54 ALERT 0  tick=432376 goal=0 here=0
+01:07:58 ALERT  0 tick=432776 goal=0 here=0
+01:08:04 ALERT 0  tick=433379 goal=0 here=0
+01:08:11 ALERT  0 tick=434080 goal=0 here=0
+01:08:26 ALERT 0  tick=435581 goal=0 here=0
+01:09:11 ALERT 0  tick=440095 goal=0 here=0
+01:09:23 ALERT 0  tick=441197 goal=0 here=0
+01:09:33 ALERT  0 tick=442198 goal=0 here=0
+01:09:38 ALERT  0 tick=442698 goal=0 here=0
+01:09:40 ALERT  0 tick=442898 goal=0 here=0
+01:09:53 ALERT 0  tick=444211 goal=0 here=0
+01:10:18 ALERT 0  tick=446717 goal=0 here=0
+01:10:21 ALERT  0 tick=447017 goal=0 here=0
+01:10:36 ALERT  0 tick=448518 goal=0 here=0
+01:11:14 ALERT 0  tick=452320 goal=0 here=0
+01:12:29 ALERT 0  tick=459825 goal=0 here=0
+01:12:36 ALERT  0 tick=460526 goal=0 here=0
+01:12:37 ALERT  0 tick=460626 goal=0 here=0
+01:13:03 ALERT  0 tick=463227 goal=0 here=0
+01:13:29 ALERT  0 tick=465833 goal=0 here=0
+01:13:31 ALERT 0  tick=466033 goal=0 here=0
+01:14:30 ALERT  0 tick=471937 goal=0 here=0
+01:14:48 ALERT 0  tick=473738 goal=0 here=0
+01:14:51 ALERT  0 tick=474042 goal=0 here=0
+01:14:58 ALERT 0  tick=474743 goal=0 here=0
+01:15:18 ALERT 0  tick=476744 goal=0 here=0
+01:15:28 ALERT  0 tick=477745 goal=0 here=0
+01:15:42 ALERT 0  tick=479146 goal=0 here=0
+01:16:02 ALERT   tick=481147 goal=0 here=0
+01:17:13 ALERT 0  tick=488254 goal=0 here=0
+01:17:44 ALERT 0 1 tick=491357 goal=0 here=0
+01:17:45 ALERT 0 1 tick=491457 goal=0 here=0
+01:17:46 ALERT 0 1 tick=491557 goal=0 here=0
+01:17:47 ALERT 0 1 tick=491658 goal=0 here=0
+01:17:48 ALERT 0 1 tick=491758 goal=0 here=0
+01:17:49 ALERT 0 1 tick=491858 goal=0 here=0
+01:17:50 ALERT 0 1 tick=491958 goal=0 here=0
+01:17:51 ALERT 0 1 tick=492058 goal=0 here=0
+01:17:52 ALERT 0 1 tick=492158 goal=0 here=0
+01:17:54 ALERT 0  tick=492360 goal=0 here=0
+01:18:41 ALERT  0 tick=497068 goal=0 here=0
+01:19:00 ALERT 0  tick=498969 goal=0 here=0
+01:19:08 ALERT 0  tick=499770 goal=0 here=0
+01:19:39 ALERT 0  tick=502872 goal=0 here=0
+01:19:55 ALERT  0 tick=504473 goal=0 here=0
+01:20:20 ALERT  0 tick=506974 goal=0 here=0
+01:20:22 ALERT  0 tick=507174 goal=0 here=0
+01:21:07 ALERT  0 tick=511681 goal=0 here=0
+01:21:24 ALERT  0 tick=513382 goal=0 here=0
+01:21:57 ALERT 0  tick=516687 goal=0 here=0
+01:22:05 ALERT  0 tick=517488 goal=0 here=0
+01:22:16 ALERT  0 tick=518588 goal=0 here=0
+01:22:39 ALERT  0 tick=520889 goal=0 here=0
+01:22:48 ALERT 0  tick=521790 goal=0 here=0
+01:22:56 ALERT 0  tick=522590 goal=0 here=0
+01:23:04 ALERT 0  tick=523391 goal=0 here=0
+01:23:13 ALERT 0  tick=524291 goal=0 here=0
+01:23:17 ALERT 0  tick=524691 goal=0 here=0
+01:24:07 ALERT 0  tick=529600 goal=0 here=0
+01:24:48 ALERT 0  tick=533702 goal=0 here=0
+01:25:00 ALERT 0  tick=534903 goal=0 here=0
+01:25:13 ALERT 0  tick=536204 goal=0 here=0
+01:25:22 ALERT 0  tick=537104 goal=0 here=0
+01:26:09 ALERT  0 tick=541814 goal=0 here=0
+01:26:13 ALERT  0 tick=542215 goal=0 here=0
+01:26:37 ALERT  0 tick=544616 goal=0 here=0
+01:26:48 ALERT  0 tick=545721 goal=0 here=0
+01:27:38 ALERT  0 
+01:29:02 ALERT 0  tick=559111 goal=0 here=0
+01:29:12 ALERT 0  tick=560116 goal=0 here=0
+01:29:22 ALERT  0 tick=561118 goal=0 here=0
+01:29:23 ALERT 0  tick=561218 goal=0 here=0
+01:30:34 ALERT 0  tick=568344 goal=0 here=0
+01:30:59 ALERT 0  tick=570852 goal=0 here=0
+01:31:10 ALERT  0 tick=571958 goal=0 here=0
+01:31:24 ALERT  0 tick=573363 goal=0 here=0
+01:31:42 ALERT  0 tick=575171 goal=0 here=0
+01:32:00 ALERT  0 tick=576980 goal=0 here=0
+01:32:20 ALERT  0 tick=578982 goal=0 here=0
+01:32:52 ALERT  0 tick=582194 goal=0 here=0
+01:33:27 ALERT 0  tick=585617 goal=0 here=0
+01:34:05 ALERT  0 tick=589429 goal=0 here=0
+01:34:09 ALERT  0 tick=589831 goal=0 here=0
+01:34:35 ALERT  0 tick=592441 goal=0 here=0
+01:35:14 ALERT  0 tick=596345 goal=0 here=0
+01:35:16 ALERT 0  tick=596545 goal=0 here=0
+01:35:31 ALERT  0 tick=598046 goal=0 here=0
+01:35:36 ALERT  0 tick=598546 goal=0 here=0
+01:35:37 ALERT  0 tick=598646 goal=0 here=0
+01:35:42 ALERT  0 tick=599147 goal=0 here=0
+01:35:45 ALERT 0  tick=599447 goal=0 here=0
+01:36:14 ALERT  0 tick=602352 goal=0 here=0
+01:36:46 ALERT 0  tick=605554 goal=0 here=0
+01:37:47 ALERT  0 tick=611664 goal=0 here=0
+01:37:49 ALERT  0 tick=611864 goal=0 here=0
+01:38:14 ALERT  0 tick=614378 goal=0 here=0
+01:38:23 ALERT 0  tick=615283 goal=0 here=0
+01:38:27 ALERT  0 tick=615683 goal=0 here=0
+01:39:10 ALERT  0 tick=619996 goal=0 here=0
+01:39:29 ALERT 0  tick=621897 goal=0 here=0
+01:39:32 ALERT 0  tick=622197 goal=0 here=0
+01:39:36 ALERT  0 tick=622597 goal=0 here=0
+01:39:50 ALERT 0  tick=623903 goal=0 here=0
+01:40:20 ALERT 0  tick=626914 goal=0 here=0
+01:40:21 ALERT 0  tick=627014 goal=0 here=0
+01:40:38 ALERT  0 tick=628717 goal=0 here=0
+01:40:49 ALERT  0 tick=629818 goal=0 here=0
+01:41:12 ALERT  0 tick=632122 goal=0 here=0
+01:41:30 ALERT  0 tick=633923 goal=0 here=0
+01:41:48 ALERT 0  tick=635724 goal=0 here=0
+01:42:54 ALERT  0 tick=642329 goal=0 here=0
+01:43:09 ALERT 0  tick=643830 goal=0 here=0
+01:43:11 ALERT  0 tick=644030 goal=0 here=0
+01:44:24 ALERT 0  tick=651335 goal=0 here=0
+01:44:55 ALERT  0 tick=654437 goal=0 here=0
+01:45:23 ALERT 0  tick=657240 goal=0 here=0
+01:45:56 ALERT 0  tick=660548 goal=0 here=0
+01:45:59 ALERT  0 tick=660848 goal=0 here=0
+01:46:40 ALERT 0  tick=664955 goal=0 here=0
+01:48:06 ALERT  0 tick=673564 goal=0 here=0
+01:48:17 ALERT  0 tick=674666 goal=0 here=0
+01:48:38 ALERT 0  tick=676767 goal=0 here=0
+01:48:42 ALERT 0 1 tick=677168 goal=0 here=0
+01:48:47 ALERT 0  tick=677668 goal=0 here=0
+01:48:48 ALERT 0 1 tick=677768 goal=0 here=0
+01:48:58 ALERT 0  tick=678768 goal=0 here=0
+01:49:15 ALERT  0 tick=680470 goal=0 here=0
+01:49:17 ALERT 0  tick=680670 goal=0 here=0
+01:50:03 ALERT  0 tick=685275 goal=0 here=0
+01:50:17 ALERT 0  tick=686676 goal=0 here=0
+01:50:20 ALERT 0  tick=686977 goal=0 here=0
+01:51:12 ALERT  0 tick=692186 goal=0 here=0
+01:51:13 ALERT 0  tick=692286 goal=0 here=0
+01:51:17 ALERT 0  tick=692687 goal=0 here=0
+01:52:12 ALERT  0 tick=698102 goal=0 here=0
+01:52:54 ALERT   
+01:52:58 ALERT  0 tick=702716 goal=0 here=0
+01:53:01 ALERT  0 tick=703016 goal=0 here=0
+01:53:30 ALERT  0 tick=705921 goal=0 here=0
+01:53:51 ALERT 0  tick=708027 goal=0 here=0
+01:53:54 ALERT 0  tick=708327 goal=0 here=0
+01:54:12 ALERT  0 tick=710132 goal=0 here=0
+01:55:19 ALERT  0 tick=716854 goal=0 here=0
+01:55:36 ALERT 0  tick=718555 goal=0 here=0
+01:55:58 ALERT 0  tick=720756 goal=0 here=0
+01:56:05 ALERT  0 tick=721457 goal=0 here=0
+01:56:21 ALERT  0 tick=723058 goal=0 here=0
+01:56:32 ALERT  0 tick=724159 goal=0 here=0
+01:56:53 ALERT 0  tick=726261 goal=0 here=0

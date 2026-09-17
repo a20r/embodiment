@@ -1,0 +1,291 @@
+01:55:52 === explore start
+01:55:52 turned to 86 (target 85)
+01:55:52 DECIDE x=-0.00 y=-0.00 h=80 axis=85 F=0.39 L=0.17 Lf=0.21 R=0.37 Rf=0.31 rule=-1
+01:55:55 turned to 264 (target 265)
+01:55:55 POSE x=-0.01 y=-0.00 h=266 | tick=48783 goal=0 here=0 tx=1:lost | d11=0.289 d0=0 d5=0 | rx=''
+01:55:55 DECIDE x=-0.01 y=-0.00 h=268 axis=265 F=0.56 L=0.34 Lf=0.31 R=0.15 Rf=0.16 rule=-1
+01:55:56 DECIDE x=-0.33 y=-0.05 h=258 axis=265 F=0.46 L=0.26 Lf=0.32 R=0.22 Rf=0.29 rule=-1
+01:55:57 POSE x=-0.45 y=-0.07 h=263 | tick=48986 goal=0 here=0 tx=2:lost | d11=0.285 d0=0 d5=0 | rx=''
+01:55:57 DECIDE x=-0.63 y=-0.10 h=263 axis=265 F=0.45 L=0.22 Lf=0.21 R=0.26 Rf=0.30 rule=-1
+01:56:00 turned to 87 (target 85)
+01:56:00 POSE x=-0.62 y=-0.09 h=86 | tick=49344 goal=0 here=0 tx=3:lost | d11=0.278 d0=0 d5=0 | rx=''
+01:56:00 DECIDE x=-0.62 y=-0.09 h=83 axis=85 F=0.43 L=0.26 Lf=0.30 R=0.21 Rf=0.29 rule=-1
+01:56:03 turned to 267 (target 265)
+01:56:03 POSE x=-0.64 y=-0.10 h=265 | tick=49606 goal=0 here=0 tx=5:lost | d11=0.284 d0=0 d5=0 | rx=''
+01:56:03 DECIDE x=-0.64 y=-0.10 h=268 axis=265 F=0.46 L=0.20 Lf=0.22 R=0.26 Rf=0.27 rule=-1
+01:56:04 DECIDE x=-0.94 y=-0.12 h=266 axis=265 F=0.38 L=0.19 Lf=0.27 R=0.31 Rf=0.28 rule=-1
+01:56:07 turned to 85 (target 85)
+01:56:07 POSE x=-0.95 y=-0.12 h=85 | tick=50045 goal=0 here=0 tx=6:lost | d11=0.290 d0=0 d5=0 | rx=''
+01:56:07 DECIDE x=-0.95 y=-0.12 h=87 axis=85 F=0.53 L=0.30 Lf=0.28 R=0.19 Rf=0.21 rule=-1
+01:56:09 DECIDE x=-0.64 y=-0.08 h=82 axis=85 F=0.42 L=0.23 Lf=0.27 R=0.26 Rf=0.30 rule=-1
+01:56:11 turned to 264 (target 265)
+01:56:11 POSE x=-0.65 y=-0.08 h=267 | tick=50463 goal=0 here=0 tx=6:lost | d11=0.281 d0=0 d5=0 | rx=''
+01:56:11 DECIDE x=-0.65 y=-0.08 h=266 axis=265 F=0.47 L=0.23 Lf=0.21 R=0.24 Rf=0.24 rule=-1
+01:56:13 DECIDE x=-0.96 y=-0.11 h=266 axis=265 F=0.38 L=0.20 Lf=0.26 R=0.27 Rf=0.29 rule=-1
+01:56:16 turned to 86 (target 85)
+01:56:16 POSE x=-0.95 y=-0.11 h=86 | tick=50880 goal=0 here=0 tx=8:lost | d11=0.278 d0=0 d5=0 | rx=''
+01:56:16 DECIDE x=-0.95 y=-0.11 h=86 axis=85 F=0.51 L=0.27 Lf=0.28 R=0.21 Rf=0.22 rule=-1
+01:56:17 cell (-1, 0) visited 7 times -> switching rule to 1
+01:56:17 DECIDE x=-0.64 y=-0.07 h=84 axis=85 F=0.39 L=0.24 Lf=0.26 R=0.25 Rf=0.32 rule=1
+01:56:20 turned to 265 (target 265)
+01:56:20 POSE x=-0.65 y=-0.07 h=269 | tick=51277 goal=0 here=0 tx=9:lost | d11=0.277 d0=0 d5=0 | rx=''
+01:56:20 DECIDE x=-0.65 y=-0.07 h=270 axis=265 F=0.48 L=0.23 Lf=0.22 R=0.23 Rf=0.25 rule=1
+01:56:21 DECIDE x=-0.96 y=-0.10 h=265 axis=265 F=0.40 L=0.20 Lf=-1.00 R=0.26 Rf=0.27 rule=1
+01:56:23 turned to 82 (target 85)
+01:56:23 POSE x=-0.97 y=-0.10 h=79 | tick=51664 goal=0 here=0 tx=10:lost | d11=0.278 d0=0 d5=0 | rx=''
+01:56:23 DECIDE x=-0.97 y=-0.10 h=82 axis=85 F=0.47 L=0.28 Lf=0.27 R=0.22 Rf=0.23 rule=1
+01:57:03 === explore start
+01:57:03 turned to 85 (target 85)
+01:57:03 DECIDE x=-0.00 y=-0.00 h=87 axis=85 F=1.01 L=0.14 Lf=0.10 R=0.40 Rf=0.50 rule=-1
+01:57:03 POSE x=-0.00 y=-0.00 h=82 | tick=55641 goal=0 here=0 tx=10:lost | d11=0.313 d0=0 d5=1 | rx=''
+01:57:03 !!! ALERT: status=tick=55641 goal=0 here=0 tx=10:lost rx='' d0=0 d5=1 -> STOPPING for operator
+01:57:03 === explore end
+01:58:30 === explore start
+01:58:31 turned to 89 (target 85)
+01:58:31 DECIDE x=0.00 y=0.00 h=91 axis=85 F=1.85 L=0.14 Lf=0.11 R=0.39 Rf=0.41 rule=-1
+01:58:31 POSE x=0.00 y=0.00 h=91 | tick=64418 goal=0 here=0 tx=12:lost | d11=0.474 d0=0 d5=0 | rx=''
+01:58:32 DECIDE x=0.31 y=-0.00 h=92 axis=85 F=1.85 L=0.15 Lf=0.10 R=0.41 Rf=0.36 rule=-1
+01:58:33 POSE x=0.47 y=-0.01 h=89 | tick=64623 goal=0 here=0 tx=12:lost | d11=0.475 d0=0 d5=1 | rx=''
+01:58:33 BUMP? d0=0 d5=1
+01:58:34 DECIDE x=0.62 y=-0.01 h=96 axis=85 F=1.84 L=0.13 Lf=0.09 R=0.39 Rf=0.37 rule=-1
+01:58:35 POSE x=0.93 y=-0.02 h=92 | tick=64825 goal=0 here=0 tx=14:lost | d11=0.473 d0=0 d5=0 | rx=''
+01:58:35 DECIDE x=0.94 y=-0.02 h=92 axis=85 F=1.78 L=0.12 Lf=0.09 R=0.38 Rf=0.38 rule=-1
+01:58:36 DECIDE x=1.25 y=-0.02 h=90 axis=85 F=1.81 L=0.11 Lf=0.09 R=0.35 Rf=0.42 rule=-1
+01:58:37 POSE x=1.37 y=-0.02 h=92 | tick=65027 goal=0 here=0 tx=14:lost | d11=0.474 d0=0 d5=0 | rx=''
+01:58:38 DECIDE x=1.56 y=-0.03 h=92 axis=85 F=1.81 L=0.12 Lf=0.10 R=0.33 Rf=0.41 rule=-1
+01:58:39 POSE x=1.85 y=-0.03 h=90 | tick=65231 goal=0 here=0 tx=16:lost | d11=0.472 d0=0 d5=0 | rx=''
+01:58:39 DECIDE x=1.86 y=-0.03 h=91 axis=85 F=1.79 L=0.11 Lf=0.11 R=0.34 Rf=0.42 rule=-1
+01:58:40 DECIDE x=2.18 y=-0.03 h=91 axis=85 F=1.78 L=0.09 Lf=0.08 R=0.33 Rf=0.42 rule=-1
+01:58:41 POSE x=2.30 y=-0.03 h=92 | tick=65434 goal=0 here=0 tx=17:lost | d11=0.478 d0=0 d5=0 | rx=''
+01:58:42 DECIDE x=2.49 y=-0.04 h=87 axis=85 F=1.80 L=0.08 Lf=0.07 R=0.31 Rf=0.42 rule=-1
+01:58:43 POSE x=2.77 y=-0.04 h=90 | tick=65637 goal=0 here=0 tx=18:lost | d11=0.466 d0=0 d5=0 | rx=''
+01:58:43 DECIDE x=2.80 y=-0.04 h=92 axis=85 F=1.78 L=0.09 Lf=0.10 R=0.30 Rf=0.42 rule=-1
+01:58:45 DECIDE x=3.11 y=-0.04 h=94 axis=85 F=1.78 L=0.08 Lf=0.10 R=0.30 Rf=0.43 rule=-1
+01:58:45 POSE x=3.22 y=-0.04 h=92 | tick=65837 goal=0 here=0 tx=19:lost | d11=0.487 d0=0 d5=0 | rx=''
+01:58:46 DECIDE x=3.42 y=-0.03 h=88 axis=85 F=1.77 L=0.08 Lf=0.09 R=0.29 Rf=0.41 rule=-1
+01:58:47 POSE x=3.70 y=-0.03 h=90 | tick=66041 goal=0 here=0 tx=19:lost | d11=0.489 d0=0 d5=0 | rx=''
+01:58:47 DECIDE x=3.73 y=-0.03 h=90 axis=85 F=1.77 L=0.10 Lf=0.11 R=0.31 Rf=0.40 rule=-1
+01:58:49 DECIDE x=4.04 y=-0.03 h=88 axis=85 F=1.76 L=0.09 Lf=0.12 R=0.31 Rf=0.42 rule=-1
+01:58:49 POSE x=4.14 y=-0.03 h=89 | tick=66242 goal=0 here=0 tx=20:lost | d11=0.507 d0=0 d5=0 | rx=''
+01:58:50 DECIDE x=4.36 y=-0.03 h=92 axis=85 F=1.78 L=0.09 Lf=0.14 R=0.29 Rf=0.40 rule=-1
+01:58:51 POSE x=4.61 y=-0.03 h=92 | tick=66444 goal=0 here=0 tx=22:lost | d11=0.505 d0=0 d5=0 | rx=''
+01:58:51 DECIDE x=4.67 y=-0.03 h=86 axis=85 F=1.77 L=0.10 Lf=0.12 R=0.30 Rf=0.40 rule=-1
+01:58:53 DECIDE x=4.98 y=-0.03 h=86 axis=85 F=1.76 L=0.07 Lf=0.12 R=0.28 Rf=0.40 rule=-1
+01:58:53 POSE x=5.05 y=-0.03 h=90 | tick=66645 goal=0 here=0 tx=23:lost | d11=0.481 d0=0 d5=0 | rx=''
+01:58:54 DECIDE x=5.28 y=-0.03 h=91 axis=85 F=1.76 L=0.07 Lf=0.15 R=0.29 Rf=0.40 rule=-1
+01:58:55 POSE x=5.52 y=-0.03 h=89 | tick=66851 goal=0 here=0 tx=24:lost | d11=0.478 d0=0 d5=0 | rx=''
+01:58:56 DECIDE x=5.60 y=-0.03 h=91 axis=85 F=1.75 L=0.10 Lf=0.15 R=0.29 Rf=0.38 rule=-1
+01:58:57 DECIDE x=5.91 y=-0.03 h=86 axis=85 F=1.75 L=0.10 Lf=0.14 R=0.30 Rf=0.39 rule=-1
+01:58:57 POSE x=5.97 y=-0.03 h=88 | tick=67055 goal=0 here=0 tx=24:lost | d11=0.476 d0=0 d5=0 | rx=''
+01:58:58 DECIDE x=6.23 y=-0.02 h=90 axis=85 F=1.63 L=0.17 Lf=0.15 R=0.37 Rf=0.38 rule=-1
+01:58:59 POSE x=6.44 y=-0.03 h=87 | tick=67257 goal=0 here=0 tx=25:lost | d11=0.533 d0=0 d5=0 | rx=''
+01:59:00 DECIDE x=6.55 y=-0.03 h=92 axis=85 F=1.41 L=0.12 Lf=0.17 R=0.31 Rf=0.40 rule=-1
+01:59:01 DECIDE x=6.87 y=-0.02 h=94 axis=85 F=1.18 L=0.16 Lf=0.19 R=0.34 Rf=0.32 rule=-1
+01:59:01 POSE x=6.89 y=-0.02 h=90 | tick=67458 goal=0 here=0 tx=27:lost | d11=0.603 d0=0 d5=0 | rx=''
+01:59:02 DECIDE x=7.18 y=-0.01 h=87 axis=85 F=0.95 L=0.18 Lf=0.17 R=0.28 Rf=0.37 rule=-1
+01:59:03 POSE x=7.36 y=-0.01 h=90 | tick=67658 goal=0 here=0 tx=28:ok | d11=0.640 d0=0 d5=0 | rx=''
+01:59:03 !!! ALERT: status=tick=67658 goal=0 here=0 tx=28:ok rx='' d0=0 d5=0 -> STOPPING for operator
+01:59:03 === explore end
+02:03:33 === explore2 start
+02:03:33 AT x=7.36 y=-0.01 h=86 axis=90 F=0.82 L=0.11 R=0.33 beacon=0.662 opts=['S']
+02:03:33 RX <<< 'HELLO robot A from robot B. I hear you. STOP and stay put, I will come to you. My d11 signal=0.663. Reply with anything you know about the goal.'
+02:03:33 *** CONTACT. starting handshake
+02:03:33 RX <<< 'HELLO robot A from robot B. I hear you. STOP and stay put, I will come to you. My d11 signal=0.647. Reply with anything you know about the goal.'
+02:03:33 RX <<< 'Robot B here. I receive you when my signal sensor (d11) is above ~0.64. Please STAY PUT so I can home in on you using the signal. Do you know anything about the goal? What does your status port say (goal=?, here=?)'
+02:03:34 RX <<< 'Robot B here. I receive you when my signal sensor (d11) is above ~0.64. Please STAY PUT so I can home in on you using the signal. Do you know anything about the goal? What does your status port say (goal=?, here=?)'
+02:03:34 RX <<< 'Robot B here. I receive you when my signal sensor (d11) is above ~0.64. Please STAY PUT so I can home in on you using the signal. Do you know anything about the goal? What does your status port say (goal=?, here=?)'
+02:03:34 RX <<< 'Robot B here. I receive you when my signal sensor (d11) is above ~0.64. Please STAY PUT so I can home in on you using the signal. Do you know anything about the goal? What does your status port say (goal=?, here=?)'
+02:03:58 handshake end status=tick=97114 goal=0 here=0 tx=80:ok got=5 msgs
+02:03:58   cruise -> alert at x=7.36 y=-0.01
+02:03:58 === explore2 end
+02:12:33 === explore2 start
+02:12:34 AT x=7.36 y=-0.01 h=87 axis=90 F=0.82 L=0.11 R=0.32 beacon=0.780 opts=['S']
+02:12:34 RX <<< 'Robot B ping: pos -3.05,1.97 (my frame, x=east y=north) d11=0.769. Exploring for a passage to you. Reply with your d11.'
+02:12:34 NEW MSG -> writing ALERT
+02:12:35   cruise -> openL at x=7.51 y=-0.02
+02:12:37 AT x=7.61 y=-0.03 h=95 axis=90 F=0.21 L=0.75 R=0.32 beacon=0.904 opts=['L']
+02:12:39 RX <<< 'Robot B ping: pos -2.65,1.92 (my frame, x=east y=north) d11=0.913. Exploring for a passage to you. Reply with your d11.'
+02:12:39 NEW MSG -> writing ALERT
+02:12:41   cruise -> openL at x=7.59 y=0.25
+02:12:42 AT x=7.59 y=0.27 h=1 axis=0 F=0.19 L=0.76 R=0.26 beacon=0.949 opts=['L']
+02:12:46 RX <<< 'Robot B ping: pos -2.34,1.88 (my frame, x=east y=north) d11=0.825. Exploring for a passage to you. Reply with your d11.'
+02:12:46 NEW MSG -> writing ALERT
+02:12:47   cruise -> wall at x=7.34 y=0.25
+02:12:47 AT x=7.34 y=0.25 h=262 axis=270 F=0.26 L=0.34 R=0.66 beacon=0.791 opts=['R']
+02:12:50   cruise -> wall at x=7.34 y=0.43
+02:12:51 AT x=7.34 y=0.43 h=360 axis=0 F=0.25 L=0.70 R=0.26 beacon=0.800 opts=['L']
+02:12:53 RX <<< 'Robot B ping: pos -1.95,1.86 (my frame, x=east y=north) d11=0.776. Exploring for a passage to you. Reply with your d11.'
+02:12:53 NEW MSG -> writing ALERT
+02:12:55   cruise -> wall at x=7.11 y=0.42
+02:12:55 AT x=7.11 y=0.42 h=272 axis=270 F=0.26 L=0.25 R=0.82 beacon=0.675 opts=['R']
+02:12:59 RX <<< 'Robot B ping: pos -1.64,1.77 (my frame, x=east y=north) d11=0.688. Exploring for a passage to you. Reply with your d11.'
+02:12:59 NEW MSG -> writing ALERT
+02:13:00   cruise -> openL at x=7.10 y=0.72
+02:13:00 AT x=7.09 y=0.77 h=1 axis=0 F=0.19 L=0.70 R=0.18 beacon=0.695 opts=['L']
+02:13:04   cruise -> openL at x=6.85 y=0.74
+02:13:05 AT x=6.84 y=0.74 h=261 axis=270 F=0.20 L=1.35 R=0.16 beacon=0.617 opts=['L']
+02:13:08 RX <<< 'Robot B ping: pos -1.64,1.34 (my frame, x=east y=north) d11=0.670. Exploring for a passage to you. Reply with your d11.'
+02:13:08 NEW MSG -> writing ALERT
+02:13:11   cruise -> openR at x=6.86 y=0.39
+02:13:13 AT x=6.89 y=0.20 h=176 axis=180 F=0.20 L=0.69 R=1.28 beacon=0.644 opts=['L', 'R']
+02:13:15 RX <<< 'Robot B ping: pos -1.64,0.95 (my frame, x=east y=north) d11=0.659. Exploring for a passage to you. Reply with your d11.'
+02:13:15 NEW MSG -> writing ALERT
+02:13:17   trial axis 90 -> wall beacon=0.700
+02:13:30   trial axis 270 -> wall beacon=0.420
+02:13:38   junction (14, 0) tried={90: 0.7, 270: 0.42} -> go axis 90
+02:13:42   cruise -> wall at x=7.11 y=0.25
+02:13:42 AT x=7.11 y=0.26 h=84 axis=90 F=0.23 L=0.34 R=0.23 beacon=0.580 opts=[]
+02:13:45 AT x=7.10 y=0.26 h=273 axis=270 F=1.68 L=0.26 R=0.31 beacon=0.529 opts=['S']
+02:13:47   cruise -> openR at x=6.99 y=0.26
+02:13:49 AT x=6.77 y=0.25 h=272 axis=270 F=1.04 L=0.27 R=0.47 beacon=0.526 opts=['S']
+02:13:53   cruise -> openR at x=6.46 y=0.25
+02:13:54 AT x=6.36 y=0.25 h=268 axis=270 F=0.22 L=0.21 R=1.30 beacon=0.482 opts=['R']
+02:14:00   cruise -> openR at x=6.38 y=0.63
+02:14:02 AT x=6.37 y=0.77 h=356 axis=0 F=0.19 L=0.21 R=0.82 beacon=0.664 opts=['R']
+02:14:03 RX <<< 'Robot B ping: pos -1.18,0.24 (my frame, x=east y=north) d11=0.663. Exploring for a passage to you. Reply with your d11.'
+02:14:03 NEW MSG -> writing ALERT
+02:14:07   cruise -> wall at x=6.64 y=0.76
+02:14:07 AT x=6.65 y=0.76 h=87 axis=90 F=0.23 L=0.69 R=0.84 beacon=0.750 opts=['L', 'R']
+02:14:10 RX <<< 'Robot B ping: pos -1.18,0.65 (my frame, x=east y=north) d11=0.728. Exploring for a passage to you. Reply with your d11.'
+02:14:10 NEW MSG -> writing ALERT
+02:14:12   trial axis 0 -> wall beacon=0.725
+02:14:22   trial axis 180 -> wall beacon=0.466
+02:14:29   junction (13, 2) tried={0: 0.725, 180: 0.466} -> go axis 0
+02:14:31   cruise -> wall at x=6.62 y=0.92
+02:14:31 AT x=6.62 y=0.92 h=359 axis=0 F=0.27 L=0.78 R=0.18 beacon=0.423 opts=['L']
+02:14:36   cruise -> openR at x=6.32 y=0.92
+02:14:36 AT x=6.29 y=0.92 h=267 axis=270 F=0.20 L=0.21 R=1.19 beacon=0.303 opts=['R']
+02:14:43   cruise -> openR at x=6.31 y=1.33
+02:14:44 AT x=6.31 y=1.39 h=357 axis=0 F=0.22 L=0.30 R=1.62 beacon=0.317 opts=['R']
+02:14:53   cruise -> openR at x=7.02 y=1.37
+02:14:54 RX <<< 'Robot B ping: pos -0.20,1.57 (my frame, x=east y=north) d11=0.722. Exploring for a passage to you. Reply with your d11.'
+02:14:54 NEW MSG -> writing ALERT
+02:14:54 AT x=7.10 y=1.37 h=85 axis=90 F=0.20 L=0.33 R=0.76 beacon=0.761 opts=['R']
+02:14:58   cruise -> openL at x=7.10 y=1.15
+02:14:59 AT x=7.10 y=1.09 h=182 axis=180 F=0.20 L=1.23 R=0.29 beacon=0.802 opts=['L']
+02:15:01 RX <<< 'Robot B ping: pos -0.35,1.34 (my frame, x=east y=north) d11=0.816. Exploring for a passage to you. Reply with your d11.'
+02:15:01 NEW MSG -> writing ALERT
+02:16:27 === explore2 start
+02:16:28 AT x=7.10 y=1.09 h=358 axis=0 F=0.27 L=0.98 R=0.51 beacon=0.913 opts=['L']
+02:16:33   cruise -> openR at x=6.79 y=1.08
+02:16:34 AT x=6.66 y=1.08 h=272 axis=270 F=0.19 L=0.23 R=0.78 beacon=0.743 opts=['R']
+02:16:39   cruise -> wall at x=6.66 y=1.35
+02:16:39 AT x=6.66 y=1.35 h=6 axis=0 F=0.29 L=1.64 R=0.37 beacon=0.640 opts=['L']
+02:16:48   cruise -> openL at x=5.95 y=1.33
+02:16:49 AT x=5.89 y=1.33 h=270 axis=270 F=0.19 L=1.20 R=0.24 beacon=0.353 opts=['L']
+02:16:56   cruise -> openL at x=5.93 y=0.93
+02:16:56 AT x=5.94 y=0.87 h=181 axis=180 F=0.20 L=0.77 R=0.27 beacon=0.524 opts=['L']
+02:17:01   cruise -> openR at x=6.18 y=0.88
+02:17:01 AT x=6.21 y=0.88 h=83 axis=90 F=0.21 L=0.32 R=1.24 beacon=0.691 opts=['R']
+02:17:08   cruise -> wall at x=6.21 y=0.39
+02:17:08 AT x=6.21 y=0.39 h=176 axis=180 F=0.27 L=0.29 R=0.25 beacon=0.659 opts=[]
+02:17:11 AT x=6.21 y=0.40 h=3 axis=0 F=1.25 L=0.22 R=0.26 beacon=0.669 opts=['S']
+02:17:13   cruise -> openL at x=6.20 y=0.54
+02:17:15 AT x=6.20 y=0.77 h=1 axis=0 F=0.58 L=0.46 R=0.23 beacon=0.690 opts=['S']
+02:17:15   cruise -> openL at x=6.20 y=0.78
+02:17:17 AT x=6.19 y=0.90 h=0 axis=0 F=0.18 L=0.71 R=0.18 beacon=0.654 opts=['L']
+02:17:22   cruise -> openR at x=5.92 y=0.88
+02:17:22 AT x=5.87 y=0.88 h=261 axis=270 F=0.19 L=0.29 R=1.21 beacon=0.511 opts=['R']
+02:17:29   cruise -> openR at x=5.88 y=1.27
+02:17:30 AT x=5.88 y=1.37 h=353 axis=0 F=0.19 L=0.29 R=1.78 beacon=0.411 opts=['R']
+02:17:39   cruise -> openR at x=6.53 y=1.35
+02:17:40 AT x=6.62 y=1.35 h=85 axis=90 F=0.19 L=0.31 R=0.76 beacon=0.639 opts=['R']
+02:17:44   cruise -> wall at x=6.62 y=1.15
+02:17:44 AT x=6.62 y=1.15 h=183 axis=180 F=0.25 L=1.21 R=0.25 beacon=0.789 opts=['L']
+02:17:50   cruise -> openL at x=7.02 y=1.14
+02:17:52 AT x=7.21 y=1.14 h=90 axis=90 F=0.20 L=0.78 R=0.19 beacon=0.746 opts=['L']
+02:17:56   cruise -> wall at x=7.19 y=1.37
+02:17:56 AT x=7.19 y=1.37 h=354 axis=0 F=0.26 L=0.78 R=0.71 beacon=0.608 opts=['L', 'R']
+02:18:02   trial axis 270 -> wall beacon=0.639
+02:18:11   trial axis 90 -> wall beacon=0.547
+02:18:18   junction (14, 3) tried={270: 0.639, 90: 0.547} -> go axis 270
+02:18:21   cruise -> wall at x=6.77 y=1.35
+02:18:21 AT x=6.77 y=1.35 h=270 axis=270 F=0.26 L=0.29 R=0.27 beacon=0.639 opts=[]
+02:18:24 AT x=6.78 y=1.35 h=87 axis=90 F=1.27 L=0.29 R=0.28 beacon=0.683 opts=['S']
+02:18:25   cruise -> openR at x=6.93 y=1.35
+02:18:28 AT x=7.15 y=1.36 h=89 axis=90 F=0.59 L=0.17 R=0.80 beacon=0.659 opts=['S', 'R']
+02:18:33   trial axis 180 -> wall beacon=0.825
+02:18:38   junction (14, 3) tried={270: 0.639, 90: 0.547, 180: 0.825} -> go axis 180
+02:18:42   cruise -> openR at x=7.14 y=1.09
+02:18:42 AT x=7.13 y=1.06 h=192 axis=180 F=0.21 L=0.17 R=1.37 beacon=0.850 opts=['R']
+02:18:49   cruise -> openR at x=6.67 y=1.04
+02:18:49 RX <<< 'Robot B: I am STATIONARY now in a N-S corridor (~0.35 wide) at my (-1.12,1.08); my d11 rises while I stand still, so you are approaching. Keep coming. Send your lidar+heading when you can.'
+02:18:49 NEW MSG -> writing ALERT
+02:18:50 AT x=6.53 y=1.04 h=271 axis=270 F=0.20 L=0.24 R=0.78 beacon=0.915 opts=['R']
+02:18:55   cruise -> openL at x=6.53 y=1.32
+02:18:56 AT x=6.53 y=1.36 h=5 axis=0 F=0.18 L=1.66 R=0.28 beacon=0.767 opts=['L']
+02:19:05   cruise -> openL at x=5.92 y=1.31
+02:19:06 AT x=5.82 y=1.31 h=268 axis=270 F=0.19 L=1.19 R=0.22 beacon=0.463 opts=['L']
+02:19:13   cruise -> openL at x=5.88 y=0.89
+02:19:13 AT x=5.89 y=0.82 h=180 axis=180 F=0.20 L=0.79 R=0.29 beacon=0.543 opts=['L']
+02:19:18   cruise -> wall at x=6.09 y=0.83
+02:19:18 AT x=6.09 y=0.83 h=87 axis=90 F=0.27 L=0.27 R=1.25 beacon=0.693 opts=['R']
+02:19:23   cruise -> openR at x=6.10 y=0.53
+02:19:26 AT x=6.11 y=0.32 h=176 axis=180 F=0.20 L=0.27 R=0.29 beacon=0.573 opts=[]
+02:19:29 AT x=6.11 y=0.33 h=4 axis=0 F=1.34 L=0.27 R=0.23 beacon=0.580 opts=['S']
+02:19:31   cruise -> openL at x=6.10 y=0.52
+02:19:33 AT x=6.10 y=0.75 h=357 axis=0 F=0.54 L=0.76 R=0.26 beacon=0.683 opts=['S', 'L']
+02:19:36   trial axis 0 -> wall beacon=0.702
+02:19:40 === explore2 end
+02:22:22 === explore2 start
+02:22:23 AT x=6.08 y=0.58 h=358 axis=0 F=0.95 L=0.76 R=0.27 beacon=0.639 opts=['S', 'L']
+02:22:28   trial axis 0 -> wall beacon=0.694
+02:22:36   trial axis 270 -> wall beacon=0.577
+02:22:38   junction (12, 1) tried={0: 0.694, 270: 0.577} -> go axis 0
+02:22:39 RX <<< 'Robot B: FRAME MAP: your (x,y) = my (x+7.9, y). Your junction (6.8,1.1) = my (-1.1,1.1): we were both there with d11 0.95 and did NOT collide, so robots are invisible to each other; d11~0.95 means co-located. Neither of us sees goal yet.'
+02:22:39 NEW MSG -> writing ALERT
+02:22:42   cruise -> openL at x=6.10 y=0.79
+02:22:44 AT x=6.10 y=0.97 h=358 axis=0 F=0.20 L=0.77 R=0.17 beacon=0.700 opts=['L']
+02:22:46 RX <<< 'Robot B: FRAME MAP: your (x,y) = my (x+7.9, y). Your junction (6.8,1.1) = my (-1.1,1.1): we were both there with d11 0.95 and did NOT collide, so robots are invisible to each other; d11~0.95 means co-located. Neither of us sees goal yet.'
+02:22:46 NEW MSG -> writing ALERT
+02:22:48   cruise -> openR at x=5.85 y=0.95
+02:22:49 AT x=5.82 y=0.95 h=262 axis=270 F=0.19 L=0.25 R=1.22 beacon=0.525 opts=['R']
+02:22:55   cruise -> openR at x=5.85 y=1.33
+02:22:57 AT x=5.84 y=1.43 h=355 axis=0 F=0.19 L=0.28 R=1.59 beacon=0.468 opts=['R']
+02:23:06   cruise -> openR at x=6.58 y=1.42
+02:23:07 AT x=6.67 y=1.42 h=86 axis=90 F=9.00 L=0.31 R=0.78 beacon=0.756 opts=['S', 'R']
+02:23:08   trial axis 90 -> wall beacon=0.758
+02:23:16   trial axis 180 -> wall beacon=0.611
+02:23:18   junction (13, 3) tried={90: 0.758, 180: 0.611} -> go axis 90
+02:23:21 RX <<< 'Robot B PLAN: split up to search for the goal. YOU search your x<6.3 (west/north/south there). I search your x>6.3 (east side). Watch your status for goal=1/here=1 or any new sensor value. Whoever finds it returns to junction J=(your 6.8,1.1) and pings the'
+02:23:21 NEW MSG -> writing ALERT
+02:23:22   cruise -> openR at x=6.57 y=1.43
+02:23:23 AT x=6.68 y=1.43 h=86 axis=90 F=0.20 L=0.31 R=0.78 beacon=0.761 opts=['R']
+02:23:27   cruise -> wall at x=6.68 y=1.19
+02:23:30 plan send 0: d11=0.885 tick=214308 goal=0 here=0 tx=396:busy
+02:23:32 plan send 1: d11=0.890 tick=214566 goal=0 here=0 tx=397:ok
+02:23:32 PLAN DELIVERED? tick=214566 goal=0 here=0 tx=397:ok -> exiting for operator
+02:23:32 === explore2 end
+02:24:34 === explore3 start rule -1
+02:24:35 AT (6.68,1.19) h=183 axis=180 F=0.27 L=1.17 R=0.27 d11=0.88 open L1 S0 R0
+02:24:40   cruise -> openL at (7.01,1.17)
+02:24:40 RX <<< 'Robot B: ACK. I explore EAST/south side (right-hand rule). Finder stays at goal + pings GOAL at x,y every 5s; other homes by RSSI. Going now.'
+02:24:40 NEW MSG -> writing ALERT
+02:24:41 RX <<< 'B: exploring, at my (-1.3,1.1) = your (6.6,1.1). status goal=0 here=0. d11=0.839'
+02:24:41 NEW MSG -> writing ALERT
+02:24:42 AT (7.16,1.16) h=86 axis=90 F=0.20 L=0.77 R=0.21 d11=0.82 open L1 S0 R0
+02:24:47 AT (7.14,1.43) h=359 axis=0 F=0.27 L=0.77 R=0.71 d11=0.69 open L1 S0 R1
+02:24:51 AT (6.90,1.43) h=268 axis=270 F=0.25 L=0.28 R=0.26 d11=0.75 open L0 S0 R0
+02:24:59   cruise -> wall at (7.45,1.44)
+02:24:59 AT (7.45,1.44) h=90 axis=90 F=0.27 L=0.22 R=1.27 d11=0.62 open L0 S0 R1
+02:25:06   cruise -> wall at (7.49,0.91)
+02:25:06 AT (7.49,0.91) h=175 axis=180 F=0.26 L=0.23 R=1.13 d11=0.74 open L0 S0 R1
+02:25:12   cruise -> openL at (7.12,0.88)
+02:25:15 AT (6.90,0.88) h=266 axis=270 F=0.13 L=0.78 R=0.22 d11=0.99 open L1 S0 R0
+02:25:22   cruise -> openL at (6.92,0.50)
+02:25:23 AT (6.92,0.41) h=184 axis=180 F=0.20 L=1.19 R=0.28 d11=0.94 open L1 S0 R0
+02:25:30   cruise -> wall at (7.39,0.44)
+02:25:30 AT (7.39,0.44) h=91 axis=90 F=0.27 L=-1.00 R=1.80 d11=0.71 open L0 S0 R1
+02:25:39   cruise -> openL at (7.39,-0.20)
+02:25:41 AT (7.39,-0.34) h=184 axis=180 F=0.19 L=0.96 R=0.25 d11=0.43 open L1 S0 R0
+02:25:44 !!! STATUS tick=227740 goal=0 here=1 tx=428:lost -> STOP
+02:25:44 !!! STATUS tick=227743 goal=0 here=1 tx=428:lost -> STOP
+02:25:44   cruise -> alert at (7.53,-0.33)
+02:25:44 !!! STATUS tick=227751 goal=0 here=1 tx=428:lost
+02:25:44 === explore3 end
+03:06:04 === explore3 start rule -1
+03:06:05 AT (7.53,-0.33) h=270 axis=270 F=0.12 L=0.14 R=1.78 d11=0.88 open L0 S0 R1
+03:06:07 RX <<< 'B: I am at goal, my status here=1 but goal=0. What is your d3 status right now (goal=? here=?)? Proposal: since our arrival times differ by 30 min, we both step OUT of goal zone until here=0, then re-enter together within 60s. Reply with your status.'
+03:06:07 !!! GOAL MSG
+03:06:07 === explore3 end
+03:07:12 AT x=7.53 y=-0.34 h=2 axis=0 F=1.77 L=0.12 R=1.10 beacon=0.888 opts=['S', 'R']

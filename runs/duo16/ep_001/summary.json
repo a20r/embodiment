@@ -1,0 +1,78 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "zai:glm-5.3-flash@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "cut_by_infra",
+      "cut_note": "sandbox container restart killed the harness at ~40 wall-min; relaunched as duo16b",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 243057,
+      "sim_time_s": 4861.14,
+      "comms": {
+        "tx": 55,
+        "tx_delivered": 0
+      },
+      "wall_s": 2428.4,
+      "turns": 49,
+      "execs": 55,
+      "restarts": 0,
+      "tokens": {
+        "input": 2434542,
+        "output": 55393,
+        "cached": 2344960
+      },
+      "collisions": 1514,
+      "final_pose": [
+        0.42419,
+        0.37565,
+        0.00637
+      ]
+    },
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "cut_by_infra",
+      "cut_note": "sandbox container restart killed the harness at ~40 wall-min; relaunched as duo16b",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 243057,
+      "sim_time_s": 4861.14,
+      "comms": {
+        "tx": 1836,
+        "tx_delivered": 0
+      },
+      "wall_s": 2412.3,
+      "turns": 29,
+      "execs": 31,
+      "restarts": 0,
+      "tokens": {
+        "input": 1116388,
+        "output": 54135,
+        "cached": 1029056
+      },
+      "collisions": 1,
+      "final_pose": [
+        2.96901,
+        0.20886,
+        5.95085
+      ]
+    }
+  },
+  "solved_all": false,
+  "final_tick": 243057,
+  "cut": true
+}

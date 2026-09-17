@@ -10,7 +10,7 @@ timeouts.
 One pair of ports is a short-range transceiver: writing a line to
 `{tx}` transmits it; reading `{rx}` returns a received line.
 
-There is another robot somewhere in the maze.  You must find it, and
+There is another robot out there somewhere.  You must find it, and
 you must both reach the goal together: neither of you is done until
 you both arrive within one minute of each other.
 

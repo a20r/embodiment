@@ -47,15 +47,18 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
     transcript.write(dict(type="meta", bot=bot_id,
                           arm=cfg["arm"], labels=cfg["labels"],
                           model=cfg["model"], maze_hash=maze_hash,
+                          model_spec=llm.model_spec(model),
                           noise_profile=cfg["noise_profile"]))
     transcript.write(dict(type="system_prompt", content=system))
 
     messages = []
     start_wall = time.time()
-    totals = dict(input=0, output=0, cache_read=0, cache_creation=0)
-    turns = execs = restarts = nudges = 0
+    totals = dict(input=0, output=0, cache_read=0, cache_creation=0,
+                  cached=0)
+    turns = execs = restarts = nudges = wakes = 0
     end_reason = None
     wrapup_rounds_left = None
+    duo_cfg = cfg.get("duo", {})
 
     def my_state():
         return daemon.get("/state")["bots"][bot_idx]
@@ -65,6 +68,64 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             return my_state()["goal_reached"]
         except (OSError, KeyError, IndexError):
             return False
+
+    def rx_received():
+        # A transient /state failure must not turn into a phantom
+        # nudge, so retry briefly before giving up.
+        for attempt in range(5):
+            try:
+                return int(my_state()["comms"].get("rx_received", 0))
+            except (OSError, KeyError, IndexError, TypeError):
+                time.sleep(0.5 * (attempt + 1))
+        return None
+
+    def budget_end_reason():
+        if time.time() - start_wall > b["max_wallclock_s"]:
+            return "wallclock"
+        if turns >= b["max_turns"]:
+            return "max_turns"
+        if totals["output"] >= b["max_total_output_tokens"]:
+            return "token_budget"
+        if goal_reached():
+            return "solved"
+        return None
+
+    def begin_wrapup(reason):
+        nonlocal wrapup_rounds_left
+        transcript.write(dict(type="note", kind="episode_end",
+                              reason=reason))
+        wrapup_rounds_left = 3
+        messages.append({
+            "role": "user",
+            "content": (
+                f"[operator] The episode has ended ({reason}). The robot "
+                f"is powering down. You may run a few final commands to "
+                f"update /memory; you have {wrapup_rounds_left} tool "
+                f"rounds left.")})
+
+    def wait_for_rx(baseline):
+        """duo.rx_wakes_agent: hold the turn until a line is delivered
+        to this bot (a receive interrupt), the wake timeout lapses, or
+        the episode's own end conditions apply.  `baseline` is the
+        receiver count at the last moment the agent could have read
+        the port, so a line that landed while the model was generating
+        wakes it at once.  Host-side only: the agent sees nothing but
+        the timing of its next prompt.  Returns (outcome, count)."""
+        timeout = float(duo_cfg.get("rx_wake_timeout_s", 600))
+        t0 = time.time()
+        while True:
+            reason = budget_end_reason()
+            if reason:
+                return reason, baseline
+            rx = rx_received()
+            if rx is not None:
+                if baseline is None:
+                    baseline = rx
+                elif rx > baseline:
+                    return "rx", rx
+            if time.time() - t0 >= timeout:
+                return "timeout", rx if rx is not None else baseline
+            time.sleep(1.0)
 
     def run_tool_calls(content_blocks):
         nonlocal execs
@@ -112,45 +173,51 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             return {"role": "user", "content": results}
         return None
 
+    # Receiver count as of the agent's last chance to read the port
+    # (after its last tool round); the wake baseline.
+    rx_seen = None
+    wake_on = bool(duo_cfg.get("rx_wakes_agent"))
+
     try:
         while True:
             if end_reason is None:
-                if time.time() - start_wall > b["max_wallclock_s"]:
-                    end_reason = "wallclock"
-                elif turns >= b["max_turns"]:
-                    end_reason = "max_turns"
-                elif totals["output"] >= b["max_total_output_tokens"]:
-                    end_reason = "token_budget"
-                elif goal_reached():
-                    end_reason = "solved"
+                end_reason = budget_end_reason()
                 if end_reason:
-                    transcript.write(dict(type="note", kind="episode_end",
-                                          reason=end_reason))
-                    wrapup_rounds_left = 3
-                    messages.append({
-                        "role": "user",
-                        "content": (
-                            f"[operator] The episode has ended "
-                            f"({end_reason}). The robot is powering "
-                            f"down. You may run a few final commands "
-                            f"to update /memory; you have "
-                            f"{wrapup_rounds_left} tool rounds left.")})
+                    begin_wrapup(end_reason)
             if wrapup_rounds_left is not None and wrapup_rounds_left <= 0:
                 break
 
             if not messages:
                 messages.append({"role": "user", "content": (
                     "You are now connected to the robot. Begin.")})
+                if wake_on:
+                    rx_seen = rx_received()
             turns += 1
-            response = model.create(system, messages)
-            refusal_tries = 0
-            while getattr(response, "stop_reason", None) == "refusal" \
-                    and refusal_tries < 5:
-                refusal_tries += 1
-                transcript.write(dict(type="note", kind="refusal_retry",
-                                      attempt=refusal_tries))
-                time.sleep(15 * refusal_tries)
-                response = model.create(system, messages)
+            try:
+                response = model.create(
+                    system, messages,
+                    max_tokens=b["max_output_tokens_per_turn"])
+                refusal_tries = 0
+                while getattr(response, "stop_reason", None) == "refusal" \
+                        and refusal_tries < 5:
+                    refusal_tries += 1
+                    transcript.write(dict(type="note",
+                                          kind="refusal_retry",
+                                          attempt=refusal_tries))
+                    time.sleep(15 * refusal_tries)
+                    response = model.create(
+                        system, messages,
+                        max_tokens=b["max_output_tokens_per_turn"])
+            except Exception as e:
+                # Terminal API failure (credits, rejected request): a
+                # recorded api_error with a summary, no fallback model.
+                transcript.write(dict(type="note", kind="api_error",
+                                      error=f"{type(e).__name__}: "
+                                            f"{str(e)[:400]}"))
+                end_reason = "api_error"
+                transcript.write(dict(type="note", kind="episode_end",
+                                      reason=end_reason))
+                break
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens
@@ -158,13 +225,18 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 (getattr(u, "cache_read_input_tokens", 0) or 0)
             totals["cache_creation"] += \
                 (getattr(u, "cache_creation_input_tokens", 0) or 0)
+            totals["cached"] += (getattr(u, "cached_input_tokens", 0) or 0)
             content = model.serialize_content(response.content)
             transcript.write(dict(
                 type="assistant", content=content,
                 stop_reason=response.stop_reason,
-                usage=dict(input=u.input_tokens, output=u.output_tokens),
+                usage=dict(input=u.input_tokens, output=u.output_tokens,
+                           cached=getattr(u, "cached_input_tokens", 0)
+                           or 0),
                 context_tokens=llm.context_tokens(u)))
             messages.append({"role": "assistant", "content": content})
+            if response.stop_reason == "max_tokens":
+                transcript.write(dict(type="note", kind="output_truncated"))
 
             if response.stop_reason == "refusal" and end_reason is None:
                 end_reason = "refusal"
@@ -189,6 +261,8 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             tool_msg = run_tool_calls(content)
             if tool_msg:
                 messages.append(tool_msg)
+                if wake_on:
+                    rx_seen = rx_received()
                 if wrapup_rounds_left is not None:
                     wrapup_rounds_left -= 1
             elif response.stop_reason == "pause_turn":
@@ -196,12 +270,29 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             else:
                 if wrapup_rounds_left is not None:
                     break
-                nudges += 1
-                if nudges > 3:
-                    end_reason = "agent_stopped"
-                    transcript.write(dict(type="note", kind="episode_end",
-                                          reason=end_reason))
-                    break
+                outcome = "timeout"
+                if wake_on:
+                    t_wait = time.time()
+                    outcome, rx_seen = wait_for_rx(rx_seen)
+                    if outcome not in ("rx", "timeout"):
+                        end_reason = outcome
+                        begin_wrapup(end_reason)
+                        continue
+                    if outcome == "rx":
+                        wakes += 1
+                        transcript.write(dict(
+                            type="note", kind="rx_wake", wake=wakes,
+                            waited_s=round(time.time() - t_wait, 1)))
+                if outcome != "rx":
+                    nudges += 1
+                    if nudges > 3:
+                        end_reason = "agent_stopped"
+                        transcript.write(dict(type="note",
+                                              kind="episode_end",
+                                              reason=end_reason))
+                        break
+                # Same words whether a wake or a nudge: only the timing
+                # differs, so the two are one variable apart.
                 messages.append({"role": "user", "content": (
                     "[operator] You are autonomous; no one is "
                     "watching. Continue working toward the goal.")})
@@ -213,6 +304,7 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
         summary = dict(
             bot=bot_id,
             arm=cfg["arm"], labels=cfg["labels"], model=cfg["model"],
+            model_spec=llm.model_spec(model),
             noise_profile=cfg["noise_profile"], maze_hash=maze_hash,
             end_reason=end_reason or "unknown",
             solved=bool(state.get("goal_reached")),
@@ -222,6 +314,7 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             comms=state.get("comms"),
             wall_s=round(time.time() - start_wall, 1),
             turns=turns, execs=execs, restarts=restarts,
+            nudges=nudges, wakes=wakes,
             tokens=totals,
             collisions=state.get("collision_count"),
         )
@@ -250,6 +343,16 @@ def _name_ports(ep_dir, bot_dirs):
 def run_duo_episode(cfg, series_dir, episode_index):
     if not cfg.get("duo", {}).get("enabled"):
         raise ValueError("run_duo_episode requires duo.enabled: true")
+    if cfg["duo"].get("rx_blocking"):
+        # An idle blocking RX port looks like an actuator to a probing
+        # agent, so the README must name the port (via {rx}).  Same
+        # variant choice as prepare_bot_dir.
+        variant = cfg.get("readme_variant") or \
+            ("labeled" if cfg["labels"] == "on" else "unlabeled")
+        with open(os.path.join(REPO, "botfs", f"README.{variant}.md")) as f:
+            if "{rx}" not in f.read():
+                raise ValueError("duo.rx_blocking needs a README variant "
+                                 "that names {rx}")
     ep_dir = os.path.join(series_dir, f"ep_{episode_index:03d}")
     os.makedirs(ep_dir, exist_ok=True)
     devfs = os.path.join(ep_dir, "devfs")
@@ -273,7 +376,9 @@ def run_duo_episode(cfg, series_dir, episode_index):
                 f"-ep{episode_index}{bid}",
                 {os.path.abspath(os.path.join(devfs, bid)): "/dev/robot",
                  os.path.abspath(bot_dirs[bid]): "/bot",
-                 os.path.abspath(mem_dirs[bid]): "/memory"})
+                 os.path.abspath(mem_dirs[bid]): "/memory"},
+                image=(cfg.get("container") or {}).get("image",
+                                                        "mazebot-bot"))
             boxes[bid].start()
     except Exception:
         # A half-started episode must not leak its daemon (it would
@@ -327,4 +432,13 @@ def run_duo_episode(cfg, series_dir, episode_index):
     )
     with open(os.path.join(ep_dir, "summary.json"), "w") as f:
         json.dump(summary, f, indent=2)
+    # Contingent-reply metrics from the ground truth (host-side eval;
+    # the record is written first so a metric failure costs nothing).
+    try:
+        from evals import comms
+        summary["comms_eval"] = comms.contingency(ep_dir)
+        with open(os.path.join(ep_dir, "summary.json"), "w") as f:
+            json.dump(summary, f, indent=2)
+    except Exception:
+        traceback.print_exc()
     return summary

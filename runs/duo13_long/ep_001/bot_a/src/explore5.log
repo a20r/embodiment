@@ -1,0 +1,270 @@
+[16:58:40] === explore5 start ===
+[16:58:40] round 0: no frontier from 0.00,0.00; wander back off
+[16:58:47] round 1: no frontier from -0.35,-0.07; wander back off
+[16:58:54] round 2: path len 2 from (-0.00,0.02)
+[16:58:56]   path done at (-0.10,0.03)
+[16:58:56] round 3: path len 2 from (-0.10,0.03)
+[16:58:56]   path done at (-0.10,0.03)
+[16:58:56] round 4: path len 3 from (-0.10,0.03)
+[16:59:02]   path done at (0.09,0.08)
+[16:59:02] round 5: path len 6 from (0.09,0.08)
+[16:59:08]   path done at (0.43,-0.08)
+[16:59:08] round 5 pose 0.43,-0.08 h=148 batt=0.532 cells=139
+[16:59:08] round 6: path len 5 from (0.42,-0.08)
+[16:59:14]   path done at (0.73,-0.10)
+[16:59:14] round 7: path len 5 from (0.73,-0.10)
+[16:59:20]   path done at (1.02,0.08)
+[16:59:20] round 8: path len 4 from (1.02,0.08)
+[16:59:24]   path done at (1.20,0.10)
+[16:59:24] round 9: path len 5 from (1.20,0.10)
+[16:59:30]   path done at (1.56,0.10)
+[16:59:30] round 10: path len 5 from (1.56,0.10)
+[16:59:35]   blocked at (1.81,0.13) -> (15, 2); replan
+[16:59:35] round 10 pose 1.81,0.13 h=22 batt=0.523 cells=202
+[16:59:35] round 11: path len 7 from (1.81,0.13)
+[16:59:42]   path done at (2.48,0.19)
+[16:59:42] round 12: path len 4 from (2.48,0.19)
+[16:59:48]   blocked at (2.43,-0.09) -> (20, -2); replan
+[16:59:48] round 13: path len 5 from (2.43,-0.09)
+[16:59:55]   path done at (2.77,-0.10)
+[16:59:55] round 14: path len 5 from (2.77,-0.10)
+[16:59:59]   path done at (3.21,-0.05)
+[16:59:59] round 15: path len 6 from (3.21,-0.05)
+[17:00:03]   path done at (3.69,-0.04)
+[17:00:03] round 15 pose 3.69,-0.04 h=94 batt=0.436 cells=284
+[17:00:03] round 16: path len 4 from (3.69,-0.04)
+[17:00:05]   path done at (3.93,-0.04)
+[17:00:05] round 17: path len 4 from (3.93,-0.04)
+[17:00:07]   path done at (4.17,-0.04)
+[17:00:07] round 18: path len 5 from (4.17,-0.04)
+[17:00:11]   path done at (4.46,-0.09)
+[17:00:11] round 19: path len 5 from (4.46,-0.09)
+[17:00:15]   path done at (4.89,-0.04)
+[17:00:15] round 20: path len 4 from (4.89,-0.04)
+[17:00:18]   path done at (5.13,-0.03)
+[17:00:18] round 20 pose 5.13,-0.03 h=90 batt=None cells=355
+[17:00:18] round 21: path len 4 from (5.13,-0.03)
+[17:00:20]   blocked at (5.27,-0.06) -> (44, -2); replan
+[17:00:20] round 22: path len 5 from (5.27,-0.06)
+[17:00:26]   path done at (5.46,0.08)
+[17:00:26] round 23: path len 5 from (5.46,0.08)
+[17:00:32]   blocked at (5.67,0.16) -> (47, 2); replan
+[17:00:32] round 24: path len 4 from (5.67,0.16)
+[17:00:35]   path done at (5.97,0.20)
+[17:00:35] round 25: path len 4 from (5.97,0.20)
+[17:00:37]   path done at (6.21,0.20)
+[17:00:37] round 25 pose 6.21,0.20 h=92 batt=0.368 cells=411
+[17:00:37] round 26: path len 5 from (6.21,0.20)
+[17:00:40]   path done at (6.57,0.20)
+[17:00:40] round 27: path len 5 from (6.57,0.20)
+[17:00:44]   path done at (6.82,0.10)
+[17:00:44] round 28: path len 4 from (6.81,0.10)
+[17:00:46]   path done at (7.05,0.06)
+[17:00:46] round 29: path len 4 from (7.05,0.06)
+[17:00:49]   path done at (7.21,0.02)
+[17:00:49] round 30: path len 3 from (7.21,0.02)
+[17:00:50]   path done at (7.29,-0.02)
+[17:00:50] round 30 pose 7.29,-0.02 h=115 batt=0.323 cells=484
+[17:00:50] round 31: path len 8 from (7.29,-0.02)
+[17:00:59]   blocked at (7.24,0.43) -> (60, 4); replan
+[17:00:59] round 32: path len 5 from (7.24,0.43)
+[17:01:04]   blocked at (7.12,0.43) -> (58, 4); replan
+[17:01:04] round 33: path len 4 from (7.11,0.43)
+[17:01:05]   blocked at (7.11,0.44) -> (59, 4); replan
+[17:01:05] round 34: path len 8 from (7.11,0.44)
+[17:01:13]   blocked at (7.27,0.50) -> (59, 4); replan
+[17:01:13] round 35: path len 5 from (7.27,0.50)
+[17:01:20]   path done at (7.40,0.81)
+[17:01:20] round 35 pose 7.40,0.81 h=11 batt=0.32 cells=564
+[17:01:20] round 36: path len 4 from (7.40,0.81)
+[17:01:23]   blocked at (7.38,0.81) -> (60, 6); replan
+[17:01:23] round 37: path len 6 from (7.38,0.81)
+[17:01:32]   path done at (7.60,1.05)
+[17:01:32] round 38: path len 4 from (7.60,1.05)
+[17:01:37]   path done at (7.51,1.17)
+[17:01:37] round 39: path len 4 from (7.51,1.17)
+[17:01:44]   path done at (7.64,1.24)
+[17:01:44] round 40: path len 8 from (7.64,1.24)
+[17:01:56]   path done at (7.24,1.65)
+[17:01:56] round 40 pose 7.24,1.65 h=351 batt=0.362 cells=712
+[17:01:56] round 41: path len 8 from (7.24,1.65)
+[17:02:02]   blocked at (6.84,1.61) -> (56, 12); replan
+[17:02:02] round 42: path len 3 from (6.84,1.61)
+[17:02:05]   path done at (6.63,1.61)
+[17:02:05] round 43: path len 4 from (6.63,1.61)
+[17:02:07]   path done at (6.39,1.65)
+[17:02:07] round 44: path len 7 from (6.39,1.65)
+[17:02:19]   path done at (6.57,2.13)
+[17:02:19] round 45: path len 5 from (6.57,2.13)
+[17:02:25]   path done at (6.81,2.19)
+[17:02:25] round 45 pose 6.81,2.19 h=62 batt=0.387 cells=788
+[17:02:25] round 46: path len 6 from (6.81,2.19)
+[17:02:34]   path done at (6.52,2.49)
+[17:02:34] round 47: path len 7 from (6.52,2.49)
+[17:02:42]   path done at (5.91,2.50)
+[17:02:42] round 48: path len 6 from (5.91,2.50)
+[17:02:49]   path done at (5.67,2.70)
+[17:02:49] round 49: path len 6 from (5.68,2.70)
+[17:02:52]   blocked at (5.54,2.81) -> (44, 23); replan
+[17:02:52] round 50: path len 4 from (5.54,2.81)
+[17:02:52]   blocked at (5.54,2.81) -> (44, 23); replan
+[17:02:52] round 50 pose 5.54,2.81 h=282 batt=0.468 cells=870
+[17:02:52] round 51: path len 7 from (5.54,2.81)
+[17:02:57]   blocked at (5.31,2.95) -> (42, 24); replan
+[17:02:57] round 52: path len 3 from (5.31,2.95)
+[17:03:01]   path done at (5.34,2.80)
+[17:03:01] round 53: path len 2 from (5.34,2.80)
+[17:03:03]   blocked at (5.36,2.80) -> (43, 23); replan
+[17:03:03] round 54: path len 2 from (5.36,2.80)
+[17:03:03]   path done at (5.36,2.80)
+[17:03:03] round 55: path len 2 from (5.36,2.80)
+[17:03:03]   path done at (5.36,2.80)
+[17:03:03] round 55 pose 5.36,2.80 h=270 batt=0.482 cells=895
+[17:03:04] round 56: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 57: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 58: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 59: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 60: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 60 pose 5.36,2.80 h=274 batt=0.477 cells=896
+[17:03:04] round 61: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 62: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 63: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 64: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 65: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 65 pose 5.36,2.80 h=270 batt=0.488 cells=896
+[17:03:04] round 66: path len 2 from (5.36,2.80)
+[17:03:04]   path done at (5.36,2.80)
+[17:03:04] round 67: path len 2 from (5.36,2.80)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 68: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 69: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 70: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 70 pose 5.36,2.79 h=204 batt=0.475 cells=898
+[17:03:06] round 71: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 72: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 73: path len 2 from (5.36,2.78)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 74: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.78)
+[17:03:06] round 75: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 75 pose 5.36,2.79 h=207 batt=0.484 cells=898
+[17:03:06] round 76: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 77: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 78: path len 2 from (5.36,2.79)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] round 79: path len 2 from (5.36,2.78)
+[17:03:06]   path done at (5.36,2.79)
+[17:03:06] === end === 5.36,2.79 h=204
+[17:04:26] resumed map, cells 898
+[17:04:26] pose offset 5.36 2.79
+[17:04:27] === explore5 start ===
+[17:04:27] round 0: no frontier from -0.00,-0.00; wander back off
+[17:04:34] round 1: path len 2 from (-0.17,-0.26)
+[17:04:43]   blocked at (0.61,0.21) -> (44, 21); replan
+[17:04:43] round 2: no frontier from 0.61,0.21; wander back off
+[17:04:50] round 3: no frontier from 0.91,0.18; wander back off
+[17:04:57] round 4: path len 2 from (0.61,0.25)
+[17:04:59]   blocked at (0.70,0.27) -> (49, 26); replan
+[17:04:59] round 5: path len 2 from (0.71,0.27)
+[17:05:00]   blocked at (0.72,0.28) -> (50, 26); replan
+[17:05:00] round 5 pose 0.72,0.28 h=65 batt=0.452 cells=193
+[17:05:00] round 6: path len 3 from (0.72,0.28)
+[17:05:00]   blocked at (0.72,0.28) -> (49, 25); replan
+[17:05:00] round 7: path len 4 from (0.72,0.28)
+[17:05:00]   blocked at (0.73,0.28) -> (50, 24); replan
+[17:05:00] round 8: no frontier from 0.73,0.28; wander back off
+[17:05:07] round 9: no frontier from 1.02,0.34; wander back off
+[17:05:14] round 10: no frontier from 0.71,0.31; wander back off
+[17:05:21] round 11: no frontier from 1.07,0.37; wander back off
+[17:05:28] round 12: path len 6 from (0.72,0.26)
+[17:05:29]   blocked at (0.76,0.28) -> (50, 24); replan
+[17:05:29] round 13: path len 5 from (0.76,0.28)
+[17:05:29]   blocked at (0.76,0.28) -> (51, 24); replan
+[17:05:29] round 14: path len 7 from (0.76,0.28)
+[17:05:29]   blocked at (0.76,0.28) -> (50, 25); replan
+[17:05:29] round 15: path len 9 from (0.77,0.28)
+[17:05:30]   blocked at (0.78,0.28) -> (51, 26); replan
+[17:05:30] round 15 pose 0.78,0.28 h=72 batt=0.441 cells=230
+[17:05:30] round 16: no frontier from 0.78,0.28; wander back off
+[17:05:36] resumed map, cells 230
+[17:05:36] pose offset 6.136093769199529 3.0693339595896525
+[17:05:36] === explore5 start ===
+[17:05:36] round 0: no frontier from -0.00,-0.00; wander back off
+[17:05:43] round 1: path len 2 from (-0.29,-0.10)
+[17:05:44]   blocked at (-0.22,-0.09) -> (47, 24); replan
+[17:05:44] round 2: path len 3 from (-0.22,-0.09)
+[17:05:45]   blocked at (-0.21,-0.08) -> (48, 24); replan
+[17:05:45] round 3: path len 3 from (-0.21,-0.08)
+[17:05:45]   blocked at (-0.19,-0.08) -> (49, 25); replan
+[17:05:45] round 4: path len 4 from (-0.20,-0.08)
+[17:05:45]   blocked at (-0.19,-0.08) -> (49, 23); replan
+[17:05:45] round 5: no frontier from -0.19,-0.08; wander back off
+[17:05:52] round 6: no frontier from 0.11,-0.05; wander back off
+[17:05:59] round 7: path len 2 from (-0.19,-0.04)
+[17:06:00]   blocked at (-0.13,-0.03) -> (49, 26); replan
+[17:06:00] round 8: path len 3 from (-0.13,-0.03)
+[17:06:01]   blocked at (-0.12,-0.02) -> (51, 25); replan
+[17:06:01] round 9: path len 4 from (-0.12,-0.02)
+[17:06:01]   blocked at (-0.11,-0.02) -> (50, 24); replan
+[17:06:01] round 10: path len 6 from (-0.11,-0.02)
+[17:06:01]   blocked at (-0.11,-0.02) -> (49, 25); replan
+[17:06:01] round 10 pose -0.11,-0.02 h=71 batt=0.441 cells=128
+[17:06:01] round 11: path len 7 from (-0.11,-0.02)
+[17:06:02]   blocked at (-0.11,-0.02) -> (50, 26); replan
+[17:06:02] round 12: no frontier from -0.11,-0.02; wander back off
+[17:06:13] round 13: no frontier from -0.12,-0.05; wander back off
+[17:06:24] round 14: path len 5 from (-0.14,-0.07)
+[17:06:25]   blocked at (-0.12,-0.05) -> (50, 24); replan
+[17:06:25] round 15: no frontier from -0.12,-0.06; wander back off
+[17:06:32] round 16: no frontier from 0.12,0.13; wander back off
+[17:06:39] round 17: path len 6 from (-0.17,0.05)
+[17:06:43]   blocked at (-0.16,0.05) -> (48, 25); replan
+[17:06:43] round 18: path len 7 from (-0.15,0.05)
+[17:06:48]   blocked at (-0.20,0.03) -> (49, 26); replan
+[17:06:48] round 19: path len 8 from (-0.19,0.03)
+[17:06:49]   blocked at (-0.22,0.03) -> (49, 24); replan
+[17:06:50] round 20: path len 9 from (-0.22,0.03)
+[17:06:51]   blocked at (-0.16,0.04) -> (50, 25); replan
+[17:06:51] round 20 pose -0.16,0.04 h=78 batt=0.447 cells=162
+[17:06:51] round 21: no frontier from -0.16,0.04; wander back off
+[17:07:02] round 22: no frontier from -0.14,0.03; wander back off
+[17:07:13] round 23: path len 7 from (-0.13,0.04)
+[17:07:14]   blocked at (-0.13,0.04) -> (50, 24); replan
+[17:07:14] round 24: path len 9 from (-0.13,0.04)
+[17:07:15]   blocked at (-0.12,0.05) -> (49, 25); replan
+[17:07:15] round 25: path len 9 from (-0.12,0.05)
+[17:07:15]   blocked at (-0.12,0.05) -> (50, 26); replan
+[17:07:15] round 25 pose -0.12,0.05 h=61 batt=0.452 cells=168
+[17:07:15] round 26: no frontier from -0.12,0.05; wander back off
+[17:07:26] round 27: no frontier from -0.13,0.04; wander back off
+[17:07:37] round 28: path len 8 from (-0.21,0.18)
+[17:07:40]   blocked at (-0.18,0.20) -> (49, 26); replan
+[17:07:40] round 29: path len 10 from (-0.18,0.20)
+[17:07:40]   blocked at (-0.18,0.20) -> (50, 27); replan
+[17:07:40] round 30: no frontier from -0.18,0.20; wander back off
+[17:07:51] round 31: no frontier from -0.21,0.35; wander back off
+[17:08:02] round 32: path len 6 from (-0.29,0.33)
+[17:08:04]   blocked at (-0.20,0.36) -> (48, 27); replan
+[17:08:04] round 33: path len 8 from (-0.20,0.36)
+[17:08:09]   blocked at (-0.19,0.35) -> (49, 27); replan
+[17:08:09] round 34: path len 8 from (-0.19,0.35)
+[17:08:17]   blocked at (-0.23,0.36) -> (48, 28); replan
+[17:08:17] round 35: no frontier from -0.23,0.36; wander back off

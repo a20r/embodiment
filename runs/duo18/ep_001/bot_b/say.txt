@@ -1,0 +1,1 @@
+I hear you, Robot A. I am the OTHER robot (B). We met before. Neither of us has found the goal yet after 1.5h in a ~4x4 maze. Protocol: whoever gets goal=1 PARKS there and beacons 'goal=1'; other homes in via d11 (signal strength, 0.98=adjacent).

@@ -1,0 +1,1140 @@
+=== APPROACH2: drive at tall object bearing 268, watch d11+d3
+A2 0.2 h=271 obj=0.47 n=328 d11=0.335 tick=555084 goal=0 here=0
+A2 0.4 h=270 obj=0.443 n=300 d11=0.345 tick=555105 goal=0 here=0
+CONTACT d5=1
+A2 0.6 h=260 obj=0.388 n=271 d11=0.342 tick=555127 goal=0 here=0
+CONTACT d5=1
+A2 0.9 h=258 obj=0.365 n=242 d11=0.348 tick=555148 goal=0 here=0
+CONTACT d5=1
+A2 1.1 h=255 obj=0.348 n=215 d11=0.353 tick=555170 goal=0 here=0
+CONTACT d5=1
+A2 1.3 h=249 obj=0.284 n=157 d11=0.350 tick=555192 goal=0 here=0
+CONTACT d5=1
+A2 1.5 h=249 obj=0.283 n=159 d11=0.341 tick=555214 goal=0 here=0
+CONTACT d5=1
+A2 1.7 h=254 obj=0.299 n=184 d11=0.343 tick=555236 goal=0 here=0
+A2 1.9 h=252 obj=0.277 n=170 d11=0.343 tick=555257 goal=0 here=0
+CONTACT d5=1
+A2 2.2 h=256 obj=0.295 n=181 d11=0.339 tick=555278 goal=0 here=0
+CONTACT d5=1
+A2 2.4 h=256 obj=0.27 n=171 d11=0.341 tick=555300 goal=0 here=0
+CONTACT d5=1
+A2 2.6 h=259 obj=0.271 n=170 d11=0.358 tick=555322 goal=0 here=0
+CONTACT d5=1
+A2 2.8 h=257 obj=0.266 n=171 d11=0.319 tick=555344 goal=0 here=0
+A2 3.0 h=257 obj=0.301 n=184 d11=0.350 tick=555365 goal=0 here=0
+CONTACT d5=1
+A2 3.2 h=256 obj=0.263 n=171 d11=0.337 tick=555387 goal=0 here=0
+CONTACT d5=1
+A2 3.5 h=251 obj=0.229 n=131 d11=0.339 tick=555408 goal=0 here=0
+CONTACT d5=1
+A2 3.7 h=252 obj=0.226 n=130 d11=0.344 tick=555430 goal=0 here=0
+CONTACT d5=1
+A2 3.9 h=262 obj=0.271 n=172 d11=0.345 tick=555451 goal=0 here=0
+CONTACT d5=1
+A2 4.1 h=260 obj=0.262 n=158 d11=0.346 tick=555472 goal=0 here=0
+CONTACT d5=1
+A2 4.3 h=259 obj=0.253 n=145 d11=0.340 tick=555495 goal=0 here=0
+CONTACT d5=1
+A2 4.5 h=258 obj=0.219 n=130 d11=0.337 tick=555516 goal=0 here=0
+CONTACT d5=1
+A2 4.8 h=259 obj=0.217 n=132 d11=0.343 tick=555538 goal=0 here=0
+CONTACT d5=1
+A2 5.0 h=265 obj=0.268 n=171 d11=0.328 tick=555560 goal=0 here=0
+CONTACT d5=1
+A2 5.2 h=265 obj=0.304 n=162 d11=0.327 tick=555581 goal=0 here=0
+CONTACT d5=1
+A2 5.4 h=260 obj=0.255 n=146 d11=0.323 
+CONTACT d5=1
+A2 5.6 h=258 obj=0.256 n=144 d11=0.342 tick=555625 goal=0 here=0
+CONTACT d5=1
+A2 5.8 h=258 obj=0.255 n=145 d11=0.344 tick=555647 goal=0 here=0
+A2 6.1 h=257 obj=0.197 n=104 d11=0.336 tick=555668 goal=0 here=0
+CONTACT d5=1
+A2 6.3 h=249 obj=0.14 n=62 d11=0.337 tick=555690 goal=0 here=0
+CONTACT d5=1
+A2 6.5 h=250 obj=0.137 n=50 d11=0.348 tick=555712 goal=0 here=0
+CONTACT d5=1
+A2 6.7 h=258 obj=0.177 n=90 d11=0.341 tick=555734 goal=0 here=0
+CONTACT d5=1
+A2 6.9 h=264 obj=0.219 n=116 d11=0.344 tick=555755 goal=0 here=0
+CONTACT d5=1
+A2 7.1 h=263 obj=0.273 n=137 d11=0.353 tick=555777 goal=0 here=0
+CONTACT d5=1
+A2 7.4 h=266 obj=0.273 n=147 d11=0.339 tick=555799 goal=0 here=0
+CONTACT d5=1
+A2 7.6 h=270 obj=0.296 n=166 d11=0.334 tick=555820 goal=0 here=0
+CONTACT d5=1
+A2 7.8 h=270 obj=0.312 n=161 d11=0.339 tick=555841 goal=0 here=0
+CONTACT d5=1
+A2 8.0 h=266 obj=0.273 n=132 d11=0.328 tick=555863 goal=0 here=0
+CONTACT d5=1
+A2 8.2 h=266 obj=0.276 n=145 d11=0.329 tick=555884 goal=0 here=0
+CONTACT d5=1
+A2 8.4 h=265 obj=0.272 n=134 d11=0.346 tick=555905 goal=0 here=0
+A2 8.7 h=265 obj=0.259 n=146 d11=0.328 tick=555927 goal=0 here=0
+CONTACT d5=1
+A2 8.9 h=259 obj=0.209 n=101 d11=0.337 tick=555952 goal=0 here=0
+CONTACT d5=1
+A2 9.1 h=252 obj=0.134 n=64 d11=0.327 tick=555973 goal=0 here=0
+CONTACT d5=1
+A2 9.3 h=254 obj=0.133 n=65 d11=0.342 tick=555995 goal=0 here=0
+CONTACT d5=1
+A2 9.5 h=256 obj=0.135 n=65 d11=0.346 tick=556017 goal=0 here=0
+CONTACT d5=1
+A2 9.8 h=262 obj=0.182 n=91 d11=0.330 tick=556038 goal=0 here=0
+CONTACT d5=1
+A2 10.0 h=260 obj=0.198 n=105 d11=0.329 tick=556060 goal=0 here=0
+CONTACT d5=1
+A2 10.2 h=259 obj=0.179 n=76 d11=0.336 tick=556081 goal=0 here=0
+CONTACT d5=1
+A2 10.4 h=257 obj=0.163 n=62 d11=0.336 tick=556103 goal=0 here=0
+CONTACT d5=1
+A2 search h=257
+A2 10.8 h=255 obj=0.132 n=38 d11=0.324 tick=556139 goal=0 here=0
+A2 10.8 h=254 obj=0.089 n=12 d11=0.328 tick=556161 goal=0 here=0
+CONTACT d5=1
+A2 11.1 h=255 obj=0.089 n=12 d11=0.332 tick=556174 goal=0 here=0
+A2 11.2 h=254 obj=0.089 n=12 d11=0.336 tick=556190 goal=0 here=0
+A2 11.5 h=251 obj=0.089 n=12 d11=0.324 tick=556215 goal=0 here=0
+A2 11.6 h=253 obj=0.089 n=12 d11=0.331 tick=556231 goal=0 here=0
+A2 11.8 h=255 obj=0.089 n=12 d11=0.338 tick=556247 goal=0 here=0
+A2 12.0 h=253 obj=0.088 n=12 d11=0.338 tick=556258 goal=0 here=0
+A2 12.1 h=253 obj=0.089 n=12 d11=0.327 tick=556279 goal=0 here=0
+A2 12.3 h=251 obj=0.089 n=12 d11=0.338 tick=556304 goal=0 here=0
+A2 12.5 h=250 obj=0.089 n=12 d11=0.349 tick=556313 goal=0 here=0
+A2 12.6 h=250 obj=0.089 n=12 d11=0.321 tick=556330 goal=0 here=0
+A2 12.8 h=254 obj=0.089 n=12 d11=0.338 tick=556346 goal=0 here=0
+A2 13.0 h=250 obj=0.089 n=12 d11=0.334 tick=556362 goal=0 here=0
+A2 13.1 h=254 obj=0.089 n=12 d11=0.339 tick=556380 goal=0 here=0
+A2 13.3 h=253 obj=0.089 n=12 d11=0.330 tick=556396 goal=0 here=0
+A2 13.4 h=254 obj=0.089 n=12 d11=0.328 tick=556412 goal=0 here=0
+A2 13.6 h=250 obj=0.088 n=12 d11=0.338 tick=556429 goal=0 here=0
+A2 13.8 h=251 obj=0.089 n=12 d11=0.326 tick=556445 goal=0 here=0
+A2 13.9 h=254 obj=0.088 n=12 d11=0.332 tick=556462 goal=0 here=0
+A2 14.1 h=254 obj=0.089 n=12 d11=0.317 tick=556479 goal=0 here=0
+A2 14.3 h=255 obj=0.089 n=12 d11=0.339 tick=556495 goal=0 here=0
+A2 14.4 h=258 obj=0.088 n=11 d11=0.341 tick=556511 goal=0 here=0
+A2 14.6 h=255 obj=0.089 n=12 d11=0.317 tick=556527 goal=0 here=0
+A2 14.8 h=255 obj=0.088 n=12 d11=0.347 tick=556544 goal=0 here=0
+A2 search h=252
+A2 15.2 h=256 obj=0.132 n=38 d11=0.335 tick=556585 goal=0 here=0
+CONTACT d5=1
+A2 15.5 h=258 obj=0.139 n=51 d11=0.347 tick=556607 goal=0 here=0
+CONTACT d5=1
+A2 15.7 h=262 obj=0.139 n=64 d11=0.341 tick=556629 goal=0 here=0
+A2 15.9 h=266 obj=0.172 n=94 d11=0.328 tick=556651 goal=0 here=0
+CONTACT d5=1
+A2 16.1 h=273 obj=0.189 n=113 d11=0.332 tick=556672 goal=0 here=0
+CONTACT d5=1
+A2 16.3 h=268 obj=0.213 n=96 d11=0.329 tick=556694 goal=0 here=0
+CONTACT d5=1
+A2 16.5 h=263 obj=0.133 n=64 d11=0.335 tick=556716 goal=0 here=0
+CONTACT d5=1
+A2 16.8 h=259 obj=0.128 n=37 d11=0.338 tick=556738 goal=0 here=0
+CONTACT d5=1
+A2 16.8 h=254 obj=0.09 n=11 d11=0.332 tick=556760 goal=0 here=0
+CONTACT d5=1
+A2 search h=255
+A2 search h=256
+A2 17.5 h=262 obj=0.127 n=37 d11=0.336 tick=556813 goal=0 here=0
+CONTACT d5=1
+A2 17.6 h=256 obj=0.09 n=11 d11=0.336 tick=556835 goal=0 here=0
+CONTACT d5=1
+A2 search h=253
+A2 18.0 h=255 obj=0.09 n=11 d11=0.339 tick=556874 goal=0 here=0
+A2 18.1 h=257 obj=0.094 n=24 d11=0.340 tick=556881 goal=0 here=0
+A2 18.3 h=260 obj=0.093 n=24 d11=0.322 tick=556898 goal=0 here=0
+A2 18.5 h=260 obj=0.093 n=24 d11=0.356 tick=556915 goal=0 here=0
+A2 18.7 h=262 obj=0.093 n=23 d11=0.342 tick=556932 goal=0 here=0
+A2 18.8 h=257 obj=0.094 n=24 d11=0.324 tick=556949 goal=0 here=0
+A2 19.0 h=258 obj=0.094 n=24 d11=0.328 tick=556965 goal=0 here=0
+A2 19.2 h=257 obj=0.094 n=24 d11=0.335 tick=556982 goal=0 here=0
+A2 19.3 h=256 obj=0.093 n=24 d11=0.341 tick=556999 goal=0 here=0
+A2 19.5 h=257 obj=0.094 n=24 d11=0.345 tick=557016 goal=0 here=0
+A2 19.6 h=258 obj=0.094 n=24 d11=0.335 tick=557032 goal=0 here=0
+A2 19.8 h=255 obj=0.094 n=23 d11=0.343 tick=557049 goal=0 here=0
+A2 20.0 h=257 obj=0.094 n=24 d11=0.340 tick=557065 goal=0 here=0
+A2 20.2 h=259 obj=0.094 n=24 d11=0.344 tick=557082 goal=0 here=0
+A2 20.4 h=256 obj=0.094 n=24 d11=0.345 tick=557105 goal=0 here=0
+A2 20.6 h=261 obj=0.094 n=24 d11=0.327 tick=557128 goal=0 here=0
+A2 20.7 h=258 obj=0.094 n=24 d11=0.345 tick=557139 goal=0 here=0
+A2 20.9 h=259 obj=0.094 n=24 d11=0.328 tick=557156 goal=0 here=0
+A2 21.1 h=257 obj=0.094 n=23 d11=0.348 tick=557173 goal=0 here=0
+A2 21.2 h=254 obj=0.094 n=24 d11=0.344 tick=557189 goal=0 here=0
+A2 21.4 h=257 obj=0.093 n=24 d11=0.323 tick=557207 goal=0 here=0
+A2 21.6 h=257 obj=0.094 n=23 d11=0.333 tick=557224 goal=0 here=0
+A2 21.7 h=258 obj=0.094 n=24 d11=0.334 tick=557241 goal=0 here=0
+A2 21.9 h=261 obj=0.094 n=24 d11=0.336 
+A2 22.1 h=259 obj=0.093 n=24 d11=0.336 tick=557274 goal=0 here=0
+A2 22.2 h=257 obj=0.093 n=24 d11=0.348 tick=557290 goal=0 here=0
+A2 22.4 h=257 obj=0.093 n=24 d11=0.328 tick=557308 goal=0 here=0
+A2 22.6 h=258 obj=0.094 n=24 d11=0.326 tick=557325 goal=0 here=0
+A2 22.7 h=263 obj=0.094 n=24 d11=0.329 tick=557342 goal=0 here=0
+A2 22.9 h=260 obj=0.094 n=24 d11=0.335 
+A2 23.1 h=257 obj=0.093 n=23 d11=0.330 tick=557372 goal=0 here=0
+A2 23.3 h=258 obj=0.094 n=24 d11=0.331 tick=557392 goal=0 here=0
+A2 23.4 h=259 obj=0.093 n=23 d11=0.322 tick=557410 goal=0 here=0
+A2 23.6 h=256 obj=0.094 n=24 d11=0.327 tick=557426 goal=0 here=0
+A2 23.8 h=256 obj=0.094 n=24 d11=0.328 tick=557443 goal=0 here=0
+A2 23.9 h=260 obj=0.094 n=23 d11=0.333 tick=557460 goal=0 here=0
+A2 24.2 h=258 obj=0.094 n=24 d11=0.327 tick=557486 goal=0 here=0
+A2 24.4 h=260 obj=0.094 n=24 d11=0.332 tick=557506 goal=0 here=0
+A2 24.6 h=258 obj=0.094 n=24 d11=0.318 tick=557524 goal=0 here=0
+A2 search h=260
+A2 25.0 h=261 obj=0.129 n=37 d11=0.309 tick=557566 goal=0 here=0
+CONTACT d5=1
+A2 25.1 h=259 obj=0.093 n=23 d11=0.326 tick=557587 goal=0 here=0
+CONTACT d5=1
+A2 25.3 h=249 obj=0.09 n=11 d11=0.297 tick=557594 goal=0 here=0
+A2 25.5 h=256 obj=0.089 n=12 d11=0.320 
+A2 25.6 h=257 obj=0.089 n=12 d11=0.322 tick=557630 goal=0 here=0
+A2 25.8 h=254 obj=0.089 n=12 d11=0.316 tick=557648 goal=0 here=0
+A2 26.0 h=257 obj=0.089 n=12 d11=0.315 tick=557665 goal=0 here=0
+A2 26.1 h=257 obj=0.089 n=12 d11=0.319 tick=557682 goal=0 here=0
+A2 26.3 h=256 obj=0.089 n=12 d11=0.310 tick=557698 goal=0 here=0
+A2 26.5 h=252 obj=0.089 n=12 d11=0.332 tick=557715 goal=0 here=0
+A2 26.7 h=256 obj=0.089 n=12 d11=0.316 tick=557732 goal=0 here=0
+A2 26.8 h=252 obj=0.09 n=12 d11=0.316 tick=557749 goal=0 here=0
+A2 27.0 h=252 obj=0.09 n=12 d11=0.317 tick=557765 goal=0 here=0
+A2 27.2 h=256 obj=0.09 n=12 d11=0.325 tick=557783 goal=0 here=0
+A2 27.3 h=254 obj=0.09 n=12 d11=0.320 tick=557799 goal=0 here=0
+A2 27.5 h=252 obj=0.089 n=12 d11=0.320 tick=557816 goal=0 here=0
+A2 27.7 h=253 obj=0.089 n=12 d11=0.310 tick=557833 goal=0 here=0
+A2 27.8 h=258 obj=0.089 n=10 d11=0.305 tick=557851 goal=0 here=0
+A2 28.0 h=249 obj=0.089 n=12 d11=0.307 tick=557868 goal=0 here=0
+A2 28.2 h=249 obj=0.089 n=12 d11=0.325 tick=557885 goal=0 here=0
+A2 28.4 h=255 obj=0.09 n=12 d11=0.317 tick=557903 goal=0 here=0
+A2 28.5 h=254 obj=0.089 n=12 d11=0.319 tick=557920 goal=0 here=0
+A2 28.7 h=250 obj=0.089 n=12 d11=0.313 tick=557936 goal=0 here=0
+A2 28.9 h=251 obj=0.089 n=12 d11=0.321 tick=557953 goal=0 here=0
+A2 29.0 h=253 obj=0.09 n=11 d11=0.322 tick=557970 goal=0 here=0
+A2 29.2 h=257 obj=0.089 n=10 d11= tick=557986 goal=0 here=0
+A2 29.4 h=258 obj=0.089 n=11 d11=0.308 tick=558003 goal=0 here=0
+A2 29.5 h=256 obj=0.09 n=12 d11=0.323 tick=558020 goal=0 here=0
+A2 29.7 h=254 obj=0.09 n=10 d11=0.311 tick=558036 goal=0 here=0
+A2 29.9 h=251 obj=0.089 n=12 d11=0.319 tick=558053 goal=0 here=0
+A2 30.0 h=255 obj=0.09 n=12 d11=0.311 tick=558070 goal=0 here=0
+A2 30.2 h=256 obj=0.09 n=12 d11=0.321 tick=558087 goal=0 here=0
+A2 30.4 h=255 obj=0.09 n=12 d11=0.316 tick=558104 goal=0 here=0
+A2 30.5 h=256 obj=0.089 n=12 d11=0.320 tick=558120 goal=0 here=0
+A2 30.7 h=255 obj=0.089 n=12 d11=0.321 tick=558137 goal=0 here=0
+A2 30.9 h=253 obj=0.089 n=12 d11=0.311 tick=558154 goal=0 here=0
+A2 31.0 h=255 obj=0.089 n=12 d11= tick=558171 goal=0 here=0
+A2 31.2 h=254 obj=0.089 n=11 d11=0.330 tick=558187 goal=0 here=0
+A2 31.4 h=255 obj=0.09 n=12 d11=0.318 tick=558204 goal=0 here=0
+A2 31.5 h=256 obj=0.089 n=12 d11=0.315 tick=558216 goal=0 here=0
+A2 31.7 h=256 obj=0.089 n=12 d11= tick=558238 goal=0 here=0
+A2 31.9 h=257 obj=0.09 n=11 d11=0.328 tick=558254 goal=0 here=0
+A2 32.0 h=253 obj=0.089 n=12 d11=0.332 tick=558271 goal=0 here=0
+A2 32.2 h=260 obj=0.089 n=12 d11=0.325 tick=558289 goal=0 here=0
+A2 32.4 h=259 obj=0.09 n=12 d11=0.330 tick=558306 goal=0 here=0
+A2 32.6 h=258 obj=0.09 n=12 d11=0.326 tick=558323 goal=0 here=0
+A2 32.7 h=255 obj=0.089 n=12 d11=0.332 tick=558340 goal=0 here=0
+A2 32.9 h=253 obj=0.089 n=12 d11=0.320 tick=558357 goal=0 here=0
+A2 33.1 h=257 obj=0.089 n=11 d11=0.342 tick=558371 goal=0 here=0
+A2 33.2 h=255 obj=0.09 n=12 d11=0.327 tick=558391 goal=0 here=0
+A2 33.4 h=254 obj=0.09 n=12 d11=0.344 tick=558408 goal=0 here=0
+A2 33.6 h=256 obj=0.09 n=12 d11=0.320 tick=558425 goal=0 here=0
+A2 33.8 h=254 obj=0.089 n=11 d11=0.343 tick=558443 goal=0 here=0
+A2 33.9 h=253 obj=0.089 n=10 d11=0.331 tick=558459 goal=0 here=0
+A2 34.1 h=255 obj=0.089 n=12 d11=0.330 tick=558476 goal=0 here=0
+A2 34.3 h=255 obj=0.089 n=11 d11=0.352 tick=558493 goal=0 here=0
+A2 34.4 h=253 obj=0.09 n=12 d11=0.335 tick=558510 goal=0 here=0
+A2 34.6 h=252 obj=0.089 n=12 d11=0.318 tick=558527 goal=0 here=0
+A2 34.8 h=259 obj=0.089 n=12 d11=0.333 tick=558544 goal=0 here=0
+A2 34.9 h=254 obj=0.089 n=11 d11=0.328 tick=558561 goal=0 here=0
+A2 35.1 h=256 obj=0.09 n=12 d11=0.341 tick=558578 goal=0 here=0
+A2 35.3 h=251 obj=0.09 n=12 d11=0.335 tick=558594 goal=0 here=0
+A2 35.4 h=256 obj=0.089 n=12 d11=0.347 tick=558612 goal=0 here=0
+A2 35.6 h=251 obj=0.089 n=12 d11= tick=558628 goal=0 here=0
+A2 35.8 h=252 obj=0.09 n=12 d11=0.340 tick=558645 goal=0 here=0
+A2 36.0 h=253 obj=0.09 n=12 d11=0.332 tick=558662 goal=0 here=0
+A2 36.1 h=256 obj=0.089 n=12 d11=0.338 tick=558680 goal=0 here=0
+A2 36.3 h=254 obj=0.09 n=12 d11=0.343 tick=558696 goal=0 here=0
+A2 36.5 h=0 obj=0.09 n=12 d11=0.317 tick=558713 goal=0 here=0
+A2 36.6 h=252 obj=0.089 n=12 d11=0.337 tick=558729 goal=0 here=0
+A2 36.8 h=252 obj=0.089 n=10 d11=0.326 tick=558747 goal=0 here=0
+A2 37.0 h=259 obj=0.089 n=12 d11=0.336 tick=558763 goal=0 here=0
+A2 37.1 h=253 obj=0.089 n=12 d11=0.341 tick=558781 goal=0 here=0
+A2 37.3 h=252 obj=0.089 n=12 d11=0.351 tick=558798 goal=0 here=0
+A2 37.5 h=255 obj=0.09 n=12 d11=0.340 tick=558814 goal=0 here=0
+A2 37.6 h=253 obj=0.09 n=12 d11=0.326 tick=558830 goal=0 here=0
+A2 37.8 h=257 obj=0.089 n=12 d11=0.346 tick=558846 goal=0 here=0
+A2 38.0 h=0 obj=0.089 n=12 d11=0.329 tick=558863 goal=0 here=0
+A2 38.1 h=255 obj=0.089 n=11 d11=0.329 tick=558881 goal=0 here=0
+A2 38.3 h=254 obj=0.089 n=11 d11=0.321 tick=558898 goal=0 here=0
+A2 38.5 h=253 obj=0.089 n=12 d11=0.335 tick=558915 goal=0 here=0
+A2 38.6 h=254 obj=0.089 n=12 d11=0.336 tick=558933 goal=0 here=0
+A2 38.8 h=255 obj=0.089 n=12 d11=0.340 tick=558949 goal=0 here=0
+A2 39.0 h=250 obj=0.089 n=12 d11=0.342 tick=558965 goal=0 here=0
+A2 39.2 h=256 obj=0.089 n=12 d11=0.360 tick=558983 goal=0 here=0
+A2 39.3 h=252 obj=0.089 n=12 d11=0.348 tick=559000 goal=0 here=0
+A2 39.5 h=255 obj=0.089 n=12 d11=0.335 tick=559016 goal=0 here=0
+A2 39.7 h=254 obj=0.09 n=12 d11=0.346 tick=559033 goal=0 here=0
+A2 39.8 h=254 obj=0.089 n=11 d11=0.339 tick=559050 goal=0 here=0
+A2 40.0 h=256 obj=0.089 n=12 d11=0.341 tick=559066 goal=0 here=0
+A2 40.2 h=256 obj=0.09 n=12 d11=0.352 tick=559084 goal=0 here=0
+A2 40.3 h=254 obj=0.09 n=12 d11=0.324 tick=559101 goal=0 here=0
+A2 40.5 h=253 obj=0.089 n=12 d11=0.335 tick=559118 goal=0 here=0
+A2 40.7 h=253 obj=0.089 n=12 d11=0.329 tick=559135 goal=0 here=0
+A2 40.8 h=251 obj=0.09 n=12 d11=0.331 tick=559152 goal=0 here=0
+A2 41.0 h=254 obj=0.09 n=12 d11=0.335 tick=559169 goal=0 here=0
+A2 41.2 h=0 obj=0.09 n=12 d11=0.337 tick=559186 goal=0 here=0
+A2 41.3 h=253 obj=0.089 n=12 d11=0.332 tick=559202 goal=0 here=0
+A2 41.5 h=254 obj=0.089 n=12 d11=0.330 tick=559219 goal=0 here=0
+A2 41.7 h=254 obj=0.09 n=12 d11=0.335 tick=559236 goal=0 here=0
+A2 41.9 h=252 obj=0.089 n=12 d11=0.323 tick=559253 goal=0 here=0
+A2 42.0 h=254 obj=0.089 n=12 d11=0.333 tick=559270 goal=0 here=0
+A2 42.2 h=255 obj=0.089 n=12 d11=0.326 tick=559287 goal=0 here=0
+A2 42.4 h=254 obj=0.089 n=12 d11=0.340 
+A2 42.5 h=254 obj=0.09 n=12 d11=0.337 tick=559320 goal=0 here=0
+A2 42.7 h=253 obj=0.089 n=12 d11=0.327 tick=559336 goal=0 here=0
+A2 42.9 h=250 obj=0.089 n=12 d11=0.348 tick=559354 goal=0 here=0
+A2 43.0 h=255 obj=0.089 n=12 d11=0.326 tick=559370 goal=0 here=0
+A2 43.2 h=0 obj=0.089 n=12 d11=0.330 tick=559387 goal=0 here=0
+A2 43.4 h=255 obj=0.09 n=12 d11=0.329 tick=559403 goal=0 here=0
+A2 search h=256
+A2 43.7 h=255 obj=0.093 n=23 d11=0.338 tick=559445 goal=0 here=0
+A2 44.0 h=254 obj=0.128 n=36 d11=0.320 tick=559452 goal=0 here=0
+CONTACT d5=1
+A2 44.1 h=255 obj=0.089 n=12 d11=0.331 
+CONTACT d5=1
+A2 search h=254
+A2 44.5 h=257 obj=0.09 n=10 d11=0.339 tick=559522 goal=0 here=0
+A2 44.6 h=255 obj=0.09 n=11 d11=0.345 tick=559530 goal=0 here=0
+A2 44.8 h=0 obj=0.091 n=11 d11=0.331 tick=559547 goal=0 here=0
+A2 45.0 h=262 obj=0.09 n=11 d11=0.335 tick=559563 goal=0 here=0
+A2 45.1 h=259 obj=0.091 n=11 d11=0.338 tick=559581 goal=0 here=0
+A2 45.3 h=253 obj=0.091 n=10 d11=0.342 tick=559592 goal=0 here=0
+A2 45.5 h=256 obj=0.091 n=11 d11=0.347 tick=559615 goal=0 here=0
+A2 45.6 h=252 obj=0.09 n=11 d11=0.333 tick=559624 goal=0 here=0
+A2 45.8 h=259 obj=0.09 n=11 d11=0.327 tick=559648 goal=0 here=0
+A2 46.0 h=254 obj=0.091 n=11 d11=0.346 tick=559665 goal=0 here=0
+A2 46.1 h=259 obj=0.091 n=10 d11=0.322 tick=559681 goal=0 here=0
+A2 search h=257
+A2 46.6 h=258 obj=0.132 n=36 d11=0.325 tick=559723 goal=0 here=0
+CONTACT d5=1
+A2 46.7 h=257 obj=0.092 n=25 d11=0.335 tick=559744 goal=0 here=0
+CONTACT d5=1
+A2 search h=255
+A2 47.2 h=259 obj=0.132 n=38 d11=0.339 tick=559784 goal=0 here=0
+CONTACT d5=1
+A2 47.3 h=254 obj=0.089 n=12 d11=0.332 tick=559805 goal=0 here=0
+CONTACT d5=1
+A2 search h=250
+A2 47.7 h=257 obj=0.09 n=11 d11=0.338 tick=559845 goal=0 here=0
+A2 48.0 h=258 obj=0.131 n=38 d11=0.345 tick=559851 goal=0 here=0
+CONTACT d5=1
+A2 48.1 h=256 obj=0.09 n=12 d11=0.328 tick=559883 goal=0 here=0
+CONTACT d5=1
+A2 search h=254
+A2 48.5 h=258 obj=0.092 n=24 d11=0.339 tick=559922 goal=0 here=0
+A2 48.8 h=258 obj=0.128 n=37 d11=0.327 
+CONTACT d5=1
+A2 48.9 h=256 obj=0.09 n=11 d11=0.337 tick=559962 goal=0 here=0
+CONTACT d5=1
+A2 search h=253
+A2 49.2 h=0 obj=0.092 n=25 d11=0.340 tick=560000 goal=0 here=0
+A2 49.6 h=258 obj=0.131 n=38 d11=0.344 tick=560007 goal=0 here=0
+CONTACT d5=1
+A2 search h=256
+A2 49.8 h=252 obj=0.089 n=12 d11=0.334 tick=560062 goal=0 here=0
+A2 50.0 h=256 obj=0.089 n=11 d11=0.336 tick=560069 goal=0 here=0
+A2 50.2 h=257 obj=0.09 n=11 d11=0.342 tick=560086 goal=0 here=0
+A2 50.4 h=257 obj=0.09 n=11 d11=0.336 tick=560103 goal=0 here=0
+A2 50.5 h=255 obj=0.089 n=11 d11= tick=560120 goal=0 here=0
+A2 50.7 h=249 obj=0.09 n=11 d11=0.334 tick=560137 goal=0 here=0
+A2 50.9 h=254 obj=0.09 n=11 d11=0.339 tick=560154 goal=0 here=0
+A2 51.0 h=257 obj=0.09 n=11 d11=0.343 tick=560166 goal=0 here=0
+A2 51.2 h=255 obj=0.09 n=10 d11=0.339 tick=560187 goal=0 here=0
+A2 51.4 h=258 obj=0.09 n=10 d11=0.349 tick=560204 goal=0 here=0
+A2 51.5 h=255 obj=0.089 n=11 d11=0.337 tick=560221 goal=0 here=0
+A2 51.7 h=0 obj=0.09 n=11 d11=0.335 tick=560238 goal=0 here=0
+A2 51.9 h=253 obj=0.089 n=11 d11=0.334 tick=560254 goal=0 here=0
+A2 52.1 h=255 obj=0.09 n=11 d11=0.330 tick=560274 goal=0 here=0
+A2 52.2 h=258 obj=0.089 n=11 d11=0.335 tick=560290 goal=0 here=0
+A2 52.4 h=255 obj=0.09 n=10 d11=0.349 tick=560307 goal=0 here=0
+A2 52.6 h=258 obj=0.09 n=11 d11=0.336 tick=560326 goal=0 here=0
+A2 52.7 h=255 obj=0.09 n=11 d11=0.347 tick=560341 goal=0 here=0
+A2 52.9 h=253 obj=0.09 n=11 d11=0.344 tick=560358 goal=0 here=0
+A2 53.1 h=251 obj=0.09 n=11 d11=0.335 tick=560376 goal=0 here=0
+A2 53.3 h=251 obj=0.09 n=11 d11=0.322 tick=560393 goal=0 here=0
+A2 53.4 h=252 obj=0.09 n=11 d11=0.329 tick=560410 goal=0 here=0
+A2 53.6 h=255 obj=0.089 n=11 d11=0.332 tick=560427 goal=0 here=0
+A2 53.8 h=254 obj=0.089 n=11 d11=0.328 tick=560438 goal=0 here=0
+A2 53.9 h=253 obj=0.09 n=10 d11=0.338 tick=560460 goal=0 here=0
+A2 54.1 h=255 obj=0.09 n=11 d11=0.320 tick=560477 goal=0 here=0
+A2 54.3 h=254 obj=0.089 n=11 d11=0.325 tick=560494 goal=0 here=0
+A2 54.4 h=256 obj=0.089 n=11 d11=0.322 
+A2 54.6 h=257 obj=0.09 n=11 d11=0.341 tick=560528 goal=0 here=0
+A2 54.8 h=253 obj=0.089 n=11 d11=0.327 tick=560544 goal=0 here=0
+A2 55.0 h=253 obj=0.09 n=10 d11=0.336 tick=560563 goal=0 here=0
+A2 55.1 h=256 obj=0.09 n=11 d11=0.322 tick=560581 goal=0 here=0
+A2 55.3 h=256 obj=0.09 n=11 d11=0.342 tick=560597 goal=0 here=0
+A2 55.5 h=257 obj=0.09 n=11 d11=0.328 tick=560614 goal=0 here=0
+A2 55.6 h=257 obj=0.09 n=11 d11=0.336 tick=560630 goal=0 here=0
+A2 55.8 h=257 obj=0.09 n=11 d11=0.335 tick=560647 goal=0 here=0
+A2 56.0 h=257 obj=0.09 n=11 d11=0.337 tick=560664 goal=0 here=0
+A2 56.1 h=253 obj=0.09 n=11 d11=0.325 tick=560681 goal=0 here=0
+A2 56.3 h=256 obj=0.09 n=10 d11=0.345 tick=560698 goal=0 here=0
+A2 56.5 h=259 obj=0.09 n=11 d11=0.323 tick=560716 goal=0 here=0
+A2 56.6 h=256 obj=0.089 n=11 d11=0.330 tick=560732 goal=0 here=0
+A2 56.8 h=253 obj=0.09 n=11 d11=0.352 tick=560750 goal=0 here=0
+A2 57.0 h=0 obj=0.09 n=11 d11=0.324 tick=560766 goal=0 here=0
+A2 57.2 h=250 obj=0.089 n=11 d11=0.352 tick=560783 goal=0 here=0
+A2 57.3 h=258 obj=0.089 n=11 d11=0.333 tick=560800 goal=0 here=0
+A2 57.5 h=255 obj=0.089 n=10 d11=0.332 tick=560816 goal=0 here=0
+A2 57.7 h=255 obj=0.09 n=10 d11=0.330 tick=560834 goal=0 here=0
+A2 57.8 h=255 obj=0.089 n=11 d11=0.342 tick=560850 goal=0 here=0
+A2 58.0 h=258 obj=0.09 n=11 d11=0.327 tick=560867 goal=0 here=0
+A2 58.2 h=249 obj=0.09 n=11 d11=0.328 tick=560884 goal=0 here=0
+A2 58.3 h=252 obj=0.089 n=11 d11=0.350 tick=560900 goal=0 here=0
+A2 58.5 h=255 obj=0.09 n=10 d11=0.321 tick=560917 goal=0 here=0
+A2 58.7 h=258 obj=0.09 n=11 d11=0.335 tick=560933 goal=0 here=0
+A2 58.8 h=252 obj=0.09 n=11 d11=0.345 tick=560950 goal=0 here=0
+A2 59.0 h=254 obj=0.09 n=11 d11=0.340 tick=560968 goal=0 here=0
+A2 59.2 h=252 obj=0.09 n=10 d11=0.323 tick=560984 goal=0 here=0
+A2 59.4 h=256 obj=0.09 n=11 d11=0.342 
+A2 59.5 h=254 obj=0.09 n=11 d11=0.326 tick=561020 goal=0 here=0
+A2 59.7 h=255 obj=0.09 n=11 d11=0.321 tick=561037 goal=0 here=0
+A2 59.9 h=255 obj=0.089 n=11 d11=0.341 tick=561055 goal=0 here=0
+A2 60.1 h=255 obj=0.089 n=11 d11=0.335 tick=561072 goal=0 here=0
+A2 60.2 h=256 obj=0.09 n=11 d11=0.327 tick=561089 goal=0 here=0
+A2 60.4 h=252 obj=0.09 n=11 d11=0.340 tick=561106 goal=0 here=0
+A2 60.6 h=253 obj=0.09 n=11 d11=0.335 tick=561124 goal=0 here=0
+A2 60.7 h=256 obj=0.09 n=11 d11=0.331 tick=561140 goal=0 here=0
+A2 60.9 h=255 obj=0.09 n=11 d11=0.343 tick=561157 goal=0 here=0
+A2 search h=253
+A2 61.4 h=259 obj=0.13 n=38 d11=0.336 tick=561199 goal=0 here=0
+CONTACT d5=1
+A2 search h=256
+A2 61.7 h=254 obj=0.089 n=12 d11=0.318 tick=561243 goal=0 here=0
+A2 61.8 h=256 obj=0.09 n=11 d11=0.329 tick=561250 goal=0 here=0
+A2 62.0 h=255 obj=0.09 n=11 d11=0.334 tick=561267 goal=0 here=0
+A2 62.2 h=255 obj=0.09 n=11 d11=0.332 tick=561284 goal=0 here=0
+A2 62.3 h=258 obj=0.09 n=11 d11=0.330 tick=561300 goal=0 here=0
+A2 62.5 h=254 obj=0.09 n=11 d11=0.329 tick=561317 goal=0 here=0
+A2 62.7 h=255 obj=0.09 n=11 d11=0.324 tick=561333 goal=0 here=0
+A2 62.8 h=254 obj=0.09 n=11 d11=0.346 tick=561350 goal=0 here=0
+A2 63.0 h=255 obj=0.09 n=11 d11=0.316 tick=561366 goal=0 here=0
+A2 63.2 h=0 obj=0.09 n=11 d11=0.326 tick=561383 goal=0 here=0
+A2 63.3 h=258 obj=0.09 n=11 d11=0.334 tick=561400 goal=0 here=0
+A2 63.5 h=259 obj=0.09 n=11 d11=0.329 tick=561418 goal=0 here=0
+A2 63.7 h=256 obj=0.09 n=11 d11=0.339 tick=561434 goal=0 here=0
+A2 63.8 h=256 obj=0.09 n=11 d11=0.327 tick=561451 goal=0 here=0
+A2 64.0 h=254 obj=0.091 n=10 d11=0.346 tick=561468 goal=0 here=0
+A2 64.2 h=255 obj=0.09 n=11 d11=0.341 tick=561484 goal=0 here=0
+A2 64.3 h=256 obj=0.09 n=11 d11=0.337 tick=561501 goal=0 here=0
+A2 64.5 h=254 obj=0.09 n=11 d11=0.346 tick=561518 goal=0 here=0
+A2 64.7 h=254 obj=0.09 n=11 d11=0.340 tick=561534 goal=0 here=0
+A2 search h=255
+A2 65.2 h=254 obj=0.128 n=37 d11=0.349 tick=561583 goal=0 here=0
+CONTACT d5=1
+A2 65.3 h=254 obj=0.09 n=11 d11=0.338 tick=561604 goal=0 here=0
+CONTACT d5=1
+A2 search h=252
+A2 65.6 h=258 obj=0.093 n=24 d11=0.341 tick=561642 goal=0 here=0
+A2 65.8 h=257 obj=0.094 n=24 d11=0.332 tick=561649 goal=0 here=0
+A2 66.0 h=259 obj=0.094 n=24 d11=0.340 tick=561666 goal=0 here=0
+A2 66.2 h=255 obj=0.093 n=24 d11=0.341 tick=561682 goal=0 here=0
+A2 66.3 h=257 obj=0.093 n=24 d11=0.323 tick=561699 goal=0 here=0
+A2 66.5 h=259 obj=0.093 n=24 d11=0.321 tick=561715 goal=0 here=0
+A2 66.6 h=266 obj=0.093 n=24 d11=0.342 tick=561732 goal=0 here=0
+A2 66.8 h=254 obj=0.093 n=23 d11=0.339 tick=561748 goal=0 here=0
+A2 67.0 h=257 obj=0.093 n=24 d11=0.335 tick=561765 goal=0 here=0
+A2 67.1 h=258 obj=0.094 n=24 d11=0.335 tick=561781 goal=0 here=0
+A2 67.3 h=260 obj=0.094 n=24 d11=0.337 tick=561798 goal=0 here=0
+A2 67.5 h=257 obj=0.094 n=24 d11=0.351 tick=561815 goal=0 here=0
+A2 67.6 h=255 obj=0.093 n=24 d11=0.336 tick=561832 goal=0 here=0
+A2 67.8 h=256 obj=0.094 n=24 d11=0.324 tick=561848 goal=0 here=0
+A2 68.0 h=261 obj=0.093 n=23 d11=0.336 tick=561865 goal=0 here=0
+A2 68.1 h=258 obj=0.093 n=24 d11=0.340 tick=561882 goal=0 here=0
+A2 68.3 h=259 obj=0.094 n=24 d11=0.326 tick=561898 goal=0 here=0
+A2 68.5 h=254 obj=0.093 n=24 d11=0.322 tick=561915 goal=0 here=0
+A2 68.6 h=258 obj=0.094 n=24 d11=0.336 tick=561932 goal=0 here=0
+A2 68.8 h=263 obj=0.093 n=24 d11=0.329 tick=561948 goal=0 here=0
+A2 69.0 h=258 obj=0.093 n=23 d11=0.335 tick=561965 goal=0 here=0
+A2 69.1 h=257 obj=0.094 n=24 d11=0.363 tick=561981 goal=0 here=0
+A2 69.3 h=259 obj=0.094 n=24 d11=0.333 tick=561998 goal=0 here=0
+A2 69.5 h=255 obj=0.093 n=24 d11=0.347 tick=562014 goal=0 here=0
+A2 69.6 h=258 obj=0.094 n=24 d11=0.329 tick=562031 goal=0 here=0
+A2 69.8 h=258 obj=0.094 n=24 d11=0.353 tick=562048 goal=0 here=0
+A2 70.0 h=258 obj=0.094 n=24 d11=0.337 tick=562057 goal=0 here=0
+A2 70.1 h=255 obj=0.094 n=24 d11=0.336 tick=562081 goal=0 here=0
+A2 70.3 h=259 obj=0.093 n=23 d11=0.335 tick=562099 goal=0 here=0
+A2 70.5 h=261 obj=0.094 n=24 d11=0.335 tick=562115 goal=0 here=0
+A2 70.6 h=258 obj=0.094 n=24 d11=0.327 tick=562132 goal=0 here=0
+A2 70.8 h=258 obj=0.094 n=23 d11=0.325 tick=562148 goal=0 here=0
+A2 71.0 h=254 obj=0.094 n=24 d11=0.339 tick=562164 goal=0 here=0
+A2 71.1 h=262 obj=0.094 n=24 d11= tick=562181 goal=0 here=0
+A2 71.3 h=259 obj=0.094 n=24 d11=0.334 tick=562198 goal=0 here=0
+A2 71.5 h=254 obj=0.093 n=24 d11=0.331 tick=562214 goal=0 here=0
+A2 71.6 h=258 obj=0.093 n=24 d11=0.329 tick=562231 goal=0 here=0
+A2 71.8 h=258 obj=0.094 n=24 d11= tick=562248 goal=0 here=0
+A2 72.0 h=254 obj=0.095 n=24 d11=0.328 tick=562264 goal=0 here=0
+A2 72.1 h=261 obj=0.094 n=24 d11=0.355 tick=562282 goal=0 here=0
+A2 72.3 h=259 obj=0.093 n=24 d11=0.348 tick=562298 goal=0 here=0
+A2 72.5 h=258 obj=0.093 n=23 d11=0.339 tick=562315 goal=0 here=0
+A2 72.6 h=260 obj=0.094 n=24 d11=0.338 tick=562332 goal=0 here=0
+A2 72.8 h=254 obj=0.094 n=24 d11=0.335 tick=562343 goal=0 here=0
+A2 73.0 h=255 obj=0.093 n=24 d11=0.315 tick=562365 goal=0 here=0
+A2 73.2 h=258 obj=0.094 n=24 d11=0.331 tick=562382 goal=0 here=0
+A2 73.3 h=260 obj=0.094 n=24 d11=0.328 tick=562399 goal=0 here=0
+A2 73.5 h=257 obj=0.093 n=24 d11=0.337 tick=562416 goal=0 here=0
+A2 73.7 h=252 obj=0.093 n=24 d11=0.347 tick=562432 goal=0 here=0
+A2 73.8 h=259 obj=0.094 n=23 d11=0.343 
+A2 74.0 h=258 obj=0.093 n=23 d11=0.343 tick=562466 goal=0 here=0
+A2 74.1 h=256 obj=0.094 n=24 d11=0.346 tick=562482 goal=0 here=0
+A2 74.3 h=256 obj=0.094 n=24 d11=0.331 tick=562498 goal=0 here=0
+A2 74.5 h=258 obj=0.094 n=24 d11=0.334 tick=562515 goal=0 here=0
+A2 74.7 h=259 obj=0.093 n=23 d11=0.331 tick=562532 goal=0 here=0
+A2 74.8 h=259 obj=0.094 n=23 d11=0.331 tick=562549 goal=0 here=0
+A2 75.0 h=257 obj=0.093 n=24 d11=0.333 tick=562565 goal=0 here=0
+A2 75.2 h=252 obj=0.094 n=24 d11=0.326 
+A2 75.3 h=256 obj=0.094 n=24 d11=0.344 tick=562599 goal=0 here=0
+A2 75.5 h=261 obj=0.093 n=24 d11=0.350 tick=562616 goal=0 here=0
+A2 75.7 h=257 obj=0.093 n=24 d11=0.330 tick=562632 goal=0 here=0
+A2 75.8 h=254 obj=0.093 n=23 d11=0.325 tick=562649 goal=0 here=0
+A2 76.0 h=256 obj=0.093 n=24 d11=0.350 tick=562661 goal=0 here=0
+A2 76.2 h=263 obj=0.094 n=24 d11=0.327 tick=562683 goal=0 here=0
+A2 76.3 h=258 obj=0.093 n=24 d11=0.331 tick=562700 goal=0 here=0
+A2 76.5 h=257 obj=0.094 n=24 d11=0.354 tick=562716 goal=0 here=0
+A2 76.7 h=256 obj=0.094 n=23 d11=0.330 tick=562733 goal=0 here=0
+A2 76.8 h=259 obj=0.094 n=24 d11=0.341 tick=562749 goal=0 here=0
+A2 77.0 h=257 obj=0.094 n=24 d11=0.349 tick=562766 goal=0 here=0
+A2 77.2 h=259 obj=0.094 n=24 d11=0.333 tick=562783 goal=0 here=0
+A2 search h=262
+A2 77.6 h=258 obj=0.129 n=36 d11=0.338 tick=562824 goal=0 here=0
+CONTACT d5=1
+A2 77.7 h=256 obj=0.092 n=25 d11=0.322 tick=562846 goal=0 here=0
+A2 77.9 h=257 obj=0.089 n=11 d11=0.330 tick=562853 goal=0 here=0
+A2 78.0 h=256 obj=0.089 n=11 d11=0.329 tick=562869 goal=0 here=0
+A2 78.2 h=255 obj=0.089 n=11 d11=0.320 tick=562886 goal=0 here=0
+A2 78.4 h=252 obj=0.09 n=11 d11= tick=562903 goal=0 here=0
+A2 78.5 h=256 obj=0.089 n=11 d11=0.333 tick=562919 goal=0 here=0
+A2 78.7 h=252 obj=0.09 n=11 d11=0.338 tick=562936 goal=0 here=0
+A2 78.9 h=254 obj=0.09 n=11 d11=0.330 tick=562954 goal=0 here=0
+A2 79.0 h=253 obj=0.089 n=11 d11=0.329 tick=562971 goal=0 here=0
+A2 79.2 h=254 obj=0.09 n=11 d11=0.328 tick=562988 goal=0 here=0
+A2 79.4 h=254 obj=0.089 n=11 d11=0.340 tick=563005 goal=0 here=0
+A2 79.5 h=253 obj=0.09 n=11 d11=0.348 tick=563021 goal=0 here=0
+A2 79.7 h=256 obj=0.09 n=11 d11=0.332 tick=563037 goal=0 here=0
+A2 79.9 h=256 obj=0.089 n=11 d11=0.324 tick=563054 goal=0 here=0
+A2 80.0 h=253 obj=0.09 n=11 d11=0.338 tick=563071 goal=0 here=0
+A2 80.2 h=257 obj=0.089 n=11 d11=0.336 tick=563087 goal=0 here=0
+A2 80.4 h=257 obj=0.09 n=11 d11=0.329 tick=563105 goal=0 here=0
+A2 80.5 h=258 obj=0.09 n=11 d11=0.337 tick=563122 goal=0 here=0
+A2 80.7 h=257 obj=0.09 n=11 d11=0.333 tick=563138 goal=0 here=0
+A2 80.9 h=254 obj=0.09 n=11 d11=0.327 tick=563155 goal=0 here=0
+A2 81.0 h=253 obj=0.09 n=11 d11=0.346 tick=563172 goal=0 here=0
+A2 81.2 h=256 obj=0.089 n=11 d11=0.347 tick=563189 goal=0 here=0
+A2 81.4 h=253 obj=0.09 n=11 d11=0.326 tick=563206 goal=0 here=0
+A2 81.6 h=254 obj=0.089 n=11 d11=0.342 tick=563223 goal=0 here=0
+A2 81.7 h=256 obj=0.09 n=11 d11=0.340 tick=563240 goal=0 here=0
+A2 81.9 h=253 obj=0.09 n=11 d11=0.345 tick=563256 goal=0 here=0
+A2 82.1 h=255 obj=0.09 n=11 d11=0.335 tick=563273 goal=0 here=0
+A2 82.2 h=254 obj=0.09 n=11 d11=0.341 tick=563290 goal=0 here=0
+A2 82.4 h=254 obj=0.089 n=11 d11=0.332 tick=563307 goal=0 here=0
+A2 82.6 h=253 obj=0.089 n=11 d11=0.325 tick=563324 goal=0 here=0
+A2 82.7 h=253 obj=0.09 n=11 d11=0.330 tick=563340 goal=0 here=0
+A2 82.9 h=255 obj=0.09 n=11 d11=0.340 tick=563357 goal=0 here=0
+A2 83.1 h=252 obj=0.09 n=11 d11=0.331 tick=563374 goal=0 here=0
+A2 83.2 h=257 obj=0.089 n=11 d11=0.324 tick=563391 goal=0 here=0
+A2 83.4 h=256 obj=0.09 n=11 d11=0.336 tick=563409 goal=0 here=0
+A2 83.6 h=255 obj=0.09 n=11 d11=0.333 tick=563425 goal=0 here=0
+A2 83.7 h=256 obj=0.089 n=11 d11=0.327 tick=563442 goal=0 here=0
+A2 83.9 h=255 obj=0.089 n=11 d11=0.328 tick=563459 goal=0 here=0
+A2 84.1 h=258 obj=0.09 n=11 d11=0.340 tick=563475 goal=0 here=0
+A2 84.3 h=255 obj=0.09 n=11 d11=0.339 tick=563491 goal=0 here=0
+A2 84.4 h=251 obj=0.09 n=11 d11=0.342 
+A2 84.6 h=256 obj=0.09 n=11 d11=0.340 tick=563534 goal=0 here=0
+A2 84.8 h=253 obj=0.089 n=11 d11=0.337 tick=563546 goal=0 here=0
+A2 85.0 h=254 obj=0.09 n=11 d11=0.338 
+A2 85.1 h=255 obj=0.09 n=11 d11=0.323 tick=563580 goal=0 here=0
+A2 85.3 h=255 obj=0.09 n=11 d11=0.330 tick=563597 goal=0 here=0
+A2 85.5 h=254 obj=0.09 n=10 d11=0.332 tick=563613 goal=0 here=0
+A2 85.6 h=258 obj=0.089 n=11 d11=0.341 tick=563630 goal=0 here=0
+A2 85.8 h=254 obj=0.09 n=11 d11=0.332 tick=563647 goal=0 here=0
+A2 86.0 h=256 obj=0.09 n=11 d11=0.336 tick=563663 goal=0 here=0
+A2 86.1 h=250 obj=0.089 n=11 d11=0.327 tick=563680 goal=0 here=0
+A2 86.3 h=256 obj=0.089 n=11 d11=0.345 tick=563696 goal=0 here=0
+A2 86.5 h=254 obj=0.09 n=11 d11=0.337 tick=563713 goal=0 here=0
+A2 86.6 h=254 obj=0.089 n=11 d11=0.339 tick=563729 goal=0 here=0
+A2 86.8 h=256 obj=0.089 n=11 d11=0.336 tick=563746 goal=0 here=0
+A2 87.0 h=251 obj=0.089 n=11 d11=0.332 tick=563762 goal=0 here=0
+A2 87.1 h=255 obj=0.089 n=11 d11=0.339 tick=563779 goal=0 here=0
+A2 87.3 h=257 obj=0.09 n=11 d11=0.326 tick=563797 goal=0 here=0
+A2 87.5 h=254 obj=0.09 n=11 d11=0.343 tick=563813 goal=0 here=0
+A2 87.6 h=254 obj=0.089 n=11 d11=0.338 tick=563830 goal=0 here=0
+A2 87.8 h=253 obj=0.089 n=11 d11=0.328 tick=563846 goal=0 here=0
+A2 88.0 h=255 obj=0.09 n=11 d11=0.332 tick=563863 goal=0 here=0
+A2 88.1 h=259 obj=0.089 n=11 d11=0.334 tick=563880 goal=0 here=0
+A2 88.3 h=257 obj=0.089 n=11 d11=0.319 tick=563896 goal=0 here=0
+A2 88.5 h=251 obj=0.089 n=11 d11=0.323 tick=563914 goal=0 here=0
+A2 88.6 h=253 obj=0.09 n=11 d11=0.345 tick=563930 goal=0 here=0
+A2 88.8 h=256 obj=0.09 n=11 d11=0.334 tick=563947 goal=0 here=0
+A2 89.0 h=256 obj=0.089 n=11 d11=0.340 tick=563964 goal=0 here=0
+A2 89.2 h=254 obj=0.09 n=11 d11=0.346 tick=563982 goal=0 here=0
+A2 89.4 h=252 obj=0.089 n=11 d11=0.355 tick=564001 goal=0 here=0
+A2 89.6 h=256 obj=0.089 n=10 d11=0.334 tick=564026 goal=0 here=0
+A2 89.8 h=255 obj=0.089 n=11 d11=0.345 tick=564042 goal=0 here=0
+A2 89.9 h=253 obj=0.09 n=11 d11=0.338 tick=564059 goal=0 here=0
+A2 90.1 h=254 obj=0.09 n=11 d11=0.348 tick=564075 goal=0 here=0
+A2 90.2 h=257 obj=0.09 n=11 d11=0.338 tick=564092 goal=0 here=0
+A2 90.4 h=256 obj=0.09 n=11 d11=0.338 tick=564109 goal=0 here=0
+A2 90.6 h=258 obj=0.09 n=11 d11=0.341 tick=564125 goal=0 here=0
+A2 90.7 h=253 obj=0.089 n=11 d11=0.335 tick=564142 goal=0 here=0
+A2 90.9 h=0 obj=0.09 n=11 d11=0.332 tick=564158 goal=0 here=0
+A2 91.1 h=256 obj=0.09 n=11 d11=0.335 tick=564175 goal=0 here=0
+A2 91.2 h=254 obj=0.089 n=11 d11=0.335 tick=564192 goal=0 here=0
+A2 91.4 h=256 obj=0.09 n=11 d11=0.343 tick=564208 goal=0 here=0
+A2 91.6 h=251 obj=0.089 n=11 d11=0.341 tick=564226 goal=0 here=0
+A2 91.8 h=251 obj=0.09 n=11 d11=0.335 tick=564242 goal=0 here=0
+A2 91.9 h=252 obj=0.09 n=11 d11=0.338 tick=564259 goal=0 here=0
+A2 92.1 h=256 obj=0.09 n=11 d11=0.346 tick=564276 goal=0 here=0
+A2 92.3 h=256 obj=0.089 n=11 d11=0.329 tick=564293 goal=0 here=0
+A2 92.4 h=255 obj=0.089 n=10 d11=0.340 tick=564310 goal=0 here=0
+A2 92.6 h=254 obj=0.089 n=11 d11=0.335 tick=564327 goal=0 here=0
+A2 92.8 h=257 obj=0.089 n=11 d11=0.346 tick=564343 goal=0 here=0
+A2 92.9 h=251 obj=0.089 n=10 d11=0.331 tick=564360 goal=0 here=0
+A2 93.1 h=253 obj=0.089 n=11 d11=0.351 tick=564377 goal=0 here=0
+A2 93.3 h=254 obj=0.09 n=11 d11=0.320 tick=564394 goal=0 here=0
+A2 93.4 h=252 obj=0.09 n=11 d11=0.339 tick=564411 goal=0 here=0
+A2 93.6 h=254 obj=0.09 n=11 d11=0.337 tick=564427 goal=0 here=0
+A2 93.8 h=252 obj=0.089 n=11 d11=0.330 tick=564443 goal=0 here=0
+A2 93.9 h=251 obj=0.089 n=11 d11=0.333 tick=564460 goal=0 here=0
+A2 94.1 h=253 obj=0.09 n=11 d11=0.338 tick=564476 goal=0 here=0
+A2 94.3 h=254 obj=0.089 n=11 d11=0.326 tick=564494 goal=0 here=0
+A2 94.4 h=255 obj=0.089 n=11 d11=0.343 tick=564510 goal=0 here=0
+A2 94.6 h=0 obj=0.09 n=11 d11=0.344 tick=564527 goal=0 here=0
+A2 94.8 h=255 obj=0.09 n=11 d11=0.329 tick=564544 goal=0 here=0
+A2 94.9 h=257 obj=0.09 n=10 d11=0.321 tick=564560 goal=0 here=0
+A2 95.1 h=258 obj=0.089 n=11 d11=0.333 tick=564577 goal=0 here=0
+A2 95.3 h=259 obj=0.09 n=11 d11=0.337 tick=564593 goal=0 here=0
+A2 95.4 h=253 obj=0.089 n=11 d11=0.342 tick=564611 goal=0 here=0
+A2 95.6 h=254 obj=0.09 n=10 d11=0.334 tick=564627 goal=0 here=0
+A2 95.8 h=256 obj=0.089 n=11 d11=0.336 tick=564644 goal=0 here=0
+A2 96.0 h=253 obj=0.089 n=11 d11= tick=564661 goal=0 here=0
+A2 96.1 h=256 obj=0.09 n=11 d11=0.323 tick=564679 goal=0 here=0
+A2 96.3 h=254 obj=0.089 n=11 d11=0.341 tick=564696 goal=0 here=0
+A2 96.5 h=255 obj=0.09 n=11 d11=0.328 tick=564714 goal=0 here=0
+A2 96.6 h=253 obj=0.09 n=11 d11=0.321 tick=564730 goal=0 here=0
+A2 96.8 h=255 obj=0.09 n=11 d11=0.343 tick=564747 goal=0 here=0
+A2 97.0 h=256 obj=0.089 n=10 d11=0.327 tick=564764 goal=0 here=0
+A2 97.1 h=255 obj=0.09 n=11 d11=0.349 tick=564781 goal=0 here=0
+A2 97.3 h=258 obj=0.09 n=11 d11=0.336 tick=564797 goal=0 here=0
+A2 97.5 h=255 obj=0.09 n=10 d11=0.324 tick=564814 goal=0 here=0
+A2 97.6 h=256 obj=0.09 n=11 d11=0.319 tick=564831 goal=0 here=0
+A2 97.8 h=255 obj=0.089 n=11 d11=0.336 tick=564847 goal=0 here=0
+A2 98.0 h=255 obj=0.09 n=11 d11=0.331 tick=564864 goal=0 here=0
+A2 98.1 h=253 obj=0.09 n=11 d11=0.349 tick=564881 goal=0 here=0
+A2 98.3 h=253 obj=0.09 n=11 d11=0.337 tick=564897 goal=0 here=0
+A2 98.5 h=258 obj=0.089 n=11 d11=0.333 tick=564914 goal=0 here=0
+A2 98.6 h=256 obj=0.09 n=10 d11=0.329 tick=564931 goal=0 here=0
+A2 98.8 h=254 obj=0.09 n=11 d11=0.338 tick=564948 goal=0 here=0
+A2 99.0 h=255 obj=0.089 n=11 d11=0.310 tick=564966 goal=0 here=0
+A2 99.2 h=256 obj=0.09 n=11 d11=0.335 tick=564982 goal=0 here=0
+A2 99.3 h=255 obj=0.09 n=11 d11=0.333 tick=564997 goal=0 here=0
+A2 99.5 h=255 obj=0.09 n=11 d11=0.330 tick=565017 goal=0 here=0
+A2 99.7 h=256 obj=0.089 n=11 d11=0.333 tick=565034 goal=0 here=0
+A2 99.8 h=256 obj=0.089 n=11 d11=0.332 tick=565051 goal=0 here=0
+A2 100.0 h=255 obj=0.09 n=11 d11=0.341 tick=565068 goal=0 here=0
+A2 100.2 h=248 obj=0.09 n=11 d11=0.337 tick=565086 goal=0 here=0
+A2 100.4 h=256 obj=0.089 n=11 d11=0.339 tick=565102 goal=0 here=0
+A2 100.5 h=253 obj=0.09 n=11 d11=0.348 tick=565119 goal=0 here=0
+A2 100.7 h=254 obj=0.09 n=11 d11=0.336 tick=565136 goal=0 here=0
+A2 search h=253
+A2 101.2 h=263 obj=0.13 n=38 d11=0.345 tick=565178 goal=0 here=0
+CONTACT d5=1
+A2 101.2 h=254 obj=0.092 n=24 d11=0.337 tick=565200 goal=0 here=0
+CONTACT d5=1
+A2 101.4 h=251 obj=0.089 n=12 d11=0.334 tick=565208 goal=0 here=0
+A2 101.6 h=256 obj=0.089 n=12 d11=0.330 tick=565225 goal=0 here=0
+A2 101.7 h=252 obj=0.089 n=12 d11=0.345 tick=565242 goal=0 here=0
+A2 101.9 h=253 obj=0.089 n=11 d11=0.331 tick=565259 goal=0 here=0
+A2 102.1 h=256 obj=0.089 n=12 d11=0.317 tick=565276 goal=0 here=0
+A2 102.3 h=250 obj=0.089 n=12 d11=0.330 tick=565293 goal=0 here=0
+A2 102.4 h=255 obj=0.089 n=12 d11=0.348 tick=565309 goal=0 here=0
+A2 102.6 h=253 obj=0.089 n=11 d11=0.326 tick=565325 goal=0 here=0
+A2 102.7 h=254 obj=0.089 n=12 d11=0.335 tick=565342 goal=0 here=0
+A2 search h=251
+A2 103.1 h=259 obj=0.094 n=24 d11=0.332 tick=565390 goal=0 here=0
+A2 103.5 h=259 obj=0.14 n=51 d11=0.341 tick=565406 goal=0 here=0
+CONTACT d5=1
+A2 103.8 h=259 obj=0.128 n=37 d11=0.316 tick=565439 goal=0 here=0
+CONTACT d5=1
+A2 103.9 h=252 obj=0.089 n=11 d11=0.327 tick=565462 goal=0 here=0
+CONTACT d5=1
+A2 search h=258
+A2 104.4 h=252 obj=0.092 n=25 d11=0.339 tick=565504 goal=0 here=0
+A2 104.7 h=258 obj=0.128 n=38 d11= tick=565525 goal=0 here=0
+CONTACT d5=1
+A2 104.8 h=251 obj=0.089 n=11 d11=0.324 tick=565556 goal=0 here=0
+CONTACT d5=1
+A2 search h=248
+A2 105.2 h=257 obj=0.093 n=24 d11=0.341 tick=565599 goal=0 here=0
+A2 105.6 h=262 obj=0.139 n=51 d11=0.343 
+CONTACT d5=1
+A2 105.8 h=266 obj=0.134 n=65 d11=0.326 tick=565642 goal=0 here=0
+CONTACT d5=1
+A2 106.0 h=265 obj=0.215 n=94 d11=0.344 
+A2 106.3 h=276 obj=0.219 n=144 d11=0.343 
+CONTACT d5=1
+A2 106.5 h=281 obj=0.192 n=193 d11=0.330 
+CONTACT d5=1
+A2 106.8 h=286 obj=0.235 n=241 d11=0.336 tick=565739 goal=0 here=0
+CONTACT d5=1
+A2 107.0 h=284 obj=0.214 n=208 d11=0.338 tick=565763 goal=0 here=0
+CONTACT d5=1
+A2 107.2 h=280 obj=0.196 n=175 d11=0.329 tick=565785 goal=0 here=0
+CONTACT d5=1
+A2 107.5 h=273 obj=0.205 n=145 d11=0.333 tick=565809 goal=0 here=0
+CONTACT d5=1
+A2 107.7 h=269 obj=0.212 n=96 d11=0.337 
+CONTACT d5=1
+A2 108.0 h=264 obj=0.132 n=65 d11=0.329 tick=565857 goal=0 here=0
+CONTACT d5=1
+A2 108.2 h=264 obj=0.128 n=37 d11=0.337 tick=565881 goal=0 here=0
+CONTACT d5=1
+A2 108.3 h=259 obj=0.089 n=12 d11=0.356 
+CONTACT d5=1
+A2 search h=253
+A2 108.6 h=257 obj=0.09 n=10 d11=0.323 tick=565941 goal=0 here=0
+A2 108.8 h=0 obj=0.09 n=11 d11=0.326 
+A2 109.0 h=254 obj=0.09 n=11 d11=0.344 
+A2 109.1 h=255 obj=0.09 n=11 d11=0.341 
+A2 109.3 h=257 obj=0.09 n=11 d11=0.331 tick=565999 goal=0 here=0
+A2 109.5 h=260 obj=0.091 n=11 d11=0.324 tick=566016 goal=0 here=0
+A2 109.6 h=254 obj=0.091 n=11 d11=0.337 
+A2 109.8 h=258 obj=0.091 n=11 d11= tick=566049 goal=0 here=0
+A2 110.0 h=256 obj=0.091 n=11 d11=0.329 tick=566065 goal=0 here=0
+A2 110.1 h=261 obj=0.09 n=11 d11=0.323 
+A2 110.3 h=255 obj=0.09 n=11 d11=0.330 tick=566098 goal=0 here=0
+A2 110.5 h=257 obj=0.091 n=11 d11=0.345 
+A2 110.6 h=261 obj=0.091 n=11 d11=0.342 
+A2 110.8 h=257 obj=0.09 n=11 d11=0.344 tick=566148 goal=0 here=0
+A2 111.0 h=259 obj=0.09 n=11 d11=0.343 
+A2 111.1 h=259 obj=0.091 n=10 d11=0.330 tick=566182 goal=0 here=0
+A2 111.3 h=0 obj=0.09 n=11 d11=0.323 
+A2 111.5 h=255 obj=0.09 n=10 d11=0.337 
+A2 111.6 h=256 obj=0.091 n=11 d11=0.330 tick=566233 goal=0 here=0
+A2 111.8 h=254 obj=0.091 n=11 d11=0.330 tick=566249 goal=0 here=0
+A2 112.0 h=256 obj=0.09 n=11 d11=0.345 
+A2 112.1 h=257 obj=0.091 n=11 d11=0.349 
+A2 112.3 h=256 obj=0.09 n=11 d11=0.336 tick=566300 goal=0 here=0
+A2 112.5 h=254 obj=0.091 n=11 d11=0.338 
+A2 112.6 h=257 obj=0.09 n=11 d11=0.321 
+A2 112.8 h=261 obj=0.09 n=11 d11=0.333 
+A2 search h=261
+A2 113.1 h=258 obj=0.094 n=24 d11=0.332 tick=566389 goal=0 here=0
+A2 113.4 h=258 obj=0.127 n=37 d11=0.324 
+CONTACT d5=1
+A2 113.5 h=256 obj=0.089 n=11 d11=0.336 tick=566430 goal=0 here=0
+CONTACT d5=1
+A2 search h=252
+A2 113.9 h=253 obj=0.091 n=11 d11=0.334 tick=566471 goal=0 here=0
+A2 114.3 h=262 obj=0.128 n=36 d11=0.336 
+CONTACT d5=1
+A2 114.3 h=257 obj=0.09 n=12 d11=0.321 
+CONTACT d5=1
+A2 search h=252
+A2 114.7 h=257 obj=0.09 n=10 d11=0.316 tick=566550 goal=0 here=0
+A2 114.9 h=258 obj=0.094 n=24 d11=0.333 tick=566560 goal=0 here=0
+A2 115.1 h=262 obj=0.094 n=24 d11=0.336 tick=566577 goal=0 here=0
+A2 115.2 h=256 obj=0.094 n=24 d11=0.325 tick=566594 goal=0 here=0
+A2 115.4 h=259 obj=0.094 n=24 d11=0.330 
+A2 115.6 h=258 obj=0.094 n=23 d11=0.331 
+A2 115.8 h=259 obj=0.094 n=24 d11=0.341 tick=566644 goal=0 here=0
+A2 115.9 h=260 obj=0.094 n=24 d11=0.338 tick=566661 goal=0 here=0
+A2 116.1 h=262 obj=0.094 n=24 d11=0.339 
+A2 116.2 h=260 obj=0.094 n=23 d11=0.336 tick=566694 goal=0 here=0
+A2 116.4 h=262 obj=0.094 n=23 d11=0.340 tick=566711 goal=0 here=0
+A2 116.6 h=257 obj=0.095 n=24 d11=0.336 
+A2 116.7 h=259 obj=0.095 n=24 d11=0.332 
+A2 116.9 h=255 obj=0.094 n=24 d11=0.330 
+A2 117.1 h=254 obj=0.094 n=23 d11=0.334 
+A2 117.2 h=259 obj=0.094 n=24 d11=0.320 
+A2 117.4 h=260 obj=0.094 n=24 d11=0.326 
+A2 117.6 h=259 obj=0.094 n=24 d11=0.325 tick=566828 goal=0 here=0
+A2 117.8 h=256 obj=0.094 n=24 d11=0.333 tick=566845 goal=0 here=0
+A2 117.9 h=258 obj=0.094 n=24 d11=0.331 
+A2 118.1 h=257 obj=0.094 n=24 d11=0.331 
+A2 118.3 h=260 obj=0.093 n=24 d11=0.338 tick=566896 goal=0 here=0
+A2 118.4 h=258 obj=0.094 n=24 d11=0.331 tick=566912 goal=0 here=0
+A2 118.6 h=259 obj=0.094 n=24 d11=0.329 
+A2 118.8 h=260 obj=0.094 n=23 d11=0.342 tick=566945 goal=0 here=0
+A2 118.9 h=259 obj=0.094 n=24 d11=0.326 tick=566962 goal=0 here=0
+A2 119.1 h=258 obj=0.094 n=23 d11=0.344 
+A2 119.3 h=259 obj=0.094 n=23 d11=0.336 
+A2 119.4 h=255 obj=0.094 n=24 d11=0.342 tick=567013 goal=0 here=0
+A2 119.6 h=261 obj=0.094 n=24 d11=0.338 tick=567030 goal=0 here=0
+A2 119.8 h=262 obj=0.094 n=24 d11=0.342 tick=567046 goal=0 here=0
+A2 119.9 h=259 obj=0.094 n=24 d11=0.353 tick=567063 goal=0 here=0
+A2 120.1 h=256 obj=0.094 n=24 d11=0.338 
+A2 120.3 h=257 obj=0.094 n=24 d11=0.342 tick=567096 goal=0 here=0
+A2 120.4 h=259 obj=0.094 n=24 d11=0.340 tick=567113 goal=0 here=0
+A2 120.6 h=256 obj=0.094 n=24 d11=0.328 
+A2 120.8 h=256 obj=0.094 n=24 d11=0.336 
+A2 120.9 h=257 obj=0.094 n=23 d11=0.336 tick=567163 goal=0 here=0
+A2 121.1 h=259 obj=0.094 n=24 d11=0.343 tick=567180 goal=0 here=0
+A2 121.3 h=256 obj=0.094 n=24 d11=0.324 
+A2 121.4 h=257 obj=0.094 n=24 d11=0.330 
+A2 121.6 h=257 obj=0.094 n=24 d11=0.340 tick=567230 goal=0 here=0
+A2 121.8 h=259 obj=0.093 n=23 d11=0.335 
+A2 121.9 h=260 obj=0.094 n=24 d11=0.333 tick=567255 goal=0 here=0
+A2 122.1 h=257 obj=0.094 n=24 d11=0.328 tick=567273 goal=0 here=0
+A2 122.3 h=260 obj=0.094 n=24 d11=0.337 tick=567297 goal=0 here=0
+A2 122.4 h=253 obj=0.094 n=24 d11=0.342 
+A2 122.6 h=259 obj=0.095 n=22 d11=0.345 
+A2 122.8 h=262 obj=0.094 n=23 d11=0.337 
+A2 122.9 h=262 obj=0.094 n=23 d11=0.342 
+A2 123.1 h=260 obj=0.094 n=23 d11=0.326 
+A2 123.3 h=258 obj=0.094 n=24 d11=0.346 tick=567397 goal=0 here=0
+A2 123.4 h=262 obj=0.094 n=24 d11=0.343 
+A2 123.6 h=258 obj=0.094 n=23 d11=0.339 tick=567430 goal=0 here=0
+A2 123.8 h=259 obj=0.094 n=24 d11=0.344 
+A2 124.0 h=259 obj=0.094 n=24 d11=0.348 tick=567465 goal=0 here=0
+A2 124.1 h=260 obj=0.094 n=23 d11=0.334 tick=567482 goal=0 here=0
+A2 124.3 h=260 obj=0.094 n=24 d11=0.331 tick=567498 goal=0 here=0
+A2 124.5 h=257 obj=0.094 n=24 d11=0.313 tick=567515 goal=0 here=0
+A2 124.6 h=258 obj=0.095 n=24 d11=0.327 tick=567532 goal=0 here=0
+A2 124.8 h=255 obj=0.094 n=24 d11=0.327 tick=567549 goal=0 here=0
+A2 125.0 h=257 obj=0.094 n=24 d11=0.327 
+A2 125.1 h=256 obj=0.094 n=24 d11=0.342 tick=567583 goal=0 here=0
+A2 125.3 h=256 obj=0.094 n=24 d11=0.334 
+A2 125.5 h=261 obj=0.094 n=24 d11=0.329 
+A2 125.6 h=254 obj=0.094 n=23 d11=0.340 tick=567633 goal=0 here=0
+A2 125.8 h=260 obj=0.094 n=24 d11= tick=567649 goal=0 here=0
+A2 126.0 h=259 obj=0.094 n=24 d11=0.306 
+A2 126.1 h=262 obj=0.094 n=24 d11=0.335 
+A2 126.3 h=256 obj=0.094 n=22 d11=0.317 
+A2 126.5 h=258 obj=0.094 n=24 d11=0.322 
+A2 126.7 h=253 obj=0.093 n=24 d11=0.341 
+A2 126.8 h=260 obj=0.094 n=23 d11=0.347 tick=567752 goal=0 here=0
+A2 127.0 h=254 obj=0.094 n=23 d11=0.332 
+A2 127.2 h=256 obj=0.094 n=23 d11=0.315 tick=567777 goal=0 here=0
+A2 127.3 h=260 obj=0.094 n=24 d11=0.341 
+A2 127.5 h=260 obj=0.094 n=24 d11=0.329 
+A2 127.7 h=258 obj=0.095 n=24 d11=0.335 tick=567835 goal=0 here=0
+A2 127.8 h=254 obj=0.094 n=24 d11=0.336 
+A2 128.0 h=256 obj=0.094 n=24 d11=0.322 
+A2 128.2 h=258 obj=0.095 n=24 d11=0.336 
+A2 128.3 h=260 obj=0.093 n=23 d11=0.334 tick=567903 goal=0 here=0
+A2 128.5 h=260 obj=0.094 n=24 d11=0.326 
+A2 128.7 h=260 obj=0.094 n=24 d11=0.330 tick=567934 goal=0 here=0
+A2 128.9 h=258 obj=0.094 n=24 d11=0.320 
+A2 129.0 h=257 obj=0.093 n=24 d11=0.346 tick=567972 goal=0 here=0
+A2 129.2 h=0 obj=0.095 n=24 d11=0.324 
+A2 129.4 h=260 obj=0.095 n=24 d11=0.339 
+A2 129.6 h=260 obj=0.094 n=24 d11=0.339 
+A2 129.7 h=259 obj=0.094 n=24 d11=0.332 
+A2 129.9 h=258 obj=0.094 n=24 d11=0.335 
+A2 130.1 h=262 obj=0.094 n=24 d11=0.346 tick=568075 goal=0 here=0
+A2 130.2 h=258 obj=0.094 n=24 d11=0.328 
+A2 130.4 h=256 obj=0.094 n=24 d11= tick=568109 goal=0 here=0
+A2 130.6 h=258 obj=0.094 n=24 d11=0.328 tick=568126 goal=0 here=0
+A2 130.7 h=256 obj=0.094 n=24 d11=0.344 
+A2 130.9 h=257 obj=0.094 n=24 d11=0.341 
+A2 131.1 h=257 obj=0.095 n=24 d11=0.331 tick=568177 goal=0 here=0
+A2 131.2 h=260 obj=0.094 n=23 d11=0.333 tick=568194 goal=0 here=0
+A2 131.4 h=259 obj=0.094 n=24 d11=0.318 
+A2 131.6 h=260 obj=0.094 n=23 d11=0.335 
+A2 131.8 h=0 obj=0.094 n=24 d11=0.336 
+A2 131.9 h=256 obj=0.094 n=24 d11=0.333 
+A2 132.1 h=258 obj=0.095 n=24 d11=0.314 tick=568278 goal=0 here=0
+A2 132.3 h=259 obj=0.094 n=24 d11=0.325 
+A2 132.4 h=260 obj=0.095 n=24 d11=0.336 
+A2 132.6 h=260 obj=0.093 n=23 d11=0.320 tick=568328 goal=0 here=0
+A2 132.8 h=254 obj=0.094 n=24 d11=0.330 tick=568345 goal=0 here=0
+A2 search h=262
+A2 133.2 h=259 obj=0.129 n=37 d11=0.329 tick=568385 goal=0 here=0
+CONTACT d5=1
+A2 133.3 h=258 obj=0.091 n=11 d11=0.324 tick=568410 goal=0 here=0
+CONTACT d5=1
+A2 search h=257
+A2 133.7 h=254 obj=0.092 n=24 d11=0.340 
+A2 134.1 h=260 obj=0.13 n=38 d11=0.335 tick=568459 goal=0 here=0
+CONTACT d5=1
+A2 search h=253
+A2 134.4 h=252 obj=0.089 n=12 d11=0.344 tick=568514 goal=0 here=0
+A2 134.5 h=256 obj=0.092 n=24 d11=0.336 tick=568523 goal=0 here=0
+A2 134.7 h=254 obj=0.093 n=24 d11=0.336 
+A2 134.9 h=257 obj=0.093 n=23 d11=0.341 
+A2 135.1 h=257 obj=0.093 n=24 d11=0.348 tick=568575 goal=0 here=0
+A2 135.2 h=257 obj=0.092 n=24 d11=0.338 
+A2 135.4 h=253 obj=0.092 n=22 d11=0.329 tick=568610 goal=0 here=0
+A2 135.6 h=259 obj=0.092 n=24 d11=0.327 tick=568628 goal=0 here=0
+A2 135.8 h=258 obj=0.092 n=24 d11=0.325 
+A2 135.9 h=255 obj=0.092 n=24 d11=0.339 tick=568662 goal=0 here=0
+A2 136.2 h=260 obj=0.092 n=24 d11=0.338 
+A2 136.3 h=255 obj=0.092 n=24 d11=0.330 tick=568704 goal=0 here=0
+A2 136.6 h=257 obj=0.093 n=24 d11=0.349 
+A2 136.8 h=258 obj=0.093 n=24 d11=0.330 
+A2 136.9 h=259 obj=0.092 n=24 d11=0.341 tick=568764 goal=0 here=0
+A2 137.1 h=258 obj=0.092 n=23 d11=0.326 tick=568778 goal=0 here=0
+A2 137.3 h=257 obj=0.092 n=24 d11=0.332 
+A2 137.5 h=257 obj=0.093 n=24 d11=0.331 
+A2 137.6 h=256 obj=0.093 n=23 d11=0.322 
+A2 137.8 h=255 obj=0.093 n=24 d11=0.329 
+A2 138.0 h=258 obj=0.093 n=24 d11=0.342 tick=568866 goal=0 here=0
+A2 138.1 h=258 obj=0.093 n=24 d11=0.322 tick=568883 goal=0 here=0
+A2 138.3 h=256 obj=0.093 n=24 d11=0.326 
+A2 138.5 h=254 obj=0.092 n=24 d11=0.338 
+A2 138.7 h=260 obj=0.093 n=24 d11=0.351 tick=568935 goal=0 here=0
+A2 138.8 h=258 obj=0.093 n=24 d11=0.329 
+A2 139.0 h=261 obj=0.092 n=24 d11=0.328 tick=568967 goal=0 here=0
+A2 139.2 h=260 obj=0.093 n=24 d11=0.339 
+A2 139.3 h=262 obj=0.093 n=24 d11=0.329 tick=569004 goal=0 here=0
+A2 139.5 h=256 obj=0.092 n=24 d11=0.344 tick=569021 goal=0 here=0
+A2 139.7 h=261 obj=0.093 n=23 d11=0.354 tick=569029 goal=0 here=0
+A2 139.8 h=258 obj=0.092 n=24 d11=0.331 
+A2 140.0 h=257 obj=0.092 n=23 d11=0.354 
+A2 140.2 h=259 obj=0.093 n=24 d11=0.336 
+A2 140.4 h=257 obj=0.093 n=23 d11=0.331 
+A2 140.5 h=253 obj=0.093 n=24 d11=0.334 tick=569126 goal=0 here=0
+A2 140.7 h=256 obj=0.093 n=24 d11=0.341 tick=569138 goal=0 here=0
+A2 140.9 h=257 obj=0.092 n=24 d11=0.341 tick=569156 goal=0 here=0
+A2 141.0 h=258 obj=0.093 n=24 d11=0.338 tick=569173 goal=0 here=0
+A2 141.2 h=257 obj=0.092 n=24 d11=0.339 tick=569190 goal=0 here=0
+A2 141.4 h=256 obj=0.093 n=24 d11=0.342 tick=569216 goal=0 here=0
+A2 141.6 h=258 obj=0.093 n=23 d11=0.333 
+A2 141.8 h=255 obj=0.093 n=24 d11=0.330 tick=569247 goal=0 here=0
+A2 141.9 h=258 obj=0.092 n=24 d11=0.326 tick=569264 goal=0 here=0
+A2 142.1 h=255 obj=0.092 n=24 d11=0.336 tick=569280 goal=0 here=0
+A2 142.3 h=0 obj=0.092 n=24 d11=0.348 
+A2 142.4 h=255 obj=0.092 n=23 d11=0.332 tick=569313 goal=0 here=0
+A2 142.6 h=260 obj=0.093 n=24 d11=0.323 
+A2 142.8 h=254 obj=0.093 n=24 d11=0.323 tick=569346 goal=0 here=0
+A2 142.9 h=258 obj=0.093 n=24 d11=0.341 tick=569363 goal=0 here=0
+A2 143.1 h=258 obj=0.093 n=23 d11=0.335 
+A2 143.3 h=257 obj=0.093 n=24 d11=0.326 tick=569395 goal=0 here=0
+A2 143.4 h=257 obj=0.092 n=24 d11=0.325 
+A2 143.6 h=257 obj=0.092 n=24 d11=0.332 
+A2 143.7 h=259 obj=0.092 n=23 d11=0.351 tick=569444 goal=0 here=0
+A2 143.9 h=259 obj=0.093 n=24 d11= tick=569461 goal=0 here=0
+A2 144.1 h=257 obj=0.093 n=24 d11=0.329 tick=569477 goal=0 here=0
+A2 144.2 h=257 obj=0.093 n=24 d11=0.322 
+A2 144.4 h=260 obj=0.092 n=24 d11=0.341 tick=569509 goal=0 here=0
+A2 144.6 h=257 obj=0.092 n=24 d11=0.339 tick=569528 goal=0 here=0
+A2 144.7 h=253 obj=0.092 n=24 d11=0.342 
+A2 145.0 h=254 obj=0.092 n=24 d11=0.337 tick=569560 goal=0 here=0
+A2 145.2 h=257 obj=0.092 n=24 d11=0.325 
+A2 145.3 h=258 obj=0.093 n=23 d11=0.324 tick=569604 goal=0 here=0
+A2 145.5 h=257 obj=0.093 n=24 d11=0.346 tick=569613 goal=0 here=0
+A2 145.7 h=260 obj=0.092 n=23 d11=0.338 tick=569638 goal=0 here=0
+A2 145.9 h=253 obj=0.093 n=23 d11=0.342 tick=569647 goal=0 here=0
+A2 146.0 h=257 obj=0.092 n=22 d11=0.345 tick=569672 goal=0 here=0
+A2 146.2 h=256 obj=0.092 n=23 d11=0.328 tick=569689 goal=0 here=0
+A2 146.4 h=262 obj=0.093 n=23 d11=0.327 
+A2 146.5 h=252 obj=0.092 n=23 d11=0.333 tick=569723 goal=0 here=0
+A2 146.7 h=260 obj=0.092 n=24 d11=0.330 
+A2 146.9 h=258 obj=0.093 n=24 d11= 
+A2 147.0 h=260 obj=0.093 n=24 d11=0.347 
+A2 147.2 h=255 obj=0.093 n=24 d11=0.339 
+A2 147.4 h=254 obj=0.092 n=24 d11=0.330 
+A2 search h=260
+A2 147.8 h=259 obj=0.133 n=36 d11=0.330 
+CONTACT d5=1
+A2 147.9 h=258 obj=0.09 n=11 d11=0.337 tick=569869 goal=0 here=0
+CONTACT d5=1
+A2 148.1 h=252 obj=0.09 n=11 d11=0.332 
+A2 148.3 h=257 obj=0.09 n=11 d11=0.323 tick=569895 goal=0 here=0
+A2 search h=258
+A2 148.6 h=259 obj=0.092 n=24 d11=0.334 
+A2 148.9 h=258 obj=0.125 n=37 d11=0.338 
+CONTACT d5=1
+A2 149.0 h=258 obj=0.089 n=12 d11=0.334 
+CONTACT d5=1
+A2 search h=251
+A2 149.5 h=261 obj=0.133 n=36 d11=0.334 
+CONTACT d5=1
+A2 149.6 h=260 obj=0.093 n=24 d11=0.342 
+CONTACT d5=1
+A2 149.8 h=254 obj=0.09 n=11 d11=0.331 
+A2 150.0 h=256 obj=0.09 n=11 d11=0.339 
+A2 150.1 h=255 obj=0.09 n=11 d11=0.348 
+A2 150.3 h=254 obj=0.09 n=11 d11=0.333 tick=570099 goal=0 here=0
+A2 150.5 h=253 obj=0.09 n=11 d11= 
+A2 search h=254
+A2 151.0 h=263 obj=0.129 n=37 d11=0.322 
+CONTACT d5=1
+A2 151.1 h=258 obj=0.094 n=24 d11=0.324 
+CONTACT d5=1
+A2 151.3 h=254 obj=0.09 n=11 d11=0.328 
+A2 151.4 h=258 obj=0.089 n=11 d11=0.325 
+A2 151.6 h=253 obj=0.09 n=10 d11=0.330 
+A2 151.8 h=255 obj=0.09 n=11 d11=0.321 tick=570247 goal=0 here=0
+A2 151.9 h=259 obj=0.09 n=10 d11=0.331 
+A2 152.1 h=255 obj=0.09 n=11 d11=0.334 tick=570280 goal=0 here=0
+A2 152.3 h=259 obj=0.09 n=10 d11=0.322 tick=570297 goal=0 here=0
+A2 152.4 h=259 obj=0.09 n=11 d11=0.326 
+A2 152.6 h=256 obj=0.089 n=11 d11=0.339 
+A2 152.8 h=254 obj=0.09 n=11 d11=0.324 tick=570346 goal=0 here=0
+A2 152.9 h=256 obj=0.091 n=10 d11=0.349 
+A2 153.1 h=259 obj=0.09 n=11 d11=0.305 
+A2 153.3 h=256 obj=0.09 n=11 d11=0.338 
+A2 153.4 h=258 obj=0.089 n=11 d11=0.317 
+A2 153.6 h=254 obj=0.09 n=11 d11=0.337 tick=570428 goal=0 here=0
+A2 153.8 h=256 obj=0.09 n=11 d11=0.331 
+A2 153.9 h=253 obj=0.089 n=11 d11=0.319 
+A2 154.1 h=257 obj=0.09 n=11 d11=0.320 
+A2 154.3 h=254 obj=0.09 n=11 d11=0.311 tick=570486 goal=0 here=0
+A2 154.4 h=259 obj=0.089 n=11 d11=0.319 tick=570511 goal=0 here=0
+A2 154.6 h=256 obj=0.09 n=11 d11=0.320 
+A2 154.8 h=254 obj=0.089 n=11 d11=0.308 
+A2 154.9 h=256 obj=0.09 n=11 d11=0.334 
+A2 155.1 h=258 obj=0.089 n=10 d11=0.330 tick=570578 goal=0 here=0
+A2 155.3 h=258 obj=0.09 n=11 d11=0.314 tick=570595 goal=0 here=0
+A2 155.4 h=258 obj=0.09 n=11 d11=0.316 
+A2 155.6 h=253 obj=0.09 n=11 d11=0.317 tick=570630 goal=0 here=0
+A2 155.8 h=254 obj=0.09 n=11 d11=0.311 
+A2 155.9 h=256 obj=0.09 n=11 d11=0.316 
+A2 156.1 h=253 obj=0.09 n=11 d11=0.326 
+A2 156.3 h=254 obj=0.09 n=11 d11=0.303 tick=570696 goal=0 here=0
+A2 156.4 h=256 obj=0.089 n=11 d11=0.313 tick=570712 goal=0 here=0
+A2 156.6 h=254 obj=0.089 n=11 d11=0.316 
+A2 156.8 h=253 obj=0.09 n=10 d11=0.314 
+A2 156.9 h=258 obj=0.089 n=11 d11=0.320 tick=570763 goal=0 here=0
+A2 157.1 h=254 obj=0.09 n=11 d11=0.315 
+A2 157.3 h=256 obj=0.089 n=11 d11=0.327 
+A2 157.4 h=254 obj=0.09 n=11 d11=0.316 tick=570812 goal=0 here=0
+A2 157.6 h=255 obj=0.089 n=11 d11=0.317 
+A2 157.8 h=255 obj=0.09 n=11 d11=0.316 
+A2 157.9 h=254 obj=0.09 n=11 d11=0.315 tick=570862 goal=0 here=0
+A2 158.1 h=259 obj=0.089 n=11 d11=0.321 tick=570876 goal=0 here=0
+A2 158.3 h=257 obj=0.09 n=11 d11=0.316 
+A2 158.4 h=254 obj=0.089 n=11 d11=0.315 
+A2 158.6 h=253 obj=0.089 n=11 d11=0.316 tick=570928 goal=0 here=0
+A2 158.7 h=256 obj=0.09 n=11 d11=0.316 
+A2 158.9 h=255 obj=0.089 n=11 d11=0.301 
+A2 159.1 h=256 obj=0.09 n=11 d11=0.319 
+A2 159.2 h=256 obj=0.089 n=11 d11=0.327 tick=570994 goal=0 here=0
+A2 159.4 h=256 obj=0.09 n=11 d11=0.324 
+A2 159.6 h=254 obj=0.09 n=11 d11=0.310 tick=571027 goal=0 here=0
+A2 159.7 h=255 obj=0.09 n=11 d11=0.325 
+A2 159.9 h=255 obj=0.09 n=11 d11=0.332 
+A2 160.1 h=258 obj=0.089 n=11 d11=0.321 
+A2 160.2 h=257 obj=0.09 n=10 d11=0.315 tick=571093 goal=0 here=0
+A2 160.4 h=254 obj=0.09 n=11 d11=0.323 tick=571109 goal=0 here=0
+A2 160.6 h=256 obj=0.09 n=11 d11=0.340 tick=571125 goal=0 here=0
+A2 160.7 h=256 obj=0.09 n=11 d11=0.336 
+A2 160.9 h=260 obj=0.09 n=11 d11=0.334 
+A2 161.1 h=257 obj=0.09 n=11 d11=0.334 tick=571175 goal=0 here=0
+A2 161.2 h=255 obj=0.089 n=11 d11=0.330 
+A2 161.4 h=257 obj=0.089 n=11 d11=0.305 tick=571208 goal=0 here=0
+A2 161.6 h=252 obj=0.089 n=11 d11=0.337 tick=571224 goal=0 here=0
+A2 161.8 h=255 obj=0.089 n=11 d11=0.336 
+A2 162.1 h=258 obj=0.091 n=10 d11=0.318 
+A2 162.3 h=250 obj=0.09 n=11 d11=0.335 
+A2 162.4 h=252 obj=0.09 n=10 d11=0.339 
+A2 162.6 h=252 obj=0.089 n=11 d11=0.336 
+A2 162.8 h=255 obj=0.09 n=11 d11=0.334 tick=571346 goal=0 here=0
+A2 162.9 h=252 obj=0.09 n=11 d11=0.327 
+A2 163.1 h=254 obj=0.089 n=11 d11=0.338 
+A2 163.3 h=254 obj=0.09 n=11 d11=0.340 
+A2 163.4 h=255 obj=0.089 n=11 d11=0.327 
+A2 163.6 h=253 obj=0.09 n=10 d11=0.340 
+A2 163.8 h=255 obj=0.09 n=11 d11=0.337 tick=571446 goal=0 here=0
+A2 163.9 h=256 obj=0.09 n=11 d11=0.333 
+A2 164.1 h=255 obj=0.09 n=11 d11=0.345 tick=571479 goal=0 here=0
+A2 164.3 h=252 obj=0.09 n=11 d11=0.315 
+A2 164.4 h=255 obj=0.089 n=11 d11=0.323 tick=571512 goal=0 here=0
+A2 164.6 h=255 obj=0.089 n=11 d11=0.340 
+A2 164.8 h=252 obj=0.09 n=11 d11=0.349 tick=571546 goal=0 here=0
+A2 164.9 h=257 obj=0.09 n=11 d11=0.332 tick=571563 goal=0 here=0
+A2 165.1 h=254 obj=0.089 n=11 d11=0.323 
+A2 165.3 h=255 obj=0.089 n=11 d11=0.330 tick=571596 goal=0 here=0
+A2 165.4 h=255 obj=0.09 n=11 d11=0.311 
+A2 165.6 h=254 obj=0.089 n=11 d11=0.323 
+A2 165.8 h=258 obj=0.089 n=11 d11=0.322 tick=571646 goal=0 here=0
+A2 165.9 h=253 obj=0.089 n=11 d11=0.331 tick=571664 goal=0 here=0
+A2 166.1 h=258 obj=0.09 n=11 d11=0.326 tick=571680 goal=0 here=0
+A2 166.3 h=257 obj=0.09 n=11 d11=0.323 
+A2 166.4 h=257 obj=0.09 n=10 d11=0.313 tick=571715 goal=0 here=0
+A2 166.6 h=258 obj=0.09 n=11 d11=0.328 
+A2 166.8 h=255 obj=0.09 n=11 d11=0.318 
+A2 166.9 h=256 obj=0.089 n=11 d11=0.328 tick=571764 goal=0 here=0
+A2 167.1 h=254 obj=0.09 n=11 d11=0.314 
+A2 167.3 h=255 obj=0.091 n=11 d11=0.300 
+A2 167.5 h=255 obj=0.09 n=11 d11=0.316 tick=571826 goal=0 here=0
+A2 167.7 h=256 obj=0.09 n=11 d11=0.323 
+A2 167.8 h=255 obj=0.089 n=11 d11=0.327 
+A2 168.0 h=253 obj=0.09 n=11 d11=0.304 
+A2 168.2 h=259 obj=0.089 n=11 d11=0.312 
+A2 168.3 h=259 obj=0.09 n=11 d11=0.317 tick=571903 goal=0 here=0
+A2 168.5 h=256 obj=0.09 n=11 d11=0.328 
+A2 168.7 h=257 obj=0.09 n=11 d11=0.317 tick=571937 goal=0 here=0
+A2 168.8 h=256 obj=0.089 n=11 d11=0.319 tick=571953 goal=0 here=0
+A2 169.0 h=253 obj=0.089 n=11 d11=0.314 tick=571970 goal=0 here=0
+A2 search h=258
+A2 169.3 h=258 obj=0.093 n=24 d11=0.314 tick=572009 goal=0 here=0
+A2 169.6 h=260 obj=0.127 n=37 d11=0.300 
+CONTACT d5=1
+A2 169.7 h=254 obj=0.089 n=11 d11=0.314 
+CONTACT d5=1
+A2 search h=252
+A2 170.1 h=255 obj=0.092 n=24 d11=0.328 tick=572091 goal=0 here=0
+A2 170.5 h=256 obj=0.128 n=37 d11=0.310 tick=572097 goal=0 here=0
+CONTACT d5=1
+A2 170.5 h=256 obj=0.09 n=11 d11=0.312 
+CONTACT d5=1
+A2 search h=253
+A2 170.9 h=256 obj=0.093 n=23 d11=0.318 
+A2 171.3 h=261 obj=0.14 n=51 d11=0.313 
+CONTACT d5=1
+A2 171.4 h=256 obj=0.089 n=11 d11=0.321 tick=572212 goal=0 here=0
+CONTACT d5=1
+A2 search h=257
+A2 171.8 h=254 obj=0.089 n=11 d11=0.309 
+A2 171.9 h=255 obj=0.092 n=23 d11=0.303 tick=572264 goal=0 here=0
+A2 172.1 h=258 obj=0.092 n=24 d11=0.309 tick=572281 goal=0 here=0
+A2 172.3 h=254 obj=0.092 n=24 d11=0.325 tick=572297 goal=0 here=0
+A2 172.4 h=254 obj=0.092 n=24 d11=0.315 tick=572314 goal=0 here=0
+A2 172.6 h=257 obj=0.092 n=23 d11=0.322 
+A2 172.8 h=260 obj=0.092 n=24 d11=0.318 tick=572351 goal=0 here=0
+A2 173.0 h=255 obj=0.092 n=23 d11=0.314 tick=572357 goal=0 here=0
+A2 173.1 h=257 obj=0.093 n=24 d11=0.332 
+A2 173.3 h=259 obj=0.092 n=24 d11=0.317 
+A2 173.5 h=256 obj=0.092 n=23 d11=0.322 tick=572415 goal=0 here=0
+A2 173.6 h=258 obj=0.092 n=24 d11=0.323 tick=572431 goal=0 here=0
+A2 173.8 h=259 obj=0.092 n=23 d11=0.327 tick=572448 goal=0 here=0
+A2 174.0 h=257 obj=0.093 n=24 d11=0.338 
+A2 174.1 h=258 obj=0.093 n=24 d11=0.322 tick=572482 goal=0 here=0
+A2 174.3 h=258 obj=0.093 n=24 d11=0.321 
+A2 174.4 h=256 obj=0.093 n=24 d11=0.322 tick=572514 goal=0 here=0
+A2 174.6 h=258 obj=0.092 n=24 d11=0.313 tick=572531 goal=0 here=0
+A2 174.8 h=255 obj=0.093 n=24 d11=0.337 
+A2 174.9 h=256 obj=0.093 n=24 d11=0.333 
+A2 175.1 h=259 obj=0.092 n=24 d11=0.324 tick=572581 goal=0 here=0
+A2 175.3 h=252 obj=0.092 n=24 d11=0.330 
+A2 175.4 h=261 obj=0.092 n=24 d11=0.344 
+A2 175.6 h=256 obj=0.092 n=23 d11=0.333 tick=572631 goal=0 here=0
+A2 175.8 h=260 obj=0.093 n=24 d11=0.329 tick=572648 goal=0 here=0
+A2 175.9 h=260 obj=0.092 n=24 d11= tick=572662 goal=0 here=0
+A2 176.1 h=258 obj=0.093 n=24 d11=0.331 tick=572681 goal=0 here=0
+A2 176.3 h=255 obj=0.092 n=24 d11=0.338 tick=572698 goal=0 here=0
+A2 176.4 h=260 obj=0.092 n=24 d11=0.329 
+A2 176.6 h=262 obj=0.092 n=23 d11=0.335 tick=572722 goal=0 here=0
+A2 176.8 h=257 obj=0.092 n=24 d11=0.330 tick=572750 goal=0 here=0
+A2 176.9 h=258 obj=0.093 n=24 d11=0.330 
+A2 177.1 h=258 obj=0.092 n=24 d11=0.342 
+A2 177.3 h=258 obj=0.093 n=24 d11=0.358 tick=572797 goal=0 here=0
+A2 177.5 h=259 obj=0.092 n=23 d11=0.339 
+A2 177.6 h=255 obj=0.092 n=24 d11=0.334 
+A2 177.8 h=255 obj=0.092 n=24 d11=0.336 
+A2 178.0 h=262 obj=0.093 n=24 d11=0.329 
+A2 178.1 h=256 obj=0.092 n=23 d11=0.338 tick=572882 goal=0 here=0
+A2 178.3 h=256 obj=0.093 n=23 d11=0.337 tick=572898 goal=0 here=0
+A2 178.5 h=258 obj=0.092 n=24 d11=0.329 tick=572915 goal=0 here=0
+A2 178.6 h=259 obj=0.093 n=24 d11=0.337 tick=572931 goal=0 here=0
+A2 178.8 h=257 obj=0.092 n=24 d11=0.334 
+A2 179.0 h=255 obj=0.093 n=24 d11=0.330 
+A2 179.1 h=257 obj=0.092 n=24 d11=0.338 
+A2 179.3 h=257 obj=0.092 n=24 d11=0.335 tick=572990 goal=0 here=0
+A2 179.5 h=256 obj=0.092 n=24 d11=0.334 
+A2 179.6 h=257 obj=0.092 n=23 d11=0.323 
+A2 179.8 h=257 obj=0.093 n=23 d11=0.345 tick=573040 goal=0 here=0
+A2 180.0 h=258 obj=0.092 n=24 d11=0.336 
+A2 180.1 h=256 obj=0.093 n=24 d11=0.338 tick=573080 goal=0 here=0
+APPROACH2 end

@@ -1,0 +1,8 @@
+29626.5 d11 3-phase test begin
+29626.5 PHASE STILL_NOTX start
+29671.6 PHASE STILL_NOTX end first=0.299 last=0.276 slope=-0.00054/s min=0.260 max=0.310
+29671.6 PHASE STILL_TX2Hz start
+29716.8 PHASE STILL_TX2Hz end first=0.278 last=0.285 slope=+0.00016/s min=0.250 max=0.320
+29716.8 PHASE DRIVE_NOTX start
+29756.9 PHASE DRIVE_NOTX end first=0.280 last=0.275 slope=-0.00014/s min=0.256 max=0.301
+29756.9 d11 test done

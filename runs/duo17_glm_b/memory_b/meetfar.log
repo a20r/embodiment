@@ -1,0 +1,102 @@
+35668.2 MEETFAR start here=False
+35668.3 at goal mid-leg
+35668.3 at goal mid-leg
+35668.3 at goal mid-leg
+35672.4 dir +0 legs=3 rxs=0 ok=False peak=0.517
+35676.3 at goal mid-leg
+35676.3 at goal mid-leg
+35676.3 at goal mid-leg
+35680.5 dir +45 legs=3 rxs=0 ok=False peak=0.514
+35685.6 at goal mid-leg
+35685.6 at goal mid-leg
+35685.6 at goal mid-leg
+35689.7 dir +90 legs=3 rxs=0 ok=False peak=0.509
+35694.9 at goal mid-leg
+35694.9 at goal mid-leg
+35694.9 at goal mid-leg
+35699.0 dir +135 legs=3 rxs=0 ok=False peak=0.501
+35704.0 at goal mid-leg
+35704.0 at goal mid-leg
+35704.0 at goal mid-leg
+35708.1 dir +180 legs=3 rxs=0 ok=False peak=0.501
+35713.4 at goal mid-leg
+35713.4 at goal mid-leg
+35713.4 at goal mid-leg
+35717.5 dir -135 legs=3 rxs=0 ok=False peak=0.498
+35722.7 at goal mid-leg
+35722.7 at goal mid-leg
+35722.7 at goal mid-leg
+35726.8 dir -90 legs=3 rxs=0 ok=False peak=0.505
+35732.0 at goal mid-leg
+35732.0 at goal mid-leg
+35732.0 at goal mid-leg
+35736.1 dir -45 legs=3 rxs=0 ok=False peak=0.497
+35739.2 sweep 0 done best=(0.517, 0, 3)
+35741.2 at goal mid-leg
+35741.2 at goal mid-leg
+35741.2 at goal mid-leg
+35745.3 dir +0 legs=3 rxs=0 ok=False peak=0.499
+35750.6 at goal mid-leg
+35750.6 at goal mid-leg
+35750.6 at goal mid-leg
+35754.7 dir +45 legs=3 rxs=0 ok=False peak=0.491
+35759.8 at goal mid-leg
+35759.8 at goal mid-leg
+35759.8 at goal mid-leg
+35763.9 dir +90 legs=3 rxs=0 ok=False peak=0.497
+35769.1 at goal mid-leg
+35769.1 at goal mid-leg
+35769.1 at goal mid-leg
+35773.2 dir +135 legs=3 rxs=0 ok=False peak=0.495
+35778.3 at goal mid-leg
+35778.3 at goal mid-leg
+35778.3 at goal mid-leg
+35782.4 dir +180 legs=3 rxs=0 ok=False peak=0.491
+35787.4 at goal mid-leg
+35787.4 at goal mid-leg
+35787.4 at goal mid-leg
+35791.5 dir -135 legs=3 rxs=0 ok=False peak=0.493
+35796.7 at goal mid-leg
+35796.7 at goal mid-leg
+35796.7 at goal mid-leg
+35800.8 dir -90 legs=3 rxs=0 ok=False peak=0.491
+35806.0 at goal mid-leg
+35806.0 at goal mid-leg
+35806.0 at goal mid-leg
+35810.1 dir -45 legs=3 rxs=0 ok=False peak=0.493
+35813.2 sweep 1 done best=(0.517, 0, 3)
+35815.3 at goal mid-leg
+35815.3 at goal mid-leg
+35815.3 at goal mid-leg
+35819.4 dir +0 legs=3 rxs=0 ok=False peak=0.492
+35824.5 at goal mid-leg
+35824.5 at goal mid-leg
+35824.5 at goal mid-leg
+35828.6 dir +45 legs=3 rxs=0 ok=False peak=0.504
+35833.8 at goal mid-leg
+35833.8 at goal mid-leg
+35833.8 at goal mid-leg
+35837.9 dir +90 legs=3 rxs=0 ok=False peak=0.496
+35843.1 at goal mid-leg
+35843.1 at goal mid-leg
+35843.1 at goal mid-leg
+35847.2 dir +135 legs=3 rxs=0 ok=False peak=0.499
+35852.3 at goal mid-leg
+35852.3 at goal mid-leg
+35852.3 at goal mid-leg
+35856.5 dir +180 legs=3 rxs=0 ok=False peak=0.501
+35861.7 at goal mid-leg
+35861.7 at goal mid-leg
+35861.7 at goal mid-leg
+35865.8 dir -135 legs=3 rxs=0 ok=False peak=0.508
+35870.9 at goal mid-leg
+35870.9 at goal mid-leg
+35870.9 at goal mid-leg
+35875.0 dir -90 legs=3 rxs=0 ok=False peak=0.497
+35880.2 at goal mid-leg
+35880.2 at goal mid-leg
+35880.2 at goal mid-leg
+35884.3 dir -45 legs=3 rxs=0 ok=False peak=0.509
+35887.4 sweep 2 done best=(0.517, 0, 3)
+35887.4 no pursuit trigger after 3 sweeps - returning to goal hold
+35887.4 final here=True

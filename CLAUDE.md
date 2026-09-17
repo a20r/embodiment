@@ -19,7 +19,21 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   maze.style=organic`). Other subcommands: `reset`, `perturb`, `quiz`,
   `ablate`, `savings`, `report`, `shell`, `tail`, `dashboard`, `smoke`.
 - `python scripts/duo_check.py` — host-side validation of duo mode
-  (26 checks, no docker needed; boots a throwaway daemon on port 8798).
+  (95 checks, no docker needed; boots throwaway daemons on ports
+  8798 and 8799).
+- `--set lidar3d.enabled=true` swaps the 16-beam `lidar` port for a
+  `lidar3d` point-cloud port (sensor-frame `x,y,z` triples, `;`-separated,
+  ~55 kB frames; walls have height, floor at z=0). Gate for lidar3d
+  changes: `python scripts/lidar3d_check.py` (23 checks, port 8796).
+  The dashboard's **3D** tab renders walls, robots and the true cloud
+  (three.js vendored; `/state?cloud=1`); headless render check:
+  `python scripts/dashboard_render_check.py <dashboard-url> <series>`.
+- `--set scene=track --set robot.model=car` swaps the maze for the
+  scaled Circuit of the Americas (`sim/track.py`, `sim/tracks/`); the
+  objective is laps against the clock (`track.laps_warmup` +
+  `track.laps_timed`; status port `lap= last= best=`), the car gets
+  a friction-circle grip limit (`robot.car.a_grip`) and an `imu` port.
+  Gate: `python scripts/track_check.py` (port 8795).
 - `python scripts/make_replay.py <series> <ep_NNN> <out.html> [title]`
   — self-contained replay page for a solo episode;
   `scripts/make_duo_replay.py` likewise for duo episodes.
@@ -27,6 +41,17 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   (default 127.0.0.1:8080) against the running daemon.
 - No API key? `--set model=mock:wall-follower` drives the identical
   harness path with a scripted agent.
+- Other providers: `--set model=kimi:<id>[@effort]` / `zai:<id>[@effort]`
+  / `deepseek:<id>[@effort]` / `gemini:<id>` / `openai:<id>` /
+  `compat:<id>` (OpenAI-compatible adapter in `harness/llm.py`; keys
+  from `MOONSHOT_API_KEY` / `ZAI_API_KEY` / `DEEPSEEK_API_KEY` /
+  `GEMINI_API_KEY` / `OPENAI_API_KEY` / `LLM_BASE_URL`+`LLM_API_KEY`). Kimi "K3 Max" is `kimi:kimi-k3@max`;
+  "Ox Alpha" is `zai:glm-5.3-flash`; reasoning traces are stored as
+  thinking blocks and echoed back verbatim (Moonshot requires it, Z.ai
+  keeps it with clear_thinking=false). Token-free check and the gate
+  for any `harness/llm.py` change: `python scripts/llm_compat_check.py`
+  (82 checks). Bare Anthropic names take `@low|medium|high|xhigh|max`
+  too (`claude-fable-5-1@max` -> `output_config.effort`).
 
 ## Architecture
 
@@ -54,6 +79,12 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   peer is lidar-visible and collidable; one TX/RX port pair per bot
   delivers raw lines only within `duo.comms_range`, silently dropping
   the rest; every TX is ground-truth logged with delivered/dist.
+  Link-layer rungs, default off: `duo.tx_status` (status port reports
+  `tx=<n>:<ok|lost|busy>`), `duo.rx_blocking` (RX read waits for a
+  line; README must name `{rx}`), `duo.rx_wakes_agent` (harness
+  re-prompts a stopped bot when a line is delivered).
+  `duo.together_window_s` is wall seconds. `evals/comms.py` scores
+  contingent replies from ground truth.
 - Determinism: all randomness flows from named seeded streams via
   `stable_seed()` (crc32, never `hash()`); the seed tuple includes
   maze seed, episode index, and (duo) bot id.
@@ -73,7 +104,9 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   '*/devfs/*' -exec git add -f {} +` (`runs/` is gitignored; exclude
   `__pycache__` too). Replay pages live at `runs/<series>/replay.html`.
 - Ports: 8787 default daemon, 8790+ for concurrent runs, 8791 smoke,
-  8798 duo_check, 8080 dashboard. A stale daemon on a port is detected
+  8795 track_check, 8796 lidar3d_check, 8797 llm_compat_check,
+  8798/8799 duo_check,
+  8080 dashboard. A stale daemon on a port is detected
   by the /health pid check — kill it, don't reuse blindly.
 - This box's dockerd dies periodically: kill stale containerd pids,
   `rm /var/run/docker.pid`, restart dockerd, `until docker info`.

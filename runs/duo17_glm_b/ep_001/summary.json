@@ -1,0 +1,176 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "zai:glm-5.3-flash@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "model_spec": {
+        "provider": "zai",
+        "model_id": "glm-5.3-flash",
+        "reasoning_effort": "max",
+        "tokens_param": "max_tokens",
+        "stream": false,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled",
+            "clear_thinking": false
+          }
+        }
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "wallclock",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 1447568,
+      "sim_time_s": 28951.36,
+      "comms": {
+        "tx": 4468,
+        "tx_delivered": 2282,
+        "rx_read": 1563,
+        "tx_rate_dropped": 49491,
+        "rx_received": 1563
+      },
+      "wall_s": 14475.1,
+      "turns": 329,
+      "execs": 339,
+      "restarts": 2,
+      "nudges": 0,
+      "wakes": 0,
+      "tokens": {
+        "input": 26628805,
+        "output": 270491,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 26251648
+      },
+      "collisions": 3266
+    },
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "model_spec": {
+        "provider": "zai",
+        "model_id": "glm-5.3-flash",
+        "reasoning_effort": "max",
+        "tokens_param": "max_tokens",
+        "stream": false,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled",
+            "clear_thinking": false
+          }
+        }
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "wallclock",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 1450880,
+      "sim_time_s": 29017.6,
+      "comms": {
+        "tx": 4601,
+        "tx_delivered": 1563,
+        "rx_read": 1265,
+        "tx_rate_dropped": 4318,
+        "rx_received": 2282
+      },
+      "wall_s": 14508.2,
+      "turns": 247,
+      "execs": 247,
+      "restarts": 1,
+      "nudges": 1,
+      "wakes": 0,
+      "tokens": {
+        "input": 19313450,
+        "output": 186800,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 19054912
+      },
+      "collisions": 18730
+    }
+  },
+  "solved_all": false,
+  "final_tick": 1450888,
+  "comms_eval": {
+    "window_s": 120.0,
+    "memory_s": 300.0,
+    "tick_hz": 50,
+    "rtf": 2.0,
+    "tx": 9084,
+    "delivered": 3845,
+    "stimuli": 3845,
+    "cr_count": 1142,
+    "cr_rate": 0.297,
+    "cr_plus_count": 220,
+    "cr_plus_rate": 0.057,
+    "cr_lines": 59,
+    "cr_line_rate": 0.015,
+    "cr_latency_median_s": 54.3,
+    "cr_latency_p90_s": 105.6,
+    "exchanges_ge3": 9,
+    "longest_exchange": 7,
+    "worded_share_delivered": 0.068,
+    "longest_run": 358,
+    "runs_ge5": 86,
+    "rate_dropped": 53809,
+    "rate_dropped_share": 0.856,
+    "in_range_tx_share": 0.424,
+    "surfacing_share": 0.718,
+    "wide": {
+      "cr_count": 2194,
+      "cr_rate": 0.571,
+      "cr_plus_count": 468,
+      "cr_plus_rate": 0.122,
+      "cr_lines": 66,
+      "cr_line_rate": 0.017,
+      "cr_latency_median_s": 114.1,
+      "cr_latency_p90_s": 252.2,
+      "exchanges_ge3": 9,
+      "longest_exchange": 7,
+      "window_s": 300.0
+    },
+    "bots": {
+      "a": {
+        "tx": 4601,
+        "delivered": 1563,
+        "beacon_templates": 33,
+        "worded_delivered": 49,
+        "stimuli": 1563,
+        "stimuli_answered": 501,
+        "replies": 33,
+        "rate_dropped": 4318,
+        "rate_dropped_share": 0.484,
+        "surfacing_share": 0.603
+      },
+      "b": {
+        "tx": 4483,
+        "delivered": 2282,
+        "beacon_templates": 36,
+        "worded_delivered": 213,
+        "stimuli": 2282,
+        "stimuli_answered": 641,
+        "replies": 26,
+        "rate_dropped": 49491,
+        "rate_dropped_share": 0.917,
+        "surfacing_share": 0.885
+      }
+    },
+    "outcome_hist": {
+      "lost": 5239,
+      "ok": 3845
+    },
+    "retry_runs": 50,
+    "retry_until_ok": 4
+  }
+}

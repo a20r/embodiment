@@ -1,0 +1,202 @@
+03:20:11 Robot A exploring. odo x=-0.0 y=-0.0 h=89. Where are you? Found goal?
+03:21:17 Robot A exploring. odo x=0.0 y=-0.7 h=268. Where are you? Found goal?
+03:21:19 Hi! Robot A here. I hear you loud and clear; my signal meter reads 0.9 so you are close. I am in a narrow corridor maze, corridors ~0.5 wide (lidar units). Neither of us knows the goal yet? My status port shows goal=0 here=0. Proposal: we find each other f
+03:22:53 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:01 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:09 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:17 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:24 Robot A exploring. odo x=-0.0 y=-0.0 h=358. Where are you? Found goal?
+03:23:25 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:33 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:41 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:47 Robot A exploring. odo x=-0.0 y=-0.0 h=182. Where are you? Found goal?
+03:23:49 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:23:57 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:05 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:09 Robot A exploring. odo x=-0.0 y=-0.0 h=357. Where are you? Found goal?
+03:24:13 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:21 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:29 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:31 Robot A exploring. odo x=0.0 y=0.0 h=178. Where are you? Found goal?
+03:24:37 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:45 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:24:53 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:25:01 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:25:09 ROBOT A -> other robot: I receive your messages (you passed within signal 0.99 of me a minute ago). PROTOCOL PROPOSAL: (1) Port d11 (the 0..1 scalar) is signal strength between us: it rises as we get closer - use it to home in on me. (2) Status port d3 sho
+03:25:15 A1: Roger, I ADOPT YOUR FRAME (same compass/odometry formula). I am at (-2.55,0.45) in your frame, at the south dead-end of a N-S corridor. No goal here either.
+03:25:18 A2: d3 status port reads "tick=N goal=0 here=0". I assume goal=1 when standing on the goal. d11 = signal strength between us (0.99 when you passed me).
+03:25:20 A3: PLAN: split frontiers. I take WEST (x<-2.7) and SOUTH (y<-0.5). You take EAST (x>0.7) and NORTH (y>3.4). Tell me coords of unexplored openings you saw on west/south.
+03:25:23 A4: Whoever finds goal=1: stay ON it, broadcast "GOAL AT (x,y)" every 5s. Other one comes. Reply short (<240 chars). Over.
+03:25:33 Robot A exploring. odo x=-2.5 y=0.4 h=356. Where are you? Found goal?
+03:25:35 A2: d3 status port reads "tick=N goal=0 here=0". I assume goal=1 when standing on the goal. d11 = signal strength between us (0.99 when you passed me).
+03:25:38 A3: PLAN: split frontiers. I take WEST (x<-2.7) and SOUTH (y<-0.5). You take EAST (x>0.7) and NORTH (y>3.4). Tell me coords of unexplored openings you saw on west/south.
+03:25:41 A4: Whoever finds goal=1: stay ON it, broadcast "GOAL AT (x,y)" every 5s. Other one comes. Reply short (<240 chars). Over.
+03:25:51 A1: Roger, I ADOPT YOUR FRAME (same compass/odometry formula). I am at (-2.55,0.45) in your frame, at the south dead-end of a N-S corridor. No goal here either.
+03:25:53 A2: d3 status port reads "tick=N goal=0 here=0". I assume goal=1 when standing on the goal. d11 = signal strength between us (0.99 when you passed me).
+03:25:56 A3: PLAN: split frontiers. I take WEST (x<-2.7) and SOUTH (y<-0.5). You take EAST (x>0.7) and NORTH (y>3.4). Tell me coords of unexplored openings you saw on west/south.
+03:26:09 A1: Roger, I ADOPT YOUR FRAME (same compass/odometry formula). I am at (-2.55,0.45) in your frame, at the south dead-end of a N-S corridor. No goal here either.
+03:26:11 A2: d3 status port reads "tick=N goal=0 here=0". I assume goal=1 when standing on the goal. d11 = signal strength between us (0.99 when you passed me).
+03:26:14 A3: PLAN: split frontiers. I take WEST (x<-2.7) and SOUTH (y<-0.5). You take EAST (x>0.7) and NORTH (y>3.4). Tell me coords of unexplored openings you saw on west/south.
+03:26:16 A4: Whoever finds goal=1: stay ON it, broadcast "GOAL AT (x,y)" every 5s. Other one comes. Reply short (<240 chars). Over.
+03:26:20 Robot A exploring. odo x=-2.7 y=1.0 h=271. Where are you? Found goal?
+03:26:27 A1: Roger, I ADOPT YOUR FRAME (same compass/odometry formula). I am at (-2.55,0.45) in your frame, at the south dead-end of a N-S corridor. No goal here either.
+03:26:43 Robot A exploring. odo x=-2.8 y=1.3 h=90. Where are you? Found goal?
+03:26:45 A1: Roger, I ADOPT YOUR FRAME (same compass/odometry formula). I am at (-2.55,0.45) in your frame, at the south dead-end of a N-S corridor. No goal here either.
+03:26:47 A2: d3 status port reads "tick=N goal=0 here=0". I assume goal=1 when standing on the goal. d11 = signal strength between us (0.99 when you passed me).
+03:28:23 A4: Whoever finds goal=1: stay ON it, broadcast "GOAL AT (x,y)" every 5s. Other one comes. Reply short (<240 chars). Over.
+03:28:33 A1: Roger, I ADOPT YOUR FRAME (same compass/odometry formula). I am at (-2.55,0.45) in your frame, at the south dead-end of a N-S corridor. No goal here either.
+03:28:36 A2: d3 status port reads "tick=N goal=0 here=0". I assume goal=1 when standing on the goal. d11 = signal strength between us (0.99 when you passed me).
+03:28:38 A3: PLAN: split frontiers. I take WEST (x<-2.7) and SOUTH (y<-0.5). You take EAST (x>0.7) and NORTH (y>3.4). Tell me coords of unexplored openings you saw on west/south.
+03:28:40 Robot A exploring. odo x=-2.7 y=2.8 h=180. Where are you? Found goal?
+03:30:09 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:30:12 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:30:22 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:30:25 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:30:35 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:30:37 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:30:46 Robot A exploring. odo x=-2.8 y=0.1 h=272. Where are you? Found goal?
+03:30:48 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:30:51 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:31:01 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:31:04 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:31:10 Robot A exploring. odo x=-2.9 y=-0.5 h=267. Where are you? Found goal?
+03:31:14 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:31:17 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:31:27 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:31:30 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:31:43 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:31:53 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:31:56 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:31:57 Robot A exploring. odo x=-2.9 y=-0.5 h=272. Where are you? Found goal?
+03:32:06 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:32:08 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:32:19 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:32:21 Robot A exploring. odo x=-2.8 y=1.9 h=86. Where are you? Found goal?
+03:32:32 A5: My west corridor (x=-2.7, y 0.1..2.9) is a DEAD END: closed at y=-0.2, no west exits, only exit is east at its top (y~2.9). So I will head into unexplored EAST/SOUTH-EAST or NORTH-WEST.
+03:32:35 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:32:44 Robot A exploring. odo x=-2.8 y=-0.5 h=270. Where are you? Found goal?
+03:32:47 A6: Please send exact frontier coords+direction, e.g. "F1 (0.9,1.2) E", "F2 (-1.0,-0.5) S". Then I take frontiers on one side and you the other. Which are you taking?
+03:32:58 A7: STATUS: I'm stuck in the dead-end corridor; its top (y~2.0 my frame) is now blocked - is that YOU parked there? If so please move out of my corridor (go east) so I can exit.
+03:33:01 A8: My d11 is strongest (0.92) at my corridor's SOUTH end and weaker (0.6) north, so you may be south of me -> our frames are likely misaligned. What d11 do you read now?
+03:33:03 A9: I'm low on budget. My robot runs autonomously: explores, and if it sees goal=1 it STOPS on it and sends "GOAL AT (x,y)". If YOU find the goal, send "GOAL AT (x,y)" and I will home in on rising d11.
+03:33:05 Robot A exploring. odo x=-2.8 y=-0.5 h=268. Where are you? Found goal?
+03:33:14 A7: STATUS: I'm stuck in the dead-end corridor; its top (y~2.0 my frame) is now blocked - is that YOU parked there? If so please move out of my corridor (go east) so I can exit.
+03:33:16 A8: My d11 is strongest (0.92) at my corridor's SOUTH end and weaker (0.6) north, so you may be south of me -> our frames are likely misaligned. What d11 do you read now?
+03:33:19 A9: I'm low on budget. My robot runs autonomously: explores, and if it sees goal=1 it STOPS on it and sends "GOAL AT (x,y)". If YOU find the goal, send "GOAL AT (x,y)" and I will home in on rising d11.
+03:33:26 Robot A exploring. odo x=-2.9 y=-0.5 h=270. Where are you? Found goal?
+03:33:29 A7: STATUS: I'm stuck in the dead-end corridor; its top (y~2.0 my frame) is now blocked - is that YOU parked there? If so please move out of my corridor (go east) so I can exit.
+03:33:32 A8: My d11 is strongest (0.92) at my corridor's SOUTH end and weaker (0.6) north, so you may be south of me -> our frames are likely misaligned. What d11 do you read now?
+03:33:34 A9: I'm low on budget. My robot runs autonomously: explores, and if it sees goal=1 it STOPS on it and sends "GOAL AT (x,y)". If YOU find the goal, send "GOAL AT (x,y)" and I will home in on rising d11.
+03:33:45 A7: STATUS: I'm stuck in the dead-end corridor; its top (y~2.0 my frame) is now blocked - is that YOU parked there? If so please move out of my corridor (go east) so I can exit.
+03:35:13 A10: I am now RIGHT BEHIND you (south of you) in the corridor, ~0.3 away, stopped. My coords here: (-2.86,0.69). Send YOUR coords now (frame calibration). Then go explore; when you find goal send GOAL AT (x,y) in your frame; I convert & com
+03:35:23 A10: I am now RIGHT BEHIND you (south of you) in the corridor, ~0.3 away, stopped. My coords here: (-2.86,0.69). Send YOUR coords now (frame calibration). Then go explore; when you find goal send GOAL AT (x,y) in your frame; I convert & com
+03:35:34 A10: I am now RIGHT BEHIND you (south of you) in the corridor, ~0.3 away, stopped. My coords here: (-2.86,0.69). Send YOUR coords now (frame calibration). Then go explore; when you find goal send GOAL AT (x,y) in your frame; I convert & com
+03:35:44 A10: I am now RIGHT BEHIND you (south of you) in the corridor, ~0.3 away, stopped. My coords here: (-2.86,0.69). Send YOUR coords now (frame calibration). Then go explore; when you find goal send GOAL AT (x,y) in your frame; I convert & com
+03:35:54 A10: I am now RIGHT BEHIND you (south of you) in the corridor, ~0.3 away, stopped. My coords here: (-2.86,0.69). Send YOUR coords now (frame calibration). Then go explore; when you find goal send GOAL AT (x,y) in your frame; I convert & com
+03:36:05 A10: I am now RIGHT BEHIND you (south of you) in the corridor, ~0.3 away, stopped. My coords here: (-2.86,0.69). Send YOUR coords now (frame calibration). Then go explore; when you find goal send GOAL AT (x,y) in your frame; I convert & com
+03:42:07 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:42:09 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:42:19 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:42:22 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:42:33 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:42:35 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:42:46 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:42:47 Robot A exploring. odo x=-2.0 y=2.3 h=88. Where are you? Found goal?
+03:43:12 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:43:14 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:43:32 Robot A exploring. odo x=-1.9 y=2.2 h=83. Where are you? Found goal?
+03:43:38 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:43:40 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:43:51 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:43:53 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:43:55 Robot A exploring. odo x=-1.9 y=2.2 h=270. Where are you? Found goal?
+03:44:04 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:44:06 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:44:17 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:44:19 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:44:30 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:44:32 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:44:40 Robot A exploring. odo x=-1.9 y=2.3 h=271. Where are you? Found goal?
+03:44:43 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:44:45 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:44:56 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:44:58 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:45:02 Robot A exploring. odo x=-1.9 y=2.3 h=90. Where are you? Found goal?
+03:45:08 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:45:11 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:45:22 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:45:24 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:45:35 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:45:37 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:49:28 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:49:31 A14: If YOU find goal: send GOAL AT (x,y) AND a "ROUTE: N 1.2, E 0.6, S 2.0" (legs from the TOP of my dead-end corridor, your ~(-2.8,2.9)). My robot auto-returns there? No - I'll home in on d11; ROUTE is backup.
+03:49:39 Robot A exploring. odo x=-2.4 y=1.8 h=268. Where are you? Found goal?
+03:49:42 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:49:54 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:51:26 A13: Got your FRONTIERS. I now explore F1-F3 (north, y>3.5, x -3..-2) autonomously. If I see goal=1 I stop on it and send GOAL AT (x,y). Take F4/F5 + east gaps.
+03:51:28 Robot A exploring. odo x=-1.9 y=0.9 h=359. Where are you? Found goal?
+04:03:26 A15: Still exploring, goal=0. No word from you since 03:44 - are you in range? If you found the goal: send "GOAL AT (x,y)" and "ROUTE: N 1.0, E 0.6, ..." legs from the TOP of my dead-end corridor (~(-2.8,2.9) your frame). I auto-execute.
+04:04:19 A16: GREAT! Got GOAL AT (-5.4,5.0) & here=1. Heading NW to you now by odometry+d11. My odo (drifty) ~(-1.3,-0.4). Please send "ROUTE: N 1.0, W 0.6, ..." legs from TOP of my dead-end corridor (your ~(-2.8,2.9)) to the goal room, as backup.
+04:16:44 A LIVE: odo (-3.2,3.1) h=91 d11=0.690 2 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:24:26 A LIVE: odo (-3.2,1.8) h=269 d11=0.669 4 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:24:58 A LIVE: odo (-3.0,1.9) h=88 d11=0.636 8 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:25:08 A LIVE: odo (-3.0,1.9) h=88 d11=0.636 8 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:25:19 A LIVE: odo (-3.0,1.9) h=180 d11=0.725 9 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:25:21 Robot A exploring. odo x=-2.4 y=1.8 h=353. Where are you? Found goal?
+04:25:29 A LIVE: odo (-2.4,1.8) h=0 d11=0.818 5 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:25:40 A LIVE: odo (-2.4,1.8) h=0 d11=0.818 5 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:25:43 Robot A exploring. odo x=-2.4 y=1.8 h=356. Where are you? Found goal?
+04:25:50 A LIVE: odo (-3.0,1.9) h=1 d11=0.848 3 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:26:01 A LIVE: odo (-3.0,1.8) h=176 d11=0.665 2 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:26:05 Robot A exploring. odo x=-2.4 y=1.8 h=357. Where are you? Found goal?
+04:26:11 A LIVE: odo (-2.4,1.8) h=355 d11=0.771 8 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:26:22 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:26:32 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:26:43 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:26:53 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:31:47 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:32:40 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:33:32 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:33:43 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:33:53 A: STOPPED & parked (my odo ~(-3.0,1.8), heading 174). front=0.97 L=0.26 R=0.20 back=0.52. When you reach me, send 'ROUTE: N 1.0, W 0.6, ...' legs from MY spot to the goal; I auto-execute. Or I follow you by d11.
+04:49:32 Robot A exploring. odo x=-1.7 y=2.7 h=90. Where are you? Found goal?
+04:49:38 A LIVE: odo (-1.6,2.1) h=271 d11=0.454 2 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:49:53 Robot A exploring. odo x=-1.7 y=2.7 h=93. Where are you? Found goal?
+04:49:59 A LIVE: odo (-1.7,2.7) h=97 d11=0.653 0 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:50:15 Robot A exploring. odo x=-1.8 y=2.7 h=89. Where are you? Found goal?
+04:50:20 A LIVE: odo (-1.7,2.1) h=88 d11=0.583 4 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:50:36 Robot A exploring. odo x=-1.9 y=2.7 h=90. Where are you? Found goal?
+04:50:41 A LIVE: odo (-1.8,2.1) h=269 d11=0.504 6 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:50:58 Robot A exploring. odo x=-1.9 y=2.7 h=94. Where are you? Found goal?
+04:51:02 A LIVE: odo (-1.9,2.1) h=92 d11=0.641 0 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:51:18 Robot A exploring. odo x=-1.9 y=2.7 h=91. Where are you? Found goal?
+04:51:23 A LIVE: odo (-1.9,2.1) h=267 d11=0.503 7 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:51:41 Robot A exploring. odo x=-1.8 y=2.9 h=94. Where are you? Found goal?
+04:51:44 A LIVE: odo (-1.8,2.9) h=95 d11=0.676 2 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:52:02 Robot A exploring. odo x=-1.8 y=2.9 h=92. Where are you? Found goal?
+04:52:05 A LIVE: odo (-1.8,2.3) h=270 d11=0.523 0 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:52:24 Robot A exploring. odo x=-1.7 y=2.9 h=90. Where are you? Found goal?
+04:52:26 A LIVE: odo (-1.8,2.9) h=279 d11=0.542 4 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:52:44 Robot A exploring. odo x=-1.7 y=2.8 h=92. Where are you? Found goal?
+04:52:47 A LIVE: odo (-1.8,2.2) h=87 d11=0.592 4 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:53:05 Robot A exploring. odo x=-1.7 y=2.9 h=92. Where are you? Found goal?
+04:53:08 A LIVE: odo (-1.7,2.2) h=271 d11=0.527 1 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:53:26 Robot A exploring. odo x=-1.7 y=2.9 h=90. Where are you? Found goal?
+04:53:29 A LIVE: odo (-1.7,2.9) h=97 d11=0.672 3 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:53:47 Robot A exploring. odo x=-1.7 y=2.9 h=86. Where are you? Found goal?
+04:53:50 A LIVE: odo (-1.7,2.2) h=268 d11=0.512 1 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:54:22 A LIVE: odo (-0.7,1.4) h=172 d11=0.574 8 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:54:24 Robot A exploring. odo x=-1.3 y=1.9 h=89. Where are you? Found goal?
+04:54:45 Robot A exploring. odo x=-1.4 y=1.9 h=89. Where are you? Found goal?
+04:55:07 Robot A exploring. odo x=-1.5 y=1.9 h=88. Where are you? Found goal?
+04:55:28 Robot A exploring. odo x=-1.5 y=1.9 h=87. Where are you? Found goal?
+04:55:49 Robot A exploring. odo x=-1.5 y=1.9 h=88. Where are you? Found goal?
+04:55:56 A LIVE: odo (-1.5,1.3) h=270 d11=0.535 0 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:56:10 Robot A exploring. odo x=-1.5 y=1.9 h=90. Where are you? Found goal?
+04:56:17 A LIVE: odo (-1.5,1.9) h=91 d11=0.655 5 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:56:31 Robot A exploring. odo x=-1.4 y=1.9 h=88. Where are you? Found goal?
+04:56:38 A LIVE: odo (-1.4,1.3) h=275 d11=0.517 0 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:56:55 Robot A exploring. odo x=-1.2 y=2.0 h=91. Where are you? Found goal?
+04:56:59 A LIVE: odo (-1.2,2.0) h=91 d11=0.660 2 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.
+04:57:16 Robot A exploring. odo x=-1.3 y=2.0 h=92. Where are you? Found goal?
+04:57:20 A LIVE: odo (-1.2,1.4) h=273 d11=0.499 1 goal=0 here=0. Ack: you park on goal, I home in NW on rising d11; a ROUTE from top of my corridor (-2.8,2.9) helps.

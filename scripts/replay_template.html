@@ -14,6 +14,8 @@
   --hit: #e34948;
   --goal: #008300;
   --chip: #efede8;
+  --asphalt: #bdbbb3;
+  --centerline: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -29,6 +31,8 @@
     --hit: #e66767;
     --goal: #35b135;
     --chip: #232320;
+    --asphalt: #3a3a37;
+    --centerline: #c3c2b7;
   }
 }
 :root[data-theme="dark"] {
@@ -44,6 +48,8 @@
   --hit: #e66767;
   --goal: #35b135;
   --chip: #232320;
+  --asphalt: #3a3a37;
+  --centerline: #c3c2b7;
 }
 * { box-sizing: border-box; }
 body {
@@ -88,7 +94,9 @@ main {
   color: var(--ink-3); padding: 10px 14px 0;
 }
 #stage { padding: 8px 12px 4px; }
-#cv { width: 100%; height: auto; display: block; }
+#cv, #cam { width: 100%; height: auto; display: block; }
+#camwrap { border-top: 1px solid var(--border); padding-bottom: 8px; }
+#camwrap canvas { padding: 8px 12px 0; }
 .controls {
   display: flex; align-items: center; gap: 12px; padding: 8px 14px 14px;
 }
@@ -100,7 +108,14 @@ button {
 }
 button:hover { border-color: var(--ink-3); }
 button:focus-visible { outline: 2px solid var(--robot); outline-offset: 1px; }
-input[type="range"] { flex: 1; accent-color: var(--trail); }
+.scrubwrap { flex: 1; position: relative; display: flex; min-width: 0; }
+.scrubwrap input[type="range"] { width: 100%; accent-color: var(--trail); }
+.marks { position: absolute; left: 8px; right: 8px; bottom: -3px;
+  height: 0; pointer-events: none; }
+.mark { position: absolute; width: 2px; height: 7px; margin-left: -1px;
+  background: var(--goal); border-radius: 1px; }
+.mark.warm { background: var(--ink-3); }
+.mark.rej { background: var(--hit); height: 5px; }
 #clock {
   font-family: "Martian Mono", monospace; font-size: 12px;
   color: var(--ink-2); min-width: 150px; text-align: right;
@@ -110,6 +125,24 @@ input[type="range"] { flex: 1; accent-color: var(--trail); }
   font-size: 12px; color: var(--ink-2); }
 .legend i { display: inline-block; width: 10px; height: 10px;
   border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.legend i.bar { border-radius: 1px; height: 4px; vertical-align: 2px; }
+#laps { border-top: 1px solid var(--border); padding: 0 0 6px; }
+table.laps { width: 100%; border-collapse: collapse; font-size: 12.5px;
+  margin-top: 6px; }
+table.laps th, table.laps td {
+  padding: 4px 14px; text-align: right; border-bottom: 1px solid var(--border);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+table.laps th { font-size: 10.5px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.laps td { font-family: "IBM Plex Mono", monospace; color: var(--ink-2);
+  cursor: pointer; }
+table.laps td:first-child, table.laps th:first-child { text-align: left; }
+table.laps tr:last-child td { border-bottom: none; }
+table.laps tr:hover td { background: var(--chip); }
+table.laps tr.best td { color: var(--goal); font-weight: 500; }
+table.laps tr.rej td { color: var(--hit); }
+table.laps tr.warm td { color: var(--ink-3); }
 .col-right { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 #feed { max-height: 520px; overflow-y: auto; padding: 6px 14px 14px; }
 .ev { margin: 10px 0; }
@@ -150,20 +183,28 @@ footer { color: var(--ink-3); font-size: 12px; padding: 4px 22px 24px; }
 <div class="chips" id="chips"></div>
 <main>
   <section class="panel">
-    <div class="panel-label">Ground truth — top-down replay</div>
+    <div class="panel-label" id="stage-label">Ground truth — top-down replay</div>
     <div id="stage"><canvas id="cv" width="960" height="960"></canvas></div>
     <div class="controls">
       <button id="play" aria-label="play or pause replay">PLAY</button>
-      <input type="range" id="scrub" min="0" max="0" value="0"
-        aria-label="replay position">
+      <span class="scrubwrap">
+        <input type="range" id="scrub" min="0" max="0" value="0"
+          aria-label="replay position">
+        <div class="marks" id="marks"></div>
+      </span>
       <span id="clock"></span>
     </div>
-    <div class="legend">
+    <div class="legend" id="legend">
       <span><i style="background:var(--robot)"></i>robot</span>
       <span><i style="background:var(--trail)"></i>trail</span>
       <span><i style="background:var(--hit)"></i>collision</span>
       <span><i style="background:var(--goal)"></i>goal cell</span>
     </div>
+    <div id="camwrap" hidden>
+      <div class="panel-label">Follow cam — 9 m window, north-up</div>
+      <canvas id="cam" width="960" height="300"></canvas>
+    </div>
+    <div id="laps" hidden></div>
   </section>
   <div class="col-right">
     <section class="panel">
@@ -190,24 +231,60 @@ const css = (n) => getComputedStyle(document.documentElement)
   .getPropertyValue(n).trim();
 
 /* header */
-const st = D.stats, m = D.meta;
+const st = D.stats, m = D.meta, MZ = D.maze, P = D.poses;
+const HZ = st.tick_hz || 50;
+const isTrack = MZ.kind === "track";
+// Car poses carry [phi_deg, slip] at indices 5, 6.
+const isCar = st.robot_model === "car" || (P.length > 0 && P[0].length > 5);
+const LAPS = D.laps || [], REJ = D.lap_rejected || [];
+const secs = (t) => t / HZ;
+const fmtLap = (s) => s == null ? "—"
+  : `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, "0")}`;
+const fmtDelta = (s) => s == null ? "" : (s >= 0 ? "+" : "−") +
+  Math.abs(s).toFixed(1);
+
 $("#subtitle").textContent =
   `episode ${m.episode} · arm ${m.arm} · labels ${m.labels} · ` +
-  `${m.noise} · maze ${m.maze_hash} · ${m.model}`;
-const chips = [
+  `${m.noise} · ` + (isTrack
+    ? `track ${MZ.name} (${MZ.length_m} m) · ` : `maze ${m.maze_hash} · `) +
+  `${m.model}`;
+
+const timedLaps = LAPS.filter((l) => l.timed);
+const warmLap = LAPS.find((l) => !l.timed);
+const lastLap = LAPS.length ? LAPS[LAPS.length - 1] : null;
+const bestLap = st.best_lap_s != null ? st.best_lap_s
+  : (timedLaps.length ? Math.min(...timedLaps.map((l) => l.time_s)) : null);
+const slidePct = st.total_ticks
+  ? (100 * (st.slide_ticks || 0) / st.total_ticks) : null;
+
+const chips = isTrack ? [
+  st.live ? ["status", "IN PROGRESS", "state-live"]
+          : st.solved ? ["status", "FINISHED", "state-solved"]
+                      : ["status", (st.end_reason || "ended").toUpperCase(), ""],
+  ["sim time", secs(st.final_tick).toFixed(0) + " s", ""],
+  ["warm-up lap", warmLap ? fmtLap(warmLap.time_s) : "—", ""],
+  ["timed laps", `${timedLaps.length} / ${st.laps_timed ?? "?"}`,
+   st.solved ? "state-solved" : ""],
+  ["best lap", fmtLap(bestLap), bestLap != null ? "state-solved" : ""],
+  ["last lap", lastLap ? fmtLap(lastLap.time_s) : "—", ""],
+  ["sliding", slidePct == null ? "—" : slidePct.toFixed(0) + " %", ""],
+  ["collisions", st.collision_count, ""],
+  ["turns", st.turns, ""],
+  ["output tokens", (st.tokens_out || 0).toLocaleString(), ""],
+] : [
   st.live ? ["status", "IN PROGRESS", "state-live"]
           : st.solved ? ["status", "SOLVED", "state-solved"]
                       : ["status", (st.end_reason || "ended").toUpperCase(), ""],
-  ["sim time", (st.final_tick / 50).toFixed(0) + " s", ""],
-  st.solved && D.goal_tick ? ["solved at", (D.goal_tick / 50).toFixed(0) + " s", "state-solved"] : null,
+  ["sim time", secs(st.final_tick).toFixed(0) + " s", ""],
+  st.solved && D.goal_tick ? ["solved at", secs(D.goal_tick).toFixed(0) + " s", "state-solved"] : null,
   ["turns", st.turns, ""],
   ["output tokens", (st.tokens_out || 0).toLocaleString(), ""],
   ["collisions", st.collision_count, ""],
   (D.special && D.special.pickup_tick != null)
-    ? ["key picked up", (D.special.pickup_tick / 50).toFixed(0) + " s",
+    ? ["key picked up", secs(D.special.pickup_tick).toFixed(0) + " s",
        "state-solved"] : (D.maze.locked ? ["key", "not found", ""] : null),
   (D.special && D.special.unlock_tick != null)
-    ? ["door unlocked", (D.special.unlock_tick / 50).toFixed(0) + " s",
+    ? ["door unlocked", secs(D.special.unlock_tick).toFixed(0) + " s",
        "state-solved"] : (D.maze.locked ? ["door", "locked", ""] : null),
 ];
 $("#chips").innerHTML = chips.filter(Boolean).map(([k, v, cls]) =>
@@ -215,90 +292,231 @@ $("#chips").innerHTML = chips.filter(Boolean).map(([k, v, cls]) =>
 
 /* canvas replay */
 const cv = $("#cv"), ctx = cv.getContext("2d");
-const MZ = D.maze, P = D.poses;
+const cam = $("#cam"), cctx = cam.getContext("2d");
 let idx = P.length - 1, playing = false;
 const collSet = new Set(D.collisions);
+const worldW = isTrack ? MZ.width : MZ.width * MZ.cell_size;
+const worldH = isTrack ? MZ.height : MZ.height * MZ.cell_size;
+if (isTrack) {
+  cv.height = Math.round(cv.width * Math.min(1.2, Math.max(0.45,
+    worldH / worldW)));
+  $("#camwrap").hidden = false;
+  $("#stage-label").textContent = "Ground truth — circuit replay";
+  $("#legend").innerHTML =
+    '<span><i style="background:var(--robot)"></i>car</span>' +
+    '<span><i style="background:var(--robot);opacity:.6" class="bar"></i>' +
+    'racing line</span>' +
+    '<span><i style="background:var(--ink-2)" class="bar"></i>skid</span>' +
+    '<span><i style="background:var(--hit)"></i>collision</span>' +
+    '<span><i style="background:' +
+    'repeating-linear-gradient(90deg,var(--ink) 0 3px,var(--surface) 3px 6px)' +
+    ';border:1px solid var(--ink-3)" class="bar"></i>start / finish</span>';
+}
 
-function draw() {
-  const w = cv.width, h = cv.height;
-  ctx.fillStyle = css("--surface");
-  ctx.fillRect(0, 0, w, h);
-  const worldW = MZ.width * MZ.cell_size, worldH = MZ.height * MZ.cell_size;
-  const pad = 26;
-  const sc = Math.min((w - 2 * pad) / worldW, (h - 2 * pad) / worldH);
-  const X = (x) => pad + x * sc, Y = (y) => h - pad - y * sc;
-  const cs = MZ.cell_size;
+// First pose index at or after a tick (binary search).
+function idxAt(t) {
+  let lo = 0, hi = P.length - 1;
+  while (lo < hi) {
+    const mid = (lo + hi) >> 1;
+    if (P[mid][0] < t) lo = mid + 1; else hi = mid;
+  }
+  return lo;
+}
+const lapAt = (t) => LAPS.filter((l) => l.t <= t).length;
 
-  ctx.globalAlpha = 0.16;
-  ctx.fillStyle = css("--goal");
-  ctx.fillRect(X(MZ.goal_cell[0] * cs), Y((MZ.goal_cell[1] + 1) * cs),
+function loopPath(c, v, pts) {
+  c.moveTo(v.X(pts[0][0]), v.Y(pts[0][1]));
+  for (let i = 1; i < pts.length; i++) c.lineTo(v.X(pts[i][0]), v.Y(pts[i][1]));
+  c.closePath();
+}
+
+function drawTrack(v) {
+  const c = v.ctx, sc = v.sc;
+  c.beginPath();
+  loopPath(c, v, MZ.left); loopPath(c, v, MZ.right);
+  c.fillStyle = css("--asphalt");
+  c.fill("evenodd");
+  if (sc > 20) {
+    c.save();
+    c.setLineDash([0.3 * sc, 0.3 * sc]);
+    c.strokeStyle = css("--centerline"); c.globalAlpha = 0.45;
+    c.lineWidth = Math.max(1, 0.02 * sc);
+    c.beginPath(); loopPath(c, v, MZ.center); c.stroke();
+    c.restore();
+  }
+  c.strokeStyle = css("--ink");
+  c.lineWidth = Math.max(1.2, 0.03 * sc); c.lineJoin = "round";
+  c.beginPath(); loopPath(c, v, MZ.left); c.stroke();
+  c.beginPath(); loopPath(c, v, MZ.right); c.stroke();
+  // start/finish: a checkered bar spanning the two edge points
+  const [[lx, ly], [rx, ry]] = MZ.start_line;
+  const len = Math.hypot(rx - lx, ry - ly);
+  const n = Math.max(2, Math.min(8, Math.floor(len * sc / 3)));
+  const cw = len * sc / n, rh = Math.max(3, cw);
+  c.save();
+  c.translate(v.X((lx + rx) / 2), v.Y((ly + ry) / 2));
+  c.rotate(-Math.atan2(ry - ly, rx - lx));
+  for (let r = 0; r < 2; r++) for (let i = 0; i < n; i++) {
+    c.fillStyle = (i + r) % 2 ? css("--ink") : css("--surface");
+    c.fillRect(-len * sc / 2 + i * cw, -rh + r * rh, cw + 0.5, rh);
+  }
+  c.restore();
+}
+
+function drawMaze(v, nowT) {
+  const c = v.ctx, sc = v.sc, X = v.X, Y = v.Y, cs = MZ.cell_size;
+  c.globalAlpha = 0.16;
+  c.fillStyle = css("--goal");
+  c.fillRect(X(MZ.goal_cell[0] * cs), Y((MZ.goal_cell[1] + 1) * cs),
     cs * sc, cs * sc);
-  ctx.fillStyle = css("--ink-3");
-  ctx.fillRect(X(MZ.start_cell[0] * cs), Y((MZ.start_cell[1] + 1) * cs),
+  c.fillStyle = css("--ink-3");
+  c.fillRect(X(MZ.start_cell[0] * cs), Y((MZ.start_cell[1] + 1) * cs),
     cs * sc, cs * sc);
-  ctx.globalAlpha = 1;
-  ctx.fillStyle = css("--ink-2");
-  ctx.font = `${Math.round(0.38 * cs * sc)}px Archivo, sans-serif`;
-  ctx.textAlign = "center"; ctx.textBaseline = "middle";
-  ctx.fillText("S", X((MZ.start_cell[0] + 0.5) * cs),
+  c.globalAlpha = 1;
+  c.fillStyle = css("--ink-2");
+  c.font = `${Math.round(0.38 * cs * sc)}px Archivo, sans-serif`;
+  c.textAlign = "center"; c.textBaseline = "middle";
+  c.fillText("S", X((MZ.start_cell[0] + 0.5) * cs),
     Y((MZ.start_cell[1] + 0.5) * cs));
-  ctx.fillText("G", X((MZ.goal_cell[0] + 0.5) * cs),
+  c.fillText("G", X((MZ.goal_cell[0] + 0.5) * cs),
     Y((MZ.goal_cell[1] + 0.5) * cs));
 
-  ctx.strokeStyle = css("--ink");
-  ctx.lineWidth = 3; ctx.lineCap = "round";
-  ctx.beginPath();
+  c.strokeStyle = css("--ink");
+  c.lineWidth = 3; c.lineCap = "round";
+  c.beginPath();
   for (const [x1, y1, x2, y2] of MZ.segments) {
-    ctx.moveTo(X(x1), Y(y1)); ctx.lineTo(X(x2), Y(y2));
+    c.moveTo(X(x1), Y(y1)); c.lineTo(X(x2), Y(y2));
   }
-  ctx.stroke();
-  const nowT = P.length ? P[Math.min(idx, P.length - 1)][0] : 0;
+  c.stroke();
   const SP = D.special || {};
   if (MZ.locked && MZ.door_segments &&
       !(SP.unlock_tick != null && nowT >= SP.unlock_tick)) {
-    ctx.strokeStyle = css("--hit");
-    ctx.lineWidth = 5;
-    ctx.beginPath();
+    c.strokeStyle = css("--hit");
+    c.lineWidth = 5;
+    c.beginPath();
     for (const [x1, y1, x2, y2] of MZ.door_segments) {
-      ctx.moveTo(X(x1), Y(y1)); ctx.lineTo(X(x2), Y(y2));
+      c.moveTo(X(x1), Y(y1)); c.lineTo(X(x2), Y(y2));
     }
-    ctx.stroke();
+    c.stroke();
   }
   if (MZ.locked && MZ.key_pos &&
       !(SP.pickup_tick != null && nowT >= SP.pickup_tick)) {
-    ctx.save();
-    ctx.translate(X(MZ.key_pos[0]), Y(MZ.key_pos[1]));
-    ctx.rotate(Math.PI / 4);
-    ctx.fillStyle = css("--robot");
-    ctx.fillRect(-6, -6, 12, 12);
-    ctx.restore();
+    c.save();
+    c.translate(X(MZ.key_pos[0]), Y(MZ.key_pos[1]));
+    c.rotate(Math.PI / 4);
+    c.fillStyle = css("--robot");
+    c.fillRect(-6, -6, 12, 12);
+    c.restore();
   }
+}
 
-  if (!P.length) return;
-  const upto = Math.min(idx, P.length - 1);
-  ctx.strokeStyle = css("--trail");
-  ctx.lineWidth = 1.7; ctx.globalAlpha = 0.85;
-  ctx.beginPath();
-  ctx.moveTo(X(P[0][1]), Y(P[0][2]));
-  for (let i = 1; i <= upto; i++) ctx.lineTo(X(P[i][1]), Y(P[i][2]));
-  ctx.stroke();
-  ctx.globalAlpha = 1;
-
-  const [t, px, py, th, col] = P[upto];
-  const rr = 0.09 * sc;
+// Body 0.40 x 0.18 m with a pointed nose; the sprite scale floors at
+// 40 px/m so the car stays a legible marker on a 130 m circuit.
+function drawCar(v, px, py, th, phiDeg, slip, col) {
+  const c = v.ctx, s = Math.max(v.sc, 40);
+  const phi = (phiDeg || 0) * Math.PI / 180;
+  c.save();
+  c.translate(v.X(px), v.Y(py));
+  c.rotate(-th);
+  const ax = 0.12 * s, ay = 0.10 * s, wl = 0.085 * s, ww = 0.05 * s;
+  c.fillStyle = css("--ink");
+  for (const [x, y, rot] of [[-ax, -ay, 0], [-ax, ay, 0],
+                             [ax, -ay, -phi], [ax, ay, -phi]]) {
+    c.save(); c.translate(x, y); c.rotate(rot);
+    c.fillRect(-wl / 2, -ww / 2, wl, ww);
+    c.restore();
+  }
+  const body = [[-0.20, -0.09], [0.06, -0.09], [0.17, -0.035], [0.22, 0],
+                [0.17, 0.035], [0.06, 0.09], [-0.20, 0.09]];
+  c.beginPath();
+  body.forEach(([x, y], i) => i ? c.lineTo(x * s, y * s) : c.moveTo(x * s, y * s));
+  c.closePath();
+  c.fillStyle = css("--robot"); c.fill();
+  c.lineWidth = Math.max(1, 0.02 * s);
+  c.strokeStyle = slip ? css("--trail") : css("--surface");
+  c.stroke();
+  c.fillStyle = css("--surface");
+  c.beginPath(); c.arc(0, 0, 0.032 * s, 0, 7); c.fill();
+  c.restore();
   if (col) {
-    ctx.strokeStyle = css("--hit"); ctx.lineWidth = 4;
-    ctx.beginPath(); ctx.arc(X(px), Y(py), rr + 5, 0, 7); ctx.stroke();
+    c.strokeStyle = css("--hit"); c.lineWidth = 4;
+    c.beginPath(); c.arc(v.X(px), v.Y(py), 0.24 * s + 4, 0, 7); c.stroke();
   }
-  ctx.fillStyle = css("--robot");
-  ctx.beginPath(); ctx.arc(X(px), Y(py), rr, 0, 7); ctx.fill();
-  ctx.strokeStyle = css("--surface"); ctx.lineWidth = 2.5;
-  ctx.beginPath(); ctx.moveTo(X(px), Y(py));
-  ctx.lineTo(X(px + 0.09 * Math.cos(th)), Y(py + 0.09 * Math.sin(th)));
-  ctx.stroke();
+}
 
+function drawDisc(v, px, py, th, col) {
+  const c = v.ctx, rr = 0.09 * v.sc;
+  if (col) {
+    c.strokeStyle = css("--hit"); c.lineWidth = 4;
+    c.beginPath(); c.arc(v.X(px), v.Y(py), rr + 5, 0, 7); c.stroke();
+  }
+  c.fillStyle = css("--robot");
+  c.beginPath(); c.arc(v.X(px), v.Y(py), rr, 0, 7); c.fill();
+  c.strokeStyle = css("--surface"); c.lineWidth = 2.5;
+  c.beginPath(); c.moveTo(v.X(px), v.Y(py));
+  c.lineTo(v.X(px + 0.09 * Math.cos(th)), v.Y(py + 0.09 * Math.sin(th)));
+  c.stroke();
+}
+
+// Skid marks: a short dash behind each rear wheel at every sliding pose.
+function drawSkids(v, upto) {
+  const c = v.ctx, sc = v.sc;
+  c.strokeStyle = css("--ink-2"); c.globalAlpha = 0.55;
+  c.lineWidth = Math.max(1, 0.045 * sc); c.lineCap = "butt";
+  c.beginPath();
+  for (let i = 0; i <= upto; i++) {
+    const p = P[i];
+    if (!p[6]) continue;
+    const ct = Math.cos(p[3]), stt = Math.sin(p[3]);
+    for (const side of [-0.10, 0.10]) {
+      const wx = p[1] - 0.12 * ct - side * stt, wy = p[2] - 0.12 * stt + side * ct;
+      c.moveTo(v.X(wx - 0.05 * ct), v.Y(wy - 0.05 * stt));
+      c.lineTo(v.X(wx + 0.05 * ct), v.Y(wy + 0.05 * stt));
+    }
+  }
+  c.stroke();
+  c.globalAlpha = 1;
+}
+
+function drawScene(v, upto) {
+  const c = v.ctx;
+  c.fillStyle = css("--surface");
+  c.fillRect(0, 0, v.w, v.h);
+  const nowT = P.length ? P[upto][0] : 0;
+  if (isTrack) drawTrack(v); else drawMaze(v, nowT);
+  if (!P.length) return;
+  if (isCar) drawSkids(v, upto);
+  c.strokeStyle = css(isCar ? "--robot" : "--trail");
+  c.lineWidth = isCar ? 1.3 : 1.7; c.globalAlpha = isCar ? 0.7 : 0.85;
+  c.lineJoin = "round";
+  c.beginPath();
+  c.moveTo(v.X(P[0][1]), v.Y(P[0][2]));
+  for (let i = 1; i <= upto; i++) c.lineTo(v.X(P[i][1]), v.Y(P[i][2]));
+  c.stroke();
+  c.globalAlpha = 1;
+  const [t, px, py, th, col, phi, slip] = P[upto];
+  if (isCar) drawCar(v, px, py, th, phi, slip, col);
+  else drawDisc(v, px, py, th, col);
+}
+
+function draw() {
+  const w = cv.width, h = cv.height, pad = 26;
+  const sc = Math.min((w - 2 * pad) / worldW, (h - 2 * pad) / worldH);
+  const ox = (w - worldW * sc) / 2, oy = (h - worldH * sc) / 2;
+  const upto = Math.max(0, Math.min(idx, P.length - 1));
+  drawScene({ ctx, w, h, sc, X: (x) => ox + x * sc,
+              Y: (y) => h - oy - y * sc }, upto);
+  if (!P.length) return;
+  const [t, px, py] = P[upto];
+  if (isTrack) {
+    const cw = cam.width, ch = cam.height, s2 = cw / 9;
+    drawScene({ ctx: cctx, w: cw, h: ch, sc: s2,
+                X: (x) => cw / 2 + (x - px) * s2,
+                Y: (y) => ch / 2 - (y - py) * s2 }, upto);
+  }
   $("#clock").textContent =
-    `tick ${t} · ${(t / 50).toFixed(1)} s`;
+    `tick ${t} · ${secs(t).toFixed(1)} s` +
+    (isTrack ? ` · lap ${lapAt(t)}` : "");
 }
 
 const scrub = $("#scrub");
@@ -307,6 +525,7 @@ scrub.value = idx;
 scrub.addEventListener("input", (e) => {
   idx = Number(e.target.value); stopPlay(); draw();
 });
+function seek(t) { idx = idxAt(t); scrub.value = idx; stopPlay(); draw(); }
 function stopPlay() { playing = false; $("#play").textContent = "PLAY"; }
 $("#play").addEventListener("click", () => {
   playing = !playing;
@@ -330,6 +549,39 @@ document.addEventListener("keydown", (e) => {
     e.preventDefault(); $("#play").click();
   }
 });
+
+/* lap markers on the timeline + lap table */
+if (isTrack && P.length > 1) {
+  const frac = (t) => (100 * idxAt(t) / (P.length - 1)).toFixed(2);
+  $("#marks").innerHTML =
+    LAPS.map((l) => `<span class="mark ${l.timed ? "" : "warm"}" ` +
+      `style="left:${frac(l.t)}%" title="lap ${l.lap} · ${fmtLap(l.time_s)}">` +
+      `</span>`).join("") +
+    REJ.map((r) => `<span class="mark rej" style="left:${frac(r.t)}%" ` +
+      `title="crossing rejected · ${r.sectors} sectors"></span>`).join("");
+  const rows = [
+    ...LAPS.map((l) => ({ t: l.t, lap: l.lap, kind: l.timed ? "timed" : "warm-up",
+      time: l.time_s, cls: l.timed && l.time_s === bestLap ? "best"
+        : (l.timed ? "" : "warm") })),
+    ...REJ.map((r) => ({ t: r.t, lap: "×", kind: `rejected (${r.sectors} sectors)`,
+      time: null, cls: "rej" })),
+  ].sort((a, b) => a.t - b.t);
+  $("#laps").hidden = false;
+  $("#laps").innerHTML = rows.length
+    ? '<table class="laps"><tr><th>lap</th><th>type</th><th>time</th>' +
+      '<th>Δ best</th><th>at</th></tr>' +
+      rows.map((r) => `<tr class="${r.cls}" data-t="${r.t}">` +
+        `<td>${r.lap}</td><td>${r.kind}</td>` +
+        `<td>${r.time == null ? "—" : fmtLap(r.time)}</td>` +
+        `<td>${r.time != null && bestLap != null && r.kind === "timed"
+          ? fmtDelta(r.time - bestLap) : ""}</td>` +
+        `<td>${secs(r.t).toFixed(0)} s</td></tr>`).join("") + "</table>"
+    : '<div class="empty">no laps completed</div>';
+  $("#laps").addEventListener("click", (e) => {
+    const tr = e.target.closest("tr[data-t]");
+    if (tr) seek(Number(tr.dataset.t));
+  });
+}
 
 /* transcript */
 const esc = (s) => { const d = document.createElement("i");

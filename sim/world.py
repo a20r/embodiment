@@ -89,6 +89,9 @@ class World:
                  bot_id="", spawn_cell=None, spawn_theta=0.0):
         self.cfg = cfg
         self.maze = maze
+        # A Track duck-types the Maze surface; only lap timing branches.
+        self.track = maze if getattr(maze, "kind", "") == "track" else None
+        self.track_cfg = cfg.get("track", {})
         self.noise = cfg["noise"]
         self.robot_cfg = cfg["robot"]
         # Duo: a second World may share this maze.  The peer shows up on
@@ -107,11 +110,22 @@ class World:
         # region with entries inside the together window.
         self.joint_goal = duo.get("objective", "solo") == "together"
         self.peer_signal_scale = float(duo.get("peer_signal_scale", 2.0))
+        rate = float(duo.get("tx_rate_hz", 0) or 0)
+        self.tx_min_ticks = (cfg["sim"]["tick_hz"] / rate) if rate > 0 \
+            else 0
+        self.tx_status = bool(duo.get("tx_status"))
+        self.rx_blocking = bool(duo.get("rx_blocking"))
+        # Set by the peer on delivery; the blocking RX bridge loop
+        # sleeps on it instead of polling the queue.
+        self.rx_event = threading.Event()
         self.model = cfg["robot"].get("model", "diffdrive")
         self.car_cfg = cfg["robot"].get("car", {})
         self.actuators = ["accel", "steer"] if self.model == "car" \
             else ["motor_left", "motor_right"]
         self.lidar_cfg = cfg["lidar"]
+        self.lidar3d_cfg = cfg.get("lidar3d") or {}
+        self.lidar3d_on = bool(self.lidar3d_cfg.get("enabled"))
+        self._cloud_cache = None      # (tick, world-frame cloud)
         self.dt = 1.0 / cfg["sim"]["tick_hz"]
         self.log = log_fn or (lambda rec: None)
         self.episode_index = episode_index
@@ -169,7 +183,12 @@ class World:
                 self.spawn_cell or self.maze.start_cell)
             self.x, self.y, self.theta = sx, sy, self.spawn_theta % TWO_PI
             self.serial_rx = deque(maxlen=self.duo_queue)
-            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0}
+            self.comms = {"tx": 0, "tx_delivered": 0, "rx_read": 0,
+                          "tx_rate_dropped": 0, "rx_received": 0}
+            self._last_tx_tick = None
+            # (write counter, outcome of the latest write); one tuple
+            # assignment so the status reader never sees a torn pair.
+            self.tx_last = (0, "idle")
             self.v = 0.0
             self.w = 0.0
             self.phi = 0.0             # car: current steering angle, rad
@@ -184,6 +203,23 @@ class World:
             self.goal_reached = False
             self.goal_tick = None
             self.region_entry = None   # tick of current goal-region stay
+            # Track scene: lap counter, times, sectors visited since the
+            # last start-line crossing (a lap must visit 90% of them).
+            self.lap = 0
+            self.lap_start_tick = 0
+            self.laps = []             # timed lap durations, s
+            self.last_lap = None
+            self.best_lap = None
+            self._cp_seen = set()
+            self._track_idx = None
+            # Grip: sliding flag and achieved (longitudinal, lateral)
+            # acceleration, what the IMU reports.
+            self.slipping = False
+            self.slide_ticks = 0
+            self.acc = (0.0, 0.0)
+            if self.track is not None:
+                self._track_idx = self.track.nearest_index(self.x, self.y)
+                self._cp_seen.add(self.track.sector(self._track_idx))
             self.trail = []            # [(tick, x, y)]
             self.events = []           # experimenter-facing event tail
             self._event(dict(event="reset",
@@ -267,11 +303,8 @@ class World:
                     slip = self.rng_slip.gauss(n["slip_mu"],
                                                n["slip_sigma"])
                     slip = max(0.0, min(0.5, slip))
-                a = self.cmd_eff["accel"] / 255.0 \
+                a_cmd = self.cmd_eff["accel"] / 255.0 \
                     * c.get("accel_max", 0.4) * (1.0 - slip)
-                self.v += (a - c.get("drag", 0.35) * self.v) * self.dt
-                self.v = max(-c.get("v_rev_max", 0.15),
-                             min(c.get("v_max", 0.5), self.v))
                 phi_target = self.cmd_eff["steer"] / 255.0 \
                     * math.radians(c.get("steer_max_deg", 35.0))
                 rate = math.radians(c.get("steer_rate_deg_s", 120.0)) \
@@ -279,7 +312,41 @@ class World:
                 dphi = max(-rate, min(rate, phi_target - self.phi))
                 self.phi += dphi
                 L = c.get("wheelbase", 0.12)
-                self.w = self.v / L * math.tan(self.phi)
+                v_prev = self.v
+                # Friction circle: the tyres deliver at most a_grip of
+                # combined acceleration.  Over the limit both the yaw
+                # rate (understeer) and the drive/brake are scaled onto
+                # the circle by k, and the excess scrubs speed (opposing
+                # motion, never through zero).  a_grip 0 leaves k = 1
+                # and the original kinematic car byte-identical.
+                a_grip = float(c.get("a_grip", 0) or 0)
+                self.slipping = False
+                k = 1.0
+                if a_grip > 0:
+                    g_sig = n.get("grip_sigma", 0.0)
+                    lim = a_grip
+                    if g_sig > 0:
+                        lim *= 1.0 + self.rng_slip.gauss(0.0, g_sig)
+                    lim = max(0.05 * a_grip, lim)
+                    a_lat = self.v * self.v / L * math.tan(self.phi)
+                    mag = math.hypot(a_lat, a_cmd)
+                    if mag > lim:
+                        k = lim / mag
+                        a_cmd *= k
+                        # Scrub is a cornering loss: weighted by the
+                        # lateral share of the demand, so straight-line
+                        # wheelspin only caps the launch.
+                        scrub = c.get("slide_scrub", 0.5) * (mag - lim) \
+                            * (abs(a_lat) / mag) * self.dt
+                        if self.v != 0.0:
+                            self.v = math.copysign(
+                                max(0.0, abs(self.v) - scrub), self.v)
+                        self.slipping = True
+                        self.slide_ticks += 1
+                self.v += (a_cmd - c.get("drag", 0.35) * self.v) * self.dt
+                self.v = max(-c.get("v_rev_max", 0.15),
+                             min(c.get("v_max", 0.5), self.v))
+                self.w = k * self.v / L * math.tan(self.phi)
                 # keep the encoder accumulators moving for GT continuity
                 wr = self.robot_cfg["wheel_radius"]
                 tpr = self.robot_cfg["encoder_ticks_per_rev"]
@@ -309,6 +376,7 @@ class World:
                     / self.robot_cfg["wheelbase"]
 
             self.theta = (self.theta + self.w * self.dt) % TWO_PI
+            x0, y0 = self.x, self.y
             nx = self.x + self.v * math.cos(self.theta) * self.dt
             ny = self.y + self.v * math.sin(self.theta) * self.dt
 
@@ -351,6 +419,10 @@ class World:
                 self._event(dict(event="collision",
                                  pose=[round(self.x, 4), round(self.y, 4),
                                        round(self.theta, 4)]))
+            if self.model == "car":
+                # IMU: achieved body-frame acceleration this tick, wall
+                # stop and tyre scrub included, and the yaw rate.
+                self.acc = ((self.v - v_prev) / self.dt, self.v * self.w)
 
             if self.noise["heading_drift_deg"] > 0:
                 self.heading_drift += self.rng_heading.gauss(
@@ -373,7 +445,9 @@ class World:
                                          pose=[round(self.x, 4),
                                                round(self.y, 4)]))
 
-            if not self.goal_reached:
+            if self.track is not None:
+                self._track_step(x0, y0)
+            elif not self.goal_reached:
                 if self.maze.has_exit:
                     reached = self.maze.escaped(self.x, self.y)
                 else:
@@ -424,7 +498,62 @@ class World:
                 **({"key": int(self.key_carried),
                     "door": int(self.door_open)}
                    if self.maze.locked else {}),
+                **({"lap": self.lap} if self.track is not None else {}),
+                **({"slip": int(self.slipping)}
+                   if self.model == "car" and self.car_cfg.get("a_grip")
+                   else {}),
             })
+
+    def _track_step(self, x0, y0):
+        """Lap timing.  A forward start-line crossing completes a lap
+        only if 90% of the arc-length sectors were visited since the
+        last one (no shortcuts, no line-dancing); the run is complete
+        after the warm-up plus the timed laps, and the car powers down
+        like a robot that reached its goal."""
+        tr = self.track
+        n = len(tr.center)
+        prev = self._track_idx
+        self._track_idx = tr.nearest_index(self.x, self.y, prev)
+        # Progress is directional: a sector counts only when reached by
+        # advancing along the circuit, so a wrong-way tour earns none.
+        if prev is not None and 0 < (self._track_idx - prev) % n < n // 2:
+            self._cp_seen.add(tr.sector(self._track_idx))
+        if self.goal_reached:
+            return
+        cross = tr.crossed_start(x0, y0, self.x, self.y)
+        if cross < 0:
+            # Backing over the line voids the tour in progress.
+            self._cp_seen = {tr.sector(self._track_idx)}
+            return
+        if cross == 0:
+            return
+        need = math.ceil(0.9 * tr.checkpoints)
+        if len(self._cp_seen) < need:
+            if len(self._cp_seen) > 2:
+                self._event(dict(event="lap_rejected",
+                                 sectors=len(self._cp_seen)))
+            return
+        lap_s = round((self.tick - self.lap_start_tick) * self.dt, 3)
+        self.lap += 1
+        warm = int(self.track_cfg.get("laps_warmup", 1))
+        timed = self.lap > warm
+        self.last_lap = lap_s
+        if timed:
+            self.laps.append(lap_s)
+            if self.best_lap is None or lap_s < self.best_lap:
+                self.best_lap = lap_s
+        self._event(dict(event="lap", lap=self.lap, time_s=lap_s,
+                         timed=timed, best_s=self.best_lap))
+        self.lap_start_tick = self.tick
+        self._cp_seen = {tr.sector(self._track_idx)}
+        if self.lap >= warm + int(self.track_cfg.get("laps_timed", 10)):
+            self.goal_reached = True
+            self.goal_tick = self.tick
+            for a in self.actuators:
+                self.cmd[a] = 0
+                self.cmd_eff[a] = 0
+            self.pending = []
+            self._event(dict(event="goal_reached", laps=list(self.laps)))
 
     # -- sensor emission (called by device bridge on read) ------------------
 
@@ -487,6 +616,133 @@ class World:
                 vals.append(max(0.0, min(self.lidar_cfg["max_range"], r)))
             return ",".join(f"{v:.3f}" for v in vals)
 
+    # -- 3D lidar -----------------------------------------------------------
+    # The world is still 2D-kinematic; the point cloud comes from lifting
+    # the 2D cast: every solid gets a height (walls, the peer, the key
+    # post) and the floor is z=0.  A ring at elevation e reaching a face
+    # at horizontal distance d meets it at z = h_s + d*tan(e); it returns
+    # if 0 <= z <= face height, passes over it otherwise, and a downward
+    # ring that reaches z=0 first returns the floor.
+
+    def _ring_elevations(self):
+        c = self.lidar3d_cfg
+        n = int(c["rings"])
+        vfov = math.radians(c["vfov_deg"])
+        if n == 1:
+            return [0.0]
+        return [-vfov / 2 + k * vfov / (n - 1) for k in range(n)]
+
+    def _azimuths3d(self):
+        n = int(self.lidar3d_cfg["azimuths"])
+        return [k * TWO_PI / n for k in range(n)]
+
+    def _height_groups(self, px, py):
+        """[(segments, height)] per solid class for one frame.  Solids
+        have no modelled top: config keeps the sensor no higher than the
+        peer and the post, so no ring can pass over a near face and
+        then land inside a body."""
+        c = self.lidar3d_cfg
+        walls = list(self._index.near(px, py, c["max_range"] + 0.1))
+        walls.extend(self._solid_extra())
+        groups = [(walls, c["wall_height"])]
+        if self._key_segments and not self.key_carried:
+            groups.append((self._key_segments, c["post_height"]))
+        if self.peer is not None:
+            qx, qy = self.peer.x, self.peer.y
+            pr = self.peer.robot_cfg["radius"]
+            pts = [(qx + pr * math.cos(a), qy + pr * math.sin(a))
+                   for a in [k * TWO_PI / 8 for k in range(9)]]
+            groups.append(([(p[0], p[1], q[0], q[1])
+                            for p, q in zip(pts, pts[1:])],
+                           c["robot_height"]))
+        return groups
+
+    @staticmethod
+    def _ring_hits(px, py, angle, groups, rings, mr, hs):
+        """Range per ring along one azimuth; None = no return.  rings is
+        [(cos e, sin e, tan e)], precomputed once per frame."""
+        dx, dy = math.cos(angle), math.sin(angle)
+        faces = []
+        for segs, h in groups:
+            best = None
+            for seg in segs:
+                t = _ray_seg(px, py, dx, dy, *seg)
+                if t is not None and t < mr and (best is None or t < best):
+                    best = t
+            if best is not None:
+                faces.append((best, h))
+        faces.sort()
+        out = []
+        for ce, se, tan_e in rings:
+            d_floor = -hs / tan_e if se < -1e-9 else None
+            r = None
+            for d, h in faces:
+                if d_floor is not None and d_floor < d:
+                    break               # the floor comes first
+                if 0.0 <= hs + d * tan_e <= h:
+                    r = d / ce
+                    break               # else: passes over this face
+            if r is None and d_floor is not None:
+                r = d_floor / ce
+            out.append(r if r is not None and r <= mr else None)
+        return out
+
+    def _cast_cloud(self, noisy):
+        """One frame of sensor-frame points (x forward, y left, z up;
+        origin at the sensor).  The pose and the solids are snapshotted
+        under the lock; the cast itself (tens of ms on organic mazes)
+        runs without it, so a held-open reader or the dashboard can
+        never stall the tick loop.  Dropped or out-of-range points are
+        omitted, as a real unit omits no-returns."""
+        c = self.lidar3d_cfg
+        with self.lock:
+            px, py, theta, tick = self.x, self.y, self.theta, self.tick
+            groups = self._height_groups(px, py)
+        n = self.noise
+        sigma = n.get("lidar3d_sigma_m", 0.0) if noisy else 0.0
+        drop = n.get("lidar3d_dropout_p", 0.0) if noisy else 0.0
+        mr, hs = c["max_range"], c["sensor_height"]
+        rings = [(math.cos(e), math.sin(e), math.tan(e))
+                 for e in self._ring_elevations()]
+        pts = []
+        for a_rel in self._azimuths3d():
+            hits = self._ring_hits(px, py, theta + a_rel, groups, rings,
+                                   mr, hs)
+            ca, sa = math.cos(a_rel), math.sin(a_rel)
+            for (ce, se, _), r in zip(rings, hits):
+                if r is None:
+                    continue
+                if drop > 0 and self.rng_lidar.random() < drop:
+                    continue
+                if sigma > 0:
+                    r += self.rng_lidar.gauss(0.0, sigma)
+                    if r < 0.0 or r > mr:
+                        continue
+                pts.append((r * ce * ca, r * ce * sa, r * se))
+        return tick, (px, py, theta), pts
+
+    def lidar3d_points(self, noisy):
+        return self._cast_cloud(noisy)[2]
+
+    def lidar3d_frame(self):
+        return ";".join(f"{x:.3f},{y:.3f},{z:.3f}"
+                        for x, y, z in self.lidar3d_points(noisy=True))
+
+    def lidar3d_true(self):
+        """Noise-free cloud in world coordinates (dashboard use only),
+        cached per tick so concurrent pollers share one cast."""
+        cached = self._cloud_cache
+        if cached is not None and cached[0] == self.tick:
+            return cached[1]
+        tick, (px, py, theta), pts = self._cast_cloud(noisy=False)
+        ct, st = math.cos(theta), math.sin(theta)
+        hs = self.lidar3d_cfg["sensor_height"]
+        cloud = [[round(px + x * ct - y * st, 3),
+                  round(py + x * st + y * ct, 3), round(hs + z, 3)]
+                 for x, y, z in pts]
+        self._cloud_cache = (tick, cloud)
+        return cloud
+
     def heading_frame(self):
         n = self.noise
         with self.lock:
@@ -508,6 +764,21 @@ class World:
     def bump_frame(self, which):
         with self.lock:
             return "1" if self.bump[which] else "0"
+
+    def imu_frame(self):
+        """Body-frame achieved acceleration (longitudinal, lateral;
+        m/s^2) and yaw rate (rad/s): what the tyres actually delivered,
+        so the grip limit is an observable, not a rule."""
+        n = self.noise
+        with self.lock:
+            ax, ay = self.acc
+            wz = self.w
+            s = n.get("imu_sigma", 0.0)
+            if s > 0:
+                ax += self.rng_encoder.gauss(0.0, s)
+                ay += self.rng_encoder.gauss(0.0, s)
+                wz += self.rng_encoder.gauss(0.0, s)
+            return f"{ax:.3f},{ay:.3f},{wz:.3f}"
 
     def speed_frame(self):
         """Signed ground speed, m/s (the car's speedometer)."""
@@ -546,6 +817,25 @@ class World:
         buffering).  Lock-free toward the peer — deque.append is atomic
         and we never take the peer's lock (see set_peer)."""
         line = raw[:self.duo_max_bytes]
+        # Every write advances the counter, dropped ones included, so
+        # a status reader can tell each write's fate apart.
+        seq = self.tx_last[0] + 1
+        # Duty cycle: excess lines vanish before the range gate, with
+        # no error back to the writer (unless tx_status reports busy).
+        # Logged in aggregate — a spam loop must not flood the
+        # ground-truth record.
+        if self.tx_min_ticks:
+            now = self.tick
+            if self._last_tx_tick is not None and \
+                    now - self._last_tx_tick < self.tx_min_ticks:
+                self.comms["tx_rate_dropped"] += 1
+                self.tx_last = (seq, "busy")
+                if self.comms["tx_rate_dropped"] % 500 == 1:
+                    self._event(dict(
+                        event="comms_rate_drop",
+                        total=self.comms["tx_rate_dropped"]))
+                return
+            self._last_tx_tick = now
         peer = self.peer
         delivered = False
         dist = None
@@ -553,15 +843,25 @@ class World:
             dist = math.hypot(self.x - peer.x, self.y - peer.y)
             if dist <= self.duo_range:
                 peer.serial_rx.append(line)
+                # Receiver-side count and wake-up; the peer's own thread
+                # never touches this key, so the increment cannot race.
+                peer.comms["rx_received"] += 1
+                peer.rx_event.set()
                 peer._event(dict(event="comms_rx", frm=self.bot_id,
                                  line=line))
                 delivered = True
         self.comms["tx"] += 1
         if delivered:
             self.comms["tx_delivered"] += 1
-        self._event(dict(event="comms_tx", line=line,
-                         delivered=delivered,
-                         dist=None if dist is None else round(dist, 3)))
+        self.tx_last = (seq, "ok" if delivered else "lost")
+        rec = dict(event="comms_tx", line=line, delivered=delivered,
+                   dist=None if dist is None else round(dist, 3))
+        if self.tx_status:
+            # Only with the flag: records of earlier runs stay
+            # byte-identical in shape.
+            rec["seq"] = seq
+            rec["outcome"] = self.tx_last[1]
+        self._event(rec)
 
     def set_joint_goal(self):
         """Both bots arrived together — latch the goal on this world.
@@ -601,9 +901,45 @@ class World:
         self.comms["rx_read"] += 1
         return line
 
+    def serial_rx_peek(self):
+        """Oldest pending line without consuming it (None if empty);
+        the blocking RX path commits only after the write succeeded."""
+        try:
+            return self.serial_rx[0]
+        except IndexError:
+            return None
+
+    def serial_rx_commit(self, line=None):
+        """Consume the line just served.  If a burst evicted it from
+        the bounded deque meanwhile, the head is a newer line that was
+        never served, so nothing is popped."""
+        try:
+            if line is not None and self.serial_rx[0] is not line:
+                return
+            self.serial_rx.popleft()
+        except IndexError:
+            return
+        self.comms["rx_read"] += 1
+
     def status_frame(self):
         with self.lock:
             line = f"tick={self.tick} goal={int(self.goal_reached)}"
+            if self.joint_goal:
+                # Per-bot arrival flag: the joint goal= cannot fire for
+                # a solo arriver, so without this a bot standing in the
+                # goal region has no instrument that says so (the duo5
+                # GOALFOUND pathology).
+                line += f" here={int(self.region_entry is not None)}"
+            if self.peer is not None and self.tx_status:
+                # Radio auto-ACK: fate of the most recent TX write
+                # (one read of the tuple: the pair is never torn).
+                n, outcome = self.tx_last
+                line += f" tx={n}:{outcome}"
+            if self.track is not None:
+                # Race timing: completed laps, last and best lap (s).
+                line += (f" lap={self.lap}"
+                         f" last={self.last_lap or 0.0:.1f}"
+                         f" best={self.best_lap or 0.0:.1f}")
             if self.maze.locked and self._door_segments:
                 dcx, dcy = self._door_center
                 if math.hypot(self.x - dcx, self.y - dcy) < 0.5:
@@ -620,6 +956,7 @@ class World:
                 "bot_id": self.bot_id,
                 "comms": dict(self.comms),
                 "rx_pending": len(self.serial_rx),
+                "tx_last": list(self.tx_last),
                 "pose": [self.x, self.y, self.theta],
                 "cmd": list(self.cmd.values()),
                 "cmd_eff": list(self.cmd_eff.values()),
@@ -634,6 +971,13 @@ class World:
                 "in_region": self.region_entry is not None,
                 "key_carried": self.key_carried,
                 "door_open": self.door_open,
+                **({"lap": self.lap, "laps": list(self.laps),
+                    "last_lap_s": self.last_lap,
+                    "best_lap_s": self.best_lap}
+                   if self.track is not None else {}),
+                **({"slipping": self.slipping,
+                    "slide_ticks": self.slide_ticks}
+                   if self.model == "car" else {}),
                 "trail": [p for p in self.trail if p[0] > since_tick],
                 "events": self.events[-50:],
             }

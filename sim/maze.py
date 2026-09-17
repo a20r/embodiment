@@ -298,15 +298,22 @@ class Maze:
         x1, y1, x2, y2 = self.exit_wall
         m = 0.25   # widen beyond the opening posts
         depth = 0.7
+        cs = self.cell_size
+        # Clamp the chamber's along-wall extent to the maze's own span:
+        # at a corner exit an unclamped margin overhangs the corner and
+        # the chamber's side wall no longer meets any maze wall — a gap
+        # a robot can slip through into unbounded space.
         if abs(x1 - x2) < 1e-9:    # vertical wall: west or east edge
             out = -1.0 if x1 <= 1e-9 else 1.0
-            lo, hi = min(y1, y2) - m, max(y1, y2) + m
+            lo = max(0.0, min(y1, y2) - m)
+            hi = min(self.height * cs, max(y1, y2) + m)
             bx = x1 + out * depth
             segs = [(x1, lo, bx, lo), (bx, lo, bx, hi),
                     (bx, hi, x1, hi)]
         else:                       # horizontal wall: south or north
             out = -1.0 if y1 <= 1e-9 else 1.0
-            lo, hi = min(x1, x2) - m, max(x1, x2) + m
+            lo = max(0.0, min(x1, x2) - m)
+            hi = min(self.width * cs, max(x1, x2) + m)
             by = y1 + out * depth
             segs = [(lo, y1, lo, by), (lo, by, hi, by),
                     (hi, by, hi, y1)]

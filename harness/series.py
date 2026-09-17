@@ -28,9 +28,11 @@ def completed_episodes(series_dir):
 
 
 def run_series(cfg, episodes=None, fresh=False):
-    if not image_exists():
-        print("building bot image...")
-        build_image(REPO)
+    box = cfg.get("container") or {}
+    image = box.get("image", "mazebot-bot")
+    if not image_exists(image):
+        print(f"building bot image {image}...")
+        build_image(REPO, image, box.get("dockerfile", "Dockerfile.bot"))
     series_dir = series_dir_for(cfg)
     os.makedirs(series_dir, exist_ok=True)
     with open(os.path.join(series_dir, "series.json"), "w") as f:
