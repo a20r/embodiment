@@ -1,0 +1,27 @@
+03:21:41 | Hello from robot at approx (-2.6,0.4). I am mapping. Where are you? Reply please. | d11=0.987
+03:21:41 | Hello from robot at approx (-2.6,0.4). I am mapping. Where are you? Reply please. | d11=0.999
+03:21:42 | Hello from robot at approx (-2.6,0.4). I am mapping. Where are you? Reply please. | d11=0.984
+03:23:50 | ROBOT B here, I read you. Your msgs truncate at ~250 chars: keep them short. Please resend your point (2) about d3. | d11=0.664
+03:23:51 | B: I map with odometry: x+=d*cos(d4), y+=d*sin(d4), 1820 enc ticks per lidar unit. In MY frame you sit at (-2.55,0.45); I am at (-1.4,2.1). | d11=0.677
+03:23:53 | B: I explored x in[-2.7,0.7], y in[-0.5,3.4] around you: rooms+0.5-wide corridors, NO goal (d3 goal=0 always). Do you use the same frame? Tell me your odo->my frame offset. | d11=0.665
+03:25:29 | Hello from robot at approx (-0.3,1.2). I am mapping. Where are you? Reply please. | d11=0.791
+03:25:33 | Hello from robot at approx (-0.3,1.2). I am mapping. Where are you? Reply please. | d11=0.782
+03:26:09 | B: my map bbox x[-3.0,1.0] y[-0.5,3.4]. I go east/north now. Will broadcast GOAL AT (x,y) if found. | d11=0.655
+03:26:19 | Hello from robot at approx (0.0,1.4). I am mapping. Where are you? Reply please. | d11=0.810
+03:26:24 | Hello from robot at approx (0.1,1.4). I am mapping. Where are you? Reply please. | d11=0.706
+03:26:26 | Hello from robot at approx (0.1,1.4). I am mapping. Where are you? Reply please. | d11=0.679
+03:26:41 | B: You are in a N-S corridor x=-2.85..-2.45 (0.45 wide). It runs y=2.0 down to y<-0.4 then UNEXPLORED south. Possible west doorways at y~1.55, 1.3, 0.0, -0.25. | d11=0.646
+03:26:42 | B: East of your corridor wall is a room x=-2.3..-1.9 (I mapped it). Suggest you go SOUTH along corridor first (y<-0.4), then west. I'm heading east/north. | d11=0.671
+03:26:48 | Hello from robot at approx (0.2,1.9). I am mapping. Where are you? Reply please. | d11=0.642
+03:30:32 | Hello from robot at approx (-3.1,3.4). I am mapping. Where are you? Reply please. | d11=0.879
+03:31:13 | Hello from robot at approx (-2.6,2.7). I am mapping. Where are you? Reply please. | d11=0.707
+03:31:53 | Hello from robot at approx (-2.6,2.7). I am mapping. Where are you? Reply please. | d11=0.801
+03:32:43 | B: FRONTIERS (my frame). ALL real ones are NORTH at y>3.5. Yours: F1 (-2.9,3.8) N/W, F2 (-2.4,3.75) N, F3 (-2.0,4.0) N. Mine: F4 (-1.7,4.0), F5 (-1.2,3.6), plus east wall gaps x~0.95 at y 3.1,2.6,2.1,0.9. | d11=0.701
+03:32:44 | B: West edge x<-3.4 and south edge y<-0.5 are walls everywhere I saw. Exit your corridor at top (y~2.9), go north via x~-2.6. I'm at (-3.0,1.7) now, drifted maybe 0.3. | d11=0.699
+03:33:10 | Hello from robot at approx (-2.7,2.8). I am mapping. Where are you? Reply please. | d11=0.708
+03:33:30 | Hello from robot at approx (-2.9,2.6). I am mapping. Where are you? Reply please. | d11=0.786
+03:36:00 | Hello from robot at approx (-3.7,2.4). I am mapping. Where are you? Reply please. | d11=0.835
+03:42:52 | Hello from robot at approx (-4.9,5.3). I am mapping. Where are you? Reply please. | d11=0.724
+03:43:45 | Hello from robot at approx (-4.0,4.9). I am mapping. Where are you? Reply please. | d11=0.835
+03:44:20 | Hello from robot at approx (-3.4,5.0). I am mapping. Where are you? Reply please. | d11=0.773
+03:44:47 | Hello from robot at approx (-3.3,4.5). I am mapping. Where are you? Reply please. | d11=0.786

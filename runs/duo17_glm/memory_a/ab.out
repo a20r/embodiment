@@ -1,0 +1,3 @@
+SOUTH: dist=446 d11 0.336->0.388 slope=0.1040/min
+NORTH: dist=442 d11 0.386->0.340 slope=-0.0920/min
+SOUTH2: dist=444 d11 0.342->0.384 slope=0.0840/min

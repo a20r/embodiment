@@ -1,0 +1,1243 @@
+03:11:32 START pose (0.0002791455887189097, 3.7160552077333925e-05, 352.0)
+03:11:43 step 1 pose=(0.00,-0.00,342) target=(6, -1) pathlen=7 d11=0.4 st=tick=33868 goal=0 here=0
+03:11:46 step 2 pose=(0.30,-0.03,2) target=(11, 1) pathlen=8 d11=0.364 st=tick=34199 goal=0 here=0
+03:11:52 step 3 pose=(0.57,0.06,70) target=(12, 11) pathlen=12 d11=0.329 st=tick=34730 goal=0 here=0
+03:11:57 step 4 pose=(0.64,0.56,92) target=(13, 19) pathlen=10 d11=0.312 st=tick=35230 goal=0 here=0
+03:12:01 step 5 pose=(0.67,0.95,64) target=(9, 29) pathlen=15 d11=0.297 st=tick=35647 goal=0 here=0
+03:12:11 step 6 pose=(0.50,1.47,165) target=(4, 31) pathlen=8 d11=0.288 st=tick=36654 goal=0 here=0
+03:12:14 step 7 pose=(0.25,1.57,166) target=(2, 35) pathlen=7 d11=0.32 st=tick=37019 goal=0 here=0
+03:12:18 step 8 pose=(0.14,1.76,118) target=(2, 39) pathlen=5 d11=0.297 st=tick=37393 goal=0 here=0
+03:12:21 step 9 pose=(0.12,1.95,89) target=(2, 47) pathlen=11 d11=0.296 st=tick=37668 goal=0 here=0
+03:12:26 step 10 pose=(0.12,2.36,77) target=(3, 51) pathlen=6 d11=0.263 st=tick=38155 goal=0 here=0
+03:12:27 step 11 pose=(0.17,2.55,77) target=(9, 51) pathlen=8 d11=0.249 st=tick=38307 goal=0 here=0
+03:12:32 step 12 pose=(0.45,2.57,3) target=(10, 47) pathlen=6 d11=0.225 st=tick=38776 goal=0 here=0
+03:12:36 step 13 pose=(0.52,2.40,286) target=(11, 43) pathlen=6 d11=0.23 st=tick=39160 goal=0 here=0
+03:12:37 step 14 pose=(0.57,2.20,286) target=(10, 58) pathlen=17 d11=0.233 st=tick=39315 goal=0 here=0
+03:12:48 step 15 pose=(0.53,2.90,95) target=(10, 62) pathlen=5 d11=0.192 st=tick=40376 goal=0 here=0
+03:12:50 step 16 pose=(0.53,3.10,89) target=(3, 63) pathlen=9 d11=0.191 st=tick=40526 goal=0 here=0
+03:12:56 no frontier path found; grid size 1676
+03:12:59 no frontier path found; grid size 1689
+03:13:02 no frontier path found; grid size 1690
+03:13:05 step 20 pose=(0.19,3.19,83) target=(-4, 64) pathlen=9 d11=0.196 st=tick=42050 goal=0 here=0
+03:13:11 step 21 pose=(-0.15,3.23,179) target=(-10, 61) pathlen=10 d11=0.218 st=tick=42646 goal=0 here=0
+03:13:17 step 22 pose=(-0.48,3.10,262) target=(-10, 57) pathlen=5 d11=0.235 st=tick=43244 goal=0 here=0
+03:13:19 step 23 pose=(-0.48,2.90,270) target=(-10, 53) pathlen=5 d11=0.27 st=tick=43454 goal=0 here=0
+03:13:20 step 24 pose=(-0.48,2.70,272) target=(-10, 50) pathlen=5 d11=0.277 st=tick=43606 goal=0 here=0
+03:13:22 step 25 pose=(-0.48,2.55,270) target=(-10, 46) pathlen=5 d11=0.287 st=tick=43723 goal=0 here=0
+03:13:23 step 26 pose=(-0.48,2.34,270) target=(-15, 45) pathlen=7 d11=0.327 st=tick=43875 goal=0 here=0
+03:13:27 step 27 pose=(-0.70,2.28,191) target=(-19, 44) pathlen=6 d11=0.341 st=tick=44292 goal=0 here=0
+03:13:29 step 28 pose=(-0.90,2.24,194) target=(-20, 48) pathlen=6 d11=0.379 st=tick=44450 goal=0 here=0
+03:13:33 no frontier path found; grid size 2260
+03:13:36 no frontier path found; grid size 2263
+03:13:39 no frontier path found; grid size 2283
+03:13:41 no frontier path found; grid size 2288
+03:13:44 giving up exploration loop
+03:13:44 EXIT
+03:14:37 START pose (-0.8999787182469646, 2.24028237096216, 99.6)
+03:14:48 step 1 pose=(-0.90,2.24,97) target=(-16, 41) pathlen=4 d11=0.347 st=tick=52382 goal=0 here=0
+03:14:53 step 2 pose=(-0.79,2.10,301) target=(-12, 39) pathlen=5 d11=0.369 st=tick=52883 goal=0 here=0
+03:14:57 step 3 pose=(-0.60,1.98,331) target=(-10, 35) pathlen=5 d11=0.372 st=tick=53246 goal=0 here=0
+03:15:00 no frontier path found; grid size 722
+03:15:03 no frontier path found; grid size 761
+03:15:05 no frontier path found; grid size 787
+03:15:08 no frontier path found; grid size 791
+03:15:11 no frontier path found; grid size 792
+03:15:14 no frontier path found; grid size 800
+03:15:17 no frontier path found; grid size 822
+03:15:20 no frontier path found; grid size 832
+03:15:22 no frontier path found; grid size 852
+03:15:25 no frontier path found; grid size 862
+03:15:28 no frontier path found; grid size 862
+03:15:31 no frontier path found; grid size 869
+03:15:34 no frontier path found; grid size 881
+03:15:37 giving up exploration loop
+03:15:37 EXIT
+03:16:16 START pose (-0.48528288958221544, 1.7870492915650067, 4.5)
+03:16:27 step 1 pose=(-0.48,1.79,356) target=(-13, 40) pathlen=6 d11=0.365 tick=62237 goal=0 here=0
+03:16:32 step 2 pose=(-0.61,2.01,121) target=(-17, 39) pathlen=5 d11=0.357 tick=62780 goal=0 here=0
+03:16:36 step 3 pose=(-0.80,1.99,194) target=(-19, 48) pathlen=10 d11=0.376 tick=63159 goal=0 here=0
+03:16:43 step 4 pose=(-0.93,2.40,93) target=(-11, 47) pathlen=19 d11=0.341 tick=63864 goal=0 here=0
+03:16:58 step 5 pose=(-0.52,2.35,66) target=(-7, 58) pathlen=12 d11=0.333 tick=65416 goal=0 here=0
+03:17:05 step 6 pose=(-0.33,2.91,60) target=(-3, 59) pathlen=5 d11=0.25 tick=66045 goal=0 here=0
+03:17:08 step 7 pose=(-0.15,2.97,15) target=(1, 60) pathlen=5 d11=0.243 tick=66359 goal=0 here=0
+03:17:09 step 8 pose=(0.06,3.02,11) target=(5, 60) pathlen=5 d11=0.225 tick=66516 goal=0 here=0
+03:17:11 step 9 pose=(0.25,3.03,358) target=(9, 60) pathlen=5 d11=0.206 tick=66704 goal=0 here=0
+03:17:13 step 10 pose=(0.46,3.02,358) target=(12, 57) pathlen=5 d11=0.202 tick=66855 goal=0 here=0
+03:17:16 step 11 pose=(0.60,2.89,318) target=(10, 52) pathlen=6 d11=0.199 tick=67207 goal=0 here=0
+03:17:20 step 12 pose=(0.53,2.65,253) target=(7, 49) pathlen=4 d11=0.213 tick=67598 goal=0 here=0
+03:17:23 step 13 pose=(0.39,2.49,226) target=(2, 50) pathlen=6 d11=0.219 tick=67900 goal=0 here=0
+03:17:27 step 14 pose=(0.15,2.52,171) target=(2, 43) pathlen=8 d11=0.242 tick=68297 goal=0 here=0
+03:17:35 step 15 pose=(0.11,2.19,303) target=(1, 34) pathlen=10 d11=0.274 tick=69046 goal=0 here=0
+03:17:42 step 16 pose=(0.06,1.75,286) target=(4, 31) pathlen=4 d11=0.317 tick=69740 goal=0 here=0
+03:17:45 step 17 pose=(0.20,1.58,314) target=(8, 28) pathlen=5 d11=0.303 tick=70042 goal=0 here=0
+03:17:47 step 18 pose=(0.40,1.43,327) target=(12, 25) pathlen=5 d11=0.29 tick=70316 goal=0 here=0
+03:17:49 step 19 pose=(0.61,1.28,321) target=(11, 29) pathlen=5 d11=0.265 tick=70510 goal=0 here=0
+03:17:54 step 20 pose=(0.59,1.46,97) target=(12, 19) pathlen=11 d11=0.282 tick=70971 goal=0 here=0
+03:18:03 step 21 pose=(0.61,0.99,283) target=(13, 15) pathlen=5 d11=0.301 tick=71845 goal=0 here=0
+03:18:04 step 22 pose=(0.66,0.80,285) target=(12, 8) pathlen=8 d11=0.296 tick=72003 goal=0 here=0
+03:18:09 step 23 pose=(0.62,0.45,263) target=(11, 3) pathlen=6 d11=0.3 tick=72456 goal=0 here=0
+03:18:11 step 24 pose=(0.58,0.20,255) target=(12, -1) pathlen=5 d11=0.31 tick=72646 goal=0 here=0
+03:18:14 step 25 pose=(0.61,-0.01,281) target=(8, -4) pathlen=5 d11=0.299 tick=72923 goal=0 here=0
+03:18:18 step 26 pose=(0.44,-0.16,219) target=(3, -4) pathlen=6 d11=0.337 tick=73342 goal=0 here=0
+03:18:22 step 27 pose=(0.20,-0.17,183) target=(-1, -3) pathlen=5 d11=0.374 tick=73727 goal=0 here=0
+03:18:24 step 28 pose=(-0.00,-0.13,164) target=(-5, -4) pathlen=5 d11=0.411 tick=73956 goal=0 here=0
+03:18:27 step 29 pose=(-0.21,-0.16,192) target=(-8, 0) pathlen=6 d11=0.446 tick=74233 goal=0 here=0
+03:18:31 step 30 pose=(-0.36,0.01,129) target=(-9, 4) pathlen=5 d11=0.473 tick=74636 goal=0 here=0
+03:18:34 step 31 pose=(-0.42,0.20,102) target=(-12, 7) pathlen=4 d11=0.484 tick=74925 goal=0 here=0
+03:18:37 step 32 pose=(-0.55,0.37,134) target=(-16, 5) pathlen=5 d11=0.509 tick=75233 goal=0 here=0
+03:18:41 step 33 pose=(-0.76,0.29,203) target=(-19, 8) pathlen=4 d11=0.59 tick=75637 goal=0 here=0
+03:18:44 step 34 pose=(-0.90,0.41,137) target=(-20, 4) pathlen=5 d11=0.624 tick=76019 goal=0 here=0
+03:18:49 step 35 pose=(-0.97,0.25,248) target=(-20, 0) pathlen=5 d11=0.639 tick=76463 goal=0 here=0
+03:18:52 step 36 pose=(-0.98,0.04,271) target=(-23, -3) pathlen=4 d11=0.627 tick=76762 goal=0 here=0
+03:18:55 step 37 pose=(-1.11,-0.11,228) target=(-27, -3) pathlen=5 d11=0.668 tick=77093 goal=0 here=0
+03:18:58 step 38 pose=(-1.30,-0.12,181) target=(-20, -4) pathlen=8 d11=0.704 tick=77411 goal=0 here=0
+03:19:06 step 39 pose=(-0.99,-0.18,6) target=(-29, 7) pathlen=17 d11=0.618 tick=78139 goal=0 here=0
+03:19:18 step 40 pose=(-1.40,0.38,165) target=(-32, 4) pathlen=4 d11=0.762 tick=79345 goal=0 here=0
+03:19:21 step 41 pose=(-1.57,0.24,224) target=(-28, -6) pathlen=23 d11=0.799 tick=79710 goal=0 here=0
+03:19:40 step 42 pose=(-1.35,-0.27,204) target=(-35, -4) pathlen=8 d11=0.663 tick=81581 goal=0 here=0
+03:19:46 step 43 pose=(-1.71,-0.17,175) target=(-41, 0) pathlen=8 d11=0.741 tick=82138 goal=0 here=0
+03:19:52 step 44 pose=(-2.02,0.01,116) target=(-41, 4) pathlen=5 d11=0.828 tick=82728 goal=0 here=0
+03:19:55 step 45 pose=(-2.02,0.20,92) target=(-44, 7) pathlen=4 d11=0.866 tick=83056 goal=0 here=0
+03:19:58 step 46 pose=(-2.15,0.37,132) target=(-41, 10) pathlen=4 d11=0.925 tick=83382 goal=0 here=0
+03:20:02 step 47 pose=(-2.04,0.51,46) target=(-41, 16) pathlen=7 d11=0.928 tick=83796 goal=0 here=0
+03:20:07 step 48 pose=(-2.02,0.81,88) target=(-38, 19) pathlen=4 d11=0.952 tick=84233 goal=0 here=0
+03:20:10 step 49 pose=(-1.89,0.96,49) target=(-41, 23) pathlen=5 d11=0.922 tick=84541 goal=0 here=0
+03:20:14 step 50 pose=(-2.01,1.16,124) target=(-31, 18) pathlen=13 d11=0.935 tick=84965 goal=0 here=0
+03:20:26 step 51 pose=(-1.55,0.91,9) target=(-27, 18) pathlen=5 d11=0.841 tick=86137 goal=0 here=0
+03:20:27 step 52 pose=(-1.35,0.93,2) target=(-23, 18) pathlen=5 d11=0.791 tick=86289 goal=0 here=0
+03:20:29 step 53 pose=(-1.15,0.92,356) target=(-23, 23) pathlen=6 d11=0.728 tick=86437 goal=0 here=0
+03:20:33 step 54 pose=(-1.12,1.15,86) target=(-25, 27) pathlen=5 d11=0.652 tick=86894 goal=0 here=0
+03:20:37 step 55 pose=(-1.21,1.36,115) target=(-29, 28) pathlen=5 d11=0.614 tick=87235 goal=0 here=0
+03:20:40 step 56 pose=(-1.41,1.43,164) target=(-31, 32) pathlen=5 d11=0.635 tick=87593 goal=0 here=0
+03:20:44 step 57 pose=(-1.51,1.60,113) target=(-33, 36) pathlen=5 d11=0.609 tick=87946 goal=0 here=0
+03:20:45 step 58 pose=(-1.61,1.81,120) target=(-37, 40) pathlen=6 d11=0.573 tick=88113 goal=0 here=0
+03:20:49 step 59 pose=(-1.80,2.02,137) target=(-41, 39) pathlen=5 d11=0.575 tick=88477 goal=0 here=0
+03:20:53 step 60 pose=(-2.00,1.99,193) target=(-42, 46) pathlen=8 d11=0.746 tick=88846 goal=0 here=0
+03:20:58 step 61 pose=(-2.08,2.30,92) target=(-46, 50) pathlen=7 d11=0.653 tick=89340 goal=0 here=0
+03:21:01 step 62 pose=(-2.26,2.52,135) target=(-50, 48) pathlen=5 d11=0.616 tick=89702 goal=0 here=0
+03:21:05 step 63 pose=(-2.46,2.44,207) target=(-53, 44) pathlen=5 d11=0.637 tick=90078 goal=0 here=0
+03:21:09 step 64 pose=(-2.62,2.25,231) target=(-52, 37) pathlen=8 d11=0.572 tick=90417 goal=0 here=0
+03:21:13 step 65 pose=(-2.58,1.89,278) target=(-52, 31) pathlen=7 d11=0.655 tick=90866 goal=0 here=0
+03:21:15 step 66 pose=(-2.57,1.60,264) target=(-52, 27) pathlen=5 d11=0.715 tick=91086 goal=0 here=0
+03:21:17 step 67 pose=(-2.58,1.40,270) target=(-53, 22) pathlen=6 d11=0.779 tick=91239 goal=0 here=0
+03:21:20 step 68 pose=(-2.63,1.14,258) target=(-54, 18) pathlen=5 d11=0.847 tick=91575 goal=0 here=0
+03:21:22 step 69 pose=(-2.67,0.95,255) target=(-51, 15) pathlen=4 d11=0.902 tick=91729 goal=0 here=0
+03:21:25 step 70 pose=(-2.55,0.79,309) target=(-52, 10) pathlen=6 d11=0.956 tick=92100 goal=0 here=0
+03:21:29 step 71 pose=(-2.57,0.55,261) target=(-54, 5) pathlen=7 d11=0.975 tick=92494 goal=0 here=0
+03:21:31 obstacle stop front=0.11
+03:21:31 step 72 pose=(-2.61,0.44,246) target=(-54, 4) pathlen=5 d11=0.994 tick=92661 goal=0 here=0
+03:21:31 obstacle stop front=0.11
+03:21:31 step 73 pose=(-2.61,0.44,248) target=(-54, 4) pathlen=5 d11=0.987 tick=92678 goal=0 here=0
+03:21:31 obstacle stop front=0.12
+03:21:31 step 74 pose=(-2.61,0.43,246) target=(-50, 5) pathlen=5 d11=1.0 tick=92694 goal=0 here=0
+03:21:34 obstacle stop front=0.10
+03:21:34 step 75 pose=(-2.61,0.43,308) target=(-54, 3) pathlen=6 d11=1.0 tick=92941 goal=0 here=0
+03:21:36 obstacle stop front=0.10
+03:21:36 step 76 pose=(-2.61,0.43,262) target=(-54, 3) pathlen=6 d11=0.995 tick=93153 goal=0 here=0
+03:21:36 obstacle stop front=0.10
+03:21:36 step 77 pose=(-2.61,0.43,261) target=(-55, 2) pathlen=7 d11=0.989 tick=93165 goal=0 here=0
+03:21:37 obstacle stop front=0.08
+03:21:37 step 78 pose=(-2.61,0.43,252) target=(-55, 2) pathlen=7 d11=0.991 tick=93247 goal=0 here=0
+03:21:37 obstacle stop front=0.10
+03:21:37 step 79 pose=(-2.61,0.43,254) target=(-54, 2) pathlen=7 d11=0.984 tick=93259 goal=0 here=0
+03:21:37 obstacle stop front=0.10
+03:21:37 step 80 pose=(-2.61,0.43,254) target=(-54, 2) pathlen=7 d11=0.993 tick=93270 goal=0 here=0
+03:21:37 obstacle stop front=0.09
+03:21:37 step 81 pose=(-2.61,0.43,249) target=(-55, 1) pathlen=8 d11=0.98 tick=93282 goal=0 here=0
+03:21:37 obstacle stop front=0.10
+03:21:37 step 82 pose=(-2.61,0.43,257) target=(-55, 1) pathlen=8 d11=0.993 tick=93294 goal=0 here=0
+03:21:37 obstacle stop front=0.10
+03:21:37 step 83 pose=(-2.61,0.43,258) target=(-54, 1) pathlen=8 d11=0.985 tick=93306 goal=0 here=0
+03:21:37 obstacle stop front=0.09
+03:21:38 step 84 pose=(-2.61,0.43,253) target=(-54, 1) pathlen=8 d11=0.988 tick=93317 goal=0 here=0
+03:21:38 obstacle stop front=0.11
+03:21:38 step 85 pose=(-2.61,0.43,252) target=(-55, 0) pathlen=9 d11=0.994 tick=93331 goal=0 here=0
+03:21:38 obstacle stop front=0.09
+03:21:38 step 86 pose=(-2.61,0.43,255) target=(-55, 0) pathlen=9 d11=1.0 tick=93343 goal=0 here=0
+03:21:38 obstacle stop front=0.10
+03:21:38 step 87 pose=(-2.62,0.43,251) target=(-54, 0) pathlen=9 d11=0.984 tick=93361 goal=0 here=0
+03:21:38 obstacle stop front=0.09
+03:21:38 step 88 pose=(-2.62,0.43,250) target=(-54, 0) pathlen=9 d11=1.0 tick=93372 goal=0 here=0
+03:21:38 obstacle stop front=0.11
+03:21:38 step 89 pose=(-2.62,0.43,255) target=(-50, 5) pathlen=4 d11=0.989 tick=93383 goal=0 here=0
+03:21:41 obstacle stop front=0.09
+03:21:41 step 90 pose=(-2.62,0.43,310) target=(-57, 37) pathlen=31 d11=0.978 tick=93634 goal=0 here=0
+03:21:56 obstacle stop front=0.12
+03:21:56 step 91 pose=(-2.72,1.75,127) target=(-37, 51) pathlen=27 d11=0.674 tick=95193 goal=0 here=0
+03:22:11 obstacle stop front=0.11
+03:22:11 step 92 pose=(-1.87,2.54,28) target=(-29, 42) pathlen=20 d11=0.45 tick=96656 goal=0 here=0
+03:22:29 step 93 pose=(-1.44,2.10,42) target=(-39, 27) pathlen=50 d11=0.507 tick=98430 goal=0 here=0
+03:24:48 loaded grid cells 4906
+03:24:49 START pose (-1.4394496985111855, 2.1010163108445523, 0.7)
+03:25:00 step 1 pose=(-1.44,2.10,354) target=(-39, 27) pathlen=50 d11=0.681 tick=113571 goal=0 here=0
+03:25:16 obstacle stop front=0.11
+03:25:16 step 2 pose=(-1.14,1.29,274) target=(-39, 27) pathlen=32 d11=0.786 tick=115199 goal=0 here=0
+03:25:16 obstacle stop front=0.11
+03:25:16 step 3 pose=(-1.14,1.28,276) target=(-39, -8) pathlen=47 d11=0.794 tick=115215 goal=0 here=0
+03:25:17 obstacle stop front=0.10
+03:25:17 step 4 pose=(-1.14,1.28,271) target=(-12, 24) pathlen=12 d11=0.8 tick=115292 goal=0 here=0
+03:25:25 step 5 pose=(-0.60,1.23,353) target=(-6, 21) pathlen=9 d11=0.783 tick=116044 goal=0 here=0
+03:25:29 obstacle stop front=0.09
+03:25:29 step 6 pose=(-0.30,1.17,293) target=(-5, 19) pathlen=5 d11=0.786 tick=116489 goal=0 here=0
+03:25:29 obstacle stop front=0.09
+03:25:29 step 7 pose=(-0.30,1.17,293) target=(-5, 19) pathlen=5 d11=0.788 tick=116501 goal=0 here=0
+03:25:29 obstacle stop front=0.09
+03:25:29 step 8 pose=(-0.30,1.17,289) target=(-3, 19) pathlen=5 d11=0.778 tick=116512 goal=0 here=0
+03:25:31 obstacle stop front=0.07
+03:25:31 step 9 pose=(-0.30,1.17,311) target=(-3, 19) pathlen=5 d11=0.795 tick=116668 goal=0 here=0
+03:25:31 obstacle stop front=0.08
+03:25:31 step 10 pose=(-0.30,1.17,309) target=(-5, 18) pathlen=6 d11=0.771 tick=116682 goal=0 here=0
+03:25:33 obstacle stop front=0.09
+03:25:33 step 11 pose=(-0.30,1.17,289) target=(-5, 18) pathlen=6 d11=0.787 tick=116849 goal=0 here=0
+03:25:33 obstacle stop front=0.09
+03:25:33 step 12 pose=(-0.30,1.17,287) target=(-3, 18) pathlen=6 d11=0.775 tick=116860 goal=0 here=0
+03:25:34 obstacle stop front=0.09
+03:25:34 step 13 pose=(-0.30,1.17,305) target=(-3, 18) pathlen=6 d11=0.774 tick=117000 goal=0 here=0
+03:25:34 obstacle stop front=0.10
+03:25:34 step 14 pose=(-0.30,1.17,304) target=(2, 21) pathlen=9 d11=0.78 tick=117011 goal=0 here=0
+03:25:41 obstacle stop front=0.10
+03:25:41 step 15 pose=(0.01,1.16,331) target=(-13, 19) pathlen=17 d11=0.819 tick=117633 goal=0 here=0
+03:25:55 step 16 pose=(-0.62,1.00,256) target=(-9, 17) pathlen=5 d11=0.712 tick=119099 goal=0 here=0
+03:25:59 step 17 pose=(-0.45,0.88,329) target=(12, 43) pathlen=52 d11=0.548 tick=119491 goal=0 here=0
+03:26:18 obstacle stop front=0.12
+03:26:18 step 18 pose=(0.05,1.42,46) target=(12, 43) pathlen=30 d11=0.79 tick=121407 goal=0 here=0
+03:26:20 obstacle stop front=0.12
+03:26:20 step 19 pose=(0.05,1.43,84) target=(13, 43) pathlen=33 d11=0.785 tick=121601 goal=0 here=0
+03:26:22 obstacle stop front=0.12
+03:26:22 step 20 pose=(0.05,1.43,33) target=(13, 43) pathlen=33 d11=0.76 tick=121804 goal=0 here=0
+03:26:22 obstacle stop front=0.11
+03:26:23 step 21 pose=(0.06,1.44,28) target=(14, 43) pathlen=34 d11=0.733 tick=121829 goal=0 here=0
+03:26:23 obstacle stop front=0.09
+03:26:23 step 22 pose=(0.06,1.44,24) target=(14, 43) pathlen=34 d11=0.697 tick=121916 goal=0 here=0
+03:26:24 obstacle stop front=0.10
+03:26:24 step 23 pose=(0.06,1.44,22) target=(12, 42) pathlen=35 d11=0.704 tick=121946 goal=0 here=0
+03:26:24 obstacle stop front=0.11
+03:26:24 step 24 pose=(0.06,1.44,22) target=(12, 42) pathlen=35 d11=0.695 tick=121958 goal=0 here=0
+03:26:24 obstacle stop front=0.10
+03:26:24 step 25 pose=(0.06,1.44,21) target=(14, 42) pathlen=34 d11=0.699 tick=121969 goal=0 here=0
+03:26:25 obstacle stop front=0.11
+03:26:25 step 26 pose=(0.06,1.44,30) target=(14, 42) pathlen=34 d11=0.703 tick=122100 goal=0 here=0
+03:26:25 obstacle stop front=0.09
+03:26:25 step 27 pose=(0.06,1.44,33) target=(15, 42) pathlen=34 d11=0.693 tick=122112 goal=0 here=0
+03:26:25 obstacle stop front=0.11
+03:26:26 step 28 pose=(0.06,1.44,33) target=(15, 42) pathlen=34 d11=0.706 tick=122124 goal=0 here=0
+03:26:26 obstacle stop front=0.10
+03:26:26 step 29 pose=(0.06,1.44,32) target=(15, 43) pathlen=34 d11=0.707 tick=122135 goal=0 here=0
+03:26:26 obstacle stop front=0.10
+03:26:26 step 30 pose=(0.06,1.44,30) target=(15, 43) pathlen=34 d11=0.696 tick=122149 goal=0 here=0
+03:26:26 obstacle stop front=0.11
+03:26:26 step 31 pose=(0.06,1.44,30) target=(15, 44) pathlen=34 d11=0.695 tick=122160 goal=0 here=0
+03:26:26 obstacle stop front=0.08
+03:26:26 step 32 pose=(0.06,1.44,33) target=(15, 44) pathlen=34 d11=0.685 tick=122171 goal=0 here=0
+03:26:26 obstacle stop front=0.11
+03:26:26 step 33 pose=(0.06,1.44,34) target=(15, 45) pathlen=34 d11=0.694 tick=122185 goal=0 here=0
+03:26:26 obstacle stop front=0.11
+03:26:26 step 34 pose=(0.06,1.44,31) target=(15, 45) pathlen=34 d11=0.677 tick=122197 goal=0 here=0
+03:26:26 obstacle stop front=0.11
+03:26:26 step 35 pose=(0.06,1.44,30) target=(13, -4) pathlen=39 d11=0.68 tick=122209 goal=0 here=0
+03:26:33 obstacle stop front=0.11
+03:26:33 step 36 pose=(0.56,1.17,335) target=(13, -4) pathlen=28 d11=0.593 tick=122845 goal=0 here=0
+03:26:35 obstacle stop front=0.12
+03:26:35 step 37 pose=(0.56,1.14,274) target=(14, -4) pathlen=27 d11=0.611 tick=123102 goal=0 here=0
+03:26:36 obstacle stop front=0.10
+03:26:36 step 38 pose=(0.56,1.12,276) target=(14, -4) pathlen=27 d11=0.624 tick=123134 goal=0 here=0
+03:26:36 obstacle stop front=0.09
+03:26:36 step 39 pose=(0.56,1.12,276) target=(13, -5) pathlen=28 d11=0.615 tick=123145 goal=0 here=0
+03:26:36 obstacle stop front=0.09
+03:26:36 step 40 pose=(0.56,1.12,276) target=(13, -5) pathlen=29 d11=0.597 tick=123157 goal=0 here=0
+03:26:36 obstacle stop front=0.09
+03:26:36 step 41 pose=(0.56,1.12,279) target=(12, 41) pathlen=38 d11=0.642 tick=123203 goal=0 here=0
+03:26:48 obstacle stop front=0.07
+03:26:48 step 42 pose=(0.19,1.87,122) target=(2, 64) pathlen=34 d11=0.652 tick=124385 goal=0 here=0
+03:26:58 obstacle stop front=0.11
+03:26:58 step 43 pose=(0.46,2.52,46) target=(2, 64) pathlen=19 d11=0.531 tick=125366 goal=0 here=0
+03:26:59 obstacle stop front=0.11
+03:26:59 step 44 pose=(0.46,2.53,64) target=(1, 64) pathlen=20 d11=0.541 tick=125493 goal=0 here=0
+03:27:04 obstacle stop front=0.11
+03:27:04 step 45 pose=(0.51,2.88,114) target=(1, 64) pathlen=10 d11=0.54 tick=125995 goal=0 here=0
+03:27:06 obstacle stop front=0.10
+03:27:06 step 46 pose=(0.51,2.88,139) target=(0, 64) pathlen=11 d11=0.559 tick=126158 goal=0 here=0
+03:27:07 obstacle stop front=0.11
+03:27:07 step 47 pose=(0.51,2.88,151) target=(0, 64) pathlen=11 d11=0.553 tick=126252 goal=0 here=0
+03:27:07 obstacle stop front=0.11
+03:27:07 step 48 pose=(0.51,2.88,148) target=(2, 65) pathlen=12 d11=0.559 tick=126264 goal=0 here=0
+03:27:07 obstacle stop front=0.12
+03:27:07 step 49 pose=(0.51,2.88,149) target=(2, 65) pathlen=12 d11=0.547 tick=126276 goal=0 here=0
+03:27:07 obstacle stop front=0.12
+03:27:07 step 50 pose=(0.50,2.88,148) target=(-6, 65) pathlen=17 d11=0.541 tick=126294 goal=0 here=0
+03:27:14 obstacle stop front=0.10
+03:27:14 step 51 pose=(-0.05,3.08,141) target=(-6, 65) pathlen=5 d11=0.562 tick=126988 goal=0 here=0
+03:27:14 obstacle stop front=0.09
+03:27:14 step 52 pose=(-0.05,3.08,142) target=(-13, 64) pathlen=12 d11=0.555 tick=127001 goal=0 here=0
+03:27:21 step 53 pose=(-0.60,3.22,161) target=(-20, 63) pathlen=9 d11=0.541 tick=127703 goal=0 here=0
+03:27:26 step 54 pose=(-0.95,3.17,188) target=(-27, 59) pathlen=8 d11=0.59 tick=128139 goal=0 here=0
+03:27:31 step 55 pose=(-1.32,2.99,226) target=(-18, 56) pathlen=10 d11=0.655 tick=128696 goal=0 here=0
+03:27:40 step 56 pose=(-0.89,2.84,313) target=(-23, 54) pathlen=6 d11=0.556 tick=129581 goal=0 here=0
+03:27:45 step 57 pose=(-1.11,2.74,203) target=(-26, 51) pathlen=4 d11=0.561 tick=130064 goal=0 here=0
+03:27:48 step 58 pose=(-1.27,2.59,223) target=(-30, 49) pathlen=5 d11=0.552 tick=130352 goal=0 here=0
+03:27:50 step 59 pose=(-1.45,2.48,211) target=(-24, 70) pathlen=24 d11=0.566 tick=130594 goal=0 here=0
+03:27:59 obstacle stop front=0.11
+03:27:59 step 60 pose=(-1.19,2.66,88) target=(-34, 55) pathlen=12 d11=0.556 tick=131480 goal=0 here=0
+03:28:08 obstacle stop front=0.12
+03:28:08 step 61 pose=(-1.56,2.68,136) target=(-35, 56) pathlen=4 d11=0.607 tick=132387 goal=0 here=0
+03:28:08 obstacle stop front=0.12
+03:28:08 step 62 pose=(-1.57,2.68,137) target=(-35, 56) pathlen=4 d11=0.614 tick=132408 goal=0 here=0
+03:28:08 obstacle stop front=0.12
+03:28:09 step 63 pose=(-1.57,2.69,139) target=(-36, 57) pathlen=5 d11=0.62 tick=132424 goal=0 here=0
+03:28:09 obstacle stop front=0.10
+03:28:09 step 64 pose=(-1.57,2.69,136) target=(-36, 57) pathlen=5 d11=0.604 tick=132435 goal=0 here=0
+03:28:09 obstacle stop front=0.10
+03:28:09 step 65 pose=(-1.59,2.70,138) target=(-35, 57) pathlen=5 d11=0.614 tick=132460 goal=0 here=0
+03:28:10 obstacle stop front=0.10
+03:28:10 step 66 pose=(-1.59,2.70,130) target=(-35, 57) pathlen=5 d11=0.62 tick=132539 goal=0 here=0
+03:28:10 obstacle stop front=0.10
+03:28:10 step 67 pose=(-1.59,2.70,128) target=(-36, 58) pathlen=6 d11=0.646 tick=132550 goal=0 here=0
+03:28:10 obstacle stop front=0.11
+03:28:10 step 68 pose=(-1.59,2.70,132) target=(-36, 58) pathlen=6 d11=0.624 tick=132562 goal=0 here=0
+03:28:10 obstacle stop front=0.10
+03:28:10 step 69 pose=(-1.59,2.70,131) target=(-37, 59) pathlen=7 d11=0.624 tick=132573 goal=0 here=0
+03:28:10 obstacle stop front=0.10
+03:28:10 step 70 pose=(-1.59,2.70,132) target=(-37, 59) pathlen=7 d11=0.637 tick=132587 goal=0 here=0
+03:28:10 obstacle stop front=0.10
+03:28:10 step 71 pose=(-1.59,2.70,129) target=(-38, 60) pathlen=8 d11=0.627 tick=132598 goal=0 here=0
+03:28:10 obstacle stop front=0.11
+03:28:10 step 72 pose=(-1.59,2.70,131) target=(-38, 60) pathlen=8 d11=0.623 tick=132609 goal=0 here=0
+03:28:10 obstacle stop front=0.11
+03:28:11 step 73 pose=(-1.59,2.70,131) target=(-37, 60) pathlen=8 d11=0.617 tick=132621 goal=0 here=0
+03:28:11 obstacle stop front=0.10
+03:28:11 step 74 pose=(-1.59,2.70,132) target=(-37, 60) pathlen=8 d11=0.629 tick=132633 goal=0 here=0
+03:28:11 obstacle stop front=0.09
+03:28:11 step 75 pose=(-1.59,2.70,130) target=(-39, 61) pathlen=9 d11=0.635 tick=132644 goal=0 here=0
+03:28:11 obstacle stop front=0.10
+03:28:11 step 76 pose=(-1.59,2.70,129) target=(-39, 61) pathlen=9 d11=0.611 tick=132656 goal=0 here=0
+03:28:11 obstacle stop front=0.09
+03:28:11 step 77 pose=(-1.59,2.70,132) target=(-38, 61) pathlen=9 d11=0.615 tick=132668 goal=0 here=0
+03:28:11 obstacle stop front=0.11
+03:28:11 step 78 pose=(-1.59,2.70,131) target=(-38, 61) pathlen=9 d11=0.623 tick=132679 goal=0 here=0
+03:28:11 obstacle stop front=0.10
+03:28:11 step 79 pose=(-1.59,2.70,128) target=(-39, 62) pathlen=10 d11=0.615 tick=132691 goal=0 here=0
+03:28:11 obstacle stop front=0.11
+03:28:11 step 80 pose=(-1.59,2.70,131) target=(-39, 62) pathlen=10 d11=0.614 tick=132702 goal=0 here=0
+03:28:11 obstacle stop front=0.11
+03:28:11 step 81 pose=(-1.59,2.70,133) target=(-39, 63) pathlen=11 d11=0.633 tick=132714 goal=0 here=0
+03:28:11 obstacle stop front=0.11
+03:28:12 step 82 pose=(-1.59,2.70,130) target=(-39, 63) pathlen=11 d11=0.618 tick=132726 goal=0 here=0
+03:28:12 obstacle stop front=0.09
+03:28:12 step 83 pose=(-1.59,2.70,133) target=(-36, 59) pathlen=7 d11=0.625 tick=132737 goal=0 here=0
+03:28:12 obstacle stop front=0.11
+03:28:12 step 84 pose=(-1.59,2.70,129) target=(-36, 59) pathlen=7 d11=0.618 tick=132749 goal=0 here=0
+03:28:12 obstacle stop front=0.11
+03:28:12 step 85 pose=(-1.59,2.70,129) target=(-40, 63) pathlen=11 d11=0.622 tick=132761 goal=0 here=0
+03:28:12 obstacle stop front=0.11
+03:28:12 step 86 pose=(-1.59,2.70,131) target=(-40, 63) pathlen=11 d11=0.62 tick=132777 goal=0 here=0
+03:28:12 obstacle stop front=0.10
+03:28:12 step 87 pose=(-1.59,2.70,130) target=(-40, 64) pathlen=12 d11=0.616 tick=132789 goal=0 here=0
+03:28:12 obstacle stop front=0.10
+03:28:12 step 88 pose=(-1.59,2.70,133) target=(-40, 64) pathlen=12 d11=0.613 tick=132801 goal=0 here=0
+03:28:12 obstacle stop front=0.09
+03:28:12 step 89 pose=(-1.59,2.70,134) target=(-41, 64) pathlen=12 d11=0.621 tick=132813 goal=0 here=0
+03:28:12 obstacle stop front=0.10
+03:28:13 step 90 pose=(-1.59,2.70,134) target=(-41, 64) pathlen=12 d11=0.613 tick=132825 goal=0 here=0
+03:28:13 obstacle stop front=0.09
+03:28:13 step 91 pose=(-1.59,2.70,133) target=(-41, 65) pathlen=13 d11=0.631 tick=132836 goal=0 here=0
+03:28:13 obstacle stop front=0.09
+03:28:13 step 92 pose=(-1.59,2.70,131) target=(-35, 58) pathlen=6 d11=0.629 tick=132848 goal=0 here=0
+03:28:14 obstacle stop front=0.11
+03:28:14 step 93 pose=(-1.59,2.70,119) target=(-35, 58) pathlen=6 d11=0.629 tick=132960 goal=0 here=0
+03:28:14 obstacle stop front=0.09
+03:28:14 step 94 pose=(-1.59,2.70,121) target=(-37, 61) pathlen=9 d11=0.628 tick=132972 goal=0 here=0
+03:28:15 obstacle stop front=0.11
+03:28:15 step 95 pose=(-1.59,2.70,136) target=(-37, 61) pathlen=9 d11=0.616 tick=133085 goal=0 here=0
+03:28:15 obstacle stop front=0.09
+03:28:15 step 96 pose=(-1.59,2.70,132) target=(-37, 62) pathlen=10 d11=0.632 tick=133095 goal=0 here=0
+03:28:15 obstacle stop front=0.10
+03:28:15 step 97 pose=(-1.59,2.70,134) target=(-37, 62) pathlen=10 d11=0.622 tick=133109 goal=0 here=0
+03:28:15 obstacle stop front=0.10
+03:28:16 step 98 pose=(-1.59,2.70,138) target=(-38, 63) pathlen=11 d11=0.623 tick=133121 goal=0 here=0
+03:28:16 obstacle stop front=0.09
+03:28:16 step 99 pose=(-1.59,2.70,133) target=(-38, 63) pathlen=11 d11=0.627 tick=133133 goal=0 here=0
+03:28:16 obstacle stop front=0.11
+03:28:16 step 100 pose=(-1.59,2.70,135) target=(-37, 63) pathlen=11 d11=0.636 tick=133144 goal=0 here=0
+03:28:16 obstacle stop front=0.10
+03:28:16 step 101 pose=(-1.59,2.70,137) target=(-37, 63) pathlen=11 d11=0.632 tick=133156 goal=0 here=0
+03:28:16 obstacle stop front=0.08
+03:28:16 step 102 pose=(-1.59,2.70,132) target=(-35, 59) pathlen=7 d11=0.633 tick=133167 goal=0 here=0
+03:28:17 obstacle stop front=0.10
+03:28:17 step 103 pose=(-1.59,2.70,118) target=(-35, 59) pathlen=7 d11=0.603 tick=133301 goal=0 here=0
+03:28:17 obstacle stop front=0.10
+03:28:17 step 104 pose=(-1.59,2.70,119) target=(-36, 60) pathlen=8 d11=0.628 tick=133312 goal=0 here=0
+03:28:18 obstacle stop front=0.10
+03:28:18 step 105 pose=(-1.59,2.70,128) target=(-36, 60) pathlen=14 d11=0.6 tick=133392 goal=0 here=0
+03:28:30 obstacle stop front=0.09
+03:28:30 step 106 pose=(-1.79,3.00,50) target=(-35, 64) pathlen=5 d11=0.731 tick=134575 goal=0 here=0
+03:28:32 obstacle stop front=0.10
+03:28:32 step 107 pose=(-1.79,3.01,71) target=(-15, 66) pathlen=39 d11=0.735 tick=134734 goal=0 here=0
+03:29:13 loaded grid cells 5640
+03:29:13 START pose (-1.7898312827927594, 3.0102167122005525, 53.5)
+03:29:25 step 1 pose=(-1.79,3.01,43) target=(-15, 66) pathlen=39 d11=0.558 tick=140022 goal=0 here=0
+03:29:31 obstacle stop front=0.12
+03:29:31 step 2 pose=(-1.90,2.79,243) target=(-15, 66) pathlen=32 d11=0.579 tick=140693 goal=0 here=0
+03:29:34 obstacle stop front=0.11
+03:29:35 step 3 pose=(-1.91,2.80,321) target=(-22, 68) pathlen=38 d11=0.61 tick=141038 goal=0 here=0
+03:29:37 obstacle stop front=0.12
+03:29:37 step 4 pose=(-1.89,2.76,296) target=(-39, 27) pathlen=31 d11=0.602 tick=141313 goal=0 here=0
+03:29:41 obstacle stop front=0.10
+03:29:42 step 5 pose=(-2.00,2.65,223) target=(-39, 27) pathlen=26 d11=0.602 tick=141763 goal=0 here=0
+03:29:44 obstacle stop front=0.09
+03:29:45 step 6 pose=(-2.00,2.69,274) target=(-22, 68) pathlen=37 d11=0.588 tick=142029 goal=0 here=0
+03:29:48 obstacle stop front=0.11
+03:29:49 step 7 pose=(-1.92,2.67,347) target=(-32, 67) pathlen=39 d11=0.565 tick=142461 goal=0 here=0
+03:29:51 obstacle stop front=0.10
+03:29:51 step 8 pose=(-1.89,2.65,328) target=(-32, 67) pathlen=41 d11=0.597 tick=142688 goal=0 here=0
+03:29:53 obstacle stop front=0.11
+03:29:53 step 9 pose=(-1.87,2.63,307) target=(-39, -8) pathlen=61 d11=0.6 tick=142917 goal=0 here=0
+03:29:56 obstacle stop front=0.12
+03:29:56 no frontier path (fail 1); cells 6044
+03:29:59 STUCK escape: turning to beam 8 (range 1.48)
+03:30:06 step 12 pose=(-2.12,2.76,157) target=(-50, 59) pathlen=8 d11=0.628 tick=144125 goal=0 here=0
+03:30:07 obstacle stop front=0.11
+03:30:08 step 13 pose=(-2.26,2.83,152) target=(-51, 59) pathlen=8 d11=0.671 tick=144325 goal=0 here=0
+03:30:08 obstacle stop front=0.12
+03:30:09 step 14 pose=(-2.26,2.83,153) target=(-59, 55) pathlen=14 d11=0.68 tick=144419 goal=0 here=0
+03:30:13 obstacle stop front=0.12
+03:30:14 step 15 pose=(-2.51,2.64,221) target=(-59, 55) pathlen=9 d11=0.716 tick=144954 goal=0 here=0
+03:30:20 step 16 pose=(-2.91,2.78,175) target=(-60, 63) pathlen=9 d11=0.822 tick=145607 goal=0 here=0
+03:30:28 step 17 pose=(-2.99,3.15,77) target=(-63, 67) pathlen=5 d11=0.798 tick=146346 goal=0 here=0
+03:30:32 step 18 pose=(-3.10,3.36,125) target=(-62, 46) pathlen=22 d11=0.868 tick=146719 goal=0 here=0
+03:30:43 step 19 pose=(-3.08,2.35,270) target=(-62, 40) pathlen=7 d11=0.915 tick=147849 goal=0 here=0
+03:30:45 step 20 pose=(-3.08,2.05,271) target=(-62, 36) pathlen=5 d11=0.929 tick=148071 goal=0 here=0
+03:30:47 step 21 pose=(-3.08,1.85,274) target=(-62, 32) pathlen=5 d11=0.921 tick=148224 goal=0 here=0
+03:30:48 step 22 pose=(-3.08,1.65,271) target=(-54, 3) pathlen=80 d11=0.939 tick=148378 goal=0 here=0
+03:31:09 obstacle stop front=0.09
+03:31:10 no frontier path (fail 1); cells 6370
+03:31:13 no frontier path (fail 2); cells 6370
+03:31:16 no frontier path (fail 3); cells 6370
+03:31:19 no frontier path (fail 4); cells 6370
+03:31:22 STUCK escape: turning to beam 6 (range 1.00)
+03:31:28 no frontier path (fail 5); cells 6370
+03:31:30 no frontier path (fail 6); cells 6370
+03:31:33 no frontier path (fail 7); cells 6370
+03:31:36 no frontier path (fail 8); cells 6370
+03:31:39 STUCK escape: turning to beam 8 (range 1.06)
+03:31:45 no frontier path (fail 9); cells 6370
+03:31:48 no frontier path (fail 10); cells 6370
+03:31:50 no frontier path (fail 11); cells 6370
+03:31:53 no frontier path (fail 12); cells 6370
+03:31:56 STUCK escape: turning to beam 14 (range 0.96)
+03:31:59 no frontier path (fail 13); cells 6370
+03:32:02 giving up
+03:32:02 EXIT
+03:32:45 loaded grid cells 6370
+03:32:45 START pose (-2.650650431279289, 2.789489814780081, 220.0)
+03:32:56 no frontier path (fail 1); cells 6370
+03:32:59 no frontier path (fail 2); cells 6370
+03:33:02 no frontier path (fail 3); cells 6370
+03:33:04 no frontier path (fail 4); cells 6370
+03:33:07 STUCK escape: turning to beam 13 (range 0.91)
+03:33:10 no frontier path (fail 5); cells 6370
+03:33:12 no frontier path (fail 6); cells 6370
+03:33:15 no frontier path (fail 7); cells 6370
+03:33:18 STUCK escape: turning to beam 9 (range 1.05)
+03:33:24 no frontier path (fail 8); cells 6370
+03:33:27 no frontier path (fail 9); cells 6370
+03:33:29 no frontier path (fail 10); cells 6370
+03:33:32 no frontier path (fail 11); cells 6372
+03:33:35 STUCK escape: turning to beam 7 (range 1.12)
+03:33:41 step 15 pose=(-2.58,2.67,9) target=(14, -4) pathlen=132 d11=0.789 tick=165686 goal=0 here=0
+03:33:48 loaded grid cells 6372
+03:33:49 START pose (-2.848873271262292, 2.597758750929534, 296.2)
+03:33:59 step 1 pose=(-2.85,2.60,286) target=(-54, 3) pathlen=50 d11=0.61 tick=167515 goal=0 here=0
+03:34:04 obstacle stop front=0.12
+03:34:05 step 2 pose=(-2.71,2.38,283) target=(-54, 3) pathlen=45 d11=0.613 tick=168073 goal=0 here=0
+03:34:05 obstacle stop front=0.12
+03:34:06 step 3 pose=(-2.72,2.41,285) target=(-54, 2) pathlen=47 d11=0.602 tick=168136 goal=0 here=0
+03:34:07 obstacle stop front=0.12
+03:34:07 step 4 pose=(-2.71,2.40,294) target=(-54, 2) pathlen=46 d11=0.598 tick=168300 goal=0 here=0
+03:34:08 obstacle stop front=0.11
+03:34:09 step 5 pose=(-2.71,2.40,285) target=(-54, 1) pathlen=50 d11=0.596 tick=168442 goal=0 here=0
+03:34:10 obstacle stop front=0.10
+03:34:11 STUCK escape: turning to beam 7 (range 1.39)
+03:34:17 no frontier path (fail 1); cells 6666
+03:34:20 no frontier path (fail 2); cells 6670
+03:34:23 step 9 pose=(-2.85,2.69,284) target=(-34, 68) pathlen=27 d11=0.59 tick=169867 goal=0 here=0
+03:34:27 obstacle stop front=0.12
+03:34:27 no frontier path (fail 1); cells 6690
+03:34:30 no frontier path (fail 2); cells 6699
+03:34:33 step 12 pose=(-2.72,2.69,182) target=(-34, 68) pathlen=25 d11=0.524 tick=170899 goal=0 here=0
+03:34:38 obstacle stop front=0.10
+03:34:39 no frontier path (fail 1); cells 6707
+03:34:42 STUCK escape: turning to beam 6 (range 1.53)
+03:35:29 START pose (-2.9998557213870276, 3.04976553499626, 123.3)
+03:35:40 step 1 pose=(-3.00,3.05,112) target=(-57, 56) pathlen=6 d11=0.668 tick=177595 goal=0 here=0
+03:35:46 step 2 pose=(-2.84,2.84,303) target=(-58, 51) pathlen=6 d11=0.632 tick=178204 goal=0 here=0
+03:35:50 step 3 pose=(-2.87,2.60,258) target=(-66, 50) pathlen=9 d11=0.645 tick=178570 goal=0 here=0
+03:35:55 step 4 pose=(-3.26,2.52,180) target=(-70, 50) pathlen=5 d11=0.76 tick=179066 goal=0 here=0
+03:35:56 step 5 pose=(-3.46,2.53,176) target=(-74, 48) pathlen=5 d11=0.819 tick=179218 goal=0 here=0
+03:36:00 step 6 pose=(-3.66,2.44,205) target=(-78, 48) pathlen=5 d11=0.818 tick=179532 goal=0 here=0
+03:36:02 step 7 pose=(-3.86,2.43,184) target=(-80, 44) pathlen=5 d11=0.804 tick=179808 goal=0 here=0
+03:36:06 step 8 pose=(-3.98,2.24,243) target=(-79, 40) pathlen=5 d11=0.667 tick=180164 goal=0 here=0
+03:36:10 step 9 pose=(-3.94,2.04,283) target=(-80, 36) pathlen=5 d11=0.52 tick=180536 goal=0 here=0
+03:36:13 step 10 pose=(-3.97,1.84,257) target=(-75, 30) pathlen=10 d11=0.49 tick=180851 goal=0 here=0
+03:36:20 step 11 pose=(-3.75,1.52,350) target=(-81, 29) pathlen=7 d11=0.413 tick=181594 goal=0 here=0
+03:36:26 step 12 pose=(-4.01,1.48,185) target=(-72, 27) pathlen=10 d11=0.41 tick=182183 goal=0 here=0
+03:36:33 step 13 pose=(-3.60,1.38,347) target=(-64, 27) pathlen=9 d11=0.375 tick=182919 goal=0 here=0
+03:36:38 step 14 pose=(-3.20,1.37,2) target=(-58, 32) pathlen=9 d11=0.348 tick=183340 goal=0 here=0
+03:36:44 step 15 pose=(-2.88,1.60,63) target=(-55, 35) pathlen=4 d11=0.367 tick=183930 goal=0 here=0
+03:36:46 step 16 pose=(-2.74,1.76,47) target=(-58, 38) pathlen=4 d11=0.353 tick=184177 goal=0 here=0
+03:36:50 step 17 pose=(-2.85,1.91,127) target=(-62, 36) pathlen=5 d11=0.393 tick=184574 goal=0 here=0
+03:36:54 step 18 pose=(-3.06,1.84,201) target=(-66, 38) pathlen=5 d11=0.409 tick=184963 goal=0 here=0
+03:36:57 step 19 pose=(-3.25,1.92,156) target=(-70, 38) pathlen=5 d11=0.432 tick=185300 goal=0 here=0
+03:37:00 step 20 pose=(-3.45,1.93,181) target=(-49, 38) pathlen=22 d11=0.471 tick=185566 goal=0 here=0
+03:37:16 step 21 pose=(-2.43,1.91,34) target=(-46, 34) pathlen=5 d11=0.357 tick=187206 goal=0 here=0
+03:37:21 step 22 pose=(-2.29,1.74,311) target=(-47, 30) pathlen=5 d11=0.321 tick=187671 goal=0 here=0
+03:37:25 step 23 pose=(-2.32,1.54,256) target=(-39, 27) pathlen=9 d11=0.306 tick=188034 goal=0 here=0
+03:37:32 step 24 pose=(-1.95,1.37,358) target=(-35, 27) pathlen=5 d11=0.262 tick=188758 goal=0 here=0
+03:37:33 step 25 pose=(-1.74,1.36,3) target=(-31, 27) pathlen=5 d11=0.247 tick=188913 goal=0 here=0
+03:37:35 step 26 pose=(-1.55,1.37,0) target=(-28, 28) pathlen=5 d11=0.226 tick=189060 goal=0 here=0
+03:37:37 step 27 pose=(-1.39,1.41,22) target=(-27, 32) pathlen=5 d11=0.228 tick=189263 goal=0 here=0
+03:37:41 step 28 pose=(-1.32,1.61,69) target=(-24, 37) pathlen=6 d11=0.226 tick=189642 goal=0 here=0
+03:37:43 step 29 pose=(-1.19,1.85,58) target=(-26, 44) pathlen=8 d11=0.224 tick=189916 goal=0 here=0
+03:37:48 step 30 pose=(-1.27,2.20,103) target=(-26, 48) pathlen=5 d11=0.256 tick=190385 goal=0 here=0
+03:37:51 step 31 pose=(-1.27,2.41,86) target=(-24, 56) pathlen=9 d11=0.271 tick=190650 goal=0 here=0
+03:37:56 step 32 pose=(-1.19,2.81,47) target=(-28, 58) pathlen=5 d11=0.273 tick=191154 goal=0 here=0
+03:38:00 step 33 pose=(-1.35,2.92,149) target=(-32, 59) pathlen=5 d11=0.302 tick=191590 goal=0 here=0
+03:38:03 step 34 pose=(-1.55,2.98,166) target=(-35, 62) pathlen=4 d11=0.318 tick=191853 goal=0 here=0
+03:38:06 step 35 pose=(-1.71,3.11,140) target=(-37, 58) pathlen=5 d11=0.339 tick=192172 goal=0 here=0
+03:38:10 step 36 pose=(-1.82,2.95,234) target=(-36, 75) pathlen=18 d11=0.361 tick=192605 goal=0 here=0
+03:38:21 step 37 pose=(-1.77,3.75,94) target=(-36, 79) pathlen=5 d11=0.381 tick=193655 goal=0 here=0
+03:38:22 step 38 pose=(-1.77,3.96,92) target=(-30, 79) pathlen=7 d11=0.395 tick=193807 goal=0 here=0
+03:38:27 step 39 pose=(-1.50,3.97,357) target=(-27, 82) pathlen=4 d11=0.34 tick=194277 goal=0 here=0
+03:38:31 step 40 pose=(-1.33,4.11,41) target=(-26, 77) pathlen=6 d11=0.313 tick=194621 goal=0 here=0
+03:38:35 step 41 pose=(-1.28,3.90,282) target=(-25, 73) pathlen=5 d11=0.294 tick=195100 goal=0 here=0
+03:38:37 step 42 pose=(-1.24,3.70,283) target=(-28, 70) pathlen=4 d11=0.3 tick=195256 goal=0 here=0
+03:38:40 step 43 pose=(-1.36,3.54,228) target=(-26, 91) pathlen=22 d11=0.327 tick=195603 goal=0 here=0
+03:38:55 step 44 pose=(-1.27,4.56,87) target=(-31, 90) pathlen=6 d11=0.292 tick=197070 goal=0 here=0
+03:39:00 step 45 pose=(-1.50,4.54,188) target=(-35, 91) pathlen=5 d11=0.336 tick=197544 goal=0 here=0
+03:39:02 step 46 pose=(-1.70,4.57,167) target=(-40, 93) pathlen=6 d11=0.367 tick=197810 goal=0 here=0
+03:39:04 step 47 pose=(-1.96,4.66,154) target=(-46, 90) pathlen=7 d11=0.404 tick=198010 goal=0 here=0
+03:39:09 step 48 pose=(-2.26,4.55,214) target=(-47, 86) pathlen=5 d11=0.477 tick=198427 goal=0 here=0
+03:39:12 step 49 pose=(-2.33,4.35,258) target=(-48, 77) pathlen=10 d11=0.496 tick=198775 goal=0 here=0
+03:39:18 step 50 pose=(-2.37,3.89,254) target=(-50, 73) pathlen=5 d11=0.512 tick=199350 goal=0 here=0
+03:39:20 step 51 pose=(-2.46,3.70,243) target=(-54, 71) pathlen=5 d11=0.531 tick=199589 goal=0 here=0
+03:39:23 step 52 pose=(-2.66,3.59,209) target=(-57, 76) pathlen=6 d11=0.562 tick=199916 goal=0 here=0
+03:39:28 step 53 pose=(-2.81,3.81,122) target=(-57, 81) pathlen=6 d11=0.613 tick=200370 goal=0 here=0
+03:39:31 step 54 pose=(-2.82,4.05,86) target=(-48, 67) pathlen=20 d11=0.628 tick=200700 goal=0 here=0
+03:39:46 step 55 pose=(-2.38,3.40,294) target=(-49, 60) pathlen=8 d11=0.488 tick=202176 goal=0 here=0
+03:39:52 obstacle stop front=0.11
+03:39:52 step 56 pose=(-2.38,3.09,244) target=(-49, 56) pathlen=6 d11=0.472 tick=202793 goal=0 here=0
+03:39:55 step 57 pose=(-2.43,2.85,261) target=(-47, 51) pathlen=6 d11=0.456 tick=203094 goal=0 here=0
+03:39:59 step 58 pose=(-2.34,2.60,289) target=(-44, 48) pathlen=4 d11=0.42 tick=203462 goal=0 here=0
+03:40:02 step 59 pose=(-2.20,2.43,315) target=(-47, 45) pathlen=4 d11=0.392 tick=203730 goal=0 here=0
+03:40:06 step 60 pose=(-2.31,2.29,228) target=(-44, 42) pathlen=5 d11=0.394 tick=204138 goal=0 here=0
+03:40:10 obstacle stop front=0.10
+03:40:10 step 61 pose=(-2.23,2.18,314) target=(-39, 42) pathlen=9 d11=0.356 tick=204592 goal=0 here=0
+03:40:18 step 62 pose=(-1.92,2.15,281) target=(-38, 36) pathlen=9 d11=0.32 tick=205360 goal=0 here=0
+03:40:23 step 63 pose=(-1.86,1.85,253) target=(-36, 49) pathlen=14 d11=0.296 tick=205850 goal=0 here=0
+03:40:34 step 64 pose=(-1.79,2.46,64) target=(-32, 46) pathlen=6 d11=0.332 tick=206999 goal=0 here=0
+03:40:38 obstacle stop front=0.10
+03:40:38 step 65 pose=(-1.75,2.44,327) target=(-41, 53) pathlen=18 d11=0.336 tick=207402 goal=0 here=0
+03:40:52 obstacle stop front=0.12
+03:40:53 step 66 pose=(-2.22,2.54,37) target=(-37, 97) pathlen=50 d11=0.397 tick=208848 goal=0 here=0
+03:41:18 obstacle stop front=0.11
+03:41:18 step 67 pose=(-2.10,4.63,38) target=(-57, 85) pathlen=38 d11=0.427 tick=211377 goal=0 here=0
+03:41:39 obstacle stop front=0.10
+03:41:39 scan-match correction dx=0.03 dy=0.05 (11->14 matches)
+03:41:39 step 68 pose=(-2.69,3.60,124) target=(-57, 85) pathlen=17 d11=0.566 tick=213513 goal=0 here=0
+03:41:45 obstacle stop front=0.12
+03:41:46 step 69 pose=(-2.81,3.91,130) target=(-63, 87) pathlen=11 d11=0.54 tick=214170 goal=0 here=0
+03:41:52 obstacle stop front=0.12
+03:41:52 step 70 pose=(-2.94,4.23,137) target=(-64, 83) pathlen=6 d11=0.528 tick=214784 goal=0 here=0
+03:41:56 step 71 pose=(-3.16,4.19,196) target=(-66, 87) pathlen=5 d11=0.598 tick=215139 goal=0 here=0
+03:42:00 step 72 pose=(-3.27,4.36,117) target=(-67, 82) pathlen=6 d11=0.629 tick=215528 goal=0 here=0
+03:42:05 step 73 pose=(-3.33,4.15,255) target=(-69, 78) pathlen=5 d11=0.77 tick=216061 goal=0 here=0
+03:42:07 step 74 pose=(-3.42,3.95,247) target=(-66, 75) pathlen=4 d11=0.802 tick=216304 goal=0 here=0
+03:42:10 obstacle stop front=0.12
+03:42:10 step 75 pose=(-3.43,3.96,307) target=(-66, 75) pathlen=6 d11=0.797 tick=216601 goal=0 here=0
+03:42:11 obstacle stop front=0.12
+03:42:11 step 76 pose=(-3.43,3.97,306) target=(-68, 95) pathlen=17 d11=0.809 tick=216682 goal=0 here=0
+03:42:23 step 77 pose=(-3.36,4.76,116) target=(-71, 101) pathlen=11 d11=0.819 tick=217906 goal=0 here=0
+03:42:31 step 78 pose=(-3.50,5.08,173) target=(-75, 100) pathlen=5 d11=0.789 tick=218710 goal=0 here=0
+03:42:35 step 79 pose=(-3.71,5.04,194) target=(-78, 103) pathlen=4 d11=0.82 tick=219036 goal=0 here=0
+03:42:38 step 80 pose=(-3.86,5.16,136) target=(-82, 103) pathlen=5 d11=0.81 tick=219392 goal=0 here=0
+03:42:42 step 81 pose=(-4.05,5.18,176) target=(-90, 102) pathlen=9 d11=0.799 tick=219731 goal=0 here=0
+03:42:45 step 82 pose=(-4.45,5.12,186) target=(-96, 102) pathlen=7 d11=0.801 tick=220111 goal=0 here=0
+03:42:48 step 83 pose=(-4.75,5.13,180) target=(-99, 105) pathlen=4 d11=0.787 tick=220380 goal=0 here=0
+03:42:51 step 84 pose=(-4.91,5.27,139) target=(-98, 110) pathlen=6 d11=0.726 tick=220716 goal=0 here=0
+03:42:55 step 85 pose=(-4.88,5.50,79) target=(-95, 113) pathlen=4 d11=0.652 tick=221077 goal=0 here=1
+03:42:58 step 86 pose=(-4.74,5.66,47) target=(-99, 115) pathlen=5 d11=0.612 tick=221376 goal=0 here=1
+03:43:03 step 87 pose=(-4.90,5.76,143) target=(-92, 111) pathlen=8 d11=0.583 tick=221877 goal=0 here=1
+03:43:12 step 88 pose=(-4.60,5.57,351) target=(-99, 120) pathlen=10 d11=0.654 tick=222747 goal=0 here=1
+03:43:21 step 89 pose=(-4.92,6.01,115) target=(-80, 98) pathlen=37 d11=0.537 tick=223661 goal=0 here=1
+03:43:45 step 90 pose=(-3.98,4.94,297) target=(-78, 93) pathlen=9 d11=0.844 tick=226053 goal=0 here=0
+03:43:52 step 91 pose=(-3.86,4.69,235) target=(-75, 90) pathlen=4 d11=0.915 tick=226727 goal=0 here=0
+03:43:56 step 92 pose=(-3.74,4.53,310) target=(-79, 89) pathlen=5 d11=0.926 tick=227121 goal=0 here=0
+03:44:00 step 93 pose=(-3.90,4.48,194) target=(-39, 82) pathlen=107 d11=0.956 tick=227587 goal=0 here=0
+03:44:15 obstacle stop front=0.10
+03:44:15 step 94 pose=(-3.35,4.97,280) target=(-39, 82) pathlen=91 d11=0.783 tick=229099 goal=0 here=0
+03:44:17 obstacle stop front=0.11
+03:44:17 step 95 pose=(-3.36,4.97,293) target=(-43, 25) pathlen=152 d11=0.781 tick=229300 goal=0 here=0
+03:44:19 obstacle stop front=0.12
+03:44:19 step 96 pose=(-3.35,4.97,277) target=(-43, 25) pathlen=151 d11=0.768 tick=229508 goal=0 here=0
+03:44:21 obstacle stop front=0.11
+03:44:22 step 97 pose=(-3.35,4.96,294) target=(-44, 25) pathlen=151 d11=0.779 tick=229737 goal=0 here=0
+03:44:24 obstacle stop front=0.10
+03:44:24 STUCK escape: turning to beam 12 (range 1.54)
+03:44:29 step 99 pose=(-3.63,4.93,176) target=(-39, 82) pathlen=94 d11=0.813 tick=230480 goal=0 here=0
+03:44:39 obstacle stop front=0.12
+03:44:40 scan-match correction dx=0.00 dy=0.08 (7->14 matches)
+03:44:40 step 100 pose=(-3.31,4.86,283) target=(-39, 82) pathlen=86 d11=0.781 tick=231574 goal=0 here=0
+03:44:43 obstacle stop front=0.09
+03:44:44 step 101 pose=(-3.33,4.79,257) target=(-43, 25) pathlen=146 d11=0.772 tick=231918 goal=0 here=0
+03:44:46 obstacle stop front=0.11
+03:44:47 scan-match correction dx=0.15 dy=-0.03 (9->12 matches)
+03:44:47 step 102 pose=(-3.34,4.54,280) target=(-43, 25) pathlen=142 d11=0.774 tick=232266 goal=0 here=0
+03:44:49 obstacle stop front=0.10
+03:44:49 step 103 pose=(-3.17,4.42,283) target=(-44, 25) pathlen=141 d11=0.782 tick=232492 goal=0 here=0
+03:45:04 obstacle stop front=0.11
+03:45:05 scan-match correction dx=-0.03 dy=0.12 (9->13 matches)
+03:45:05 step 104 pose=(-2.74,3.56,28) target=(-69, 65) pathlen=27 d11=0.829 tick=234033 goal=0 here=0
+03:45:08 loaded grid cells 5607
+03:45:08 START pose (-2.7618186997144054, 3.689791234181816, 303.7)
+03:45:19 step 1 pose=(-2.76,3.69,293) target=(-80, 60) pathlen=54 d11=0.831 tick=235471 goal=0 here=0
+03:45:26 obstacle stop front=0.12
+03:45:27 step 2 pose=(-2.56,3.26,230) target=(-80, 60) pathlen=196 d11=0.777 tick=236220 goal=0 here=0
+03:46:17 obstacle stop front=0.12
+03:46:18 step 3 pose=(-1.54,3.02,315) target=(-79, 73) pathlen=151 d11=0.297 tick=241355 goal=0 here=0
+03:46:19 obstacle stop front=0.11
+03:46:20 step 4 pose=(-1.54,3.02,334) target=(-79, 73) pathlen=149 d11=0.27 tick=241569 goal=0 here=0
+03:46:22 obstacle stop front=0.11
+03:46:23 step 5 pose=(-1.54,3.02,305) target=(-80, 72) pathlen=148 d11=0.26 tick=241818 goal=0 here=0
+03:46:23 obstacle stop front=0.12
+03:46:23 step 6 pose=(-1.55,3.03,309) target=(-80, 72) pathlen=150 d11=0.269 tick=241904 goal=0 here=0
+03:46:25 obstacle stop front=0.11
+03:46:25 STUCK escape: turning to beam 8 (range 1.10)
+03:46:32 no frontier path (fail 1); cells 5634
+03:46:35 no frontier path (fail 2); cells 5634
+03:46:38 step 10 pose=(-1.68,3.26,293) target=(-22, 97) pathlen=36 d11=0.244 tick=243350 goal=0 here=0
+03:46:51 obstacle stop front=0.11
+03:46:52 no frontier path (fail 1); cells 5635
+03:46:55 scan-match correction dx=-0.08 dy=0.05 (9->12 matches)
+03:46:55 no frontier path (fail 2); cells 5635
+03:46:58 step 13 pose=(-1.63,4.00,204) target=(-22, 97) pathlen=19 d11=0.262 tick=245329 goal=0 here=0
+03:47:02 obstacle stop front=0.11
+03:47:03 scan-match correction dx=-0.03 dy=0.10 (9->13 matches)
+03:47:03 no frontier path (fail 1); cells 5635
+03:47:06 no frontier path (fail 2); cells 5635
+03:47:09 step 16 pose=(-1.64,4.11,221) target=(-21, 94) pathlen=18 d11=0.231 tick=246440 goal=0 here=0
+03:47:13 obstacle stop front=0.11
+03:47:14 no frontier path (fail 1); cells 5635
+03:47:17 scan-match correction dx=0.05 dy=0.03 (9->12 matches)
+03:47:17 no frontier path (fail 2); cells 5635
+03:47:20 STUCK escape: turning to beam 2 (range 2.02)
+03:47:24 step 20 pose=(-1.74,3.86,242) target=(-22, 97) pathlen=23 d11=0.218 tick=247963 goal=0 here=0
+03:47:29 obstacle stop front=0.12
+03:47:29 no frontier path (fail 1); cells 5635
+03:47:32 no frontier path (fail 2); cells 5635
+03:47:36 step 23 pose=(-1.68,3.90,204) target=(-22, 97) pathlen=23 d11=0.257 tick=249123 goal=0 here=0
+03:47:40 obstacle stop front=0.10
+03:47:41 no frontier path (fail 1); cells 5635
+03:47:44 STUCK escape: turning to beam 5 (range 1.74)
+03:47:49 no frontier path (fail 2); cells 5635
+03:47:52 step 27 pose=(-1.80,3.68,324) target=(-66, 75) pathlen=35 d11=0.305 tick=250791 goal=0 here=0
+03:48:02 obstacle stop front=0.10
+03:48:03 no frontier path (fail 1); cells 5635
+03:48:06 no frontier path (fail 2); cells 5635
+03:48:09 scan-match correction dx=0.03 dy=-0.03 (8->11 matches)
+03:48:09 step 30 pose=(-2.40,3.50,338) target=(-22, 97) pathlen=43 d11=0.313 tick=252438 goal=0 here=0
+03:48:13 obstacle stop front=0.12
+03:48:13 no frontier path (fail 1); cells 5635
+03:48:16 STUCK escape: turning to beam 5 (range 2.65)
+03:48:21 no frontier path (fail 2); cells 5635
+03:48:24 step 34 pose=(-2.30,3.24,9) target=(-66, 75) pathlen=26 d11=0.325 tick=253995 goal=0 here=0
+03:48:29 obstacle stop front=0.11
+03:48:30 no frontier path (fail 1); cells 5635
+03:48:33 no frontier path (fail 2); cells 5635
+03:48:36 step 37 pose=(-2.42,3.32,330) target=(-66, 75) pathlen=26 d11=0.413 tick=255122 goal=0 here=0
+03:48:40 obstacle stop front=0.12
+03:48:40 scan-match correction dx=0.03 dy=-0.05 (10->13 matches)
+03:48:40 no frontier path (fail 1); cells 5635
+03:48:43 STUCK escape: turning to beam 2 (range 1.86)
+03:48:48 no frontier path (fail 2); cells 5635
+03:48:50 step 41 pose=(-2.27,3.00,13) target=(-66, 23) pathlen=41 d11=0.495 tick=256603 goal=0 here=0
+03:49:03 obstacle stop front=0.10
+03:49:04 step 42 pose=(-2.36,2.15,254) target=(-80, 60) pathlen=64 d11=0.514 tick=257943 goal=0 here=0
+03:49:06 obstacle stop front=0.11
+03:49:06 step 43 pose=(-2.35,2.15,226) target=(-80, 60) pathlen=64 d11=0.526 tick=258193 goal=0 here=0
+03:49:06 obstacle stop front=0.12
+03:49:07 step 44 pose=(-2.33,2.17,231) target=(-79, 73) pathlen=95 d11=0.525 tick=258261 goal=0 here=0
+03:49:08 obstacle stop front=0.11
+03:49:08 step 45 pose=(-2.36,2.15,228) target=(-79, 73) pathlen=95 d11=0.528 tick=258381 goal=0 here=0
+03:49:08 obstacle stop front=0.11
+03:49:09 STUCK escape: turning to beam 10 (range 1.38)
+03:49:14 no frontier path (fail 1); cells 5637
+03:49:17 no frontier path (fail 2); cells 5637
+03:49:20 step 49 pose=(-2.36,2.45,266) target=(-80, 60) pathlen=44 d11=0.613 tick=259546 goal=0 here=0
+03:49:28 obstacle stop front=0.11
+03:49:29 step 50 pose=(-2.45,2.70,175) target=(-80, 60) pathlen=40 d11=0.663 tick=260455 goal=0 here=0
+03:49:30 obstacle stop front=0.11
+03:49:31 no frontier path (fail 1); cells 5638
+03:49:34 step 52 pose=(-2.44,2.70,244) target=(-79, 73) pathlen=32 d11=0.678 tick=260976 goal=0 here=0
+03:49:36 obstacle stop front=0.12
+03:49:37 step 53 pose=(-2.44,2.69,195) target=(-79, 73) pathlen=32 d11=0.665 tick=261268 goal=0 here=0
+03:49:37 obstacle stop front=0.12
+03:49:38 STUCK escape: turning to beam 10 (range 1.64)
+03:49:44 step 55 pose=(-2.30,2.94,60) target=(-80, 60) pathlen=110 d11=0.597 tick=261922 goal=0 here=0
+03:50:12 obstacle stop front=0.12
+03:50:13 step 56 pose=(-1.83,1.28,167) target=(-80, 60) pathlen=76 d11=0.515 tick=264850 goal=0 here=0
+03:50:14 obstacle stop front=0.12
+03:50:15 step 57 pose=(-1.84,1.29,150) target=(-79, 73) pathlen=106 d11=0.51 tick=265047 goal=0 here=0
+03:50:16 obstacle stop front=0.12
+03:50:17 no frontier path (fail 1); cells 5823
+03:50:19 no frontier path (fail 2); cells 5823
+03:50:22 STUCK escape: turning to beam 5 (range 1.20)
+03:50:28 step 61 pose=(-1.79,1.56,86) target=(-66, 23) pathlen=36 d11=0.588 tick=266317 goal=0 here=0
+03:50:31 obstacle stop front=0.11
+03:50:31 no frontier path (fail 1); cells 5831
+03:50:34 step 63 pose=(-1.81,1.58,239) target=(-80, 60) pathlen=75 d11=0.623 tick=266967 goal=0 here=0
+03:50:37 obstacle stop front=0.10
+03:50:37 step 64 pose=(-1.84,1.57,190) target=(-80, 60) pathlen=75 d11=0.57 tick=267301 goal=0 here=0
+03:50:38 obstacle stop front=0.11
+03:50:38 STUCK escape: turning to beam 3 (range 1.16)
+03:50:43 step 66 pose=(-1.87,1.37,254) target=(-80, 60) pathlen=75 d11=0.494 tick=267818 goal=0 here=0
+03:50:46 obstacle stop front=0.11
+03:50:46 step 67 pose=(-1.86,1.36,163) target=(-80, 60) pathlen=75 d11=0.488 tick=268190 goal=0 here=0
+03:50:47 obstacle stop front=0.12
+03:50:47 step 68 pose=(-1.87,1.36,159) target=(-79, 73) pathlen=105 d11=0.484 tick=268288 goal=0 here=0
+03:50:48 obstacle stop front=0.10
+03:50:49 step 69 pose=(-1.87,1.36,149) target=(-79, 73) pathlen=105 d11=0.528 tick=268459 goal=0 here=0
+03:50:49 obstacle stop front=0.11
+03:50:50 STUCK escape: turning to beam 13 (range 1.08)
+03:50:54 step 71 pose=(-1.84,1.64,80) target=(-80, 60) pathlen=76 d11=0.609 tick=269005 goal=0 here=0
+03:50:57 obstacle stop front=0.11
+03:50:58 no frontier path (fail 1); cells 5846
+03:51:01 no frontier path (fail 2); cells 5846
+03:51:04 step 74 pose=(-1.79,1.65,357) target=(-66, 75) pathlen=63 d11=0.62 tick=269963 goal=0 here=0
+03:51:30 obstacle stop front=0.11
+03:51:30 no frontier path (fail 1); cells 5847
+03:51:33 scan-match correction dx=-0.03 dy=0.03 (7->11 matches)
+03:51:33 no frontier path (fail 2); cells 5847
+03:51:36 step 77 pose=(-2.41,3.54,286) target=(-66, 75) pathlen=24 d11=0.519 tick=273137 goal=0 here=0
+03:51:40 obstacle stop front=0.11
+03:51:40 loaded grid cells 5847
+03:51:41 START pose (-2.387074507682013, 3.512900929543701, 137.8)
+03:51:52 no frontier path (fail 1); cells 5847
+03:51:54 no frontier path (fail 2); cells 5847
+03:51:57 step 3 pose=(-2.38,3.51,300) target=(-22, 97) pathlen=45 d11=0.322 tick=275294 goal=0 here=0
+03:52:00 obstacle stop front=0.12
+03:52:01 no frontier path (fail 1); cells 5847
+03:52:04 STUCK escape: turning to beam 6 (range 1.39)
+03:52:09 no frontier path (fail 2); cells 5847
+03:52:12 step 7 pose=(-2.37,3.19,2) target=(-22, 97) pathlen=50 d11=0.379 tick=276785 goal=0 here=0
+03:52:17 obstacle stop front=0.11
+03:52:18 no frontier path (fail 1); cells 5847
+03:52:20 no frontier path (fail 2); cells 5847
+03:52:24 step 10 pose=(-2.32,3.45,259) target=(-22, 97) pathlen=44 d11=0.437 tick=277917 goal=0 here=0
+03:52:28 obstacle stop front=0.12
+03:52:28 no frontier path (fail 1); cells 5847
+03:52:31 STUCK escape: turning to beam 5 (range 1.33)
+03:52:36 no frontier path (fail 2); cells 5847
+03:52:39 step 14 pose=(-2.38,3.15,349) target=(-22, 97) pathlen=51 d11=0.435 tick=279446 goal=0 here=0
+03:52:47 obstacle stop front=0.12
+03:52:47 no frontier path (fail 1); cells 5847
+03:52:50 no frontier path (fail 2); cells 5847
+03:52:53 step 17 pose=(-2.09,3.45,286) target=(-22, 97) pathlen=48 d11=0.384 tick=280870 goal=0 here=0
+03:53:10 obstacle stop front=0.11
+03:53:11 scan-match correction dx=0.10 dy=-0.03 (6->12 matches)
+03:53:11 no frontier path (fail 1); cells 5847
+03:53:14 no frontier path (fail 2); cells 5847
+03:53:16 scan-match correction dx=0.00 dy=-0.10 (7->10 matches)
+03:53:16 step 20 pose=(-2.13,4.23,248) target=(-21, 94) pathlen=24 d11=0.331 tick=283207 goal=0 here=0
+03:53:21 obstacle stop front=0.12
+03:53:22 no frontier path (fail 1); cells 5847
+03:53:25 no frontier path (fail 2); cells 5847
+03:53:27 step 23 pose=(-2.12,4.14,229) target=(-21, 94) pathlen=27 d11=0.328 tick=284310 goal=0 here=0
+03:53:32 obstacle stop front=0.11
+03:53:32 no frontier path (fail 1); cells 5847
+03:53:35 STUCK escape: turning to beam 6 (range 1.27)
+03:53:40 no frontier path (fail 2); cells 5847
+03:53:43 step 27 pose=(-2.03,3.90,16) target=(-22, 97) pathlen=32 d11=0.337 tick=285854 goal=0 here=0
+03:53:52 obstacle stop front=0.07
+03:53:52 no frontier path (fail 1); cells 5847
+03:53:55 step 29 pose=(-2.28,4.18,141) target=(-79, 73) pathlen=48 d11=0.355 tick=287062 goal=0 here=0
+03:54:19 obstacle stop front=0.12
+03:54:19 step 30 pose=(-3.45,3.21,146) target=(-80, 60) pathlen=46 d11=0.535 tick=289507 goal=0 here=0
+03:54:32 loaded grid cells 5876
+03:54:32 START pose (-3.453145223433443, 3.2049115828924624, 260.0)
+03:54:43 step 1 pose=(-3.45,3.20,255) target=(-79, 73) pathlen=13 d11=0.438 tick=291882 goal=0 here=0
+03:54:53 step 2 pose=(-3.90,3.68,156) target=(-79, 65) pathlen=9 d11=0.431 tick=292903 goal=0 here=0
+03:55:02 step 3 pose=(-3.91,3.29,228) target=(-82, 79) pathlen=15 d11=0.493 tick=293750 goal=0 here=0
+03:55:12 obstacle stop front=0.10
+03:55:20 step 4 pose=(-3.99,3.90,259) target=(-82, 82) pathlen=5 d11=0.437 tick=295613 goal=0 here=0
+03:55:24 obstacle stop front=0.12
+03:55:32 step 5 pose=(-4.02,4.22,131) target=(-86, 87) pathlen=6 d11=0.352 tick=296742 goal=0 here=0
+03:55:33 obstacle stop front=0.11
+03:55:41 step 6 pose=(-4.30,4.42,196) target=(-90, 85) pathlen=5 d11=0.329 tick=297697 goal=0 here=0
+03:55:44 step 7 pose=(-4.46,4.30,223) target=(-90, 81) pathlen=5 d11=0.344 tick=297988 goal=0 here=0
+03:55:48 step 8 pose=(-4.48,4.09,266) target=(-95, 89) pathlen=12 d11=0.367 tick=298330 goal=0 here=0
+03:55:58 step 9 pose=(-4.71,4.48,157) target=(-99, 89) pathlen=5 d11=0.411 tick=299408 goal=0 here=0
+03:56:01 step 10 pose=(-4.91,4.48,183) target=(-103, 89) pathlen=5 d11=0.353 tick=299711 goal=0 here=0
+03:56:03 step 11 pose=(-5.10,4.48,181) target=(-109, 92) pathlen=7 d11=0.315 tick=299854 goal=0 here=0
+03:56:07 step 12 pose=(-5.40,4.62,157) target=(-110, 96) pathlen=5 d11=0.286 tick=300256 goal=0 here=0
+03:56:11 step 13 pose=(-5.47,4.81,108) target=(-111, 100) pathlen=5 d11=0.284 tick=300622 goal=0 here=1
+03:56:12 step 14 pose=(-5.52,5.00,104) target=(-108, 103) pathlen=4 d11=0.264 tick=300781 goal=0 here=1
+03:56:16 step 15 pose=(-5.39,5.16,46) target=(-112, 105) pathlen=5 d11=0.229 tick=301130 goal=0 here=1
+03:56:20 step 16 pose=(-5.55,5.27,149) target=(-114, 91) pathlen=15 d11=0.2 tick=301574 goal=0 here=1
+03:56:31 step 17 pose=(-5.66,4.59,229) target=(-90, 79) pathlen=33 d11=0.312 tick=302667 goal=0 here=0
+04:01:47 GOTO start (-5.430169707199334, 4.979783569356431, 52.6) target (-3.5, 5.0)
+04:01:47 GOTO pose=(-5.43,4.98) pathlen=46 d11=0.265 tick=334260 goal=0 here=1
+04:01:59 obstacle stop front=0.12
+04:02:04 GOTO pose=(-4.93,4.60) pathlen=29 d11=0.333 tick=335921 goal=0 here=0
+04:02:06 obstacle stop front=0.12
+04:02:11 GOTO pose=(-4.54,4.59) pathlen=21 d11=0.374 tick=336684 goal=0 here=0
+04:02:14 obstacle stop front=0.11
+04:02:20 GOTO pose=(-4.08,4.63) pathlen=10 d11=0.359 tick=337549 goal=0 here=0
+04:02:23 obstacle stop front=0.12
+04:02:27 GOTO pose=(-3.84,4.75) pathlen=7 d11=0.342 tick=338264 goal=0 here=0
+04:02:30 obstacle stop front=0.11
+04:02:36 GOTO pose=(-3.86,4.45) pathlen=10 d11=0.391 tick=339211 goal=0 here=0
+04:02:41 obstacle stop front=0.11
+04:02:45 GOTO pose=(-3.81,4.68) pathlen=16 d11=0.350 tick=340054 goal=0 here=0
+04:02:49 obstacle stop front=0.10
+04:02:54 GOTO pose=(-3.82,4.86) pathlen=7 d11=0.332 tick=340986 goal=0 here=0
+04:02:57 obstacle stop front=0.11
+04:03:01 GOTO start (-3.8179683438130905, 4.863000257486428, 269.0) target (-4.0, 3.3)
+04:03:01 GOTO pose=(-3.82,4.86) pathlen=30 d11=0.322 tick=341663 goal=0 here=0
+04:03:16 obstacle stop front=0.10
+04:03:21 GOTO pose=(-3.66,3.53) pathlen=5 d11=0.652 tick=343677 goal=0 here=0
+04:03:24 obstacle stop front=0.11
+04:03:29 GOTO pose=(-3.93,3.55) pathlen=5 d11=0.650 tick=344466 goal=0 here=0
+04:03:32 obstacle stop front=0.11
+04:03:36 GOTO pose=(-3.79,3.53) pathlen=6 d11=0.641 tick=345166 goal=0 here=0
+04:03:39 obstacle stop front=0.11
+04:03:42 GOTO pose=(-3.85,3.54) pathlen=13 d11=0.525 tick=345770 goal=0 here=0
+04:03:46 obstacle stop front=0.11
+04:03:47 GOTO pose=(-3.80,3.52) pathlen=6 d11=0.516 tick=346264 goal=0 here=0
+04:03:49 obstacle stop front=0.12
+04:03:52 GOTO pose=(-3.82,3.52) pathlen=6 d11=0.515 tick=346811 goal=0 here=0
+04:03:53 obstacle stop front=0.12
+04:03:56 GOTO pose=(-3.97,3.53) pathlen=4 d11=0.521 tick=347184 goal=0 here=0
+04:03:59 obstacle stop front=0.11
+04:04:03 GOTO pose=(-3.87,3.53) pathlen=None d11=0.546 tick=347869 goal=0 here=0
+04:04:09 GOTO pose=(-4.04,3.56) pathlen=None d11=0.515 tick=348442 goal=0 here=0
+04:04:15 GOTO pose=(-3.78,3.51) pathlen=None d11=0.649 tick=349110 goal=0 here=0
+04:05:37 GOTO start (-3.7779503606381177, 3.5129892354406715, 76.0) target (-5.45, 5.1)
+04:05:37 GOTO pose=(-3.78,3.51) pathlen=51 d11=0.613 tick=357266 goal=0 here=0
+04:06:00 obstacle stop front=0.11
+04:06:05 GOTO pose=(-5.07,4.74) pathlen=11 d11=0.310 tick=360048 goal=0 here=0
+04:06:13 GOTO pose=(-5.42,4.90) pathlen=2 d11=0.294 tick=360827 goal=0 here=0
+04:06:14 GOTO reached (-5.45502026127258, 4.955870824433539, 125.1)
+04:06:14 GOTO end (-5.45502026127258, 4.955870824433539, 125.1)
+04:06:14 EXIT
+04:15:15 GOTO start (-5.449860978105838, 5.000238000006593, 64.8) target (-3.8, 3.5)
+04:15:15 GOTO pose=(-5.45,5.00) pathlen=51 d11=0.434 tick=415038 goal=0 here=1
+04:15:22 obstacle stop front=0.11
+04:15:25 GOTO pose=(-5.41,4.74) pathlen=47 d11=0.461 tick=416043 goal=0 here=0
+04:15:27 obstacle stop front=0.11
+04:15:32 GOTO pose=(-5.26,4.48) pathlen=43 d11=0.522 tick=416813 goal=0 here=0
+04:15:56 GOTO pose=(-3.80,3.69) pathlen=2 d11=0.621 tick=419171 goal=0 here=0
+04:15:58 GOTO reached (-3.8127346420390977, 3.647263137366533, 246.6)
+04:15:58 GOTO end (-3.8140403956755873, 3.644537819292232, 244.4)
+04:15:58 EXIT
+04:18:13 GOTO start (-3.8095827533645794, 3.6407134025331214, 245.0) target (-5.45, 5.0)
+04:18:13 GOTO pose=(-3.81,3.64) pathlen=56 d11=0.547 tick=432892 goal=0 here=0
+04:18:51 GOTO reached (-5.5394881599135, 4.905554843047362, 61.1)
+04:18:51 GOTO end (-5.5394881599135, 4.905554843047362, 61.1)
+04:18:51 EXIT
+04:22:58 FETCH start (-5.44977133398446, 5.000501521309815, 62.3)
+04:23:48 FETCH at meeting point d11=0.62
+04:23:54 CLIMB dir 78 d11 0.61->0.44 pose=(-3.78,3.99)
+04:24:00 CLIMB dir 294 d11 0.44->0.52 pose=(-3.65,3.70)
+04:24:04 CLIMB dir 311 d11 0.53->0.60 pose=(-3.48,3.45)
+04:24:07 CLIMB dir 304 d11 0.60->0.66 pose=(-3.32,3.19)
+04:24:09 CLIMB dir 301 d11 0.65->0.63 pose=(-3.18,2.92)
+04:24:16 CLIMB dir 92 d11 0.64->0.62 pose=(-3.16,3.24)
+04:24:23 CLIMB dir 260 d11 0.60->0.62 pose=(-3.25,2.94)
+04:24:25 CLIMB dir 249 d11 0.62->0.67 pose=(-3.33,2.74)
+04:24:29 CLIMB dir 318 d11 0.67->0.62 pose=(-3.13,2.52)
+04:24:34 CLIMB dir 12 d11 0.61->0.55 pose=(-2.83,2.56)
+04:24:41 CLIMB dir 134 d11 0.54->0.62 pose=(-3.11,2.68)
+04:24:45 CLIMB dir 108 d11 0.61->0.63 pose=(-3.21,2.98)
+04:24:48 CLIMB dir 103 d11 0.63->0.64 pose=(-3.27,3.28)
+04:24:50 CLIMB dir 97 d11 0.63->0.57 pose=(-3.30,3.58)
+04:24:56 CLIMB dir 206 d11 0.58->0.66 pose=(-3.58,3.48)
+04:24:58 CLIMB dir 195 d11 0.66->0.80 pose=(-3.87,3.42)
+04:25:04 CLIMB dir 76 d11 0.80->0.72 pose=(-3.80,3.72)
+04:25:11 CLIMB dir 254 d11 0.72->0.75 pose=(-3.86,3.42)
+04:25:17 CLIMB dir 93 d11 0.73->0.68 pose=(-3.89,3.72)
+04:25:23 CLIMB dir 313 d11 0.67->0.79 pose=(-3.68,3.50)
+04:25:25 CLIMB dir 310 d11 0.79->0.81 pose=(-3.57,3.37)
+04:25:29 CLIMB dir 330 d11 0.80->0.73 pose=(-3.29,3.25)
+04:25:33 CLIMB dir 291 d11 0.74->0.67 pose=(-3.17,2.96)
+04:25:37 CLIMB dir 265 d11 0.66->0.69 pose=(-3.19,2.66)
+04:25:40 CLIMB dir 243 d11 0.69->0.84 pose=(-3.32,2.43)
+04:25:40 CLIMB close enough d11=0.85
+04:25:41 FETCH leading back from (-3.316925162037014, 2.4311200941994384, 238.2) d11=0.85
+04:25:47 LEAD seg d11=0.82 waited 0s
+04:26:02 LEAD seg d11=0.73 waited 10s
+04:26:05 obstacle stop front=0.12
+04:26:14 LEAD seg d11=0.74 waited 0s
+04:26:58 LEAD seg d11=0.69 waited 40s
+04:27:42 LEAD seg d11=0.60 waited 40s
+04:28:38 FETCH start (-3.500210302053165, 3.3005091784502123, 109.5)
+04:28:43 CLIMB dir 179 d11 0.53->0.52 pose=(-3.80,3.34)
+04:28:49 CLIMB dir 278 d11 0.52->0.59 pose=(-3.78,3.04)
+04:28:52 CLIMB dir 292 d11 0.59->0.65 pose=(-3.72,2.77)
+04:28:57 CLIMB dir 70 d11 0.65->0.61 pose=(-3.66,2.91)
+04:29:02 CLIMB dir 130 d11 0.63->0.55 pose=(-3.83,3.17)
+04:29:07 CLIMB dir 33 d11 0.55->0.52 pose=(-3.56,3.33)
+04:29:14 CLIMB dir 183 d11 0.51->0.51 pose=(-3.87,3.33)
+04:29:18 CLIMB dir 201 d11 0.51->0.51 pose=(-4.16,3.25)
+04:29:21 CLIMB dir 194 d11 0.51->0.50 pose=(-4.47,3.22)
+04:29:23 CLIMB dir 181 d11 0.50->0.45 pose=(-4.78,3.24)
+04:29:30 CLIMB dir 353 d11 0.46->0.49 pose=(-4.54,3.19)
+04:29:34 CLIMB dir 350 d11 0.50->0.51 pose=(-4.23,3.24)
+04:29:38 CLIMB dir 343 d11 0.51->0.55 pose=(-3.95,3.14)
+04:29:42 CLIMB dir 318 d11 0.55->0.62 pose=(-3.80,2.86)
+04:29:46 CLIMB dir 46 d11 0.63->0.61 pose=(-3.69,2.97)
+04:29:51 CLIMB dir 152 d11 0.60->0.54 pose=(-3.84,3.23)
+04:29:57 CLIMB dir 346 d11 0.53->0.55 pose=(-3.54,3.18)
+04:30:01 CLIMB dir 304 d11 0.55->0.56 pose=(-3.37,2.94)
+04:30:06 CLIMB dir 322 d11 0.55->0.54 pose=(-3.07,2.88)
+04:30:08 CLIMB dir 306 d11 0.54->0.55 pose=(-3.06,2.87)
+04:30:11 CLIMB dir 312 d11 0.55->0.54 pose=(-2.82,2.72)
+04:30:15 CLIMB dir 326 d11 0.54->0.55 pose=(-2.52,2.66)
+04:30:18 CLIMB dir 299 d11 0.55->0.55 pose=(-2.51,2.64)
+04:30:22 CLIMB dir 327 d11 0.53->0.54 pose=(-2.21,2.58)
+04:30:26 CLIMB dir 302 d11 0.54->0.55 pose=(-2.09,2.40)
+04:30:30 CLIMB dir 321 d11 0.54->0.54 pose=(-1.79,2.33)
+04:30:34 CLIMB dir 304 d11 0.55->0.54 pose=(-1.63,2.09)
+04:30:39 CLIMB dir 326 d11 0.55->0.55 pose=(-1.33,2.02)
+04:30:42 CLIMB dir 301 d11 0.55->0.54 pose=(-1.23,1.87)
+04:30:47 CLIMB dir 323 d11 0.55->0.55 pose=(-0.94,1.80)
+04:30:50 CLIMB dir 301 d11 0.54->0.54 pose=(-0.84,1.65)
+04:30:54 CLIMB dir 321 d11 0.54->0.55 pose=(-0.54,1.56)
+04:30:57 CLIMB dir 300 d11 0.54->0.54 pose=(-0.49,1.48)
+04:31:02 CLIMB dir 323 d11 0.55->0.54 pose=(-0.20,1.40)
+04:31:04 CLIMB dir 297 d11 0.55->0.54 pose=(-0.19,1.38)
+04:31:06 FETCH start (-0.901046740900174, 1.8003280499622973, 343.8)
+04:31:13 CLIMB dir 168 d11 0.54->0.52 pose=(-1.20,1.86)
+04:31:17 CLIMB dir 188 d11 0.52->0.51 pose=(-1.50,1.85)
+04:31:24 CLIMB dir 0 d11 0.50->0.51 pose=(-1.20,1.87)
+04:31:27 CLIMB dir 338 d11 0.52->0.55 pose=(-0.96,1.78)
+04:31:31 CLIMB dir 336 d11 0.55->0.55 pose=(-0.65,1.79)
+04:31:38 CLIMB dir 181 d11 0.55->0.54 pose=(-0.95,1.82)
+04:31:43 CLIMB dir 261 d11 0.53->0.58 pose=(-1.00,1.62)
+04:31:47 CLIMB dir 281 d11 0.58->0.67 pose=(-0.85,1.34)
+04:31:54 CLIMB dir 112 d11 0.66->0.58 pose=(-0.94,1.63)
+04:31:58 CLIMB dir 150 d11 0.59->0.52 pose=(-1.18,1.83)
+04:32:03 CLIMB dir 294 d11 0.52->0.53 pose=(-1.16,1.78)
+04:32:07 CLIMB dir 293 d11 0.53->0.59 pose=(-0.94,1.55)
+04:32:09 CLIMB dir 309 d11 0.59->0.67 pose=(-0.76,1.31)
+04:32:14 CLIMB dir 72 d11 0.68->0.62 pose=(-0.69,1.47)
+04:32:19 CLIMB dir 133 d11 0.62->0.56 pose=(-0.87,1.71)
+04:32:25 CLIMB dir 259 d11 0.56->0.63 pose=(-0.96,1.42)
+04:32:31 CLIMB dir 48 d11 0.64->0.57 pose=(-0.74,1.61)
+04:32:37 CLIMB dir 241 d11 0.58->0.65 pose=(-0.89,1.34)
+04:32:45 CLIMB dir 57 d11 0.65->0.59 pose=(-0.72,1.60)
+04:32:51 CLIMB dir 237 d11 0.59->0.65 pose=(-0.89,1.33)
+04:32:57 CLIMB dir 124 d11 0.66->0.58 pose=(-1.03,1.61)
+04:33:03 CLIMB dir 302 d11 0.57->0.65 pose=(-0.86,1.34)
+04:33:10 CLIMB dir 115 d11 0.65->0.57 pose=(-0.96,1.63)
+04:33:17 CLIMB dir 313 d11 0.57->0.64 pose=(-0.76,1.41)
+04:33:21 CLIMB dir 62 d11 0.64->0.61 pose=(-0.69,1.52)
+04:33:28 CLIMB dir 233 d11 0.61->0.66 pose=(-0.88,1.31)
+04:33:34 CLIMB dir 67 d11 0.67->0.59 pose=(-0.77,1.59)
+04:33:41 CLIMB dir 246 d11 0.59->0.66 pose=(-0.89,1.31)
+04:33:47 CLIMB dir 108 d11 0.66->0.58 pose=(-0.99,1.60)
+04:33:53 CLIMB dir 312 d11 0.58->0.65 pose=(-0.77,1.38)
+04:33:58 CLIMB dir 63 d11 0.64->0.62 pose=(-0.69,1.52)
+04:34:29 NW step 6 pose=(-1.19,0.81) d11=0.453 tick=530175 goal=0 here=0
+04:34:47 NW step 12 pose=(-3.32,1.00) d11=0.450 tick=531970 goal=0 here=0
+04:35:07 NW step 18 pose=(-5.44,1.28) d11=0.459 tick=534041 goal=0 here=0
+04:35:34 NW step 24 pose=(-6.71,1.45) d11=0.435 tick=536548 goal=0 here=0
+04:35:38 NW: reached goal here=1 (-7.338365778667811, 1.598127046105638, 139.0)
+04:35:38 PARK tick=537418 goal=0 here=1 d11=0.369
+04:35:43 PARK tick=537918 goal=0 here=1 d11=0.378
+04:35:48 PARK tick=538418 goal=0 here=1 d11=0.384
+04:35:53 PARK tick=538918 goal=0 here=1 d11=0.370
+04:35:58 PARK tick=539418 goal=0 here=1 d11=0.388
+04:36:03 PARK tick=539918 goal=0 here=1 d11=0.371
+04:36:08 PARK tick=540418 goal=0 here=1 d11=0.385
+04:36:13 PARK tick=540918 goal=0 here=1 d11=0.371
+04:36:18 PARK tick=541418 goal=0 here=1 d11=0.382
+04:36:23 PARK tick=541918 goal=0 here=1 d11=0.387
+04:36:28 PARK tick=542418 goal=0 here=1 d11=0.368
+04:36:33 PARK tick=542919 goal=0 here=1 d11=0.384
+04:36:38 PARK tick=543419 goal=0 here=1 d11=0.378
+04:36:43 PARK tick=543919 goal=0 here=1 d11=0.385
+04:36:48 PARK tick=544419 goal=0 here=1 d11=0.377
+04:36:53 PARK tick=544919 goal=0 here=1 d11=0.378
+04:36:58 PARK tick=545419 goal=0 here=1 d11=0.385
+04:37:03 PARK tick=545919 goal=0 here=1 d11=0.372
+04:37:08 PARK tick=546419 goal=0 here=1 d11=0.366
+04:37:13 PARK tick=546919 goal=0 here=1 d11=0.375
+04:37:18 PARK tick=547419 goal=0 here=1 d11=0.363
+04:37:23 PARK tick=547919 goal=0 here=1 d11=0.376
+04:37:28 PARK tick=548419 goal=0 here=1 d11=0.371
+04:37:33 PARK tick=548919 goal=0 here=1 d11=0.384
+04:37:38 PARK tick=549419 goal=0 here=1 d11=0.381
+04:37:43 PARK tick=549919 goal=0 here=1 d11=0.383
+04:37:48 PARK tick=550419 goal=0 here=1 d11=0.374
+04:37:53 PARK tick=550919 goal=0 here=1 d11=0.389
+04:37:58 PARK tick=551419 goal=0 here=1 d11=0.377
+04:38:03 PARK tick=551919 goal=0 here=1 d11=0.373
+04:38:08 PARK tick=552419 goal=0 here=1 d11=0.378
+04:38:13 PARK tick=552919 goal=0 here=1 d11=0.375
+04:38:18 PARK tick=553419 goal=0 here=1 d11=0.380
+04:38:23 PARK tick=553919 goal=0 here=1 d11=0.374
+04:38:28 PARK tick=554419 goal=0 here=1 d11=0.370
+04:38:33 PARK tick=554919 goal=0 here=1 d11=0.371
+04:38:38 PARK tick=555420 goal=0 here=1 d11=0.380
+04:38:43 PARK tick=555920 goal=0 here=1 d11=0.370
+04:38:48 PARK tick=556420 goal=0 here=1 d11=0.379
+04:38:54 PARK tick=556917 goal=0 here=1 d11=0.369
+04:38:59 PARK tick=557421 goal=0 here=1 d11=0.382
+04:39:04 PARK tick=557921 goal=0 here=1 d11=0.364
+04:39:09 PARK tick=558421 goal=0 here=1 d11=0.372
+04:39:14 PARK tick=558924 goal=0 here=1 d11=0.363
+04:39:19 PARK tick=559424 goal=0 here=1 d11=0.368
+04:39:24 PARK tick=559924 goal=0 here=1 d11=0.376
+04:39:29 PARK tick=560424 goal=0 here=1 d11=0.383
+04:39:34 PARK tick=560924 goal=0 here=1 d11=0.386
+04:39:39 PARK tick=561424 goal=0 here=1 d11=0.380
+04:39:44 PARK tick=561924 goal=0 here=1 d11=0.369
+04:39:49 PARK tick=562424 goal=0 here=1 d11=0.371
+04:39:54 PARK tick=562924 goal=0 here=1 d11=0.370
+04:39:59 PARK tick=563425 goal=0 here=1 d11=0.384
+04:40:04 PARK tick=563925 goal=0 here=1 d11=0.381
+04:40:09 PARK tick=564425 goal=0 here=1 d11=0.378
+04:40:14 PARK tick=564925 goal=0 here=1 d11=0.382
+04:40:19 PARK tick=565425 goal=0 here=1 d11=0.376
+04:40:24 PARK tick=565925 goal=0 here=1 d11=0.383
+04:40:29 PARK tick=566425 goal=0 here=1 d11=0.377
+04:40:34 PARK tick=566924 goal=0 here=1 d11=0.372
+04:40:39 PARK tick=567430 goal=0 here=1 d11=0.381
+04:40:44 PARK tick=567930 goal=0 here=1 d11=0.369
+04:40:49 PARK tick=568430 goal=0 here=1 d11=0.417
+04:40:54 PARK tick=568930 goal=0 here=1 d11=0.448
+04:40:59 PARK tick=569430 goal=0 here=1 d11=0.449
+04:41:04 PARK tick=569930 goal=0 here=1 d11=0.410
+04:41:09 PARK tick=570430 goal=0 here=1 d11=0.421
+04:41:14 PARK tick=570930 goal=0 here=1 d11=0.419
+04:41:19 PARK tick=571430 goal=0 here=1 d11=0.441
+04:41:24 PARK tick=571930 goal=0 here=1 d11=0.440
+04:41:29 PARK tick=572430 goal=0 here=1 d11=0.431
+04:41:34 PARK tick=572933 goal=0 here=1 d11=0.404
+04:41:39 PARK tick=573433 goal=0 here=1 d11=0.409
+04:41:44 PARK tick=573933 goal=0 here=1 d11=0.374
+04:41:49 PARK tick=574436 goal=0 here=1 d11=0.377
+04:41:54 PARK tick=574936 goal=0 here=1 d11=0.416
+04:41:59 PARK tick=575436 goal=0 here=1 d11=0.413
+04:42:04 PARK tick=575936 goal=0 here=1 d11=0.412
+04:42:09 PARK tick=576436 goal=0 here=1 d11=0.370
+04:42:14 PARK tick=576936 goal=0 here=1 d11=0.369
+04:42:19 PARK tick=577436 goal=0 here=1 d11=0.416
+04:42:24 PARK tick=577936 goal=0 here=1 d11=0.417
+04:42:29 PARK tick=578436 goal=0 here=1 d11=0.427
+04:42:34 PARK tick=578933 goal=0 here=1 d11=0.392
+04:42:39 PARK tick=579438 goal=0 here=1 d11=0.382
+04:42:44 PARK tick=579938 goal=0 here=1 d11=0.428
+04:42:49 PARK tick=580438 goal=0 here=1 d11=0.457
+04:42:54 PARK tick=580938 goal=0 here=1 d11=0.402
+04:42:59 PARK tick=581438 goal=0 here=1 d11=0.419
+04:43:04 PARK tick=581938 goal=0 here=1 d11=0.443
+04:43:09 PARK tick=582438 goal=0 here=1 d11=0.446
+04:43:14 PARK tick=582938 goal=0 here=1 d11=0.425
+04:43:19 PARK tick=583438 goal=0 here=1 d11=0.443
+04:43:24 PARK tick=583942 goal=0 here=1 d11=0.454
+04:43:29 PARK tick=584442 goal=0 here=1 d11=0.424
+04:43:34 PARK tick=584942 goal=0 here=1 d11=0.430
+04:43:39 PARK tick=585442 goal=0 here=1 d11=0.409
+04:43:44 PARK tick=585942 goal=0 here=1 d11=0.446
+04:43:49 PARK tick=586442 goal=0 here=1 d11=0.464
+04:43:54 PARK tick=586942 goal=0 here=1 d11=0.412
+04:43:59 PARK tick=587442 goal=0 here=1 d11=0.403
+04:44:04 PARK tick=587942 goal=0 here=1 d11=0.412
+04:44:09 PARK tick=588447 goal=0 here=1 d11=0.448
+04:44:14 PARK tick=588948 goal=0 here=1 d11=0.449
+04:44:19 PARK tick=589448 goal=0 here=1 d11=0.459
+04:44:24 PARK tick=589948 goal=0 here=1 d11=0.357
+04:44:29 PARK tick=590448 goal=0 here=1 d11=0.281
+04:44:34 PARK tick=590948 goal=0 here=1 d11=0.277
+04:44:39 PARK tick=591448 goal=0 here=1 d11=0.321
+04:44:44 PARK tick=591948 goal=0 here=1 d11=0.340
+04:44:49 PARK tick=592448 goal=0 here=1 d11=0.326
+04:44:54 PARK tick=592948 goal=0 here=1 d11=0.280
+04:44:59 PARK tick=593448 goal=0 here=1 d11=0.279
+04:45:04 PARK tick=593948 goal=0 here=1 d11=0.362
+04:45:09 PARK tick=594448 goal=0 here=1 d11=0.482
+04:45:14 PARK tick=594948 goal=0 here=1 d11=0.502
+04:45:19 PARK tick=595448 goal=0 here=1 d11=0.406
+04:45:24 PARK tick=595951 goal=0 here=1 d11=0.379
+04:45:29 PARK tick=596451 goal=0 here=1 d11=0.443
+04:45:34 PARK tick=596951 goal=0 here=1 d11=0.475
+04:45:39 PARK tick=597451 goal=0 here=1 d11=0.435
+04:45:44 PARK tick=597951 goal=0 here=1 d11=0.374
+04:45:49 PARK tick=598451 goal=0 here=1 d11=0.412
+04:45:54 PARK tick=598951 goal=0 here=1 d11=0.472
+04:45:59 PARK tick=599451 goal=0 here=1 d11=0.507
+04:46:04 PARK tick=599951 goal=0 here=1 d11=0.381
+04:46:09 PARK tick=600451 goal=0 here=1 d11=0.374
+04:46:14 PARK tick=600948 goal=0 here=1 d11=0.489
+04:46:19 PARK tick=601452 goal=0 here=1 d11=0.483
+04:46:24 PARK tick=601953 goal=0 here=1 d11=0.404
+04:46:29 PARK tick=602453 goal=0 here=1 d11=0.388
+04:46:34 PARK tick=602953 goal=0 here=1 d11=0.447
+04:46:39 PARK tick=603453 goal=0 here=1 d11=0.487
+04:46:44 PARK tick=603953 goal=0 here=1 d11=0.429
+04:46:49 PARK tick=604453 goal=0 here=1 d11=0.382
+04:46:54 PARK tick=604953 goal=0 here=1 d11=0.422
+04:46:59 PARK tick=605455 goal=0 here=1 d11=0.501
+04:47:04 PARK tick=605958 goal=0 here=1 d11=0.479
+04:47:09 PARK tick=606458 goal=0 here=1 d11=0.363
+04:47:14 PARK tick=606958 goal=0 here=1 d11=0.375
+04:47:19 PARK tick=607458 goal=0 here=1 d11=0.489
+04:47:24 PARK tick=607958 goal=0 here=1 d11=0.481
+04:47:29 PARK tick=608458 goal=0 here=1 d11=0.417
+04:47:34 PARK tick=608958 goal=0 here=1 d11=0.387
+04:47:39 PARK tick=609458 goal=0 here=1 d11=0.418
+04:47:44 PARK tick=609954 goal=0 here=1 d11=0.489
+04:47:49 PARK tick=610459 goal=0 here=1 d11=0.490
+04:47:54 PARK tick=610959 goal=0 here=1 d11=0.371
+04:47:59 PARK tick=611459 goal=0 here=1 d11=0.375
+04:48:04 PARK tick=611959 goal=0 here=1 d11=0.476
+04:48:09 PARK tick=612459 goal=0 here=1 d11=0.491
+04:48:14 PARK tick=612960 goal=0 here=1 d11=0.393
+04:48:19 PARK tick=613460 goal=0 here=1 d11=0.380
+04:48:24 PARK tick=613963 goal=0 here=1 d11=0.454
+04:48:29 PARK tick=614463 goal=0 here=1 d11=0.491
+04:48:34 PARK tick=614963 goal=0 here=1 d11=0.474
+04:48:39 PARK tick=615463 goal=0 here=1 d11=0.382
+04:48:44 PARK tick=615963 goal=0 here=1 d11=0.388
+04:48:49 PARK tick=616463 goal=0 here=1 d11=0.490
+04:48:54 PARK tick=616963 goal=0 here=1 d11=0.484
+04:48:59 PARK tick=617463 goal=0 here=1 d11=0.390
+04:49:04 PARK tick=617964 goal=0 here=1 d11=0.395
+04:49:09 PARK tick=618464 goal=0 here=1 d11=0.476
+04:49:19 OUT 1 pose=(0.19,-0.23) d11=0.52
+04:49:23 OUT 2 pose=(0.48,-0.33) d11=0.46
+04:49:27 OUT 3 pose=(0.79,-0.33) d11=0.46
+04:49:31 OUT 4 pose=(1.01,-0.54) d11=0.64
+04:56:35 WAIT done d11=0.66 after 423s
+04:57:26 BACK hop pose=(0.90,-0.45) d11=0.52 waited 45
+04:58:14 BACK hop pose=(0.75,-0.39) d11=0.50 waited 45
+04:59:02 BACK hop pose=(0.61,-0.34) d11=0.57 waited 45
+04:59:50 BACK hop pose=(0.47,-0.26) d11=0.59 waited 46
+04:59:52 seek 135 ('obstacle', 'tick=682723 goal=0 here=0')
+04:59:54 seek 90 ('obstacle', 'tick=682987 goal=0 here=0')
+05:00:02 seek 180 ('maxd', 'tick=683801 goal=0 here=0')
+05:00:07 seek 45 ('HERE', 'tick=684320 goal=0 here=1')
+05:00:08 PARK tick=684322 goal=0 here=1 d11=0.40
+05:00:13 PARK tick=684827 goal=0 here=1 d11=0.31
+05:00:18 PARK tick=685332 goal=0 here=1 d11=0.31
+05:00:23 PARK tick=685841 goal=0 here=1 d11=0.39
+05:00:28 PARK tick=686346 goal=0 here=1 d11=0.52
+05:00:33 PARK tick=686853 goal=0 here=1 d11=0.52
+05:00:38 PARK tick=687358 goal=0 here=1 d11=0.40
+05:00:43 PARK tick=687865 goal=0 here=1 d11=0.40
+05:00:48 PARK tick=688376 goal=0 here=1 d11=0.43
+05:00:53 PARK tick=688881 goal=0 here=1 d11=0.51
+05:00:58 PARK tick=689398 goal=0 here=1 d11=0.51
+05:01:03 PARK tick=689903 goal=0 here=1 d11=0.41
+05:01:08 PARK tick=690406 goal=0 here=1 d11=0.40
+05:01:14 PARK tick=690916 goal=0 here=1 d11=0.35
+05:01:19 PARK tick=691421 goal=0 here=1 d11=0.28
+05:01:24 PARK tick=691926 goal=0 here=1 d11=0.28
+05:01:29 PARK tick=692431 goal=0 here=1 d11=0.26
+05:01:34 PARK tick=692936 goal=0 here=1 d11=0.24
+05:01:39 PARK tick=693446 goal=0 here=1 d11=0.27
+05:01:44 PARK tick=693951 goal=0 here=1 d11=0.28
+05:01:49 PARK tick=694456 goal=0 here=1 d11=0.32
+05:01:54 PARK tick=694961 goal=0 here=1 d11=0.31
+05:01:59 PARK tick=695466 goal=0 here=1 d11=0.29
+05:02:04 PARK tick=695972 goal=0 here=1 d11=0.28
+05:02:09 PARK tick=696477 goal=0 here=1 d11=0.31
+05:02:14 PARK tick=696982 goal=0 here=1 d11=0.31
+05:02:19 PARK tick=697489 goal=0 here=1 d11=0.30
+05:02:24 PARK tick=697994 goal=0 here=1 d11=0.29
+05:02:29 PARK tick=698499 goal=0 here=1 d11=0.30
+05:02:34 PARK tick=699008 goal=0 here=1 d11=0.32
+05:02:39 PARK tick=699513 goal=0 here=1 d11=0.31
+05:02:45 PARK tick=700019 goal=0 here=1 d11=0.28
+05:02:50 PARK tick=700526 goal=0 here=1 d11=0.28
+05:02:55 PARK tick=701031 goal=0 here=1 d11=0.31
+05:03:00 PARK tick=701540 goal=0 here=1 d11=0.31
+05:03:05 PARK tick=702045 goal=0 here=1 d11=0.29
+05:03:10 PARK tick=702550 goal=0 here=1 d11=0.29
+05:03:15 PARK tick=703056 goal=0 here=1 d11=0.32
+05:03:20 PARK tick=703561 goal=0 here=1 d11=0.32
+05:03:25 PARK tick=704068 goal=0 here=1 d11=0.29
+05:03:30 PARK tick=704573 goal=0 here=1 d11=0.28
+05:03:35 PARK tick=705078 goal=0 here=1 d11=0.31
+05:03:40 PARK tick=705583 goal=0 here=1 d11=0.32
+05:03:45 PARK tick=706089 goal=0 here=1 d11=0.31
+05:03:50 PARK tick=706594 goal=0 here=1 d11=0.28
+05:03:55 PARK tick=707103 goal=0 here=1 d11=0.29
+05:04:00 PARK tick=707608 goal=0 here=1 d11=0.32
+05:04:05 PARK tick=708113 goal=0 here=1 d11=0.32
+05:04:11 PARK tick=708618 goal=0 here=1 d11=0.29
+05:04:16 PARK tick=709127 goal=0 here=1 d11=0.28
+05:04:21 PARK tick=709632 goal=0 here=1 d11=0.31
+05:04:26 PARK tick=710137 goal=0 here=1 d11=0.32
+05:04:31 PARK tick=710642 goal=0 here=1 d11=0.30
+05:04:36 PARK tick=711145 goal=0 here=1 d11=0.28
+05:04:41 PARK tick=711655 goal=0 here=1 d11=0.29
+05:04:46 PARK tick=712160 goal=0 here=1 d11=0.31
+05:04:51 PARK tick=712665 goal=0 here=1 d11=0.32
+05:04:56 PARK tick=713167 goal=0 here=1 d11=0.29
+05:05:01 PARK tick=713677 goal=0 here=1 d11=0.28
+05:05:06 PARK tick=714182 goal=0 here=1 d11=0.32
+05:05:11 PARK tick=714687 goal=0 here=1 d11=0.32
+05:05:16 PARK tick=715193 goal=0 here=1 d11=0.29
+05:05:21 PARK tick=715699 goal=0 here=1 d11=0.28
+05:05:26 PARK tick=716204 goal=0 here=1 d11=0.24
+05:05:31 PARK tick=716709 goal=0 here=1 d11=0.24
+05:05:36 PARK tick=717214 goal=0 here=1 d11=0.26
+05:05:42 PARK tick=717719 goal=0 here=1 d11=0.28
+05:05:47 PARK tick=718228 goal=0 here=1 d11=0.29
+05:05:52 PARK tick=718733 goal=0 here=1 d11=0.38
+05:05:57 PARK tick=719238 goal=0 here=1 d11=0.45
+05:06:02 PARK tick=719743 goal=0 here=1 d11=0.45
+05:06:07 PARK tick=720248 goal=0 here=1 d11=0.36
+05:06:12 PARK tick=720755 goal=0 here=1 d11=0.35
+05:06:17 PARK tick=721267 goal=0 here=1 d11=0.41
+05:06:22 PARK tick=721772 goal=0 here=1 d11=0.53
+05:06:27 PARK tick=722277 goal=0 here=1 d11=0.53
+05:06:32 PARK tick=722783 goal=0 here=1 d11=0.48
+05:06:37 PARK tick=723288 goal=0 here=1 d11=0.40
+05:06:42 PARK tick=723793 goal=0 here=1 d11=0.43
+05:06:47 PARK tick=724304 goal=0 here=1 d11=0.54
+05:06:52 PARK tick=724811 goal=0 here=1 d11=0.51
+05:06:58 PARK tick=725319 goal=0 here=1 d11=0.41
+05:07:03 PARK tick=725827 goal=0 here=1 d11=0.42
+05:07:08 PARK tick=726332 goal=0 here=1 d11=0.52
+05:07:13 PARK tick=726837 goal=0 here=1 d11=0.53
+05:07:18 PARK tick=727342 goal=0 here=1 d11=0.42
+05:07:23 PARK tick=727845 goal=0 here=1 d11=0.41
+05:07:28 PARK tick=728360 goal=0 here=1 d11=0.53
+05:07:33 PARK tick=728865 goal=0 here=1 d11=0.53
+05:07:38 PARK tick=729377 goal=0 here=1 d11=0.40
+05:07:43 PARK tick=729882 goal=0 here=1 d11=0.41
+05:07:48 PARK tick=730387 goal=0 here=1 d11=0.51
+05:07:53 PARK tick=730892 goal=0 here=1 d11=0.52
+05:07:58 PARK tick=731397 goal=0 here=1 d11=0.42
+05:08:03 PARK tick=731902 goal=0 here=1 d11=0.41
+05:08:08 PARK tick=732408 goal=0 here=1 d11=0.47
+05:08:13 PARK tick=732913 goal=0 here=1 d11=0.51
+05:08:19 PARK tick=733422 goal=0 here=1 d11=0.46
+05:08:24 PARK tick=733927 goal=0 here=1 d11=0.40
+05:08:29 PARK tick=734432 goal=0 here=1 d11=0.45
+05:08:34 PARK tick=734937 goal=0 here=1 d11=0.51
+05:08:39 PARK tick=735442 goal=0 here=1 d11=0.52
+05:08:44 PARK tick=735953 goal=0 here=1 d11=0.39
+05:08:49 PARK tick=736458 goal=0 here=1 d11=0.40
+05:08:54 PARK tick=736963 goal=0 here=1 d11=0.51
+05:08:59 PARK tick=737468 goal=0 here=1 d11=0.52
+05:09:04 PARK tick=737973 goal=0 here=1 d11=0.40
+05:09:09 PARK tick=738478 goal=0 here=1 d11=0.39
+05:09:14 PARK tick=738983 goal=0 here=1 d11=0.51
+05:09:19 PARK tick=739488 goal=0 here=1 d11=0.50
+05:09:24 PARK tick=739996 goal=0 here=1 d11=0.39
+05:10:19 OUT 1 pose=(0.22,-0.20) d11=0.44
+05:10:22 OUT 2 pose=(0.23,-0.32) d11=0.46
+05:10:28 OUT 3 pose=(0.53,-0.35) d11=0.62

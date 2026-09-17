@@ -1,0 +1,188 @@
+{
+  "episode": 1,
+  "duo": true,
+  "model": "zai:glm-5.3-flash@max",
+  "arm": "A",
+  "labels": "off",
+  "bots": {
+    "a": {
+      "bot": "a",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "model_spec": {
+        "provider": "zai",
+        "model_id": "glm-5.3-flash",
+        "reasoning_effort": "max",
+        "tokens_param": "max_tokens",
+        "stream": false,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled",
+            "clear_thinking": false
+          }
+        }
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "cut_by_infra",
+      "cut_note": "sandbox restart killed dockerd, daemon and containers at 99.3 wall min of 240",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 596069,
+      "sim_time_s": 11921.4,
+      "comms": {
+        "tx": 362,
+        "tx_delivered": 0,
+        "rx_read": 0,
+        "tx_rate_dropped": 1,
+        "rx_received": 0
+      },
+      "wall_s": 5935.4,
+      "turns": 132,
+      "execs": 137,
+      "restarts": 0,
+      "nudges": null,
+      "wakes": 0,
+      "tokens": {
+        "input": 6348767,
+        "output": 68127,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 0
+      },
+      "collisions": 147,
+      "final_pose": [
+        0.16493,
+        0.91328,
+        1.33565
+      ]
+    },
+    "b": {
+      "bot": "b",
+      "arm": "A",
+      "labels": "off",
+      "model": "zai:glm-5.3-flash@max",
+      "model_spec": {
+        "provider": "zai",
+        "model_id": "glm-5.3-flash",
+        "reasoning_effort": "max",
+        "tokens_param": "max_tokens",
+        "stream": false,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled",
+            "clear_thinking": false
+          }
+        }
+      },
+      "noise_profile": "default_noisy",
+      "maze_hash": "4b9d62420f551cea",
+      "end_reason": "cut_by_infra",
+      "cut_note": "sandbox restart killed dockerd, daemon and containers at 99.3 wall min of 240",
+      "solved": false,
+      "goal_tick": null,
+      "final_tick": 596069,
+      "sim_time_s": 11921.4,
+      "comms": {
+        "tx": 1441,
+        "tx_delivered": 0,
+        "rx_read": 0,
+        "tx_rate_dropped": 0,
+        "rx_received": 0
+      },
+      "wall_s": 5950.7,
+      "turns": 112,
+      "execs": 112,
+      "restarts": 0,
+      "nudges": null,
+      "wakes": 0,
+      "tokens": {
+        "input": 9829099,
+        "output": 99329,
+        "cache_read": 0,
+        "cache_creation": 0,
+        "cached": 0
+      },
+      "collisions": 5714,
+      "final_pose": [
+        2.00654,
+        0.92894,
+        3.09404
+      ]
+    }
+  },
+  "solved_all": false,
+  "final_tick": 596069,
+  "cut": true,
+  "comms_eval": {
+    "window_s": 120.0,
+    "memory_s": 300.0,
+    "tick_hz": 50,
+    "rtf": 2.0,
+    "tx": 1803,
+    "delivered": 0,
+    "stimuli": 0,
+    "cr_count": 0,
+    "cr_rate": null,
+    "cr_plus_count": 0,
+    "cr_plus_rate": null,
+    "cr_lines": 0,
+    "cr_line_rate": null,
+    "cr_latency_median_s": null,
+    "cr_latency_p90_s": null,
+    "exchanges_ge3": 0,
+    "longest_exchange": 1,
+    "worded_share_delivered": null,
+    "longest_run": 0,
+    "runs_ge5": 0,
+    "rate_dropped": 1,
+    "rate_dropped_share": 0.001,
+    "in_range_tx_share": 0.0,
+    "surfacing_share": null,
+    "wide": {
+      "cr_count": 0,
+      "cr_rate": null,
+      "cr_plus_count": 0,
+      "cr_plus_rate": null,
+      "cr_lines": 0,
+      "cr_line_rate": null,
+      "cr_latency_median_s": null,
+      "cr_latency_p90_s": null,
+      "exchanges_ge3": 0,
+      "longest_exchange": 1,
+      "window_s": 300.0
+    },
+    "bots": {
+      "a": {
+        "tx": 362,
+        "delivered": 0,
+        "beacon_templates": 3,
+        "worded_delivered": 0,
+        "stimuli": 0,
+        "stimuli_answered": 0,
+        "replies": 0,
+        "rate_dropped": 1,
+        "rate_dropped_share": 0.003,
+        "surfacing_share": null
+      },
+      "b": {
+        "tx": 1441,
+        "delivered": 0,
+        "beacon_templates": 6,
+        "worded_delivered": 0,
+        "stimuli": 0,
+        "stimuli_answered": 0,
+        "replies": 0,
+        "rate_dropped": 0,
+        "rate_dropped_share": 0.0,
+        "surfacing_share": null
+      }
+    },
+    "outcome_hist": {
+      "lost": 1803
+    },
+    "retry_runs": 9,
+    "retry_until_ok": 0
+  }
+}
