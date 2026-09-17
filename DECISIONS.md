@@ -327,7 +327,7 @@ knowledge about ports transfers between them.  Design choices:
 
 Verified by `scripts/duo_check.py` (26 checks at the time: spawn
 clearance, peer blip, disc-disc collision + bump, range gating, byte
-cap, queue cap, FIFO end-to-end a->b with comms accounting; 86 with
+cap, queue cap, FIFO end-to-end a->b with comms accounting; 94 with
 the later duo mechanisms) plus a full mock duo episode through two
 containers; the solo smoke suite is unchanged.
 
@@ -634,8 +634,16 @@ pilot differs from its baseline in one flag:
   only the timing differs.  After `rx_wake_timeout_s` (wall) the old
   three-nudge policy applies unchanged.  Host-side only: the counter
   never reaches the container; the agent learns that a line arrived
-  the way it always did, by reading the port.  duo13_fable's b would
-  have been woken 60 times.
+  the way it always did, by reading the port.  The baseline is the
+  count at the agent's last tool round, so a line that landed while
+  the model was generating wakes it at once.  duo13_fable's b would
+  have been woken up to 68 times (68 lines were delivered to it after
+  it stopped, one every 45 s).
+- Information-set notes for tx_status: on a README variant that does
+  not name {tx}, writing to a port and watching `tx=` advance
+  identifies the TX port (the mission_place ladder names it, so no
+  change there); and with peer_signal off, ok/lost is an exact
+  in-range boolean at the instant of each write.
 
 ### together_window_s is wall-clock seconds
 

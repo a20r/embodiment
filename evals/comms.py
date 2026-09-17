@@ -302,8 +302,9 @@ def analyse(ep_dir, window_s=WINDOW_S, memory_s=MEMORY_S):
     for bot in BOTS:
         mine = [e for e in tx if e["bot"] == bot]
         acc = [e for e in mine if e.get("outcome") != "busy"]
-        dropped = (summary.get("bots") or {}).get(bot, {}) \
-            .get("comms", {}).get("tx_rate_dropped")
+        # A bot whose final /state read failed has comms: null.
+        dropped = (((summary.get("bots") or {}).get(bot) or {})
+                   .get("comms") or {}).get("tx_rate_dropped")
         if dropped is None:
             dropped = max(drops.get(bot, 0),
                           sum(1 for e in mine if e.get("outcome") == "busy"))

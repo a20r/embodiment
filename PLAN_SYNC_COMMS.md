@@ -1,17 +1,19 @@
 # PLAN: synchronous comms for duo mode
 
-Status: proposal, awaiting a decision.  Produced 2026-09-03 from a
-design pass (four independent proposals - link layer, harness
+Status: implemented 2026-09-17 (commit e8ed211 and follow-ups): rung 1
+`duo.tx_status`, rung 2 `duo.rx_blocking`, the section 1b rung
+`duo.rx_wakes_agent`, the wall-second together window, and the section
+5 metric (`evals/comms.py`).  Every mechanism is a config flag
+defaulting to off so prior runs stay comparable.  Pilots on Fable 5.1
+max, one flag each off the duo13_fable baseline: duo17 (tx_status),
+duo18 (rx_blocking), duo19 (rx_wakes_agent).  Produced 2026-09-03 from
+a design pass (four independent proposals - link layer, harness
 synchrony, incentives, first principles - each scored by three judges
-on purity, likely efficacy and cost, then synthesised).  Nothing here
-is implemented yet; every mechanism is a config flag defaulting to off
-so prior runs stay comparable.  Pilot run names in the original text
-have been shifted: duo16 is already taken by the 3D-lidar run, so the
-rung-1 pilot is duo17 and the rung-2 pilot duo18.
+on purity, likely efficacy and cost, then synthesised).  Line numbers
+and check counts quoted below are as of that date; DECISIONS.md is the
+canonical record of what shipped.
 
-
-
-Inputs: three proposals reached me intact (link-layer, harness-sync, incentives) with their nine verdicts; the fourth proposal was truncated out of the brief. Codebase anchors below were re-verified against the current tree (working tree is clean; `status_frame` is at sim/world.py:736, `send_serial` at :660, `serial_rx_frame` at :726, duo_check currently runs 51 checks, not the 26 CLAUDE.md/DECISIONS.md still state).
+Inputs: three proposals reached me intact (link-layer, harness-sync, incentives) with their nine verdicts; the fourth proposal was truncated out of the brief. Codebase anchors below were re-verified against the tree of 2026-09-03 (`status_frame` at sim/world.py:736, `send_serial` at :660, `serial_rx_frame` at :726, duo_check then ran 51 checks).
 
 ---
 

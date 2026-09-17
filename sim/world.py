@@ -803,8 +803,10 @@ class World:
                 # GOALFOUND pathology).
                 line += f" here={int(self.region_entry is not None)}"
             if self.peer is not None and self.tx_status:
-                # Radio auto-ACK: fate of the most recent TX write.
-                line += f" tx={self.tx_last[0]}:{self.tx_last[1]}"
+                # Radio auto-ACK: fate of the most recent TX write
+                # (one read of the tuple: the pair is never torn).
+                n, outcome = self.tx_last
+                line += f" tx={n}:{outcome}"
             if self.maze.locked and self._door_segments:
                 dcx, dcy = self._door_center
                 if math.hypot(self.x - dcx, self.y - dcy) < 0.5:

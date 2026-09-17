@@ -279,11 +279,12 @@ def resolve(config_path=None, overrides=None):
     for k in ("tx_status", "rx_blocking", "rx_wakes_agent"):
         if duo.get(k) and not duo.get("enabled"):
             raise ValueError(f"duo.{k} requires duo.enabled: true")
-    for k in ("together_window_s", "rx_wake_timeout_s"):
-        v = duo.get(k, 0)
-        if isinstance(v, bool) or not (isinstance(v, (int, float))
-                                       and v > 0):
-            raise ValueError(f"duo.{k} must be a number > 0")
+    if duo.get("enabled"):
+        for k in ("together_window_s", "rx_wake_timeout_s"):
+            v = duo.get(k, 0)
+            if isinstance(v, bool) or not (isinstance(v, (int, float))
+                                           and v > 0):
+                raise ValueError(f"duo.{k} must be a number > 0")
     l3 = cfg.get("lidar3d", {})
     if l3.get("enabled"):
         num = (int, float)

@@ -179,8 +179,8 @@ def mission_mode():
 
     # The daemon's joint predicate: entries within the window fire the
     # latch on both; outside the window they do not.
-    window = int(cfg["duo"]["together_window_s"]
-                 * cfg["sim"]["tick_hz"])
+    window = int(cfg["duo"]["together_window_s"] * cfg["sim"]["tick_hz"]
+                 * (cfg["sim"]["realtime_factor"] or 1.0))
     wa.x, wa.y = out_x, 1.0
     wa.step()
     for _ in range(window + 100):
@@ -583,8 +583,13 @@ def wake_loop():
     from harness import duo as hd
     from harness import llm
 
+    shared = {"rx": 0, "per_call": 0}
+
     class StubModel:
         def create(self, system, messages, max_tokens=16000):
+            # A line landing while the model generates: the case the
+            # baseline exists for.
+            shared["rx"] += shared["per_call"]
             return llm.Response(
                 content=[llm.Block(type="text", text="done")],
                 stop_reason="end_turn",
@@ -602,8 +607,8 @@ def wake_loop():
         def get(self, path):
             if path == "/maze":
                 return {"hash": "stub"}
-            rx = int(self.rx_after is not None
-                     and time.time() - self.t0 > self.rx_after)
+            rx = shared["rx"] + int(self.rx_after is not None
+                                    and time.time() - self.t0 > self.rx_after)
             bot = {"goal_reached": False, "goal_tick": None, "tick": 1,
                    "sim_time_s": 0.0, "collision_count": 0,
                    "comms": {"tx": 0, "tx_delivered": 0, "rx_read": 0,
@@ -617,7 +622,8 @@ def wake_loop():
     real_make = hd.llm.make_model
     hd.llm.make_model = lambda m, r: StubModel()
     try:
-        def run(duo_over, budget_over, rx_after):
+        def run(duo_over, budget_over, rx_after, per_call=0):
+            shared["rx"], shared["per_call"] = 0, per_call
             cfg = duo_cfg(duo={"enabled": True, **duo_over},
                           budget=budget_over)
             ep = tempfile.mkdtemp(prefix="wake_check_")
@@ -652,6 +658,20 @@ def wake_loop():
         check("wallclock during a pause ends as wallclock",
               s["end_reason"] == "wallclock" and s["nudges"] == 0
               and s["wakes"] == 0, f"{s['end_reason']} {s['nudges']}")
+        # A line delivered while the model was generating wakes the
+        # agent at once (baseline = count at its last tool round), and
+        # max_turns is honoured inside the pause.
+        t0 = time.time()
+        s = run({"rx_wakes_agent": True, "rx_wake_timeout_s": 30},
+                {"max_wallclock_s": 60, "max_turns": 5}, None, per_call=1)
+        # 5 turns then one wrap-up turn after max_turns fires.
+        check("line delivered during generation wakes immediately",
+              s["wakes"] == 4 and s["nudges"] == 0
+              and s["end_reason"] == "max_turns" and s["turns"] == 6,
+              f"wakes={s['wakes']} nudges={s['nudges']} "
+              f"turns={s['turns']} {s['end_reason']}")
+        check("no pause ran to its timeout", time.time() - t0 < 15,
+              f"{time.time() - t0:.1f}s")
     finally:
         hd.llm.make_model = real_make
 

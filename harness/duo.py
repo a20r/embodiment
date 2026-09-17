@@ -79,25 +79,53 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 time.sleep(0.5 * (attempt + 1))
         return None
 
-    def wait_for_rx():
+    def budget_end_reason():
+        if time.time() - start_wall > b["max_wallclock_s"]:
+            return "wallclock"
+        if turns >= b["max_turns"]:
+            return "max_turns"
+        if totals["output"] >= b["max_total_output_tokens"]:
+            return "token_budget"
+        if goal_reached():
+            return "solved"
+        return None
+
+    def begin_wrapup(reason):
+        nonlocal wrapup_rounds_left
+        transcript.write(dict(type="note", kind="episode_end",
+                              reason=reason))
+        wrapup_rounds_left = 3
+        messages.append({
+            "role": "user",
+            "content": (
+                f"[operator] The episode has ended ({reason}). The robot "
+                f"is powering down. You may run a few final commands to "
+                f"update /memory; you have {wrapup_rounds_left} tool "
+                f"rounds left.")})
+
+    def wait_for_rx(baseline):
         """duo.rx_wakes_agent: hold the turn until a line is delivered
         to this bot (a receive interrupt), the wake timeout lapses, or
-        the episode's own end conditions apply.  Host-side only: the
-        agent sees nothing but the timing of its next prompt."""
+        the episode's own end conditions apply.  `baseline` is the
+        receiver count at the last moment the agent could have read
+        the port, so a line that landed while the model was generating
+        wakes it at once.  Host-side only: the agent sees nothing but
+        the timing of its next prompt.  Returns (outcome, count)."""
         timeout = float(duo_cfg.get("rx_wake_timeout_s", 600))
-        rx0 = rx_received()
-        if rx0 is None:
-            return "timeout"
         t0 = time.time()
-        while time.time() - t0 < timeout:
-            if time.time() - start_wall > b["max_wallclock_s"] \
-                    or goal_reached():
-                return "ended"
-            time.sleep(1.0)
+        while True:
+            reason = budget_end_reason()
+            if reason:
+                return reason, baseline
             rx = rx_received()
-            if rx is not None and rx > rx0:
-                return "rx"
-        return "timeout"
+            if rx is not None:
+                if baseline is None:
+                    baseline = rx
+                elif rx > baseline:
+                    return "rx", rx
+            if time.time() - t0 >= timeout:
+                return "timeout", rx if rx is not None else baseline
+            time.sleep(1.0)
 
     def run_tool_calls(content_blocks):
         nonlocal execs
@@ -145,35 +173,25 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             return {"role": "user", "content": results}
         return None
 
+    # Receiver count as of the agent's last chance to read the port
+    # (after its last tool round); the wake baseline.
+    rx_seen = None
+    wake_on = bool(duo_cfg.get("rx_wakes_agent"))
+
     try:
         while True:
             if end_reason is None:
-                if time.time() - start_wall > b["max_wallclock_s"]:
-                    end_reason = "wallclock"
-                elif turns >= b["max_turns"]:
-                    end_reason = "max_turns"
-                elif totals["output"] >= b["max_total_output_tokens"]:
-                    end_reason = "token_budget"
-                elif goal_reached():
-                    end_reason = "solved"
+                end_reason = budget_end_reason()
                 if end_reason:
-                    transcript.write(dict(type="note", kind="episode_end",
-                                          reason=end_reason))
-                    wrapup_rounds_left = 3
-                    messages.append({
-                        "role": "user",
-                        "content": (
-                            f"[operator] The episode has ended "
-                            f"({end_reason}). The robot is powering "
-                            f"down. You may run a few final commands "
-                            f"to update /memory; you have "
-                            f"{wrapup_rounds_left} tool rounds left.")})
+                    begin_wrapup(end_reason)
             if wrapup_rounds_left is not None and wrapup_rounds_left <= 0:
                 break
 
             if not messages:
                 messages.append({"role": "user", "content": (
                     "You are now connected to the robot. Begin.")})
+                if wake_on:
+                    rx_seen = rx_received()
             turns += 1
             response = model.create(
                 system, messages,
@@ -231,6 +249,8 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
             tool_msg = run_tool_calls(content)
             if tool_msg:
                 messages.append(tool_msg)
+                if wake_on:
+                    rx_seen = rx_received()
                 if wrapup_rounds_left is not None:
                     wrapup_rounds_left -= 1
             elif response.stop_reason == "pause_turn":
@@ -239,11 +259,13 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 if wrapup_rounds_left is not None:
                     break
                 outcome = "timeout"
-                if duo_cfg.get("rx_wakes_agent"):
+                if wake_on:
                     t_wait = time.time()
-                    outcome = wait_for_rx()
-                    if outcome == "ended":
-                        continue    # the loop head records the reason
+                    outcome, rx_seen = wait_for_rx(rx_seen)
+                    if outcome not in ("rx", "timeout"):
+                        end_reason = outcome
+                        begin_wrapup(end_reason)
+                        continue
                     if outcome == "rx":
                         wakes += 1
                         transcript.write(dict(

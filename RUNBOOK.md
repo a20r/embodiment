@@ -139,8 +139,9 @@ Link-layer rungs (all default off; each is a one-variable delta):
 ```
 
 `duo.together_window_s` is wall-clock seconds (scaled by
-`sim.realtime_factor` inside the daemon), matching the README's "within
-one minute of each other".  Contingent-reply metrics for a finished
+`sim.realtime_factor` inside the daemon; sim seconds when unthrottled,
+and a runtime `/rtf` change does not retune it), matching the README's
+"within one minute of each other".  Contingent-reply metrics for a finished
 duo: `python -m evals.comms <series>`.
 
 ## 7. Other model providers
