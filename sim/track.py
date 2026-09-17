@@ -1,6 +1,7 @@
 """Race-track scene: a closed circuit built from a centerline with
 per-side widths (TUM racetrack-database CSV: x_m,y_m,w_tr_right_m,
-w_tr_left_m, CC-BY-4.0), scaled down to robot size.
+w_tr_left_m; see sim/tracks/README.md for source and licence), scaled
+down to robot size.
 
 Duck-types the Maze surface World and the daemon use (segments, hash,
 to_dict, start pose, the locked-exit attributes) so the rest of the sim
@@ -38,6 +39,10 @@ class Track:
         self.checkpoints = int(checkpoints)
         self.width_scale = float(width_scale)
         raw = self._load(name)
+        if not 2 <= self.checkpoints <= len(raw):
+            raise ValueError(f"track.checkpoints must be in 2..{len(raw)}")
+        if self.scale <= 0 or self.width_scale <= 0:
+            raise ValueError("track.scale and width_scale must be > 0")
         # Orientation is the file's driving direction; the left/right
         # widths are relative to it.
         n = len(raw)

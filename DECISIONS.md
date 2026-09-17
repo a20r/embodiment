@@ -658,9 +658,10 @@ api_error`, so the record is complete and the operator relaunches.
 ### Race scene: a real circuit, a lap clock, tyres with a limit
 
 `scene: track` swaps the maze for the Circuit of the Americas
-centerline (TUM racetrack-database CSV, per-side widths), scaled to
-robot size (0.07: 386 m, ~1 m wide, so the car is about a quarter of
-the track width, as an F1 car is on the real one) and offered to the
+centerline (TUM racetrack-database CSV, per-side widths; source and
+licence in sim/tracks/README.md), scaled to robot size (0.07: 386 m,
+~1 m wide, so the car is about a fifth of the track width, a little
+more than an F1 car on the real one) and offered to the
 same World as a duck-typed Maze: edges are wall segments, so lidar,
 collision and the spatial index are untouched, and only lap timing
 branches on `kind == "track"`.  The objective changes from a place to
@@ -670,14 +671,20 @@ forward start-line crossing after 90% of the arc-length sectors were
 visited (no shortcuts, no line-dancing), and completing the timed laps
 is `goal_reached`, reusing every downstream path (power-down, summary,
 end_reason solved).  The car keeps the bicycle kinematics but gains a
-friction circle (`a_grip`): achieved lateral and longitudinal
-acceleration is capped, excess scales the yaw rate (understeer) and
-scrubs speed, with per-tick grip noise; 0 leaves the pre-grip car
-byte-identical.  Grip is an observable, not a rule: the race car gets
-an `imu` port (achieved ax, ay and yaw rate), so the limit can be
-measured by driving into it.  Speeds are raised for racing (v_max 2.0,
-accel 1.5, a_grip 1.5) per run, not by default; a pure-pursuit driver
-laps in ~226 sim s.  The bot image for race runs adds NumPy
+friction circle (`a_grip`): the commanded lateral and longitudinal
+tyre acceleration is scaled onto the circle (understeer plus reduced
+drive/brake), the excess scrubs speed opposing motion (never through
+zero), with per-tick grip noise; drag stays aerodynamic, outside the
+circle, so braking decelerates a little faster than a_grip.  0 leaves
+the pre-grip car byte-identical (the yaw rate is still computed from
+the post-integration speed).  Grip is an observable, not a rule: the
+race car gets an `imu` port (achieved ax including scrub and wall
+stops, ay, yaw rate), so the limit can be measured by driving into it.
+Speeds are raised for racing (v_max 2.0, accel 1.5, a_grip 1.5) per
+run, not by default; a pure-pursuit driver laps in ~230 sim s.  Lap
+progress is directional (a sector counts only when reached by
+advancing; backing over the line voids the tour), so a wrong-way tour
+plus a turnaround is not a lap.  The bot image for race runs adds NumPy
 (`Dockerfile.bot-np`) so that a README demanding a neural controller
 and its control differ only in the sentence.  Solo only for now: the
 peer octagon and the window logic would need a second start box.

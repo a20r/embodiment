@@ -63,8 +63,26 @@ def prepare_bot_dir(cfg, bot_dir):
     # in place of the beam scan it must describe that port instead.
     if variant == "labeled" and cfg.get("lidar3d", {}).get("enabled"):
         variant = "labeled_lidar3d"
-    shutil.copy(os.path.join(REPO, "botfs", f"README.{variant}.md"),
-                os.path.join(bot_dir, "README.md"))
+    with open(os.path.join(REPO, "botfs", f"README.{variant}.md")) as f:
+        text = f.read()
+    if "{laps_warmup}" in text or "{laps_timed}" in text:
+        # Race READMEs state the lap counts the config actually runs.
+        tr = cfg.get("track", {})
+        text = text.replace("{laps_warmup}",
+                            _lap_words(tr.get("laps_warmup", 1), "lap"))
+        text = text.replace("{laps_timed}",
+                            _lap_words(tr.get("laps_timed", 10), "lap"))
+    with open(os.path.join(bot_dir, "README.md"), "w") as f:
+        f.write(text)
+
+
+_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+          "eight", "nine", "ten", "eleven", "twelve"]
+
+
+def _lap_words(n, noun):
+    word = _WORDS[n] if 0 <= n < len(_WORDS) else str(n)
+    return f"{word} {noun}" + ("" if n == 1 else "s")
 
 
 def seed_memory_if_needed(cfg, memory_dir):

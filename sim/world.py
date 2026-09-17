@@ -312,36 +312,41 @@ class World:
                 dphi = max(-rate, min(rate, phi_target - self.phi))
                 self.phi += dphi
                 L = c.get("wheelbase", 0.12)
-                w_kin = self.v / L * math.tan(self.phi)
+                v_prev = self.v
                 # Friction circle: the tyres deliver at most a_grip of
                 # combined acceleration.  Over the limit both the yaw
                 # rate (understeer) and the drive/brake are scaled onto
-                # the circle and the excess scrubs speed.  a_grip 0 is
-                # the original kinematic car.
+                # the circle by k, and the excess scrubs speed (opposing
+                # motion, never through zero).  a_grip 0 leaves k = 1
+                # and the original kinematic car byte-identical.
                 a_grip = float(c.get("a_grip", 0) or 0)
                 self.slipping = False
+                k = 1.0
                 if a_grip > 0:
                     g_sig = n.get("grip_sigma", 0.0)
                     lim = a_grip
                     if g_sig > 0:
                         lim *= 1.0 + self.rng_slip.gauss(0.0, g_sig)
                     lim = max(0.05 * a_grip, lim)
-                    mag = math.hypot(self.v * w_kin, a_cmd)
+                    a_lat = self.v * self.v / L * math.tan(self.phi)
+                    mag = math.hypot(a_lat, a_cmd)
                     if mag > lim:
                         k = lim / mag
-                        w_kin *= k
                         a_cmd *= k
+                        # Scrub is a cornering loss: weighted by the
+                        # lateral share of the demand, so straight-line
+                        # wheelspin only caps the launch.
                         scrub = c.get("slide_scrub", 0.5) * (mag - lim) \
-                            * self.dt
-                        self.v -= scrub if self.v >= 0 else -scrub
+                            * (abs(a_lat) / mag) * self.dt
+                        if self.v != 0.0:
+                            self.v = math.copysign(
+                                max(0.0, abs(self.v) - scrub), self.v)
                         self.slipping = True
                         self.slide_ticks += 1
-                v_prev = self.v
                 self.v += (a_cmd - c.get("drag", 0.35) * self.v) * self.dt
                 self.v = max(-c.get("v_rev_max", 0.15),
                              min(c.get("v_max", 0.5), self.v))
-                self.w = w_kin
-                self.acc = ((self.v - v_prev) / self.dt, self.v * self.w)
+                self.w = k * self.v / L * math.tan(self.phi)
                 # keep the encoder accumulators moving for GT continuity
                 wr = self.robot_cfg["wheel_radius"]
                 tpr = self.robot_cfg["encoder_ticks_per_rev"]
@@ -414,6 +419,10 @@ class World:
                 self._event(dict(event="collision",
                                  pose=[round(self.x, 4), round(self.y, 4),
                                        round(self.theta, 4)]))
+            if self.model == "car":
+                # IMU: achieved body-frame acceleration this tick, wall
+                # stop and tyre scrub included, and the yaw rate.
+                self.acc = ((self.v - v_prev) / self.dt, self.v * self.w)
 
             if self.noise["heading_drift_deg"] > 0:
                 self.heading_drift += self.rng_heading.gauss(
@@ -502,16 +511,27 @@ class World:
         after the warm-up plus the timed laps, and the car powers down
         like a robot that reached its goal."""
         tr = self.track
-        self._track_idx = tr.nearest_index(self.x, self.y, self._track_idx)
-        self._cp_seen.add(tr.sector(self._track_idx))
+        n = len(tr.center)
+        prev = self._track_idx
+        self._track_idx = tr.nearest_index(self.x, self.y, prev)
+        # Progress is directional: a sector counts only when reached by
+        # advancing along the circuit, so a wrong-way tour earns none.
+        if prev is not None and 0 < (self._track_idx - prev) % n < n // 2:
+            self._cp_seen.add(tr.sector(self._track_idx))
         if self.goal_reached:
             return
-        if tr.crossed_start(x0, y0, self.x, self.y) <= 0:
+        cross = tr.crossed_start(x0, y0, self.x, self.y)
+        if cross < 0:
+            # Backing over the line voids the tour in progress.
+            self._cp_seen = {tr.sector(self._track_idx)}
+            return
+        if cross == 0:
             return
         need = math.ceil(0.9 * tr.checkpoints)
         if len(self._cp_seen) < need:
-            self._event(dict(event="lap_rejected",
-                             sectors=len(self._cp_seen)))
+            if len(self._cp_seen) > 2:
+                self._event(dict(event="lap_rejected",
+                                 sectors=len(self._cp_seen)))
             return
         lap_s = round((self.tick - self.lap_start_tick) * self.dt, 3)
         self.lap += 1

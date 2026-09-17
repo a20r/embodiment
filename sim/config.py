@@ -312,9 +312,25 @@ def resolve(config_path=None, overrides=None):
         if tr["laps_timed"] < 1 or tr["checkpoints"] < 2:
             raise ValueError("track.laps_timed >= 1 and "
                              "track.checkpoints >= 2 required")
-        if not (isinstance(tr.get("scale"), (int, float))
-                and tr["scale"] > 0):
-            raise ValueError("track.scale must be > 0")
+        for k in ("scale", "width_scale"):
+            if isinstance(tr.get(k), bool) or not (
+                    isinstance(tr.get(k), (int, float)) and tr[k] > 0):
+                raise ValueError(f"track.{k} must be > 0")
+        if not (isinstance(tr.get("margin"), (int, float))
+                and tr["margin"] >= cfg["robot"]["radius"]):
+            raise ValueError("track.margin must be >= robot.radius")
+        if cfg["labels"] == "on" or cfg.get("readme_variant") is None:
+            # The labeled/unlabeled READMEs describe the maze robot.
+            raise ValueError("scene: track needs labels: off and an "
+                             "explicit readme_variant (race, race_nn)")
+        if any(p.get("name") == "maze_regen"
+               for p in cfg.get("perturbations", [])):
+            raise ValueError("maze_regen has no effect on a track")
+    cont = cfg.get("container", {})
+    if cont.get("image", "mazebot-bot") != "mazebot-bot" and \
+            cont.get("dockerfile", "Dockerfile.bot") == "Dockerfile.bot":
+        raise ValueError("container.image differs from the default: set "
+                         "container.dockerfile to the file that builds it")
     car = cfg["robot"].get("car", {})
     if car.get("a_grip", 0) < 0 or car.get("slide_scrub", 0) < 0:
         raise ValueError("robot.car.a_grip and slide_scrub must be >= 0")

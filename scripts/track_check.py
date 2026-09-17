@@ -157,7 +157,23 @@ def in_process():
              {"robot": {"model": "car", "car": {"a_grip": -1}}}),
             ("laps_timed >= 1",
              {"scene": "track", "robot": {"model": "car"},
-              "track": {"laps_timed": 0}})]:
+              "track": {"laps_timed": 0}}),
+            ("track with labels on rejected",
+             {"scene": "track", "robot": {"model": "car"},
+              "labels": "on", "readme_variant": "race"}),
+            ("track without a README variant rejected",
+             {"scene": "track", "robot": {"model": "car"},
+              "labels": "off"}),
+            ("maze_regen on a track rejected",
+             {"scene": "track", "robot": {"model": "car"},
+              "labels": "off", "readme_variant": "race",
+              "perturbations": [{"at_episode": 2, "name": "maze_regen"}]}),
+            ("width_scale 0 rejected",
+             {"scene": "track", "robot": {"model": "car"},
+              "labels": "off", "readme_variant": "race",
+              "track": {"width_scale": 0}}),
+            ("custom image without its dockerfile rejected",
+             {"container": {"image": "mazebot-bot-np"}})]:
         try:
             simconfig.resolve(None, overrides=over)
             check(name, False)
@@ -166,29 +182,70 @@ def in_process():
     check("prompt variant race accepted",
           simconfig.resolve(None, overrides={"prompt_variant": "race"})
           ["prompt_variant"] == "race")
+    try:
+        Track("austin", scale=0.07, checkpoints=5000)
+        check("checkpoints beyond the point count rejected", False)
+    except ValueError:
+        check("checkpoints beyond the point count rejected", True)
+    # README lap counts come from the config.
+    import shutil as _sh
+    import tempfile as _tf
+    from harness.episode import prepare_bot_dir
+    d = _tf.mkdtemp(prefix="race_readme_")
+    prepare_bot_dir(race_cfg(track={"laps_warmup": 2, "laps_timed": 3}), d)
+    txt = open(os.path.join(d, "README.md")).read()
+    _sh.rmtree(d, ignore_errors=True)
+    check("README states the configured lap counts",
+          "two laps of warm-up" in txt and "three laps that are timed" in txt
+          and "{laps" not in txt, txt[txt.find("You get"):][:80])
 
     print("== grip ==")
-    w0 = World(race_cfg(robot={"car": {"a_grip": 0.0, "v_max": 2.0,
-                                        "accel_max": 1.5}}), tr,
-               spawn_theta=tr.start_pose[2])
+    # a_grip 0 must be the pre-grip car exactly: replay its kinematics
+    # (integrate v, clamp, then w from the new v) tick by tick during
+    # the transient, combined throttle and steer, no saturation.
+    cfg0 = race_cfg(robot={"car": {"a_grip": 0.0, "v_max": 2.0,
+                                    "accel_max": 1.5}})
+    w0 = World(cfg0, tr, spawn_theta=tr.start_pose[2])
+    w0._collides = lambda *a, **k: None
+    c = w0.car_cfg
+    v = phi = 0.0
+    same = True
+    w0.set_actuator("accel", 200)
+    w0.set_actuator("steer", 150)
+    for _ in range(40):
+        w0.step()
+        # reference: the committed pre-grip kinematics
+        a = w0.cmd_eff["accel"] / 255.0 * c["accel_max"]
+        v += (a - c["drag"] * v) * w0.dt
+        v = max(-c["v_rev_max"], min(c["v_max"], v))
+        target = w0.cmd_eff["steer"] / 255.0 * math.radians(c["steer_max_deg"])
+        rate = math.radians(c["steer_rate_deg_s"]) * w0.dt
+        phi += max(-rate, min(rate, target - phi))
+        w_ref = v / c["wheelbase"] * math.tan(phi)
+        if abs(w0.v - v) > 1e-12 or abs(w0.w - w_ref) > 1e-12:
+            same = False
+    check("grip off: pre-grip kinematics reproduced tick for tick", same,
+          f"v={w0.v:.5f} ref={v:.5f} w={w0.w:.5f} ref={w_ref:.5f}")
+    check("grip off: no slip bookkeeping",
+          w0.slide_ticks == 0 and not w0.slipping)
+
     w1 = World(race_cfg(), tr, spawn_theta=tr.start_pose[2])
+    w0 = World(cfg0, tr, spawn_theta=tr.start_pose[2])
     for w in (w0, w1):
         # Physics only: a grip-limited car at full lock would otherwise
         # meet the track edge and the wall stop would zero its speed.
         w._collides = lambda *a, **k: None
-        w.set_actuator("accel", 255)
+        w.set_actuator("accel", 250)
         for _ in range(100):
             w.step()
-    check("straight-line launch is grip-free at 1.5 m/s^2",
+    check("launch under the limit is grip-free (1.47 < 1.5 m/s^2)",
           abs(w0.v - w1.v) < 1e-9 and not w1.slipping and w1.slide_ticks == 0,
           f"v0={w0.v:.3f} v1={w1.v:.3f}")
+    L = w1.car_cfg["wheelbase"]
     for w in (w0, w1):
         w.set_actuator("steer", 255)
         for _ in range(60):
             w.step()
-    L = w1.car_cfg["wheelbase"]
-    check("grip off: kinematic yaw rate",
-          abs(w0.w - w0.v / L * math.tan(w0.phi)) < 1e-9)
     check("grip on: lateral acceleration capped, car marked sliding",
           abs(w1.v * w1.w) <= 1.5 + 1e-6 and w1.slipping
           and w1.slide_ticks > 0
@@ -196,15 +253,56 @@ def in_process():
           f"a_lat={w1.v * w1.w:.3f} w={w1.w:.3f} "
           f"w_kin={w1.v / L * math.tan(w1.phi):.3f}")
     check("sliding scrubs speed", w1.v < w0.v, f"{w1.v:.3f} < {w0.v:.3f}")
-    ax, ay, wz = (float(v) for v in w1.imu_frame().split(","))
+    ax, ay, wz = (float(x) for x in w1.imu_frame().split(","))
     check("IMU reports achieved lateral accel and yaw rate",
           abs(ay - w1.v * w1.w) < 1e-3 and abs(wz - w1.w) < 1e-3
           and abs(ay) <= 1.5 + 1e-3, f"{ax},{ay},{wz}")
+    # IMU longitudinal tracks the speedometer, scrub included.
+    vb = w1.v
+    w1.step()
+    ax, _, _ = (float(x) for x in w1.imu_frame().split(","))
+    check("IMU longitudinal equals the speed change (scrub included)",
+          abs(ax - (w1.v - vb) / w1.dt) < 1e-3,
+          f"ax={ax:.3f} dv/dt={(w1.v - vb) / w1.dt:.3f}")
     check("status frame shows lap timing fields",
           w1.status_frame().startswith("tick=") and " lap=0 " in
           w1.status_frame() + " " and "last=0.0" in w1.status_frame()
           and "best=0.0" in w1.status_frame(), w1.status_frame())
-    check("grip flag in the GT tick record", w1.slipping is True)
+    glog = []
+    wg = World(race_cfg(), tr, log_fn=glog.append,
+               spawn_theta=tr.start_pose[2])
+    wg._collides = lambda *a, **k: None
+    wg.set_actuator("accel", 255)
+    for _ in range(100):
+        wg.step()
+    straight = glog[-1].get("slip")
+    wg.set_actuator("steer", 255)
+    for _ in range(40):
+        wg.step()
+    check("GT tick record carries slip 0 straight, 1 while sliding",
+          straight == 0 and glog[-1].get("slip") == 1,
+          f"straight={straight} sliding={glog[-1].get('slip')}")
+    # Low grip, high throttle: the launch still accelerates at about
+    # the limit, monotonically, and forward/reverse are symmetric.
+    lo = race_cfg(robot={"car": {"a_grip": 0.3, "accel_max": 1.5,
+                                  "v_max": 2.0, "v_rev_max": 2.0}})
+    speeds = {}
+    for cmd in (255, -255):
+        w = World(lo, tr, spawn_theta=tr.start_pose[2])
+        w._collides = lambda *a, **k: None
+        w.set_actuator("accel", cmd)
+        vs = []
+        for _ in range(100):
+            w.step()
+            vs.append(w.v)
+        speeds[cmd] = vs
+    fwd, rev = speeds[255], speeds[-255]
+    check("wheelspin launch is monotonic and near the grip limit",
+          all(b >= a for a, b in zip(fwd, fwd[1:])) and fwd[-1] > 0.3
+          and fwd[-1] < 0.3 * 2.0 * 1.2, f"v after 2 s = {fwd[-1]:.3f}")
+    check("forward and reverse launches are symmetric",
+          all(abs(a + b) < 1e-9 for a, b in zip(fwd, rev)),
+          f"{fwd[-1]:.4f} vs {rev[-1]:.4f}")
 
     print("== laps ==")
     cfg = race_cfg()
@@ -249,9 +347,27 @@ def in_process():
     w2.set_actuator("accel", 255)
     for _ in range(80):
         w2.step()
-    rej = [e for e in w2.events if e["event"] == "lap_rejected"]
+    check("standing-start crossing counts nothing, silently",
+          w2.lap == 0 and not any(e["event"] in ("lap", "lap_rejected")
+                                  for e in w2.events))
+    # A real shortcut: the last third of the circuit, then the line.
+    w2b = World(cfg, tr, spawn_theta=tr.start_pose[2])
+    w2b._collides = lambda *a, **k: None
+    n = len(tr.center)
+    # Teleports must stay within the local search window of the
+    # nearest-point hint, as a real car does.
+    w2b._track_idx = int(n * 0.7) - 1
+    for i in range(int(n * 0.7), n, 3):
+        w2b.x, w2b.y = tr.center[i]
+        w2b.step()
+    # ...then drive across the line (a crossing is a move, not a jump).
+    w2b.theta = tr.start_pose[2]
+    w2b.set_actuator("accel", 255)
+    for _ in range(80):
+        w2b.step()
+    rej = [e for e in w2b.events if e["event"] == "lap_rejected"]
     check("crossing without the sectors is rejected",
-          w2.lap == 0 and len(rej) == 1 and rej[0]["sectors"] < 3,
+          w2b.lap == 0 and len(rej) == 1 and 3 < rej[0]["sectors"] < 18,
           str(rej))
     # Wrong way: reverse over the line.
     w3 = World(cfg, tr, spawn_theta=tr.start_pose[2])
@@ -264,6 +380,24 @@ def in_process():
           w3.lap == 0 and not any(e["event"] in ("lap", "lap_rejected")
                                   for e in w3.events)
           and tr.side_of_start(w3.x, w3.y) < 0, f"side={tr.side_of_start(w3.x, w3.y):.2f}")
+    # Wrong-way tour: walk the whole circuit in reverse order (every
+    # sector visited), then cross forward.  Directional progress must
+    # leave it uncounted.
+    w4 = World(cfg, tr, spawn_theta=tr.start_pose[2])
+    w4._collides = lambda *a, **k: None
+    n = len(tr.center)
+    for i in range(n - 1, 0, -3):
+        w4.x, w4.y = tr.center[i]
+        w4.step()
+    w4.x, w4.y = tr.center[0][0] - tx * 0.2, tr.center[0][1] - ty * 0.2
+    w4.step()
+    w4.x, w4.y = tr.center[0][0] + tx * 0.2, tr.center[0][1] + ty * 0.2
+    w4.step()
+    check("wrong-way tour then forward crossing is not a lap",
+          w4.lap == 0 and len(w4._cp_seen) <= 3,
+          f"lap={w4.lap} sectors={len(w4._cp_seen)}")
+    check("standing-start line dancing emits no rejection",
+          not any(e["event"] == "lap_rejected" for e in w4.events))
 
     print("== determinism ==")
     outs = []
@@ -360,12 +494,30 @@ def end_to_end():
         moved = math.dist(pose0[:2], st["pose"][:2])
         check("accel over the FIFO moves the car", moved > 0.2,
               f"{moved:.2f} m")
-        r = subprocess.run(["timeout", "2", "cat", os.path.join(devfs, imu)],
-                           capture_output=True)
-        vals = r.stdout.decode().strip().split(",")
-        check("IMU FIFO serves three channels", len(vals) == 3
-              and all(v.replace("-", "").replace(".", "").isdigit()
-                      for v in vals), r.stdout.decode().strip())
+        with open(os.path.join(devfs, accel), "w") as f:
+            f.write("255\n")
+        steer = next(k for k, v in m.items() if v == "steer")
+        with open(os.path.join(devfs, steer), "w") as f:
+            f.write("200\n")
+        time.sleep(0.4)
+        vals = None
+        for _ in range(8):
+            r = subprocess.run(["timeout", "2", "cat",
+                                os.path.join(devfs, imu)],
+                               capture_output=True)
+            try:
+                vals = [float(x) for x in
+                        r.stdout.decode().strip().split(",")]
+            except ValueError:
+                vals = None
+            if vals and len(vals) == 3 and (abs(vals[0]) > 0.05
+                                             or abs(vals[2]) > 0.05):
+                break
+            time.sleep(0.1)
+        check("IMU FIFO serves live accel/yaw during a steered launch",
+              vals is not None and len(vals) == 3
+              and (abs(vals[0]) > 0.05 or abs(vals[2]) > 0.05),
+              str(vals))
         check("/state carries lap fields",
               st.get("lap") == 0 and st.get("laps") == []
               and "slide_ticks" in st)

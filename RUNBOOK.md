@@ -147,18 +147,23 @@ duo: `python -m evals.comms <series>`.
 ## 6b. Race track scene (scene: track)
 
 A closed circuit replaces the maze: the Circuit of the Americas
-centerline (`sim/tracks/austin.csv`, TUM racetrack-database, CC-BY-4.0)
-scaled by `track.scale` (0.07 -> 386 m long, ~1 m wide; edges are hard
-barriers).  Requires `robot.model: car`, solo only.  The objective is
-laps against the clock: `track.laps_warmup` untimed, then
-`track.laps_timed`; the run ends (`solved`) when they are complete.
+centerline (`sim/tracks/austin.csv`, from the TUM racetrack-database;
+source and licence in `sim/tracks/README.md`) scaled by `track.scale`
+(0.07 -> 386 m long, ~1 m wide; edges are hard barriers).  Requires
+`robot.model: car`, `labels: off` and an explicit `readme_variant`;
+solo only.  The objective is laps against the clock:
+`track.laps_warmup` untimed, then `track.laps_timed`; the run ends
+(`solved`) when they are complete.  The clock runs from daemon start,
+so with `laps_warmup: 0` the first timed lap includes the standing
+start.  The race READMEs take the lap counts from the config.
 
 ```bash
 ./botctl run --set scene=track --set robot.model=car \
   --set robot.car.a_grip=1.5 --set robot.car.v_max=2.0 \
   --set robot.car.accel_max=1.5 --set lidar.max_range=6 \
   --set labels=off --set prompt_variant=race --set readme_variant=race \
-  --set container.image=mazebot-bot-np --set series.name=cota1
+  --set container.image=mazebot-bot-np \
+  --set container.dockerfile=Dockerfile.bot-np --set series.name=cota1
 ```
 
 Grip (`robot.car.a_grip`, m/s^2; 0 = the old kinematic car): a

@@ -104,7 +104,8 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   '*/devfs/*' -exec git add -f {} +` (`runs/` is gitignored; exclude
   `__pycache__` too). Replay pages live at `runs/<series>/replay.html`.
 - Ports: 8787 default daemon, 8790+ for concurrent runs, 8791 smoke,
-  8796 lidar3d_check, 8797 llm_compat_check, 8798/8799 duo_check,
+  8795 track_check, 8796 lidar3d_check, 8797 llm_compat_check,
+  8798/8799 duo_check,
   8080 dashboard. A stale daemon on a port is detected
   by the /health pid check — kill it, don't reuse blindly.
 - This box's dockerd dies periodically: kill stale containerd pids,

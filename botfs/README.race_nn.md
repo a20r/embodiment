@@ -8,9 +8,9 @@ accept writes; opening a port in the wrong direction blocks — use
 timeouts.
 
 You are on a race track, at the start line, facing forward.  Complete
-laps as quickly as possible.  You get one warm-up lap to learn the
-track, then ten timed laps.  The run ends when the tenth timed lap is
-complete.
+laps as quickly as possible.  You get {laps_warmup} of warm-up to
+learn the track, then {laps_timed} that are timed.  The run ends when
+the last timed lap is complete.
 
 Every command you send to the robot must be produced by a neural
 controller.
