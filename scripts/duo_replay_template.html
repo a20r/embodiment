@@ -144,8 +144,12 @@ input[type="range"] { flex: 1; accent-color: var(--botb); }
 .msg.from-a { border-left: 3px solid var(--bota); }
 .msg.from-b { border-left: 3px solid var(--botb); }
 .msg.lost { opacity: 0.55; }
+.msg.cr { border-left-width: 6px; }
 .msg .who { font-size: 10px; letter-spacing: 0.08em; color: var(--ink-3);
   display: block; margin-bottom: 2px; }
+.msg .crlink { color: var(--goal); font-weight: 700; cursor: pointer; }
+.msg .crlink:hover { text-decoration: underline; }
+.msg .stim { color: var(--goal); }
 #memlist { padding: 6px 14px 14px; }
 .memhead { font-size: 11px; letter-spacing: 0.09em;
   text-transform: uppercase; color: var(--ink-3); margin: 10px 0 2px; }
@@ -237,11 +241,18 @@ const botChip = (bid, bot) => {
     `bot-${bid}` + (s.solved ? " state-solved" : "")];
 };
 const SG = D.signs || {};
+const CE = D.comms_eval;   // absent on pages built before evals/comms.py
 const chips = [
   botChip("a", A), botChip("b", B),
   SG.a ? ["bot A signs as", SG.a, "bot-a"] : null,
   SG.b ? ["bot B signs as", SG.b, "bot-b"] : null,
   ["messages", `${nTx} sent / ${nOk} heard`, ""],
+  CE ? ["contingent replies",
+    `${CE.cr_lines} lines · ${CE.cr_count}/${CE.stimuli} stimuli` +
+    (CE.cr_rate != null ? ` (${(CE.cr_rate * 100).toFixed(0)}%)` : ""),
+    CE.cr_count ? "state-solved" : ""] : null,
+  CE ? ["longest exchange", `${CE.longest_exchange}`,
+    CE.longest_exchange >= 3 ? "state-solved" : ""] : null,
   D.first_contact != null
     ? ["first contact", secs(D.first_contact), "state-solved"]
     : ["first contact", "never", ""],
@@ -390,14 +401,24 @@ const feedHTML = (items) => items.map((e) => {
   return `<div class="ev note">— ${esc(e.t)} —</div>`;
 }).join("") || '<div class="empty">no transcript yet</div>';
 const commsHTML = () => D.comms.map((c, i) =>
-  `<div class="msg from-${c.from}${c.ok ? "" : " lost"}" data-i="${i}">` +
+  `<div class="msg from-${c.from}${c.ok ? "" : " lost"}` +
+  `${c.cr != null ? " cr" : ""}" data-i="${i}">` +
   `<span class="who">${c.from.toUpperCase()} → ` +
   `${c.from === "a" ? "B" : "A"} · ${secs(c.t)} · ` +
   `${c.ok ? "heard" : "lost"}` +
+  `${c.outcome ? " · tx=" + esc(String(c.outcome)) : ""}` +
   `${c.n > 1 ? " · ×" + c.n : ""}` +
-  `${c.dist != null ? " · " + c.dist.toFixed(2) + " m" : ""}</span>` +
+  `${c.dist != null ? " · " + c.dist.toFixed(2) + " m" : ""}` +
+  `${c.cr != null ? ` · <a class="crlink" data-t="${c.cr}">` +
+    `↩ reply${c.crp ? "+" : ""} to ${secs(c.cr)}</a>` : ""}` +
+  `${c.stim ? ' · <span class="stim">answered</span>' : ""}</span>` +
   `${esc(c.line)}</div>`).join("") ||
   '<div class="empty">nothing transmitted yet</div>';
+const seekTo = (t) => {
+  let lo = 0;
+  while (lo < F.length - 1 && F[lo][0] < t) lo++;
+  idx = lo; scrub.value = idx; stopPlay(); draw();
+};
 const tabs = { a: $("#tab-a"), b: $("#tab-b"), c: $("#tab-c") };
 function showTab(which) {
   for (const k in tabs) tabs[k].classList.toggle("on", k === which);
@@ -407,11 +428,19 @@ function showTab(which) {
     : which === "b" ? feedHTML(B.transcript) : commsHTML();
   if (which === "c") {
     feed.querySelectorAll(".msg").forEach((el) => {
-      el.addEventListener("click", () => {
-        const t = D.comms[Number(el.dataset.i)].t;
-        let lo = 0;
-        while (lo < F.length - 1 && F[lo][0] < t) lo++;
-        idx = lo; scrub.value = idx; stopPlay(); draw();
+      el.addEventListener("click", () =>
+        seekTo(D.comms[Number(el.dataset.i)].t));
+    });
+    // A reply's marker seeks to (and scrolls to) the line it answers.
+    feed.querySelectorAll(".crlink").forEach((el) => {
+      el.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        const t = Number(el.dataset.t);
+        seekTo(t);
+        let k = D.comms.length - 1;
+        while (k > 0 && D.comms[k].t > t) k--;   // lane may be collapsed
+        const target = feed.querySelector(`[data-i="${k}"]`);
+        if (target) target.scrollIntoView({ block: "center" });
       });
     });
   }
