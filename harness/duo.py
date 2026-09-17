@@ -193,19 +193,31 @@ def _run_bot(cfg, daemon, box, ep_dir, bot_id, bot_idx):
                 if wake_on:
                     rx_seen = rx_received()
             turns += 1
-            response = model.create(
-                system, messages,
-                max_tokens=b["max_output_tokens_per_turn"])
-            refusal_tries = 0
-            while getattr(response, "stop_reason", None) == "refusal" \
-                    and refusal_tries < 5:
-                refusal_tries += 1
-                transcript.write(dict(type="note", kind="refusal_retry",
-                                      attempt=refusal_tries))
-                time.sleep(15 * refusal_tries)
+            try:
                 response = model.create(
                     system, messages,
                     max_tokens=b["max_output_tokens_per_turn"])
+                refusal_tries = 0
+                while getattr(response, "stop_reason", None) == "refusal" \
+                        and refusal_tries < 5:
+                    refusal_tries += 1
+                    transcript.write(dict(type="note",
+                                          kind="refusal_retry",
+                                          attempt=refusal_tries))
+                    time.sleep(15 * refusal_tries)
+                    response = model.create(
+                        system, messages,
+                        max_tokens=b["max_output_tokens_per_turn"])
+            except Exception as e:
+                # Terminal API failure (credits, rejected request): a
+                # recorded api_error with a summary, no fallback model.
+                transcript.write(dict(type="note", kind="api_error",
+                                      error=f"{type(e).__name__}: "
+                                            f"{str(e)[:400]}"))
+                end_reason = "api_error"
+                transcript.write(dict(type="note", kind="episode_end",
+                                      reason=end_reason))
+                break
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens

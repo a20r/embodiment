@@ -645,6 +645,16 @@ pilot differs from its baseline in one flag:
   change there); and with peer_signal off, ok/lost is an exact
   in-range boolean at the instant of each write.
 
+### A terminal API error ends the episode, recorded
+
+The model layer retries what is retryable (rate limits, 5xx,
+connection loss) and the purity rule forbids a fallback model, so an
+error that still raises - an exhausted credit balance killed two race
+runs 18 minutes in - used to unwind the harness with a traceback and
+no summary.json.  Both loops now catch it, write an `api_error` note
+with the exception text and end the episode with `end_reason:
+api_error`, so the record is complete and the operator relaunches.
+
 ### Race scene: a real circuit, a lap clock, tyres with a limit
 
 `scene: track` swaps the maze for the Circuit of the Americas

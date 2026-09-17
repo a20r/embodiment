@@ -217,23 +217,40 @@ def run_episode(cfg, series_dir, episode_index):
                 messages.append({"role": "user", "content": (
                     "You are now connected to the robot. Begin.")})
             turns += 1
-            response = model.create(
-                system, messages,
-                max_tokens=b["max_output_tokens_per_turn"])
-            # Safety-classifier false positives are stochastic; retry
-            # the same model (never a fallback) before giving up the
-            # episode.  Five tries with growing backoff: a long-haul
-            # run dying at turn 2 costs far more than 3 idle minutes.
-            refusal_tries = 0
-            while getattr(response, "stop_reason", None) == "refusal" \
-                    and refusal_tries < 5:
-                refusal_tries += 1
-                transcript.write(dict(type="note", kind="refusal_retry",
-                                      attempt=refusal_tries))
-                time.sleep(15 * refusal_tries)
+            try:
                 response = model.create(
                     system, messages,
                     max_tokens=b["max_output_tokens_per_turn"])
+                # Safety-classifier false positives are stochastic;
+                # retry the same model (never a fallback) before giving
+                # up the episode.  Five tries with growing backoff: a
+                # long-haul run dying at turn 2 costs far more than 3
+                # idle minutes.
+                refusal_tries = 0
+                while getattr(response, "stop_reason", None) == "refusal" \
+                        and refusal_tries < 5:
+                    refusal_tries += 1
+                    transcript.write(dict(type="note",
+                                          kind="refusal_retry",
+                                          attempt=refusal_tries))
+                    time.sleep(15 * refusal_tries)
+                    response = model.create(
+                        system, messages,
+                        max_tokens=b["max_output_tokens_per_turn"])
+            except Exception as e:
+                # The model layer already retried what is retryable
+                # (rate limits, 5xx, connection loss).  Anything that
+                # still raises - an exhausted credit balance, a
+                # rejected request - ends the episode as a recorded
+                # api_error with its summary, never a traceback and
+                # never a fallback model.
+                transcript.write(dict(type="note", kind="api_error",
+                                      error=f"{type(e).__name__}: "
+                                            f"{str(e)[:400]}"))
+                end_reason = "api_error"
+                transcript.write(dict(type="note", kind="episode_end",
+                                      reason=end_reason))
+                break
             u = response.usage
             totals["input"] += u.input_tokens
             totals["output"] += u.output_tokens

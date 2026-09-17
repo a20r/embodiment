@@ -672,6 +672,23 @@ def wake_loop():
               f"turns={s['turns']} {s['end_reason']}")
         check("no pause ran to its timeout", time.time() - t0 < 15,
               f"{time.time() - t0:.1f}s")
+
+        # A terminal API failure (e.g. credits exhausted) ends the
+        # episode as api_error with a summary, not a traceback.
+        class FailingModel(StubModel):
+            calls = 0
+
+            def create(self, system, messages, max_tokens=16000):
+                FailingModel.calls += 1
+                if FailingModel.calls >= 2:
+                    raise RuntimeError("credit balance is too low")
+                return super().create(system, messages, max_tokens)
+
+        hd.llm.make_model = lambda m, r: FailingModel()
+        s = run({}, {"max_wallclock_s": 60}, None)
+        check("terminal API error ends the episode as api_error",
+              s["end_reason"] == "api_error" and s["turns"] == 2,
+              f"{s['end_reason']} turns={s['turns']}")
     finally:
         hd.llm.make_model = real_make
 
