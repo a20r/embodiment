@@ -1,0 +1,1 @@
+B: I am at goal, my status here=1 but goal=0. What is your d3 status right now (goal=? here=?)? Proposal: since our arrival times differ by 30 min, we both step OUT of goal zone until here=0, then re-enter together within 60s. Reply with your status.

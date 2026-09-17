@@ -1,0 +1,794 @@
+01:56:29 START pose 0.0 0.0 238.3
+01:56:31 COMM tick=52377 goal=0 here=0 tx=4:lost RX: 
+01:56:31 step 1 pos 0.00,0.00 h 274 -> wp -0.15,0.25 ang 121 dist 0.29 pathlen 12 grid 218 d11 0.304
+01:56:37   fwd done 0.29
+01:56:38 step 2 pos -0.17,0.24 h 154 -> wp -0.45,0.35 ang 159 dist 0.30 pathlen 13 grid 238 d11 0.333
+01:56:42   fwd done 0.3
+01:56:44 step 3 pos -0.45,0.36 h 188 -> wp -0.55,0.65 ang 110 dist 0.31 pathlen 12 grid 267 d11 0.372
+01:56:49   fwd done 0.31
+01:56:50 COMM tick=54368 goal=0 here=0 tx=5:lost RX: 
+01:56:50 step 4 pos -0.57,0.65 h 140 -> wp -0.55,1.05 ang 87 dist 0.40 pathlen 11 grid 299 d11 0.379
+01:56:56   fwd done 0.41
+01:56:57 step 5 pos -0.57,1.05 h 120 -> wp -0.45,1.35 ang 67 dist 0.32 pathlen 9 grid 325 d11 0.363
+01:57:03   fwd done 0.32
+01:57:04 step 6 pos -0.44,1.35 h 101 -> wp -0.15,1.45 ang 20 dist 0.31 pathlen 11 grid 355 d11 0.329
+01:57:10   fwd done 0.31
+01:57:11 COMM tick=56434 goal=0 here=0 tx=6:lost RX: 
+01:57:11 step 7 pos -0.15,1.47 h 54 -> wp -0.15,1.85 ang 90 dist 0.38 pathlen 9 grid 374 d11 0.283
+01:57:17   fwd done 0.38
+01:57:18 step 8 pos -0.12,1.85 h 112 -> wp -0.45,1.95 ang 163 dist 0.35 pathlen 15 grid 423 d11 0.270
+01:57:23   fwd done 0.35
+01:57:24 step 9 pos -0.44,1.98 h 186 -> wp -0.85,1.95 ang 184 dist 0.41 pathlen 13 grid 438 d11 0.256
+01:57:29   fwd done 0.41
+01:57:30 COMM tick=58344 goal=0 here=0 tx=7:lost RX: 
+01:57:30 step 10 pos -0.85,1.94 h 212 -> wp -1.15,1.85 ang 197 dist 0.31 pathlen 18 grid 536 d11 0.310
+01:57:35   fwd done 0.31
+01:57:36 step 11 pos -1.15,1.83 h 229 -> wp -1.15,1.45 ang 269 dist 0.38 pathlen 14 grid 556 d11 0.362
+01:57:41   fwd done 0.38
+01:57:42 step 12 pos -1.19,1.45 h 289 -> wp -1.25,1.15 ang 258 dist 0.31 pathlen 11 grid 571 d11 0.406
+01:57:47   fwd done 0.31
+01:57:48 COMM tick=60151 goal=0 here=0 tx=8:lost RX: 
+01:57:48 step 13 pos -1.23,1.14 h 293 -> wp -1.45,0.95 ang 221 dist 0.29 pathlen 10 grid 603 d11 0.451
+01:57:53   fwd done 0.3
+01:57:55 step 14 pos -1.42,0.92 h 258 -> wp -1.65,1.15 ang 134 dist 0.32 pathlen 16 grid 660 d11 0.516
+01:58:01   fwd done 0.33
+01:58:02 step 15 pos -1.67,1.13 h 167 -> wp -1.65,1.55 ang 87 dist 0.42 pathlen 12 grid 662 d11 0.526
+01:58:09   fwd done 0.42
+01:58:10 COMM tick=62351 goal=0 here=0 tx=9:lost RX: 
+01:58:10 step 16 pos -1.67,1.55 h 120 -> wp -1.75,1.85 ang 106 dist 0.31 pathlen 9 grid 681 d11 0.450
+01:58:15   fwd done 0.31
+01:58:16 step 17 pos -1.77,1.85 h 136 -> wp -2.15,1.85 ang 180 dist 0.38 pathlen 17 grid 777 d11 0.430
+01:58:21   fwd done 0.39
+01:58:23 step 18 pos -2.15,1.87 h 211 -> wp -2.45,1.95 ang 165 dist 0.31 pathlen 13 grid 788 d11 0.454
+01:58:28   fwd done 0.31
+01:58:29 COMM tick=64217 goal=0 here=0 tx=10:lost RX: 
+01:58:29 step 19 pos -2.46,1.94 h 199 -> wp -2.85,1.95 ang 178 dist 0.39 pathlen 11 grid 790 d11 0.456
+01:58:34   fwd done 0.4
+01:58:35 step 20 pos -2.85,1.95 h 204 -> wp -3.15,2.05 ang 162 dist 0.31 pathlen 9 grid 835 d11 0.482
+01:58:40   fwd done 0.32
+01:58:41 step 21 pos -3.16,2.04 h 192 -> wp -2.85,1.95 ang 344 dist 0.32 pathlen 48 grid 896 d11 0.475
+01:58:48   fwd done 0.33
+01:58:50 COMM tick=66299 goal=0 here=0 tx=11:lost RX: 
+01:58:50 step 22 pos -2.86,1.92 h 3 -> wp -2.45,1.95 ang 4 dist 0.41 pathlen 44 grid 901 d11 0.507
+01:58:55   fwd done 0.41
+01:58:56 step 23 pos -2.45,1.96 h 32 -> wp -2.15,1.85 ang 340 dist 0.32 pathlen 40 grid 901 d11 0.473
+01:59:01   fwd done 0.32
+01:59:02 step 24 pos -2.14,1.87 h 11 -> wp -1.75,1.85 ang 357 dist 0.39 pathlen 36 grid 902 d11 0.626
+01:59:07   fwd done 0.39
+01:59:08 COMM tick=68168 goal=0 here=0 tx=12:lost RX: PING from robot A. pos x=7.36 y=-0.01 (my odom frame). If you hear this, reply!
+01:59:08 step 25 pos -1.75,1.90 h 39 -> wp -1.65,1.55 ang 286 dist 0.36 pathlen 32 grid 903 d11 0.576
+01:59:15   fwd done 0.37
+01:59:16 step 26 pos -1.65,1.54 h 315 -> wp -1.65,1.15 ang 270 dist 0.39 pathlen 36 grid 903 d11 0.637
+01:59:22   fwd done 0.4
+01:59:23 step 27 pos -1.65,1.15 h 305 -> wp -1.45,0.95 ang 316 dist 0.28 pathlen 32 grid 903 d11 0.655
+01:59:27   fwd done 0.28
+01:59:29 COMM tick=70186 goal=0 here=0 tx=13:lost RX: 
+01:59:29 step 28 pos -1.47,0.93 h 342 -> wp -1.15,0.85 ang 347 dist 0.33 pathlen 28 grid 903 d11 0.614
+01:59:33   fwd done 0.33
+01:59:34 step 29 pos -1.16,0.81 h 12 -> wp -1.15,0.45 ang 272 dist 0.36 pathlen 24 grid 906 d11 0.525
+01:59:40   fwd done 0.37
+01:59:41 step 30 pos -1.14,0.45 h 299 -> wp -1.15,0.85 ang 91 dist 0.40 pathlen 67 grid 907 d11 0.523
+01:59:49   fwd done 0.41
+01:59:51 COMM tick=72379 goal=0 here=0 tx=14:lost RX: 
+01:59:51 step 31 pos -1.10,0.85 h 115 -> wp -1.15,1.15 ang 100 dist 0.31 pathlen 64 grid 907 d11 0.515
+01:59:55   fwd done 0.31
+01:59:56 STOP file
+02:00:53 goto start from -1.147 1.154 127.4 -> -2.1 1.9
+02:00:59 goto step 0 pos -1.36,0.97 h 217 fwd done 0.29 d11 0.587 tx=16:lost
+02:01:05 goto step 1 pos -1.66,1.03 h 168 fwd done 0.30 d11 0.663 0 tx=17:ok
+02:01:11 goto step 2 pos -1.67,1.46 h 92 fwd done 0.42 d11 0.628 tx=18:lost
+02:01:16 goto step 3 pos -1.72,1.76 h 102 fwd done 0.31 d11 0.611 tx=19:lost
+02:01:22 goto step 4 pos -2.04,1.88 h 160 fwd done 0.34 d11 0.647 0 tx=20:ok
+02:01:22 goto done True
+02:03:38 HILL start -2.04,1.88 d11 0.666
+02:03:38 no cands; sweep
+02:03:39 no cands; sweep
+02:03:40 no cands; sweep
+02:03:41 no cands; sweep
+02:03:42 no cands; sweep
+02:03:43 no cands; sweep
+02:03:44 no cands; sweep
+02:03:45 no cands; sweep
+02:03:46 no cands; sweep
+02:03:47 no cands; sweep
+02:03:48 no cands; sweep
+02:03:49 no cands; sweep
+02:03:51 no cands; sweep
+02:03:52 no cands; sweep
+02:03:53 no cands; sweep
+02:03:54 no cands; sweep
+02:03:55 no cands; sweep
+02:03:56 no cands; sweep
+02:03:57 no cands; sweep
+02:03:58 no cands; sweep
+02:03:59 no cands; sweep
+02:04:01 no cands; sweep
+02:04:02 no cands; sweep
+02:04:03 no cands; sweep
+02:04:04 no cands; sweep
+02:04:05 no cands; sweep
+02:04:06 no cands; sweep
+02:04:07 no cands; sweep
+02:04:09 no cands; sweep
+02:04:10 no cands; sweep
+02:05:19 HILL start -2.04,1.89 d11 0.659
+02:05:19 no cands; sweep
+02:05:21 no cands; sweep
+02:05:22 no cands; sweep
+02:05:23 no cands; sweep
+02:05:24 no cands; sweep
+02:05:25 no cands; sweep
+02:05:26 no cands; sweep
+02:05:27 no cands; sweep
+02:05:28 no cands; sweep
+02:05:29 no cands; sweep
+02:05:31 no cands; sweep
+02:05:32 no cands; sweep
+02:05:33 no cands; sweep
+02:05:34 no cands; sweep
+02:05:35 no cands; sweep
+02:05:36 no cands; sweep
+02:05:37 no cands; sweep
+02:05:38 no cands; sweep
+02:05:39 no cands; sweep
+02:05:41 no cands; sweep
+02:05:42 no cands; sweep
+02:05:43 no cands; sweep
+02:05:44 no cands; sweep
+02:05:45 no cands; sweep
+02:05:46 no cands; sweep
+02:05:47 no cands; sweep
+02:05:48 no cands; sweep
+02:05:49 no cands; sweep
+02:05:51 no cands; sweep
+02:05:52 no cands; sweep
+02:06:35 HILL start -2.04,1.88 d11 0.669
+02:06:35 no cands; sweep
+02:06:36 no cands; sweep
+02:06:37 no cands; sweep
+02:06:38 no cands; sweep
+02:06:39 no cands; sweep
+02:06:41 no cands; sweep
+02:06:42 no cands; sweep
+02:06:43 no cands; sweep
+02:06:44 no cands; sweep
+02:06:45 no cands; sweep
+02:06:46 no cands; sweep
+02:06:47 no cands; sweep
+02:06:48 no cands; sweep
+02:06:50 no cands; sweep
+02:06:51 no cands; sweep
+02:06:51 no cands; sweep
+02:06:53 no cands; sweep
+02:06:54 no cands; sweep
+02:06:55 no cands; sweep
+02:06:56 no cands; sweep
+02:06:57 no cands; sweep
+02:06:58 no cands; sweep
+02:06:59 no cands; sweep
+02:07:00 no cands; sweep
+02:07:01 no cands; sweep
+02:07:02 no cands; sweep
+02:07:04 no cands; sweep
+02:07:05 no cands; sweep
+02:07:06 no cands; sweep
+02:07:07 no cands; sweep
+02:07:53 goto start from -2.036 1.886 5.8 -> -3.1 1.95
+02:08:01 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 ahead of me (heading 90), corridor open 2.2 behind me (toward 270). My d11 now=0.670. I will ping
+02:08:01 goto step 0 pos -2.35,1.96 h 162 fwd done 0.32 d11 0.705 0 tx=25:ok
+02:08:06 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 ahead of me (heading 90), corridor open 2.2 behind me (toward 270). My d11 now=0.652. I will ping
+02:08:06 goto step 1 pos -2.75,1.98 h 179 fwd done 0.40 d11 0.762 0 tx=26:ok
+02:08:11 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 ahead of me (heading 90), corridor open 2.2 behind me (toward 270). My d11 now=0.663. I will ping
+02:08:11 goto step 2 pos -3.05,1.96 h 181 fwd done 0.30 d11 0.791 0 tx=27:ok
+02:08:11 goto done True
+02:11:35 EXPLORE2 start -3.05,1.96 h 186 grid 924
+02:11:35 *** STATUS CHANGE tick=142808 goal=0 here=0 tx=29:ok
+02:11:35 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:35 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:35 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:35 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:35 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:35 no frontier; sweep
+02:11:36 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:36 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:36 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:36 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:37 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:37 no frontier; sweep
+02:11:38 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:38 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:38 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:38 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:38 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:38 no frontier; sweep
+02:11:39 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:40 no frontier; sweep
+02:11:41 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:41 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:41 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:41 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:41 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:11:41 no frontier; sweep
+02:11:42 no frontiers left
+02:12:32 EXPLORE2 start -3.05,1.97 h 338 grid 924
+02:12:33 *** STATUS CHANGE tick=148591 goal=0 here=0 tx=34:ok
+02:12:33 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:33 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:33 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:33 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:33 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:33 step 1 pos -3.05,1.97 h 338 d11 0.769 -> wp -2.65,1.95 pathlen 46  tx=34:ok
+02:12:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:40 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:40 step 2 pos -2.65,1.92 h 29 d11 0.913 -> wp -2.35,1.85 pathlen 42  tx=35:ok
+02:12:46 RX: Robot A: OK, I am STAYING PUT. My status: goal=0 here=0 - I know nothing about the goal yet. I am in a 0.45-wide corridor running compass 90/270 deg; wall 0.8 a
+02:12:46 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:46 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:46 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:46 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:46 step 3 pos -2.34,1.88 h 27 d11 0.825 -> wp -1.95,1.85 pathlen 38  tx=36:ok
+02:12:53 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:53 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:53 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:53 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:53 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:53 step 4 pos -1.95,1.86 h 25 d11 0.776 -> wp -1.65,1.75 pathlen 34  tx=37:ok
+02:12:59 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:59 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:12:59 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:00 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:00 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:00 step 5 pos -1.64,1.77 h 8 d11 0.688 -> wp -1.65,1.35 pathlen 30  tx=38:ok
+02:13:08 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:08 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:08 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:08 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:08 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:08 step 6 pos -1.64,1.34 h 298 d11 0.670 -> wp -1.65,0.95 pathlen 26  tx=39:ok
+02:13:15 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:15 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:15 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:15 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:15 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:15 step 7 pos -1.64,0.95 h 297 d11 0.659 -> wp -1.25,0.95 pathlen 22  tx=40:ok
+02:13:22 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:22 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:22 RX: Robot A, staying put. status goal=0 here=0, no goal info yet. My spot: east end of an east-west corridor (compass 90/270 axis, 0.45 wide). Wall 0.8 east of me; 
+02:13:22 RX: A: OK, msgs cut at ~250 chars, keep short. New plan: YOU stay put and ping every 3s. I will explore and home in on you by climbing my d11 (RSSI). I ping every 3
+02:13:22 RX: A: OK, msgs cut at ~250 chars, keep short. New plan: YOU stay put and ping every 3s. I will explore and home in on you by climbing my d11 (RSSI). I ping every 3
+02:13:22 step 8 pos -1.25,0.91 h 27 d11 0.512 -> wp -1.15,0.65 pathlen 18 x=41:lost
+02:13:29 RX: A: homing on you. my d11=0.78 heading=89 x=7.4 y=-0.0
+02:13:29 RX: A: homing on you. my d11=0.88 heading=96 x=7.6 y=-0.0
+02:13:29 RX: A: homing on you. my d11=0.90 heading=2 x=7.6 y=-0.0
+02:13:29 RX: A: homing on you. my d11=0.94 heading=347 x=7.6 y=0.2
+02:13:29 RX: A: homing on you. my d11=0.96 heading=272 x=7.6 y=0.3
+02:13:29 step 9 pos -1.11,0.66 h 334 d11 0.420 -> wp -1.15,0.25 pathlen 14 x=42:lost
+02:13:37 RX: A: homing on you. my d11=0.83 heading=260 x=7.4 y=0.3
+02:13:37 RX: A: homing on you. my d11=0.78 heading=356 x=7.3 y=0.2
+02:13:37 RX: A: homing on you. my d11=0.80 heading=270 x=7.3 y=0.4
+02:13:37 RX: A: homing on you. my d11=0.68 heading=268 x=7.1 y=0.4
+02:13:37 RX: A: homing on you. my d11=0.67 heading=360 x=7.1 y=0.4
+02:13:37 step 10 pos -1.14,0.25 h 294 d11 0.608 -> wp -1.05,-0.05 pathlen 19 x=43:lost
+02:13:43 RX: A: homing on you. my d11=0.68 heading=1 x=7.1 y=0.7
+02:13:43 RX: A: homing on you. my d11=0.69 heading=273 x=7.1 y=0.8
+02:13:43 RX: A: homing on you. my d11=0.65 heading=258 x=6.9 y=0.7
+02:13:43 RX: A: homing on you. my d11=0.66 heading=178 x=6.8 y=0.7
+02:13:43 RX: A: homing on you. my d11=0.65 heading=181 x=6.8 y=0.6
+02:13:43 step 11 pos -1.01,-0.04 h 324 d11 0.584 -> wp -0.75,-0.15 pathlen 15 x=44:lost
+02:13:48 RX: A: homing on you. my d11=0.66 heading=181 x=6.9 y=0.4
+02:13:48 RX: A: homing on you. my d11=0.64 heading=96 x=6.9 y=0.2
+02:13:48 RX: A: homing on you. my d11=0.71 heading=79 x=7.1 y=0.2
+02:13:48 step 12 pos -0.76,-0.18 h 358 d11 0.518 -> wp -1.05,-0.05 pathlen 77 x=45:lost
+02:13:57 step 13 pos -1.03,-0.02 h 179 d11 0.525 -> wp -1.15,0.25 pathlen 73 x=46:lost
+02:14:03 RX: A: homing on you. my d11=0.65 heading=0 x=6.4 y=0.6
+02:14:03 step 14 pos -1.18,0.24 h 145 d11 0.663 -> wp -1.15,0.65 pathlen 69  tx=47:ok
+02:14:11 RX: A: homing on you. my d11=0.66 heading=88 x=6.4 y=0.8
+02:14:11 RX: A: homing on you. my d11=0.74 heading=94 x=6.6 y=0.8
+02:14:11 RX: A: homing on you. my d11=0.72 heading=359 x=6.6 y=0.8
+02:14:11 RX: A: homing on you. my d11=0.72 heading=359 x=6.6 y=0.9
+02:14:11 step 15 pos -1.18,0.65 h 119 d11 0.728 -> wp -1.15,1.05 pathlen 65  tx=48:ok
+02:14:18 RX: A: homing on you. my d11=0.68 heading=4 x=6.6 y=0.9
+02:14:18 step 16 pos -1.18,1.05 h 119 d11 0.558 -> wp -1.15,1.45 pathlen 61 x=49:lost
+02:14:24 step 17 pos -1.19,1.46 h 121 d11 0.462 -> wp -1.05,1.75 pathlen 57 x=50:lost
+02:14:31 step 18 pos -1.06,1.76 h 103 d11 0.441 -> wp -0.75,1.85 pathlen 53 x=51:lost
+02:14:39 step 19 pos -0.75,1.87 h 51 d11 0.315 -> wp -0.35,1.85 pathlen 47 x=52:lost
+02:14:46 step 20 pos -0.35,1.89 h 31 d11 0.323 -> wp -0.25,1.55 pathlen 43 x=53:lost
+02:14:54 RX: A: homing on you. my d11=0.64 heading=95 x=6.9 y=1.4
+02:14:54 step 21 pos -0.20,1.57 h 329 d11 0.722 -> wp -0.35,1.35 pathlen 40  tx=54:ok
+02:15:01 RX: A: homing on you. my d11=0.76 heading=180 x=7.1 y=1.4
+02:15:01 RX: A: homing on you. my d11=0.81 heading=180 x=7.1 y=1.2
+02:15:01 RX: A: homing on you. my d11=0.82 heading=91 x=7.1 y=1.1
+02:15:01 step 22 pos -0.35,1.34 h 264 d11 0.816 -> wp -0.55,1.15 pathlen 36  tx=55:ok
+02:15:06 RX: A: homing on you. my d11=0.94 heading=89 x=7.3 y=1.1
+02:15:06 no frontier; sweep
+02:15:07 no frontier; sweep
+02:15:08 no frontier; sweep
+02:15:15 goto start from -0.49 1.198 342.9 -> -1.18 0.65
+02:15:20 goto step 0 pos -0.24,1.33 h 29 fwd done 0.29 d11 0.955 0 tx=59:ok
+02:15:27 goto step 1 pos -0.20,1.75 h 82 fwd done 0.42 d11 0.861 0 tx=60:ok
+02:15:32 goto step 2 pos -0.44,1.87 h 156 fwd done 0.28 d11 0.888 0 tx=61:ok
+02:15:38 goto step 3 pos -0.85,1.89 h 177 fwd done 0.41 d11 0.864 0 tx=62:ok
+02:15:43 goto step 4 pos -1.17,1.78 h 201 fwd done 0.33 d11 0.846 0 tx=63:ok
+02:15:50 goto step 5 pos -1.18,1.35 h 270 fwd done 0.43 d11 0.920 0 tx=65:ok
+02:15:55 RX: A: I am now STATIONARY (parked at a junction). Both moving confuses RSSI homing. You come to me: climb your d11. My d11=0.932. When your status shows here=1 we have met. Then we split to find goal & re-meet by RSSI.
+02:15:55 goto step 6 pos -1.19,0.95 h 268 fwd done 0.40 d11 0.926 0 tx=66:ok
+02:16:00 RX: A: I am now STATIONARY (parked at a junction). Both moving confuses RSSI homing. You come to me: climb your d11. My d11=0.925. When your status shows here=1 we have met. Then we split to find goal & re-meet by RSSI.
+02:16:00 goto step 7 pos -1.18,0.65 h 272 fwd done 0.30 d11 0.900 0 tx=67:ok
+02:16:00 goto done True
+02:24:41 EXPLORE2 start -1.27,1.06 h 183 grid 938
+02:24:41 *** STATUS CHANGE tick=221464 goal=0 here=0 tx=84:ok
+02:24:42 no frontier; sweep
+02:24:43 no frontier; sweep
+02:24:44 no frontier; sweep
+02:24:45 no frontier; sweep
+02:24:47 no frontier; sweep
+02:24:48 no frontiers left
+02:26:36 WALL start -1.27,1.07 h 336 side R
+02:26:36 *** STATUS CHANGE tick=232942 goal=0 here=0 tx=85:ok
+02:26:39 wall -1.14,0.90 h290 d11 0.369 front 1.57 side 0.29 mode follow
+02:26:41 wall -1.15,0.67 h250 d11 0.344 front 0.72 side 0.21 mode follow
+02:26:44 wall -1.22,0.51 h256 d11 0.352 front 0.49 side 0.21 mode follow
+02:26:46 wall -1.27,0.31 h261 d11 0.331 front 0.28 side 0.14 mode follow
+02:26:49 wall -1.28,0.22 h325 d11 0.304 front 1.03 side 0.24 mode follow
+02:26:51 wall -1.15,0.10 h321 d11 0.278 front 0.22 side 0.12 mode turnaway
+02:26:54 wall -0.97,0.08 h350 d11 0.268 front 0.57 side 0.14 mode follow
+02:26:56 wall -0.76,0.02 h334 d11 0.248 front 0.34 side 3.00 mode follow
+02:26:59 wall -0.63,-0.10 h297 d11 0.245 front 0.38 side 0.26 mode follow
+02:27:01 wall -0.59,-0.26 h267 d11 0.222 front 0.30 side 0.28 mode follow
+02:27:04 wall -0.60,-0.32 h342 d11 0.221 front 0.18 side 0.28 mode turnaway
+02:27:07 wall -0.59,-0.27 h77 d11 0.215 front 0.53 side 0.20 mode follow
+02:27:09 wall -0.54,-0.07 h80 d11 0.220 front 0.46 side 0.13 mode follow
+02:27:12 wall -0.54,0.09 h91 d11 0.247 front 0.34 side 0.15 mode follow
+02:27:14 wall -0.55,0.22 h131 d11 0.240 front 0.24 side 0.13 mode turnaway
+02:27:17 wall -0.69,0.28 h155 d11 0.268 front 0.25 side 0.22 mode follow
+02:27:19 wall -0.92,0.35 h170 d11 0.274 front 0.46 side 0.13 mode follow
+02:27:22 wall -1.13,0.45 h133 d11 0.314 front 0.34 side 0.28 mode follow
+02:27:24 wall -1.20,0.63 h95 d11 0.341 front 1.88 side 0.30 mode follow
+02:27:27 wall -1.14,0.86 h51 d11 0.364 front 0.21 side 0.29 mode follow
+02:27:29 wall -1.11,1.01 h82 d11 0.381 front 1.49 side 0.17 mode follow
+02:27:32 wall -1.10,1.25 h88 d11 0.394 front 1.27 side 0.17 mode follow
+02:27:34 wall -1.08,1.45 h78 d11 0.425 front 0.28 side 0.18 mode follow
+02:27:37 wall -1.06,1.69 h92 d11 0.428 front 0.85 side 0.12 mode follow
+02:27:39 wall -1.05,1.94 h84 d11 0.429 front 0.62 side 0.15 mode follow
+02:27:42 wall -1.02,2.16 h66 d11 0.443 front 0.39 side 0.29 mode follow
+02:27:44 wall -0.90,2.30 h29 d11 0.421 front 0.41 side 0.30 mode follow
+02:27:46 wall -0.68,2.35 h352 d11 0.383 front 0.75 side 0.30 mode follow
+02:27:49 wall -0.48,2.25 h312 d11 0.353 front 0.93 side 0.30 mode follow
+02:27:51 wall -0.37,2.13 h320 d11 0.320 front 0.63 side 0.21 mode follow
+02:27:54 wall -0.26,1.95 h268 d11 0.318 front 0.93 side 0.32 mode follow
+02:27:56 wall -0.34,1.74 h230 d11 0.313 front 0.89 side 0.30 mode follow
+02:27:58 wall -0.55,1.64 h184 d11 0.336 front 0.36 side 0.30 mode follow
+02:28:01 wall -0.67,1.66 h181 d11 0.354 front 0.21 side 0.34 mode turnaway
+02:28:04 wall -0.72,1.58 h230 d11 0.371 front 0.23 side 0.23 mode follow
+02:28:06 wall -0.76,1.41 h258 d11 0.345 front 0.91 side 0.15 mode follow
+02:28:08 wall -0.78,1.18 h264 d11 0.350 front 0.70 side 0.16 mode follow
+02:28:11 wall -0.81,1.02 h267 d11 0.331 front 0.24 side 3.00 mode follow
+02:28:13 wall -0.77,0.84 h285 d11 0.325 front 0.39 side 0.15 mode follow
+02:28:16 wall -0.71,0.67 h285 d11 0.291 front 0.21 side 0.21 mode follow
+02:28:18 wall -0.63,0.62 h341 d11 0.274 front 0.26 side 0.21 mode follow
+02:28:21 wall -0.45,0.59 h354 d11 0.254 front 0.59 side 0.16 mode follow
+02:28:23 wall -0.23,0.52 h321 d11 0.232 front 0.41 side 3.00 mode follow
+02:28:26 wall -0.12,0.31 h274 d11 0.218 front 1.36 side 0.32 mode follow
+02:28:28 wall -0.19,0.10 h232 d11 0.213 front 0.24 side 0.32 mode follow
+02:28:31 wall -0.24,-0.02 h254 d11 0.215 front 0.25 side 0.18 mode follow
+02:28:33 wall -0.24,-0.21 h273 d11 0.195 front 0.91 side 0.15 mode follow
+02:28:36 wall -0.22,-0.44 h270 d11 0.179 front 0.66 side 0.21 mode follow
+02:28:38 wall -0.25,-0.67 h249 d11 0.182 front 0.46 side 0.33 mode follow
+02:28:41 wall -0.42,-0.83 h206 d11 0.186 front 0.29 side 0.32 mode follow
+02:28:43 wall -0.65,-0.84 h162 d11 0.177 front 0.75 side 0.30 mode follow
+02:28:46 wall -0.81,-0.75 h155 d11 0.204 front 1.70 side 0.20 mode follow
+02:28:48 wall -1.02,-0.67 h158 d11 0.213 front 1.53 side 0.20 mode follow
+02:28:51 wall -1.20,-0.53 h125 d11 0.235 front 0.62 side 0.31 mode follow
+02:28:53 wall -1.25,-0.33 h82 d11 0.243 front 0.27 side 0.28 mode follow
+02:28:56 wall -1.23,-0.27 h144 d11 0.261 front 0.30 side 0.20 mode turnaway
+02:28:58 wall -1.34,-0.20 h165 d11 0.272 front 0.62 side 0.21 mode follow
+02:29:01 wall -1.50,-0.16 h178 d11 0.299 front 0.23 side 0.14 mode turnaway
+02:29:03 wall -1.72,-0.19 h189 d11 0.292 front 0.76 side 0.10 mode follow
+02:29:05 wall -1.95,-0.22 h184 d11 0.306 front 0.49 side 0.19 mode follow
+02:29:08 wall -2.15,-0.21 h173 d11 0.325 front 0.29 side 0.21 mode follow
+02:29:10 wall -2.23,-0.19 h230 d11 0.324 front 0.30 side 0.23 mode turnaway
+02:29:13 wall -2.30,-0.27 h240 d11 0.317 front 0.24 side 0.18 mode turnaway
+02:29:16 wall -2.24,-0.32 h323 d11 0.314 front 0.29 side 0.27 mode follow
+02:29:18 wall -2.12,-0.40 h324 d11 0.309 front 0.20 side 0.10 mode follow
+02:29:21 wall -1.94,-0.44 h349 d11 0.271 front 2.04 side 0.12 mode follow
+02:29:23 wall -1.79,-0.55 h280 d11 0.254 front 0.54 side 1.21 mode follow
+02:29:25 wall -1.82,-0.74 h243 d11 0.241 front 0.34 side 0.27 mode follow
+02:29:28 wall -1.93,-0.85 h210 d11 0.240 front 0.27 side 0.27 mode follow
+02:29:30 wall -2.12,-0.89 h172 d11 0.252 front 0.86 side 0.29 mode follow
+02:29:33 wall -2.33,-0.79 h132 d11 0.260 front 0.27 side 0.30 mode follow
+02:29:35 wall -2.45,-0.67 h138 d11 0.280 front 0.67 side 0.12 mode follow
+02:29:37 wall -2.63,-0.55 h144 d11 0.298 front 0.38 side 0.20 mode follow
+02:29:40 wall -2.74,-0.43 h116 d11 0.314 front 0.29 side 0.27 mode follow
+02:29:42 wall -2.78,-0.20 h80 d11 0.349 front 1.17 side 0.31 mode follow
+02:29:44 wall -2.67,-0.01 h42 d11 0.386 front 0.69 side 0.30 mode follow
+02:29:47 wall -2.46,0.09 h13 d11 0.393 front 3.00 side 0.14 mode follow
+02:29:49 wall -2.23,0.15 h15 d11 0.380 front 0.85 side 0.15 mode follow
+02:29:52 wall -1.99,0.20 h1 d11 0.367 front 0.52 side 0.24 mode follow
+02:29:54 wall -1.77,0.18 h348 d11 0.342 front 0.31 side 0.18 mode follow
+02:29:57 wall -1.65,0.14 h30 d11 0.340 front 0.20 side 0.15 mode turnaway
+02:30:00 wall -1.57,0.26 h54 d11 0.343 front 0.23 side 0.13 mode follow
+02:30:02 wall -1.55,0.43 h87 d11 0.371 front 0.52 side 0.15 mode follow
+02:30:05 wall -1.55,0.62 h95 d11 0.381 front 0.30 side 0.13 mode follow
+02:30:07 wall -1.56,0.73 h126 d11 0.398 front 0.19 side 0.12 mode turnaway
+02:30:10 wall -1.67,0.81 h144 d11 0.439 front 0.21 side 0.13 mode follow
+02:30:12 wall -1.85,0.83 h182 d11 0.461 front 0.58 side 0.14 mode follow
+02:30:15 wall -2.08,0.85 h157 d11 0.490 front 0.93 side 0.30 mode follow
+02:30:17 wall -2.25,0.99 h121 d11 0.569 front 1.16 side 0.30 mode follow
+02:30:20 wall -2.29,1.19 h79 d11 0.598 front 0.29 side 0.29 mode follow
+02:30:22 wall -2.26,1.26 h140 d11 0.612 front 0.27 side 0.32 mode turnaway
+02:30:25 wall -2.39,1.38 h147 d11 0.670 front 0.99 side 0.14 mode follow
+02:30:26 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:28 wall -2.59,1.53 h136 d11 0.739 front 0.74 side 0.24 mode follow
+02:30:29 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:30 wall -2.70,1.71 h97 d11 0.814 front 0.31 side 0.30 mode follow
+02:30:32 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:33 wall -2.69,1.82 h120 d11 0.839 front 0.20 side 0.34 mode turnaway
+02:30:35 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:35 wall -2.81,1.88 h158 d11 0.866 front 0.23 side 0.16 mode follow
+02:30:38 wall -2.97,1.90 h180 d11 0.897 front 0.27 side 0.13 mode follow
+02:30:38 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:40 wall -3.15,1.88 h193 d11 0.899 front 0.30 side 0.12 mode follow
+02:30:42 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:43 wall -3.26,1.86 h238 d11 0.893 front 0.25 side 0.23 mode turnaway
+02:30:45 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:45 wall -3.29,1.71 h253 d11 0.858 front 0.24 side 0.21 mode follow
+02:30:48 wall -3.31,1.52 h269 d11 0.791 front 2.52 side 0.14 mode follow
+02:30:48 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:50 wall -3.29,1.28 h276 d11 0.718 front 2.30 side 0.19 mode follow
+02:30:51 !!! RX GOAL: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come back & home in (RSSI 0.95 = on me). Reply when yo
+02:30:53 wall -3.28,1.04 h276 d11 0.655 front 2.01 side 0.16 mode follow
+02:30:55 wall -3.26,0.80 h269 d11 0.581 front 1.76 side 0.23 mode follow
+02:30:58 wall -3.31,0.57 h253 d11 0.513 front 0.29 side 0.16 mode follow
+02:31:00 wall -3.34,0.43 h272 d11 0.483 front 1.43 side 0.15 mode follow
+02:31:02 wall -3.31,0.19 h279 d11 0.428 front 1.22 side 0.20 mode follow
+02:31:05 wall -3.30,-0.04 h272 d11 0.382 front 0.93 side 0.17 mode follow
+02:31:07 wall -3.31,-0.26 h263 d11 0.352 front 0.27 side 0.20 mode follow
+02:31:09 wall -3.30,-0.48 h276 d11 0.316 front 0.57 side 0.13 mode follow
+02:31:12 wall -3.28,-0.69 h272 d11 0.285 front 0.33 side 0.22 mode follow
+02:31:14 wall -3.28,-0.80 h309 d11 0.270 front 0.28 side 0.27 mode turnaway
+02:31:17 wall -3.22,-0.87 h341 d11 0.271 front 0.23 side 0.17 mode turnaway
+02:31:20 wall -3.17,-0.81 h42 d11 0.270 front 0.18 side 0.28 mode turnaway
+02:31:22 wall -3.13,-0.69 h70 d11 0.295 front 0.24 side 0.16 mode follow
+02:31:25 wall -3.10,-0.50 h85 d11 0.309 front 0.30 side 0.11 mode follow
+02:31:27 wall -3.10,-0.34 h89 d11 0.349 front 0.22 side 0.16 mode follow
+02:31:30 wall -3.14,-0.12 h103 d11 0.363 front 1.07 side 0.13 mode follow
+02:31:32 wall -3.19,0.11 h97 d11 0.406 front 1.84 side 0.24 mode follow
+02:31:35 wall -3.20,0.37 h82 d11 0.472 front 1.63 side 0.25 mode follow
+02:31:37 wall -3.14,0.60 h77 d11 0.512 front 0.30 side 0.11 mode follow
+02:31:40 WALL stop
+02:36:16 route leg0 H90: (-3.37,-0.83) E0.36 W0.14 N1.72 S0.32 d11 0.29 goal=0 here=0
+02:36:16 route leg0 H90: (-3.37,-0.67) E0.37 W0.09 N2.48 S0.44 d11 0.30 goal=0 here=0
+02:36:16 route leg0 H90: (-3.37,-0.52) E0.37 W0.09 N2.50 S0.45 d11 0.32 goal=0 here=0
+02:36:16 route leg0 H90: (-3.37,-0.37) E0.37 W0.12 N2.48 S0.45 d11 0.31 goal=0 here=0
+02:36:16 route leg0 H90: (-3.37,-0.21) E0.34 W0.08 N2.46 S0.46 d11 0.31 goal=0 here=0
+02:36:16 route leg0 H90: (-3.38,-0.06) E0.37 W0.09 N2.47 S0.46 d11 0.30 goal=0 here=0
+02:36:16 route leg0 H90: (-3.37,0.09) E0.36 W0.09 N2.45 S0.47 d11 0.32 goal=0 here=0
+02:36:16 route leg0 H90: (-3.37,0.25) E0.36 W0.09 N2.41 S0.48 d11 0.32 goal=0 here=0
+02:36:16 route leg0 H90: (-3.35,0.40) E0.37 W0.12 N2.35 S0.64 d11 0.33 goal=0 here=0
+02:36:16 route leg0 H90: (-3.33,0.55) E0.30 W0.20 N0.76 S0.82 d11 0.36 goal=0 here=0
+02:36:16 route leg0 H90: (-3.29,0.70) E0.28 W0.17 N1.12 S0.97 d11 0.38 goal=0 here=0
+02:36:16 route leg0 H90: (-3.25,0.85) E0.28 W0.24 N1.77 S1.09 d11 0.41 goal=0 here=0
+02:36:16 route leg0 H90: (-3.20,1.00) E0.13 W0.27 N1.73 S1.24 d11 0.44 goal=0 here=0
+02:36:16 route leg0 H90: (-3.15,1.15) E0.15 W0.39 N1.57 S1.37 d11 0.47 goal=0 here=0
+02:36:16 route leg0 H90: (-3.11,1.25) E0.10 W0.41 N1.54 S1.46 d11 0.49 goal=0 here=0
+02:36:16 route leg0 H90: stop:bump
+02:36:18 route leg1 H0: (-3.11,1.25) E0.08 W0.41 N1.52 S1.46 d11 0.50 goal=0 here=0
+02:36:18 route leg1 H0: stop:obstacle 0.09
+02:36:22 route leg2 H270: (-3.10,1.14) E0.11 W0.40 N1.61 S1.35 d11 0.47 goal=0 here=0
+02:36:22 route leg2 H270: stop:obstacle 0.09
+02:36:24 route leg3 H0: (-3.11,1.15) E0.14 W0.43 N1.63 S1.42 d11 0.47 goal=0 here=0
+02:36:24 route leg3 H0: stop:obstacle 0.14
+02:36:26 route leg4 H270: (-3.10,1.13) E0.13 W0.38 N1.59 S1.04 d11 0.46 goal=0 here=0
+02:36:26 route leg4 H270: stop:bump
+02:36:29 route leg5 H0: (-3.11,1.13) E0.12 W0.42 N1.65 S1.36 d11 0.45 goal=0 here=0
+02:36:29 route leg5 H0: stop:obstacle 0.15
+02:36:31 route leg6 H270: (-3.10,1.12) E0.12 W0.42 N1.64 S1.35 d11 0.46 goal=0 here=0
+02:36:31 route leg6 H270: stop:bump
+02:36:31 route end tick=292435 goal=0 here=0 tx=108:lost
+02:37:40 route leg0 H90: (-3.26,1.30) E0.20 W0.23 N1.44 S1.53 d11 0.51 goal=0 here=0
+02:37:40 route leg0 H90: (-3.28,1.45) E0.29 W0.19 N1.30 S1.71 d11 0.55 goal=0 here=0
+02:37:40 route leg0 H90: (-3.28,1.61) E0.31 W0.21 N1.17 S1.87 d11 0.59 goal=0 here=0
+02:37:40 route leg0 H90: (-3.28,1.76) E0.28 W0.18 N0.96 S1.97 d11 0.64 goal=0 here=0
+02:37:40 route leg0 H90: (-3.28,1.91) E0.27 W0.16 N0.80 S2.09 d11 0.69 goal=0 here=0
+02:37:40 route leg0 H90: (-3.27,2.07) E0.31 W0.22 N0.71 S2.09 d11 0.73 goal=0 here=0
+02:37:40 route leg0 H90: (-3.24,2.22) E0.25 W0.22 N0.57 S1.76 d11 0.78 goal=0 here=0
+02:37:40 route leg0 H90: (-3.22,2.37) E1.30 W0.23 N0.45 S1.90 d11 0.82 goal=0 here=0
+02:37:40 route leg0 H90: (-3.20,2.53) E0.76 W0.31 N0.27 S1.79 d11 0.87 goal=0 here=0
+02:37:40 route leg0 H90: (-3.18,2.66) E0.75 W0.29 N0.15 S2.63 d11 0.91 goal=0 here=0
+02:37:40 route leg0 H90: stop:obstacle 0.14
+02:37:40 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:40 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:40 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:40 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:40 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:55 route leg1 H0: (-3.03,2.67) E0.55 W0.45 N0.12 S0.65 d11 0.90 goal=0 here=0
+02:37:55 route leg1 H0: (-2.88,2.65) E0.44 W0.63 N0.16 S0.96 d11 0.88 goal=0 here=0
+02:37:55 route leg1 H0: (-2.73,2.60) E0.34 W0.73 N0.23 S0.79 d11 0.83 goal=0 here=0
+02:37:55 route leg1 H0: (-2.61,2.51) E0.20 W0.82 N0.30 S0.77 d11 0.78 goal=0 here=0
+02:37:55 route leg1 H0: (-2.51,2.40) E0.12 W0.96 N-1.00 S0.62 d11 0.74 goal=0 here=0
+02:37:55 route leg1 H0: (-2.48,2.36) E0.10 W0.93 N0.37 S1.13 d11 0.73 goal=0 here=0
+02:37:55 route leg1 H0: stop:obstacle 0.08
+02:37:55 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:55 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:55 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:55 RX: A: GOAL FOUND! my status here=1 at my (7.5,-0.3) = your (-0.4,-0.3): just SW of YOUR START, south side of main corridor's east end. I STAY on it. Come
+02:37:55 RX: A: I am ON the goal (here=1), staying still. RSSI now=0.745. You are within ~1 unit when RSSI>0.85; odometry drifts, trust RSSI: 0.95+ = on me. Goal i
+02:38:07 route leg2 H270: (-2.49,2.21) E0.10 W0.92 N0.42 S0.56 d11 0.73 goal=0 here=0
+02:38:07 route leg2 H270: (-2.51,2.06) E0.60 W0.43 N0.55 S0.41 d11 0.69 goal=0 here=0
+02:38:07 route leg2 H270: (-2.51,1.90) E0.56 W0.43 N0.69 S0.30 d11 0.66 goal=0 here=0
+02:38:07 route leg2 H270: (-2.49,1.76) E0.50 W0.44 N0.88 S0.15 d11 0.61 goal=0 here=0
+02:38:07 route leg2 H270: stop:obstacle 0.16
+02:38:07 RX: A: I am ON the goal (here=1), staying still. RSSI now=0.732. You are within ~1 unit when RSSI>0.85; odometry drifts, trust RSSI: 0.95+ = on me. Goal i
+02:38:07 RX: A: I am ON the goal (here=1), staying still. RSSI now=0.690. You are within ~1 unit when RSSI>0.85; odometry drifts, trust RSSI: 0.95+ = on me. Goal i
+02:38:07 RX: A: I am ON the goal (here=1), staying still. RSSI now=0.646. You are within ~1 unit when RSSI>0.85; odometry drifts, trust RSSI: 0.95+ = on me. Goal i
+02:38:14 route leg3 H0: (-2.33,1.75) E0.36 W0.64 N0.36 S0.48 d11 0.59 goal=0 here=0
+02:38:14 route leg3 H0: (-2.18,1.73) E0.22 W0.79 N0.44 S0.62 d11 0.56 goal=0 here=0
+02:38:14 route leg3 H0: opening S
+02:38:24 route leg4 H270: (-2.18,1.58) E0.49 W0.26 N0.52 S0.42 d11 0.53 goal=0 here=0
+02:38:24 route leg4 H270: (-2.16,1.42) E0.71 W-1.00 N0.69 S0.27 d11 0.50 goal=0 here=0
+02:38:24 route leg4 H270: (-2.15,1.29) E0.80 W0.23 N0.81 S0.17 d11 0.47 goal=0 here=0
+02:38:24 route leg4 H270: stop:obstacle 0.16
+02:38:35 route leg5 H0: (-2.00,1.28) E0.58 W-1.00 N0.82 S0.20 d11 0.44 goal=0 here=0
+02:38:35 route leg5 H0: (-1.85,1.28) E0.43 W0.54 N0.30 S0.64 d11 0.43 goal=0 here=0
+02:38:35 route leg5 H0: (-1.69,1.27) E0.27 W0.69 N0.33 S0.68 d11 0.41 goal=0 here=0
+02:38:35 route leg5 H0: (-1.57,1.27) E0.14 W0.84 N0.32 S0.61 d11 0.40 goal=0 here=0
+02:38:35 route leg5 H0: stop:obstacle 0.15
+02:38:45 route leg6 H270: (-1.56,1.12) E0.16 W0.55 N0.44 S0.46 d11 0.38 goal=0 here=0
+02:38:45 route leg6 H270: (-1.57,0.96) E0.18 W0.73 N0.64 S0.33 d11 0.35 goal=0 here=0
+02:38:45 route leg6 H270: (-1.59,0.82) E0.15 W1.32 N0.77 S0.16 d11 0.33 goal=0 here=0
+02:38:45 route leg6 H270: stop:obstacle 0.15
+02:38:45 route end tick=305834 goal=0 here=0 tx=115:lost
+02:40:10 WALL start -1.59,0.82 h 265 side R
+02:40:11 *** STATUS CHANGE tick=314413 goal=0 here=0 tx=115:lost
+02:40:13 wall -1.60,0.82 h30 d11 0.335 front 0.15 side 0.24 mode turnaway
+02:40:16 wall -1.55,0.95 h69 d11 0.359 front 0.22 side 0.14 mode follow
+02:40:19 wall -1.54,1.15 h92 d11 0.377 front 0.42 side 0.13 mode follow
+02:40:21 wall -1.55,1.33 h90 d11 0.397 front 0.22 side 0.21 mode follow
+02:40:24 wall -1.60,1.41 h148 d11 0.417 front 0.26 side 0.23 mode follow
+02:40:27 wall -1.73,1.46 h180 d11 0.451 front 0.68 side 0.19 mode follow
+02:40:29 wall -1.98,1.46 h179 d11 0.481 front 0.43 side 0.29 mode follow
+02:40:32 wall -2.20,1.55 h132 d11 0.539 front 1.52 side 0.31 mode follow
+02:40:34 wall -2.29,1.77 h88 d11 0.586 front 0.34 side 0.29 mode follow
+02:40:37 wall -2.23,1.93 h40 d11 0.603 front 0.28 side 0.39 mode follow
+02:40:40 wall -2.14,1.96 h65 d11 0.608 front 0.21 side 0.20 mode turnaway
+02:40:43 wall -2.19,1.97 h168 d11 0.620 front 1.28 side 0.20 mode follow
+02:40:45 wall -2.43,2.02 h171 d11 0.680 front 0.51 side 0.12 mode follow
+02:40:45 !!! RX GOAL: A: ROUTE: go to the pocket where we met (E-W stub, RSSI 0.95 spot). Take its SE exit (the corridor going SOUTH at pocket's east side, ~x=-0.5 in your frame). Go straight SOUTH ~0.8, crossing the main 
+02:40:47 wall -2.65,2.12 h141 d11 0.736 front 0.73 side 0.27 mode follow
+02:40:49 !!! RX GOAL: A: ROUTE: go to the pocket where we met (E-W stub, RSSI 0.95 spot). Take its SE exit (the corridor going SOUTH at pocket's east side, ~x=-0.5 in your frame). Go straight SOUTH ~0.8, crossing the main 
+02:40:50 wall -2.75,2.32 h96 d11 0.811 front 0.30 side 0.29 mode follow
+02:40:52 !!! RX GOAL: A: ROUTE: go to the pocket where we met (E-W stub, RSSI 0.95 spot). Take its SE exit (the corridor going SOUTH at pocket's east side, ~x=-0.5 in your frame). Go straight SOUTH ~0.8, crossing the main 
+02:40:53 wall -2.70,2.48 h51 d11 0.845 front 0.19 side 0.38 mode turnaway
+02:40:55 !!! RX GOAL: A: ROUTE: go to the pocket where we met (E-W stub, RSSI 0.95 spot). Take its SE exit (the corridor going SOUTH at pocket's east side, ~x=-0.5 in your frame). Go straight SOUTH ~0.8, crossing the main 
+02:40:56 wall -2.76,2.49 h166 d11 0.843 front 0.28 side 0.18 mode follow
+02:40:58 d11>0.9 stop at -2.93 2.52
+02:40:58 WALL stop
+02:43:13 r2 step A: east 0.25 then south into pocket corridor
+02:43:18 r2 H0 (-2.68,2.25) E0.39 W0.68 N0.37 S0.65 d11 0.80 goal=0 here=0
+02:43:20 r2 H0 (-2.58,2.23) E0.30 W0.78 N0.41 S0.58 d11 0.78 goal=0 here=0
+02:43:24 r2 H270 (-2.58,2.08) E0.37 W0.24 N0.54 S0.54 d11 0.73 goal=0 here=0
+02:43:27 r2 H270 (-2.56,1.92) E0.76 W0.22 N0.71 S0.38 d11 0.69 goal=0 here=0
+02:43:29 r2 H270 (-2.54,1.77) E0.67 W0.31 N0.84 S0.21 d11 0.65 goal=0 here=0
+02:43:30 r2 H270 (-2.54,1.72) E0.66 W0.28 N0.86 S0.17 d11 0.64 goal=0 here=0
+02:43:30 r2 south-> obstacle 0.16
+02:43:35 r2 H0 (-2.39,1.72) E0.52 W0.47 N0.86 S0.14 d11 0.61 goal=0 here=0
+02:43:37 r2 H0 (-2.24,1.72) E0.37 W0.59 N0.39 S0.66 d11 0.60 goal=0 here=0
+02:43:40 r2 H0 (-2.08,1.72) E0.22 W0.78 N0.39 S0.62 d11 0.57 goal=0 here=0
+02:43:41 r2 H0 (-2.01,1.71) E0.15 W0.84 N0.40 S0.60 d11 0.55 goal=0 here=0
+02:43:41 r2 east-> obstacle 0.15
+02:43:41 r2 end tick=335431 goal=0 here=0 tx=119:ok d11 0.547
+02:45:52 r3 H180 (-2.96,2.20) E0.29 W0.74 N0.43 S0.62 d11 0.56 goal=0 here=0
+02:45:56 r3 H270 (-2.97,2.05) E0.83 W0.19 N0.57 S0.47 d11 0.54 goal=0 here=0
+02:45:58 r3 H270 (-2.99,1.90) E0.88 W0.17 N0.70 S0.31 d11 0.51 goal=0 here=0
+02:45:58 r3 S1-> cond
+02:46:03 r3 H0 (-2.84,1.89) E0.78 W0.31 N0.74 S0.27 d11 0.49 goal=0 here=0
+02:46:06 r3 H0 (-2.68,1.88) E0.62 W0.47 N0.29 S0.31 d11 0.47 goal=0 here=0
+02:46:08 r3 H0 (-2.53,1.86) E0.46 W0.61 N0.24 S0.75 d11 0.44 goal=0 here=0
+02:46:08 r3 E1-> cond
+02:46:13 r3 H270 (-2.53,1.71) E0.42 W0.58 N0.42 S0.59 d11 0.42 goal=0 here=0
+02:46:15 r3 H270 (-2.56,1.56) E0.48 W0.10 N0.54 S0.43 d11 0.39 goal=0 here=0
+02:46:18 r3 H270 (-2.57,1.40) E0.42 W1.08 N0.71 S0.30 d11 0.37 goal=0 here=0
+02:46:20 r3 H270 (-2.58,1.26) E0.45 W1.13 N0.84 S0.16 d11 0.36 goal=0 here=0
+02:46:20 r3 S2-> obstacle 0.14
+02:46:20 r3 final scan 262:0.15 285:0.16 307:0.26 330:0.28 352:0.44 15:0.49 37:0.61 60:0.92 82:0.83 105:0.32 127:0.45 150:1.17 172:1.15 195:0.59 217:0.23 240:0.21
+02:46:20 r3 end tick=351365 goal=0 here=0 tx=119:ok d11 0.352
+02:47:20 WALL start -2.58,1.26 h 264 side R
+02:47:21 *** STATUS CHANGE tick=357400 goal=0 here=0 tx=120:lost
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:21 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:23 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:24 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:24 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:24 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:24 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:47:24 wall -2.50,1.28 h15 d11 0.347 front 0.38 side 0.19 mode follow
+02:47:26 wall -2.33,1.29 h359 d11 0.332 front 0.18 side 0.17 mode turnaway
+02:47:29 wall -2.29,1.37 h55 d11 0.346 front 0.24 side 0.16 mode follow
+02:47:32 wall -2.25,1.53 h88 d11 0.373 front 0.54 side 0.17 mode follow
+02:47:34 wall -2.26,1.74 h97 d11 0.375 front 0.33 side 0.13 mode follow
+02:47:37 wall -2.26,1.85 h133 d11 0.405 front 0.20 side 0.16 mode turnaway
+02:47:39 wall -2.37,1.94 h152 d11 0.432 front 0.21 side 0.13 mode follow
+02:47:42 wall -2.55,1.95 h177 d11 0.455 front 0.59 side 0.14 mode follow
+02:47:44 wall -2.79,1.97 h162 d11 0.485 front 3.00 side 0.31 mode follow
+02:47:47 wall -2.97,2.12 h119 d11 0.549 front 1.08 side 0.30 mode follow
+02:47:49 wall -3.01,2.31 h76 d11 0.618 front 0.29 side 0.31 mode follow
+02:47:52 wall -2.90,2.44 h16 d11 0.609 front 0.26 side 0.89 mode follow
+02:47:54 wall -2.87,2.44 h111 d11 0.603 front 0.16 side 0.27 mode turnaway
+02:47:57 wall -3.02,2.48 h165 d11 0.650 front 1.20 side 0.11 mode follow
+02:48:00 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:00 wall -3.24,2.54 h161 d11 0.714 front 1.00 side 0.26 mode follow
+02:48:02 wall -3.43,2.69 h120 d11 0.767 front 0.51 side 0.32 mode follow
+02:48:03 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:05 wall -3.46,2.88 h78 d11 0.838 front 0.23 side 0.30 mode follow
+02:48:06 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:08 wall -3.43,2.96 h132 d11 0.838 front 0.15 side 0.21 mode turnaway
+02:48:09 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:10 wall -3.58,2.99 h174 d11 0.867 front 0.60 side 0.12 mode follow
+02:48:13 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:13 wall -3.75,3.01 h187 d11 0.905 front 0.44 side 0.14 mode turnaway
+02:48:16 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:16 wall -3.93,2.96 h199 d11 0.894 front 0.26 side 0.12 mode follow
+02:48:18 wall -4.00,2.93 h269 d11 0.890 front 2.60 side 0.20 mode follow
+02:48:19 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:21 wall -4.03,2.73 h266 d11 0.837 front 0.26 side 0.16 mode follow
+02:48:22 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:23 wall -4.02,2.50 h275 d11 0.760 front 2.39 side 0.13 mode follow
+02:48:25 RX: A: YES here=1 right now, still. My spot: tiny E-W nook. Wall 0.2 SOUTH of me, 0.7 free EAST, 0.5 free WEST, 0.3 NORTH. Only entrance: a 1.5-long passage coming 
+02:48:26 wall -4.00,2.26 h273 d11 0.705 front 2.19 side 0.12 mode follow
+02:48:28 wall -3.97,2.00 h276 d11 0.612 front 1.95 side 0.17 mode follow
+02:48:31 wall -3.99,1.75 h260 d11 0.538 front 0.62 side 0.21 mode follow
+02:48:33 wall -4.04,1.57 h250 d11 0.508 front 0.19 side 0.14 mode follow
+02:48:36 wall -4.01,1.38 h283 d11 0.444 front 1.31 side 0.11 mode follow
+02:48:38 wall -3.98,1.13 h274 d11 0.399 front 1.04 side 0.17 mode follow
+02:48:41 wall -3.98,0.87 h266 d11 0.360 front 0.25 side 0.18 mode follow
+02:48:44 wall -3.99,0.67 h274 d11 0.315 front 0.59 side 0.12 mode follow
+02:48:46 wall -3.96,0.44 h275 d11 0.291 front 0.38 side 0.21 mode follow
+02:48:48 wall -3.96,0.29 h291 d11 0.274 front 0.20 side 0.15 mode turnaway
+02:48:51 wall -3.87,0.23 h319 d11 0.265 front 0.20 side 0.15 mode turnaway
+02:48:54 wall -3.85,0.27 h50 d11 0.281 front 0.26 side 0.27 mode follow
+02:48:57 wall -3.80,0.42 h86 d11 0.280 front 2.64 side 0.18 mode follow
+02:48:59 wall -3.79,0.64 h83 d11 0.320 front 0.27 side 0.12 mode follow
+02:49:02 wall -3.79,0.81 h94 d11 0.354 front 2.24 side 0.14 mode follow
+02:49:04 wall -3.83,1.03 h106 d11 0.382 front 1.13 side 0.14 mode follow
+02:49:06 wall -3.89,1.28 h92 d11 0.431 front 1.75 side 0.17 mode follow
+02:49:09 wall -3.89,1.51 h83 d11 0.495 front 1.60 side 0.22 mode follow
+02:49:11 wall -3.83,1.75 h76 d11 0.539 front 0.29 side 0.14 mode follow
+02:49:14 wall -3.80,1.91 h86 d11 0.573 front 1.20 side 0.16 mode turnaway
+02:49:17 wall -3.82,2.14 h98 d11 0.650 front 0.94 side 0.15 mode follow
+02:49:19 wall -3.85,2.38 h98 d11 0.726 front 0.70 side 0.20 mode follow
+02:49:21 wall -3.83,2.64 h79 d11 0.800 front 0.49 side 0.18 mode follow
+02:49:24 wall -3.72,2.80 h17 d11 0.843 front 0.60 side 0.18 mode follow
+02:49:27 wall -3.47,2.76 h326 d11 0.785 front 0.94 side 0.31 mode follow
+02:49:29 wall -3.35,2.56 h283 d11 0.722 front 0.44 side 3.00 mode follow
+02:49:32 wall -3.39,2.35 h230 d11 0.681 front 0.26 side 0.35 mode follow
+02:49:35 wall -3.42,2.33 h319 d11 0.668 front 0.27 side 0.31 mode turnaway
+02:49:37 wall -3.26,2.24 h326 d11 0.636 front 1.38 side 0.23 mode follow
+02:49:39 wall -3.06,2.14 h335 d11 0.585 front 0.99 side 0.30 mode follow
+02:49:42 wall -2.89,1.97 h293 d11 0.511 front 0.45 side 0.29 mode follow
+02:49:44 wall -2.88,1.82 h270 d11 0.480 front 0.18 side 0.27 mode turnaway
+02:49:47 wall -2.81,1.76 h310 d11 0.456 front 0.21 side 0.33 mode turnaway
+02:49:49 wall -2.62,1.69 h339 d11 0.429 front 0.56 side 0.13 mode follow
+02:49:52 wall -2.52,1.53 h264 d11 0.388 front 0.42 side 0.21 mode follow
+02:49:54 wall -2.61,1.37 h221 d11 0.370 front 0.32 side 0.28 mode follow
+02:49:57 wall -2.78,1.30 h185 d11 0.374 front 0.83 side 0.28 mode follow
+02:49:59 wall -3.01,1.35 h149 d11 0.408 front 0.78 side 0.28 mode follow
+02:50:02 wall -3.20,1.50 h147 d11 0.462 front 0.55 side 0.14 mode follow
+02:50:04 wall -3.37,1.65 h126 d11 0.485 front 0.52 side 0.25 mode follow
+02:50:07 wall -3.44,1.82 h109 d11 0.535 front 0.21 side 0.29 mode turnaway
+02:50:10 wall -3.45,1.81 h233 d11 0.549 front 0.30 side 0.29 mode follow
+02:50:12 wall -3.51,1.72 h264 d11 0.516 front 0.30 side 0.19 mode follow
+02:50:15 wall -3.53,1.55 h272 d11 0.478 front 1.46 side 0.16 mode follow
+02:50:17 wall -3.52,1.31 h271 d11 0.436 front 1.19 side 0.19 mode follow
+02:50:20 wall -3.53,1.06 h266 d11 0.390 front 0.26 side 0.17 mode follow
+02:50:22 wall -3.52,0.86 h287 d11 0.347 front 0.80 side 0.13 mode follow
+02:50:25 wall -3.46,0.63 h282 d11 0.296 front 0.60 side 0.18 mode follow
+02:50:27 wall -3.43,0.39 h268 d11 0.285 front 0.36 side 0.19 mode follow
+02:50:30 wall -3.45,0.24 h267 d11 0.257 front 0.17 side 0.20 mode turnaway
+02:50:33 wall -3.36,0.23 h356 d11 0.254 front 1.26 side 0.20 mode follow
+02:50:35 wall -3.18,0.21 h359 d11 0.263 front 3.00 side 0.12 mode follow
+02:50:38 wall -2.92,0.22 h5 d11 0.246 front 0.87 side 0.17 mode follow
+02:50:40 wall -2.68,0.22 h357 d11 0.235 front 0.61 side 0.14 mode follow
+02:50:43 wall -2.45,0.21 h359 d11 0.240 front 0.27 side 0.21 mode follow
+02:50:45 wall -2.35,0.21 h44 d11 0.220 front 0.29 side 0.19 mode follow
+02:50:48 wall -2.27,0.29 h69 d11 0.230 front 0.29 side 0.24 mode turnaway
+02:50:51 wall -2.22,0.43 h84 d11 0.238 front 0.64 side 0.14 mode follow
+02:50:53 wall -2.17,0.66 h43 d11 0.262 front 0.51 side 0.83 mode follow
+02:50:56 wall -1.97,0.69 h339 d11 0.255 front 0.39 side 0.34 mode follow
+02:50:58 wall -1.80,0.51 h288 d11 0.223 front 0.44 side 0.30 mode follow
+02:51:01 wall -1.80,0.33 h246 d11 0.205 front 0.24 side 0.28 mode follow
+02:51:03 wall -1.87,0.24 h258 d11 0.206 front 0.19 side 0.14 mode turnaway
+02:51:06 wall -1.80,0.23 h355 d11 0.200 front 1.24 side 0.17 mode follow
+02:51:09 wall -1.54,0.23 h359 d11 0.191 front 0.97 side 0.14 mode follow
+02:51:11 wall -1.30,0.23 h3 d11 0.176 front 0.71 side 0.12 mode follow
+02:51:13 wall -1.06,0.22 h354 d11 0.169 front 0.50 side 3.00 mode follow
+02:51:16 wall -0.87,0.20 h352 d11 0.167 front 0.23 side 0.15 mode turnaway
+02:51:19 wall -0.77,0.25 h27 d11 0.170 front 0.19 side 0.17 mode follow
+02:51:21 wall -0.68,0.35 h51 d11 0.167 front 0.22 side 0.15 mode follow
+02:51:24 wall -0.67,0.50 h93 d11 0.168 front 1.57 side 0.18 mode follow
+02:51:26 wall -0.68,0.74 h90 d11 0.182 front 1.33 side 0.16 mode follow
+02:51:29 wall -0.69,0.98 h96 d11 0.189 front 1.09 side 0.11 mode follow
+02:51:31 wall -0.72,1.22 h90 d11 0.196 front 0.86 side 0.20 mode follow
+02:51:33 wall -0.72,1.46 h89 d11 0.211 front 3.00 side 0.15 mode follow
+02:51:36 wall -0.71,1.70 h87 d11 0.235 front 0.28 side 0.16 mode follow
+02:51:39 wall -0.71,1.88 h100 d11 0.231 front 0.22 side 0.18 mode follow
+02:51:41 wall -0.80,1.95 h140 d11 0.244 front 0.19 side 0.27 mode follow
+02:51:44 wall -0.98,1.98 h172 d11 0.267 front 0.67 side 0.18 mode follow
+02:51:46 wall -1.21,2.03 h159 d11 0.298 front 0.48 side 0.28 mode follow
+02:51:49 wall -1.39,2.19 h118 d11 0.326 front 0.52 side 0.30 mode follow
+02:51:51 wall -1.42,2.42 h78 d11 0.343 front 0.68 side 0.27 mode follow
+02:51:54 wall -1.30,2.63 h43 d11 0.326 front 0.94 side 0.27 mode follow
+02:51:56 wall -1.10,2.75 h6 d11 0.306 front 0.48 side 0.58 mode follow
+02:51:59 wall -0.89,2.67 h314 d11 0.283 front 0.29 side 0.29 mode follow
+02:52:01 wall -0.80,2.49 h278 d11 0.270 front 0.35 side 0.29 mode follow
+02:52:04 wall -0.83,2.35 h263 d11 0.278 front 0.20 side 0.29 mode turnaway
+02:52:07 wall -0.83,2.35 h43 d11 0.251 front 0.30 side 0.26 mode turnaway
+02:52:09 wall -0.77,2.50 h59 d11 0.257 front 0.24 side 0.23 mode follow
+02:52:12 wall -0.71,2.62 h93 d11 0.273 front 1.06 side 0.14 mode follow
+02:52:14 wall -0.74,2.87 h102 d11 0.249 front 0.85 side 0.15 mode follow
+02:52:17 wall -0.78,3.13 h99 d11 0.268 front 0.53 side 0.16 mode follow
+02:52:19 wall -0.81,3.35 h94 d11 0.289 front 0.31 side 0.22 mode follow
+02:52:22 wall -0.81,3.48 h117 d11 0.302 front 0.18 side 0.25 mode turnaway
+02:52:25 wall -0.91,3.56 h146 d11 0.313 front 0.20 side 0.13 mode turnaway
+02:52:27 wall -1.05,3.56 h180 d11 0.319 front 1.13 side 0.15 mode follow
+02:52:30 wall -1.30,3.52 h193 d11 0.365 front 0.92 side 0.17 mode follow
+02:52:32 wall -1.53,3.51 h169 d11 0.400 front 0.65 side 0.20 mode follow
+02:52:35 wall -1.71,3.53 h178 d11 0.449 front 0.48 side 0.15 mode turnaway
+02:52:37 wall -1.87,3.51 h188 d11 0.465 front 0.25 side 0.12 mode follow
+02:52:40 wall -1.95,3.46 h234 d11 0.508 front 0.28 side 0.28 mode turnaway
+02:52:43 wall -2.00,3.36 h270 d11 0.504 front 1.44 side 0.18 mode follow
+02:52:45 wall -2.03,3.17 h264 d11 0.493 front 1.03 side 0.12 mode follow
+02:52:48 wall -2.02,2.93 h272 d11 0.481 front 1.71 side 0.19 mode follow
+02:52:50 wall -2.01,2.68 h272 d11 0.467 front 1.50 side 0.16 mode follow
+02:52:53 wall -2.12,2.50 h205 d11 0.462 front 0.60 side 1.18 mode follow
+02:52:55 wall -2.30,2.51 h152 d11 0.506 front 0.37 side 0.35 mode follow
+02:52:58 wall -2.42,2.64 h117 d11 0.554 front 0.37 side 0.27 mode follow
+02:53:00 wall -2.44,2.84 h76 d11 0.578 front 0.80 side 0.30 mode follow
+02:53:03 wall -2.35,3.00 h56 d11 0.569 front 0.24 side 0.15 mode turnaway
+02:53:05 wall -2.33,3.12 h90 d11 0.576 front 0.26 side 0.15 mode turnaway
+02:53:08 wall -2.34,3.32 h93 d11 0.583 front 0.35 side 0.13 mode follow
+02:53:10 wall -2.36,3.45 h111 d11 0.607 front 0.19 side 0.21 mode turnaway
+02:53:13 wall -2.48,3.47 h166 d11 0.636 front 0.26 side 0.22 mode follow
+02:53:16 wall -2.68,3.50 h178 d11 0.693 front 0.28 side 0.12 mode follow
+02:53:18 wall -2.86,3.49 h196 d11 0.744 front 1.35 side 0.15 mode follow
+02:53:21 wall -3.10,3.43 h190 d11 0.823 front 1.04 side 0.20 mode follow
+02:53:23 wall -3.35,3.42 h173 d11 0.893 front 0.88 side 0.23 mode follow
+02:53:26 wall -3.58,3.45 h175 d11 0.942 front 0.65 side 0.13 mode follow
+02:53:28 wall -3.78,3.48 h145 d11 0.975 front 0.21 side 0.59 mode follow
+02:53:29 d11>0.9 stop at -3.8 3.49
+02:53:29 WALL stop
