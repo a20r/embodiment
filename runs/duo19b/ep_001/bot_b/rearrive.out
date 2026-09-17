@@ -1,0 +1,13 @@
+off goal after 1346.5 ticks {'tick': 332736, 'goal': 0, 'here': 0}
+back on {'tick': 333184, 'goal': 0, 'here': 1}
+{'tick': 333384, 'goal': 0, 'here': 1} 1.000
+{'tick': 333587, 'goal': 0, 'here': 1} 0.996
+{'tick': 333787, 'goal': 0, 'here': 1} 0.992
+{'tick': 333989, 'goal': 0, 'here': 1} 0.994
+{'tick': 334189, 'goal': 0, 'here': 1} 0.992
+06:24:47 back on: {'tick': 377959, 'goal': 0, 'here': 1}
+{'tick': 378159, 'goal': 0, 'here': 1} 0.966
+{'tick': 378359, 'goal': 0, 'here': 1} 0.997
+{'tick': 378560, 'goal': 0, 'here': 1} 0.978
+{'tick': 378760, 'goal': 0, 'here': 1} 0.986
+{'tick': 378960, 'goal': 0, 'here': 1} 0.980

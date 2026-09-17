@@ -1,0 +1,17 @@
+05:31:37 RX: Robot B here (call me B). Got your msg. I am in narrow corridors (~0.5 wide), walls 0.1-0.4 around. No goal found yet. My odom: moved ~1.5 north from start. Whats your surroundings? Propose: each explore, report goal coords when found, and keep talking.
+05:32:21 RX: B: Question: do you have a float port reading ~0.2-0.9 that drifts (mine is d11)? I suspect it is radio signal strength between us. Please report your d11-like value + whether you are moving. Also: what does your d3 status line say (mine: goal=0 here=0)? I
+05:36:23 RX: B: Great! Stay parked. I will home in on d11. My d11 readings: ~0.93 at one spot, 0.41 at another 0.8 away. Give me a few minutes; I will report d11 as I go.
+05:45:25 RX: B: Have you moved at all since parking? My d11 rose 0.40->0.87 over 45s while I sat still, so either you moved or d11 lags. Test: stay perfectly still 2 min and tell me your d11 every 30s. Also describe the goal spot: what do your 16 range beams show there
+06:03:38 RX: B: I am exploring now, climbing d11. Please park on the goal and stay. Send your d11 every 60s.
+06:04:15 RX: B: Stopped, staying still. My compass heading=296. Ranges compassdir:meters -> 296:0.72 318:0.67 341:0.12 3:0.10 26:0.13 48:0.51 71:0.37 93:0.99 116:2.66 138:0.65 161:0.53 183:0.49 206:0.28 228:0.23 251:0.15 273:0.25. Which of these is you? Move a little a
+06:05:32 RX: B: Saw you at 0.1m just north of me, then you left toward compass ~100. Following you along the long corridor toward compass 115. Protocol: wait at each hop until your d11 ~1.0 (me adjacent), then hop again and tell me the compass direction you moved.
+06:07:15 RX: B: Got it: 185 for 0.9 then 140 for 0.7. Go ahead now; I follow 20s behind. Park on the goal and stay.
+06:11:24 RX: B: MY here=1 NOW! I am on the goal and staying still. Is your here=1 right now? If not, move back onto the goal zone. My d3 says goal=0 so far.
+06:14:46 RX: B: My here=1 for 3+ min now, but goal=0, so your here must be 0. Please read your d3 line now. If here=0, move ~0.2 toward me (compass ~300, I am 0.15 NW of you) until your here=1, then stop. Reply with your d3 line.
+06:17:05 RX: B: Agree. RE-ARRIVAL PROTOCOL: 1) Both step OFF the zone now (~0.3m, confirm here=0). Reply OFF. 2) Then YOU step back ON and send ON immediately. 3) I step on within 15s of receiving ON. Stepping off now.
+06:20:35 RX: B: Failed: you re-entered exactly on my entry spot, I was blocked by you (0.1m) and could not get here=1. REDO: 1) step OFF, going SOUTH-EAST 0.5m away from my side, reply OFF. 2) Step ON but stop at least 0.3m SE of your last spot (deep in zone), send ON.
+06:21:59 RX: B: ON! My here=1 now. Stay still.
+06:22:47 RX: B: Both here=1 now but my goal flag still 0. Lets both STAY STILL on the zone for several minutes; completion may be judged externally. Do not move.
+06:24:42 RX: B: I am OFF now (here=0), NW of zone. Now YOU step ON, verify here=1, send ON. I step on within 15s.
+06:25:33 RX: B: ON, here=1 now (06:25:xx). Staying.
+06:26:29 RX: B: goal=1 on my side too. Well done, partner!
