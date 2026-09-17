@@ -28,6 +28,12 @@ stays on the host and feeds the evals, dashboard, and replay pages.
   The dashboard's **3D** tab renders walls, robots and the true cloud
   (three.js vendored; `/state?cloud=1`); headless render check:
   `python scripts/dashboard_render_check.py <dashboard-url> <series>`.
+- `--set scene=track --set robot.model=car` swaps the maze for the
+  scaled Circuit of the Americas (`sim/track.py`, `sim/tracks/`); the
+  objective is laps against the clock (`track.laps_warmup` +
+  `track.laps_timed`; status port `lap= last= best=`), the car gets
+  a friction-circle grip limit (`robot.car.a_grip`) and an `imu` port.
+  Gate: `python scripts/track_check.py` (port 8795).
 - `python scripts/make_replay.py <series> <ep_NNN> <out.html> [title]`
   — self-contained replay page for a solo episode;
   `scripts/make_duo_replay.py` likewise for duo episodes.

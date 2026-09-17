@@ -144,6 +144,36 @@ and a runtime `/rtf` change does not retune it), matching the README's
 "within one minute of each other".  Contingent-reply metrics for a finished
 duo: `python -m evals.comms <series>`.
 
+## 6b. Race track scene (scene: track)
+
+A closed circuit replaces the maze: the Circuit of the Americas
+centerline (`sim/tracks/austin.csv`, TUM racetrack-database, CC-BY-4.0)
+scaled by `track.scale` (0.07 -> 386 m long, ~1 m wide; edges are hard
+barriers).  Requires `robot.model: car`, solo only.  The objective is
+laps against the clock: `track.laps_warmup` untimed, then
+`track.laps_timed`; the run ends (`solved`) when they are complete.
+
+```bash
+./botctl run --set scene=track --set robot.model=car \
+  --set robot.car.a_grip=1.5 --set robot.car.v_max=2.0 \
+  --set robot.car.accel_max=1.5 --set lidar.max_range=6 \
+  --set labels=off --set prompt_variant=race --set readme_variant=race \
+  --set container.image=mazebot-bot-np --set series.name=cota1
+```
+
+Grip (`robot.car.a_grip`, m/s^2; 0 = the old kinematic car): a
+friction circle caps the combined lateral/longitudinal acceleration,
+so fast corners understeer and scrub speed (`slide_scrub`).  The race
+car gains an anonymous `imu` port (`ax,ay,wz`: achieved accelerations
+and yaw rate) beside the speedometer.  The status port reads
+`tick=N goal=0 lap=K last=xx.x best=yy.y`; ground truth logs `lap`,
+`lap_rejected` (a crossing without 90% of the sectors) and the tick
+`slip` flag.  README variants: `race` (barebones + the lap
+instruction) and `race_nn` (adds one sentence demanding a neural
+controller).  `Dockerfile.bot-np` is the bot image plus NumPy.  Gate:
+`python scripts/track_check.py` (port 8795; `TRACK_DEMO_DIR=<dir>`
+also writes a demo episode for the renderers).
+
 ## 7. Other model providers
 
 The agent model is selected by `model:` (config.yaml or `--set model=`).

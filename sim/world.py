@@ -89,6 +89,9 @@ class World:
                  bot_id="", spawn_cell=None, spawn_theta=0.0):
         self.cfg = cfg
         self.maze = maze
+        # A Track duck-types the Maze surface; only lap timing branches.
+        self.track = maze if getattr(maze, "kind", "") == "track" else None
+        self.track_cfg = cfg.get("track", {})
         self.noise = cfg["noise"]
         self.robot_cfg = cfg["robot"]
         # Duo: a second World may share this maze.  The peer shows up on
@@ -200,6 +203,23 @@ class World:
             self.goal_reached = False
             self.goal_tick = None
             self.region_entry = None   # tick of current goal-region stay
+            # Track scene: lap counter, times, sectors visited since the
+            # last start-line crossing (a lap must visit 90% of them).
+            self.lap = 0
+            self.lap_start_tick = 0
+            self.laps = []             # timed lap durations, s
+            self.last_lap = None
+            self.best_lap = None
+            self._cp_seen = set()
+            self._track_idx = None
+            # Grip: sliding flag and achieved (longitudinal, lateral)
+            # acceleration, what the IMU reports.
+            self.slipping = False
+            self.slide_ticks = 0
+            self.acc = (0.0, 0.0)
+            if self.track is not None:
+                self._track_idx = self.track.nearest_index(self.x, self.y)
+                self._cp_seen.add(self.track.sector(self._track_idx))
             self.trail = []            # [(tick, x, y)]
             self.events = []           # experimenter-facing event tail
             self._event(dict(event="reset",
@@ -283,11 +303,8 @@ class World:
                     slip = self.rng_slip.gauss(n["slip_mu"],
                                                n["slip_sigma"])
                     slip = max(0.0, min(0.5, slip))
-                a = self.cmd_eff["accel"] / 255.0 \
+                a_cmd = self.cmd_eff["accel"] / 255.0 \
                     * c.get("accel_max", 0.4) * (1.0 - slip)
-                self.v += (a - c.get("drag", 0.35) * self.v) * self.dt
-                self.v = max(-c.get("v_rev_max", 0.15),
-                             min(c.get("v_max", 0.5), self.v))
                 phi_target = self.cmd_eff["steer"] / 255.0 \
                     * math.radians(c.get("steer_max_deg", 35.0))
                 rate = math.radians(c.get("steer_rate_deg_s", 120.0)) \
@@ -295,7 +312,36 @@ class World:
                 dphi = max(-rate, min(rate, phi_target - self.phi))
                 self.phi += dphi
                 L = c.get("wheelbase", 0.12)
-                self.w = self.v / L * math.tan(self.phi)
+                w_kin = self.v / L * math.tan(self.phi)
+                # Friction circle: the tyres deliver at most a_grip of
+                # combined acceleration.  Over the limit both the yaw
+                # rate (understeer) and the drive/brake are scaled onto
+                # the circle and the excess scrubs speed.  a_grip 0 is
+                # the original kinematic car.
+                a_grip = float(c.get("a_grip", 0) or 0)
+                self.slipping = False
+                if a_grip > 0:
+                    g_sig = n.get("grip_sigma", 0.0)
+                    lim = a_grip
+                    if g_sig > 0:
+                        lim *= 1.0 + self.rng_slip.gauss(0.0, g_sig)
+                    lim = max(0.05 * a_grip, lim)
+                    mag = math.hypot(self.v * w_kin, a_cmd)
+                    if mag > lim:
+                        k = lim / mag
+                        w_kin *= k
+                        a_cmd *= k
+                        scrub = c.get("slide_scrub", 0.5) * (mag - lim) \
+                            * self.dt
+                        self.v -= scrub if self.v >= 0 else -scrub
+                        self.slipping = True
+                        self.slide_ticks += 1
+                v_prev = self.v
+                self.v += (a_cmd - c.get("drag", 0.35) * self.v) * self.dt
+                self.v = max(-c.get("v_rev_max", 0.15),
+                             min(c.get("v_max", 0.5), self.v))
+                self.w = w_kin
+                self.acc = ((self.v - v_prev) / self.dt, self.v * self.w)
                 # keep the encoder accumulators moving for GT continuity
                 wr = self.robot_cfg["wheel_radius"]
                 tpr = self.robot_cfg["encoder_ticks_per_rev"]
@@ -325,6 +371,7 @@ class World:
                     / self.robot_cfg["wheelbase"]
 
             self.theta = (self.theta + self.w * self.dt) % TWO_PI
+            x0, y0 = self.x, self.y
             nx = self.x + self.v * math.cos(self.theta) * self.dt
             ny = self.y + self.v * math.sin(self.theta) * self.dt
 
@@ -389,7 +436,9 @@ class World:
                                          pose=[round(self.x, 4),
                                                round(self.y, 4)]))
 
-            if not self.goal_reached:
+            if self.track is not None:
+                self._track_step(x0, y0)
+            elif not self.goal_reached:
                 if self.maze.has_exit:
                     reached = self.maze.escaped(self.x, self.y)
                 else:
@@ -440,7 +489,51 @@ class World:
                 **({"key": int(self.key_carried),
                     "door": int(self.door_open)}
                    if self.maze.locked else {}),
+                **({"lap": self.lap} if self.track is not None else {}),
+                **({"slip": int(self.slipping)}
+                   if self.model == "car" and self.car_cfg.get("a_grip")
+                   else {}),
             })
+
+    def _track_step(self, x0, y0):
+        """Lap timing.  A forward start-line crossing completes a lap
+        only if 90% of the arc-length sectors were visited since the
+        last one (no shortcuts, no line-dancing); the run is complete
+        after the warm-up plus the timed laps, and the car powers down
+        like a robot that reached its goal."""
+        tr = self.track
+        self._track_idx = tr.nearest_index(self.x, self.y, self._track_idx)
+        self._cp_seen.add(tr.sector(self._track_idx))
+        if self.goal_reached:
+            return
+        if tr.crossed_start(x0, y0, self.x, self.y) <= 0:
+            return
+        need = math.ceil(0.9 * tr.checkpoints)
+        if len(self._cp_seen) < need:
+            self._event(dict(event="lap_rejected",
+                             sectors=len(self._cp_seen)))
+            return
+        lap_s = round((self.tick - self.lap_start_tick) * self.dt, 3)
+        self.lap += 1
+        warm = int(self.track_cfg.get("laps_warmup", 1))
+        timed = self.lap > warm
+        self.last_lap = lap_s
+        if timed:
+            self.laps.append(lap_s)
+            if self.best_lap is None or lap_s < self.best_lap:
+                self.best_lap = lap_s
+        self._event(dict(event="lap", lap=self.lap, time_s=lap_s,
+                         timed=timed, best_s=self.best_lap))
+        self.lap_start_tick = self.tick
+        self._cp_seen = {tr.sector(self._track_idx)}
+        if self.lap >= warm + int(self.track_cfg.get("laps_timed", 10)):
+            self.goal_reached = True
+            self.goal_tick = self.tick
+            for a in self.actuators:
+                self.cmd[a] = 0
+                self.cmd_eff[a] = 0
+            self.pending = []
+            self._event(dict(event="goal_reached", laps=list(self.laps)))
 
     # -- sensor emission (called by device bridge on read) ------------------
 
@@ -652,6 +745,21 @@ class World:
         with self.lock:
             return "1" if self.bump[which] else "0"
 
+    def imu_frame(self):
+        """Body-frame achieved acceleration (longitudinal, lateral;
+        m/s^2) and yaw rate (rad/s): what the tyres actually delivered,
+        so the grip limit is an observable, not a rule."""
+        n = self.noise
+        with self.lock:
+            ax, ay = self.acc
+            wz = self.w
+            s = n.get("imu_sigma", 0.0)
+            if s > 0:
+                ax += self.rng_encoder.gauss(0.0, s)
+                ay += self.rng_encoder.gauss(0.0, s)
+                wz += self.rng_encoder.gauss(0.0, s)
+            return f"{ax:.3f},{ay:.3f},{wz:.3f}"
+
     def speed_frame(self):
         """Signed ground speed, m/s (the car's speedometer)."""
         n = self.noise
@@ -807,6 +915,11 @@ class World:
                 # (one read of the tuple: the pair is never torn).
                 n, outcome = self.tx_last
                 line += f" tx={n}:{outcome}"
+            if self.track is not None:
+                # Race timing: completed laps, last and best lap (s).
+                line += (f" lap={self.lap}"
+                         f" last={self.last_lap or 0.0:.1f}"
+                         f" best={self.best_lap or 0.0:.1f}")
             if self.maze.locked and self._door_segments:
                 dcx, dcy = self._door_center
                 if math.hypot(self.x - dcx, self.y - dcy) < 0.5:
@@ -838,6 +951,13 @@ class World:
                 "in_region": self.region_entry is not None,
                 "key_carried": self.key_carried,
                 "door_open": self.door_open,
+                **({"lap": self.lap, "laps": list(self.laps),
+                    "last_lap_s": self.last_lap,
+                    "best_lap_s": self.best_lap}
+                   if self.track is not None else {}),
+                **({"slipping": self.slipping,
+                    "slide_ticks": self.slide_ticks}
+                   if self.model == "car" else {}),
                 "trail": [p for p in self.trail if p[0] > since_tick],
                 "events": self.events[-50:],
             }

@@ -200,6 +200,8 @@ class DeviceBridge:
             return w.beacon_frame()
         if logical == "speed":
             return w.speed_frame()
+        if logical == "imu":
+            return w.imu_frame()
         if logical == "serial_rx":
             return w.serial_rx_frame()
         if logical == "peer_signal":

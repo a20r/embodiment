@@ -33,8 +33,9 @@ class Transcript:
 
 
 def build_system_prompt(cfg):
-    fname = "robot_agent_lost.md" \
-        if cfg.get("prompt_variant") == "lost" else "robot_agent.md"
+    fname = {"lost": "robot_agent_lost.md",
+             "race": "robot_agent_race.md"}.get(
+                 cfg.get("prompt_variant"), "robot_agent.md")
     with open(os.path.join(REPO, "harness", "prompts", fname)) as f:
         text = f.read()
     b = cfg["budget"]
@@ -324,6 +325,10 @@ def run_episode(cfg, series_dir, episode_index):
             turns=turns, execs=execs, restarts=restarts,
             tokens=totals,
             collisions=state.get("collision_count"),
+            **({"lap": state.get("lap"), "laps": state.get("laps"),
+                "best_lap_s": state.get("best_lap_s"),
+                "slide_ticks": state.get("slide_ticks")}
+               if "laps" in state else {}),
         )
         with open(os.path.join(ep_dir, "summary.json"), "w") as f:
             json.dump(summary, f, indent=2)

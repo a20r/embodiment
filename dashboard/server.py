@@ -72,7 +72,9 @@ class Api:
             summary_path = os.path.join(sdir, name, "summary.json")
             if os.path.exists(summary_path):
                 with open(summary_path) as f:
-                    out.append(dict(json.load(f), running=False))
+                    s = json.load(f)
+                s.setdefault("episode", n)
+                out.append(dict(s, running=False))
             else:
                 out.append(dict(episode=n, running=True))
         return out
@@ -120,9 +122,21 @@ class Api:
                                           "door_unlocked"):
                             events.append({"event": r["event"],
                                            "t": r.get("t")})
+                        elif r["event"] == "lap":
+                            events.append({k: r.get(k) for k in
+                                           ("event", "t", "lap", "time_s",
+                                            "timed", "best_s")})
+                        elif r["event"] == "lap_rejected":
+                            events.append({"event": "lap_rejected",
+                                           "t": r.get("t"),
+                                           "sectors": r.get("sectors")})
                     elif "pose" in r:
-                        poses.append([r["t"]] + r["pose"] +
-                                     [r.get("col", 0)])
+                        p = [r["t"]] + r["pose"] + [r.get("col", 0)]
+                        # Car poses carry [phi_deg, slip] at indices 5, 6.
+                        if "phi" in r:
+                            p += [round(r["phi"], 1),
+                                  int(r.get("slip", 0))]
+                        poses.append(p)
         step = max(1, len(poses) // max_points)
         return {"poses": poses[::step], "events": events,
                 "total_ticks": poses[-1][0] if poses else 0}

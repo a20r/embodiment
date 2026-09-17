@@ -28,6 +28,19 @@ DEFAULTS = {
     # "minimal_duo_named" also names the TX/RX port files (the harness
     # substitutes the episode's real anonymous filenames).
     "readme_variant": None,
+    # Scene: "maze" (procedural, the goal is a cell or an exit) or
+    # "track" (a closed circuit; the objective is laps against the
+    # clock; requires robot.model: car, solo only).
+    "scene": "maze",
+    "track": {
+        "name": "austin",        # sim/tracks/<name>.csv centerline
+        "scale": 0.07,           # real meters -> sim meters (5.5 km -> 386 m)
+        "width_scale": 1.0,      # extra factor on the track width
+        "margin": 1.0,           # m of empty world around the circuit
+        "laps_warmup": 1,        # untimed laps before the clock counts
+        "laps_timed": 10,        # the run ends when these are complete
+        "checkpoints": 20,       # arc-length sectors a lap must visit
+    },
     # Bot image; a README that demands a toolchain (e.g. Rust) pairs
     # with an image that has it.  Built from `dockerfile` if missing.
     "container": {"image": "mazebot-bot", "dockerfile": "Dockerfile.bot"},
@@ -114,6 +127,12 @@ DEFAULTS = {
             "drag": 0.35,             # 1/s velocity decay (coasting)
             "v_max": 0.5,             # m/s forward
             "v_rev_max": 0.15,        # m/s reverse
+            # Tyre grip as a friction circle: the achieved (lateral,
+            # longitudinal) acceleration is capped at a_grip m/s^2, so
+            # a fast corner understeers and a hard launch spins.  0 =
+            # no limit (the pre-grip kinematic car, unchanged).
+            "a_grip": 0.0,
+            "slide_scrub": 0.5,       # extra decel per m/s^2 over the limit
         },
     },
     "lidar": {
@@ -193,6 +212,8 @@ NOISE_PROFILES = {
         # seeded per episode.  Integrated heading walks away over time.
         "heading_bias_deg_per_min": 0.0,
         "speed_sigma_ms": 0.0,         # speedometer noise (car model)
+        "grip_sigma": 0.0,             # per-tick relative noise on a_grip
+        "imu_sigma": 0.0,              # IMU channel noise (m/s^2, rad/s)
         "peer_signal_sigma": 0.0,      # duo peer-signal noise
     },
     "default_noisy": {
@@ -212,6 +233,8 @@ NOISE_PROFILES = {
         "beacon_sigma": 0.008,
         "heading_bias_deg_per_min": 0.0,
         "speed_sigma_ms": 0.01,
+        "grip_sigma": 0.05,
+        "imu_sigma": 0.02,
         "peer_signal_sigma": 0.008,
     },
 }
@@ -269,10 +292,32 @@ def resolve(config_path=None, overrides=None):
     if cfg["maze"].get("locked") and \
             cfg["maze"].get("style") != "organic":
         raise ValueError("maze.locked requires maze.style: organic")
-    if cfg["prompt_variant"] not in ("standard", "lost"):
-        raise ValueError("prompt_variant must be 'standard' or 'lost'")
+    if cfg["prompt_variant"] not in ("standard", "lost", "race"):
+        raise ValueError("prompt_variant must be 'standard', 'lost' or "
+                         "'race'")
     if cfg["robot"].get("model", "diffdrive") not in ("diffdrive", "car"):
         raise ValueError("robot.model must be 'diffdrive' or 'car'")
+    if cfg.get("scene", "maze") not in ("maze", "track"):
+        raise ValueError("scene must be 'maze' or 'track'")
+    if cfg.get("scene") == "track":
+        if cfg["robot"].get("model") != "car":
+            raise ValueError("scene: track requires robot.model: car")
+        if cfg["duo"].get("enabled"):
+            raise ValueError("scene: track is solo only")
+        tr = cfg["track"]
+        for k in ("laps_warmup", "laps_timed", "checkpoints"):
+            v = tr.get(k)
+            if isinstance(v, bool) or not isinstance(v, int) or v < 0:
+                raise ValueError(f"track.{k} must be a non-negative int")
+        if tr["laps_timed"] < 1 or tr["checkpoints"] < 2:
+            raise ValueError("track.laps_timed >= 1 and "
+                             "track.checkpoints >= 2 required")
+        if not (isinstance(tr.get("scale"), (int, float))
+                and tr["scale"] > 0):
+            raise ValueError("track.scale must be > 0")
+    car = cfg["robot"].get("car", {})
+    if car.get("a_grip", 0) < 0 or car.get("slide_scrub", 0) < 0:
+        raise ValueError("robot.car.a_grip and slide_scrub must be >= 0")
     if cfg["duo"].get("objective", "solo") not in ("solo", "together"):
         raise ValueError("duo.objective must be 'solo' or 'together'")
     duo = cfg["duo"]
@@ -322,6 +367,10 @@ def device_sets(cfg):
     if model == "car":
         sensors = ["lidar", "heading", "speed",
                    "bump_front", "bump_rear", "status"]
+        if cfg.get("scene") == "track":
+            # A race car carries an IMU: achieved accelerations and
+            # yaw rate, the instrument that shows the grip limit.
+            sensors.insert(3, "imu")
         actuators = ["accel", "steer"]
     else:
         sensors = list(SENSOR_DEVICES)

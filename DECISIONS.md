@@ -645,6 +645,33 @@ pilot differs from its baseline in one flag:
   change there); and with peer_signal off, ok/lost is an exact
   in-range boolean at the instant of each write.
 
+### Race scene: a real circuit, a lap clock, tyres with a limit
+
+`scene: track` swaps the maze for the Circuit of the Americas
+centerline (TUM racetrack-database CSV, per-side widths), scaled to
+robot size (0.07: 386 m, ~1 m wide, so the car is about a quarter of
+the track width, as an F1 car is on the real one) and offered to the
+same World as a duck-typed Maze: edges are wall segments, so lidar,
+collision and the spatial index are untouched, and only lap timing
+branches on `kind == "track"`.  The objective changes from a place to
+a clock: the README states one warm-up lap then ten timed laps; the
+status port carries `lap=`, `last=`, `best=`; a lap counts only on a
+forward start-line crossing after 90% of the arc-length sectors were
+visited (no shortcuts, no line-dancing), and completing the timed laps
+is `goal_reached`, reusing every downstream path (power-down, summary,
+end_reason solved).  The car keeps the bicycle kinematics but gains a
+friction circle (`a_grip`): achieved lateral and longitudinal
+acceleration is capped, excess scales the yaw rate (understeer) and
+scrubs speed, with per-tick grip noise; 0 leaves the pre-grip car
+byte-identical.  Grip is an observable, not a rule: the race car gets
+an `imu` port (achieved ax, ay and yaw rate), so the limit can be
+measured by driving into it.  Speeds are raised for racing (v_max 2.0,
+accel 1.5, a_grip 1.5) per run, not by default; a pure-pursuit driver
+laps in ~226 sim s.  The bot image for race runs adds NumPy
+(`Dockerfile.bot-np`) so that a README demanding a neural controller
+and its control differ only in the sentence.  Solo only for now: the
+peer octagon and the window logic would need a second start box.
+
 ### together_window_s is wall-clock seconds
 
 The README promises "within one minute of each other" and the agents

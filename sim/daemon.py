@@ -23,6 +23,7 @@ from devices.bridge import DeviceBridge, compute_bindings, write_device_map
 from sim import config as simconfig
 from sim.api import serve
 from sim.maze import Maze
+from sim.track import Track
 from sim.world import World
 
 
@@ -64,14 +65,23 @@ class Daemon:
 
         m = cfg["maze"]
         pert = cfg.get("perturb_state", {})
-        self.maze = Maze(m["seed"], m["width"], m["height"],
-                         cell_size=m["cell_size"], braid=m["braid"],
-                         family_index=pert.get("family_index", 0),
-                         style=m.get("style", "grid"),
-                         curviness=m.get("curviness", 1.0),
-                         robot_radius=cfg["robot"]["radius"],
-                         locked=m.get("locked", False), duo=duo,
-                         goal_chamber=m.get("goal_chamber", False))
+        if cfg.get("scene") == "track":
+            # A circuit in place of the maze; the port permutation still
+            # keys off maze.seed so bindings stay comparable.
+            t = cfg["track"]
+            self.maze = Track(t["name"], scale=t["scale"],
+                              margin=t.get("margin", 1.0),
+                              checkpoints=t["checkpoints"],
+                              width_scale=t.get("width_scale", 1.0))
+        else:
+            self.maze = Maze(m["seed"], m["width"], m["height"],
+                             cell_size=m["cell_size"], braid=m["braid"],
+                             family_index=pert.get("family_index", 0),
+                             style=m.get("style", "grid"),
+                             curviness=m.get("curviness", 1.0),
+                             robot_radius=cfg["robot"]["radius"],
+                             locked=m.get("locked", False), duo=duo,
+                             goal_chamber=m.get("goal_chamber", False))
 
         labels_on = cfg["labels"] == "on"
         sensors, actuators = simconfig.device_sets(cfg)
@@ -89,7 +99,10 @@ class Daemon:
             bots = [("a", self.maze.start_cell, 0.0),
                     ("b", self.maze.spawn_b_cell, 3.14159)]
         else:
-            bots = [("", None, 0.0)]
+            # On a track the car starts on the line facing forward.
+            theta0 = self.maze.start_pose[2] \
+                if getattr(self.maze, "kind", "") == "track" else 0.0
+            bots = [("", None, theta0)]
         self.gts, self.worlds, self.bridges = [], [], []
         for bot_id, spawn_cell, theta in bots:
             suffix = f"_{bot_id}" if bot_id else ""
